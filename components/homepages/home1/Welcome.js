@@ -10,13 +10,9 @@ export default function Welcome() {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="title title2 ">
-                                <small data-aos="fade-right" data-aos-duration={600} className="heading-top2"><img src="/assets/img/icons/money.png" alt="" />Award-Winnng Tax Consultant
-                                    in Texas</small>
-                                <h1 data-aos="fade-right" data-aos-duration={800}>We help you avoid tax blunders.</h1>
-                                <p data-aos="fade-right" data-aos-duration={1000}>Making a mistake on your return can be costly.
-                                    From missed
-                                    deductions, or worse, the dreaded IRS
-                                    audit.</p>
+                                <small data-aos="fade-right" data-aos-duration={600} className="heading-top2"><img src="/assets/img/icons/money.png" alt="" />Licensed by ASIAL</small>
+                                <h1 data-aos="fade-right" data-aos-duration={800}>Security Company in Melbourne</h1>
+                                <p data-aos="fade-right" data-aos-duration={1000}>Metro Guard is the most reliable & Affordable local security company in Melbourne, and it is the frontline for your safety. Licensed by ASIAL (Australian Security Industry Association Limited) | Victoria State Government.We are providing Security Services in Melbourne Residential, Commercial Industrial, Retail and Government Sectors. Contact us to Get Free Security Quote According to your business needs</p>
                                 <div className="space30" />
                                 <div className="btn-group" data-aos="fade-right" data-aos-duration={1200}>
                                     <Link className="theme-btn-2" href="#">Get An Estimated Quote <span><i className="fa-solid fa-arrow-right" /></span></Link>
@@ -24,7 +20,7 @@ export default function Welcome() {
                                 </div>
                                 <div className="space80" />
                                 <div className="logo-area2" data-aos="fade-right" data-aos-duration={1400}>
-                                    <p>Trusted by more than 400+ companies worldwide</p>
+                                    <p>Trusted by more than 4000+ companies worldwide</p>
                                     <LogoSlider2 />
                                 </div>
                             </div>
@@ -32,7 +28,7 @@ export default function Welcome() {
                         <div className="col-lg-6 d-none d-lg-block">
                             <div className="hero-img-elements" data-aos="zoom-out" data-aos-duration={800}>
                                 <div className="hero-main-img position-relative top-right-polygon-1">
-                                    <img className="border-radius" src="/assets/img/bg/main2.jpg" alt="" />
+                                    <img className="border-radius" src="/assets/img/bg/security img.webp" alt="" />
                                     <div className="corner-shape2 position-absolute">
                                         <img src="/assets/img/shapes/tax-shape1.png" alt="" />
                                     </div>

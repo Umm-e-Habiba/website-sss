@@ -11,9 +11,7 @@ export default function Blog() {
                             <div className="heading2 text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We Are Here For Your Tax
                                     Relief.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Take</span> a look at
-                                    the latest
-                                    articles from Consultia Tax.</h2>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Take</span>drdhfjfjthddssnfdnr.</h2>
                             </div>
                         </div>
                     </div>

@@ -61,11 +61,8 @@ export default function CaseStudy() {
                     <div className="row">
                         <div className="col-md-4 m-auto">
                             <div className="heading2 white-heading text-center">
-                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We Are Here For Your Tax
-                                    Relief.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Consultia</span> tax
-                                    is built for
-                                    small business.</h2>
+                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Licensed security guards.</small>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">How</span> we raise awareness and serve our community</h2>
                             </div>
                         </div>
                     </div>
@@ -74,42 +71,43 @@ export default function CaseStudy() {
                             <Swiper {...swiperOptions} className="case-studes owl-carousel" data-aos="fade-up" data-aos-duration={1200}>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/casestudy1.jpg" alt="" />
+                                        <img src="/assets/img/case-study/s1.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Operational Excellence</h4>
-                                        <p>Making a mistake on your return can be costly. From missed deductions.</p>
-                                        <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link>
+                                        <h4>Licensed security guards</h4>
+                                        <p>Our team consists of fully licensed and professionally trained security guards, ensuring reliable protection and compliance with all industry standards across Melbourne.</p>
+                                        {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/casestudy2.jpg" alt="" />
+                                        <img src="/assets/img/case-study/s6.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Analytics Consulting</h4>
-                                        <p>Making a mistake on your return can be costly. From missed deductions.</p>
-                                        <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link>
+                                        <h4>Highly trained to respond to emergencies</h4>
+                                        <p>Our security personnel undergo rigorous training to handle emergencies with speed, confidence, and professionalism—minimizing risks and ensuring safety.</p>
+                                        {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/casestudy3.jpg" alt="" />
+                                        <img src="/assets/img/case-study/s3.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Analytics Strategy</h4>
-                                        <p>Making a mistake on your return can be costly. From missed deductions.</p>
-                                        <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link>
+                                        <h4>Cost-Effective Security Guard Solution</h4>
+                                        <p>We provide top-tier security services at competitive rates, offering exceptional value without compromising on quality or reliability.</p>
+                                        {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/casestudy3.jpg" alt="" />
+                                        <img src="/assets/img/case-study/s5.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Analytics Strategy</h4>
-                                        <p>Making a mistake on your return can be costly. From missed deductions.</p>
-                                        <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link>
+                                        <h4>Always There, Always Ready</h4>
+                                        <p>Protect your property and loved ones by delivering reliable on-call security services 24/7 
+</p>
+                                        {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                             </Swiper>

@@ -9,11 +9,9 @@ export default function TaxBusiness() {
                     <div className="row">
                         <div className="col-md-4 m-auto">
                             <div className="heading2 white-heading text-center">
-                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We Are Here For Your Tax
-                                    Relief.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Consultia</span> tax
-                                    is built for
-                                    small business.</h2>
+                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Integrated Security Services
+</small>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Metro Guard</span> Top-Rated Security Services in Melbourne</h2>
                             </div>
                         </div>
                     </div>
@@ -21,11 +19,10 @@ export default function TaxBusiness() {
                         <div className="col-md-6" data-aos="fade-up" data-aos-duration={600}>
                             <div className="single-business trans-1">
                                 <div className="business-icon">
-                                    <img src="/assets/img/icons/tax-business1.png" alt="" />
+                                    <img src="/assets/img/icons/hiring.png" alt="" />
                                 </div>
-                                <h3>IRS Tax Problems</h3>
-                                <p>Making a mistake on your return can be costly. From missed deductions, or worse, the dreaded
-                                    IRS audit.
+                                <h3>Hire Security Guard in Melbourne</h3>
+                                <p>Security guards hire to protect your homes, businesses, construction sites, and events to prevent losses. They are the pinnacle of power and safety and are paramount to protecting your residential and commercial properties.  
                                 </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
@@ -33,36 +30,30 @@ export default function TaxBusiness() {
                         <div className="col-md-6" data-aos="fade-up" data-aos-duration={800}>
                             <div className="single-business trans-1">
                                 <div className="business-icon">
-                                    <img src="/assets/img/icons/tax-business2.png" alt="" />
+                                    <img src="/assets/img/icons/security.png" alt="" />
                                 </div>
-                                <h3>Tax Preparation and Planning</h3>
-                                <p>Getting the most our of your income and finances is what sets us apart. Whether you need tax
-                                    preparation
-                                    services.</p>
+                                <h3>Concierge Security Guards Melbourne</h3>
+                                <p>At Metro Guards, we offer premium concierge security services designed to meet the specific needs of businesses and residential properties across Melbourne.Creating a safe and welcoming environment for your employees,and guests. </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>
                         <div className="col-md-6" data-aos="fade-up" data-aos-duration={1000}>
                             <div className="single-business trans-1">
                                 <div className="business-icon">
-                                    <img src="/assets/img/icons/tax-business3.png" alt="" />
+                                    <img src="/assets/img/icons/warehouse.png" alt="" />
                                 </div>
-                                <h3>Payroll Services</h3>
-                                <p>Managing payroll may not seem like a critical task untill something goes wrong. We have
-                                    experts and
-                                    technology to help you.</p>
+                                <h3>Warehouse Security Guards Melbourne</h3>
+                                <p>At Metro Guards, we understand the critical importance of securing your warehouse operations. With warehousing, shipping, and logistics companies managing large volumes of stock, equipment, and machinery daily.Our warehouse CCTV systems ensure that your property and employees are safe.</p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>
                         <div className="col-md-6" data-aos="fade-up" data-aos-duration={1200}>
                             <div className="single-business trans-1">
                                 <div className="business-icon">
-                                    <img src="/assets/img/icons/tax-business4.png" alt="" />
+                                    <img src="/assets/img/icons/patrol.png" alt="" />
                                 </div>
-                                <h3>Bookkeeping and Virtual CFO</h3>
-                                <p>We know that competent, consistent bookkeeping is the key to a business success. Sucess
-                                    starts when you
-                                    take charge of books.</p>
+                                <h3>Melbourne Mobile Patrol Security</h3>
+                                <p>Metro Security Guards with Mobile Patrol Services in Melbourne are designed to provide an effective and reliable solution to enhance the security of your premises. By conducting regular patrols, we monitor for any signs of suspicious activity, ensuring that your property remains secure at all times. </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>

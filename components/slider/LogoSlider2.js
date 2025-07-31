@@ -45,7 +45,7 @@ export default function LogoSlider2() {
         <>
             <Swiper {...swiperOptions} className="logos logos2 owl-carousel">
                 <SwiperSlide className="single-logo">
-                    <img src="/assets/img/logo/logo21.png" alt="" />
+                    <img src="/assets/img/logo/client 1.webp" alt="" />
                 </SwiperSlide>
                 <SwiperSlide className="single-logo">
                     <img src="/assets/img/logo/logo22.png" alt="" />
