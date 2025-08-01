@@ -22,11 +22,11 @@ export default function About2() {
     <li>Licensed security guards</li>
     <li>Best private security guard</li>
     <li>Highly trained to respond to emergencies</li>
-    <li>Security guards have law enforcement training to avoid security concerns in Melbourne</li>
+    {/* <li>Security guards have law enforcement training to avoid security concerns in Melbourne</li> */}
     <li>Cost-effective security guard solution</li>
-    <li>Customised security solutions to your security needs</li>
+    {/* <li>Customised security solutions to your security needs</li> */}
     <li>Our guards are licensed, bonded, and insured</li>
-    <li>Have close contact with emergency departments and police stations</li>
+    {/* <li>Have close contact with emergency departments and police stations</li> */}
   </ul>
                                     <div className="space50" />
                                     <div className="button-group" data-aos="fade-right" data-aos-duration={1200}>

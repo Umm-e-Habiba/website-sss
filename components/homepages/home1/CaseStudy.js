@@ -62,7 +62,7 @@ export default function CaseStudy() {
                         <div className="col-md-4 m-auto">
                             <div className="heading2 white-heading text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Licensed security guards.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">How</span> we raise awareness and serve our community</h2>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Metro Guard</span> Top-Rated Security Services in Melbourne</h2>
                             </div>
                         </div>
                     </div>
@@ -74,28 +74,29 @@ export default function CaseStudy() {
                                         <img src="/assets/img/case-study/s1.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Licensed security guards</h4>
-                                        <p>Our team consists of fully licensed and professionally trained security guards, ensuring reliable protection and compliance with all industry standards across Melbourne.</p>
+                                        <h4>Hire Security Guard in Melbourne</h4>
+                                        <p>Security guards hire to protect your homes, businesses, construction sites, and events to prevent losses. </p>
                                         {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/s6.webp" alt="" />
+                                        <img src="/assets/img/case-study/s8.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Highly trained to respond to emergencies</h4>
-                                        <p>Our security personnel undergo rigorous training to handle emergencies with speed, confidence, and professionalism—minimizing risks and ensuring safety.</p>
+                                        <h4>Concierge Security Guards Melbourne
+</h4>
+                                        <p>we offer premium concierge security services designed to meet the specific needs.</p>
                                         {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className="single-case-study">
                                     <div className="case-study-img">
-                                        <img src="/assets/img/case-study/s3.webp" alt="" />
+                                        <img src="/assets/img/case-study/s7.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Cost-Effective Security Guard Solution</h4>
-                                        <p>We provide top-tier security services at competitive rates, offering exceptional value without compromising on quality or reliability.</p>
+                                        <h4>Melbourne Mobile Patrol Security</h4>
+                                        <p>We provide top-tier security services at competitive rates, without compromising on quality or reliability.</p>
                                         {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>
                                 </SwiperSlide>
@@ -104,8 +105,8 @@ export default function CaseStudy() {
                                         <img src="/assets/img/case-study/s5.webp" alt="" />
                                     </div>
                                     <div className="case-study-content">
-                                        <h4>Always There, Always Ready</h4>
-                                        <p>Protect your property and loved ones by delivering reliable on-call security services 24/7 
+                                        <h4>Warehouse Security Guards Melbourne</h4>
+                                        <p>At Metro Guards, we understand the critical importance of securing your warehouse operations.
 </p>
                                         {/* <Link href="#" className="theme-btn-7">Check out Check Study <span><i className="fa-solid fa-arrow-right" /></span></Link> */}
                                     </div>

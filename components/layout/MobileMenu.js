@@ -132,7 +132,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                 <li><Link href="/single-case-study-1">Single Case</Link></li>
                             </ul>
                         </li>
-                        <li><Link href="#">Shop</Link>
+                        <li><Link href="#">Service Area</Link>
                             <span className={isActive.key == 5 ? "submenu-button submenu-opened" : "submenu-button"} onClick={() => handleToggle(5)}><em /></span>
                             <ul className="sub-menu" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
                                 <li><Link href="/forgot">Forgot</Link></li>
@@ -162,8 +162,8 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                     <div className="contact-icon">
                                         <img src="/assets/img/icons/contact-phone4.svg" alt="" />
                                     </div>
-                                    <Link href="#">USA: +91 02 2585 0556</Link>
-                                    <Link href="#">UK: +61 02 2585 0556</Link>
+                                    <Link href="#">1300 73 11 73</Link>
+                                    {/* <Link href="#">UK: +61 02 2585 0556</Link> */}
                                 </div>
                             </div>
                             <div className="footer-contact">
@@ -171,8 +171,8 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                     <div className="contact-icon">
                                         <img src="/assets/img/icons/contact-email4.svg" alt="" />
                                     </div>
-                                    <Link href="#">Contacthelp@Demoui.co</Link>
-                                    <Link href="#">Info@consultia.co</Link>
+                                    <Link href="#">admin@metroguards.com.au</Link>
+                                    {/* <Link href="#">Info@consultia.co</Link> */}
                                 </div>
                             </div>
                         </div>

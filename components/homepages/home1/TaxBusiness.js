@@ -11,7 +11,7 @@ export default function TaxBusiness() {
                             <div className="heading2 white-heading text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Integrated Security Services
 </small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Metro Guard</span> Top-Rated Security Services in Melbourne</h2>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Melbourne’s</span> Expert Security Guards & Mobile Patrols</h2>
                             </div>
                         </div>
                     </div>
@@ -21,8 +21,8 @@ export default function TaxBusiness() {
                                 <div className="business-icon">
                                     <img src="/assets/img/icons/hiring.png" alt="" />
                                 </div>
-                                <h3>Hire Security Guard in Melbourne</h3>
-                                <p>Security guards hire to protect your homes, businesses, construction sites, and events to prevent losses. They are the pinnacle of power and safety and are paramount to protecting your residential and commercial properties.  
+                                <h3>Melbourne Security Gaurd for Hire</h3>
+                                <p>We strongly believe that security officers are not just your protectors; they act as guardians in emergencies. The mere sight of the hire security guards in Melbourne gives you peace of mind and shatters the criminal’s confidence. Our guards are hired after meticulous procedures, to pick the best officers to serve you. Metropolitan Guard Services in Melbourne has designed an in-house training program to enable them to deal with any emergency professionally and effectively using advanced technology.  
                                 </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
@@ -32,8 +32,9 @@ export default function TaxBusiness() {
                                 <div className="business-icon">
                                     <img src="/assets/img/icons/security.png" alt="" />
                                 </div>
-                                <h3>Concierge Security Guards Melbourne</h3>
-                                <p>At Metro Guards, we offer premium concierge security services designed to meet the specific needs of businesses and residential properties across Melbourne.Creating a safe and welcoming environment for your employees,and guests. </p>
+                                <h3>Melbourne Mobile Patrol Security Service
+</h3>
+                                <p>We know managing and protecting commercial buildings, huge events, and construction sites is difficult because of their large premises. Hire a mobile patrol officer from MSG to get a comprehensive site-wide security solution. Our petrol guards are the most efficient, viable, and cost-effective solution to your security needs. Our mobile patrol officers are trained to assess and address potential security threats, respond efficiently to emergencies, and precisely lock and unlock the premises. </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>
@@ -43,7 +44,7 @@ export default function TaxBusiness() {
                                     <img src="/assets/img/icons/warehouse.png" alt="" />
                                 </div>
                                 <h3>Warehouse Security Guards Melbourne</h3>
-                                <p>At Metro Guards, we understand the critical importance of securing your warehouse operations. With warehousing, shipping, and logistics companies managing large volumes of stock, equipment, and machinery daily.Our warehouse CCTV systems ensure that your property and employees are safe.</p>
+                                <p>Metro Guards having reliable security system which allow them to know that the warehouses and storage facilities are high-risk areas that must be protected from theft and robberies because they have huge stocks of products. The risk of crime increases in the peak season. Above all, we value the safety and security of your staff and products. If you are a warehouse owner wanting round-the-clock protection of your premises, Metro’s warehouse security guards in Melbourne are the most reliable option.</p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>
@@ -52,15 +53,14 @@ export default function TaxBusiness() {
                                 <div className="business-icon">
                                     <img src="/assets/img/icons/patrol.png" alt="" />
                                 </div>
-                                <h3>Melbourne Mobile Patrol Security</h3>
-                                <p>Metro Security Guards with Mobile Patrol Services in Melbourne are designed to provide an effective and reliable solution to enhance the security of your premises. By conducting regular patrols, we monitor for any signs of suspicious activity, ensuring that your property remains secure at all times. </p>
+                                <h3>Construction Site Security Guard in Melbourne</h3>
+                                <p>Metro Guards is the perfect choice for construction site security services in Melbourne. We know these sites are more prone to unauthorized access, theft, robbery, and vandalism as the machinery and materials used are expensive. The vast operational area makes them vulnerable to threats. This results in project delays and financial losses. Hiring a security guard in Melbourne, Victoria, can protect the construction site as best as possible. 
+
+Act now to protect what matters to you!  </p>
                                 <Link href="#" className="theme-btn-7">Learn More <span><i className="fa-solid fa-arrow-right" /></span></Link>
                             </div>
                         </div>
-                        <div className="space20" />
-                        <div className="col-12 text-center" data-aos="fade-up" data-aos-duration={1400}>
-                            <Link className="theme-btn-3" href="#">Explore More Services <span><i className="fa-solid fa-arrow-right" /></span></Link>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

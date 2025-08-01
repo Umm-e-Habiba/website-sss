@@ -12,27 +12,24 @@ export default function Pricing() {
                     <div className="row">
                         <div className="col-md-5 m-auto">
                             <div className="heading2 text-center">
-                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We Are Here For Your Tax
-                                    Relief.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">We</span> offer best
-                                    cost
-                                    effective tax consultation solution. </h2>
+                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Testimonials</small>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Amazing</span> people talking about us </h2>
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-12 text-center">
                             <div className="plan-toggle-wrap" data-aos="fade-up" data-aos-duration={1000}>
-                                <div className="toggle-inner">
-                                    <input id="ce-toggle" onClick={handleToggle} type="checkbox" />
-                                    <span className="custom-toggle" />
+                                {/* <div className="toggle-inner"> */}
+                                    {/* <input id="ce-toggle" onClick={handleToggle} type="checkbox" /> */}
+                                    {/* <span className="custom-toggle" /> */}
                                     <div className="t-month">
-                                        <h4>Monthly</h4>
+                                        {/* <h4>Monthly</h4> */}
                                     </div>
                                     <div className="t-year">
-                                        <h4>Yearly <span>(20% Save)</span></h4>
+                                        {/* <h4>Yearly <span>(20% Save)</span></h4> */}
                                     </div>
-                                </div>
+                                {/* </div> */}
                             </div>
                         </div>
                     </div>
@@ -45,8 +42,8 @@ export default function Pricing() {
                                         <div className="col-lg-4">
                                             <div className="single-price active">
                                                 <div className="price-heading">
-                                                    <p>Basic</p>
-                                                    <h5>Create interactive forms that connect to your workflow.</h5>
+                                                    <p>Trustpilot</p>
+                                                    <h5>We have used Metro Guards Security at Apex Property Management (APM) for the last 6 months. I can only describe their reception security as exceptional. They manage the front of hour in a number of our residential apartment blocks across Melbourne. The management are always on hand to support Apex and are extremely proactive. Due to the current pandemic, we have required additional staff at short notice, and they have been excellent in facilitating these requests. I would highly recommend Metro Guards and I look forward working with them. Thank you everyone at Metro Guards and keep up the great work." Positive Responsiveness, Quality, Professionalism, Value</h5>
                                                     <h3>$29/mo</h3>
                                                     <h6>Billed Yearly</h6>
                                                 </div>
