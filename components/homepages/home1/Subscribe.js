@@ -21,9 +21,9 @@ export default function Subscribe() {
                                 <div className="subscribe-from-wrap">
                                     <form action="#">
                                         <input type="email" placeholder="Email Address" required />
-                                        <input type="text" placeholder="Name" required />
+                                        {/* <input type="text" placeholder="Name" required />
                                         <textarea placeholder="Message" rows="4" column="4" required></textarea>
-                                        <input type="tel" placeholder="Phone" required />
+                                        <input type="tel" placeholder="Phone" required /> */}
 
                                         {/* ✅ Submit button is placed after all fields */}
                                         <div className="submit-btn-wrapper" style={{ marginTop: '15px' }}>

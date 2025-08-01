@@ -7,36 +7,40 @@ export default function Footer1() {
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div className="single-footer mr50">
-                                <Link href="/" className="footer-logo"> <img src="/assets/img/logo/site-logo-3.svg" alt="" /></Link>
+                                 <Link href="/">
+  <img src="/assets/img/logo/mg logo 2.png" alt="Metro Guards Logo" style={{ maxWidth: "80px", height: "auto" }} />
+</Link>
                                 <div className="space20" />
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                                    consequat duis
-                                    enim velit mollit.</p>
+                                <p>
+CS Hub, 5, Level 1/34 Commercial Rd, Caroline Springs VIC 3023</p>
                             </div>
                         </div>
                         <div className="col-lg col-md-6">
                             <div className="single-footer">
-                                <h3>Learn</h3>
+                                <h3>Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
-                                        <li><Link href="#">Product</Link></li>
-                                        <li><Link href="#">Pricing</Link></li>
-                                        <li><Link href="#">Schedule a demo</Link></li>
-                                        <li><Link href="#">Our Blog</Link></li>
+                                        <li><Link href="#">Security License and Insurance</Link></li>
+                                        <li><Link href="#">Terms and Conditions</Link></li>
+                                        <li><Link href="#">Condition of Hires</Link></li>
+                                        <li><Link href="#">FAQs</Link></li>
+                                        <li><Link href="#">Privacy Policy</Link></li>
+                                        <li><Link href="#">Slavery Statement</Link></li>
+                                        <li><Link href="#">Service Coverage</Link></li>
+                                        <li><Link href="#">Forms and Downloads</Link></li>
+
+
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg col-md-6">
                             <div className="single-footer">
-                                <h3>Our Company</h3>
+                                <h3>Careers</h3>
                                 <div className="footer-menu">
-                                    <ul>
-                                        <li><Link href="#">About us</Link></li>
-                                        <li><Link href="#">Privacy Policy</Link></li>
-                                        <li><Link href="#">User Terms</Link></li>
-                                        <li><Link href="#">Help Centre</Link></li>
-                                    </ul>
+                                    <p>To find out more about current job opportunities at Metropolitan Guard Services,</p>
+                                     <Link href="https://metroguards.com.au/careers/">Click Here</Link>
                                 </div>
                             </div>
                         </div>
@@ -48,7 +52,7 @@ export default function Footer1() {
                                         <div className="contact-icon">
                                             <img src="/assets/img/icons/contact-phone2.svg" alt="" />
                                         </div>
-                                        <Link href="#">USA: +91 02 2585 0556</Link>
+                                        <Link href="#">1300 73 11 73</Link>
                                         <Link href="#">UK: +61 02 2585 0556</Link>
                                     </div>
                                 </div>
@@ -57,8 +61,8 @@ export default function Footer1() {
                                         <div className="contact-icon">
                                             <img src="/assets/img/icons/contact-email2.svg" alt="" />
                                         </div>
-                                        <Link href="#">Contacthelp@Demoui.co</Link>
-                                        <Link href="#">Info@consultia.co</Link>
+                                        <Link href="#">admin@metroguards.com.au</Link>
+                                        {/* <Link href="#">Info@consultia.co</Link> */}
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +70,7 @@ export default function Footer1() {
                     </div>
                     <div className="row align-items-center copyright2">
                         <div className="col-lg-6">
-                            <p>© 2023 Consultia by fleexstudio. All Rights Reserved.</p>
+                            <p>© 2025 All Rights Reserved to Metro Gaurds.</p>
                         </div>
                         <div className="col-lg-6 text-right">
                             <div className="social social2">

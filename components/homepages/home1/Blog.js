@@ -19,11 +19,11 @@ export default function Blog() {
                         <div className="col-lg-4" data-aos="fade-up" data-aos-duration={600}>
                             <div className="single-blog blog-md ">
                                 <div className="blog-img">
-                                    <img src="/assets/img/blog/awareness 3.png" alt="" />
+                                    <img src="/assets/img/blog/women.png" alt="" />
                                 </div>
                                 <div className="blog-contents">
                                     <ul className="blog-tags">
-                                        <li><Link href="#"> <img src="/assets/img/icons/hands.svg" alt="" />Stories</Link></li>
+                                        <li><Link href="#"> <img src="/assets/img/icons/hands.svg" alt="" />Need a Quote? Get in Touch</Link></li>
                                     </ul>
                                     <h3><Link href="/single">How we raise awareness and serve our community</Link>
                                     </h3>
