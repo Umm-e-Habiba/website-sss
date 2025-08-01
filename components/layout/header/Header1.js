@@ -11,7 +11,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="header-elements">
                                 <div className="header_menu_area">
                                     <div className="logo">
-                                        <Link href="/"><img src="/assets/img/logo/site-logo-3.svg" alt="" /></Link>
+                                         <Link href="/">
+  <img src="/assets/img/logo/mg metro gaurds.jpg" alt="Metro Guards Logo" style={{ maxWidth: "80px", height: "auto" }} />
+</Link>
+
+
                                     </div>
                                     <div className="main-menu">
                                         <div className="menu-wrap">
