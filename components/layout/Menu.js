@@ -69,7 +69,7 @@ export default function Menu() {
                 </ul>
             </li>
             <li className="dropdown-parrent">
-                <Link href="/blog-1">Blog</Link>
+                <Link href="/blog-new">Blog</Link>
             </li>
             <li className="dropdown-parrent">
                 <Link href="#">Service Area</Link>
