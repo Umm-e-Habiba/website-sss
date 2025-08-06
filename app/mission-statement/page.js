@@ -2,76 +2,53 @@
 import CounterUp from "@/components/elements/CounterUp"
 import Faq1 from "@/components/elements/Faq1"
 import Layout from "@/components/layout/Layout"
-import TestimonialSlider3 from "@/components/slider/TestimonialSlider3"
 import Link from "next/link"
 export default function Page() {
-
 
     return (
         <>
 
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT CONSULTIA">
                 <div>
-                    <div className="bg-13-haf">
+                    <div className="about-inner bg-28 section-padding">
                         <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="about-haf-img">
-                                        <img className="border-radius" src="/assets/img/about/about-6.jpg" alt="" />
+                            <div className="row align-items-center">
+                                <div className="col-lg-6">
+                                    <div className="mr50">
+                                        <div className="heading2 no-margin-heading">
+                                            <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our stories
+                                                how we establish our company.</small>
+                                            <h2>
+PROVIDING SECURITY WITH INTEGRITY!
+                                            </h2>
+                                            <p>
+                                                As the premier security company in Australia, our mission is to provide customers with cost-effective solutions of the highest quality and the best security guard services using the latest technologies with global connections whilst targeting enhanced security in the Melbourne and Sydney security industry. 
+                                            </p>
+                                            {/* <p>
+                                                We aim to invest our energies in making a more security-inclusive society by delivering high-quality security guard services. Metropolitan guard is a leading example for all other security guard companies in Melbourne and Sydney. We always strive to be the top security service provider utilising the newest sustainability policies.
+                                            </p> */}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="about-bg-main-img position-relative ml50">
+                                        <img src="/assets/img/about/about23.png" alt="" />
+                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {/*=====About haf image end=======*/}
-                    {/*=====About content start=======*/}
-                    <div className="section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="heading2 no-margin-heading">
-                                        <h2>Our Story</h2>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="heading2 no-margin-heading">
-                                        <p>
-                                            Imagine building some of the most sophisticated hardware-driven
-                                            technologies in the world – spacecraft, drones or autonomous
-                                            vehicles. Then imagine being unable to easily share your data to
-                                            different teams, having to use clunky user interfaces, and
-                                            relying on a single person manually inputting data in an Excel
-                                            spreadsheet to bottom line your project. To solve this problem,
-                                            Violet Labs is developing a cloud-based platform that can act as
-                                            a single source of truth.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="heading2 no-margin-heading">
-                                        <p>
-                                            Imagine building some of the most sophisticated hardware-driven
-                                            technologies in the world – spacecraft, drones or autonomous
-                                            vehicles. Then imagine being unable to easily share your data to
-                                            different teams, having to use clunky user interfaces, and
-                                            relying on a single person manually inputting data in an Excel
-                                            spreadsheet to bottom line your project. To solve this problem,
-                                            Violet Labs is developing a cloud-based platform that can act as
-                                            a single source of truth.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*=====About content end=======*/}
+                    {/*=====About end=======*/}
                     {/*=====About start=======*/}
-                    <div className="about-inner bg-29">
+                    <div className="about-inner padding-bottom bg-29">
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
-                                        <img src="/assets/img/about/about22.png" alt="" />
+                                        <img src="/assets/img/about/about24.png" alt="" />
                                         <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div>
@@ -80,28 +57,30 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="ml50">
                                         <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We doing super
-                                                business since 1998.</small>
+                                            <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Vision
+                                                help us to improve our quality.</small>
                                             <h2>
-                                                We Handle The Most Tedious Bookkeeping Tasks of Your Business
-                                                Operations.
+                                                OUR MEMBERSHIP / HEALTH & SAFETY
                                             </h2>
                                             <p>
-                                                Imagine building some of the most sophisticated
-                                                hardware-driven technologies in the world – spacecraft, drones
-                                                or autonomous vehicles. Then imagine being unable to easily
-                                                share your data to different teams, having to use clunky user
-                                                interfaces, and relying on a single person manually inputting
-                                                data.
+                                               Workplace health and safety is the foremost priority at Metropolitan Guards Security. Through a meticulously designed way of induction, preparation, and assessment, we make certain that every personnel at Metropolitan Guards Security is aware of their rights and duties regarding occupational health and safety and environmental hazards and protection. Our apt Occupational Health and Safety (OHS) Management guidelines are underpinned by the guidelines of nationally and international organization for standardization (ISO) which includes:
                                             </p>
                                             <p>
+                                            <ul>
+                                                <li>ISO 14001:2015 Environmental Management System Standard</li>
+                                                <li>ISO 9001:2015 Quality Management System Standard</li>
+                                                <li>ISO 45001:2018 Health and Safety Management System Standard</li>
+
+                                            </ul>
+                                            </p>
+                                            {/* <p>
                                                 Excel spreadsheet to bottom line your project. To solve this
                                                 problem, Violet Labs is developing a cloud-based platform that
                                                 can act as a single source of truth, collecting the data from
                                                 all the tools and making them easily accessible across teams.
                                                 Hoag likened the product to Zapier, which uses APIs to talk to
                                                 different tools.
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
                                 </div>
@@ -109,107 +88,142 @@ export default function Page() {
                         </div>
                     </div>
                     {/*=====About end=======*/}
-                    {/*=====Inner Counter start=======*/}
-                    <div className="inner-counter-1 section-padding position-relative">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="heading2 no-margin-heading mr50">
-                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our
-                                            Success in
-                                            Numbers</small>
-                                        <h2>
-                                            We Handle The Most Tedious Bookkeeping Tasks of Your Business
-                                            Operations.
-                                        </h2>
-                                        <p>
-                                            Experienced, knowledgeable professionals in Property Tax
-                                            Consulting. Our team of Property Tax Consultants is committed to
-                                            saving you money by obtaining the lowest possible assessed value
-                                            for your commercial or residential properties.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="counter2 ml50 position-relative">
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-9.png" alt="" />
-                                                    </div>
-                                                    <h2>$<CounterUp count={256} />B</h2>
-                                                    <p>Quaterly Volume</p>
-                                                </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-16.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={152} />+</h2>
-                                                    <p>Positive Feedback</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <div className="single-counter mt-5">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-12.png" alt="" />
-                                                    </div>
-                                                    <h2>$<CounterUp count={122} />B</h2>
-                                                    <p>Assets on Platfrom</p>
-                                                </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-14.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={256} />+</h2>
-                                                    <p>Employees</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="inner-counter-bg-1">
-                            <img src="/assets/img/shapes/shape-8.png" alt="" />
-                        </div>
-                    </div>
-                    {/*=====Inner Counter start =======*/}
-                    {/*=====Testimonial start=======*/}
-                    <div className="testimonial-3 bg-19 section-padding2 inner-font-1 inner-testimonial-1 _relative">
+                    {/*=====Counter start=======*/}
+                    <div className="counter-4 inner-counter-4 inner-font-1 section-padding" style={{ background: 'url(assets/img/bg/bg-12.png) no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-10 m-auto">
-                                    <div className="heading2 text-center">
-                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our
-                                            Success in
+                                <div className="col-lg-8 m-auto">
+                                    <div className="heading2 white-heading text-center">
+                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Success in
                                             Numbers</small>
-                                        <h2>We love our clients, and they love us.</h2>
+                                        <h2>Why Consultia advisor is the best?</h2>
                                     </div>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-12">
-                                    <TestimonialSlider3 />
+                            <div className="row counters-3">
+                                <div className="col-lg-3 col-6">
+                                    <div className="single-couter-3">
+                                        <h3><CounterUp count={900} />+</h3>
+                                        <p>Number of Families</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-6">
+                                    <div className="single-couter-3">
+                                        <h3>$<CounterUp count={95} />B</h3>
+                                        <p>Assets Managed</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-6">
+                                    <div className="single-couter-3">
+                                        <h3><CounterUp count={40} />+</h3>
+                                        <p>Full Time Advisors</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-6">
+                                    <div className="single-couter-3">
+                                        <h3><CounterUp count={30} />+</h3>
+                                        <p>Employess</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="shape-007">
-                            <img src="/assets/img/shapes/shape007.svg" alt="" />
-                        </div>
                     </div>
-                    {/*=====Testimonial end=======*/}
-                    {/*=====Team start=======*/}
-                    <div className="team-2 section-padding2 inner-font-1">
+                    {/*=====Counter end=======*/}
+                    {/*=====Service start=======*/}
+                    <div className="service-inner-1 section-padding2 inner-font-1">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-8 m-auto">
                                     <div className="heading2 text-center">
-                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our
-                                            Success in
+                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Metro Guards Services</small>
+                                        <h2>Security Services in Melbourne with a highly responsive, professional and industry-leading security team.</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/red-carpet.png" alt="" />
+                                        </div>
+                                        <h3>Event Security Guards in Melbourne </h3>
+                                        <p>
+                                            Ensure your event runs smoothly and safely with our professional event security guards available across Melbourne.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/policeman.png" alt="" />
+                                        </div>
+                                        <h3>Private Security guard hire Melbourne</h3>
+                                        <p>
+                                            Hire trusted private security guards in Melbourne for personal protection, property safety, and peace of mind around the clock.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/construction.png" alt="" />
+                                        </div>
+                                        <h3>Construction site security guards</h3>
+                                        <p>
+                                            Protect your equipment, materials, and workers with reliable construction site security guards across Melbourne’s job sites.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/corporate.png" alt="" />
+                                        </div>
+                                        <h3>Corporate security guards</h3>
+                                        <p>
+                                            Maintain a safe and professional environment with experienced corporate security guards serving businesses throughout Melbourne.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/patrol.png" alt="" />
+                                        </div>
+                                        <h3>Mobile security patrols Melbourne</h3>
+                                        <p>
+                                            Deter threats and respond swiftly with our 24/7 mobile security patrol services available throughout Melbourne.
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4">
+                                    <div className="single-service text-center">
+                                        <div className="service-icon bg-24">
+                                            <img src="/assets/img/icons/police.png" alt="" />
+                                        </div>
+                                        <h3>K9 security guards Melbourne</h3>
+                                        <p>
+                                            Enhance your security with highly trained K9 security guards for advanced threat detection across Melbourne properties.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/*=====Service end=======*/}
+                    {/*=====Team start=======*/}
+                    <div className="team-2 padding-bottom2 inner-font-1">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-8 m-auto">
+                                    <div className="heading2 text-center">
+                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Success in
                                             Numbers</small>
                                         <h2>Our team of financial professionals.</h2>
                                     </div>
@@ -364,14 +378,119 @@ export default function Page() {
                         </div>
                     </div>
                     {/*=====Team end=======*/}
+                    {/*=====Office-area end=======*/}
+                    <div className="office-area section-padding2 bg-13 inner-font-1 _relative">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-8 m-auto">
+                                    <div className="heading2 text-center">
+                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Success in
+                                            Numbers</small>
+                                        <h2>Our Offices Around the World</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>
+                                            <Link href="#">New York Office</Link>
+                                        </h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>San Francisco Office</h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>Dublin Office</h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>Boston Office</h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>Los Angeles Office</h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="single-office">
+                                        <div className="office-icon">
+                                            <img src="/assets/img/icons/telegram.png" alt="" />
+                                        </div>
+                                        <h3>Nashville Office</h3>
+                                        <p>
+                                            90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United
+                                            States
+                                        </p>
+                                        <Link href="#" className="theme-btn-13">Get Direction
+                                            <img src="/assets/img/icons/arrow-up-right-inner-1.svg" alt="" /></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="shape-007">
+                            <img src="/assets/img/shapes/shape007.svg" alt="" />
+                        </div>
+                    </div>
+                    {/*=====Office-area end=======*/}
                     {/*=====Faqs start=======*/}
-                    <div className="faqs-area padding-bottom inner-font-1 inner-faq-1">
+                    <div className="faqs-area section-padding inner-font-1 inner-faq-1">
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="heading2 mr50">
-                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our
-                                            Success in
+                                        <small className="heading-top inner-heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Our Success in
                                             Numbers</small>
                                         <h2>
                                             We Handle The Most Tedious Bookkeeping Tasks of Your Business
