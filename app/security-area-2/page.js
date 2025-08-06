@@ -98,31 +98,31 @@ export default function Page() {
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-9.png" alt="" />
                                                     </div>
-                                                    <h2>$<CounterUp count={256} />B</h2>
-                                                    <p>Quaterly Volume</p>
+                                                     <h2><CounterUp count={4300} /></h2>
+                                                     <p>clients so far</p>
+                                                        </div>
+                                                        <div className="single-counter">
+                                                        <div className="conter-icon">
+                                                       <img src="/assets/img/icons/service-16.png" alt="" />
+                                                      </div>
+                                                             <h2><CounterUp count={8} />+</h2>
+                                                     <p>Membership so far</p>
+                                                      </div>
+                                                     </div>
+                                                  <div className="col-md-6">
+                                                  <div className="single-counter mt-5">
+                                                <div className="conter-icon">
+                                              <img src="/assets/img/icons/service-12.png" alt="" />
                                                 </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-16.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={152} />+</h2>
-                                                    <p>Positive Feedback</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <div className="single-counter mt-5">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-12.png" alt="" />
-                                                    </div>
-                                                    <h2>$<CounterUp count={122} />B</h2>
-                                                    <p>Assets on Platfrom</p>
-                                                </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-14.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={256} />+</h2>
-                                                    <p>Employees</p>
+                                             <h2><CounterUp count={3} />+</h2>
+                                          <p>Awards so far</p>
+                                          </div>
+                                     <div className="single-counter">
+                                        <div className="conter-icon">
+                                 <img src="/assets/img/icons/service-14.png" alt="" />
+                                    </div>
+                                     <h2><CounterUp count={90} />%</h2>
+                                                    <p>Meetings so far</p>
                                                 </div>
                                             </div>
                                         </div>

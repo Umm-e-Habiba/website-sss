@@ -200,7 +200,7 @@ export default function Page() {
                                         </div>
 
                                         {/* Book a Guard CTA */}
-                                        <div className="book-guard-cta p-4 text-center" style={{backgroundColor: '#28a745', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', color: 'white'}}>
+                                        {/* <div className="book-guard-cta p-4 text-center" style={{backgroundColor: '#28a745', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', color: 'white'}}>
                                             <div className="cta-icon mb-3">
                                                 <img src="/assets/img/icons/service-12.png" alt="" style={{width: '50px', height: '50px', filter: 'brightness(0) invert(1)'}} />
                                             </div>
@@ -209,7 +209,7 @@ export default function Page() {
                                             <button className="btn btn-light btn-lg px-4 py-3 font-weight-bold" style={{borderRadius: '10px', color: '#28a745'}}>
                                                 📋 Book a Guard
                                             </button>
-                                        </div>
+                                        </div> */}
 
                                         {/* Emergency Contact */}
                                         <div className="emergency-contact mt-4 p-4 text-center" style={{backgroundColor: '#dc3545', borderRadius: '15px', color: 'white'}}>
@@ -291,7 +291,7 @@ export default function Page() {
                                 <div className="col-12">
                                     <div className="heading2 no-margin-heading">
                                         <small className="heading-top inner-heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />Ready to Secure Your Property?
+                                            <img src="/assets/img/icons/hands.svg" alt="" />Get Security Now
                                         </small>
                                         <h2>Get Professional Security Services Today</h2>
                                     </div>

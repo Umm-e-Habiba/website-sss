@@ -95,31 +95,31 @@ export default function Page() {
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-9.png" alt="" />
                                                     </div>
-                                                    <h2>$<CounterUp count={256} />B</h2>
-                                                    <p>Quaterly Volume</p>
-                                                </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-16.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={152} />+</h2>
-                                                    <p>Positive Feedback</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <div className="single-counter mt-5">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-12.png" alt="" />
-                                                    </div>
-                                                    <h2>$<CounterUp count={122} />B</h2>
-                                                    <p>Assets on Platfrom</p>
-                                                </div>
-                                                <div className="single-counter">
-                                                    <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-14.png" alt="" />
-                                                    </div>
-                                                    <h2><CounterUp count={256} />+</h2>
-                                                    <p>Employees</p>
+                                                    <h2><CounterUp count={4300} /></h2>
+                                                                                                       <p>clients so far</p>
+                                                                                                   </div>
+                                                                                                   <div className="single-counter">
+                                                                                                       <div className="conter-icon">
+                                                                                                           <img src="/assets/img/icons/service-16.png" alt="" />
+                                                                                                       </div>
+                                                                                                       <h2><CounterUp count={8} />+</h2>
+                                                                                                       <p>Membership so far</p>
+                                                                                                   </div>
+                                                                                               </div>
+                                                                                               <div className="col-md-6">
+                                                                                                   <div className="single-counter mt-5">
+                                                                                                       <div className="conter-icon">
+                                                                                                           <img src="/assets/img/icons/service-12.png" alt="" />
+                                                                                                       </div>
+                                                                                                       <h2><CounterUp count={3} />+</h2>
+                                                                                                       <p>Awards so far</p>
+                                                                                                   </div>
+                                                                                                   <div className="single-counter">
+                                                                                                       <div className="conter-icon">
+                                                                                                           <img src="/assets/img/icons/service-14.png" alt="" />
+                                                                                                       </div>
+                                                                                                       <h2><CounterUp count={90} />%</h2>
+                                                                                                       <p>Meetings so far</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,15 +231,15 @@ export default function Page() {
                                         <p>Warehouses can be targets for theft, break-ins, or even internal issues. Our Warehouse Security System is designed to keep everything secure—day and night. From monitoring stock to controlling entry points, we'll create a plan that fits your building and keeps your operations running smoothly.</p>
                                     </div>
                                 </div>
-                                <div className="col-md-4 mb-4">
-                                    <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
-                                        <div className="service-icon mb-3">
+                                {/* <div className="col-md-4 mb-4"> */}
+                                    {/* <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}> */}
+                                        {/* <div className="service-icon mb-3">
                                             <img src="/assets/img/icons/service-12.png" alt="" style={{width: '40px', height: '40px'}} />
-                                        </div>
-                                        <h4>Gate House Security for Safe and Organised Access</h4>
-                                        <p>Managing who comes in and out of your property is important—especially on busy sites. With our Gate House Security Guard service, we handle entry points for you. Our guards check IDs, manage visitor logs, and make sure only the right people are allowed through. It's perfect for construction sites, factories, or business facilities that need strong front-line control.</p>
-                                    </div>
-                                </div>
+                                        </div> */}
+                                        {/* <h4>Gate House Security for Safe and Organised Access</h4>
+                                        <p>Managing who comes in and out of your property is important—especially on busy sites. With our Gate House Security Guard service, we handle entry points for you. Our guards check IDs, manage visitor logs, and make sure only the right people are allowed through. It's perfect for construction sites, factories, or business facilities that need strong front-line control.</p> */}
+                                    {/* </div> */}
+                                {/* </div> */}
                             </div>
                             <div className="row">
                                 <div className="col-12">

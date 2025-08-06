@@ -5,7 +5,7 @@ import TestimonialSlider3 from "@/components/slider/TestimonialSlider3"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT METRO GUARDS">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="METRO GUARDS SERVICE AREA">
                 <div>
                     {/*===== Security Guards in East Melbourne, VIC =====*/}
                     <div className="section-padding">
@@ -93,15 +93,15 @@ export default function Page() {
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-9.png" alt="" />
                                                     </div>
-                                                    <h2>$<CounterUp count={256} />B</h2>
-                                                    <p>Quarterly Volume</p>
+                                                    <h2><CounterUp count={4300} /></h2>
+                                                    <p>clients so far</p>
                                                 </div>
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-16.png" alt="" />
                                                     </div>
-                                                    <h2><CounterUp count={152} />+</h2>
-                                                    <p>Positive Feedback</p>
+                                                    <h2><CounterUp count={8} />+</h2>
+                                                    <p>Membership so far</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-6">
@@ -109,15 +109,15 @@ export default function Page() {
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-12.png" alt="" />
                                                     </div>
-                                                    <h2>$<CounterUp count={122} />B</h2>
-                                                    <p>Assets on Platform</p>
+                                                    <h2><CounterUp count={3} />+</h2>
+                                                    <p>Awards so far</p>
                                                 </div>
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
                                                         <img src="/assets/img/icons/service-14.png" alt="" />
                                                     </div>
-                                                    <h2><CounterUp count={256} />+</h2>
-                                                    <p>Employees</p>
+                                                    <h2><CounterUp count={90} />%</h2>
+                                                    <p>Meetings so far</p>
                                                 </div>
                                             </div>
                                         </div>

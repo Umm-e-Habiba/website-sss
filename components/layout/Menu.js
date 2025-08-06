@@ -23,10 +23,11 @@ export default function Menu() {
                 <Link href="/">Home</Link>
             </li>
             <li className="dropdown-parrent">
-                <Link href="/about-1">About Us</Link>
+                <Link href="">About Us</Link>
                 <ul className="theme-dropdown">
                     <li><Link href="/our-values">Our Values</Link></li>
                     <li><Link href="/corporate-responsibility">Corporate Responsibility</Link></li>
+                    <li><Link href="/corporate-social-responsibility">Corporate Social Responsibility</Link></li>
                     <li><Link href="/mission-statement">Mission Statement</Link></li>
                     <li><Link href="/our-commitments">Our Commitments</Link></li>
                     <li><Link href="/how-we-thrive">How we Thrive</Link></li>
