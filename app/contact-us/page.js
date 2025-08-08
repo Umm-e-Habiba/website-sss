@@ -11,27 +11,30 @@ export default function Page() {
      const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e) {
-    e.preventDefault();
-    setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+  const form = e.currentTarget;           // 👈 keep a reference
+  const formData = new FormData(form);    // 👈 build from the reference
 
-    try {
-      const res = await fetch("/api/contact", { method: "POST", body: formData });
-      const data = await res.json();
+  try {
+    const res = await fetch("/api/contact", { method: "POST", body: formData });
+    const data = await res.json().catch(() => ({}));
 
-      if (data.success) {
-        toast.success("Message sent successfully!", { position: "bottom-right", autoClose: 3000 });
-        e.currentTarget.reset();
-      } else {
-        toast.error("Failed to send message. Please try again.", { position: "bottom-right", autoClose: 3000 });
-      }
-    } catch {
-      toast.error("Network error. Please try again.", { position: "bottom-right", autoClose: 3000 });
-    } finally {
-      setLoading(false);
+    if (!res.ok || !data?.success) {
+      throw new Error(data?.error || `Request failed: ${res.status}`);
     }
+
+    toast.success("Message sent successfully!");
+    form.reset();                         // 👈 safe now
+  } catch (err) {
+    toast.error(err.message || "Network error. Please try again.");
+    console.error(err);
+  } finally {
+    setLoading(false);
   }
+}
+
 
 
     return (
@@ -205,7 +208,7 @@ export default function Page() {
                                                 disabled={loading}
                                                 aria-busy={loading}
                                                 >
-                                                    Send Enquiry
+                                                    {loading ? "Sending..." : "Send Enquiry"}
                                                 </button>
                                             </div>
                                         </form>
