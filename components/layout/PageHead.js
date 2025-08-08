@@ -7,6 +7,7 @@ const PageHead = ({ headTitle }) => {
                 <title>
                     {headTitle ? headTitle : "Name - Nextjs Template"}
                 </title>
+                <link rel="icon" href="/assets/img/logo/client 14.webp" />
             </Head>
         </>
     )
