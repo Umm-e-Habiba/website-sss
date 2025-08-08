@@ -104,18 +104,18 @@ export default function Page() {
                                             <h2>Get A Quotation</h2>
                                         </div>
                                         
-                                        <form className="contact-form">
+                                        <form className="contact-form" action="/api/contact" method="POST">
                                             <div className="row">
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-group">
                                                         <label className="form-label font-weight-bold">First Name *</label>
-                                                        <input type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your first name" required />
+                                                        <input name="firstName" type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your first name" required />
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-group">
                                                         <label className="form-label font-weight-bold">Last Name *</label>
-                                                        <input type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your last name" required />
+                                                        <input name="lastName" type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your last name" required />
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,13 +124,13 @@ export default function Page() {
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-group">
                                                         <label className="form-label font-weight-bold">Email Address *</label>
-                                                        <input type="email" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your email" required />
+                                                        <input name="email" type="email" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your email" required />
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-group">
                                                         <label className="form-label font-weight-bold">Phone Number *</label>
-                                                        <input type="tel" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your phone number" required />
+                                                        <input name="phone" type="tel" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Enter your phone number" required />
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,7 +138,7 @@ export default function Page() {
                                             <div className="mb-4">
                                                 <div className="form-group">
                                                     <label className="form-label font-weight-bold">Service Required</label>
-                                                    <select className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}}>
+                                                    <select name="service" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}}>
                                                         <option value="">Select a service</option>
                                                         <option value="residential">Residential Security</option>
                                                         <option value="commercial">Commercial Security</option>
@@ -154,14 +154,14 @@ export default function Page() {
                                             <div className="mb-4">
                                                 <div className="form-group">
                                                     <label className="form-label font-weight-bold">Location/Suburb</label>
-                                                    <input type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Where do you need security services?" />
+                                                    <input name="location" type="text" className="form-control p-3" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Where do you need security services?" />
                                                 </div>
                                             </div>
 
                                             <div className="mb-4">
                                                 <div className="form-group">
                                                     <label className="form-label font-weight-bold">Message/Additional Details</label>
-                                                    <textarea className="form-control p-3" rows="5" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Tell us more about your security requirements..."></textarea>
+                                                    <textarea name="message" className="form-control p-3" rows="5" style={{borderRadius: '8px', border: '2px solid #e9ecef'}} placeholder="Tell us more about your security requirements..."></textarea>
                                                 </div>
                                             </div>
 
