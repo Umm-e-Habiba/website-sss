@@ -12,7 +12,7 @@ import "public/assets/css/master.css"
 import "public/assets/css/h4-master.css"
 
 export const metadata = {
-  title: 'Security Guard Services - Security Company in Melbourne',
+  title: 'Security Guard Services | Security Company in Melbourne',
   description: 'Metro Guards is a leading security company in Melbourne. We are providing security guard services for both residential & commercial Buildings. Call us 1300731173',
   openGraph: {
     title: "Security Guard Services - Security Company in Melbourne",
