@@ -1,8 +1,43 @@
-import Layout from "@/components/layout/Layout"
+"use client";
+import Layout from "@/components/layout/Layout";
+
+import { useState } from "react";
+import { toast ,ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// initialize toast notifications once in your app layout or here
 
 export default function Page() {
+     const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/api/contact", { method: "POST", body: formData });
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully!", { position: "bottom-right", autoClose: 3000 });
+        e.currentTarget.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.", { position: "bottom-right", autoClose: 3000 });
+      }
+    } catch {
+      toast.error("Network error. Please try again.", { position: "bottom-right", autoClose: 3000 });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
     return (
         <>
+        {/* Toasts */}
+      <ToastContainer position="bottom-right" autoClose={3000}/>
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="CONTACT US">
                 <div>
                     {/*===== Hire Security Guards in Melbourne and Surrounding Areas =====*/}
@@ -104,7 +139,7 @@ export default function Page() {
                                             <h2>Get A Quotation</h2>
                                         </div>
                                         
-                                        <form className="contact-form" action="/api/contact" method="POST">
+                                        <form className="contact-form" onSubmit={handleSubmit} noValidate>
                                             <div className="row">
                                                 <div className="col-md-6 mb-4">
                                                     <div className="form-group">
@@ -166,7 +201,10 @@ export default function Page() {
                                             </div>
 
                                             <div className="text-center">
-                                                <button type="submit" className="btn btn-primary btn-lg px-5 py-3" style={{borderRadius: '10px', fontSize: '18px', fontWeight: 'bold'}}>
+                                                <button type="submit" className="btn btn-primary btn-lg px-5 py-3" style={{borderRadius: '10px', fontSize: '18px', fontWeight: 'bold'}} 
+                                                disabled={loading}
+                                                aria-busy={loading}
+                                                >
                                                     Send Enquiry
                                                 </button>
                                             </div>
