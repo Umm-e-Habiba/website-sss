@@ -4,7 +4,7 @@ import About from "@/components/homepages/home1/About"
 import About2 from "@/components/homepages/home1/About2"
 import Blog from "@/components/homepages/home1/Blog"
 import CaseStudy from "@/components/homepages/home1/CaseStudy"
-import Pricing from "@/components/homepages/home1/Pricing"
+//import Pricing from "@/components/homepages/home1/Pricing"
 import Subscribe from "@/components/homepages/home1/Subscribe"
 import TaxBusiness from "@/components/homepages/home1/TaxBusiness"
 import Testimonial from "@/components/homepages/home1/Testimonial"
@@ -18,9 +18,8 @@ export default function Page() {
                 <Welcome />
                 <TaxBusiness />
                 <About />
-                <About2 />
                 <CaseStudy />
-                <Pricing />
+                <About2 />
                 <Testimonial />
                 <Blog />
                 <Subscribe />
