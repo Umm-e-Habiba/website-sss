@@ -41,29 +41,29 @@ export default function Menu() {
                         <div className="single-mega-menu">
                             <h3 className="font-f-1">Security Guard For Hire</h3>
                             <ul>
-                                <li><Link href="/case-study-1">Adhoc Security Services</Link></li>
-                                <li><Link href="/case-study-2">Asset Protection</Link></li>
-                                <li><Link href="/single-case-study-1">Private Security Guards</Link></li>
-                                <li><Link href="/service-1">Staff Escort Security</Link></li>
-                                <li><Link href="/service-2">Mobile Patrol Security</Link></li>
-                                <li><Link href="/service-3">Rapid Alarm Response Security</Link></li>
-                                <li><Link href="/single-service-1">Hire Unarmed Security Guard</Link></li>
+                                <li><Link href="/adhoc-security-services">Adhoc Security Services</Link></li>
+                                <li><Link href="/asset-protection">Asset Protection</Link></li>
+                                <li><Link href="/private-security-guard">Private Security Guards</Link></li>
+                                <li><Link href="/staff-escort-security">Staff Escort Security</Link></li>
+                                <li><Link href="/mobile-patrol-security">Mobile Patrol Security</Link></li>
+                                <li><Link href="/rapid-alarm-response-security">Rapid Alarm Response Security</Link></li>
+                                <li><Link href="/hire-unarmed-security-guard">Hire Unarmed Security Guard</Link></li>
                             </ul>
                         </div>
                         <div className="single-mega-menu">
                             <h3 className="font-f-1">Corporate Security Guards</h3>
                             <ul>
-                                <li><Link href="/blog-1">Building Security Guard</Link></li>
-                                <li><Link href="/blog-mesonry-1">Construction Site Security Guard</Link></li>
-                                <li><Link href="/blog-mesonry-2">Warehouse Security System</Link></li>
-                                <li><Link href="/blog-mesonry-3">Concierge Guards</Link></li>
-                                <li><Link href="/single-1">Gatehouse Security Guard</Link></li>
+                                <li><Link href="/building-security-guard">Building Security Guard</Link></li>
+                                <li><Link href="/construction-site-security-guard">Construction Site Security Guard</Link></li>
+                                <li><Link href="/warehouse-security-system">Warehouse Security System</Link></li>
+                                <li><Link href="/concierge-guards">Concierge Guards</Link></li>
+                                <li><Link href="/gatehouse-security-guard">Gatehouse Security Guard</Link></li>
                             </ul>
                         </div>
                         <div className="single-mega-menu">
                             <h3 className="font-f-1">Loss Prevention Security</h3>
                             <ul>
-                                <li><Link href="/shop-1">Retail Security Guard</Link></li>
+                                <li><Link href="/retail-security-guard">Retail Security Guard</Link></li>
                             </ul>
                         </div>
                     </li>
