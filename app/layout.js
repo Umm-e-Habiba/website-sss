@@ -10,6 +10,7 @@ import "public/assets/css/plugins/nice-select.css"
 import "public/assets/css/plugins/fonts.css"
 import "public/assets/css/master.css"
 import "public/assets/css/h4-master.css"
+import './globals.css';
 
 export const metadata = {
   title: 'Security Guard Services | Security Company in Melbourne',

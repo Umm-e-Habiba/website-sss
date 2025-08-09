@@ -18,4 +18,20 @@ model User {
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
+   posts     Post[]
+}
+model Post {
+  id         Int       @id @default(autoincrement())
+  title      String
+  slug       String    @unique
+  excerpt    String?
+  content    String     // will store HTML from TipTap
+  coverImage String?    // image URL from Cloudinary
+  tags       String[]   @default([])
+  published  Boolean    @default(false)
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  authorId   Int
+  author     User      @relation(fields: [authorId], references: [id])
 }
