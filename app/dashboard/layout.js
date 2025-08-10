@@ -26,29 +26,27 @@ export default  async function DashboardLayout({ children }) {
     }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="flex">
-        {/* Sidebar */}
-        <Sidebar />
+    <div className="min-h-screen bg-slate-50 md:grid md:grid-cols-[16rem_1fr]">
+    {/* Sidebar takes the first grid column on md+ */}
+    <Sidebar />
 
-        {/* Content */}
-        <div className="flex-1 lg:pl-64 w-full">
-          <header className="sticky top-0 z-30 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-              <h1 className="text-xl font-semibold text-slate-800">Dashboard</h1>
-              <div className="hidden lg:block">
-                <form action="/api/signout" method="POST">
-                  <button type="submit">Sign Out</button>
-                </form>
-              </div>
-            </div>
-          </header>
-
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-            {children}
-          </main>
+    {/* Content column */}
+    <div className="min-w-0 w-full">
+      <header className="sticky top-0 z-30 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <h1 className="flex-1 text-center md:text-left text-xl font-semibold text-slate-800">Welcome To Dashboard</h1>
+          <div className="hidden lg:block">
+            <form action="/api/signout" method="POST">
+              <button type="submit">Sign Out</button>
+            </form>
+          </div>
         </div>
-      </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        {children}
+      </main>
     </div>
-  );
+  </div>
+);
 }

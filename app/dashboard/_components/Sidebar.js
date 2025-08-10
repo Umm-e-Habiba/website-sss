@@ -27,17 +27,21 @@ function SidebarItem({ href, label }) {
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
 
-  return (
+   return (
     <aside
       className={cx(
-        "fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-white shadow-xl transition-transform lg:translate-x-0",
-        open ? "translate-x-0" : "-translate-x-full"
+        // Overlay on small screens
+        "fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 text-white shadow-xl transition-transform",
+        open ? "translate-x-0" : "-translate-x-full",
+
+        // Real column on md+ (no overlay)
+        "md:sticky md:top-0 md:h-screen md:translate-x-0 md:transform-none"
       )}
     >
       <div className="flex h-16 items-center gap-2 px-4 border-b border-white/10">
         <button
           onClick={() => setOpen(false)}
-          className="lg:hidden rounded-lg p-2 hover:bg-white/10"
+          className="md:hidden rounded-lg p-2 hover:bg-white/10"
           aria-label="Close sidebar"
         >
           ✕
