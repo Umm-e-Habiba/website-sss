@@ -1,4 +1,5 @@
 // app/dashboard/layout.jsx  (no "use client" here)
+import './globals.css';
 import { cookies } from "next/headers";
 import Sidebar from "./_components/Sidebar";
 import { redirect } from "next/navigation";
