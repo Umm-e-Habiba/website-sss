@@ -65,7 +65,17 @@ export default function Menu() {
                             <ul>
                                 <li><Link href="/retail-security-guard">Retail Security Guard</Link></li>
                             </ul>
+                            <h3 className="font-f-1">Event Security</h3>
+                            <ul>
+                                <li><Link href="/event-security-guards">Event Security Guards</Link></li>
+                            </ul>
+                            <h3 className="font-f-1">Canine (K9) Security</h3>
+                            <ul>
+                                <li><Link href="/k9-security-guards-in-melbourne">Canine (K9) Security Services</Link></li>
+                            </ul>
                         </div>
+                        
+                        
                     </li>
                 </ul>
             </li>

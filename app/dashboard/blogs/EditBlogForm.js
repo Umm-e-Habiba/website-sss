@@ -13,6 +13,9 @@ export default function EditBlogForm({ post, redirectTo = "/dashboard/blogs" }) 
   const [title, setTitle] = useState(post.title || "");
   const [content, setContent] = useState(post.content || "");
   const [published, setPublished] = useState(!!post.published);
+  const [updatedAt, setUpdatedAt] = useState(
+  post?.updatedAt ? new Date(post.updatedAt).toISOString().split("T")[0] : ""
+);
 
   // cover image state (preview + value)
   const [coverImage, setCoverImage] = useState(post.coverImage || "");
@@ -64,6 +67,7 @@ export default function EditBlogForm({ post, redirectTo = "/dashboard/blogs" }) 
           content,
           published,
           coverImage: coverImage || null, // send new (or null to clear)
+          updatedAt,
         }),
       });
       const data = await res.json();
@@ -88,7 +92,16 @@ export default function EditBlogForm({ post, redirectTo = "/dashboard/blogs" }) 
           required
         />
       </div>
-
+      {/* NEW DATE FIELD */}
+      <div className="grid gap-2">
+        <label className="text-sm font-medium">Publish Date</label>
+        <input
+          type="date"
+          className="w-full rounded-xl border px-3 py-2 text-sm"
+          value={updatedAt}
+          onChange={(e) => setUpdatedAt(e.target.value)}
+        />
+      </div>
       <div className="grid gap-2">
         <label className="text-sm font-medium">Cover Image</label>
         <input type="file" accept="image/*" onChange={(e) => handleImage(e.target.files?.[0])} />

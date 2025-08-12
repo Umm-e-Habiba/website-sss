@@ -7,10 +7,14 @@ export default async function EditBlogPage({ params }) {
   const id = Number(params.id);
   const post = await prisma.post.findUnique({
     where: { id },
-    select: { id: true, title: true, content: true, published: true, coverImage: true },
+    select: { id: true, title: true, content: true, published: true, coverImage: true, updatedAt:true },
   });
   if (!post) return <div>Not found</div>;
 
+const safePost = {
+    ...post,
+    updatedAt: post.updatedAt.toISOString(), // "2025-08-12T18:23:11.000Z"
+  };
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -18,7 +22,7 @@ export default async function EditBlogPage({ params }) {
         <Link href="/dashboard/blogs" className="text-sm underline">← Back</Link>
       </div>
       <div className="rounded-2xl border bg-white p-6">
-        <EditBlogForm post={post} redirectTo="/dashboard/blogs" />
+        <EditBlogForm post={safePost} redirectTo="/dashboard/blogs" />
       </div>
     </div>
   );

@@ -9,6 +9,12 @@ export async function GET(_req, { params }) {
   return NextResponse.json(post);
 }
 
+function parseDateOrNull(input) {
+  if (!input || typeof input !== "string") return null;
+  const d = new Date(input);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
 export async function PUT(req, { params }) {
   const me = await getUserFromCookie();
   if (!me) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -18,12 +24,15 @@ export async function PUT(req, { params }) {
   if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
   if (existing.authorId !== me.id) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
 
-  const { title, content, published, coverImage } = await req.json();
+  const { title, content, published, coverImage,updatedAt } = await req.json();
   const data = {};
   if (title !== undefined) data.title = title;
   if (content !== undefined) data.content = content;
   if (typeof published === "boolean") data.published = published;
   if (coverImage !== undefined) data.coverImage = coverImage;
+  const parsedPublishedDate = parseDateOrNull(updatedAt);
+  data.updatedAt=parsedPublishedDate;
+
 
   await prisma.post.update({ where: { id }, data });
   return NextResponse.json({ message: "Updated" });

@@ -118,6 +118,35 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                 <li><Link href="/retail-security-guard" onClick={handleMobileMenu}>Retail Security Guard</Link></li>
                                 </ul>
                             </div>
+
+                            {/* Column 4 */}
+                            <div className="single-mega-menu" style={{ position: "relative", paddingRight: 30 ,width: "300px"}}>
+                                <h3 className="font-f-1-submenu" style={{ marginBottom: 0 }}>
+                                Event Security
+                                </h3>
+                                <span
+                                className={openSections.event ? "submenu-button submenu-opened" : "submenu-button"}
+                                onClick={() => toggleSection("event")}
+                                style={{ height: 44 }}
+                                />
+                                <ul className="sub-menu" style={{ display: openSections.event ? "block" : "none" }}>
+                                <li><Link href="/event-security-guards" onClick={handleMobileMenu}>Event Security Guards</Link></li>
+                                </ul>
+                            </div>
+                            {/* Column 5 */}
+                            <div className="single-mega-menu" style={{ position: "relative", paddingRight: 30 ,width: "300px"}}>
+                                <h3 className="font-f-1-submenu" style={{ marginBottom: 0 }}>
+                                Canine (K9) Security
+                                </h3>
+                                <span
+                                className={openSections.k9 ? "submenu-button submenu-opened" : "submenu-button"}
+                                onClick={() => toggleSection("k9")}
+                                style={{ height: 44 }}
+                                />
+                                <ul className="sub-menu" style={{ display: openSections.k9 ? "block" : "none" }}>
+                                <li><Link href="/k9-security-guards-in-melbourne" onClick={handleMobileMenu}>Canine (K9) Security Services</Link></li>
+                                </ul>
+                            </div>
                             </li>
                         </ul>
                         </li>

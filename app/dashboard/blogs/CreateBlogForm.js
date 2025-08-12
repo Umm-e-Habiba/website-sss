@@ -27,6 +27,7 @@ export default function CreateBlogForm({ redirectTo = "/dashboard/blogs" }) {
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [publishDate,setPublishDate]=useState("");
 
   const autoSlug = () => setSlug((prev) => prev || slugify(title));
 
@@ -72,6 +73,8 @@ export default function CreateBlogForm({ redirectTo = "/dashboard/blogs" }) {
           tags, // comma-separated, server normalizes
           content,
           published,
+          publishDate
+
         }),
       });
       const data = await res.json();
@@ -118,7 +121,15 @@ export default function CreateBlogForm({ redirectTo = "/dashboard/blogs" }) {
           placeholder="Short summary for cards and SEO"
         />
       </div>
-
+      <div className="grid gap-2">
+        <label className="text-sm font-medium">Publish Date</label>
+        <input
+          type="date"
+          className="w-full rounded-xl border px-3 py-2 text-sm"
+          value={publishDate}
+          onChange={(e) => setPublishDate(e.target.value)}
+        />
+      </div>
       <div className="grid gap-2">
         <label className="text-sm font-medium">Cover Image</label>
         <input
