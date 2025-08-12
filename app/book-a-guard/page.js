@@ -4,10 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-  title: 'Book a Guard - Metropolitan Security Services',
-  description: 'Book professional security guard services from Metropolitan Guard Services.',
-}
+
 
 export default function BookGuardPage() {
 

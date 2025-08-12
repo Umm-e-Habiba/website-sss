@@ -4,10 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-  title: 'Careers - Join Our Security Team | Metropolitan Guard Services',
-  description: 'Start your career in security with Metropolitan Guard Services. View current job openings and submit your application to join our professional security team.',
-}
+
 
 export default function CareersPage() {
     const [loading, setLoading] = useState(false);

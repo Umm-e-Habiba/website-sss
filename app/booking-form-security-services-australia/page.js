@@ -4,10 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-  title: 'Booking Form - Metropolitan Security Services',
-  description: 'Book security services with Metropolitan Guard Services in Australia.',
-}
+
 
 export default function BookingFormPage() {
     const [loading, setLoading] = useState(false);

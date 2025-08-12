@@ -4,10 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-  title: 'Contractor Declaration Form - Metropolitan Security Services',
-  description: 'Contractor compliance declaration form for Metropolitan Guard Services partners.',
-}
+
 
 export default function ContractorDeclarationPage() {
     const [loading, setLoading] = useState(false);
