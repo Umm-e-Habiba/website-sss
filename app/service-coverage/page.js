@@ -4,10 +4,7 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const metadata = {
-  title: 'Service Coverage - Metropolitan Security Services',
-  description: 'View our comprehensive security service coverage across Melbourne, Sydney and surrounding areas. We provide security guards and patrols wherever you need protection.',
-}
+
 
 export default function ServiceCoveragePage() {
     const [loading, setLoading] = useState(false);
