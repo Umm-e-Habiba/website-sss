@@ -4,7 +4,6 @@ import AOS from 'aos'
 import { useEffect, useState } from "react"
 import BackToTop from '../elements/BackToTop'
 import Breadcrumb from './Breadcrumb'
-import DemoSidebar from "./DemoSidebar"
 import MobileMenu from './MobileMenu'
 import PageHead from './PageHead'
 import Footer1 from './footer/Footer1'
@@ -61,7 +60,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
             {footerStyle == 5 ? < Footer5 /> : null}
             {footerStyle == 6 ? < Footer6 /> : null}
 
-            <DemoSidebar />
+            
 
             <BackToTop scroll={scroll} />
         </>

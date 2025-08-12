@@ -31,7 +31,7 @@ export default function Menu() {
                     <li><Link href="/mission-statement">Mission Statement</Link></li>
                     <li><Link href="/our-commitments">Our Commitments</Link></li>
                     <li><Link href="/how-we-thrive">How we Thrive</Link></li>
-                    <li><Link href="/FAQ">FAQ</Link></li>
+                    <li><Link href="/faqs">FAQ</Link></li>
                 </ul>
             </li>
             <li className="mega-menu-parrent">
@@ -43,7 +43,7 @@ export default function Menu() {
                             <ul>
                                 <li><Link href="/adhoc-security-services">Adhoc Security Services</Link></li>
                                 <li><Link href="/asset-protection">Asset Protection</Link></li>
-                                <li><Link href="/private-security-guard">Private Security Guards</Link></li>
+                                <li><Link href="/private-security-guards">Private Security Guards</Link></li>
                                 <li><Link href="/staff-escort-security">Staff Escort Security</Link></li>
                                 <li><Link href="/mobile-patrol-security">Mobile Patrol Security</Link></li>
                                 <li><Link href="/rapid-alarm-response-security">Rapid Alarm Response Security</Link></li>
@@ -53,7 +53,7 @@ export default function Menu() {
                         <div className="single-mega-menu">
                             <h3 className="font-f-1">Corporate Security Guards</h3>
                             <ul>
-                                <li><Link href="/building-security-guard">Building Security Guard</Link></li>
+                                <li><Link href="/building-security-guards">Building Security Guard</Link></li>
                                 <li><Link href="/construction-site-security-guard">Construction Site Security Guard</Link></li>
                                 <li><Link href="/warehouse-security-system">Warehouse Security System</Link></li>
                                 <li><Link href="/concierge-guards">Concierge Guards</Link></li>
@@ -70,19 +70,19 @@ export default function Menu() {
                 </ul>
             </li>
             <li className="dropdown-parrent">
-                <Link href="/blog-new">Blog</Link>
+                <Link href="/blogs">Blog</Link>
             </li>
             <li className="dropdown-parrent">
                 <Link href="#">Service Area</Link>
                 <ul className="theme-dropdown">
-                    <li><Link href="security-area-1">Security Guard East Melbourne</Link></li>
-                    <li><Link href="security-area-2">Security Guard West Melbourne</Link></li>
-                    <li><Link href="/security-area-3">Security Guard North Melbourne</Link></li>
-                    <li><Link href="/security-area-4">Security Guard South Melbourne</Link></li>
+                    <li><Link href="security-guard-east-melbourne-vic-3002">Security Guard East Melbourne</Link></li>
+                    <li><Link href="security-guard-west-melbourne-vic-3003">Security Guard West Melbourne</Link></li>
+                    <li><Link href="security-guard-north-melbourne-vic-3051">Security Guard North Melbourne</Link></li>
+                    <li><Link href="security-guard-south-melbourne-vic-3205">Security Guard South Melbourne</Link></li>
                 </ul>
             </li>
             <li className="dropdown-parrent">
-                <Link href="/contact-us">Contact</Link>
+                <Link href="/contacts">Contact</Link>
             </li>
         </ul>
     );

@@ -15,7 +15,7 @@ export default function Welcome() {
                                 <p data-aos="fade-right" data-aos-duration={1000}>Metro Guard is the most reliable & Affordable local security company in Melbourne, and it is the frontline for your safety. Licensed by ASIAL (Australian Security Industry Association Limited) | Victoria State Government.We are providing Security Services in Melbourne Residential, Commercial Industrial, Retail and Government Sectors. Contact us to Get Free Security Quote According to your business needs</p>
                                 <div className="space30" />
                                 <div className="btn-group" data-aos="fade-right" data-aos-duration={1200}>
-                                    <Link className="theme-btn-2" href="#">Get An Estimated Quote <span><i className="fa-solid fa-arrow-right" /></span></Link>
+                                    <Link className="theme-btn-2" href="get-quotation">Get A Quote Now <span><i className="fa-solid fa-arrow-right" /></span></Link>
                                     <Link className="theme-btn-3" href="#">Schdule A Call <span><i className="fa-solid fa-arrow-right" /></span></Link>
                                 </div>
                                 <div className="space80" />

@@ -26,10 +26,10 @@ export default function Footer1() {
                                 <h3>Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
-                                        <li><Link href="#">Security License and Insurance</Link></li>
-                                        <li><Link href="#">Terms and Conditions</Link></li>
-                                        <li><Link href="#">Condition of Hires</Link></li>
-                                        <li><Link href="#">FAQs</Link></li>
+                                        <li><Link href="security-licenses-and-insurance">Security License and Insurance</Link></li>
+                                        <li><Link href="terms-and-conditions">Terms and Conditions</Link></li>
+                                        <li><Link href="conditions-of-hire">Condition of Hires</Link></li>
+                                        <li><Link href="faqs">FAQs</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -41,10 +41,10 @@ export default function Footer1() {
                                 <h3>Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
-                                        <li><Link href="#">Privacy Policy</Link></li>
-                                        <li><Link href="#">Slavery Statement</Link></li>
-                                        <li><Link href="#">Service Coverage</Link></li>
-                                        <li><Link href="#">Forms and Downloads</Link></li>
+                                        <li><Link href="privacy-policy">Privacy Policy</Link></li>
+                                        <li><Link href="/Modern-Slavery-Statement-V2-1.pdf" target="_blank" rel="noopener noreferrer">Slavery Statement</Link></li>
+                                        <li><Link href="service-coverage">Service Coverage</Link></li>
+                                        <li><Link href="forms-downloads">Forms and Downloads</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ export default function Footer1() {
                                 <h3>Careers</h3>
                                 <div className="footer-menu">
                                     <p>To find out more about current job opportunities at Metropolitan Guard Services,</p>
-                                    <Link href="https://metroguards.com.au/careers/">Click Here</Link>
+                                    <Link href="/careers">Click Here</Link>
                                 </div>
                             </div>
                         </div>

@@ -291,6 +291,15 @@ img {
 .font-f-1 {
   font-family: "Inter", sans-serif !important;
 }
+.font-f-1-submenu {
+  font-family: "Inter", sans-serif !important;
+  color:white;
+  font-size: 18px;
+  line-height: 24px;
+    
+  padding: 10px 0;
+  display: block;
+}
 
 .font-f-2 {
   font-family: "DM Serif Display", serif !important;
@@ -1247,6 +1256,12 @@ img {
 
 .mobile-sidebar .single-contact a {
   color: #ffffff;
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 37px;
+   
+    display: block;
+    margin-bottom: 10px;
 }
 
 .lg-ml-15 {
@@ -3354,7 +3369,7 @@ a.footer-logo {
 .single-contact a {
   font-weight: 400;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 36px;
   color: #161540;
   display: block;
   margin-bottom: 10px;
@@ -7976,6 +7991,8 @@ li.multi-dropdown-parrent:hover > ul.multi-dropdown.theme-dropdown {
 }
 
 .mobile-sidebar {
+  overflow-y: auto;
+  overflow-x: hidden;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -7990,6 +8007,11 @@ li.multi-dropdown-parrent:hover > ul.multi-dropdown.theme-dropdown {
 }
 .mobile-sidebar .contact-icon {
   background: #fff;
+  
+}
+.mobile-sidebar .contact-icon {
+  background: #fff;
+  
 }
 .mobile-sidebar.mobile-menu-active {
   left: 0;
@@ -8106,8 +8128,8 @@ span.multi-drop-icon {
 }
 
 ul.mobile-nav-list {
-  max-height: 500px;
-  overflow-y: scroll;
+  max-height: none;
+  overflow: visible;
 }
 
 .product-image {
@@ -9365,3 +9387,9 @@ a.up-arrow.up-4:hover {
   left: auto;
   right: 186px;
 }/*# sourceMappingURL=master.css.map */
+
+/*
+
+/*****************************HIDE SCROLLBAR*********************************/
+
+
