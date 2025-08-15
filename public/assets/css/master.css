@@ -2876,6 +2876,7 @@ background: #1E2247 !important;
 @media (max-width: 991px) {
   .welcome-area {
     height: auto;
+    margin-top: 25px;
     padding: 150px 0 100px;
   }
 }
@@ -8066,12 +8067,13 @@ li.multi-dropdown-parrent:hover > ul.multi-dropdown.theme-dropdown {
 }
 
 .mobile-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 17px 0;
   z-index: 9;
+  background-color: #fff;
 }
 
 .mobile-header-elements {
@@ -8134,7 +8136,7 @@ li.multi-dropdown-parrent:hover > ul.multi-dropdown.theme-dropdown {
 .mobile-nav li a {
   font-size: 18px;
   line-height: 24px;
-  color: #ffffff;
+  color: #0F182C;
   padding: 10px 0;
   display: block;
 }

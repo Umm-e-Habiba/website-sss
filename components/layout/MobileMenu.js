@@ -23,7 +23,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
     
     return (
         <>
-            <div className="mobile-header mobile-header-4 d-lg-none">
+            <div className="mobile-header mobile-header-4 d-lg-none" >
                 <div className="container-fluid">
                     <div className="col-12">
                         <div className="mobile-header-elements" style={{ 
@@ -33,7 +33,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                             padding: '10px 0'
                         }}>
                             <div className="mobile-logo">
-                                <Link href="/"><img src="/assets/img/logo/metroguards logo 2.png" alt="" style={{ width: "60px",height:"60px"}} /></Link>
+                                <Link href="/"><img src="/assets/img/logo/metroguards logo 2.png" alt="" style={{ width: "100px",height:"60px"}} /></Link>
                             </div>
                             <div className="mobile-nav-icon" onClick={handleMobileMenu} style={{
                                 position: 'absolute',

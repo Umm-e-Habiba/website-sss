@@ -14,7 +14,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="header_menu_area">
                                     <div className="logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo/metroguards logo 2.png" alt="Metro Guards Logo" style={{ maxWidth: "130px", height: "80px" }} />
+                                            <img src="/assets/img/logo/metroguards logo 2.png" alt="Metro Guards Logo" style={{ maxWidth: "130px", height: "65px" }} />
                                         </Link>
                                     </div>
                                     <div className="main-menu">

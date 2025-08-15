@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function TopBar() {
   return (
-    <div className="topbar  text-white py-2">
+    <div className="topbar  text-white py-2 d-none d-lg-block">
       <div className="container d-flex justify-content-between align-items-center flex-wrap gap-2">
         {/* Left side: email + hours */}
         <div className="d-flex align-items-center flex-wrap gap-3">
