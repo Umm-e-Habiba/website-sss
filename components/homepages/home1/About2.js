@@ -1,6 +1,6 @@
 import CounterUp from "@/components/elements/CounterUp";
 import Link from "next/link";
-import "@/public/assets/css/master.css"; // <-- Make sure you create this file if not already there
+import "@/public/assets/css/master.css";
 
 export default function About2() {
     return (
@@ -33,7 +33,10 @@ export default function About2() {
                                     </ul>
                                     <div className="space50" />
                                     <div className="button-group" data-aos="fade-right" data-aos-duration={1200}>
-                                        <Link className="theme-btn-2" href="/mission-statement">
+                                        <Link 
+                                            className="theme-btn-2 hover-effect" 
+                                            href="/mission-statement"
+                                        >
                                             More About Us <span><i className="fa-solid fa-arrow-right" /></span>
                                         </Link>
                                     </div>
@@ -86,20 +89,26 @@ export default function About2() {
                                     <small className="heading-top">
                                         <img src="/assets/img/icons/hands.svg" alt="" /> We Are Here For Your Tax Relief.
                                     </small>
-                                    <h2>We Handle The Most Tedious Bookkeeping Tasks of Your Business Operations.</h2>
+                                    <h2>Why Choose Metro Security Guards Services in Melbourne?</h2>
                                     <p>
-                                        Experienced, knowledgeable professionals in Property Tax Consulting. Our team of Property
-                                        Tax Consultants is committed to saving you money by obtaining the lowest possible assessed
-                                        value for your commercial or residential properties.
+                                        Metro Guards is one of the most trusted security companies among the top private security
+                                        firms in Melbourne VIC, Australia. We provide specialized security service solutions to our clients.
                                     </p>
+                                    <ul style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}>
+                                        <li>24/7 reliable on-call security services</li>
+                                        <li>Licensed security guards</li>
+                                        <li>Highly trained professionals</li>
+                                        <li>Cost-effective solutions</li>
+                                    </ul>
                                     <div className="space50" />
-                                    <Link
-                                        href="#"
-                                        className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                                    >
-                                        More About Us
-                                        <i className="fa-solid fa-arrow-right text-sm" />
-                                    </Link>
+                                    <div className="button-group">
+                                        <Link 
+                                            className="theme-btn-2 hover-effect" 
+                                            href="/mission-statement"
+                                        >
+                                            More About Us <span><i className="fa-solid fa-arrow-right" /></span>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

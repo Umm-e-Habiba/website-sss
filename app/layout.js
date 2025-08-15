@@ -10,8 +10,9 @@ import "public/assets/css/plugins/nice-select.css"
 import "public/assets/css/plugins/fonts.css"
 import "public/assets/css/master.css"
 import "public/assets/css/h4-master.css"
+import TopBar from '@/components/layout/TopBar';
 
-import HeaderStrip from '@/components/homepages/home1/HeaderStrip'
+
 
 export const metadata = {
   title: 'Security Guard Services | Security Company in Melbourne',
@@ -46,7 +47,7 @@ export default function RootLayout({ children }) {
       <body className="relative">
         {/* Header Strip - fixed at the very top */}
         <div className="fixed top-0 left-0 right-0 z-50">
-          <HeaderStrip />
+          {/* <TopBar/> */}
         </div>
 
         {/* Main content with padding to account for header strip height */}

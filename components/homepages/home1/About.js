@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function About() {
     return (
@@ -28,13 +28,8 @@ export default function About() {
                                 <div className="space50" />
                                 <div className="button-group" data-aos="fade-left" data-aos-duration={1200}>
                                     <Link 
-                                        className="theme-btn-2" 
                                         href="/our-values"
-                                        style={{
-                                            backgroundColor: '#FDC51A',
-                                            color: '#000',
-                                            borderColor: '#FDC51A'
-                                        }}
+                                        className="theme-btn-2 hover-effect"
                                     >
                                         More About Us <span><i className="fa-solid fa-arrow-right" /></span>
                                     </Link>

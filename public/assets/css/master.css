@@ -3662,7 +3662,7 @@ a.footer-logo {
   justify-content: center;
 }
 .logos2 .single-logo img {
-  opacity: 0.5;
+  opacity: 1.5;
 }
 
 .owl-carousel .owl-item .single-logo img {
@@ -3682,6 +3682,35 @@ a.footer-logo {
     font-size: 12px;
   }
 }
+
+/* Add to master.css */
+.theme-btn-2.hover-effect {
+    background-color: #FDC51A;
+    color: #000;
+    border-color: #FDC51A;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.theme-btn-2.hover-effect:hover {
+    background-color: #E7EDEB !important;
+    color: #000 !important;
+    border-color: #E7EDEB !important;
+}
+
+.theme-btn-2.hover-effect:hover i {
+    color: #000 !important;
+}
+
+
+
+
 
 .single-blog {
   margin-bottom: 30px;
@@ -7207,7 +7236,7 @@ img.contact-shape1 {
 .single-business .business-icon {
   width: 80px;
   height: 80px;
-  background: #ffffff;
+  background: #fdc24c;
   border-radius: 50%;
   text-align: center;
   line-height: 75px;

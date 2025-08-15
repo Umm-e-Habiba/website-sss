@@ -92,7 +92,7 @@ export default function Footer1() {
                         <div className="col-lg-6 text-lg-end text-center">
                             <div className="social social2">
                                 <ul className="d-flex justify-content-lg-end justify-content-center gap-3 list-unstyled mb-0">
-                                    <li><Link data-bs-toggle="tooltip" title="Whatsapp" href="https://api.whatsapp.com/send?phone=61422039505"><i className="fa-brands fa-whatsapp" /></Link></li>
+                                    <li><Link data-bs-toggle="tooltip" title="Whatsapp" href="#"><i className="fa-brands fa-whatsapp" /></Link></li>
                                     <li><Link data-bs-toggle="tooltip" title="Facebook" href="https://www.facebook.com/metroguards?_rdc=1&_rdr"><i className="fa-brands fa-facebook-f" /></Link></li>
                                     <li><Link data-bs-toggle="tooltip" title="Instagram" href="https://www.instagram.com/metropolitanguard/"><i className="fa-brands fa-instagram" /></Link></li>
                                     <li><Link data-bs-toggle="tooltip" title="Twitter" href="https://x.com/metroguards"><i className="fa-brands fa-twitter" /></Link></li>

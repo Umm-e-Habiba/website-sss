@@ -1,4 +1,4 @@
-// components/layout/TopBar.jsx
+// components/layout/HeaderStrip.jsx
 "use client";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export default function TopBar() {
           <span className="topbar-divider"></span>
 
           <div className="d-flex align-items-center gap-2">
-            <i className="fa-regular fa-clock"></i>
+            <i className="fa-regular fa-location"></i>
             <span>CS Hub, 5, Level 1/34 Commercial Rd, Caroline Springs VIC 3023</span>
           </div>
         </div>
