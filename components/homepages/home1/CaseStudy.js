@@ -56,7 +56,7 @@ const swiperOptions = {
 export default function CaseStudy() {
     return (
         <>
-            <div className="case-study-1 section-padding bg6">
+            <div className="case-study-1 section-padding" style={{ backgroundColor: '#1E2247' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 m-auto">

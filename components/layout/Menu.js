@@ -18,7 +18,7 @@ export default function Menu() {
     }, [routerPath])
 
     return (
-        <ul className="menu_list scroll">
+        <ul className="menu_list scroll mt-8 relative">
             <li className="dropdown-parrent">
                 <Link href="/">Home</Link>
             </li>

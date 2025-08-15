@@ -10,14 +10,14 @@ export default function About() {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="about-bg-21 mr50" data-aos="zoom-out" data-aos-duration={800}>
-                                <div className="about-bg-main-img position-relative top-left-polygon-1">
+                                <div className="about-bg-main-img position-relative top-left-polygon-0">
                                     <img src="/assets/img/about/about img.webp" alt="" />
-                                    <div className="corner-right-bottom-shape2 position-absolute">
+                                    {/* <div className="corner-right-bottom-shape2 position-absolute">
                                         <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                    </div>
-                                    <div className="corner-shape2-left position-absolute">
+                                    </div> */}
+                                    {/* <div className="corner-shape2-left position-absolute">
                                         <img src="/assets/img/shapes/tax-shape2.png" alt="" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -29,9 +29,19 @@ export default function About() {
                                 </p>
                                 <p data-aos="fade-left" data-aos-duration={1000}>  We have proven strategies for assessing risks and designing tailored security solutions. We are also your go-to security solution and have a proven record of providing the most result-oriented emergency security services.</p>
                                 <div className="space50" />
-                                <div className="button-group" data-aos="fade-left" data-aos-duration={1200}>
-                                    <Link className="theme-btn-2" href="#">More About Us <span><i className="fa-solid fa-arrow-right" /></span></Link>
-                                </div>
+                               <div className="button-group" data-aos="fade-left" data-aos-duration={1200}>
+    <Link 
+        className="theme-btn-2" 
+        href="/our-values"
+        style={{
+            backgroundColor: '#FDC51A',
+            color: '#000',
+            borderColor: '#FDC51A'
+        }}
+    >
+        More About Us <span><i className="fa-solid fa-arrow-right" /></span>
+    </Link>
+</div>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,8 @@
-//import './globals.css';
+// app/layout.js
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "public/assets/css/plugins/bootstrap.min.css"
-// import "public/assets/css/plugins/owl.carousel.min.css"
 import "public/assets/css/plugins/aos.css"
 import "public/assets/css/plugins/fontawesome.css"
 import "public/assets/css/plugins/slick-slider.css"
@@ -12,6 +11,7 @@ import "public/assets/css/plugins/fonts.css"
 import "public/assets/css/master.css"
 import "public/assets/css/h4-master.css"
 
+import HeaderStrip from '@/components/homepages/home1/HeaderStrip'
 
 export const metadata = {
   title: 'Security Guard Services | Security Company in Melbourne',
@@ -21,7 +21,6 @@ export const metadata = {
     description: "Metro Guards is a leading security company in Melbourne. We are providing security guard services for both residential & commercial Buildings. Call us 1300731173",
     url: "https://metroguards.vercel.app",
     siteName: "Metro Guards",
-    
     images: [
       {
         url: "/assets/img/logo/mg metro gaurds.jpg",
@@ -44,7 +43,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" id="#top">
-      <body>{children}</body>
+      <body className="relative">
+        {/* Header Strip - fixed at the very top */}
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <HeaderStrip />
+        </div>
+
+        {/* Main content with padding to account for header strip height */}
+        <main className="pt-[40px] min-h-screen"> {/* Adjust pt value based on your header strip height */}
+          {children}
+        </main>
+      </body>
     </html>
   )
 }

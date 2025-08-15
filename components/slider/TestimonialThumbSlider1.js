@@ -19,7 +19,7 @@ const TestimonialThumbSlider1 = () => {
     }
 
     return (
-        <>
+        <div style={{ backgroundColor: '#1E2247', padding: '20px 0' }}> {/* Added wrapper div with background color */}
             <div className="testimonial-sliders">
                 {/* Main Testimonial Slider */}
                 <Slider
@@ -86,21 +86,24 @@ const TestimonialThumbSlider1 = () => {
                 }
 
                 .bullet.active {
-                    color: #000;
+                    color: #fff; /* Changed from black to white for better contrast */
                 }
 
                 .single-testimonial {
                     padding: 20px;
                     text-align: center;
+                    color: #fff; /* Added white text color for better contrast */
                 }
 
                 .author {
                     margin-top: 15px;
+                    color: #fff; /* Added white text color for better contrast */
                 }
 
                 .author a {
                     font-weight: bold;
                     text-decoration: none;
+                    color: #fff; /* Added white text color for better contrast */
                 }
 
                 .author p {
@@ -108,7 +111,7 @@ const TestimonialThumbSlider1 = () => {
                     font-style: italic;
                 }
             `}</style>
-        </>
+        </div>
     )
 }
 

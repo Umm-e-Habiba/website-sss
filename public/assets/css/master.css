@@ -21,6 +21,37 @@ html {
   width: 100%;
 }
 
+/* /Top Bar/ */
+
+
+.topbar { font-size: 14px;
+background-color: #1e2247; }
+.topbar .topbar-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.5);
+  display: inline-block;
+}
+.topbar a:hover { opacity: .85; }
+
+/* /Overlapping issue/ */
+
+:root { --topbar-h: 48px; }         /* set your actual topbar height */
+.topbar { height: var(--topbar-h); } /* optional but keeps it consistent */
+
+/* push the header down so it sits below the topbar */
+#header { margin-top: var(--topbar-h); }
+
+/* if you make the header sticky/fixed at some point, keep its width & layer */
+#header.sticky {
+  position: fixed;
+  top: 0;                /* sticks to the top after scroll */
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  margin-top:0px;
+}
+
 a,
 a:hover {
   text-decoration: none !important;
@@ -60,6 +91,24 @@ h6 {
   font-weight: 700;
   color: #09120E;
 }
+
+/* Custom hover for counters */
+.single-counter.custom-hover:hover {
+  background-color: #1E2247 !important;
+  transition: background-color 0.3s ease-in-out;
+  color: #000; /* Optional: text color on hover */
+}
+
+/* In your CSS file, find this and update it */
+.testimonial-section {
+    background-color: #1E2247 !important;
+}
+
+.theme-btn-2 {
+  background-color: #FDC51A !important;
+  color: black !important;
+}
+
 
 ul {
   margin: 0;
@@ -1306,13 +1355,14 @@ img {
 }
 
 .bg3 {
-  background: url("../img/bg/contact-bg.png") no-repeat;
-  background-position: center center;
+background: #1E2247 !important;
+    background-image: none !important;
   background-size: cover;
 }
 
 .bg4 {
   background: url("../img/bg/testimonial-bg.png") no-repeat;
+  background-color: #1E2247;
   background-position: center center;
   background-size: cover;
 }
@@ -1330,8 +1380,8 @@ img {
 }
 
 .bg6 {
-  background: url("../img/bg/bg3.png") no-repeat;
-  background-position: center center;
+ background: #1E2247 !important;
+    background-image: none !important;
   background-size: cover;
 }
 

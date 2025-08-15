@@ -11,7 +11,7 @@ export default function Footer1() {
                             <div className="single-footer">
                                 <Link href="/">
                                     <img
-                                        src="/assets/img/logo/mg logo 2.png"
+                                        src="/assets/img/logo/metroguards logo 2.png"
                                         alt="Metro Guards Logo"
                                         style={{ maxWidth: "100px", height: "auto", display: "block", marginBottom: "20px" }}
                                     />
@@ -21,9 +21,9 @@ export default function Footer1() {
                         </div>
 
                         {/* Corporate Compliance 1 */}
-                        <div className="col-lg-2 col-md-6">
+                          <div className="col-lg-2 col-md-6">
                             <div className="single-footer">
-                                <h3>Corporate Compliance</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-4">Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
                                         <li><Link href="security-licenses-and-insurance">Security License and Insurance</Link></li>
@@ -55,7 +55,7 @@ export default function Footer1() {
                             <div className="single-footer">
                                 <h3>Careers</h3>
                                 <div className="footer-menu">
-                                    <p>To find out more about current job opportunities at Metropolitan Guard Services,</p>
+                                    {/* <p>To find out more about current job opportunities at Metropolitan Guard Services,</p> */}
                                     <Link href="/careers">Click Here</Link>
                                 </div>
                             </div>
