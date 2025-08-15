@@ -5413,6 +5413,29 @@ img.service-shape1 {
   }
 }
 
+/* Add this to your global CSS file */
+.theme-btn-7:hover {
+    color: #fdc51a !important;
+}
+.theme-btn-7:hover::after {
+    background-color: #fdc51a !important;
+}
+.theme-btn-7:hover span i {
+    color: #fdc51a !important;
+}
+
+.highlight {
+  color: #fdc51a;
+}
+
+.footerHeading {
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
 .about-rates {
   position: absolute;
   top: 20%;

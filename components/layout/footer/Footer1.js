@@ -21,9 +21,9 @@ export default function Footer1() {
                         </div>
 
                         {/* Corporate Compliance 1 */}
-                          <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6">
                             <div className="single-footer">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4">Corporate Compliance</h3>
+                                <h3 className="footer-heading">Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
                                         <li><Link href="security-licenses-and-insurance">Security License and Insurance</Link></li>
@@ -38,7 +38,7 @@ export default function Footer1() {
                         {/* Corporate Compliance 2 */}
                         <div className="col-lg-2 col-md-6">
                             <div className="single-footer">
-                                <h3>Corporate Compliance</h3>
+                                <h3 className="footer-heading">Corporate Compliance</h3>
                                 <div className="footer-menu">
                                     <ul>
                                         <li><Link href="privacy-policy">Privacy Policy</Link></li>
@@ -53,10 +53,9 @@ export default function Footer1() {
                         {/* Careers */}
                         <div className="col-lg-2 col-md-6">
                             <div className="single-footer">
-                                <h3>Careers</h3>
+                                <h3 className="footer-heading">Careers</h3>
                                 <div className="footer-menu">
-                                    {/* <p>To find out more about current job opportunities at Metropolitan Guard Services,</p> */}
-                                    <Link href="/careers">Click Here</Link>
+                                    <Link href="/careers" style={{ color: '#FDC51A' }}>Click Here</Link>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +63,7 @@ export default function Footer1() {
                         {/* Contact */}
                         <div className="col-lg-3 col-md-6">
                             <div className="single-footer">
-                                <h3>Get in touch</h3>
+                                <h3 className="footer-heading">Get in touch</h3>
                                 <div className="footer-contact mb-2">
                                     <div className="single-contact d-flex align-items-center">
                                         <div className="contact-icon me-2">
@@ -93,16 +92,26 @@ export default function Footer1() {
                         <div className="col-lg-6 text-lg-end text-center">
                             <div className="social social2">
                                 <ul className="d-flex justify-content-lg-end justify-content-center gap-3 list-unstyled mb-0">
-                                    <li><Link data-bs-toggle="tooltip" title="LinkedIn" href="#"><i className="fa-brands fa-linkedin-in" /></Link></li>
-                                    <li><Link data-bs-toggle="tooltip" title="Facebook" href="#"><i className="fa-brands fa-facebook-f" /></Link></li>
-                                    <li><Link data-bs-toggle="tooltip" title="Instagram" href="#"><i className="fa-brands fa-instagram" /></Link></li>
-                                    <li><Link data-bs-toggle="tooltip" title="TikTok" href="#"><i className="fa-brands fa-tiktok" /></Link></li>
+                                    <li><Link data-bs-toggle="tooltip" title="Whatsapp" href="https://api.whatsapp.com/send?phone=61422039505"><i className="fa-brands fa-whatsapp" /></Link></li>
+                                    <li><Link data-bs-toggle="tooltip" title="Facebook" href="https://www.facebook.com/metroguards?_rdc=1&_rdr"><i className="fa-brands fa-facebook-f" /></Link></li>
+                                    <li><Link data-bs-toggle="tooltip" title="Instagram" href="https://www.instagram.com/metropolitanguard/"><i className="fa-brands fa-instagram" /></Link></li>
+                                    <li><Link data-bs-toggle="tooltip" title="Twitter" href="https://x.com/metroguards"><i className="fa-brands fa-twitter" /></Link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
+
+            <style jsx>{`
+                .footer-heading {
+                    font-family: inherit; /* Uses the same font as body text */
+                    font-size: 1.1rem; /* Slightly larger than body text */
+                    font-weight: 600; /* Semi-bold */
+                    color: #ffffff; /* White text */
+                    margin-bottom: 1rem;
+                }
+            `}</style>
         </>
     );
 }

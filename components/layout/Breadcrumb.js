@@ -1,8 +1,16 @@
-
 export default function Breadcrumb({ breadcrumbTitle }) {
     return (
         <>
-            <div className="inner-1 bg-13" id="home">
+            <div 
+                className="inner-1 bg-13" 
+                id="home"
+                style={{
+                    backgroundImage: "url('/assets/img/header image.jpeg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat"
+                }}
+            >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-10 m-auto">
@@ -14,7 +22,6 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

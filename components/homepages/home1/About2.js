@@ -47,14 +47,14 @@ export default function About2() {
                                     <div className="col-md-6">
                                         <div className="single-counter custom-hover" data-aos="zoom-out" data-aos-duration={600}>
                                             <div className="conter-icon">
-                                                <img src="/assets/img/icons/customer.png" alt="" />
+                                                <img src="/assets/img/icons/customer (1).png" alt="" />
                                             </div>
                                             <h2><CounterUp count={4300} />+</h2>
                                             <p>Clients So Far</p>
                                         </div>
                                         <div className="single-counter custom-hover" data-aos="zoom-out" data-aos-duration={800}>
                                             <div className="conter-icon">
-                                                <img src="/assets/img/icons/counter22.png" alt="" />
+                                                <img src="/assets/img/icons/award.png" alt="" />
                                             </div>
                                             <h2><CounterUp count={3} />+</h2>
                                             <p>Awards So Far</p>
@@ -63,14 +63,14 @@ export default function About2() {
                                     <div className="col-md-6">
                                         <div className="single-counter mt-5 custom-hover" data-aos="zoom-out" data-aos-duration={1000}>
                                             <div className="conter-icon">
-                                                <img src="/assets/img/icons/counter23.png" alt="" />
+                                                <img src="/assets/img/icons/membership (1).png" alt="" />
                                             </div>
                                             <h2><CounterUp count={8} />+</h2>
                                             <p>Memberships So Far</p>
                                         </div>
                                         <div className="single-counter custom-hover" data-aos="zoom-out" data-aos-duration={1200}>
                                             <div className="conter-icon">
-                                                <img src="/assets/img/icons/counter24.png" alt="" />
+                                                <img src="/assets/img/icons/meeting.png" alt="" />
                                             </div>
                                             <h2><CounterUp count={90} />%</h2>
                                             <p>Meetings So Far</p>

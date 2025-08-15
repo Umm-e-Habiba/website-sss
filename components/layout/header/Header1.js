@@ -12,7 +12,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="header_menu_area">
                                     <div className="logo">
                                          <Link href="/">
-                                        <img src="/assets/img/logo/metroguards logo.jpg" alt="Metro Guards Logo" style={{ maxWidth: "80px", height: "auto" }} />
+                                        <img src="/assets/img/logo/metroguards logo 2.png" alt="Metro Guards Logo" style={{ maxWidth: "100px", height: "80px" }} />
                                         </Link>
                                     </div>
                                     <div className="main-menu">

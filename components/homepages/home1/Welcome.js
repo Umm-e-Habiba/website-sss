@@ -12,7 +12,7 @@ export default function Welcome() {
                             <div className="title title2 ">
                                 
                                 <h1 data-aos="fade-right" data-aos-duration={800}>Security Company in Melbourne</h1>
-                                <p data-aos="fade-right" data-aos-duration={1000}>Metro Guard is the most reliable & Affordable local security company in Melbourne, and it is the frontline for your safety. Licensed by ASIAL (Australian Security Industry Association Limited) | Victoria State Government.We are providing Security Services in Melbourne Residential, Commercial Industrial, Retail and Government Sectors. Contact us to Get Free Security Quote According to your business needs</p>
+                                <p data-aos="fade-right" data-aos-duration={1000}>Metro Guard is the most reliable & Affordable local security company in Melbourne, and it is the frontline for your safety. <span style={{ color: '#FDC51A' }}>Licensed by ASIAL (Australian Security Industry Association Limited) | Victoria State Government.</span>We are providing Security Services in Melbourne Residential, Commercial Industrial, Retail and Government Sectors. Contact us to Get Free Security Quote According to your business needs</p>
                                 <div className="space30" />
                                 {/* <div className="btn-group" data-aos="fade-right" data-aos-duration={1200}>
                                     <Link className="theme-btn-2" href="get-quotation">Get A Quote Now <span><i className="fa-solid fa-arrow-right" /></span></Link>

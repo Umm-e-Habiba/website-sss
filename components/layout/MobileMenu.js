@@ -26,7 +26,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                     <div className="col-12">
                         <div className="mobile-header-elements">
                             <div className="mobile-logo" >
-                                <Link href="/"><img src="/assets/img/logo/mg metro gaurds.jpg" alt="" style={{ width: "60px",height:"60px"}} /></Link>
+                                <Link href="/"><img src="/assets/img/logo/metroguards logo 2.png" alt="" style={{ width: "60px",height:"60px"}} /></Link>
                             </div>
                             <div className="mobile-nav-icon" onClick={handleMobileMenu}>
                                 <i className="fa-solid fa-bars" />

@@ -416,7 +416,7 @@ export default function AdhocSecurityPage() {
                                         <div className="cta-bg-shape position-absolute" style={{top: '0', right: '0', opacity: '0.1'}}>
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div>
-                                        <div className="row align-items-center">
+                                        <div className="row align-items-center" >
                                             <div className="col-lg-8 text-left">
                                                 <div className="cta-content">
                                                     <h3 className="text-white mb-3">Need Security With Immediate Effect?</h3>

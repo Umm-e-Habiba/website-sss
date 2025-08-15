@@ -62,7 +62,7 @@ export default function CaseStudy() {
                         <div className="col-md-4 m-auto">
                             <div className="heading2 white-heading text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Licensed security guards.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Metro Guard</span> Top-Rated Security Services in Melbourne</h2>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span style={{ color: '#FDC51A' }}>Metro Guards</span> Top-Rated Security Services in Melbourne</h2>
                             </div>
                         </div>
                     </div>
