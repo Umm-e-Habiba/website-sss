@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Welcome() {
     return (
         <>
-            <div className="welcome-area welcome-2 bg5 position-relative" id="home">
+            <div className="welcome-area welcome-2" id="home">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">

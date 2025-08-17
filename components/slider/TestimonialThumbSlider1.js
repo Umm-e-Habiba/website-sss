@@ -28,28 +28,28 @@ const TestimonialThumbSlider1 = () => {
                     className="slider-testimonial"
                 >
                     <div className="single-testimonial">
-                        <h5>“We have used Metro Guards Security at Apex Property Management (APM) for the last 6 months. I can only describe their reception security as exceptional. They manage the front of hour in a number of our residential apartment blocks across Melbourne. The management are always on hand to support Apex and are extremely proactive. Due to the current pandemic, we have required additional staff at short notice, and they have been excellent in facilitating these requests. I would highly recommend Metro Guards and I look forward working with them. Thank you everyone at Metro Guards and keep up the great work." Positive Responsiveness, Quality, Professionalism, Value”</h5>
+                        <p>“We have used Metro Guards Security at Apex Property Management (APM) for the last 6 months. I can only describe their reception security as exceptional. They manage the front of hour in a number of our residential apartment blocks across Melbourne. The management are always on hand to support Apex and are extremely proactive. Due to the current pandemic, we have required additional staff at short notice, and they have been excellent in facilitating these requests. I would highly recommend Metro Guards and I look forward working with them. Thank you everyone at Metro Guards and keep up the great work." Positive Responsiveness, Quality, Professionalism, Value”</p>
                         <div className="author">
-                            <Link href="#">Stevon lyons</Link>
+                            <p style={{ color: '#FDC51A' }}>Stevon lyons</p>
                             <p>Apex Property Management (APM)</p>
                         </div>
                     </div>
                     <div className="single-testimonial">
-                        <h5>“I have used their security services multiple times. They are highly competent and a pleasure to work with! I would highly recommend their services. Christine M. Fox I have never seen such a friendly and understanding staff ever. It was my first experience hiring a security guards' team, and you guys made it splendid. You have cleared all the doubts popping up in my mind while hiring security services. Thanks a bunch for your superb security services! ”</h5>
+                        <p>“I have used their security services multiple times. They are highly competent and a pleasure to work with! I would highly recommend their services. Christine M. Fox I have never seen such a friendly and understanding staff ever. It was my first experience hiring a security guards' team, and you guys made it splendid. You have cleared all the doubts popping up in my mind while hiring security services. Thanks a bunch for your superb security services! ”</p>
                         <div className="author">
-                            <Link href="#">Uzma Khan</Link>
+                            <p style={{ color: '#FDC51A' }}>Uzma Khan</p>
                         </div>
                     </div>
                     <div className="single-testimonial">
-                        <h5>“I have used their security services multiple times. They are highly competent and a pleasure to work with! I would highly recommend their services. ”</h5>
+                        <p>“I have used their security services multiple times. They are highly competent and a pleasure to work with! I would highly recommend their services. ”</p>
                         <div className="author">
-                            <Link href="#">Christine M.Fox</Link>
+                            <p style={{ color: '#FDC51A' }}>Christine M.Fox</p>
                         </div>
                     </div>
                     <div className="single-testimonial">
-                        <h5>“We have used Metro Guards Security at Apex Property Management (APM) for the last 6 months. I can only describe their reception security as exceptional. They manage the front of hour in a number of our residential apartment blocks across Melbourne. The management are always on hand to support Apex and are extremely proactive. Due to the current pandemic, we have required additional staff at short notice, and they have been excellent in facilitating these requests. I would highly recommend Metro Guards and I look forward working with them. Thank you everyone at Metro Guards and keep up the great work." Positive Responsiveness, Quality, Professionalism, Value”</h5>
+                        <p>“We have used Metro Guards Security at Apex Property Management (APM) for the last 6 months. I can only describe their reception security as exceptional. They manage the front of hour in a number of our residential apartment blocks across Melbourne. The management are always on hand to support Apex and are extremely proactive. Due to the current pandemic, we have required additional staff at short notice, and they have been excellent in facilitating these requests. I would highly recommend Metro Guards and I look forward working with them. Thank you everyone at Metro Guards and keep up the great work." Positive Responsiveness, Quality, Professionalism, Value”</p>
                         <div className="author">
-                            <Link href="#">Stevon lyons</Link>
+                            <p style={{ color: '#FDC51A' }}>Stevon lyons</p>
                             <p>Apex Property Management</p>
                         </div>
                     </div>

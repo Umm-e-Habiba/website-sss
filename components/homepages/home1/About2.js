@@ -5,7 +5,7 @@ import "@/public/assets/css/master.css";
 export default function About2() {
     return (
         <>
-            <div className="about-area section-padding bg5">
+            <div className="about-area section-padding">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 d-none d-lg-block">
@@ -44,13 +44,13 @@ export default function About2() {
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-6" >
                             <div className="counter2 ml50 position-relative">
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="single-counter custom-hover" data-aos="zoom-out" data-aos-duration={600}>
                                             <div className="conter-icon">
-                                                <img src="/assets/img/icons/customer (1).png" alt="" />
+                                                <img src="/assets/img/icons/costumer.png" alt="" />
                                             </div>
                                             <h2><CounterUp count={4300} />+</h2>
                                             <p>Clients So Far</p>

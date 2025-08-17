@@ -3496,10 +3496,10 @@ a.footer-logo {
 }
 
 .social.social2 ul li a {
-  color: #243D31;
+  color: #1E2247;
 }
 .social.social2 ul li a:hover {
-  background: #243D31;
+  background: #1E2247;
   color: #ffffff;
 }
 
@@ -3519,6 +3519,20 @@ a.footer-logo {
 .social.social5 ul li a:hover {
   background: #1456DA;
   color: #ffffff;
+}
+
+/* .blog-contents p {
+    font-size: 25px;
+    line-height: 1.6;
+} */
+
+
+/* For counter boxes background */
+.counter2 .single-counter {
+    background-color: #d1d1d1!important;
+    /* Optional: Add padding or other styles */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .footer-2 .contact-icon {

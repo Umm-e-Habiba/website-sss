@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function About() {
     return (
         <>
-            <div className="about-area section-padding bg5-left">
+            <div className="about-area section-padding">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
@@ -20,10 +20,10 @@ export default function About() {
                                 </small>
                                 <h2 data-aos="fade-left" data-aos-duration={800}>We Deliver The <span style={{ color: '#FDC51A' }}> Best Security Services in Melbourne.</span></h2>
                                 <p data-aos="fade-left" data-aos-duration={1000}>
-                                    <span>Metro Guards</span> has served its clients in Melbourne, Victoria, and its suburbs for years. We have a rigorous procedure for hiring and training our guards. Our <span style={{ color: '#FDC51A' }}>highly professional security guards</span> can exceptionally address the safety needs of individual, corporate, institutional, residential, and commercial clients.
+                                    <span>Metro Guards</span> has served its clients in Melbourne, Victoria, and its suburbs for years. We have a rigorous procedure for hiring and training our guards. Our highly professional security guards can exceptionally address the safety needs of individual, corporate, institutional, residential, and commercial clients.
                                 </p>
                                 <p data-aos="fade-left" data-aos-duration={1000}>
-                                    We have proven strategies for assessing risks and designing tailored security solutions. We are also your <span style={{ color: '#FDC51A' }}>go-to security solution</span> and have a proven record of providing the most result-oriented emergency security services.
+                                    We have proven strategies for assessing risks and designing tailored security solutions. We are also your go-to security solution and have a proven record of providing the most result-oriented emergency security services.
                                 </p>
                                 <div className="space50" />
                                 <div className="button-group" data-aos="fade-left" data-aos-duration={1200}>

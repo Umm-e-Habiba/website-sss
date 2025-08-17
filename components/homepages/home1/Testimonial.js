@@ -1,4 +1,3 @@
-
 import TestimonialThumbSlider1 from "@/components/slider/TestimonialThumbSlider1"
 
 export default function Testimonial() {
@@ -8,9 +7,13 @@ export default function Testimonial() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-7 m-auto">
-                            <div className="heading2 white-heading text-center">
-                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />We Deliver The Best Security Services in Melbourne.</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">Amazing</span> people talking about us.</h2>
+                            <div className="heading2 white-heading text-center" style={{ marginBottom: '-10px' }}>
+                                <small data-aos="fade-up" data-aos-duration={600} className="heading-top">
+                                    <img src="/assets/img/icons/hands.svg" alt="" />We Deliver The Best Security Services in Melbourne.
+                                </small>
+                                <h2 data-aos="fade-up" data-aos-duration={800}>
+                                    <span className="heilight-left">Amazing</span> people talking about us.
+                                </h2>
                             </div>
                         </div>
                     </div>
@@ -21,7 +24,6 @@ export default function Testimonial() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
