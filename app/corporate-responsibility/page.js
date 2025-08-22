@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT CONSULTIA">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT METROGUARDS">
                 <div>
                     {/*===== How we serve our community =====*/}
                     <div className="about-inner bg-28 section-padding">
@@ -32,9 +32,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/about/why mg.webp" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -48,9 +48,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about24.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

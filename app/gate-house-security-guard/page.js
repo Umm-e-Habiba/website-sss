@@ -25,10 +25,10 @@ export default function GatehouseSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -57,12 +57,18 @@ export default function GatehouseSecurityPage() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/gatehouse-security.webp" alt="Gatehouse Security Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
-                                    </div>
+                                   <div className="choose-image ml50">
+    <img 
+        src="/assets/img/blog/gatehouse.jpg" 
+        alt="Metro Guards Gatehouse Security Team" 
+        className="img-fluid rounded shadow-lg"
+        style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }}
+    />
+</div>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +94,7 @@ export default function GatehouseSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-shield-lock text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -112,7 +118,7 @@ export default function GatehouseSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-speedometer2 text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -143,7 +149,7 @@ export default function GatehouseSecurityPage() {
                                     <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
                                         <div className="benefit-icon me-4 flex-shrink-0">
                                             <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#243D31', borderRadius: '50%'}}>
+                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
                                                 <i className="bi bi-person-check text-white" style={{fontSize: '1.8rem'}}></i>
                                             </div>
                                         </div>
@@ -171,7 +177,7 @@ export default function GatehouseSecurityPage() {
                                     <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
                                         <div className="benefit-icon me-4 flex-shrink-0">
                                             <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#243D31', borderRadius: '50%'}}>
+                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
                                                 <i className="bi bi-exclamation-triangle text-white" style={{fontSize: '1.8rem'}}></i>
                                             </div>
                                         </div>
@@ -300,7 +306,7 @@ export default function GatehouseSecurityPage() {
                                             <div className="choose-features mt-4">
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-person-badge" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-person-badge" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Experienced Security Personnel</h5>
@@ -309,7 +315,7 @@ export default function GatehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-cpu" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-cpu" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Advanced Security Technology</h5>
@@ -318,7 +324,7 @@ export default function GatehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-headset" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-headset" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Reliable Customer Support</h5>
@@ -327,7 +333,7 @@ export default function GatehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-building" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-building" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Industry-Specific Solutions</h5>
@@ -339,9 +345,18 @@ export default function GatehouseSecurityPage() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="choose-image ml50">
-                                        <img src="/assets/img/bg/gatehouse-team.webp" alt="Metro Guards Gatehouse Security Team" className="img-fluid rounded shadow-lg" />
-                                    </div>
+                                   <div className="choose-image ml50">
+    <img 
+        src="/assets/img/blog/gatehouse 2.webp" 
+        alt="Metro Guards Gatehouse Security Team" 
+        className="img-fluid rounded shadow-lg"
+        style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }}
+    />
+</div>
                                 </div>
                             </div>
                         </div>
@@ -365,28 +380,28 @@ export default function GatehouseSecurityPage() {
                             <div className="row g-4">
                                 <div className="col-lg-3 col-md-6">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-building" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-building" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Commercial Buildings</h5>
                                         <p>Office towers, business parks, and corporate headquarters</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-house" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-house" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Residential Communities</h5>
                                         <p>Gated communities, apartment complexes, and housing estates</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-hospital" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-hospital" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Healthcare Facilities</h5>
                                         <p>Hospitals, medical centers, and aged care facilities</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-truck" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-truck" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Industrial Sites</h5>
                                         <p>Warehouses, factories, and logistics centers</p>
                                     </div>
@@ -406,7 +421,7 @@ export default function GatehouseSecurityPage() {
                                             Metro Guards is here to provide you with the best gatehouse security solutions in Melbourne. Our team of professional security guards and advanced security technology ensures that your property is always protected, day and night.
                                         </p>
                                         <p className="mb-0">
-                                            <i className="bi bi-telephone-fill me-2" style={{color: '#243D31'}}></i>
+                                            <i className="bi bi-telephone-fill me-2" style={{color: '#1E2247'}}></i>
                                             <strong>Call us at 1300 73 11 73 or fill out our online form to get started.</strong>
                                         </p>
                                     </div>
@@ -414,10 +429,10 @@ export default function GatehouseSecurityPage() {
                                 <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
                                     <div className="contact-buttons">
                                         <a 
-                                            href="#" 
+                                            href="/contacts" 
                                             className="btn text-white px-4 py-3 mb-3 d-block"
                                             style={{
-                                                backgroundColor: '#243D31',
+                                                backgroundColor: '#1E2247',
                                                 border: 'none',
                                                 borderRadius: '5px',
                                                 textDecoration: 'none',
@@ -460,10 +475,10 @@ export default function GatehouseSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

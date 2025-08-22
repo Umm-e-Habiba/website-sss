@@ -11,7 +11,9 @@
     "postinstall": "prisma generate",
     "db:seed": "prisma db seed"
   },
-  "prisma": { "seed": "tsx prisma/seed.ts" },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "dependencies": {
     "@react-email/render": "^1.2.0",
     "@tiptap/extension-image": "^3.0.9",
@@ -25,6 +27,8 @@
     "aos": "^2.3.4",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
     "dompurify": "^3.2.6",
     "isomorphic-dompurify": "^2.26.0",
     "isotope-layout": "^3.0.6",

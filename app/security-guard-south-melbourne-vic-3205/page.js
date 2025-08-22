@@ -5,7 +5,7 @@ import TestimonialSlider3 from "@/components/slider/TestimonialSlider3"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT METRO GUARDS">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="METRO GUARDS SERVICE AREA SOUTH">
                 <div>
                     {/*===== Security Guards in South Melbourne, VIC =====*/}
                     <div className="section-padding">
@@ -38,9 +38,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -93,14 +93,14 @@ export default function Page() {
                                             <div className="col-md-6">
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-9.png" alt="" />
+                                                        <img src="/assets/img/icons/customer (1).png" alt="" />
                                                     </div>
                                                     <h2><CounterUp count={4300} /></h2>
                                                                                                        <p>clients so far</p>
                                                                                                    </div>
                                                                                                    <div className="single-counter">
                                                                                                        <div className="conter-icon">
-                                                                                                           <img src="/assets/img/icons/service-16.png" alt="" />
+                                                                                                           <img src="/assets/img/icons/membership (1).png" alt="" />
                                                                                                        </div>
                                                                                                        <h2><CounterUp count={8} />+</h2>
                                                                                                        <p>Membership so far</p>
@@ -109,14 +109,14 @@ export default function Page() {
                                                                                                <div className="col-md-6">
                                                                                                    <div className="single-counter mt-5">
                                                                                                        <div className="conter-icon">
-                                                                                                           <img src="/assets/img/icons/service-12.png" alt="" />
+                                                                                                           <img src="/assets/img/icons/award.png" alt="" />
                                                                                                        </div>
                                                                                                        <h2><CounterUp count={3} />+</h2>
                                                                                                        <p>Awards so far</p>
                                                                                                    </div>
                                                                                                    <div className="single-counter">
                                                                                                        <div className="conter-icon">
-                                                                                                           <img src="/assets/img/icons/service-14.png" alt="" />
+                                                                                                           <img src="/assets/img/icons/meeting.png" alt="" />
                                                                                                        </div>
                                                                                                        <h2><CounterUp count={90} />%</h2>
                                                                                                        <p>Meetings so far</p>
@@ -153,7 +153,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-9.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/school.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Building Site Security Guards</h4>
                                         <p>Our Building security guards in Melbourne provide 24/7 protection for private homes, apartment buildings, and gated communities. Whether you're on-site or away, our presence ensures your family, property, and assets remain safe at all times.</p>
@@ -162,7 +162,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-12.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/corporate.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Corporate Security</h4>
                                         <p>Through our corporate security services in Melbourne, we deliver a professional security presence for office buildings, reception areas, and business centres. Our guards manage entry points, welcome visitors, and help maintain a secure workplace.</p>
@@ -171,7 +171,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-14.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/construction.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Construction Site Security</h4>
                                         <p>With our construction site security services in Melbourne, you can prevent theft, vandalism, and unauthorised access on your job site. We provide around-the-clock monitoring of tools, equipment, and site perimeters to protect your progress.</p>
@@ -180,7 +180,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-16.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/patrol.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Mobile Patrols</h4>
                                         <p>Our mobile patrol security services in Melbourne offer scheduled or random checks at high-risk or low-traffic locations. This is an ideal solution for sites that don't need constant presence but still require strong, visible deterrence.</p>
@@ -189,7 +189,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-9.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/red-carpet.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Event Security Services</h4>
                                         <p>Whether you're planning a private party, public event, or corporate function, our event security services in Melbourne include entry monitoring, crowd control, and incident response—ensuring your event runs safely and smoothly.</p>
@@ -198,7 +198,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-12.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/mall.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Retail Loss Prevention Officers</h4>
                                         <p>Our loss prevention officers in Melbourne help reduce shrinkage in boutique shops, shopping centres, and high-end retail outlets. They monitor customer activity discreetly and respond quickly to suspicious behaviour without disturbing business flow.</p>
@@ -207,7 +207,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-14.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/police.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>K9 Security Guards for Extra Protection</h4>
                                         <p>Some places need more than just a guard—and that's where our K9 Security Guards in Melbourne come in. Our trained dog units are great at spotting hidden dangers and helping manage crowds in busy or high-risk areas. They're a smart choice for large sites like warehouses, outdoor events, or areas where added safety is a must.</p>
@@ -216,7 +216,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-16.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/policeman.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Staff Escort Security for Safer Transitions</h4>
                                         <p>Worried about your staff walking alone after hours or carrying valuables? Our Staff Escort Security service provides trained guards to walk with employees to their cars, public transport, or other destinations. It's a simple way to reduce risk and make your team feel safer—especially in dark car parks or quiet areas.</p>
@@ -225,7 +225,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-9.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/warehouse.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Warehouse Security Systems That Work Around the Clock</h4>
                                         <p>Warehouses can be targets for theft, break-ins, or even internal issues. Our Warehouse Security System is designed to keep everything secure—day and night. From monitoring stock to controlling entry points, we'll create a plan that fits your building and keeps your operations running smoothly.</p>
@@ -369,15 +369,15 @@ export default function Page() {
                                         <div className="mt-4 p-4" style={{backgroundColor: '#f8f9fa', borderRadius: '10px'}}>
                                             <div className="d-flex align-items-center justify-content-center mb-3">
                                                 <img src="/assets/img/icons/service-16.png" alt="" className="me-3" style={{width: '40px', height: '40px'}} />
-                                                <h3 className="mb-0">📞 Call Today: 1300 73 11 73</h3>
+                                                <h3 className="mb-0">Call Today: 1300 73 11 73</h3>
                                             </div>
                                             <div className="d-flex align-items-center justify-content-center mb-3">
                                                 <img src="/assets/img/icons/arrow-up-right.svg" alt="" className="me-2" style={{width: '20px', height: '20px'}} />
-                                                <p className="font-weight-bold mb-0">📧 Email: admin@metroguards.com.au</p>
+                                                <p className="font-weight-bold mb-0">Email: admin@metroguards.com.au</p>
                                             </div>
                                             <div className="d-flex align-items-center justify-content-center">
-                                                <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '20px', height: '20px'}} />
-                                                <p className="font-weight-bold mb-0">🔗 Request Your Free Security Quote</p>
+                                                {/* <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '20px', height: '20px'}} /> */}
+                                                <p className="font-weight-bold mb-0">Request Your Free Security Quote</p>
                                             </div>
                                         </div>
                                         <p className="mt-4">
@@ -386,20 +386,20 @@ export default function Page() {
                                         <div className="row mt-4">
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving North Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving North Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-12.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving East Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving East Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-14.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving West Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving West Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                         </div>

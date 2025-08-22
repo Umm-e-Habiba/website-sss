@@ -30,7 +30,7 @@ export default function EventSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
                                                         backgroundColor: '#243D31',
@@ -44,7 +44,7 @@ export default function EventSecurityPage() {
                                                     GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
                                                 </a>
                                                 <a 
-                                                    href="#" 
+                                                    href="/" 
                                                     className="btn text-dark px-4 py-3"
                                                     style={{
                                                         backgroundColor: '#FDC24C',
@@ -63,10 +63,10 @@ export default function EventSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/about/event-security.jpg" alt="Event Security Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/event security.jpg" alt="Event Security Services" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

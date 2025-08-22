@@ -25,10 +25,10 @@ export default function BuildingSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function BuildingSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/building-security.webp" alt="Building Site Security Guards" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/building-guard.jpeg" alt="Building Site Security Guards" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -87,9 +87,9 @@ export default function BuildingSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-header d-flex align-items-center mb-3">
-                                            <div className="service-icon mr-3">
+                                            {/* <div className="service-icon mr-3">
                                                 <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
+                                            </div> */}
                                             <h4 className="mb-0">Commercial Building Security</h4>
                                         </div>
                                         <p>Our commercial building security guards control access points, protect sensitive areas, and safeguard valuable assets with stringent security measures tailored for business environments.</p>
@@ -103,9 +103,9 @@ export default function BuildingSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-header d-flex align-items-center mb-3">
-                                            <div className="service-icon mr-3">
+                                            {/* <div className="service-icon mr-3">
                                                 <i className="bi bi-house" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
+                                            </div> */}
                                             <h4 className="mb-0">Residential Building Security</h4>
                                         </div>
                                         <p>We provide robust security for residential buildings with efficient visitor management, patrol services, and emergency response protocols to ensure resident safety.</p>
@@ -344,10 +344,10 @@ export default function BuildingSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

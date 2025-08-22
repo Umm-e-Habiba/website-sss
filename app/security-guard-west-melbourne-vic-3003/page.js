@@ -5,7 +5,7 @@ import TestimonialSlider3 from "@/components/slider/TestimonialSlider3"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT METRO GUARDS">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="METROGUARDS SERVICE AREA WEST">
                 <div>
                     {/*===== Security Guards in West Melbourne, VIC =====*/}
                     <div className="section-padding">
@@ -37,9 +37,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -96,14 +96,14 @@ export default function Page() {
                                             <div className="col-md-6">
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-9.png" alt="" />
+                                                        <img src="/assets/img/icons/customer (1).png" alt="" />
                                                     </div>
                                                      <h2><CounterUp count={4300} /></h2>
                                                      <p>clients so far</p>
                                                         </div>
                                                         <div className="single-counter">
                                                         <div className="conter-icon">
-                                                       <img src="/assets/img/icons/service-16.png" alt="" />
+                                                       <img src="/assets/img/icons/membership (1).png" alt="" />
                                                       </div>
                                                              <h2><CounterUp count={8} />+</h2>
                                                      <p>Membership so far</p>
@@ -112,23 +112,23 @@ export default function Page() {
                                                   <div className="col-md-6">
                                                   <div className="single-counter mt-5">
                                                 <div className="conter-icon">
-                                              <img src="/assets/img/icons/service-12.png" alt="" />
+                                              <img src="/assets/img/icons/award.png" alt="" />
                                                 </div>
                                              <h2><CounterUp count={3} />+</h2>
                                           <p>Awards so far</p>
                                           </div>
                                      <div className="single-counter">
                                         <div className="conter-icon">
-                                 <img src="/assets/img/icons/service-14.png" alt="" />
+                                 <img src="/assets/img/icons/meeting.png" alt="" />
                                     </div>
                                      <h2><CounterUp count={90} />%</h2>
                                                     <p>Meetings so far</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-9.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/hiring.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Hire Security Guards</h4>
                                         <p>Professional, licensed security personnel on-demand for businesses, events, and private properties with flexible hiring options and rapid deployment.</p>
@@ -170,7 +170,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-12.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/patrol.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Mobile Patrol Security</h4>
                                         <p>24/7 visible deterrence with randomized, high-visibility checks across West Melbourne for construction sites, warehouses, and residential complexes.</p>
@@ -184,7 +184,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-14.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/school.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Building Security Guards</h4>
                                         <p>Specialized protection for commercial and residential buildings with access control, CCTV monitoring, and emergency response.</p>
@@ -198,7 +198,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-16.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/red-carpet.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Event Security Guards</h4>
                                         <p>Crowd control and VIP protection for concerts, corporate functions, and events with tailored teams based on event size and risk level.</p>
@@ -212,7 +212,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-9.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/mall.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Retail Security Guards</h4>
                                         <p>Customer-friendly protection for stores, shopping centers, and malls with theft deterrence and customer assistance.</p>
@@ -226,7 +226,7 @@ export default function Page() {
                                 <div className="col-md-4 mb-4">
                                     <div className="service-card p-4 h-100" style={{backgroundColor: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)'}}>
                                         <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/service-12.png" alt="" style={{width: '40px', height: '40px'}} />
+                                            <img src="/assets/img/icons/construction.png" alt="" style={{width: '40px', height: '40px'}} />
                                         </div>
                                         <h4>Construction Site Security</h4>
                                         <p>24/7 protection for high-risk construction sites with equipment monitoring, access control, and theft prevention.</p>
@@ -244,9 +244,9 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="shape-007">
+                        {/* <div className="shape-007">
                             <img src="/assets/img/shapes/shape007.svg" alt="" />
-                        </div>
+                        </div> */}
                     </div>
 
                     {/*===== Why Metro Guards is Trusted Across West Melbourne =====*/}
@@ -303,9 +303,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -374,15 +374,15 @@ export default function Page() {
                                         <div className="mt-4 p-4" style={{backgroundColor: '#f8f9fa', borderRadius: '10px'}}>
                                             <div className="d-flex align-items-center justify-content-center mb-3">
                                                 <img src="/assets/img/icons/service-16.png" alt="" className="me-3" style={{width: '40px', height: '40px'}} />
-                                                <h3 className="mb-0">📞 Call Today: 1300 73 11 73</h3>
+                                                <h3 className="mb-0">Call Today: 1300 73 11 73</h3>
                                             </div>
                                             <div className="d-flex align-items-center justify-content-center mb-3">
                                                 <img src="/assets/img/icons/arrow-up-right.svg" alt="" className="me-2" style={{width: '20px', height: '20px'}} />
-                                                <p className="font-weight-bold mb-0">📧 Email: admin@metroguards.com.au</p>
+                                                <p className="font-weight-bold mb-0">Email: admin@metroguards.com.au</p>
                                             </div>
                                             <div className="d-flex align-items-center justify-content-center">
-                                                <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '20px', height: '20px'}} />
-                                                <p className="font-weight-bold mb-0">🔗 Request Your Free Security Quote</p>
+                                                {/* <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '20px', height: '20px'}} /> */}
+                                                <p className="font-weight-bold mb-0">Request Your Free Security Quote</p>
                                             </div>
                                         </div>
                                         <p className="mt-4">
@@ -391,20 +391,20 @@ export default function Page() {
                                         <div className="row mt-4">
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving North Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving North Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-12.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving South Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving South Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-14.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
-                                                    <p className="mb-0">📍 Serving West Melbourne and surrounding suburbs</p>
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                                                    <p className="mb-0">Serving East Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                         </div>

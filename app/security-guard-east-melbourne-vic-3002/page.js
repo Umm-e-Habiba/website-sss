@@ -5,7 +5,7 @@ import TestimonialSlider3 from "@/components/slider/TestimonialSlider3"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="METRO GUARDS SERVICE AREA">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="METRO GUARDS SERVICE AREA EAST">
                 <div>
                     {/*===== Security Guards in East Melbourne, VIC =====*/}
                     <div className="section-padding">
@@ -38,9 +38,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -91,14 +91,14 @@ export default function Page() {
                                             <div className="col-md-6">
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-9.png" alt="" />
+                                                        <img src="/assets/img/icons/customer (1).png" alt="" />
                                                     </div>
                                                     <h2><CounterUp count={4300} /></h2>
                                                     <p>clients so far</p>
                                                 </div>
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-16.png" alt="" />
+                                                        <img src="/assets/img/icons/membership (1).png" alt="" />
                                                     </div>
                                                     <h2><CounterUp count={8} />+</h2>
                                                     <p>Membership so far</p>
@@ -107,23 +107,23 @@ export default function Page() {
                                             <div className="col-md-6">
                                                 <div className="single-counter mt-5">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-12.png" alt="" />
+                                                        <img src="/assets/img/icons/award.png" alt="" />
                                                     </div>
                                                     <h2><CounterUp count={3} />+</h2>
                                                     <p>Awards so far</p>
                                                 </div>
                                                 <div className="single-counter">
                                                     <div className="conter-icon">
-                                                        <img src="/assets/img/icons/service-14.png" alt="" />
+                                                        <img src="/assets/img/icons/meeting.png" alt="" />
                                                     </div>
                                                     <h2><CounterUp count={90} />%</h2>
                                                     <p>Meetings so far</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -155,9 +155,9 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="shape-007">
+                        {/* <div className="shape-007">
                             <img src="/assets/img/shapes/shape007.svg" alt="" />
-                        </div>
+                        </div> */}
                     </div>
 
                     {/*===== Why Metro Guards is Trusted Across East Melbourne =====*/}
@@ -210,9 +210,9 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -272,19 +272,19 @@ export default function Page() {
                                         <div className="row mt-4">
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
                                                     <p className="mb-0">Serving North Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-12.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
                                                     <p className="mb-0">Serving South Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>
                                             <div className="col-md-4">
                                                 <div className="d-flex align-items-center justify-content-center mb-3">
-                                                    <img src="/assets/img/icons/service-14.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
+                                                    <img src="/assets/img/icons/double-check2.png" alt="" className="me-2" style={{ width: '24px', height: '24px' }} />
                                                     <p className="mb-0">Serving West Melbourne and surrounding suburbs</p>
                                                 </div>
                                             </div>

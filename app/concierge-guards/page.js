@@ -30,7 +30,7 @@ export default function ConciergeSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
                                                         backgroundColor: '#243D31',
@@ -44,7 +44,7 @@ export default function ConciergeSecurityPage() {
                                                     GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
                                                 </a>
                                                 <a 
-                                                    href="#" 
+                                                    href="tel:1300731173" 
                                                     className="btn text-dark px-4 py-3"
                                                     style={{
                                                         backgroundColor: '#FDC24C',
@@ -64,9 +64,9 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/about/south.webp" alt="Concierge Security Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ export default function ConciergeSecurityPage() {
                                     <div className="service-box text-center p-4 bg-white shadow-lg rounded">
                                         <div className="service-icon mb-3">
                                             <div className="icon-wrapper">
-                                                <img src="/assets/img/icons/shield.png" alt="Enhanced Safety" />
+                                                <img src="/assets/img/icons/cyber-security.png" alt="Enhanced Safety" />
                                             </div>
                                         </div>
                                         <h4 className="mb-3">Enhanced Safety</h4>
@@ -104,7 +104,7 @@ export default function ConciergeSecurityPage() {
                                     <div className="service-box text-center p-4 bg-white shadow-lg rounded">
                                         <div className="service-icon mb-3">
                                             <div className="icon-wrapper">
-                                                <img src="/assets/img/icons/best-customer-experience.png" alt="Customer Experience" />
+                                                <img src="/assets/img/icons/review.png" alt="Customer Experience" />
                                             </div>
                                         </div>
                                         <h4 className="mb-3">Customer Experience</h4>
@@ -148,7 +148,7 @@ export default function ConciergeSecurityPage() {
                                     <div className="service-box text-center p-4 bg-white shadow-lg rounded">
                                         <div className="service-icon mb-3">
                                             <div className="icon-wrapper">
-                                                <img src="/assets/img/icons/sketch.png" alt="Customizable Plans" />
+                                                <img src="/assets/img/icons/flexible.png" alt="Customizable Plans" />
                                             </div>
                                         </div>
                                         <h4 className="mb-3">Customizable Plans</h4>
@@ -264,7 +264,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Expertly Trained Personnel</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -281,7 +281,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Customer Experience Focus</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -298,7 +298,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Diverse Workforce</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -315,7 +315,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Advanced Technology</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -332,7 +332,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Custom Solutions</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -349,7 +349,7 @@ export default function ConciergeSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Industries We Serve</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -384,7 +384,7 @@ export default function ConciergeSecurityPage() {
                                             </p>
                                             <div className="process-steps mt-4">
                                                 <div className="process-step d-flex align-items-start mb-4">
-                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#243D31', color: 'white', borderRadius: '50%', flexShrink: 0}}>
+                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#1E2247', color: 'white', borderRadius: '50%', flexShrink: 0}}>
                                                         1
                                                     </div>
                                                     <div className="step-content">
@@ -393,7 +393,7 @@ export default function ConciergeSecurityPage() {
                                                     </div>
                                                 </div>
                                                 <div className="process-step d-flex align-items-start mb-4">
-                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#243D31', color: 'white', borderRadius: '50%', flexShrink: 0}}>
+                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#1E2247', color: 'white', borderRadius: '50%', flexShrink: 0}}>
                                                         2
                                                     </div>
                                                     <div className="step-content">
@@ -402,7 +402,7 @@ export default function ConciergeSecurityPage() {
                                                     </div>
                                                 </div>
                                                 <div className="process-step d-flex align-items-start mb-4">
-                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#243D31', color: 'white', borderRadius: '50%', flexShrink: 0}}>
+                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#1E2247', color: 'white', borderRadius: '50%', flexShrink: 0}}>
                                                         3
                                                     </div>
                                                     <div className="step-content">
@@ -411,7 +411,7 @@ export default function ConciergeSecurityPage() {
                                                     </div>
                                                 </div>
                                                 <div className="process-step d-flex align-items-start">
-                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#243D31', color: 'white', borderRadius: '50%', flexShrink: 0}}>
+                                                    <div className="step-number mr-3 d-flex align-items-center justify-content-center" style={{width: '40px', height: '40px', backgroundColor: '#1E2247', color: 'white', borderRadius: '50%', flexShrink: 0}}>
                                                         4
                                                     </div>
                                                     <div className="step-content">
@@ -428,17 +428,17 @@ export default function ConciergeSecurityPage() {
                                         <div className="row">
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-primary" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        500+
-                                                    </div>
+                                                    <div className="stat-number text-navy" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    500+
+</div>
                                                     <div className="stat-label">Properties Secured</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-success" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        24/7
-                                                    </div>
+                                                   <div className="stat-number text-dark" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    24/7
+</div>
                                                     <div className="stat-label">Availability</div>
                                                 </div>
                                             </div>
@@ -452,9 +452,9 @@ export default function ConciergeSecurityPage() {
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-info" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        1-2
-                                                    </div>
+                                                   <div className="stat-number text-blue" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    1-2
+</div>
                                                     <div className="stat-label">Days Deployment</div>
                                                 </div>
                                             </div>
@@ -583,75 +583,75 @@ export default function ConciergeSecurityPage() {
                         </div>
                     </div>
 
-                    {/*===== Contact CTA Section =====*/}
-                    <div className="cta-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="cta-banner bg-primary text-white p-5 rounded text-center position-relative overflow-hidden">
-                                        <div className="cta-bg-shape position-absolute" style={{top: '0', right: '0', opacity: '0.1'}}>
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
-                                        <div className="row align-items-center">
-                                            <div className="col-lg-8 text-left">
-                                                <div className="cta-content">
-                                                    <h3 className="text-white mb-3">Elevate Your Property's Security & Hospitality</h3>
-                                                    <p className="text-white mb-0">
-                                                        Contact Metro Guards today to discuss how our concierge security services can enhance safety and customer experience at your property.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-4 text-right">
-                                                <div className="cta-buttons">
-                                                    <a href="#" className="btn btn-light btn-lg mb-2 d-block">
-                                                        <i className="bi bi-file-earmark-text mr-2"></i>GET QUOTATION
-                                                    </a>
-                                                    <a href="tel:1300731173" className="btn btn-outline-light btn-lg d-block">
-                                                        <i className="bi bi-telephone mr-2"></i>1300 73 11 73
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="row mt-4">
-                                            <div className="col-lg-12">
-                                                <div className="contact-info-row d-flex justify-content-around text-center">
-                                                    <div className="contact-info-item">
-                                                        <div className="contact-icon mb-2">
-                                                            <i className="bi bi-building" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">All Property Types</h6>
-                                                        <small className="text-white-50">Commercial & residential</small>
-                                                    </div>
-                                                    <div className="contact-info-item">
-                                                        <div className="contact-icon mb-2">
-                                                            <i className="bi bi-shield-check" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Fully Licensed</h6>
-                                                        <small className="text-white-50">Victoria Police approved</small>
-                                                    </div>
-                                                    <div className="contact-info-item">
-                                                        <div className="contact-icon mb-2">
-                                                            <i className="bi bi-people" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Professional Staff</h6>
-                                                        <small className="text-white-50">Trained in hospitality & security</small>
-                                                    </div>
-                                                    <div className="contact-info-item">
-                                                        <div className="contact-icon mb-2">
-                                                            <i className="bi bi-geo-alt" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Melbourne Wide</h6>
-                                                        <small className="text-white-50">Servicing all areas</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                   {/*===== Contact CTA Section =====*/}
+<div className="cta-section bg-28 section-padding">
+    <div className="container">
+        <div className="row">
+            <div className="col-lg-12">
+                <div className="cta-banner text-white p-5 rounded text-center position-relative overflow-hidden" style={{backgroundColor: '#1E2247'}}>
+                    <div className="cta-bg-shape position-absolute" style={{top: '0', right: '0', opacity: '0.1'}}>
+                        <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
+                    </div>
+                    <div className="row align-items-center">
+                        <div className="col-lg-8 text-left">
+                            <div className="cta-content">
+                                <h3 className="text-white mb-3">Elevate Your Property's Security & Hospitality</h3>
+                                <p className="text-white mb-0">
+                                    Contact Metro Guards today to discuss how our concierge security services can enhance safety and customer experience at your property.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 text-right">
+                            <div className="cta-buttons">
+                                <a href="/get-quotation" className="btn btn-light btn-lg mb-2 d-block" style={{color: '#1E2247', fontWeight: '600'}}>
+                                    <i className="bi bi-file-earmark-text mr-2"></i>GET QUOTATION
+                                </a>
+                                <a href="tel:1300731173" className="btn btn-outline-light btn-lg d-block">
+                                    <i className="bi bi-telephone mr-2"></i>1300 73 11 73
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="row mt-4">
+                        <div className="col-lg-12">
+                            <div className="contact-info-row d-flex justify-content-around text-center">
+                                <div className="contact-info-item">
+                                    {/* <div className="contact-icon mb-2">
+                                        <i className="bi bi-building" style={{fontSize: '2rem'}}></i>
+                                    </div> */}
+                                    <h6 className="text-white mb-1">All Property Types</h6>
+                                    <small className="text-white-50">Commercial & residential</small>
+                                </div>
+                                <div className="contact-info-item">
+                                    {/* <div className="contact-icon mb-2">
+                                        <i className="bi bi-shield-check" style={{fontSize: '2rem'}}></i>
+                                    </div> */}
+                                    <h6 className="text-white mb-1">Fully Licensed</h6>
+                                    <small className="text-white-50">Victoria Police approved</small>
+                                </div>
+                                <div className="contact-info-item">
+                                    <div className="contact-icon mb-2">
+                                        <i className="bi bi-people" style={{fontSize: '2rem'}}></i>
                                     </div>
+                                    <h6 className="text-white mb-1">Professional Staff</h6>
+                                    <small className="text-white-50">Trained in hospitality & security</small>
+                                </div>
+                                <div className="contact-info-item">
+                                    {/* <div className="contact-icon mb-2">
+                                        <i className="bi bi-geo-alt" style={{fontSize: '2rem'}}></i>
+                                    </div> */}
+                                    <h6 className="text-white mb-1">Melbourne Wide</h6>
+                                    <small className="text-white-50">Servicing all areas</small>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
             </Layout>
         </>

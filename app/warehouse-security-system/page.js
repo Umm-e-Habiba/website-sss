@@ -25,10 +25,10 @@ export default function WarehouseSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function WarehouseSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/warehouse-security.webp" alt="Warehouse Security Systems" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/warehouse.jpg" alt="Warehouse Security Systems" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ export default function WarehouseSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-camera-video text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -112,7 +112,7 @@ export default function WarehouseSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-alarm text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@ export default function WarehouseSecurityPage() {
                                     <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
                                         <div className="benefit-icon me-4 flex-shrink-0">
                                             <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#243D31', borderRadius: '50%'}}>
+                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
                                                 <i className="bi bi-shield-check text-white" style={{fontSize: '1.8rem'}}></i>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@ export default function WarehouseSecurityPage() {
                                     <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
                                         <div className="benefit-icon me-4 flex-shrink-0">
                                             <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#243D31', borderRadius: '50%'}}>
+                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
                                                 <i className="bi bi-boxes text-white" style={{fontSize: '1.8rem'}}></i>
                                             </div>
                                         </div>
@@ -218,7 +218,7 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-camera-video" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-camera-video" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">24/7 CCTV Surveillance</h5>
@@ -229,7 +229,7 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-door-closed" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-door-closed" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Access Control</h5>
@@ -240,7 +240,7 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-bell" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-bell" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Alarm Monitoring</h5>
@@ -251,7 +251,7 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-car-front" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-car-front" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Mobile Patrols</h5>
@@ -262,7 +262,7 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-12">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-person-badge" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-person-badge" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Security Guards</h5>
@@ -289,7 +289,7 @@ export default function WarehouseSecurityPage() {
                                             <div className="choose-features mt-4">
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-gear-fill" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-gear-fill" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Tailored Security Solutions</h5>
@@ -298,7 +298,7 @@ export default function WarehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-people-fill" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-people-fill" style={{fontSize: '1.5rem', color: '#1E22471'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Experienced Security Personnel</h5>
@@ -307,7 +307,7 @@ export default function WarehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-cpu-fill" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-cpu-fill" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Advanced Technology</h5>
@@ -316,7 +316,7 @@ export default function WarehouseSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-cash-stack" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-cash-stack" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Cost-Effective Security</h5>
@@ -329,7 +329,7 @@ export default function WarehouseSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="choose-image ml50">
-                                        <img src="/assets/img/bg/warehouse-team.webp" alt="Metro Guards Team" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/warehouse 2.webp" alt="Metro Guards Team" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +358,7 @@ export default function WarehouseSecurityPage() {
                             <button className="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" 
                                     data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1"
                                     style={{backgroundColor: '#f8f9fa', border: 'none'}}>
-                                <i className="bi bi-question-circle me-3" style={{color: '#243D31'}}></i>
+                                <i className="bi bi-question-circle me-3" style={{color: '#1E2247'}}></i>
                                 What is a warehouse security system?
                             </button>
                         </h5>
@@ -373,7 +373,7 @@ export default function WarehouseSecurityPage() {
                             <button className="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" 
                                     data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"
                                     style={{backgroundColor: '#f8f9fa', border: 'none'}}>
-                                <i className="bi bi-question-circle me-3" style={{color: '#243D31'}}></i>
+                                <i className="bi bi-question-circle me-3" style={{color: '#1E2247'}}></i>
                                 How do warehouse CCTV systems work?
                             </button>
                         </h5>
@@ -388,7 +388,7 @@ export default function WarehouseSecurityPage() {
                             <button className="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" 
                                     data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"
                                     style={{backgroundColor: '#f8f9fa', border: 'none'}}>
-                                <i className="bi bi-question-circle me-3" style={{color: '#243D31'}}></i>
+                                <i className="bi bi-question-circle me-3" style={{color: '#1E2247'}}></i>
                                 Can warehouse security systems help with employee theft?
                             </button>
                         </h5>
@@ -403,7 +403,7 @@ export default function WarehouseSecurityPage() {
                             <button className="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" 
                                     data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"
                                     style={{backgroundColor: '#f8f9fa', border: 'none'}}>
-                                <i className="bi bi-question-circle me-3" style={{color: '#243D31'}}></i>
+                                <i className="bi bi-question-circle me-3" style={{color: '#1E2247'}}></i>
                                 How can access control improve warehouse security?
                             </button>
                         </h5>
@@ -431,7 +431,7 @@ export default function WarehouseSecurityPage() {
                                             Our warehouse security systems are designed to provide you with peace of mind while ensuring the safety of your employees and assets.
                                         </p>
                                         <p className="mb-0">
-                                            <i className="bi bi-telephone-fill me-2" style={{color: '#243D31'}}></i>
+                                            <i className="bi bi-telephone-fill me-2" style={{color: '#1E2247'}}></i>
                                             <strong>Call us at 1300 73 11 73 or fill out our online form to get started.</strong>
                                         </p>
                                     </div>
@@ -439,10 +439,10 @@ export default function WarehouseSecurityPage() {
                                 <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
                                     <div className="contact-buttons">
                                         <a 
-                                            href="#" 
+                                            href="/contacts" 
                                             className="btn text-white px-4 py-3 mb-3 d-block"
                                             style={{
-                                                backgroundColor: '#243D31',
+                                                backgroundColor: '#1E2247',
                                                 border: 'none',
                                                 borderRadius: '5px',
                                                 textDecoration: 'none',
@@ -485,10 +485,10 @@ export default function WarehouseSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

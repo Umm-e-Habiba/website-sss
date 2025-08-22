@@ -54,10 +54,10 @@ export default function Menu() {
                             <h3 className="font-f-1">Corporate Security Guards</h3>
                             <ul>
                                 <li><Link href="/building-security-guards">Building Security Guard</Link></li>
-                                <li><Link href="/construction-site-security-guard">Construction Site Security Guard</Link></li>
+                                <li><Link href="/construction-site-security-guards">Construction Site Security Guard</Link></li>
                                 <li><Link href="/warehouse-security-system">Warehouse Security System</Link></li>
                                 <li><Link href="/concierge-guards">Concierge Guards</Link></li>
-                                <li><Link href="/gatehouse-security-guard">Gatehouse Security Guard</Link></li>
+                                <li><Link href="/gate-house-security-guard">Gatehouse Security Guard</Link></li>
                             </ul>
                         </div>
                         <div className="single-mega-menu">

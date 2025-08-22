@@ -25,10 +25,10 @@ export default function ConstructionSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function ConstructionSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/construction-security.webp" alt="Construction Site Security" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/construction-guard.webp" alt="Construction Site Security" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +277,7 @@ export default function ConstructionSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="importance-image mr50">
-                                        <img src="/assets/img/bg/construction-importance.webp" alt="Construction Security Importance" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/construct.jpg" alt="Construction Security Importance" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -373,10 +373,10 @@ export default function ConstructionSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

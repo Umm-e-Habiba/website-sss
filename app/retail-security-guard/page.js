@@ -25,10 +25,10 @@ export default function RetailSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -59,9 +59,9 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/bg/retail-security.webp" alt="Retail Security Solutions" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ export default function RetailSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-gear text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -112,7 +112,7 @@ export default function RetailSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#243D31'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E22471'}}>
                                                 <i className="bi bi-shield-check text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>
@@ -143,7 +143,7 @@ export default function RetailSecurityPage() {
                                     <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
                                         <div className="benefit-icon me-4 flex-shrink-0">
                                             <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#243D31', borderRadius: '50%'}}>
+                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
                                                 <i className="bi bi-person-badge text-white" style={{fontSize: '1.8rem'}}></i>
                                             </div>
                                         </div>
@@ -190,7 +190,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Concierge Security Approach</h5>
@@ -201,7 +201,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-graph-up" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-graph-up" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Operational Efficiency</h5>
@@ -212,7 +212,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Emergency Coordination</h5>
@@ -223,7 +223,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-building-check" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-building-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Professional Image</h5>
@@ -250,7 +250,7 @@ export default function RetailSecurityPage() {
                                             <div className="choose-features mt-4">
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-door-closed" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-door-closed" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Access Control</h5>
@@ -259,7 +259,7 @@ export default function RetailSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-alarm" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-alarm" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">24/7 Monitoring</h5>
@@ -268,7 +268,7 @@ export default function RetailSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-camera-video" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-camera-video" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Surveillance Systems</h5>
@@ -277,7 +277,7 @@ export default function RetailSecurityPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start">
                                                     <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-arrow-repeat" style={{fontSize: '1.5rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-arrow-repeat" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5 className="mb-2">Regular Patrols</h5>
@@ -314,21 +314,21 @@ export default function RetailSecurityPage() {
                             <div className="row">
                                 <div className="col-lg-4 mb-4">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-award" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-award" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Trusted by Melbourne Retailers</h5>
                                         <p>Proven track record in preventing theft, reducing liability, and enhancing customer experience.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 mb-4">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-cash-coin" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-cash-coin" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Cost-Effective Solutions</h5>
                                         <p>Premium security services at affordable costs with flexible pricing for all business sizes.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 mb-4">
                                     <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                        <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         <h5 className="my-3">Licensed Professionals</h5>
                                         <p>Fully licensed officers with continuous training in latest security protocols and standards.</p>
                                     </div>
@@ -356,7 +356,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-shop" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shop" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Retail Stores & Malls</h5>
@@ -367,7 +367,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-cart" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-cart" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Supermarkets</h5>
@@ -378,7 +378,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-gem" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-gem" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">High-End Retail</h5>
@@ -389,7 +389,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
                                         <div className="solution-icon me-4">
-                                            <i className="bi bi-box-seam" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-box-seam" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <div>
                                             <h5 className="mb-2">Warehouses</h5>
@@ -412,7 +412,7 @@ export default function RetailSecurityPage() {
                                             Protect your retail business with trusted security solutions from Metro Guards. Whether you need comprehensive surveillance, on-site security personnel, or access control systems, we provide tailored solutions that enhance safety and prevent losses.
                                         </p>
                                         <p className="mb-0">
-                                            <i className="bi bi-telephone-fill me-2" style={{color: '#243D31'}}></i>
+                                            <i className="bi bi-telephone-fill me-2" style={{color: '#1E2247'}}></i>
                                             <strong>Call us at 1300 73 11 73 for a free consultation.</strong>
                                         </p>
                                     </div>
@@ -423,7 +423,7 @@ export default function RetailSecurityPage() {
                                             href="#" 
                                             className="btn text-white px-4 py-3 mb-3 d-block"
                                             style={{
-                                                backgroundColor: '#243D31',
+                                                backgroundColor: '#1E2247',
                                                 border: 'none',
                                                 borderRadius: '5px',
                                                 textDecoration: 'none',
@@ -469,7 +469,7 @@ export default function RetailSecurityPage() {
                                                 href="#" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

@@ -3,9 +3,8 @@ import Layout from "@/components/layout/Layout"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT CONSULTIA">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT METROGUARDS">
                 <div>
-                    {/* PROVIDING SECURITY WITH INTEGRITY! Section */}
                     <div className="about-inner bg-28 section-padding">
                         <div className="container">
                             <div className="row align-items-center">
@@ -25,17 +24,13 @@ export default function Page() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/about/about23.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        <img src="/assets/img/about/about23.png" alt="" style={{ height: "700px", width: "600px", objectFit: "cover" }} />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Security Services in Melbourne Section */}
                     <div className="service-inner-1 section-padding2 inner-font-1">
                         <div className="container">
                             <div className="row">
@@ -52,7 +47,6 @@ export default function Page() {
                                 </div>
                             </div>
 
-                            {/* Services Cards */}
                             <div className="row">
                                 <div className="col-md-6 col-lg-4">
                                     <div className="single-service text-center">
@@ -83,7 +77,7 @@ export default function Page() {
                                         </div>
                                         <h3>Construction site security guards</h3>
                                         <p>
-                                            Protect your equipment, materials, and workers with reliable construction site security guards across Melbourne’s job sites.
+                                            Protect your equipment, materials, and workers with reliable construction site security guards across Melbourne's job sites.
                                         </p>
                                     </div>
                                 </div>
