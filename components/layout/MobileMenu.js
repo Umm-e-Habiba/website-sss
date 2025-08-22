@@ -37,12 +37,30 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                     <img src="/assets/img/logo/metroguards logo 2.png" alt="Metro Guards" style={{ width: "100px", height:"60px"}} />
                                 </Link>
                             </div>
-                            <div className="mobile-nav-icon" onClick={handleMobileMenu} style={{
-                                cursor: 'pointer',
-                                fontSize: '24px',
-                                color: '#333'
-                            }}>
-                                <i className="fa-solid fa-bars" />
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                                <Link href="tel:1300 73 11 73" style={{
+                                    backgroundColor: '#FDC51A',
+                                    color: '#000',
+                                    textDecoration: 'none',
+                                    padding: '8px 16px',
+                                    borderRadius: '5px',
+                                    fontSize: '14px',
+                                    fontWeight: '600',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '6px',
+                                    transition: 'background-color 0.3s ease'
+                                }}>
+                                    <i className="fa-solid fa-phone" style={{ fontSize: '12px' }} />
+                                    Call Now
+                                </Link>
+                                <div className="mobile-nav-icon" onClick={handleMobileMenu} style={{
+                                    cursor: 'pointer',
+                                    fontSize: '24px',
+                                    color: '#333'
+                                }}>
+                                    <i className="fa-solid fa-bars" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -175,16 +193,24 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                             <div className="services-submenu" style={{ display: isActive.key == 3 ? "block" : "none", paddingTop: '10px' }}>
                                 {/* Security Guard For Hire */}
                                 <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '15px', paddingRight: '10px' }}>
-                                        <Link href="#" onClick={handleMobileMenu} style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1, textDecoration: 'none' }}>
+                                    <div 
+                                        onClick={() => toggleSection("hire")}
+                                        style={{ 
+                                            display: 'flex', 
+                                            justifyContent: 'space-between', 
+                                            alignItems: 'center', 
+                                            paddingLeft: '15px', 
+                                            paddingRight: '10px',
+                                            cursor: 'pointer',
+                                            padding: '8px 10px 8px 15px'
+                                        }}
+                                    >
+                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
                                             Security Guard For Hire
-                                        </Link>
+                                        </span>
                                         <span
                                             className={openSections.hire ? "submenu-button submenu-opened" : "submenu-button"}
-                                            onClick={() => toggleSection("hire")}
                                             style={{
-                                                cursor: 'pointer',
-                                                padding: '8px',
                                                 color: '#666',
                                                 fontSize: '14px',
                                                 minWidth: '30px',
@@ -226,16 +252,24 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 
                                 {/* Corporate Security Guards */}
                                 <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '15px', paddingRight: '10px' }}>
-                                        <Link href="#" onClick={handleMobileMenu} style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1, textDecoration: 'none' }}>
+                                    <div 
+                                        onClick={() => toggleSection("corporate")}
+                                        style={{ 
+                                            display: 'flex', 
+                                            justifyContent: 'space-between', 
+                                            alignItems: 'center', 
+                                            paddingLeft: '15px', 
+                                            paddingRight: '10px',
+                                            cursor: 'pointer',
+                                            padding: '8px 10px 8px 15px'
+                                        }}
+                                    >
+                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
                                             Corporate Security Guards
-                                        </Link>
+                                        </span>
                                         <span
                                             className={openSections.corporate ? "submenu-button submenu-opened" : "submenu-button"}
-                                            onClick={() => toggleSection("corporate")}
                                             style={{
-                                                cursor: 'pointer',
-                                                padding: '8px',
                                                 color: '#666',
                                                 fontSize: '14px',
                                                 minWidth: '30px',
@@ -271,16 +305,24 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 
                                 {/* Loss Prevention Security */}
                                 <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '15px', paddingRight: '10px' }}>
-                                        <Link href="#" onClick={handleMobileMenu} style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1, textDecoration: 'none' }}>
+                                    <div 
+                                        onClick={() => toggleSection("loss")}
+                                        style={{ 
+                                            display: 'flex', 
+                                            justifyContent: 'space-between', 
+                                            alignItems: 'center', 
+                                            paddingLeft: '15px', 
+                                            paddingRight: '10px',
+                                            cursor: 'pointer',
+                                            padding: '8px 10px 8px 15px'
+                                        }}
+                                    >
+                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
                                             Loss Prevention Security
-                                        </Link>
+                                        </span>
                                         <span
                                             className={openSections.loss ? "submenu-button submenu-opened" : "submenu-button"}
-                                            onClick={() => toggleSection("loss")}
                                             style={{
-                                                cursor: 'pointer',
-                                                padding: '8px',
                                                 color: '#666',
                                                 fontSize: '14px',
                                                 minWidth: '30px',
@@ -304,16 +346,24 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 
                                 {/* Event Security */}
                                 <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '15px', paddingRight: '10px' }}>
-                                        <Link href="#" onClick={handleMobileMenu} style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1, textDecoration: 'none' }}>
+                                    <div 
+                                        onClick={() => toggleSection("event")}
+                                        style={{ 
+                                            display: 'flex', 
+                                            justifyContent: 'space-between', 
+                                            alignItems: 'center', 
+                                            paddingLeft: '15px', 
+                                            paddingRight: '10px',
+                                            cursor: 'pointer',
+                                            padding: '8px 10px 8px 15px'
+                                        }}
+                                    >
+                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
                                             Event Security
-                                        </Link>
+                                        </span>
                                         <span
                                             className={openSections.event ? "submenu-button submenu-opened" : "submenu-button"}
-                                            onClick={() => toggleSection("event")}
                                             style={{
-                                                cursor: 'pointer',
-                                                padding: '8px',
                                                 color: '#666',
                                                 fontSize: '14px',
                                                 minWidth: '30px',
@@ -337,16 +387,24 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 
                                 {/* Canine (K9) Security */}
                                 <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingLeft: '15px', paddingRight: '10px' }}>
-                                        <Link href="#" onClick={handleMobileMenu} style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1, textDecoration: 'none' }}>
+                                    <div 
+                                        onClick={() => toggleSection("k9")}
+                                        style={{ 
+                                            display: 'flex', 
+                                            justifyContent: 'space-between', 
+                                            alignItems: 'center', 
+                                            paddingLeft: '15px', 
+                                            paddingRight: '10px',
+                                            cursor: 'pointer',
+                                            padding: '8px 10px 8px 15px'
+                                        }}
+                                    >
+                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
                                             Canine (K9) Security
-                                        </Link>
+                                        </span>
                                         <span
                                             className={openSections.k9 ? "submenu-button submenu-opened" : "submenu-button"}
-                                            onClick={() => toggleSection("k9")}
                                             style={{
-                                                cursor: 'pointer',
-                                                padding: '8px',
                                                 color: '#666',
                                                 fontSize: '14px',
                                                 minWidth: '30px',

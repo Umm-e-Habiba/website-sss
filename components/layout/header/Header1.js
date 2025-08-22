@@ -26,7 +26,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="desktop-info">
                                     <div className="header-buttons" style={{ display: 'flex', gap: '10px' }}>
                                         <Link 
-                                            href="/get-quote" 
+                                            href="/get-quotation" 
                                             className="btn" 
                                             style={{
                                                 backgroundColor: '#FDC51A',

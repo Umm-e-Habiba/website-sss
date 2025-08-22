@@ -1,4 +1,6 @@
+'use client';
 import Layout from "@/components/layout/Layout"
+
 export const metadata = {
   title: 'Adhoc Security Services- Hire Security Guard Service in Melbourne',
   description: 'Learn about Metropolitan Security\'s values and professional security services in Melbourne.',
@@ -70,56 +72,138 @@ export default function AdhocSecurityPage() {
         </div>
     </div>
 </div>
-
-                    {/*===== Three Service Cards Section =====*/}
-                    <div className="service-section-three bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Your Comprehensive Security Solution
-                                        </small>
-                                        <h2>OUR ADHOC SECURITY SERVICES</h2>
-                                        <p>When it comes to protecting your people and assets, you need a security partner you can trust.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row mt-5">
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-box text-center p-4 bg-white shadow-lg rounded">
-                                        <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/patrol.png" alt="Security Patrols" className="mb-3" style={{width: '60px', height: '60px'}} />
-                                        </div>
-                                        <h4 className="mb-3">Security Patrols</h4>
-                                        <p>Our trained security guards will conduct regular patrols of your property to deter criminal activity and ensure that your assets are protected at all times.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-box text-center p-4 bg-white shadow-lg rounded">
-                                        <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/policeman.png" alt="Access Control" className="mb-3" style={{width: '60px', height: '60px'}} />
-                                        </div>
-                                        <h4 className="mb-3">Access Control</h4>
-                                        <p>We help you control who has access to your property or event, using various methods including ID checks and biometric scanning systems.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-box text-center p-4 bg-white shadow-lg rounded">
-                                        <div className="service-icon mb-3">
-                                            <img src="/assets/img/icons/red-carpet.png" alt="Event Security" className="mb-3" style={{width: '60px', height: '60px'}} />
-                                        </div>
-                                        <h4 className="mb-3">Event Security</h4>
-                                        <p>From concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
+{/*===== Three Service Cards Section =====*/}
+<div className="service-section-three bg-29 section-padding">
+    <div className="container">
+        <div className="row">
+            <div className="col-lg-12 text-center">
+                <div className="heading2">
+                    <small className="heading-top icon-wrapper">
+                        <img src="/assets/img/icons/hands.svg" alt="" className="header-icon" />
+                        Your Comprehensive Security Solution
+                    </small>
+                    <h2>OUR ADHOC SECURITY SERVICES</h2>
+                    <p>When it comes to protecting your people and assets, you need a security partner you can trust.</p>
+                </div>
+            </div>
+        </div>
+        <div className="row mt-5">
+            <div className="col-lg-4 col-md-6 mb-4">
+                <div className="service-box text-center p-4 glass-card-navy rounded">
+                    <div className="service-icon mb-3">
+                        <div className="icon-container">
+                            <img src="/assets/img/icons/patrol.png" alt="Security Patrols" />
                         </div>
                     </div>
+                    <h4 className="mb-3">Security Patrols</h4>
+                    <p>Our trained security guards will conduct regular patrols of your property to deter criminal activity and ensure that your assets are protected at all times.</p>
+                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mb-4">
+                <div className="service-box text-center p-4 glass-card-navy rounded">
+                    <div className="service-icon mb-3">
+                        <div className="icon-container">
+                            <img src="/assets/img/icons/policeman.png" alt="Access Control" />
+                        </div>
+                    </div>
+                    <h4 className="mb-3">Access Control</h4>
+                    <p>We help you control who has access to your property or event, using various methods including ID checks and biometric scanning systems.</p>
+                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mb-4">
+                <div className="service-box text-center p-4 glass-card-navy rounded">
+                    <div className="service-icon mb-3">
+                        <div className="icon-container">
+                            <img src="/assets/img/icons/red-carpet.png" alt="Event Security" />
+                        </div>
+                    </div>
+                    <h4 className="mb-3">Event Security</h4>
+                    <p>From concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely.</p>
+                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style jsx>{`
+    .service-section-three {
+        background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+    }
+    
+    .glass-card-navy {
+        background: rgba(30, 34, 71, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+        color: #fff;
+    }
+    
+    .glass-card-navy:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+        background: rgba(30, 34, 71, 0.25);
+    }
+    
+    .glass-card-navy h4 {
+        color: #000;
+    }
+    
+    .glass-card-navy p {
+        color: #000;
+    }
+    
+    .icon-container {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .icon-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .heading-top.icon-wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .header-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .theme-btn3 {
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #000;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .theme-btn3:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+`}</style>
 
                     {/*===== Four Reasons Grid Section =====*/}
                     <div className="reasons-section bg-28 section-padding">
@@ -284,8 +368,7 @@ export default function AdhocSecurityPage() {
                             </div>
                         </div>
                     </div>
-
- {/*===== Security Guard Types - Tab Style Section =====*/}
+{/*===== Security Guard Types - Tab Style Section =====*/}
 <div className="guard-types-section bg-28 section-padding">
     <div className="container">
         <div className="row">
@@ -303,8 +386,8 @@ export default function AdhocSecurityPage() {
         <div className="row">
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">Ad Hoc Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -320,8 +403,8 @@ export default function AdhocSecurityPage() {
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">Event Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -337,8 +420,8 @@ export default function AdhocSecurityPage() {
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">Emergency Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -354,8 +437,8 @@ export default function AdhocSecurityPage() {
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">On-Demand Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -371,8 +454,8 @@ export default function AdhocSecurityPage() {
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">Temporary Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -388,8 +471,8 @@ export default function AdhocSecurityPage() {
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
-                    <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                    <div className="card glass-card border-0 h-100">
+                        <div className="card-header text-white text-center py-3 glass-header">
                             <h5 className="mb-0">Professional Security Guards</h5>
                         </div>
                         <div className="card-body p-4">
@@ -407,6 +490,39 @@ export default function AdhocSecurityPage() {
     </div>
 </div>
 
+<style jsx>{`
+    .glass-card {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+    
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+    }
+    
+    .glass-header {
+        background: rgba(30, 34, 71, 0.7) !important;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    
+    .card-body {
+        color: #333;
+    }
+    
+    .guard-types-section {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+`}</style>
                     {/*===== Contact CTA Section - Full Width Banner Style =====*/}
                     <div className="cta-section bg-29 section-padding">
                         <div className="container">
