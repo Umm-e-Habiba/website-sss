@@ -1,10 +1,10 @@
 'use client';
 import Layout from "@/components/layout/Layout"
 
-export const metadata = {
-  title: 'Adhoc Security Services- Hire Security Guard Service in Melbourne',
-  description: 'Learn about Metropolitan Security\'s values and professional security services in Melbourne.',
-}
+// export const metadata = {
+//   title: 'Adhoc Security Services- Hire Security Guard Service in Melbourne',
+//   description: 'Learn about Metropolitan Security\'s values and professional security services in Melbourne.',
+// }
 export default function AdhocSecurityPage() {
     return (
         <>
