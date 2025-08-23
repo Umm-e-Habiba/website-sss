@@ -58,7 +58,11 @@ export default function RetailSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/retail-security.webp" alt="Retail Security Solutions" />
+                                        <img src="/assets/img/blog/retail.jpg" alt="Retail Security Solutions"  style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }} />
                                         {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div> */}
@@ -290,7 +294,11 @@ export default function RetailSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="choose-image ml50">
-                                        <img src="/assets/img/bg/retail-coverage.webp" alt="Retail Security Coverage" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/retail 2.webp" alt="Retail Security Coverage" className="img-fluid rounded shadow-lg"  style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }}/>
                                     </div>
                                 </div>
                             </div>
@@ -420,7 +428,7 @@ export default function RetailSecurityPage() {
                                 <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
                                     <div className="contact-buttons">
                                         <a 
-                                            href="#" 
+                                            href="/get-quotation" 
                                             className="btn text-white px-4 py-3 mb-3 d-block"
                                             style={{
                                                 backgroundColor: '#1E2247',
@@ -466,7 +474,7 @@ export default function RetailSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
                                                     backgroundColor: '#1E2247',
