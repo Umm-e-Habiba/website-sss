@@ -25,10 +25,10 @@ export default function UnarmedSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function UnarmedSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/unarmed-security.webp" alt="Unarmed Security Guards" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/umarmed.avif" alt="Unarmed Security Guards" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-shield" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shield" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Crime Prevention</h4>
                                         <p className="text-center">Visible presence deters criminal activity before it occurs</p>
@@ -96,7 +96,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-door-closed" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-door-closed" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Access Control</h4>
                                         <p className="text-center">Verify identification and manage building access</p>
@@ -105,7 +105,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-camera-video" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-camera-video" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Surveillance</h4>
                                         <p className="text-center">Monitor cameras and patrol premises for unusual activity</p>
@@ -114,7 +114,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Crowd Control</h4>
                                         <p className="text-center">Maintain order during events and gatherings</p>
@@ -123,7 +123,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-journal-text" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-journal-text" style={{fontSize: '2rem', color: '##1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Documentation</h4>
                                         <p className="text-center">Maintain visitor logs and incident reports</p>
@@ -132,7 +132,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="duty-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="duty-icon mb-3 text-center">
-                                            <i className="bi bi-telephone" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-telephone" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Emergency Response</h4>
                                         <p className="text-center">Contact authorities when needed and manage situations</p>
@@ -165,8 +165,13 @@ export default function UnarmedSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="threat-image ml50">
-                                        <img src="/assets/img/bg/threat-response.webp" alt="Threat Response" className="img-fluid rounded shadow-lg" />
-                                    </div>
+  <img 
+    src="/assets/img/blog/threat.avif" 
+    alt="Threat Response" 
+    className="img-fluid rounded shadow-lg" 
+    style={{ maxHeight: '710px', width: '600px', objectFit: 'cover' }}
+  />
+</div>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +196,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-shop" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shop" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Retail Stores</h5>
                                         <p className="text-center">Preventing shoplifting and ensuring customer safety</p>
@@ -200,7 +205,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Office Complexes</h5>
                                         <p className="text-center">Controlling access and maintaining order</p>
@@ -209,7 +214,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-book" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-book" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Schools & Universities</h5>
                                         <p className="text-center">Safeguarding students, staff, and campus property</p>
@@ -218,7 +223,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-palette" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-palette" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Art Galleries</h5>
                                         <p className="text-center">Monitoring valuable artworks and visitors</p>
@@ -227,7 +232,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-house" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-house" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Residential Buildings</h5>
                                         <p className="text-center">Providing security to residents and managing access</p>
@@ -245,7 +250,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-bank" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-bank" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Government Buildings</h5>
                                         <p className="text-center">Maintaining security of public institutions</p>
@@ -254,7 +259,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="industry-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="industry-icon mb-3 text-center">
-                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Construction Sites</h5>
                                         <p className="text-center">Protecting equipment and materials from theft</p>
@@ -282,7 +287,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-award" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-award" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Professionalism</h4>
                                         <p className="text-center">Extensively trained in conflict resolution, emergency response, and customer service</p>
@@ -309,7 +314,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-eye" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-eye" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Visible Deterrent</h4>
                                         <p className="text-center">Presence alone reduces likelihood of theft and vandalism</p>
@@ -318,7 +323,7 @@ export default function UnarmedSecurityPage() {
                                 <div className="col-lg-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Approachable Presence</h4>
                                         <p className="text-center">Creates a welcoming yet secure environment for customers and staff</p>
@@ -334,7 +339,7 @@ export default function UnarmedSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="training-image mr50">
-                                        <img src="/assets/img/bg/security-training.webp" alt="Security Training" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/tranning.jpg" alt="Security Training" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -394,7 +399,7 @@ export default function UnarmedSecurityPage() {
                                     <div className="choose-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="choose-header d-flex align-items-center mb-3">
                                             <div className="choose-icon mr-3">
-                                                <i className="bi bi-person-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-person-check" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Experienced & Trained Guards</h4>
                                         </div>
@@ -405,7 +410,7 @@ export default function UnarmedSecurityPage() {
                                     <div className="choose-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="choose-header d-flex align-items-center mb-3">
                                             <div className="choose-icon mr-3">
-                                                <i className="bi bi-gear" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-gear" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Flexible Security Solutions</h4>
                                         </div>
@@ -416,7 +421,7 @@ export default function UnarmedSecurityPage() {
                                     <div className="choose-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="choose-header d-flex align-items-center mb-3">
                                             <div className="choose-icon mr-3">
-                                                <i className="bi bi-cash-coin" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-cash-coin" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Affordable & Effective</h4>
                                         </div>
@@ -427,7 +432,7 @@ export default function UnarmedSecurityPage() {
                                     <div className="choose-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="choose-header d-flex align-items-center mb-3">
                                             <div className="choose-icon mr-3">
-                                                <i className="bi bi-graph-up" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-graph-up" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Proven Track Record</h4>
                                         </div>
@@ -493,10 +498,10 @@ export default function UnarmedSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

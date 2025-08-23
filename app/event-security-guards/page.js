@@ -33,7 +33,7 @@ export default function EventSecurityPage() {
                                                     href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -104,7 +104,7 @@ export default function EventSecurityPage() {
                              style={{width: '40px', height: '40px', objectFit: 'contain'}} />
                     </div>
                     <h4 className="mb-3">VIP Protection</h4>
-                    <p>Dedicated security personnel to safeguard your special guests, celebrities, and high-profile attendees throughout your event.</p>
+                    <p>Dedicated security personnel to safeguard your special guests, celebrities, and high-profile attendees.</p>
                 </div>
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
@@ -135,12 +135,12 @@ export default function EventSecurityPage() {
                              backgroundColor: '#f8f9fa',
                              border: '2px solid #e9ecef'
                          }}>
-                        <img src="/assets/img/icons/cctv-camera.png" 
+                        <img src="/assets/img/icons/security-gate.png" 
                              alt="Security Screening" 
                              style={{width: '40px', height: '40px', objectFit: 'contain'}} />
                     </div>
                     <h4 className="mb-3">Security Screening</h4>
-                    <p>Thorough bag checks and metal detection to prevent weapons or prohibited items from entering your event venue.</p>
+                    <p>Thorough bag checks and metal detection to prevent weapons or prohibited items.</p>
                 </div>
             </div>
         </div>
@@ -251,7 +251,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Concert Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -268,7 +268,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Festival Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -285,7 +285,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Corporate Event Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -302,7 +302,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Sporting Event Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -319,7 +319,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Private Party Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -336,7 +336,7 @@ export default function EventSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="guard-type-card h-100">
                                         <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#ffc718'}}>
+                                            <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1E2247'}}>
                                                 <h5 className="mb-0">Community Event Security</h5>
                                             </div>
                                             <div className="card-body p-4">
@@ -409,23 +409,23 @@ export default function EventSecurityPage() {
                                         <div className="row">
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-primary" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        100+
-                                                    </div>
+                                                    <div className="stat-number text-blue" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    100+
+</div>
                                                     <div className="stat-label">Events Secured</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-success" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        24/7
-                                                    </div>
+                                                   <div className="stat-number text-dark" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    24/7
+</div>
                                                     <div className="stat-label">Availability</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-warning" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+                                                   <div className="stat-number text-warning" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
                                                         50+
                                                     </div>
                                                     <div className="stat-label">Trained Guards</div>
@@ -433,9 +433,9 @@ export default function EventSecurityPage() {
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-info" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        0
-                                                    </div>
+                                                    <div className="stat-number text-blue" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    0
+</div>
                                                     <div className="stat-label">Major Incidents</div>
                                                 </div>
                                             </div>
@@ -451,7 +451,7 @@ export default function EventSecurityPage() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <div className="cta-banner bg-primary text-white p-5 rounded text-center position-relative overflow-hidden">
+                                   <div className="cta-banner text-white p-5 rounded text-center position-relative overflow-hidden" style={{backgroundColor: '#1E2247'}}>
                                         <div className="cta-bg-shape position-absolute" style={{top: '0', right: '0', opacity: '0.1'}}>
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div>
@@ -466,10 +466,10 @@ export default function EventSecurityPage() {
                                             </div>
                                             <div className="col-lg-4 text-right">
                                                 <div className="cta-buttons">
-                                                    <a href="#" className="btn btn-light btn-lg mb-2 d-block">
+                                                    <a href="/get-quotation" className="btn btn-light btn-lg mb-2 d-block">
                                                         <i className="bi bi-file-earmark-text mr-2"></i>GET QUOTATION
                                                     </a>
-                                                    <a href="#" className="btn btn-outline-light btn-lg d-block">
+                                                    <a href="tel:1300731173" className="btn btn-outline-light btn-lg d-block">
                                                         <i className="bi bi-telephone mr-2"></i>CALL US NOW
                                                     </a>
                                                 </div>

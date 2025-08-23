@@ -4,8 +4,6 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 export default function K9SecurityPage() {
     const [loading, setLoading] = useState(false);
 
@@ -62,9 +60,9 @@ export default function K9SecurityPage() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/about/community.jpg" alt="K9 Security Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -113,89 +111,269 @@ export default function K9SecurityPage() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
+                                    <div className="heading2 no-margin-heading">
+                                        <small className="heading-top inner-heading-top">
                                             <img src="/assets/img/icons/hands.svg" alt="" />
                                             Get Started
                                         </small>
-                                        <h2>GET A FREE QUOTE</h2>
-                                        <p>K9 Security Services Melbourne</p>
+                                        <h2 style={{ color: "#000" }}>GET A FREE QUOTE</h2>
+                                        <p style={{ color: "#000" }}>K9 Security Services Melbourne</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="row justify-content-center">
-                                <div className="col-lg-8">
-                                <form
-                                className="quote-form bg-white p-5 rounded shadow"
-                                onSubmit={handleSubmit}
-                                noValidate
-                                >
-                                <div className="form-group mb-4">
-                                    <label htmlFor="name">Your Name</label>
-                                    <input type="text" className="form-control" id="name" name="name" placeholder="Enter your name" required />
-                                </div>
+                                <div className="col-lg-10">
+                                    <div className="row">
+                                        {/* Quote Form */}
+                                        <div className="col-lg-8">
+                                            <div className="quote-form-wrapper p-5 glassmorphism-card-with-bg">
+                                                <form
+                                                    className="quote-form"
+                                                    onSubmit={handleSubmit}
+                                                    noValidate
+                                                >
+                                                    {/* honeypot (spam trap) */}
+                                                    <input type="text" name="companyWebsite" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="email">Your Email</label>
-                                    <input type="email" className="form-control" id="email" name="email" placeholder="Enter your email" required />
-                                </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Name</label>
+                                                                <input 
+                                                                    type="text" 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="name" 
+                                                                    name="name" 
+                                                                    placeholder="Enter your full name" 
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Email</label>
+                                                                <input 
+                                                                    type="email" 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="email" 
+                                                                    name="email" 
+                                                                    placeholder="Enter your email" 
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="phone">Your Phone Number</label>
-                                    <input type="tel" className="form-control" id="phone" name="phone" placeholder="Enter your phone number" required />
-                                </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Phone Number</label>
+                                                                <input 
+                                                                    type="tel" 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="phone" 
+                                                                    name="phone" 
+                                                                    placeholder="Enter your phone number" 
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Service Date</label>
+                                                                <input 
+                                                                    type="date" 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="date" 
+                                                                    name="date" 
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="date">Service Date</label>
-                                    <input type="date" className="form-control" id="date" name="date" required />
-                                </div>
+                                                    <div className="row">
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Location</label>
+                                                                <select 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="location" 
+                                                                    name="location" 
+                                                                    required
+                                                                >
+                                                                    <option value="">Select a location</option>
+                                                                    <option value="Sydney">Sydney</option>
+                                                                    <option value="Melbourne">Melbourne</option>
+                                                                    <option value="Brisbane">Brisbane</option>
+                                                                    <option value="Perth">Perth</option>
+                                                                    <option value="Adelaide">Adelaide</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 mb-4">
+                                                            <div className="form-group">
+                                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Number of Attendees</label>
+                                                                <input 
+                                                                    type="number" 
+                                                                    className="form-control p-3 glassmorphism-input" 
+                                                                    id="attendees" 
+                                                                    name="attendees" 
+                                                                    placeholder="Estimated number of attendees" 
+                                                                    min="0" 
+                                                                    required 
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="location">Location</label>
-                                    <select className="form-control" id="location" name="location" required>
-                                    <option value="">Select a location</option>
-                                    <option value="Sydney">Sydney</option>
-                                    <option value="Melbourne">Melbourne</option>
-                                    <option value="Brisbane">Brisbane</option>
-                                    <option value="Perth">Perth</option>
-                                    <option value="Adelaide">Adelaide</option>
-                                    </select>
-                                </div>
+                                                    <div className="mb-4">
+                                                        <div className="form-group">
+                                                            <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Type of Service Required</label>
+                                                            <select 
+                                                                className="form-control p-3 glassmorphism-input" 
+                                                                id="service" 
+                                                                name="service" 
+                                                                required
+                                                            >
+                                                                <option value="">Select a service</option>
+                                                                <option value="Alarm Response Unit">Alarm Response Unit</option>
+                                                                <option value="Concierge Services">Concierge Services</option>
+                                                                <option value="Crowd Controller">Crowd Controller</option>
+                                                                <option value="Guard with Dog">Guard with Dog</option>
+                                                                <option value="K9 Response unit">K9 Response unit</option>
+                                                                <option value="Security Officers">Security Officers</option>
+                                                                <option value="Mobile Security Patrols">Mobile Security Patrols</option>
+                                                                <option value="Uniformed Guards">Uniformed Guards</option>
+                                                                <option value="Construction Site Security">Construction Site Security</option>
+                                                                <option value="Loss Prevention Officer">Loss Prevention Officer</option>
+                                                                <option value="Party Security">Party Security</option>
+                                                                <option value="Event Security">Event Security</option>
+                                                                <option value="COVID Marshal">COVID Marshal</option>
+                                                                <option value="Other Services">Other Services</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="attendees">Number of Attendees</label>
-                                    <input type="number" className="form-control" id="attendees" name="attendees" placeholder="Estimated number of attendees" min="0" required />
-                                </div>
+                                                    <div className="text-center">
+                                                        <button 
+                                                            type="submit" 
+                                                            disabled={loading} 
+                                                            className="btn btn-primary btn-lg px-5 py-3"
+                                                            style={{ 
+                                                                borderRadius: "10px", 
+                                                                fontSize: "18px", 
+                                                                fontWeight: "bold",
+                                                                backgroundColor: "#FDC51A",
+                                                                border: "none",
+                                                                color: "#1E2247"
+                                                            }}
+                                                            aria-busy={loading}
+                                                        >
+                                                            {loading ? "Sending..." : "GET FREE QUOTE"}
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
 
-                                <div className="form-group mb-4">
-                                    <label htmlFor="service">Type of Service Required:</label>
-                                    <select className="form-control" id="service" name="service" required>
-                                    <option value="">Select a service</option>
-                                    <option value="Alarm Response Unit">Alarm Response Unit</option>
-                                    <option value="Concierge Services">Concierge Services</option>
-                                    <option value="Crowd Controller">Crowd Controller</option>
-                                    <option value="Guard with Dog">Guard with Dog</option>
-                                    <option value="K9 Response unit">K9 Response unit</option>
-                                    <option value="Security Officers">Security Officers</option>
-                                    <option value="Mobile Security Patrols">Mobile Security Patrols</option>
-                                    <option value="Uniformed Guards">Uniformed Guards</option>
-                                    <option value="Construction Site Security">Construction Site Security</option>
-                                    <option value="Loss Prevention Officer">Loss Prevention Officer</option>
-                                    <option value="Party Security">Party Security</option>
-                                    <option value="Event Security">Event Security</option>
-                                    <option value="COVID Marshal">COVID Marshal</option>
-                                    <option value="Other Services">Other Services</option>
-                                    </select>
-                                </div>
+                                        {/* Quick Actions Sidebar */}
+                                        <div className="col-lg-4">
+                                            <div className="quick-actions-sidebar ml30">
+                                                {/* K9 Security Services Card */}
+                                                <div className="service-highlight-card p-4 mb-4" style={{backgroundColor: '#fff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', border: '3px solid #1E2247'}}>
+                                                    <div className="text-center">
+                                                        {/* <div className="service-icon mb-3">
+                                                            <img src="/assets/img/icons/service-14.png" alt="" style={{width: '60px', height: '60px'}} />
+                                                        </div> */}
+                                                        <h3 className="text-primary mb-3" style={{color: '#000'}}>K9 Security Services</h3>
+                                                        <p className="mb-4">Professional K9 security solutions across Melbourne and surrounding areas.</p>
+                                                        
+                                                        <div className="contact-quick-info">
+                                                            <div className="d-flex align-items-center justify-content-center mb-3 p-2" style={{backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+                                                                {/* <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} /> */}
+                                                                <span className="font-weight-bold">1300 73 11 73</span>
+                                                            </div>
+                                                            <div className="d-flex align-items-center justify-content-center mb-3 p-2" style={{backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
+                                                                {/* <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} /> */}
+                                                                <span className="small">admin@metroguards.com.au</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-                                <button type="submit" disabled={loading} className="btn btn-primary btn-block py-3" style={{ backgroundColor: '#243D31', border: 'none' }}>
-                                    {loading ? "Sending..." : "SEND"}
-                                </button>
-                                </form>
-
+                                                {/* Emergency Contact */}
+                                                <div className="emergency-contact mt-4 p-4 text-center" style={{backgroundColor: '#FDC51A', borderRadius: '15px', color: 'black'}}>
+                                                    <h5 className="mb-2">Emergency Security?</h5>
+                                                    <p className="mb-3 small">24/7 Emergency Response Available</p>
+                                                    <div className="d-flex align-items-center justify-content-center">
+                                                        {/* <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '20px', height: '20px', filter: 'brightness(0) invert(1)'}} /> */}
+                                                        <span className="font-weight-bold">Call Now: 1300 73 11 73</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <style jsx>{`
+                            .glassmorphism-card-with-bg {
+                                background: linear-gradient(135deg, rgba(30, 34, 71, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
+                                backdrop-filter: blur(20px);
+                                border-radius: 15px;
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                            }
+                            
+                            .glassmorphism-input {
+                                background: rgba(255, 255, 255, 0.1);
+                                backdrop-filter: blur(5px);
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                color: #fff;
+                                border-radius: 8px;
+                            }
+                            
+                            .glassmorphism-input::placeholder {
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                            
+                            .glassmorphism-input:focus {
+                                background: rgba(255, 255, 255, 0.15);
+                                border-color: rgba(255, 255, 255, 0.4);
+                                box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
+                                color: #fff;
+                            }
+
+                            select.glassmorphism-input {
+                                appearance: none;
+                                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                                background-repeat: no-repeat;
+                                background-position: right 1rem center;
+                                background-size: 1em;
+                            }
+
+                            /* Fix for dropdown options text color */
+                            select.glassmorphism-input option {
+                                background: #1E2247;
+                                color: #fff;
+                                padding: 10px;
+                            }
+
+                            /* For Firefox */
+                            select.glassmorphism-input option:checked {
+                                background: #FDC51A;
+                                color: #1E2247;
+                            }
+
+                            /* For Webkit browsers (Chrome, Safari) */
+                            select.glassmorphism-input option:checked,
+                            select.glassmorphism-input option:hover {
+                                background: #FDC51A !important;
+                                color: #1E2247 !important;
+                            }
+                        `}</style>
                     </div>
 
                     {/*===== Other Services Section =====*/}

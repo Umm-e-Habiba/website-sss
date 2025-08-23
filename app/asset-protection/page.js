@@ -28,10 +28,10 @@ export default function AssetProtectionPage() {
                         </p>
                         <div className="btn-area mt-4">
                             <a 
-                                href="#" 
+                                href="/get-quotation" 
                                 className="btn text-white px-4 py-3 me-3"
                                 style={{
-                                    backgroundColor: '#243D31',
+                                    backgroundColor: '#1E2247',
                                     border: 'none',
                                     borderRadius: '5px',
                                     textDecoration: 'none',
@@ -62,9 +62,9 @@ export default function AssetProtectionPage() {
             <div className="col-lg-6">
                 <div className="about-bg-main-img position-relative ml50">
                     <img src="/assets/img/bg/security img.webp" alt="Asset Protection Security Services" />
-                    <div className="corner-right-bottom-shape2 position-absolute">
+                    {/* <div className="corner-right-bottom-shape2 position-absolute">
                         <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@ export default function AssetProtectionPage() {
                                         </div>
                                         <h4 className="mb-3">Educational Institutions</h4>
                                         <p>Ensuring the safety of students, staff, and school property with comprehensive security measures tailored for educational environments.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                                        <a href="/private-security-guard" className="theme-btn3 mt-3">Learn More</a>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 mb-4">
@@ -104,7 +104,7 @@ export default function AssetProtectionPage() {
                                         </div>
                                         <h4 className="mb-3">Corporate Offices</h4>
                                         <p>Protecting your business assets, from sensitive documents to physical equipment, with advanced corporate security solutions.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                                        <a href="/building-security-guard" className="theme-btn3 mt-3">Learn More</a>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 mb-4">
@@ -114,7 +114,7 @@ export default function AssetProtectionPage() {
                                         </div>
                                         <h4 className="mb-3">Healthcare Facilities</h4>
                                         <p>Safeguarding the well-being of staff, patients, and medical equipment with specialized healthcare security protocols.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                                        <a href="/rapid-alarm-response-security" className="theme-btn3 mt-3">Learn More</a>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 mb-4">
@@ -124,7 +124,7 @@ export default function AssetProtectionPage() {
                                         </div>
                                         <h4 className="mb-3">Shopping Centers</h4>
                                         <p>Ensuring a safe shopping environment for customers and securing high-value merchandise with retail security expertise.</p>
-                                        <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                                        <a href="retail-security-guard" className="theme-btn3 mt-3">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -214,22 +214,22 @@ export default function AssetProtectionPage() {
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="reason-block d-flex align-items-start p-4 bg-white rounded shadow">
                                         <div className="reason-icon mr-3 flex-shrink-0">
-                                            <div className="icon-circle bg-success text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
+                                            {/* <div className="icon-circle bg-success text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
                                                 <i className="bi bi-award" style={{fontSize: '24px'}}></i>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className="reason-content">
                                             <h5 className="mb-2">Decades of Experience</h5>
-                                            <p className="mb-0">Our trained security guards bring years of experience in delivering top-tier security services across Melbourne. With a history of success, our security team provides reliable asset protection you can trust.</p>
+                                            <p className="mb-0">Our trained security guards bring years of experience in delivering top-tier security services across Melbourne. With a history of success, our security team provides reliable asset protection.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="reason-block d-flex align-items-start p-4 bg-white rounded shadow">
                                         <div className="reason-icon mr-3 flex-shrink-0">
-                                            <div className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
+                                            {/* <div className="icon-circle bg-primary text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
                                                 <i className="bi bi-gear" style={{fontSize: '24px'}}></i>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className="reason-content">
                                             <h5 className="mb-2">Customized Security Plans</h5>
@@ -240,9 +240,9 @@ export default function AssetProtectionPage() {
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="reason-block d-flex align-items-start p-4 bg-white rounded shadow">
                                         <div className="reason-icon mr-3 flex-shrink-0">
-                                            <div className="icon-circle bg-warning text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
+                                            {/* <div className="icon-circle bg-warning text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
                                                 <i className="bi bi-people" style={{fontSize: '24px'}}></i>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className="reason-content">
                                             <h5 className="mb-2">Skilled Team</h5>
@@ -253,9 +253,9 @@ export default function AssetProtectionPage() {
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="reason-block d-flex align-items-start p-4 bg-white rounded shadow">
                                         <div className="reason-icon mr-3 flex-shrink-0">
-                                            <div className="icon-circle bg-info text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
+                                            {/* <div className="icon-circle bg-info text-white d-flex align-items-center justify-content-center" style={{width: '50px', height: '50px', borderRadius: '50%'}}>
                                                 <i className="bi bi-arrow-repeat" style={{fontSize: '24px'}}></i>
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div className="reason-content">
                                             <h5 className="mb-2">Adaptive Security Solutions</h5>
@@ -316,17 +316,17 @@ export default function AssetProtectionPage() {
                                         <div className="row">
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-primary" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        40+
-                                                    </div>
+                                                     <div className="stat-number text-navy" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    40+
+</div>
                                                     <div className="stat-label">Years Experience</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-success" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        24/7
-                                                    </div>
+                                                     <div className="stat-number text-dark" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    24/7
+</div>
                                                     <div className="stat-label">Protection Service</div>
                                                 </div>
                                             </div>
@@ -340,9 +340,9 @@ export default function AssetProtectionPage() {
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-info" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        500+
-                                                    </div>
+                                                    <div className="stat-number text-navy" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    500+
+</div>
                                                     <div className="stat-label">Protected Assets</div>
                                                 </div>
                                             </div>
@@ -372,7 +372,7 @@ export default function AssetProtectionPage() {
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
                     <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1e2247'}}>
                             <h5 className="mb-0">Physical Assets</h5>
                         </div>
                         <div className="card-body p-4">
@@ -389,7 +389,7 @@ export default function AssetProtectionPage() {
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
                     <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1e2247'}}>
                             <h5 className="mb-0">Digital Assets</h5>
                         </div>
                         <div className="card-body p-4">
@@ -406,7 +406,7 @@ export default function AssetProtectionPage() {
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="guard-type-card h-100">
                     <div className="card bg-white shadow-lg border-0 h-100">
-                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#243D31'}}>
+                        <div className="card-header text-white text-center py-3" style={{backgroundColor: '#1e2247'}}>
                             <h5 className="mb-0">Intangible Assets</h5>
                         </div>
                         <div className="card-body p-4">
@@ -467,7 +467,11 @@ export default function AssetProtectionPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="legal-image ml50">
-                                        <img src="/assets/img/about/asset protection.jpg" alt="Legal Compliance" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/assets.jpg" alt="Legal Compliance" className="img-fluid rounded shadow-lg" style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }}/>
                                     </div>
                                 </div>
                             </div>
@@ -493,7 +497,7 @@ export default function AssetProtectionPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="approach-step text-center p-4 bg-white shadow rounded h-100">
                                         <div className="step-number mb-3">
-                                            <div className="number-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
+                                            <div className="number-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', color:'#000', fontWeight: 'bold'}}>
                                                 1
                                             </div>
                                         </div>
@@ -591,7 +595,7 @@ export default function AssetProtectionPage() {
                                             <div className="form-group mb-3">
                                                 <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
                                             </div>
-                                            <button type="submit" className="btn btn-primary w-100 py-3" style={{backgroundColor: '#243D31', border: 'none'}}>
+                                            <button type="submit" className="btn btn-primary w-100 py-3" style={{backgroundColor: '#1E2247', border: 'none', color: 'white'}}>
                                                 SUBMIT REQUEST <i className="bi bi-arrow-right ms-2"></i>
                                             </button>
                                         </form>
@@ -613,10 +617,10 @@ export default function AssetProtectionPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

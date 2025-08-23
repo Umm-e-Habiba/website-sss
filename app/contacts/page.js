@@ -69,9 +69,9 @@ export default function Page() {
                 <div className="col-lg-6">
                   <div className="about-bg-main-img position-relative mr50">
                     <img src="/assets/img/about/about22.png" alt="" />
-                    <div className="corner-right-bottom-shape2 position-absolute">
+                    {/* <div className="corner-right-bottom-shape2 position-absolute">
                       <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="col-lg-6">
@@ -193,21 +193,21 @@ export default function Page() {
                 <div className="col-lg-4">
                   <div className="quick-actions-sidebar ml30">
                     {/* Metropolitan Guard Services Card */}
-                    <div className="service-highlight-card p-4 mb-4" style={{backgroundColor: '#fff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', border: '3px solid #007bff'}}>
+                    <div className="service-highlight-card p-4 mb-4" style={{backgroundColor: '#fff', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', border: '3px solid #1E2247'}}>
                       <div className="text-center">
-                        <div className="service-icon mb-3">
+                        {/* <div className="service-icon mb-3">
                           <img src="/assets/img/icons/service-14.png" alt="" style={{width: '60px', height: '60px'}} />
-                        </div>
+                        </div> */}
                         <h3 className="text-primary mb-3">Metropolitan Guard Services</h3>
                         <p className="mb-4">Professional security solutions across Melbourne and surrounding areas.</p>
                         
                         <div className="contact-quick-info">
                           <div className="d-flex align-items-center justify-content-center mb-3 p-2" style={{backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
-                            <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                            {/* <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} /> */}
                             <span className="font-weight-bold">1300 73 11 73</span>
                           </div>
                           <div className="d-flex align-items-center justify-content-center mb-3 p-2" style={{backgroundColor: '#f8f9fa', borderRadius: '8px'}}>
-                            <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} />
+                            {/* <img src="/assets/img/icons/service-9.png" alt="" className="me-2" style={{width: '24px', height: '24px'}} /> */}
                             <span className="small">admin@metroguards.com.au</span>
                           </div>
                         </div>
@@ -215,11 +215,11 @@ export default function Page() {
                     </div>
 
                     {/* Emergency Contact */}
-                    <div className="emergency-contact mt-4 p-4 text-center" style={{backgroundColor: '#dc3545', borderRadius: '15px', color: 'white'}}>
-                      <h5 className="mb-2">🚨 Emergency Security?</h5>
+                    <div className="emergency-contact mt-4 p-4 text-center" style={{backgroundColor: '#939393', borderRadius: '15px', color: 'black'}}>
+                      <h5 className="mb-2">Emergency Security?</h5>
                       <p className="mb-3 small">24/7 Emergency Response Available</p>
                       <div className="d-flex align-items-center justify-content-center">
-                        <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '20px', height: '20px', filter: 'brightness(0) invert(1)'}} />
+                        {/* <img src="/assets/img/icons/service-16.png" alt="" className="me-2" style={{width: '20px', height: '20px', filter: 'brightness(0) invert(1)'}} /> */}
                         <span className="font-weight-bold">Call Now: 1300 73 11 73</span>
                       </div>
                     </div>
@@ -231,7 +231,7 @@ export default function Page() {
 
           <style jsx>{`
             .glassmorphism-card-with-bg {
-              background: linear-gradient(135deg, rgba(30, 34, 71, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
+              background: linear-gradient(135deg, rgba(84, 84, 100, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
               backdrop-filter: blur(20px);
               border-radius: 15px;
               border: 1px solid rgba(255, 255, 255, 0.2);

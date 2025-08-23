@@ -25,10 +25,10 @@ export default function AlarmResponsePage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function AlarmResponsePage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/alarm-response.webp" alt="Alarm Response Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/emergency.webp" alt="Alarm Response Services" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">24/7 Alarm Monitoring</h4>
                                         <p className="text-center">Constant surveillance with immediate alert assessment when alarms are triggered</p>
@@ -96,7 +96,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">On-Site Security Response</h4>
                                         <p className="text-center">Immediate dispatch of trained officers to assess and neutralize threats</p>
@@ -105,7 +105,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-exclamation-triangle" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-exclamation-triangle" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Emergency Alarm Response</h4>
                                         <p className="text-center">Rapid response to break-ins, fires, and medical emergencies with trained personnel</p>
@@ -114,7 +114,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-filter-circle" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-filter-circle" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">False Alarm Management</h4>
                                         <p className="text-center">Assessment of alarm activations with thorough checks even for false alarms</p>
@@ -123,7 +123,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-car-front" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-car-front" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Mobile Patrols Integration</h4>
                                         <p className="text-center">Enhanced response with mobile patrol units stationed across Melbourne</p>
@@ -132,7 +132,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Key Holding Services</h4>
                                         <p className="text-center">Secure key access for faster after-hours emergency responses</p>
@@ -232,7 +232,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Experienced Personnel</h4>
                                         <p className="text-center">Extensively trained team handles all situations calmly and efficiently</p>
@@ -241,7 +241,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-cpu" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-cpu" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Advanced Technology</h4>
                                         <p className="text-center">Cutting-edge monitoring systems with real-time updates</p>
@@ -259,7 +259,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-gear" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-gear" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Customizable Solutions</h4>
                                         <p className="text-center">Tailored plans for residential or commercial properties</p>
@@ -268,7 +268,7 @@ export default function AlarmResponsePage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-geo-alt" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-geo-alt" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Local Expertise</h4>
                                         <p className="text-center">Melbourne-based with knowledge of local regulations and challenges</p>
@@ -297,7 +297,7 @@ export default function AlarmResponsePage() {
                                     <div className="special-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="special-header d-flex align-items-center mb-3">
                                             <div className="special-icon mr-3">
-                                                <i className="bi bi-fire" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-fire" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Fire Alarm Response</h4>
                                         </div>
@@ -308,7 +308,7 @@ export default function AlarmResponsePage() {
                                     <div className="special-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="special-header d-flex align-items-center mb-3">
                                             <div className="special-icon mr-3">
-                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Commercial Alarm Response</h4>
                                         </div>
@@ -319,7 +319,7 @@ export default function AlarmResponsePage() {
                                     <div className="special-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="special-header d-flex align-items-center mb-3">
                                             <div className="special-icon mr-3">
-                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Residential Alarm Response</h4>
                                         </div>
@@ -330,7 +330,7 @@ export default function AlarmResponsePage() {
                                     <div className="special-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="special-header d-flex align-items-center mb-3">
                                             <div className="special-icon mr-3">
-                                                <i className="bi bi-file-text" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-file-text" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Comprehensive Reporting</h4>
                                         </div>
@@ -396,10 +396,10 @@ export default function AlarmResponsePage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

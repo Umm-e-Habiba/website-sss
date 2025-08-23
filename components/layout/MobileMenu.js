@@ -38,7 +38,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                 </Link>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                                <Link href="tel:1300 73 11 73" style={{
+                                <Link href="/get-quotation" style={{
                                     backgroundColor: '#FDC51A',
                                     color: '#000',
                                     textDecoration: 'none',
@@ -51,8 +51,8 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                     gap: '6px',
                                     transition: 'background-color 0.3s ease'
                                 }}>
-                                    <i className="fa-solid fa-phone" style={{ fontSize: '12px' }} />
-                                    Call Now
+                                    {/* <i className="fa-solid fa-phone" style={{ fontSize: '12px' }} /> */}
+                                    Get Quotation
                                 </Link>
                                 <div className="mobile-nav-icon" onClick={handleMobileMenu} style={{
                                     cursor: 'pointer',

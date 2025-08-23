@@ -30,10 +30,10 @@ export default function AdhocSecurityPage() {
                         </p>
                         <div className="btn-area mt-4">
                             <a 
-                                href="#" 
+                                href="/get-quotation" 
                                 className="btn text-white px-4 py-3 me-3"
                                 style={{
-                                    backgroundColor: '#243D31',
+                                    backgroundColor: '#1E2247',
                                     border: 'none',
                                     borderRadius: '5px',
                                     textDecoration: 'none',
@@ -44,7 +44,7 @@ export default function AdhocSecurityPage() {
                                 GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
                             </a>
                             <a 
-                                href="#" 
+                                href="tel:1300731173" 
                                 className="btn text-dark px-4 py-3"
                                 style={{
                                     backgroundColor: '#FDC24C',
@@ -64,9 +64,9 @@ export default function AdhocSecurityPage() {
             <div className="col-lg-6">
                 <div className="about-bg-main-img position-relative ml50">
                     <img src="/assets/img/bg/security img.webp" alt="Adhoc Security Services" />
-                    <div className="corner-right-bottom-shape2 position-absolute">
+                    {/* <div className="corner-right-bottom-shape2 position-absolute">
                         <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ export default function AdhocSecurityPage() {
                     </div>
                     <h4 className="mb-3">Security Patrols</h4>
                     <p>Our trained security guards will conduct regular patrols of your property to deter criminal activity and ensure that your assets are protected at all times.</p>
-                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                    <a href="/mobile-patrol-security" className="theme-btn3 mt-3">Learn More</a>
                 </div>
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
@@ -109,7 +109,7 @@ export default function AdhocSecurityPage() {
                     </div>
                     <h4 className="mb-3">Access Control</h4>
                     <p>We help you control who has access to your property or event, using various methods including ID checks and biometric scanning systems.</p>
-                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                    <a href="/retail-security-guard" className="theme-btn3 mt-3">Learn More</a>
                 </div>
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
@@ -121,7 +121,7 @@ export default function AdhocSecurityPage() {
                     </div>
                     <h4 className="mb-3">Event Security</h4>
                     <p>From concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely.</p>
-                    <a href="#" className="theme-btn3 mt-3">Learn More</a>
+                    <a href="/event-security-guards" className="theme-btn3 mt-3">Learn More</a>
                 </div>
             </div>
         </div>
@@ -332,17 +332,17 @@ export default function AdhocSecurityPage() {
                                         <div className="row">
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-primary" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        &lt;2
-                                                    </div>
+                                                     <div className="stat-number text-navy" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    less than 2
+</div>
                                                     <div className="stat-label">Hours Response Time</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-success" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        24/7
-                                                    </div>
+                                                     <div className="stat-number text-dark" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    24/7
+</div>
                                                     <div className="stat-label">Available Service</div>
                                                 </div>
                                             </div>
@@ -356,9 +356,9 @@ export default function AdhocSecurityPage() {
                                             </div>
                                             <div className="col-6 mb-4">
                                                 <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-info" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        50+
-                                                    </div>
+                                                    <div className="stat-number text-navy" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+    50+
+</div>
                                                     <div className="stat-label">Years Experience</div>
                                                 </div>
                                             </div>
@@ -528,7 +528,7 @@ export default function AdhocSecurityPage() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <div className="cta-banner bg-primary text-white p-5 rounded text-center position-relative overflow-hidden">
+                                    <div className="cta-banner text-white p-5 rounded text-center position-relative overflow-hidden" style={{backgroundColor: '#1E2247'}}>
                                         <div className="cta-bg-shape position-absolute" style={{top: '0', right: '0', opacity: '0.1'}}>
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div>
@@ -543,10 +543,10 @@ export default function AdhocSecurityPage() {
                                             </div>
                                             <div className="col-lg-4 text-right">
                                                 <div className="cta-buttons">
-                                                    <a href="#" className="btn btn-light btn-lg mb-2 d-block">
+                                                    <a href="/get-quotation" className="btn btn-light btn-lg mb-2 d-block">
                                                         <i className="bi bi-file-earmark-text mr-2"></i>GET QUOTATION
                                                     </a>
-                                                    <a href="#" className="btn btn-outline-light btn-lg d-block">
+                                                    <a href="tel:1300731173" className="btn btn-outline-light btn-lg d-block">
                                                         <i className="bi bi-telephone mr-2"></i>CALL US NOW
                                                     </a>
                                                 </div>

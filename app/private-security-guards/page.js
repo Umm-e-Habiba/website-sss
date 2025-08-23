@@ -25,10 +25,10 @@ export default function PrivateSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,14 @@ export default function PrivateSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/security-guards.webp" alt="Private Security Guards in Melbourne" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/blog/private guard.jpg" alt="Private Security Guards in Melbourne"  style={{ 
+            width: '100%', 
+            height: '400px', 
+            objectFit: 'cover' 
+        }}/>
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +164,7 @@ export default function PrivateSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="training-image mr50">
-                                        <img src="/assets/img/bg/security-training.webp" alt="Security Guard Training" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/tranning.jpg" alt="Security Guard Training" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -281,7 +285,7 @@ export default function PrivateSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="hiring-image ml50">
-                                        <img src="/assets/img/bg/hiring-security.webp" alt="Hiring Security Guards" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/blog/private 3.jpg" alt="Hiring Security Guards" className="img-fluid rounded shadow-lg" />
                                         <div className="hiring-stats bg-white p-4 rounded shadow-lg mt-4">
                                             <h5 className="mb-3 text-center">Why Choose Metro Guards</h5>
                                             <ul className="list-unstyled">
@@ -435,10 +439,10 @@ export default function PrivateSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

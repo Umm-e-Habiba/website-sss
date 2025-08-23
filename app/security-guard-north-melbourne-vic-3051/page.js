@@ -123,9 +123,9 @@ export default function Page() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -211,9 +211,9 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="shape-007">
+                        {/* <div className="shape-007">
                             <img src="/assets/img/shapes/shape007.svg" alt="" />
-                        </div>
+                        </div> */}
                     </div>
 
                     {/*===== Why Metro Guards is Trusted Across North Melbourne =====*/}

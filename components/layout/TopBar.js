@@ -29,9 +29,9 @@ export default function TopBar() {
             <a href="https://www.facebook.com/metroguards?_rdc=1&_rdr#" aria-label="Facebook" className="social-icon text-white text-decoration-none">
               <i className="fa-brands fa-facebook-f"></i>
             </a>
-            <a href="https://x.com/metroguards" aria-label="Twitter" className="social-icon text-white text-decoration-none">
+            {/* <a href="https://x.com/metroguards" aria-label="Twitter" className="social-icon text-white text-decoration-none">
               <i className="fa-brands fa-x-twitter"></i>
-            </a>
+            </a> */}
             <a href="https://www.instagram.com/metropolitanguard/" aria-label="Instagram" className="social-icon text-white text-decoration-none">
               <i className="fa-brands fa-instagram"></i>
             </a>

@@ -25,10 +25,10 @@ export default function PrivateSecurityPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function PrivateSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/security-guards.webp" alt="Private Security Guards in Melbourne" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/about/about img.webp" alt="Private Security Guards in Melbourne" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -74,12 +74,12 @@ export default function PrivateSecurityPage() {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="takeaways-box bg-white p-4 rounded shadow-lg">
-                                        <h3 className="mb-4 text-center" style={{color: '#243D31'}}>Key Takeaways</h3>
+                                        <h3 className="mb-4 text-center" style={{color: '#1E2247'}}>Key Takeaways</h3>
                                         <div className="row">
                                             <div className="col-md-4 mb-4">
                                                 <div className="takeaway-item p-3 h-100">
                                                     <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <h5 className="text-center">Professional & Trained Officers</h5>
                                                     <p className="text-center">Metro Guards provide highly professional and extensively trained security guards to ensure safety and security.</p>
@@ -88,7 +88,7 @@ export default function PrivateSecurityPage() {
                                             <div className="col-md-4 mb-4">
                                                 <div className="takeaway-item p-3 h-100">
                                                     <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-gear" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-gear" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <h5 className="text-center">Customized Security Solutions</h5>
                                                     <p className="text-center">Personalized security solutions tailored to each client's specific needs for complete protection.</p>
@@ -97,7 +97,7 @@ export default function PrivateSecurityPage() {
                                             <div className="col-md-4 mb-4">
                                                 <div className="takeaway-item p-3 h-100">
                                                     <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-clock" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                        <i className="bi bi-clock" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                                     </div>
                                                     <h5 className="text-center">24/7 Protection</h5>
                                                     <p className="text-center">Round-the-clock availability for uninterrupted security services when you need them most.</p>
@@ -128,11 +128,11 @@ export default function PrivateSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="staff-escort-content mr50">
-                                        <h3 className="mb-3" style={{color: '#243D31'}}>What Are Staff Escorts?</h3>
+                                        <h3 className="mb-3" style={{color: '#1E2247'}}>What Are Staff Escorts?</h3>
                                         <p>Staff escorts are security personnel who are responsible for providing premium security at work stations and shelters, while staff escorts provide protection to employees and visitors.</p>
                                         <p>Staff escorts work primarily in customer service roles. They protect employees from physical threats and help them interact with passengers. They also help manage traffic on the transit system's platforms.</p>
                                         
-                                        <h3 className="mb-3 mt-4" style={{color: '#243D31'}}>Why Choose Metro Guards for Staff Escort Services?</h3>
+                                        <h3 className="mb-3 mt-4" style={{color: '#1E2247'}}>Why Choose Metro Guards for Staff Escort Services?</h3>
                                         <p>Metro guards' staff escort security services in Melbourne is a great way to add security to your event. They are professional security personnel who patrol the business site. You can hire them for events, like conventions and trade shows.</p>
                                         <div className="features-list mt-4">
                                             <div className="feature-item d-flex align-items-start mb-3">
@@ -222,7 +222,7 @@ export default function PrivateSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shield" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Secure Staff Escort</h4>
                                         <p className="text-center">Highly trained personnel ensure that your staff members are protected from potential risks and security threats.</p>
@@ -231,7 +231,7 @@ export default function PrivateSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Safety Personnel for Staff</h4>
                                         <p className="text-center">Dedicated professionals who provide continuous vigilance and support to ensure the well-being of your employees.</p>
@@ -240,7 +240,7 @@ export default function PrivateSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-briefcase" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-briefcase" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">Workforce Escort Security</h4>
                                         <p className="text-center">Security personnel accompany and protect your workforce during critical situations or in high-risk areas.</p>
@@ -249,7 +249,7 @@ export default function PrivateSecurityPage() {
                                 <div className="col-lg-4 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h4 className="text-center mb-3">On-site Staff Safety</h4>
                                         <p className="text-center">Trained professionals assess risks and implement measures to ensure your staff can work in a secure environment.</p>
@@ -265,7 +265,7 @@ export default function PrivateSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="officer-image mr50">
-                                        <img src="/assets/img/bg/security-officer.webp" alt="Security Officer" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/case-study/s7.webp" alt="Security Officer" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -365,7 +365,7 @@ export default function PrivateSecurityPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="training-image mr50">
-                                        <img src="/assets/img/bg/security-training.webp" alt="Security Guard Training" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/case-study/s1.webp" alt="Security Guard Training" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -424,10 +424,10 @@ export default function PrivateSecurityPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',

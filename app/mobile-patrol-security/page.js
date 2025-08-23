@@ -25,10 +25,10 @@ export default function MobilePatrolPage() {
                                             </p>
                                             <div className="btn-area mt-4">
                                                 <a 
-                                                    href="#" 
+                                                    href="/get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -58,10 +58,10 @@ export default function MobilePatrolPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/bg/mobile-patrol.webp" alt="Mobile Patrol Security Services" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
+                                        <img src="/assets/img/case-study/s7.webp" alt="Mobile Patrol Security Services" />
+                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ export default function MobilePatrolPage() {
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="coverage-image mr50">
-                                        <img src="/assets/img/bg/melbourne-map.webp" alt="Melbourne Coverage" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/case-study/s6.webp" alt="Melbourne Coverage" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -285,7 +285,7 @@ export default function MobilePatrolPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="cost-image ml50">
-                                        <img src="/assets/img/bg/cost-effective.webp" alt="Cost Effective Security" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/case-study/s5.webp" alt="Cost Effective Security" className="img-fluid rounded shadow-lg" />
                                     </div>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function MobilePatrolPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Opening & Locking</h5>
                                         <p className="text-center">Ensuring your property is properly secured at the start and end of each day.</p>
@@ -385,7 +385,7 @@ export default function MobilePatrolPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield-lock" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-shield-lock" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Perimeter Patrols</h5>
                                         <p className="text-center">Foot inspections around your building to ensure all areas are secure.</p>
@@ -394,7 +394,7 @@ export default function MobilePatrolPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Alarm Response</h5>
                                         <p className="text-center">Immediate investigation of triggered security alarms.</p>
@@ -403,7 +403,7 @@ export default function MobilePatrolPage() {
                                 <div className="col-lg-3 col-md-6 mb-4">
                                     <div className="service-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                         </div>
                                         <h5 className="text-center mb-3">Staff Escorts</h5>
                                         <p className="text-center">Ensuring safety of employees during late or night shifts.</p>
@@ -432,7 +432,7 @@ export default function MobilePatrolPage() {
                                     <div className="specialized-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="card-header d-flex align-items-center mb-3">
                                             <div className="header-icon mr-3">
-                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Residential Area Patrols</h4>
                                         </div>
@@ -444,7 +444,7 @@ export default function MobilePatrolPage() {
                                     <div className="specialized-card bg-white p-4 rounded shadow-lg h-100">
                                         <div className="card-header d-flex align-items-center mb-3">
                                             <div className="header-icon mr-3">
-                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
                                             </div>
                                             <h4 className="mb-0">Construction Site Patrols</h4>
                                         </div>
@@ -477,7 +477,7 @@ export default function MobilePatrolPage() {
                                             <div className="col-lg-6">
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-award" style={{fontSize: '24px', color: '#243D31'}}></i>
+                                                        <i className="bi bi-award" style={{fontSize: '24px', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5>Years of Experience</h5>
@@ -486,7 +486,7 @@ export default function MobilePatrolPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-lightning" style={{fontSize: '24px', color: '#243D31'}}></i>
+                                                        <i className="bi bi-lightning" style={{fontSize: '24px', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5>Quick Response</h5>
@@ -497,7 +497,7 @@ export default function MobilePatrolPage() {
                                             <div className="col-lg-6">
                                                 <div className="feature-item d-flex align-items-start mb-4">
                                                     <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-gear" style={{fontSize: '24px', color: '#243D31'}}></i>
+                                                        <i className="bi bi-gear" style={{fontSize: '24px', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5>Customized Solutions</h5>
@@ -506,7 +506,7 @@ export default function MobilePatrolPage() {
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start">
                                                     <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-shield-check" style={{fontSize: '24px', color: '#243D31'}}></i>
+                                                        <i className="bi bi-shield-check" style={{fontSize: '24px', color: '#1E2247'}}></i>
                                                     </div>
                                                     <div>
                                                         <h5>24/7 Monitoring</h5>
@@ -533,10 +533,10 @@ export default function MobilePatrolPage() {
                                         </p>
                                         <div className="btn-area mt-4">
                                             <a 
-                                                href="#" 
+                                                href="/get-quotation" 
                                                 className="btn text-white px-4 py-3 me-3"
                                                 style={{
-                                                    backgroundColor: '#243D31',
+                                                    backgroundColor: '#1E2247',
                                                     border: 'none',
                                                     borderRadius: '5px',
                                                     textDecoration: 'none',
