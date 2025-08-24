@@ -58,7 +58,7 @@ export default function BuildingSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/blog/building-guard.jpeg" alt="Building Site Security Guards" />
+                                        <img src="/assets/img/blog/building-guard.jpg" alt="Building Site Security Guards" />
                                         {/* <div className="corner-right-bottom-shape2 position-absolute">
                                             <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
                                         </div> */}

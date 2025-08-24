@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ABOUT CONSULTIA">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="FAQs">
                 <div className="faqs-area section-padding inner-font-1 inner-faq-1">
                     <div className="container">
                         <div className="row justify-content-center text-center">
@@ -22,7 +22,7 @@ export default function Page() {
                                         by obtaining the lowest possible assessed value for your commercial or residential properties.
                                     </p>
                                 </div>
-                                <div className="faqs d-flex justify-content-center">
+                                <div className="faqs justify-content-center">
                                     <Faq1 />
                                 </div>
                             </div>

@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout"
 export default function PrivateSecurityPage() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="TOP PRIVATE SECURITY GUARDS IN MELBOURNE">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Staff Escort Security ">
                 <div>
                     {/*===== Hero Section =====*/}
                     <div className="about-inner bg-28 section-padding">
@@ -167,7 +167,7 @@ export default function PrivateSecurityPage() {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="staff-escort-image ml50">
-                                        <img src="/assets/img/bg/staff-escort.webp" alt="Staff Escort Services" className="img-fluid rounded shadow-lg" />
+                                        <img src="/assets/img/bg/security img.webp" alt="Staff Escort Services" className="img-fluid rounded shadow-lg" />
                                         <div className="process-box bg-white p-4 rounded shadow-lg mt-4">
                                             <h4 className="mb-3" style={{color: '#243D31'}}>The Hiring Process</h4>
                                             <p>When you are ready to hire a security guard from escort security company in Melbourne, it is important to consider what you need and don't need.</p>

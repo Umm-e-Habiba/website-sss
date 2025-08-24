@@ -13,8 +13,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true }); // silently ignore bots
     }
 
-    const firstName  = String(form.get("firstName") || "");
-    const lastName   = String(form.get("lastName") || "");
+    const firstName  = String(form.get("name") || "");
+    
     const email      = String(form.get("email") || "");
     const phone      = String(form.get("phone") || "");
     const serviceDate= String(form.get("serviceDate") || "");
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
     const services   = form.getAll("service[]").map(v => String(v));
     const industries = form.getAll("industry[]").map(v => String(v));
 
-    if (!firstName || !lastName || !email) {
+    if (!firstName ||  !email) {
       return NextResponse.json({ success: false, error: "Missing required fields" }, { status: 400 });
     }
 
@@ -37,10 +37,10 @@ export async function POST(req: Request) {
       from: "Metro Guards <onboarding@resend.dev>",
       to: process.env.CONTACT_TO_EMAIL!,            // e.g. ummehabiba989@gmail.com
       replyTo: email,                                // <- correct key
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      subject: `New Contact Form Submission from ${firstName} `,
       html: `
         <h2>New Quotation Request</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Name:</strong> ${firstName} </p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || "—"}</p>
         <p><strong>Service Date:</strong> ${serviceDate || "—"}</p>

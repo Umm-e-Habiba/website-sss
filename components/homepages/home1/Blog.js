@@ -10,7 +10,7 @@ export default function Blog() {
                         <div className="col-md-5 m-auto">
                             <div className="heading2 text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Need a quote? Get in Touch</small>
-                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="heilight-left">More</span> about Metro Gaurds</h2>
+                                <h2 data-aos="fade-up" data-aos-duration={800}><span className="">More</span> about Metro Gaurds</h2>
                                 {/* <p>Workplace health and safety is the foremost priority at Metropolitan Guards Security. Through a meticulously designed way of induction, preparation, and assessment, we make certain that every personnel at Metropolitan Guards Security is aware of their rights and duties regarding occupational health and safety and environmental hazards and protection. </p> */}
                             </div>
                         </div>
@@ -19,7 +19,7 @@ export default function Blog() {
                         <div className="col-lg-4" data-aos="fade-up" data-aos-duration={600}>
                             <div className="single-blog blog-md ">
                                 <div className="blog-img">
-                                    <img src="/assets/img/blog/beyond blue.jpg" alt="" />
+                                    <img src="/assets/img/blog/img2.png" alt="" />
                                 </div>
                                 <div className="blog-contents">
                                     <ul className="blog-tags">
@@ -50,7 +50,7 @@ export default function Blog() {
                         <div className="col-lg-4" data-aos="fade-up" data-aos-duration={1000}>
                             <div className="single-blog blog-md">
                                 <div className="blog-img">
-                                    <img src="/assets/img/blogs/security.png" alt="" />
+                                    <img src="/assets/img/blog/building-guard.jpg" alt="" />
                                 </div>
                                 <div className="blog-contents">
                                     <ul className="blog-tags">

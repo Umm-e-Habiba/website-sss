@@ -175,7 +175,7 @@ export default function Page() {
                             borderRadius: "10px", 
                             fontSize: "18px", 
                             fontWeight: "bold",
-                            backgroundColor: "#FDC51A",
+                            backgroundColor: "#fdc51a",
                             border: "none",
                             color: "#1E2247"
                           }}
@@ -231,7 +231,7 @@ export default function Page() {
 
           <style jsx>{`
             .glassmorphism-card-with-bg {
-              background: linear-gradient(135deg, rgba(84, 84, 100, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
+              background:linear-gradient(330deg, rgb(84, 84, 100) 0%, rgb(15,18,41)100%);
               backdrop-filter: blur(20px);
               border-radius: 15px;
               border: 1px solid rgba(255, 255, 255, 0.2);
@@ -274,14 +274,14 @@ export default function Page() {
 
             /* For Firefox */
             select.glassmorphism-input option:checked {
-              background: #FDC51A;
+              background: #fdc51a;
               color: #1E2247;
             }
 
             /* For Webkit browsers (Chrome, Safari) */
             select.glassmorphism-input option:checked,
             select.glassmorphism-input option:hover {
-              background: #FDC51A !important;
+              background: #fdc51a !important;
               color: #1E2247 !important;
             }
           `}</style>

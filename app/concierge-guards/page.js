@@ -33,7 +33,7 @@ export default function ConciergeSecurityPage() {
                                                     href="get-quotation" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -607,7 +607,7 @@ export default function ConciergeSecurityPage() {
                                     <i className="bi bi-file-earmark-text mr-2"></i>GET QUOTATION
                                 </a>
                                 <a href="tel:1300731173" className="btn btn-outline-light btn-lg d-block">
-                                    <i className="bi bi-telephone mr-2"></i>1300 73 11 73
+                                    <i className="bi bi-telephone mr-2"></i>Call Now
                                 </a>
                             </div>
                         </div>

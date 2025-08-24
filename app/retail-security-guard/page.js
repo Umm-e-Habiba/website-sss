@@ -116,7 +116,7 @@ export default function RetailSecurityPage() {
                                     <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
                                         <div className="system-icon-wrapper mb-4">
                                             <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E22471'}}>
+                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
                                                 <i className="bi bi-shield-check text-white" style={{fontSize: '2.5rem'}}></i>
                                             </div>
                                         </div>

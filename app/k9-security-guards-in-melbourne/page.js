@@ -320,7 +320,7 @@ export default function K9SecurityPage() {
 
                         <style jsx>{`
                             .glassmorphism-card-with-bg {
-                                background: linear-gradient(135deg, rgba(30, 34, 71, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
+                                background:linear-gradient(330deg, rgb(84, 84, 100) 0%, rgb(15,18,41)100%);
                                 backdrop-filter: blur(20px);
                                 border-radius: 15px;
                                 border: 1px solid rgba(255, 255, 255, 0.2);
@@ -356,8 +356,8 @@ export default function K9SecurityPage() {
 
                             /* Fix for dropdown options text color */
                             select.glassmorphism-input option {
-                                background: #1E2247;
-                                color: #fff;
+                                background: #fff;
+                                color: #192533;
                                 padding: 10px;
                             }
 

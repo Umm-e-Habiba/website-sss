@@ -247,9 +247,7 @@ export default function Page() {
                                 </div>
                             </div>
                         </div>
-                        <div className="shape-007">
-                            <img src="/assets/img/shapes/shape007.svg" alt="" />
-                        </div>
+                        
                     </div>
 
                     {/*===== Why Metro Guards is Trusted Across South Melbourne =====*/}
@@ -302,9 +300,7 @@ export default function Page() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative mr50">
                                         <img src="/assets/img/about/about22.png" alt="" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

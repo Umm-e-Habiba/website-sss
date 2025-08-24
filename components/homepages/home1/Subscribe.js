@@ -11,7 +11,7 @@ export default function Subscribe() {
                                     Act now to protect what matters to you!
                                 </small>
                                 <h2>
-                                    Get free Quotes <span className="heilight-right">now</span> <br />
+                                    Get free Quotes <span className="">now</span> <br />
                                 </h2>
                             </div>
                         </div>

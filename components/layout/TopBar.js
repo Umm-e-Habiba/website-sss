@@ -38,6 +38,11 @@ export default function TopBar() {
             <a href="https://api.whatsapp.com/send?phone=61422039505" aria-label="Whatsapp" className="social-icon text-white text-decoration-none">
               <i className="fa-brands fa-whatsapp"></i>
             </a>
+            <a href="https://x.com/metroguards" 
+              aria-label="twitter" 
+              className="social-icon text-white text-decoration-none">
+              <i className="fa-brands fa-twitter"></i>
+            </a>
           </div>
         </div>
       </div>

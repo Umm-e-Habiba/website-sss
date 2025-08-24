@@ -9181,8 +9181,9 @@ a.up-arrow.up-4:hover {
   padding: 10px;
   position: absolute;
   left: 50%;
-  bottom: -53px;
+  bottom: -100px;
   margin-left: -53px;
+  transform: translateY(28px);
 }
 .down-arrow2 a {
   height: 100px;
@@ -9197,6 +9198,21 @@ a.up-arrow.up-4:hover {
   width: 24px;
 }
 
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .down-arrow2 {
+    bottom: 115px; /* move more down */
+    transform: translateY(40px);
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .down-arrow2 {
+    bottom: 315px; /* move even more down */
+    transform: translateY(40px); /* optional fine-tune */
+  }
+}
 .progress-wrap {
   position: fixed;
   right: 30px;
@@ -9735,3 +9751,62 @@ h2, small {
   color: #fff;
 }
 
+
+.glassmorphism-card-with-bg {
+              overflow: visible !important;
+              background:linear-gradient(330deg, rgb(84, 84, 100) 0%, rgb(15,18,41)100%);
+              backdrop-filter: blur(20px);
+              border-radius: 15px;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            }
+            
+            .glassmorphism-input {
+              background: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(5px);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              color: #fff;
+              border-radius: 8px;
+            }
+            
+            .glassmorphism-input::placeholder {
+              color: rgba(255, 255, 255, 0.6);
+            }
+            
+            .glassmorphism-input:focus {
+              background: rgba(255, 255, 255, 0.15);
+              border-color: rgba(255, 255, 255, 0.4);
+              box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
+              color: #fff;
+            }
+
+            select.glassmorphism-input {
+              appearance: none;
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+              background-repeat: no-repeat;
+              background-position: right 1rem center;
+              background-size: 1em;
+            }
+
+            /* Fix for dropdown options text color */
+            select.glassmorphism-input option {
+              background: #fff;
+              color: #192533;
+              padding: 10px;
+            }
+
+            /* For Firefox */
+            select.glassmorphism-input option:checked {
+              background: #fdc51a;
+              color: #1E2247;
+            }
+
+            /* For Webkit browsers (Chrome, Safari) */
+            select.glassmorphism-input option:checked {
+              background: #fdc51a !important;
+              color: #1E2247 !important;
+            }
+            select.glassmorphism-input option:hover {
+              background: red !important;
+              color: #1E2247 !important;
+            }

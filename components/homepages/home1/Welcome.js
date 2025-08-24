@@ -40,7 +40,7 @@ export default function Welcome() {
                         </div>
                     </div>
                 </div>
-                <div className="down-arrow2" data-aos="fade-down" data-aos-duration={400}>
+                <div className="down-arrow2" data-aos="fade-down" data-aos-duration={400} style={{ transform: "translateY(280px)" }}>
                     <Link href="/#about"><img src="/assets/img/icons/down-arrow-black.svg" alt="" /></Link>
                 </div>
             </div>

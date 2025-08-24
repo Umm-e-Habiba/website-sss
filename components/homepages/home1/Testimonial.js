@@ -12,7 +12,7 @@ export default function Testimonial() {
                                     <img src="/assets/img/icons/hands.svg" alt="" />We Deliver The Best Security Services in Melbourne.
                                 </small>
                                 <h2 data-aos="fade-up" data-aos-duration={800}>
-                                    <span className="heilight-left">Amazing</span> people talking about us.
+                                    <span className="">Amazing</span> people talking about us.
                                 </h2>
                             </div>
                         </div>

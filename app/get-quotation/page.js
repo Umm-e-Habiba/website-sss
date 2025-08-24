@@ -50,7 +50,11 @@ const MultiSelectDropdown = ({ options, selectedValues, onChange, placeholder, n
     <div className="multi-select-dropdown" ref={dropdownRef}>
       <div 
         className={`dropdown-toggle glassmorphism-input ${isOpen ? 'open' : ''}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(e) => {
+          e.stopPropagation(); // stop form bubbling
+          setIsOpen(!isOpen);
+          console.log("Dropdown open?", !isOpen);
+        }}
       >
         <span className="selected-text" title={selectedLabels}>
           {displayText}
@@ -217,342 +221,262 @@ export default function Page() {
                   </div>
 
                   <form className="contact-form" onSubmit={handleSubmit} noValidate>
-                    {/* honeypot (spam trap) */}
-                    <input type="text" name="companyWebsite" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
+  {/* honeypot (spam trap) */}
+  <input
+    type="text"
+    name="companyWebsite"
+    tabIndex="-1"
+    autoComplete="off"
+    style={{ display: "none" }}
+  />
 
-                    {/* Your Name */}
-                    <div className="row">
-                      <div className="col-12 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Name</label>
-                          <input name="name" type="text" className="form-control p-3 glassmorphism-input" placeholder="Enter your full name" required />
-                        </div>
-                      </div>
-                    </div>
+  {/* Your Name */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Your Name
+    </label>
+    <input
+      name="name"
+      type="text"
+      className="form-control p-3 glassmorphism-input"
+      placeholder="Enter your full name"
+      required
+    />
+  </div>
 
-                    {/* Email and Phone */}
-                    <div className="row">
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Email</label>
-                          <input name="email" type="email" className="form-control p-3 glassmorphism-input" placeholder="Enter your email address" required />
-                        </div>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Phone Number</label>
-                          <input name="phone" type="tel" className="form-control p-3 glassmorphism-input" placeholder="Enter your phone number" required />
-                        </div>
-                      </div>
-                    </div>
+  {/* Email */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Your Email
+    </label>
+    <input
+      name="email"
+      type="email"
+      className="form-control p-3 glassmorphism-input"
+      placeholder="Enter your email address"
+      required
+    />
+  </div>
 
-                    {/* Service Date and Location */}
-                    <div className="row">
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Service Date</label>
-                          <input name="serviceDate" type="date" className="form-control p-3 glassmorphism-input" required />
-                        </div>
-                      </div>
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Location</label>
-                          <input name="location" type="text" className="form-control p-3 glassmorphism-input" placeholder="Enter service location" />
-                        </div>
-                      </div>
-                    </div>
+  {/* Phone */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Phone Number
+    </label>
+    <input
+      name="phone"
+      type="tel"
+      className="form-control p-3 glassmorphism-input"
+      placeholder="Enter your phone number"
+      required
+    />
+  </div>
 
-                    {/* Number of Attendees */}
-                    <div className="row">
-                      <div className="col-md-6 mb-4">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Number of Attendees</label>
-                          <input name="attendees" type="number" min="1" className="form-control p-3 glassmorphism-input" placeholder="Enter number of attendees" required />
-                        </div>
-                      </div>
-                    </div>
+  {/* Service Date */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Service Date
+    </label>
+    <input
+      name="serviceDate"
+      type="date"
+      className="form-control p-3 glassmorphism-input"
+      required
+    />
+  </div>
 
-                    {/* Industry Multi-Select Dropdown */}
-                    <div className="row mb-4">
-                      <div className="col-12">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Industry</label>
-                          <MultiSelectDropdown
-                            options={industryOptions}
-                            selectedValues={selectedIndustries}
-                            onChange={setSelectedIndustries}
-                            placeholder="Select industries..."
-                            name="industry[]"
-                          />
-                        </div>
-                      </div>
-                    </div>
+  {/* Location */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Location
+    </label>
+    <input
+      name="location"
+      type="text"
+      className="form-control p-3 glassmorphism-input"
+      placeholder="Enter service location"
+    />
+  </div>
 
-                    {/* Type of Service Required Multi-Select Dropdown */}
-                    <div className="row mb-4">
-                      <div className="col-12">
-                        <div className="form-group">
-                          <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Type of Service Required</label>
-                          <MultiSelectDropdown
-                            options={serviceOptions}
-                            selectedValues={selectedServices}
-                            onChange={setSelectedServices}
-                            placeholder="Select services required..."
-                            name="service[]"
-                          />
-                        </div>
-                      </div>
-                    </div>
+  {/* Industry Dropdown */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Industry
+    </label>
+    <select
+      name="industry[]" 
+      className="form-control p-3 glassmorphism-input"
+      required
+    >
+      <option value="">Select Industry</option>
+      <option value="developer">Developer</option>
+      <option value="real-estate">Real Estate</option>
+      <option value="property-management">Property Management</option>
+      <option value="individual">Individual</option>
+      <option value="holding-company">Holding Company</option>
+      <option value="maritime">Maritime</option>
+      <option value="education">Education</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="government">Government</option>
+      <option value="cultural">Cultural</option>
+      <option value="cre">CRE</option>
+      <option value="finance">Finance</option>
+      <option value="aviation">Aviation</option>
+      <option value="fm-partnership">FM Partnership</option>
+      <option value="public-transport">Public Transport</option>
+      <option value="custodial-court">Custodial / Court</option>
+      <option value="critical-infrastructure">Critical Infrastructure</option>
+      <option value="telecommunication">Telecommunication</option>
+      <option value="it">IT</option>
+      <option value="banking">Banking</option>
+      <option value="commercial-real-estate">Commercial Real Estate</option>
+      <option value="defense">Defense</option>
+      <option value="health-welfare">Health / Welfare</option>
+      <option value="manufacturing-petrochemical">
+        Manufacturing / Petrochemical
+      </option>
+      <option value="mining-resources">Mining / Resources</option>
+      <option value="overheads">Overheads</option>
+      <option value="patrols">Patrols</option>
+      <option value="retail">Retail</option>
+      <option value="transport">Transport</option>
+      <option value="utilities-telecommunication-media">
+        Utilities / Telecommunication / Media
+      </option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-                    {/* Message */}
-                    <div className="mb-4">
-                      <div className="form-group">
-                        <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Message</label>
-                        <textarea 
-                          name="message" 
-                          className="form-control p-3 glassmorphism-input" 
-                          rows={5} 
-                          placeholder="Tell us more about your security requirements..."
-                          style={{ color: "#fff" }}
-                        ></textarea>
-                      </div>
-                    </div>
+  {/* Service Dropdown */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Type of Service Required
+    </label>
+    <select
+      name="service[]"
+      className="form-control p-3 glassmorphism-input"
+      required
+    >
+      <option value="">Select Service</option>
+      <option value="alarm-response-unit">Alarm Response Unit</option>
+      <option value="concierge-services">Concierge Services</option>
+      <option value="crowd-controller">Crowd Controller</option>
+      <option value="guard-with-dog">Guard with Dog</option>
+      <option value="k9-response-unit">K9 Response Unit</option>
+      <option value="security-officers">Security Officers</option>
+      <option value="mobile-security-patrols">Mobile Security Patrols</option>
+      <option value="uniformed-guards">Uniformed Guards</option>
+      <option value="construction-site-security">
+        Construction Site Security
+      </option>
+      <option value="loss-prevention-officer">
+        Loss Prevention Officer
+      </option>
+      <option value="party-security">Party Security</option>
+      <option value="event-security">Event Security</option>
+      <option value="covid-marshal">COVID Marshal</option>
+      <option value="other-services">Other Services</option>
+    </select>
+  </div>
 
-                    {/* Submit Button */}
-                    <div className="text-center">
-                      <button
-                        type="submit"
-                        className="btn btn-primary btn-lg px-5 py-3"
-                        style={{ 
-                          borderRadius: "10px", 
-                          fontSize: "18px", 
-                          fontWeight: "bold",
-                          backgroundColor: "#FDC51A",
-                          border: "none",
-                          color: "#1E2247"
-                        }}
-                        disabled={loading}
-                        aria-busy={loading}
-                      >
-                        {loading ? "Sending..." : "Get Quotation"}
-                      </button>
-                    </div>
-                  </form>
+  {/* Message */}
+  <div className="mb-4">
+    <label className="form-label font-weight-bold" style={{ color: "#fff" }}>
+      Message
+    </label>
+    <textarea
+      name="message"
+      className="form-control p-3 glassmorphism-input"
+      rows={5}
+      placeholder="Tell us more about your security requirements..."
+      style={{ color: "#fff" }}
+    ></textarea>
+  </div>
+
+  {/* Submit */}
+  <div className="text-center">
+    <button
+      type="submit"
+      className="btn btn-primary btn-lg px-5 py-3"
+      style={{
+        borderRadius: "10px",
+        fontSize: "18px",
+        fontWeight: "bold",
+        backgroundColor: "#FDC51A",
+        border: "none",
+        color: "#1E2247",
+      }}
+      disabled={loading}
+      aria-busy={loading}
+    >
+      {loading ? "Sending..." : "Get Quotation"}
+    </button>
+  </div>
+</form>
+
+
                 </div>
               </div>
             </div>
           </div>
         </div>
+<style jsx>{`
+                            .glassmorphism-card-with-bg {
+                                background:linear-gradient(330deg, rgb(84, 84, 100) 0%, rgb(15,18,41)100%);
+                                backdrop-filter: blur(20px);
+                                border-radius: 15px;
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                            }
+                            
+                            .glassmorphism-input {
+                                background: rgba(255, 255, 255, 0.1);
+                                backdrop-filter: blur(5px);
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                color: #fff;
+                                border-radius: 8px;
+                            }
+                            
+                            .glassmorphism-input::placeholder {
+                                color: rgba(255, 255, 255, 0.6);
+                            }
+                            
+                            .glassmorphism-input:focus {
+                                background: rgba(255, 255, 255, 0.15);
+                                border-color: rgba(255, 255, 255, 0.4);
+                                box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
+                                color: #fff;
+                            }
 
-        <style jsx>{`
-          /* Multi-select dropdown styles */
-          .multi-select-dropdown {
-            position: relative;
-            width: 100%;
-          }
+                            select.glassmorphism-input {
+                                appearance: none;
+                                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                                background-repeat: no-repeat;
+                                background-position: right 1rem center;
+                                background-size: 1em;
+                            }
 
-          .dropdown-toggle {
-            padding: 12px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            transition: all 0.3s ease;
-            min-height: 50px;
-          }
+                            /* Fix for dropdown options text color */
+                            select.glassmorphism-input option {
+                                background: #fff;
+                                color: #192533;
+                                padding: 10px;
+                            }
 
-          .dropdown-toggle:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-          }
+                            /* For Firefox */
+                            select.glassmorphism-input option:checked {
+                                background: #FDC51A;
+                                color: #1E2247;
+                            }
 
-          .dropdown-toggle:focus,
-          .dropdown-toggle.open {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(253, 197, 26, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
-          }
-
-          .selected-text {
-            flex: 1;
-            text-align: left;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: #fff;
-          }
-
-          .dropdown-arrow {
-            font-size: 12px;
-            transition: transform 0.3s ease;
-            margin-left: 10px;
-            color: #fff;
-          }
-
-          .dropdown-toggle.open .dropdown-arrow {
-            transform: rotate(180deg);
-          }
-
-          .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #1E2247;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            margin-top: 5px;
-            max-height: 350px;
-            overflow: hidden;
-            z-index: 1000;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-          }
-
-          .dropdown-search {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          }
-
-          .search-input {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
-            font-size: 14px;
-            outline: none;
-          }
-
-          .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-          }
-
-          .search-input:focus {
-            border-color: rgba(253, 197, 26, 0.5);
-            box-shadow: 0 0 0 2px rgba(253, 197, 26, 0.2);
-          }
-
-          .dropdown-options {
-            max-height: 250px;
-            overflow-y: auto;
-          }
-
-          .dropdown-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            cursor: pointer;
-            color: #fff;
-            transition: background 0.2s ease;
-            margin: 0;
-            border: none;
-          }
-
-          .dropdown-item:hover {
-            background: rgba(253, 197, 26, 0.15);
-          }
-
-          .dropdown-item input[type="checkbox"] {
-            margin-right: 12px;
-            accent-color: #FDC51A;
-            width: 16px;
-            height: 16px;
-          }
-
-          .checkbox-label {
-            flex: 1;
-            font-size: 14px;
-          }
-
-          .no-options {
-            padding: 20px 15px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-style: italic;
-          }
-
-          .dropdown-footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-          }
-
-          .clear-all-btn {
-            background: rgba(253, 197, 26, 0.2);
-            border: 1px solid rgba(253, 197, 26, 0.3);
-            color: #FDC51A;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.2s ease;
-            width: 100%;
-          }
-
-          .clear-all-btn:hover {
-            background: rgba(253, 197, 26, 0.3);
-            border-color: rgba(253, 197, 26, 0.5);
-          }
-
-          /* Custom scrollbar */
-          .dropdown-options::-webkit-scrollbar {
-            width: 6px;
-          }
-
-          .dropdown-options::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-          }
-
-          .dropdown-options::-webkit-scrollbar-thumb {
-            background: rgba(253, 197, 26, 0.5);
-            border-radius: 3px;
-          }
-
-          .dropdown-options::-webkit-scrollbar-thumb:hover {
-            background: rgba(253, 197, 26, 0.7);
-          }
-
-          .glassmorphism-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-          }
-
-          .glassmorphism-card-with-bg {
-            background: linear-gradient(135deg, rgba(30, 34, 71, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-          }
-          
-          .glassmorphism-input {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border-radius: 8px;
-          }
-          
-          .glassmorphism-input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-          }
-          
-          .glassmorphism-input:focus {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
-            color: #fff;
-          }
-        `}</style>
+                            /* For Webkit browsers (Chrome, Safari) */
+                            select.glassmorphism-input option:checked,
+                            select.glassmorphism-input option:hover {
+                                background: #FDC51A !important;
+                                color: #1E2247 !important;
+                            }
+                        `}</style>
+       
       </Layout>
     </>
   );

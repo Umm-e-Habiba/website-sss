@@ -520,7 +520,7 @@ export default function AssetProtectionPage() {
                                     <div className="approach-step text-center p-4 bg-white shadow rounded h-100">
                                         <div className="step-number mb-3">
                                             <div className="number-circle bg-warning text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px',  borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
-                                                                                       
+                                               3                                        
                                             </div>
                                         </div>
                                         <h4 className="mb-3">Ongoing Monitoring & Adjustment</h4>
@@ -570,20 +570,24 @@ export default function AssetProtectionPage() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="contact-form ml50 bg-white p-4 rounded shadow-lg">
-                                        <h4 className="mb-4">Request a Free Consultation</h4>
+                                    <div className=" ml50 bg-white p-4 rounded shadow-lg glassmorphism-card-with-bg ">
+                                        <h3 className="mb-4" style={{ color: "#fff",textAlign:"center",padding:"20px"}}>Request a Free Consultation</h3>
                                         <form>
                                             <div className="form-group mb-3">
-                                                <input type="text" className="form-control" placeholder="Your Name" />
+                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Name *</label>
+                                                <input type="text" className="form-control p-3 glassmorphism-input" placeholder="Your Name" />
                                             </div>
                                             <div className="form-group mb-3">
-                                                <input type="email" className="form-control" placeholder="Your Email" />
+                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Email *</label>
+                                                <input type="email" className="form-control p-3 glassmorphism-input" placeholder="Your Email" />
                                             </div>
                                             <div className="form-group mb-3">
-                                                <input type="tel" className="form-control" placeholder="Your Phone" />
+                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Your Phone No. *</label>
+                                                <input type="tel" className="form-control p-3 glassmorphism-input" placeholder="Your Phone" />
                                             </div>
                                             <div className="form-group mb-3">
-                                                <select className="form-control">
+                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Select Services *</label>
+                                                <select className="form-control p-3 glassmorphism-input">
                                                     <option>Select Service</option>
                                                     <option>Asset Protection</option>
                                                     <option>Corporate Security</option>
@@ -593,9 +597,17 @@ export default function AssetProtectionPage() {
                                                 </select>
                                             </div>
                                             <div className="form-group mb-3">
-                                                <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
+                                                <label className="form-label font-weight-bold" style={{ color: "#fff" }}>Message *</label>
+                                                <textarea className="form-control glassmorphism-input" rows="4" placeholder="Your Message"></textarea>
                                             </div>
-                                            <button type="submit" className="btn btn-primary w-100 py-3" style={{backgroundColor: '#1E2247', border: 'none', color: 'white'}}>
+                                            <button type="submit" className="btn btn-primary w-30 py-3 text-center" style={{ 
+                                                    borderRadius: "10px", 
+                                                    fontSize: "18px", 
+                                                    fontWeight: "bold",
+                                                    backgroundColor: "#fdc51a",
+                                                    border: "none",
+                                                    color: "#1E2247"
+                                                }}>
                                                 SUBMIT REQUEST <i className="bi bi-arrow-right ms-2"></i>
                                             </button>
                                         </form>

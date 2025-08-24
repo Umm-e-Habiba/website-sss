@@ -312,7 +312,7 @@ export default function MobilePatrolPage() {
                                     <div className="team-card bg-white p-4 rounded shadow-lg">
                                         <div className="row align-items-center">
                                             <div className="col-lg-3 text-center">
-                                                <img src="/assets/img/icons/security-badge.png" alt="Licensed Professionals" className="img-fluid mb-3" style={{maxHeight: '150px'}} />
+                                                <img src="/assets/img/icons/security.png" alt="Licensed Professionals" className="img-fluid mb-3" style={{maxHeight: '150px'}} />
                                                 <h5>Licensed & Accredited</h5>
                                             </div>
                                             <div className="col-lg-9">
