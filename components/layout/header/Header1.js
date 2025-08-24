@@ -49,35 +49,36 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                         >
                                             Get Quote
                                         </Link>
-                                        <Link 
-                                            href="tel:1300731173" 
-                                            className="btn" 
-                                            style={{
-                                                backgroundColor: '#1E2247',
-                                                color: '#fff',
-                                                padding: '10px 20px',
-                                                borderRadius: '7px',
-                                                fontWeight: '600',
-                                                textDecoration: 'none',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                gap: '8px',
-                                                transition: 'all 0.3s ease',
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#E7EDEB';
-                                                e.currentTarget.style.color = '#000';
-                                                e.currentTarget.querySelector('i').style.color = '#000';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.currentTarget.style.backgroundColor = '#1E2247';
-                                                e.currentTarget.style.color = '#fff';
-                                                e.currentTarget.querySelector('i').style.color = '#fff';
-                                            }}
+                                        <a 
+                                        href="tel:1300731173" 
+                                        className="btn" 
+                                        style={{
+                                            backgroundColor: '#1E2247',
+                                            color: '#fff',
+                                            padding: '10px 20px',
+                                            borderRadius: '7px',
+                                            fontWeight: '600',
+                                            textDecoration: 'none',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            gap: '8px',
+                                            transition: 'all 0.3s ease',
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.backgroundColor = '#E7EDEB';
+                                            e.currentTarget.style.color = '#000';
+                                            e.currentTarget.querySelector('i').style.color = '#000';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.backgroundColor = '#1E2247';
+                                            e.currentTarget.style.color = '#fff';
+                                            e.currentTarget.querySelector('i').style.color = '#fff';
+                                        }}
                                         >
-                                            <i className="fa fa-phone" />
-                                            Call Now
-                                        </Link>
+                                        <i className="fa fa-phone" />
+                                        Call Now
+                                        </a>
+
                                     </div>
                                 </div>
                             </div>
