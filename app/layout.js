@@ -4,7 +4,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "public/assets/css/plugins/bootstrap.min.css"
 import "public/assets/css/plugins/aos.css"
-import "public/assets/css/plugins/fontawesome.css"
+//import "public/assets/css/plugins/fontawesome.css"
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "public/assets/css/plugins/slick-slider.css"
 import "public/assets/css/plugins/nice-select.css"
 import "public/assets/css/plugins/fonts.css"
