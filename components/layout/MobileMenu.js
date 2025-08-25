@@ -39,8 +39,8 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                                 <Link href="/get-quotation" style={{
-                                    backgroundColor: '#FDC51A',
-                                    color: '#000',
+                                    backgroundColor: '#1e2247',
+                                    color: '#fff',
                                     textDecoration: 'none',
                                     padding: '8px 16px',
                                     borderRadius: '5px',
@@ -172,261 +172,355 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                         </li>
 
                         {/* Services */}
-                        <li style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '10px' }}>
-                                <span style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1 }}>Services</span>
-                                <span
-                                    className={isActive.key == 3 ? "submenu-button submenu-opened" : "submenu-button"}
-                                    onClick={() => handleToggle(3)}
-                                    style={{
-                                        cursor: 'pointer',
-                                        padding: '8px',
-                                        color: '#666',
-                                        fontSize: '14px',
-                                        minWidth: '30px',
-                                        textAlign: 'center'
-                                    }}
-                                >
-                                    <i className={`fa-solid ${isActive.key == 3 ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                </span>
-                            </div>
-                            <div className="services-submenu" style={{ display: isActive.key == 3 ? "block" : "none", paddingTop: '10px' }}>
-                                {/* Security Guard For Hire */}
-                                <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div 
-                                        onClick={() => toggleSection("hire")}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center', 
-                                            paddingLeft: '15px', 
-                                            paddingRight: '10px',
-                                            cursor: 'pointer',
-                                            padding: '8px 10px 8px 15px'
-                                        }}
-                                    >
-                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
-                                            Security Guard For Hire
-                                        </span>
-                                        <span
-                                            className={openSections.hire ? "submenu-button submenu-opened" : "submenu-button"}
-                                            style={{
-                                                color: '#666',
-                                                fontSize: '14px',
-                                                minWidth: '30px',
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            <i className={`fa-solid ${openSections.hire ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                        </span>
-                                    </div>
-                                    <ul className="sub-menu" style={{ 
-                                        display: openSections.hire ? "block" : "none",
-                                        listStyle: 'none',
-                                        padding: '8px 0 0 40px',
-                                        margin: 0
-                                    }}>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/adhoc-security-services" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Adhoc Security Services</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/asset-protection" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Asset Protection</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/private-security-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Private Security Guards</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/staff-escort-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Staff Escort Security</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/mobile-patrol-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Mobile Patrol Security</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/rapid-alarm-response-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Rapid Alarm Response Security</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/hire-unarmed-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Hire Unarmed Security Guard</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+<li style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingRight: '10px',
+    }}
+  >
+    <span style={{ color: '#333', fontSize: '16px', fontWeight: '500', flex: 1 }}>
+      Services
+    </span>
+    <span
+      className={isActive.key == 3 ? "submenu-button submenu-opened" : "submenu-button"}
+      onClick={() => handleToggle(3)}
+      style={{
+        cursor: 'pointer',
+        padding: '8px',
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+        marginLeft: '10px', // 🔹 prevents overlap
+      }}
+    >
+      <i className={`fa-solid ${isActive.key == 3 ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
 
-                                {/* Corporate Security Guards */}
-                                <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div 
-                                        onClick={() => toggleSection("corporate")}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center', 
-                                            paddingLeft: '15px', 
-                                            paddingRight: '10px',
-                                            cursor: 'pointer',
-                                            padding: '8px 10px 8px 15px'
-                                        }}
-                                    >
-                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
-                                            Corporate Security Guards
-                                        </span>
-                                        <span
-                                            className={openSections.corporate ? "submenu-button submenu-opened" : "submenu-button"}
-                                            style={{
-                                                color: '#666',
-                                                fontSize: '14px',
-                                                minWidth: '30px',
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            <i className={`fa-solid ${openSections.corporate ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                        </span>
-                                    </div>
-                                    <ul className="sub-menu" style={{ 
-                                        display: openSections.corporate ? "block" : "none",
-                                        listStyle: 'none',
-                                        padding: '8px 0 0 40px',
-                                        margin: 0
-                                    }}>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/building-security-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Building Security Guard</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/construction-site-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Construction Site Security Guard</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/warehouse-security-system" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Warehouse Security System</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/concierge-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Concierge Guards</Link>
-                                        </li>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/gatehouse-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Gatehouse Security Guard</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+  <div
+    className="services-submenu"
+    style={{ display: isActive.key == 3 ? "block" : "none", paddingTop: '10px', paddingLeft: '5px' }}
+  >
+    {/* Security Guard For Hire */}
+<div className="service-category" style={{ marginBottom: '15px' }}>
+  <div
+    onClick={() => toggleSection("hire")}
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '8px 10px 8px 25px',
+      cursor: 'pointer',
+    }}
+  >
+    {/* Text */}
+    <span style={{ color: '#333', fontSize: '15px', fontWeight: '500' }}>
+      Security Guard For Hire
+    </span>
 
-                                {/* Loss Prevention Security */}
-                                <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div 
-                                        onClick={() => toggleSection("loss")}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center', 
-                                            paddingLeft: '15px', 
-                                            paddingRight: '10px',
-                                            cursor: 'pointer',
-                                            padding: '8px 10px 8px 15px'
-                                        }}
-                                    >
-                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
-                                            Loss Prevention Security
-                                        </span>
-                                        <span
-                                            className={openSections.loss ? "submenu-button submenu-opened" : "submenu-button"}
-                                            style={{
-                                                color: '#666',
-                                                fontSize: '14px',
-                                                minWidth: '30px',
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            <i className={`fa-solid ${openSections.loss ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                        </span>
-                                    </div>
-                                    <ul className="sub-menu" style={{ 
-                                        display: openSections.loss ? "block" : "none",
-                                        listStyle: 'none',
-                                        padding: '8px 0 0 40px',
-                                        margin: 0
-                                    }}>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/retail-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Retail Security Guard</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+    {/* Icon (child-specific) */}
+    <span
+      className={openSections.hire ? "child-submenu-button submenu-opened" : "child-submenu-button"}
+      style={{
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+      }}
+    >
+      <i className={`fa-solid ${openSections.hire ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
 
-                                {/* Event Security */}
-                                <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div 
-                                        onClick={() => toggleSection("event")}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center', 
-                                            paddingLeft: '15px', 
-                                            paddingRight: '10px',
-                                            cursor: 'pointer',
-                                            padding: '8px 10px 8px 15px'
-                                        }}
-                                    >
-                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
-                                            Event Security
-                                        </span>
-                                        <span
-                                            className={openSections.event ? "submenu-button submenu-opened" : "submenu-button"}
-                                            style={{
-                                                color: '#666',
-                                                fontSize: '14px',
-                                                minWidth: '30px',
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            <i className={`fa-solid ${openSections.event ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                        </span>
-                                    </div>
-                                    <ul className="sub-menu" style={{ 
-                                        display: openSections.event ? "block" : "none",
-                                        listStyle: 'none',
-                                        padding: '8px 0 0 40px',
-                                        margin: 0
-                                    }}>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/event-security-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Event Security Guards</Link>
-                                        </li>
-                                    </ul>
-                                </div>
+  {/* Submenu */}
+  <ul
+    className="sub-menu"
+    style={{
+      display: openSections.hire ? "block" : "none",
+      listStyle: 'none',
+      padding: '8px 0 0 40px',
+      margin: 0,
+    }}
+  >
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/adhoc-security-services" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Adhoc Security Services
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/asset-protection" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Asset Protection
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/private-security-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Private Security Guards
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/staff-escort-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Staff Escort Security
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/mobile-patrol-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Mobile Patrol Security
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/rapid-alarm-response-security" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Rapid Alarm Response Security
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/hire-unarmed-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Hire Unarmed Security Guard
+      </Link>
+    </li>
+  </ul>
+</div>
 
-                                {/* Canine (K9) Security */}
-                                <div className="service-category" style={{ marginBottom: '15px' }}>
-                                    <div 
-                                        onClick={() => toggleSection("k9")}
-                                        style={{ 
-                                            display: 'flex', 
-                                            justifyContent: 'space-between', 
-                                            alignItems: 'center', 
-                                            paddingLeft: '15px', 
-                                            paddingRight: '10px',
-                                            cursor: 'pointer',
-                                            padding: '8px 10px 8px 15px'
-                                        }}
-                                    >
-                                        <span style={{ color: '#333', fontSize: '15px', fontWeight: '500', flex: 1 }}>
-                                            Canine (K9) Security
-                                        </span>
-                                        <span
-                                            className={openSections.k9 ? "submenu-button submenu-opened" : "submenu-button"}
-                                            style={{
-                                                color: '#666',
-                                                fontSize: '14px',
-                                                minWidth: '30px',
-                                                textAlign: 'center'
-                                            }}
-                                        >
-                                            <i className={`fa-solid ${openSections.k9 ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
-                                        </span>
-                                    </div>
-                                    <ul className="sub-menu" style={{ 
-                                        display: openSections.k9 ? "block" : "none",
-                                        listStyle: 'none',
-                                        padding: '8px 0 0 40px',
-                                        margin: 0
-                                    }}>
-                                        <li style={{ marginBottom: '6px' }}>
-                                            <Link href="/k9-security-guards-in-melbourne" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>Canine (K9) Security Services</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
+
+    {/* Corporate Security Guards */}
+<div className="service-category" style={{ marginBottom: '15px' }}>
+  <div
+    onClick={() => toggleSection("corporate")}
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '8px 10px 8px 25px',
+      cursor: 'pointer',
+    }}
+  >
+    {/* Text */}
+    <span style={{ color: '#333', fontSize: '15px', fontWeight: '500' }}>
+      Corporate Security Guards
+    </span>
+
+    {/* Icon (child-specific, separate from Services) */}
+    <span
+      className={openSections.corporate ? "child-submenu-button submenu-opened" : "child-submenu-button"}
+      style={{
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+      }}
+    >
+      <i className={`fa-solid ${openSections.corporate ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
+
+  {/* Submenu */}
+  <ul
+    className="sub-menu"
+    style={{
+      display: openSections.corporate ? "block" : "none",
+      listStyle: 'none',
+      padding: '8px 0 0 40px',
+      margin: 0,
+    }}
+  >
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/building-security-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Building Security Guard
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/construction-site-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Construction Site Security Guard
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/warehouse-security-system" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Warehouse Security System
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/concierge-guards" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Concierge Guards
+      </Link>
+    </li>
+    <li style={{ marginBottom: '6px' }}>
+      <Link href="/gatehouse-security-guard" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}>
+        Gatehouse Security Guard
+      </Link>
+    </li>
+  </ul>
+</div>
+
+
+   {/* Loss Prevention Security */}
+<div className="service-category" style={{ marginBottom: '15px' }}>
+  <div
+    onClick={() => toggleSection("loss")}
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '8px 10px 8px 25px',
+      cursor: 'pointer',
+    }}
+  >
+    {/* Text */}
+    <span style={{ color: '#333', fontSize: '15px', fontWeight: '500' }}>
+      Loss Prevention Security
+    </span>
+
+    {/* Icon (child-specific) */}
+    <span
+      className={openSections.loss ? "child-submenu-button submenu-opened" : "child-submenu-button"}
+      style={{
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+      }}
+    >
+      <i className={`fa-solid ${openSections.loss ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
+
+  {/* Submenu */}
+  <ul
+    className="sub-menu"
+    style={{
+      display: openSections.loss ? "block" : "none",
+      listStyle: 'none',
+      padding: '8px 0 0 40px',
+      margin: 0,
+    }}
+  >
+    <li style={{ marginBottom: '6px' }}>
+      <Link
+        href="/retail-security-guard"
+        onClick={handleMobileMenu}
+        style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}
+      >
+        Retail Security Guard
+      </Link>
+    </li>
+  </ul>
+</div>
+
+
+    {/* Event Security */}
+<div className="service-category" style={{ marginBottom: '15px' }}>
+  <div
+    onClick={() => toggleSection("event")}
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '8px 10px 8px 25px',
+      cursor: 'pointer',
+    }}
+  >
+    {/* Text */}
+    <span style={{ color: '#333', fontSize: '15px', fontWeight: '500' }}>
+      Event Security
+    </span>
+
+    {/* Icon (child-specific, not parent) */}
+    <span
+      className={openSections.event ? "child-submenu-button submenu-opened" : "child-submenu-button"}
+      style={{
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+      }}
+    >
+      <i className={`fa-solid ${openSections.event ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
+
+  {/* Submenu */}
+  <ul
+    className="sub-menu"
+    style={{
+      display: openSections.event ? "block" : "none",
+      listStyle: 'none',
+      padding: '8px 0 0 40px',
+      margin: 0,
+    }}
+  >
+    <li style={{ marginBottom: '6px' }}>
+      <Link
+        href="/event-security-guards"
+        onClick={handleMobileMenu}
+        style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}
+      >
+        Event Security Guards
+      </Link>
+    </li>
+  </ul>
+</div>
+
+
+    
+{/* Canine (K9) Security */}
+<div className="service-category" style={{ marginBottom: '15px' }}>
+  <div
+    onClick={() => toggleSection("k9")}
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '8px 10px 8px 25px',
+      cursor: 'pointer',
+    }}
+  >
+    {/* Text */}
+    <span style={{ color: '#333', fontSize: '15px', fontWeight: '500' }}>
+      Canine (K9) Security
+    </span>
+
+    {/* Icon (separate from Services) */}
+    <span
+      className={openSections.k9 ? "child-submenu-button submenu-opened" : "child-submenu-button"}
+      style={{
+        color: '#666',
+        fontSize: '14px',
+        minWidth: '30px',
+        textAlign: 'center',
+      }}
+    >
+      <i className={`fa-solid ${openSections.k9 ? 'fa-chevron-up' : 'fa-chevron-down'}`} />
+    </span>
+  </div>
+
+  {/* Submenu */}
+  <ul
+    className="sub-menu"
+    style={{
+      display: openSections.k9 ? "block" : "none",
+      listStyle: 'none',
+      padding: '8px 0 0 40px',
+      margin: 0,
+    }}
+  >
+    <li style={{ marginBottom: '6px' }}>
+      <Link
+        href="/k9-security-guards-in-melbourne"
+        onClick={handleMobileMenu}
+        style={{ color: '#666', textDecoration: 'none', fontSize: '13px' }}
+      >
+        Canine (K9) Security Services
+      </Link>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+</li>
+
 
                         {/* Blog */}
                         <li style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '15px' }}>
