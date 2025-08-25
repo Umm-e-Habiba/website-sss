@@ -61,7 +61,7 @@ export default function ServiceCoveragePage() {
                                                     href="#coverage-map" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1e2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -72,7 +72,7 @@ export default function ServiceCoveragePage() {
                                                     VIEW COVERAGE MAP <span><i className="bi bi-arrow-right"></i></span>
                                                 </a>
                                                 <a 
-                                                    href="#contact-form" 
+                                                    href="/contacts" 
                                                     className="btn text-dark px-4 py-3"
                                                     style={{
                                                         backgroundColor: '#FDC24C',
@@ -92,9 +92,7 @@ export default function ServiceCoveragePage() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/case-study/s6.webp" alt="Security Service Coverage Map" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -518,7 +516,7 @@ export default function ServiceCoveragePage() {
                             
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
-                                    <div className="contact-form bg-white p-5 rounded shadow">
+                                    <div className="contact-form bg-white p-5 rounded shadow glassmorphism-card-with-bg">
                                         <form onSubmit={handleSubmit} noValidate>
                                         <div className="row">
                                             <div className="col-md-6 mb-4">
@@ -578,7 +576,7 @@ export default function ServiceCoveragePage() {
                                                 type="submit"
                                                 disabled={loading}
                                                 className="btn px-4 py-3 text-white"
-                                                style={{ backgroundColor:'#243D31', border:'none', borderRadius:'5px', fontWeight:600, textTransform:'uppercase' }}
+                                                style={{ backgroundColor:'#fdc51a', border:'none', borderRadius:'5px', fontWeight:600, textTransform:'uppercase' }}
                                             >
                                                 {loading ? 'SENDING…' : 'SEND REQUEST'} <span><i className="bi bi-send" /></span>
                                             </button>

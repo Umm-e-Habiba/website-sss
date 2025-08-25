@@ -47,9 +47,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="col-lg-6">
                                     <div className="about-bg-main-img position-relative ml50">
                                         <img src="/assets/img/about/about img.webp" alt="Privacy and Data Protection" />
-                                        <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +153,7 @@ export default function PrivacyPolicyPage() {
                                             <div className="col-lg-4 text-right">
                                                 <div className="cta-buttons">
                                                     <a href="tel:1300731173" className="btn btn-light btn-lg mb-2 d-block">
-                                                        <i className="bi bi-telephone mr-2"></i>CALL 1300 73 11 73
+                                                        <i className="bi bi-telephone mr-2"></i>CALL Now
                                                     </a>
                                                     <a href="mailto:admin@metroguards.com.au" className="btn btn-outline-light btn-lg d-block">
                                                         <i className="bi bi-envelope mr-2"></i>EMAIL US

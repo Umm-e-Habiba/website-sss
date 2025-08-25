@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     const comments   = String(form.get("comments") || "").trim();
     const terms      = !!form.get("terms");
     const newsletter = !!form.get("newsletter");
-    const roles      = form.getAll("roles").map(String); // multiple checkboxes
+    const roles      = form.getAll("roles[]").map(String); // multiple checkboxes
     const resume     = form.get("resume") as File | null;
 
     // 🔹 Validate required fields

@@ -269,7 +269,7 @@ export default function FormsDownloadsPage() {
                                                         href="/wp-content/uploads/2025/05/Employee-Registration-Form.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#243D31',
+                                                            backgroundColor: '#1e2247',
                                                             color: 'white',
                                                             border: 'none',
                                                             borderRadius: '5px',
@@ -300,7 +300,7 @@ export default function FormsDownloadsPage() {
                                                         href="/wp-content/uploads/2022/12/Site-specific-SOPS-Final-2.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#243D31',
+                                                            backgroundColor: '#1e2247',
                                                             color: 'white',
                                                             border: 'none',
                                                             borderRadius: '5px',
@@ -331,7 +331,7 @@ export default function FormsDownloadsPage() {
                                                         href="/wp-content/uploads/2025/05/Employee-Handbook.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#243D31',
+                                                            backgroundColor: '#1e2247',
                                                             color: 'white',
                                                             border: 'none',
                                                             borderRadius: '5px',
@@ -362,7 +362,7 @@ export default function FormsDownloadsPage() {
                                                         href="/wp-content/uploads/2025/05/Company-profile.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#243D31',
+                                                            backgroundColor: '#1e2247',
                                                             color: 'white',
                                                             border: 'none',
                                                             borderRadius: '5px',

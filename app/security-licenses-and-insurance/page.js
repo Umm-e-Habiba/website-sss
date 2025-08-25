@@ -62,7 +62,7 @@ export default function SecurityLicensePage() {
                                                     href="#contact-form" 
                                                     className="btn text-white px-4 py-3 me-3"
                                                     style={{
-                                                        backgroundColor: '#243D31',
+                                                        backgroundColor: '#1E2247',
                                                         border: 'none',
                                                         borderRadius: '5px',
                                                         textDecoration: 'none',
@@ -73,7 +73,7 @@ export default function SecurityLicensePage() {
                                                     REQUEST DOCUMENTS <span><i className="bi bi-arrow-right"></i></span>
                                                 </a>
                                                 <a 
-                                                    href="tel:+61300000000" 
+                                                    href="tel:1300731173" 
                                                     className="btn text-dark px-4 py-3"
                                                     style={{
                                                         backgroundColor: '#FDC24C',
@@ -339,7 +339,7 @@ export default function SecurityLicensePage() {
                             
                             <div className="row justify-content-center">
                                 <div className="col-lg-8">
-                                    <div className="contact-form bg-white p-5 rounded shadow">
+                                    <div className="contact-form bg-white p-5 rounded shadow glassmorphism-card-with-bg">
                                         <form onSubmit={handleSubmit} noValidate>
                                         <div className="row">
                                             <div className="col-md-6 mb-4">
@@ -399,7 +399,7 @@ export default function SecurityLicensePage() {
                                                 type="submit"
                                                 disabled={loading}
                                                 className="btn px-4 py-3 text-white"
-                                                style={{ backgroundColor:'#243D31', border:'none', borderRadius:'5px', fontWeight:600, textTransform:'uppercase' }}
+                                                style={{ backgroundColor:'#fdc51a', border:'none', borderRadius:'5px', fontWeight:600, textTransform:'uppercase' }}
                                             >
                                                 {loading ? 'SENDING…' : 'SEND REQUEST'} <span><i className="bi bi-send" /></span>
                                             </button>

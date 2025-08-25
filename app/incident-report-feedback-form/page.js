@@ -40,102 +40,102 @@ export default function IncidentReportPage() {
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-10">
-                                <div className="incident-form bg-white p-5 rounded shadow">
-                                    <h2 className="mb-4 text-center" style={{color: '#243D31'}}>INCIDENT REPORT & FEEDBACK FORM</h2>
-                                    <p className="mb-4 text-center">This form is designed for Security Guards / Fire Support Offices (FSO) / COVID Marshalls or Patrol Cars, to record and report any issues or incidents they find during their shift, pertaining to:</p>
+                                <div className="incident-form bg-white p-5 rounded shadow glassmorphism-card-with-bg ">
+                                    <h2 className="mb-4 text-center" style={{color: '#fff'}}>INCIDENT REPORT & FEEDBACK FORM</h2>
+                                    <p className="mb-4 text-center" style={{color: '#fff'}}>This form is designed for Security Guards / Fire Support Offices (FSO) / COVID Marshalls or Patrol Cars, to record and report any issues or incidents they find during their shift, pertaining to:</p>
                                     
                                     <form onSubmit={handleSubmit} encType="multipart/form-data" noValidate>
                                         {/* Event Type Section */}
                                         <div className="section-box mb-5 p-4 border rounded">
-                                            <h4 className="mb-4" style={{color: '#243D31'}}>Event Type</h4>
+                                            <h4 className="mb-4" style={{color: '#fff'}}>Event Type</h4>
                                             <div className="row">
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>HR related; Staff Sick; Staff Late; Shift Swaps; Extra Guard Requests; Overtime</span>
+                                                <span style={{color: '#fff'}}>HR related; Staff Sick; Staff Late; Shift Swaps; Extra Guard Requests; Overtime</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="hrRelated" name="eventTypes" value="HR related / staffing / overtime" />
-                                                    <label className="form-check-label" htmlFor="hrRelated">Yes</label>
+                                                    <label className="form-check-label" htmlFor="hrRelated" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>OH&S matters; including "near misses"; onsite injuries; First Aid; Inclimate Weather</span>
+                                                <span style={{color: '#fff'}}>OH&S matters; including "near misses"; onsite injuries; First Aid; Inclimate Weather</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="ohsMatters" name="eventTypes" value="OH&S / near misses / first aid / weather" />
-                                                    <label className="form-check-label" htmlFor="ohsMatters">Yes</label>
+                                                    <label className="form-check-label" htmlFor="ohsMatters" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Security Breaches; Physical Break in's; Lock & Access issues; Patrol KPI Issues; Arrest</span>
+                                                <span style={{color: '#fff'}}>Security Breaches; Physical Break in's; Lock & Access issues; Patrol KPI Issues; Arrest</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="securityBreaches" name="eventTypes" value="Security breaches / break-ins / access / patrol KPI / arrest" />
-                                                    <label className="form-check-label" htmlFor="securityBreaches">Yes</label>
+                                                    <label className="form-check-label" htmlFor="securityBreaches" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Equipment damage or loss; Missing Items; Uniform Request</span>
+                                                <span style={{color: '#fff'}}>Equipment damage or loss; Missing Items; Uniform Request</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="equipmentDamage" name="eventTypes" value="Equipment damage/loss / missing items / uniform" />
-                                                    <label className="form-check-label" htmlFor="equipmentDamage">Yes</label>
+                                                    <label className="form-check-label" htmlFor="equipmentDamage" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>CCTV related OR Thermal Temperature Variations (mention the dropbox *.jpg file names)</span>
+                                                <span style={{color: '#fff'}}>CCTV related OR Thermal Temperature Variations (mention the dropbox *.jpg file names)</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="cctvRelated" name="eventTypes" value="CCTV / thermal temperature variations" />
-                                                    <label className="form-check-label" htmlFor="cctvRelated">Yes</label>
+                                                    <label className="form-check-label" htmlFor="cctvRelated" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Emergency Services on Site; Fire Fighting Responses</span>
+                                                <span style={{color: '#fff'}}>Emergency Services on Site; Fire Fighting Responses</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="emergencyServices" name="eventTypes" value="Emergency services / fire response" />
-                                                    <label className="form-check-label" htmlFor="emergencyServices">Yes</label>
+                                                    <label className="form-check-label" htmlFor="emergencyServices" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Alarm is Active (Security Alarm Panel, Fire Panel, VESDA, or other equipment)</span>
+                                                <span style={{color: '#fff'}}>Alarm is Active (Security Alarm Panel, Fire Panel, VESDA, or other equipment)</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="alarmActive" name="eventTypes" value="Alarm active (security/fire/VESDA/other)" />
-                                                    <label className="form-check-label" htmlFor="alarmActive">Yes</label>
+                                                    <label className="form-check-label" htmlFor="alarmActive" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Alarm is Disabled (Late to Close / site not sealed)</span>
+                                                <span style={{color: '#fff'}}>Alarm is Disabled (Late to Close / site not sealed)</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="alarmDisabled" name="eventTypes" value="Alarm disabled (late to close / site not sealed)" />
-                                                    <label className="form-check-label" htmlFor="alarmDisabled">Yes</label>
+                                                    <label className="form-check-label" htmlFor="alarmDisabled" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Client or Authorised person was still onsite (ie: not an intruder)</span>
+                                                <span style={{color: '#fff'}}>Client or Authorised person was still onsite (ie: not an intruder)</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="clientOnsite" name="eventTypes" value="Client/authorised person onsite" />
-                                                    <label className="form-check-label" htmlFor="clientOnsite">Yes</label>
+                                                    <label className="form-check-label" htmlFor="clientOnsite" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
                                                 <div className="d-flex justify-content-between align-items-center">
-                                                <span>Other Categories / Feedback and Suggestions</span>
+                                                <span style={{color: '#fff'}}>Other Categories / Feedback and Suggestions</span>
                                                 <div className="form-check form-check-inline">
                                                     <input className="form-check-input" type="checkbox" id="otherCategories" name="eventTypes" value="Other categories / feedback / suggestions" />
-                                                    <label className="form-check-label" htmlFor="otherCategories">Yes</label>
+                                                    <label className="form-check-label" htmlFor="otherCategories" style={{color: '#fff'}}>Yes</label>
                                                 </div>
                                                 </div>
                                             </div>
@@ -144,7 +144,7 @@ export default function IncidentReportPage() {
                                         {/* Smart Roaster Section */}
                                         {/* Smart Roaster Section */}
                                         <div className="section-box mb-5 p-4 border rounded">
-                                            <h4 className="mb-4" style={{color: '#243D31'}}>Smart ROASTER Scanned?</h4>
+                                            <h4 className="mb-4" style={{color: '#fff'}}>Smart ROASTER Scanned?</h4>
                                             <div className="row">
                                             <div className="col-md-6">
                                                 <label className="form-label text-dark">Was Roaster scanned?</label>
@@ -162,7 +162,7 @@ export default function IncidentReportPage() {
 
                                         {/* Officer Details Section */}
                                         <div className="section-box mb-5 p-4 border rounded">
-                                            <h4 className="mb-4" style={{color: '#243D31'}}>Officer Details</h4>
+                                            <h4 className="mb-4" style={{color: '#fff'}}>Officer Details</h4>
                                             <div className="row">
                                             <div className="col-md-6 mb-3">
                                                 <label htmlFor="firstName" className="form-label text-dark">First Name</label>
@@ -180,15 +180,15 @@ export default function IncidentReportPage() {
                                                 <label className="form-label text-dark">Gender</label>
                                                 <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="gender" id="male" value="male" />
-                                                <label className="form-check-label text-dark" htmlFor="male">Male</label>
+                                                <label className="form-check-label " htmlFor="male" style={{color:"#fff"}}>Male</label>
                                                 </div>
-                                                <div className="form-check">
-                                                <input className="form-check-input" type="radio" name="gender" id="female" value="female" />
-                                                <label className="form-check-label text-dark" htmlFor="female">Female</label>
+                                                <div className="form-check" >
+                                                <input className="form-check-input" type="radio" name="gender" id="female" value="female"  />
+                                                <label className="form-check-label " htmlFor="female" style={{color:"#fff"}}>Female</label>
                                                 </div>
                                                 <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="gender" id="otherGender" value="other" />
-                                                <label className="form-check-label text-dark" htmlFor="otherGender">Other</label>
+                                                <label className="form-check-label" htmlFor="otherGender" style={{color:"#fff"}}>Other</label>
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-3">
@@ -245,7 +245,7 @@ export default function IncidentReportPage() {
 
                                         {/* Incident Date/Location Section */}
                                         <div className="section-box mb-5 p-4 border rounded">
-                                            <h4 className="mb-4" style={{color: '#243D31'}}>Incident Date / Location</h4>
+                                            <h4 className="mb-4" style={{color:"#fff"}}>Incident Date / Location</h4>
                                             <div className="row">
                                             <div className="col-md-3 mb-3">
                                                 <label htmlFor="incidentDate" className="form-label text-dark">Date</label>
@@ -275,11 +275,11 @@ export default function IncidentReportPage() {
                                                 <label className="form-label text-dark">Patrol:</label>
                                                 <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="patrol" id="external" value="external" />
-                                                <label className="form-check-label text-dark" htmlFor="external">External</label>
+                                                <label className="form-check-label " style={{color:"#fff"}} htmlFor="external">External</label>
                                                 </div>
                                                 <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="patrol" id="internal" value="internal" />
-                                                <label className="form-check-label text-dark" htmlFor="internal">Internal</label>
+                                                <label className="form-check-label " style={{color:"#fff"}} htmlFor="internal">Internal</label>
                                                 </div>
                                             </div>
                                             <div className="col-md-3 mb-3">
@@ -330,7 +330,7 @@ export default function IncidentReportPage() {
 
                                         {/* Submit Button */}
                                         <div className="text-center">
-                                            <button type="submit" disabled={loading} className="btn px-4 py-3 text-white" style={{backgroundColor: '#243D31', border: 'none', borderRadius: '5px', fontWeight: '600', textTransform: 'uppercase'}}>
+                                            <button type="submit" disabled={loading} className="btn px-4 py-3 text-white" style={{backgroundColor: '#fdc51a', border: 'none', borderRadius: '5px', fontWeight: '600', textTransform: 'uppercase'}}>
                                             {loading ? "Sending..." : "Submit Report"} <span><i className="bi bi-send"></i></span>
                                             </button>
                                         </div>

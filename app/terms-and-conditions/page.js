@@ -273,7 +273,7 @@ export default function TermsConditionsPage() {
                                             <div className="col-lg-4 text-right">
                                                 <div className="contact-buttons">
                                                     <a 
-                                                        href="#" 
+                                                        href="/contacts" 
                                                         className="btn text-dark px-4 py-3 me-2 mb-2"
                                                         style={{
                                                             backgroundColor: '#FDC24C',
@@ -287,7 +287,7 @@ export default function TermsConditionsPage() {
                                                         CONTACT US <span><i className="bi bi-envelope"></i></span>
                                                     </a>
                                                     <a 
-                                                        href="#" 
+                                                        href="tel:1300731173" 
                                                         className="btn btn-outline-light px-4 py-3"
                                                         style={{
                                                             borderRadius: '5px',
