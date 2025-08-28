@@ -4,13 +4,13 @@ export default function TaxBusiness() {
     return (
         <>
         
-            <div className="tax-business section-padding2" style={{ backgroundColor: '#1E2247' }} id="about">
+            <div className="tax-business section-padding2 pt-20 " style={{ backgroundColor: '#1E2247'}} id="about">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 m-auto">
                             <div className="heading2 white-heading text-center">
                                 <small data-aos="fade-up" data-aos-duration={600} className="heading-top"><img src="/assets/img/icons/hands.svg" alt="" />Integrated Security Services
-</small>
+                                </small>
                                 <h2 data-aos="fade-up" data-aos-duration={800}><span>Melbourne's Expert</span> Security Guards & Mobile Patrols</h2>
                             </div>
                         </div>

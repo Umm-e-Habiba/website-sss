@@ -1,11 +1,11 @@
 import Link from "next/link"
 import Menu from "../Menu"
-import TopBar from "../TopBar"
+
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     return (
         <>
-            <TopBar/>
+           
             <header id="header" className={`header header-2 header-absolute d-none d-lg-block ${scroll ? "sticky" : ""}`}>
                 <div className="container">
                     <div className="row">

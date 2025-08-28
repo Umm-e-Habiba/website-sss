@@ -40,7 +40,9 @@ background-color: #1e2247; }
 .topbar { height: var(--topbar-h); } /* optional but keeps it consistent */
 
 /* push the header down so it sits below the topbar */
-#header { margin-top: var(--topbar-h); }
+#header { 
+  background-color: #fff;
+}
 
 /* if you make the header sticky/fixed at some point, keep its width & layer */
 #header.sticky {
