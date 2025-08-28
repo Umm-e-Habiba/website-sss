@@ -33,6 +33,24 @@ const services = [
     icon: "📺",
     href: "/services/alarm",
   },
+  {
+    title: "Cleaning Services",
+    image: "/assets/img/about/s5.webp",
+    icon: "✨",
+    href: "/services/cleaning",
+  },
+  {
+    title: "Maintenance Services",
+    image: "/assets/img/about/south.webp",
+    icon: "🛠️",
+    href: "/services/maintenance",
+  },
+  {
+    title: "AI Alarm Monitoring",
+    image: "/assets/img/about/values.jpg",
+    icon: "📺",
+    href: "/services/alarm",
+  },
 ];
 
 export default function ServicesSlider() {
