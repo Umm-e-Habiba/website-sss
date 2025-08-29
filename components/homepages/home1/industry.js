@@ -100,7 +100,7 @@ export default function IndustrySection() {
         }
         
         .industry-card {
-          background: linear-gradient(135deg, #1ca9c9 0%, #1b9fb5 100%);
+          background: linear-gradient(135deg, #1f1f25ff 0%, #1e2247 100%);
           color: white;
           padding: 40px 30px;
           text-align: center;

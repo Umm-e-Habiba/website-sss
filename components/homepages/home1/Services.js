@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
+
 // Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -100,7 +101,7 @@ export default function ServicesSlider() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="section-padding2 pt-20 pb-16" id="services" style={{marginTop:"70px"}}>
+    <section className="section-padding2 pt-20 pb-12" id="services" style={{marginTop:"190px"}}>
       <div className="container mx-auto px-4 lg:px-6 relative">
         <div className="row">
           <div className="col-md-4 m-auto">
@@ -173,8 +174,8 @@ export default function ServicesSlider() {
           </Swiper>
           
           {/* Navigation arrows - centered with proper spacing using image icons */}
-          <div className="flex justify-center items-center mt-12 space-x-6 navigation-container">
-            <button className="swiper-button-prev-custom p-2 transition-all duration-300">
+          <div className="flex justify-center items-center  space-x-6 navigation-container" style={{marginTop:"80px"}}>
+            <button className="swiper-button-prev-custom p-2 transition-all duration-300" style={{marginRight:"10px"}}>
               <Image 
                 src="/assets/img/icons/back.png" 
                 alt="Previous" 
@@ -331,12 +332,18 @@ export default function ServicesSlider() {
         
         .swiper-button-prev-custom,
         .swiper-button-next-custom {
-          position: static;
-          margin: 0;
-          background: transparent !important;
-          border: none !important;
-          outline: none !important;
-          box-shadow: none !important;
+          position: relative;
+          z-index: 50; 
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #27293bff, #fdc51a); /* classic deep gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+            cursor: pointer;
         }
         
         .swiper-button-prev-custom:focus,
@@ -377,14 +384,28 @@ export default function ServicesSlider() {
             column-gap: 1.2rem;
           }
           
+
           /* Smaller navigation icons on mobile */
           .swiper-button-prev-custom img,
           .swiper-button-next-custom img {
-            width: 40px;
-            height: 40px;
-          }
+           filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255,255,255,0.6));
+            width: 22px;
+            height: 22px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+          
         }
-        
+        /* Hover effect - golden glow */
+        .swiper-button-prev-custom:hover,
+        .swiper-button-next-custom:hover {
+        background: linear-gradient(135deg, #fdc51a, #e6a400);
+        box-shadow: 0 6px 16px rgba(253, 197, 26, 0.5);
+        transform: scale(1.1);
+        }
+        .swiper-button-prev-custom:hover img,
+        .swiper-button-next-custom:hover img {
+        filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255,255,255,0.9));
+        transform: scale(1.2);
+        }
         /* Custom animations */
         @keyframes slideInUp {
           from {
@@ -415,6 +436,10 @@ export default function ServicesSlider() {
         .services-swiper .swiper-button-disabled img {
           opacity: 0.3;
         }
+        .swiper-wrapper {
+        display: flex !important;
+        }
+
       `}</style>
     </section>
   );

@@ -9813,3 +9813,7 @@ h2, small {
               background: red !important;
               color: #1E2247 !important;
             }
+
+            .swiper-wrapper {
+        display: flex !important;
+        }

@@ -12,6 +12,10 @@ import Welcome from "@/components/homepages/home1/Welcome"
 import HeroBanner from "@/components/homepages/home1/HeroBanner";
 import ServicesSlider from "@/components/homepages/home1/Services";
 import IndustrySection from "@/components/homepages/home1/industry";
+import Gallery4 from "@/components/ui/gallery4";
+
+
+
 
 export default function Page() {
 
@@ -27,9 +31,9 @@ export default function Page() {
                 // image="/assets/hero/staff-triplet.png"
                 // social={{ youtube: "#", instagram: "#", linkedin: "#" }}
                 />
-                
-                
+
                 <ServicesSlider />
+                <Gallery4 />
                 <IndustrySection/>
                  <About />
                 <CaseStudy />
