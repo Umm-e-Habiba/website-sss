@@ -13,68 +13,99 @@ import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 const services = [
   {
-    title: "Private Security Guard",
+    title: "Private SecurityGuard",
     image: "/assets/img/case-study/s4.webp",
-    icon: "/assets/img/icons/security.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3zm0 2.18l6 2.25v4.82c0 4.35-2.95 8.54-6 9.92-3.05-1.38-6-5.57-6-9.92V6.43l6-2.25z"/>
+        <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4z"/>
+      </svg>
+    ),
     href: "/services/security",
   },
   {
-    title: "Mobile Patrol Security",
+    title: "Mobile PatrolSecurity",
     image: "/assets/img/case-study/s7.webp",
-    icon: "/assets/img/icons/patrol.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M20.5 11l-1.5-4.5C18.6 5.6 17.9 5 17 5H7c-.9 0-1.6.6-2 1.5L3.5 11H2v2h1v6h2v-2h14v2h2v-6h1v-2h-1.5zM7 7h10l1.33 4H5.67L7 7zm0 9c-.8 0-1.5-.7-1.5-1.5S6.2 13 7 13s1.5.7 1.5 1.5S7.8 16 7 16zm10 0c-.8 0-1.5-.7-1.5-1.5S16.2 13 17 13s1.5.7 1.5 1.5S17.8 16 17 16z"/>
+      </svg>
+    ),
     href: "/services/cleaning",
   },
   {
-    title: "Construction Site Security",
+    title: "Construction SiteSecurity",
     image: "/assets/img/case-study/s3.webp",
-    icon: "/assets/img/icons/construction.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M20 21H4a2 2 0 01-2-2V9h20v10a2 2 0 01-2 2zm0-12H4V5a2 2 0 012-2h12a2 2 0 012 2v4z"/>
+      </svg>
+    ),
     href: "/services/maintenance",
   },
   {
-    title: "Warehouse Security System",
+    title: "Warehouse SecuritySystem",
     image: "/assets/img/case-study/s5.webp",
-    icon: "/assets/img/icons/warehouse.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M3 21V8l9-6 9 6v13H3zm9-15L5 9.74V19h14V9.74L12 6z"/>
+      </svg>
+    ),
     href: "/services/alarm",
   },
   {
     title: "Retail Security",
     image: "/assets/img/blog/retail.jpg",
-    icon: "/assets/img/icons/mall.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M3 4h18v2H3V4zm2 4h14l1.5 12h-17L5 8zm7 2a2 2 0 100 4 2 2 0 000-4z"/>
+      </svg>
+    ),
     href: "/services/facility",
   },
   {
     title: "Event Security",
     image: "/assets/img/blog/event security.jpg",
-    icon: "/assets/img/icons/red-carpet.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M12 2l4 8h8l-6 6 2 8-8-5-8 5 2-8-6-6h8z"/>
+      </svg>
+    ),
     href: "/services/emergery",
   },
   {
     title: "K9 Security",
     image: "/assets/img/case-study/s1.webp",
-    icon: "/assets/img/icons/police.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M12 4C9.79 4 8 5.79 8 8v2H6a2 2 0 00-2 2v6h2v2h12v-2h2v-6a2 2 0 00-2-2h-2V8c0-2.21-1.79-4-4-4z"/>
+      </svg>
+    ),
     href: "/services/consultation",
   },
   {
     title: "Gatehouse Security",
     image: "/assets/img/case-study/s6.webp",
-    icon: "/assets/img/icons/security-gate.png",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="50" height="50">
+        <path d="M4 20V8l8-5 8 5v12H4zm8-13l-6 4v9h12v-9l-6-4z"/>
+      </svg>
+    ),
     href: "/services/technology",
   },
 ];
+
 
 export default function ServicesSlider() {
   const swiperRef = useRef(null);
 
   return (
-    <section className="section-padding2 pt-20 pb-16" id="services" style={{ backgroundColor: '#d3d3d3ff'}}>
-      <div className="container mx-auto px-6 lg:px-12 relative">
+    <section className="section-padding2 pt-20 pb-16" id="services" style={{marginTop:"70px"}}>
+      <div className="container mx-auto px-4 lg:px-6 relative">
         <div className="row">
           <div className="col-md-4 m-auto">
             <div className="heading2 text-center">
-              <small data-aos="fade-up" data-aos-duration={600} className="heading-top">
-                <img src="/assets/img/icons/hands.svg" alt="" />
-                Integrated Security Services
-              </small>
+              
               <h2 data-aos="fade-up" data-aos-duration={800} className="text-gray-800">
                 <span className="text-blue-600">Our</span> Services
               </h2>
@@ -85,7 +116,7 @@ export default function ServicesSlider() {
         <div className="mt-12 relative">
           <Swiper
             modules={[Autoplay, Navigation]}
-            spaceBetween={24}
+            spaceBetween={10}
             slidesPerView={1}
             navigation={{
               nextEl: '.swiper-button-next-custom',
@@ -99,10 +130,10 @@ export default function ServicesSlider() {
             loop={true}
             speed={800}
             breakpoints={{
-              640: { slidesPerView: 1, spaceBetween: 20 },
-              768: { slidesPerView: 2, spaceBetween: 24 },
-              1024: { slidesPerView: 3, spaceBetween: 28 },
-              1280: { slidesPerView: 4, spaceBetween: 32 },
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
             }}
             className="services-swiper"
             onSwiper={(swiper) => {
@@ -123,27 +154,18 @@ export default function ServicesSlider() {
                       />
                     </div>
                     
-                    {/* Content overlay - positioned in center */}
-                    <div className="absolute inset-0 flex flex-col justify-center items-center z-20 p-6 service-content">
-                      {/* Icon - using image icon (smaller size) */}
-                      <div className="service-icon w-10 h-10 mb-10 transform transition-all duration-500 flex items-center justify-center">
-                        <Image 
-                          src={service.icon} 
-                          alt={service.title} 
-                          width={48} 
-                          height={48} 
-                          className="transition-all duration-500"
-                        />
-                      </div>
-                      
-                      {/* Title (larger text) */}
-                      <h3 className="service-title text-2xl font-bold text-center leading-tight transition-colors duration-300 text-white">
-                        {service.title}
-                      </h3>
-                      
-                      {/* Hover indicator */}
-                      <div className="service-indicator mt-4 h-0.5 w-12 bg-white rounded-full opacity-0 transition-all duration-500 transform translate-y-4"></div>
+                    {/* Content overlay - aligned to bottom-left */}
+                    <div className="absolute inset-0 flex flex-col justify-end z-20 p-6 service-content ml-3" style={{marginLeft:"20px"}}>
+                    {/* Icon above text */}
+                    <div className="service-icon w-10 h-10 mb-3 mt-3 flex items-center justify-center bg-transparent">
+                    {service.icon}
                     </div>
+                    {/* Title at bottom-left */}
+                    <h3 className="service-title text-lg font-bold text-white leading-tight">
+                        {service.title.replace(/ /g, "\n")}
+                    </h3>
+                    </div>
+
                   </div>
                 </Link>
               </SwiperSlide>
@@ -156,8 +178,8 @@ export default function ServicesSlider() {
               <Image 
                 src="/assets/img/icons/back.png" 
                 alt="Previous" 
-                width={50} 
-                height={50} 
+                width={20} 
+                height={20} 
                 className="hover:opacity-80 transition-opacity"
               />
             </button>
@@ -165,8 +187,8 @@ export default function ServicesSlider() {
               <Image 
                 src="/assets/img/icons/next.png" 
                 alt="Next" 
-                width={50} 
-                height={50} 
+                width={20} 
+                height={20} 
                 className="hover:opacity-80 transition-opacity"
               />
             </button>
@@ -179,7 +201,7 @@ export default function ServicesSlider() {
           cursor: pointer;
           will-change: transform;
           border-radius: 1rem;
-          height: 320px;
+          height: 270px;
         }
         
         .services-swiper {
@@ -193,33 +215,52 @@ export default function ServicesSlider() {
         
         /* Service card image */
         .service-card .service-image-container img {
-          transition: all 0.5s ease;
-          border-radius: 1rem;
+          opacity: 1;
+  transition: opacity 0.6s ease-in-out; /* smooth fade */
+  border-radius: 1rem;
         }
         
-        /* Hide image completely on hover */
-        .service-card:hover .service-image-container img {
-          opacity: 0;
-          transform: scale(1.1);
-        }
+        .service-card:hover .service-image-container :global(img) {
+  opacity: 0;
+  pointer-events: none;
+}
         
         /* Slight dark overlay on image only (not affecting text) */
         .service-card .service-image-container::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
-          border-radius: 1rem;
-          z-index: 10;
-          transition: all 0.5s ease;
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 1) 0%,   /* very dark at bottom */
+                rgba(0, 0, 0, 0.2) 40%,  /* mid-dark lower */
+                rgba(0, 0, 0, 0.1) 70%,  /* lighter */
+                rgba(0, 0, 0, 0) 100%   /* transparent at top */
+            );
+            border-radius: 1rem;
+            z-index: 2;
+            transition: background 0.5s ease-in-out;
         }
         
+        /* Next.js puts the img inside a span — fade it out */
+            .service-image-container :global(img) {
+            opacity: 1;
+            transition: opacity 0.6s ease-in-out;
+            border-radius: 1rem;
+            }
+
+
+
         /* Hover effect for service card - golden gradient */
+
         .service-card:hover .service-image-container::before {
-          background: linear-gradient(135deg, 
-            rgba(253, 197, 26, 0.95) 0%, 
-            rgba(253, 197, 26, 0.7) 50%, 
-            rgba(253, 197, 26, 0.5) 100%);
+          background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 1) 0%,   /* keep dark bottom for text visibility */
+                rgba(0, 0, 0, 0.5) 40%,  /* strong golden */
+                rgba(253,197,26, 0.7) 70%,  /* fade */
+                rgba(253,197,26,1) 100%  /* light top */
+            );
         }
         
         /* Hover border effect */
@@ -241,36 +282,37 @@ export default function ServicesSlider() {
         
         /* Enhanced content styling for better visibility */
         .service-icon {
-          filter: drop-shadow(0 3px 6px rgba(0,0,0,0.7));
+          filter: drop-shadow(0 3px 6px rgba(21, 21, 21, 0.7));
         }
         
         .service-title {
           filter: drop-shadow(0 3px 6px rgba(0,0,0,0.8));
           text-shadow: 0 2px 8px rgba(0,0,0,0.9);
           font-weight: 700;
+          white-space: pre-line;     /* preserve line breaks */
+  display: block;
         }
         
         /* Icons are white by default with stronger contrast */
         .service-icon img {
           filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.7));
+          background: transparent !important;
         }
         
         /* Change to black on hover */
         .service-card:hover .service-content {
           color: black;
         }
-        
-        .service-card:hover .service-icon img {
-          filter: brightness(0) drop-shadow(0 2px 4px rgba(0,0,0,0.3)) !important;
+        .service-content {
+        position: relative;
+        z-index: 5; /* keep text & icons above the overlay */
         }
+        
         
         .service-card:hover .service-indicator {
           background: black;
         }
         
-        .service-card:hover .service-icon {
-          transform: scale(1.2);
-        }
         
         .service-card:hover .service-indicator {
           opacity: 1;
@@ -356,7 +398,7 @@ export default function ServicesSlider() {
         }
         
         .service-card:hover {
-          animation: slideInUp 0.3s ease-out;
+          /*animation: slideInUp 0.3s ease-out;*/
         }
         
         /* Smooth scroll behavior */

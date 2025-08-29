@@ -28,7 +28,7 @@ export default function Page() {
                 // social={{ youtube: "#", instagram: "#", linkedin: "#" }}
                 />
                 
-                <About />
+                
                 <ServicesSlider />
                 <IndustrySection/>
                  <About />
