@@ -5278,9 +5278,10 @@ img.service-shape1 {
 
 .service-content h3 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 34px;
-  color: #09120E;
+  color: #ffffff;
+  margin-top: 90px;
 }
 .service-content p {
   font-weight: 500;

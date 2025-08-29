@@ -11,6 +11,7 @@ import Testimonial from "@/components/homepages/home1/Testimonial"
 import Welcome from "@/components/homepages/home1/Welcome"
 import HeroBanner from "@/components/homepages/home1/HeroBanner";
 import ServicesSlider from "@/components/homepages/home1/Services";
+import IndustrySection from "@/components/homepages/home1/industry";
 
 export default function Page() {
 
@@ -29,6 +30,7 @@ export default function Page() {
                 
                 <About />
                 <ServicesSlider />
+                <IndustrySection/>
                  <About />
                 <CaseStudy />
                 <About2 />
