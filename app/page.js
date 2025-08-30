@@ -31,14 +31,10 @@ export default function Page() {
                     ctaHref="/contact-us"
                 />
 
-                <ServicesSlider />
+                
                 <Gallery4 />
                 <IndustrySection/>
-                 <About />
-                <CaseStudy />
-                <About2 />
-                <Testimonial />
-                <Blog />
+                 
                 <Subscribe />
             </Layout>
         </>
