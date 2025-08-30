@@ -9,7 +9,7 @@ import Subscribe from "@/components/homepages/home1/Subscribe"
 import TaxBusiness from "@/components/homepages/home1/TaxBusiness"
 import Testimonial from "@/components/homepages/home1/Testimonial"
 import Welcome from "@/components/homepages/home1/Welcome"
-import HeroBanner from "@/components/homepages/home1/HeroBanner";
+import { Hero } from "@/components/ui/hero-1";
 import ServicesSlider from "@/components/homepages/home1/Services";
 import IndustrySection from "@/components/homepages/home1/industry";
 import Gallery4 from "@/components/ui/gallery4";
@@ -23,13 +23,12 @@ export default function Page() {
         <>
 
             <Layout headerStyle={1} footerStyle={1}>
-                <HeroBanner
-                // optional overrides
-                // titleLines={["Security.", "Cleaning.", "Maintenance."]}
-                // kicker="Integrated Business Solutions"
-                // cta={{ label: "Contact Us", href: "/contact" }}
-                // image="/assets/hero/staff-triplet.png"
-                // social={{ youtube: "#", instagram: "#", linkedin: "#" }}
+                <Hero 
+                    title="Professional Security Guards & Services in Melbourne"
+                    subtitle="Trusted security solutions across Melbourne. Professional guards, mobile patrol, rapid response - keeping your business, property and people safe 24/7."
+                    eyebrow="Metro Guards Australia"
+                    ctaLabel="Contact Us Now"
+                    ctaHref="/contact-us"
                 />
 
                 <ServicesSlider />

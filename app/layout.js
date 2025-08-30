@@ -11,6 +11,7 @@ import "public/assets/css/plugins/nice-select.css"
 import "public/assets/css/plugins/fonts.css"
 import "public/assets/css/master.css"
 import "public/assets/css/h4-master.css"
+import "./dashboard/globals.css"
 import TawkLoader from "@/components/TawkLoader";
 
 

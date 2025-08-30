@@ -1,9 +1,19 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req) {
   try {
-    const { searchParams } = new URL(req.url);
+    // Handle both runtime and static generation
+    let searchParams;
+    try {
+      const url = new URL(req.url);
+      searchParams = url.searchParams;
+    } catch (error) {
+      // During static generation, req.url might not be available
+      searchParams = new URLSearchParams();
+    }
 
     const limit = Math.max(1, Math.min(50, Number(searchParams.get("limit") || 12)));
     const page = Math.max(1, Number(searchParams.get("page") || 1));
