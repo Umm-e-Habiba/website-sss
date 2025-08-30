@@ -1,7 +1,24 @@
 export default function Subscribe() {
     return (
         <>
-            <div className="subscribe2 bg7 section-padding">
+            <div className="subscribe2 section-padding" style={{
+                position: 'relative',
+                zIndex: 2,
+                background: 'url("/assets/img/bg/security img.webp") no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    content: '""',
+                    height: '100%',
+                    width: '100%',
+                    left: 0,
+                    top: 0,
+                    background: '#09120E',
+                    opacity: 0.7,
+                    zIndex: -1
+                }}></div>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6">

@@ -81,62 +81,126 @@ const data = [
 
 const Gallery4 = ({ title = "Our Security Services", description = "Discover our comprehensive range of professional security services designed to protect your business, events, and properties across Melbourne with cutting-edge technology and experienced personnel.", items = data }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollPrev, setCanScrollPrev] = useState(true);
   const [canScrollNext, setCanScrollNext] = useState(true);
   const [isClient, setIsClient] = useState(false);
   const [autoSlideEnabled, setAutoSlideEnabled] = useState(true);
+  const [screenWidth, setScreenWidth] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [shouldDisableTransition, setShouldDisableTransition] = useState(false);
+
+  // Helper function to get items per view and slide percentage
+  const getSlideConfig = () => {
+    if (!isClient || screenWidth === 0) return { itemsPerView: 4, slidePercentage: 25 };
+    
+    // Small screens (mobile) - show only 1 item at a time
+    if (screenWidth <= 640) return { itemsPerView: 1, slidePercentage: 100 };
+    // Medium screens (small tablets) - show 2 items
+    if (screenWidth <= 768) return { itemsPerView: 2, slidePercentage: 50 };
+    // Large tablets - show 3 items
+    if (screenWidth <= 1024) return { itemsPerView: 3, slidePercentage: 33.333 };
+    // Desktop - show 4 items
+    return { itemsPerView: 4, slidePercentage: 25 };
+  };
+
+  // Create extended items array for infinite loop
+  const getExtendedItems = () => {
+    const { itemsPerView } = getSlideConfig();
+    // Add enough items at the beginning and end to create seamless loop
+    const clonesToAdd = Math.max(itemsPerView, 2);
+    const startClones = items.slice(-clonesToAdd);
+    const endClones = items.slice(0, clonesToAdd);
+    return [...startClones, ...items, ...endClones];
+  };
+
+  const extendedItems = getExtendedItems();
+  const { itemsPerView } = getSlideConfig();
+  const clonesToAdd = Math.max(itemsPerView, 2);
 
   useEffect(() => {
-    setCanScrollPrev(currentSlide > 0);
-    const maxSlide = Math.max(0, items.length - 4);
-    setCanScrollNext(currentSlide < maxSlide);
-  }, [currentSlide, items.length]);
+    setCanScrollPrev(true);
+    setCanScrollNext(true);
+  }, [currentSlide, items.length, screenWidth, isClient]);
 
   useEffect(() => {
     setIsClient(true);
+    setScreenWidth(window.innerWidth);
+    
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      setCurrentSlide(clonesToAdd); // Reset to first real slide on resize
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Auto-slide functionality
+  // Initialize current slide to first real item (after clones)
+  useEffect(() => {
+    if (isClient && currentSlide === 0) {
+      setCurrentSlide(clonesToAdd);
+    }
+  }, [isClient, clonesToAdd]);
+
+  // Auto-slide functionality with infinite loop
   useEffect(() => {
     if (!autoSlideEnabled || !isClient) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide(prev => {
-        // For 6 items showing 4 at a time, we can slide 3 positions (0, 1, 2)
-        const maxSlide = Math.max(0, items.length - 4);
-        if (prev >= maxSlide) {
-          return 0; // Reset to beginning
-        }
-        return prev + 1;
-      });
+      setCurrentSlide(prev => prev + 1); // Move one image at a time
     }, 4500); // Change slide every 4.5 seconds
 
     return () => clearInterval(interval);
-  }, [autoSlideEnabled, isClient, items.length]);
+  }, [autoSlideEnabled, isClient]);
+
+  // Handle infinite loop transitions
+  useEffect(() => {
+    if (!isClient) return;
+
+    // If we're at the end clones, jump to the real beginning
+    if (currentSlide >= items.length + clonesToAdd) {
+      setTimeout(() => {
+        setShouldDisableTransition(true);
+        setCurrentSlide(clonesToAdd);
+        setTimeout(() => setShouldDisableTransition(false), 50);
+      }, 800); // Wait for current transition to complete
+    }
+    // If we're at the beginning clones, jump to the real end
+    else if (currentSlide < clonesToAdd) {
+      setTimeout(() => {
+        setShouldDisableTransition(true);
+        setCurrentSlide(items.length + clonesToAdd - 1);
+        setTimeout(() => setShouldDisableTransition(false), 50);
+      }, 800); // Wait for current transition to complete
+    }
+  }, [currentSlide, isClient, items.length, clonesToAdd]);
+
+  // Reset transitioning state after transitions
+  useEffect(() => {
+    if (isTransitioning) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 800); // Match transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning]);
 
   const scrollPrev = () => {
-    setAutoSlideEnabled(false); // Pause auto-slide when user interacts
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-    // Re-enable auto-slide after 10 seconds
+    setAutoSlideEnabled(false);
+    setCurrentSlide(prev => prev - 1); // Move one image at a time
     setTimeout(() => setAutoSlideEnabled(true), 10000);
   };
 
   const scrollNext = () => {
-    setAutoSlideEnabled(false); // Pause auto-slide when user interacts
-    const maxSlide = Math.max(0, items.length - 4);
-    if (currentSlide < maxSlide) {
-      setCurrentSlide(currentSlide + 1);
-    }
-    // Re-enable auto-slide after 10 seconds
+    setAutoSlideEnabled(false);
+    setCurrentSlide(prev => prev + 1); // Move one image at a time
     setTimeout(() => setAutoSlideEnabled(true), 10000);
   };
 
   const scrollTo = (index) => {
-    setAutoSlideEnabled(false); // Pause auto-slide when user interacts
-    setCurrentSlide(index);
-    // Re-enable auto-slide after 10 seconds
+    setAutoSlideEnabled(false);
+    // Adjust index to account for clones
+    setCurrentSlide(index + clonesToAdd);
     setTimeout(() => setAutoSlideEnabled(true), 10000);
   };
 
@@ -199,12 +263,12 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
             <div 
               className="gallery-slides-container"
               style={{
-                transform: `translateX(-${currentSlide * 25}%)`,
-                transition: 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                transform: `translateX(-${currentSlide * getSlideConfig().slidePercentage}%)`,
+                transition: shouldDisableTransition ? 'none' : 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
               }}
             >
-              {items.map((item, index) => (
-                <div key={item.id} className="gallery-item">
+              {extendedItems.map((item, index) => (
+                <div key={`${item.id}-${index}`} className="gallery-item">
                   <a href={item.href} className="gallery-card-link">
                     <div className="gallery-card">
                       <Image
@@ -237,14 +301,18 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           </div>
 
           <div className="gallery-indicators">
-            {Array.from({ length: Math.ceil(items.length / 4) }).map((_, index) => (
-              <button
-                key={index}
-                className={`indicator ${Math.floor(currentSlide / 4) === index ? "active" : ""}`}
-                onClick={() => scrollTo(index * 4)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+            {Array.from({ length: items.length }).map((_, index) => {
+              // Calculate the real current slide index (excluding clones)
+              const realCurrentIndex = ((currentSlide - clonesToAdd) % items.length + items.length) % items.length;
+              return (
+                <button
+                  key={index}
+                  className={`indicator ${realCurrentIndex === index ? "active" : ""}`}
+                  onClick={() => scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
@@ -258,6 +326,10 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           max-width: 1320px;
           margin: 0 auto;
           padding: 0 20px;
+        }
+
+        .gallery-carousel-wrapper .container {
+          padding: 0; /* Remove padding for carousel wrapper */
         }
 
         .gallery-header {
@@ -329,22 +401,66 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
         .gallery-carousel-track {
           max-width: 1320px;
           margin: 0 auto;
-          padding: 0 15px;
+          padding: 0 20px;
           overflow: hidden;
         }
 
         .gallery-slides-container {
-          display: flex;
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: 100%;
           will-change: transform;
         }
 
-        .gallery-item {
-          flex: 0 0 25%;
-          padding-right: 15px;
+        @media (max-width: 640px) {
+          .gallery-slides-container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 100%;
+            gap: 0;
+          }
         }
 
-        .gallery-item:last-child {
-          padding-right: 0;
+        .gallery-item {
+          width: 100%;
+          min-width: 0;
+        }
+
+        @media (min-width: 641px) {
+          .gallery-slides-container {
+            display: flex;
+            gap: 15px;
+            padding: 0;
+          }
+          
+          .gallery-item {
+            flex: 0 0 calc(25% - 11.25px); /* Subtract gap proportionally */
+            min-width: 0;
+          }
+
+          .gallery-card {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+          }
+        }
+
+        @media (min-width: 641px) and (max-width: 768px) {
+          .gallery-item {
+            flex: 0 0 calc(50% - 7.5px); /* 2 items per view */
+          }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .gallery-item {
+            flex: 0 0 calc(33.333% - 10px); /* 3 items per view */
+          }
+        }
+
+        @media (min-width: 1025px) {
+          .gallery-item {
+            flex: 0 0 calc(25% - 11.25px); /* 4 items per view */
+          }
         }
 
         .gallery-card-link {
@@ -540,9 +656,14 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-carousel-track {
             max-width: 1200px;
           }
-          
+
           .gallery-item {
-            padding-right: 12px;
+            flex: 0 0 25%;
+            margin-right: 16px;
+          }
+
+          .gallery-item:last-child {
+            margin-right: 0;
           }
         }
 
@@ -550,10 +671,14 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-carousel-track {
             max-width: 900px;
           }
-          
+
           .gallery-item {
             flex: 0 0 33.333%;
-            padding-right: 12px;
+            margin-right: 15px;
+          }
+
+          .gallery-item:last-child {
+            margin-right: 0;
           }
           
           .gallery-card {
@@ -585,10 +710,14 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-carousel-track {
             padding: 0 10px;
           }
-          
+
           .gallery-item {
             flex: 0 0 50%;
-            padding-right: 15px;
+            margin-right: 12px;
+          }
+
+          .gallery-item:last-child {
+            margin-right: 0;
           }
 
           .gallery-card {
@@ -628,22 +757,39 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
             padding: 0 16px;
           }
 
+          .gallery-section {
+            padding: 60px 0;
+          }
+
+          .gallery-header {
+            margin-bottom: 30px;
+            gap: 12px;
+          }
+
           .gallery-title {
             font-size: 1.75rem;
             font-weight: 700;
+            line-height: 1.2;
           }
           
           .gallery-description {
             font-size: 0.9rem;
+            line-height: 1.5;
+          }
+
+          .gallery-carousel-track {
+            padding: 0 35px;
           }
 
           .gallery-item {
-            flex: 0 0 100%;
-            padding-right: 0;
+            width: 100%;
           }
 
           .gallery-card {
-            height: 300px;
+            margin: 0 10px;
+            padding: 10px;
+            height: 320px;
+            box-sizing: border-box;
           }
 
           .gallery-card-content {
@@ -651,25 +797,296 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           }
 
           .gallery-card-icon {
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
+            top: 15px;
+            left: 15px;
+          }
+
+          .gallery-card-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .gallery-card-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.3;
+          }
+
+          .gallery-card-description {
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            -webkit-line-clamp: 3;
+          }
+          
+          .gallery-read-more {
+            font-size: 0.8rem;
+          }
+
+          .gallery-indicators {
+            margin-top: 25px;
+            gap: 6px;
+          }
+
+          .indicator {
+            height: 6px;
+            width: 6px;
+          }
+        }
+
+        /* Mobile Large (480px - 639px) */
+        @media (max-width: 639px) and (min-width: 480px) {
+          .gallery-section {
+            padding: 50px 0;
+          }
+
+          .gallery-card {
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .gallery-header {
+            margin-bottom: 25px;
+            gap: 10px;
+          }
+
+          .gallery-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+          }
+          
+          .gallery-description {
+            font-size: 0.85rem;
+            line-height: 1.5;
+          }
+
+          .gallery-carousel-track {
+            padding: 0 30px;
+          }
+
+          .gallery-item {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+
+          .gallery-card {
+            margin: 0 9px;
+            padding: 10px;
+            height: 300px;
+            box-sizing: border-box;
+          }
+
+          .gallery-card-content {
+            padding: 22px 18px 18px 18px;
+          }
+
+          .gallery-card-icon {
+            width: 38px;
+            height: 38px;
             top: 12px;
             left: 12px;
           }
 
+          .gallery-card-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
           .gallery-card-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: 8px;
+            line-height: 1.3;
           }
 
           .gallery-card-description {
             font-size: 0.75rem;
             margin-bottom: 12px;
+            line-height: 1.4;
+            -webkit-line-clamp: 3;
           }
           
           .gallery-read-more {
             font-size: 0.75rem;
+          }
+        }
+
+        /* Mobile (360px - 479px) */
+        @media (max-width: 479px) and (min-width: 360px) {
+          .container {
+            padding: 0 12px;
+          }
+
+          .gallery-section {
+            padding: 40px 0;
+          }
+
+          .gallery-header {
+            margin-bottom: 20px;
+            gap: 8px;
+          }
+
+          .gallery-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+          }
+          
+          .gallery-description {
+            font-size: 0.8rem;
+            line-height: 1.5;
+          }
+
+          .gallery-carousel-track {
+            padding: 0 25px;
+          }
+
+          .gallery-item {
+            width: 100%;
+          }
+
+          .gallery-card {
+            margin: 0 7.5px;
+            padding: 10px;
+            height: 280px;
+            box-sizing: border-box;
+          }
+
+          .gallery-card-content {
+            padding: 20px 16px 16px 16px;
+          }
+
+          .gallery-card-icon {
+            width: 36px;
+            height: 36px;
+            top: 10px;
+            left: 10px;
+          }
+
+          .gallery-card-icon svg {
+            width: 16px;
+            height: 16px;
+          }
+
+          .gallery-card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.3;
+          }
+
+          .gallery-card-description {
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            -webkit-line-clamp: 2;
+          }
+          
+          .gallery-read-more {
+            font-size: 0.7rem;
+          }
+
+          .gallery-indicators {
+            margin-top: 20px;
+            gap: 4px;
+          }
+
+          .indicator {
+            height: 5px;
+            width: 5px;
+          }
+        }
+
+        /* Mobile Small (Below 360px) */
+        @media (max-width: 359px) {
+          .container {
+            padding: 0 10px;
+          }
+
+          .gallery-section {
+            padding: 35px 0;
+          }
+
+          .gallery-header {
+            margin-bottom: 18px;
+            gap: 6px;
+          }
+
+          .gallery-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+          }
+          
+          .gallery-description {
+            font-size: 0.75rem;
+            line-height: 1.5;
+          }
+
+          .gallery-carousel-track {
+            padding: 0 20px;
+          }
+
+          .gallery-item {
+            width: 100%;
+          }
+
+          .gallery-card {
+            margin: 0 6px;
+            padding: 10px;
+            height: 260px;
+            box-sizing: border-box;
+          }
+
+          .gallery-card-content {
+            padding: 18px 14px 14px 14px;
+          }
+
+          .gallery-card-icon {
+            width: 32px;
+            height: 32px;
+            top: 8px;
+            left: 8px;
+          }
+
+          .gallery-card-icon svg {
+            width: 14px;
+            height: 14px;
+          }
+
+          .gallery-card-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.2;
+          }
+
+          .gallery-card-description {
+            font-size: 0.65rem;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            -webkit-line-clamp: 2;
+          }
+          
+          .gallery-read-more {
+            font-size: 0.65rem;
+          }
+
+          .gallery-indicators {
+            margin-top: 18px;
+            gap: 3px;
+          }
+
+          .indicator {
+            height: 4px;
+            width: 4px;
           }
         }
 

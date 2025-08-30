@@ -14,6 +14,9 @@ import ServicesSlider from "@/components/homepages/home1/Services";
 import IndustrySection from "@/components/homepages/home1/industry";
 import Gallery4 from "@/components/ui/gallery4";
 import { MarqueeDemo } from "@/components/ui/marquee-demo";
+import Awareness from "@/components/homepages/home1/Awareness";
+import Location from "@/components/homepages/home1/Location";
+import FindMore from "@/components/homepages/home1/FindMore";
 
 
 
@@ -35,6 +38,9 @@ export default function Page() {
                 <Gallery4 />
                 <MarqueeDemo />
                 <IndustrySection/>
+                <Awareness />
+                <Location />
+                <FindMore />
                  
                 <Subscribe />
             </Layout>

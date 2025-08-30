@@ -91,7 +91,7 @@ export function Hero({
           sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-1500 ease-out ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
-          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '25px' }}
+          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '60px' }}
         >
           {title}
         </h1>
@@ -102,7 +102,7 @@ export function Hero({
           transition-all duration-1300 ease-out delay-400 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
           }`}
-          style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+          style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)', marginTop: '8px' }}
         >
           {subtitle}
         </p>
@@ -111,7 +111,8 @@ export function Hero({
         {ctaLabel && (
           <div className={`flex justify-center transition-all duration-1200 ease-out delay-700 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}>
+          }`}
+          style={{ marginTop: '2rem' }}>
             <Button
               asChild
               className="w-fit md:w-52 font-geist tracking-tighter text-center text-lg
@@ -120,7 +121,9 @@ export function Hero({
               transition-all duration-300 ease-in-out transform
               hover:shadow-lg"
               style={{ 
-                transform: `translateY(${scrollY * 0.1}px)` 
+                height: '56px',
+                paddingTop: '16px',
+                paddingBottom: '16px'
               }}
             >
               <a href={ctaHref} className="flex items-center gap-2">
