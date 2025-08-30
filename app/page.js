@@ -13,6 +13,7 @@ import { Hero } from "@/components/ui/hero-1";
 import ServicesSlider from "@/components/homepages/home1/Services";
 import IndustrySection from "@/components/homepages/home1/industry";
 import Gallery4 from "@/components/ui/gallery4";
+import { MarqueeDemo } from "@/components/ui/marquee-demo";
 
 
 
@@ -31,8 +32,8 @@ export default function Page() {
                     ctaHref="/contact-us"
                 />
 
-                
                 <Gallery4 />
+                <MarqueeDemo />
                 <IndustrySection/>
                  
                 <Subscribe />

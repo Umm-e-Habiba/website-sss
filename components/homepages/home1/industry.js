@@ -1,317 +1,188 @@
 "use client";
 
+import { Plane, Building2, GraduationCap, Landmark } from "lucide-react"
+
 const industries = [
   {
     title: "Aviation &\nMaritime",
-    icon: (
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-        <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-        <line x1="12" y1="22.08" x2="12" y2="12"/>
-      </svg>
-    )
+    icon: Plane,
   },
   {
     title: "Commercial\nProperty",
-    icon: (
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="3" y="3" width="18" height="18" rx="2"/>
-        <rect x="7" y="5" width="2" height="14"/>
-        <rect x="11" y="5" width="2" height="14"/>
-        <rect x="15" y="5" width="2" height="14"/>
-        <rect x="5" y="7" width="14" height="2"/>
-        <rect x="5" y="11" width="14" height="2"/>
-        <rect x="5" y="15" width="14" height="2"/>
-      </svg>
-    )
+    icon: Building2,
   },
   {
     title: "Education",
-    icon: (
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-      </svg>
-    )
+    icon: GraduationCap,
   },
   {
     title: "Government",
-    icon: (
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <rect x="4" y="6" width="16" height="10" rx="2"/>
-        <path d="M12 2L4 6h16z"/>
-        <circle cx="8" cy="11" r="1"/>
-        <circle cx="12" cy="11" r="1"/>
-        <circle cx="16" cy="11" r="1"/>
-        <path d="M7 16v2"/>
-        <path d="M12 16v2"/>
-        <path d="M17 16v2"/>
-      </svg>
-    )
-  }
-];
+    icon: Landmark,
+  },
+]
 
-export default function IndustrySection() {
+export default function Home() {
   return (
-    <section className="industry-section">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="section-title">INDUSTRY</h2>
+    <main className="min-h-screen bg-background p-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="industry-header">
+          <div className="industry-header-content">
+            <h2 className="industry-title">MASG operates in your industry</h2>
+            <p className="industry-description">Find out how MASG operates in your industry with specialized security solutions tailored to meet the unique challenges and requirements of different sectors.</p>
+          </div>
         </div>
-        
-        <div className="industry-cards-container">
-          {industries.map((industry, index) => (
-            <div key={index} className="industry-card">
-              <div className="industry-icon">
-                {industry.icon}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industries.map((industry, index) => {
+            const IconComponent = industry.icon
+            return (
+              <div
+                key={index}
+                className="industry-card aspect-square flex flex-col items-center justify-center p-8 rounded-lg cursor-pointer"
+                style={{ backgroundColor: "#1e2247" }}
+              >
+                <div className="industry-overlay"></div>
+                <IconComponent className="w-16 h-16 text-white mb-6 relative z-20" strokeWidth={1.5} />
+                <h3 className="text-white text-xl font-semibold text-center leading-tight whitespace-pre-line relative z-20">
+                  {industry.title}
+                </h3>
               </div>
-              <h3 className="industry-title">
-                {industry.title}
-                <span className="underline-animation"></span>
-              </h3>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
       <style jsx>{`
-        .industry-section {
-          padding: 80px 0;
-          background-color: #ffffff;
+        .industry-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 60px;
         }
-        
-        .section-title {
+
+        .industry-header-content {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .industry-title {
           font-size: 3rem;
           font-weight: 700;
+          margin: 0;
           color: #333333;
           letter-spacing: 3px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .industry-description {
+          max-width: 600px;
+          color: #666666;
           margin: 0;
+          line-height: 1.6;
+          font-size: 1.1rem;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        
-        .industry-cards-container {
-          display: flex;
-          justify-content: center;
-          gap: 30px;
-          max-width: 1400px;
-          margin: 0 auto;
-          padding: 0 20px;
-          flex-wrap: wrap;
-        }
-        
+
+        /* Industry card styles */
         .industry-card {
-          background: linear-gradient(135deg, #1f1f25ff 0%, #1e2247 100%);
-          color: white;
-          padding: 40px 30px;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          width: 280px;
-          height: 280px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-shrink: 0;
-          border-radius: 0px;
           position: relative;
           overflow: hidden;
-          margin-top: 50px;
+          transition: transform 0.3s ease;
         }
-        
+
         .industry-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
-        
-        .industry-icon {
-          margin-bottom: 25px;
-          opacity: 0.95;
-          transition: opacity 0.3s ease;
-        }
-        
-        .industry-card:hover .industry-icon {
-          opacity: 1;
-        }
-        
-        .industry-icon svg {
-          width: 70px;
-          height: 70px;
-          stroke-width: 1.5;
-        }
-        
-        .industry-title {
-          font-size: 1.4rem;
-          font-weight: 600;
-          margin: 0;
-          line-height: 1.4;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          white-space: pre-line;
-          position: relative;
-          display: inline-block;
-          padding-bottom: 5px;
-        }
-        
-        .underline-animation {
+
+        .industry-overlay {
           position: absolute;
+          top: -100%;
+          left: 0;
+          right: 0;
           bottom: 0;
+          background: 
+            radial-gradient(
+              circle at bottom right,
+              rgba(0, 0, 0, 0.7) 0%,
+              rgba(0, 0, 0, 0.4) 30%,
+              rgba(0, 0, 0, 0.1) 50%,
+              transparent 70%
+            ),
+            #fdc51a;
+          transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          z-index: 5;
+          border-radius: 8px;
+        }
+
+        .industry-card:hover .industry-overlay {
+          top: 0;
+        }
+
+        .industry-card h3 {
+          position: relative;
+          text-decoration: none;
+        }
+
+        .industry-card h3::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
           left: 0;
           width: 0;
           height: 2px;
-          background: white;
-          transition: width 0.3s ease;
+          background-color: white;
+          transition: width 0.4s ease;
         }
-        
-        .industry-card:hover .underline-animation {
+
+        .industry-card:hover h3::after {
           width: 100%;
         }
-        
-        /* Responsive design */
-        @media (max-width: 1200px) {
-          .industry-cards-container {
-            gap: 25px;
-          }
-          
-          .industry-card {
-            width: 250px;
-            height: 250px;
-          }
-        }
-        
+
+        /* Responsive design for header */
         @media (max-width: 1024px) {
-          .industry-cards-container {
-            gap: 20px;
-          }
-          
-          .industry-card {
-            width: 220px;
-            height: 220px;
-            padding: 30px 20px;
-          }
-          
-          .industry-icon svg {
-            width: 60px;
-            height: 60px;
-          }
-          
           .industry-title {
-            font-size: 1.2rem;
-          }
-        }
-        
-        @media (max-width: 900px) {
-          .industry-cards-container {
-            gap: 20px;
-          }
-          
-          .industry-card {
-            width: 200px;
-            height: 200px;
-            padding: 25px 15px;
-          }
-          
-          .industry-icon {
-            margin-bottom: 20px;
-          }
-          
-          .industry-icon svg {
-            width: 55px;
-            height: 55px;
-          }
-          
-          .industry-title {
-            font-size: 1.1rem;
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .industry-section {
-            padding: 60px 0;
-          }
-          
-          .section-title {
             font-size: 2.5rem;
+            font-weight: 700;
             letter-spacing: 2px;
           }
           
-          .industry-cards-container {
-            gap: 15px;
-          }
-          
-          .industry-card {
-            width: 180px;
-            height: 180px;
-            padding: 20px 15px;
-          }
-          
-          .industry-icon svg {
-            width: 50px;
-            height: 50px;
-          }
-          
-          .industry-title {
+          .industry-description {
             font-size: 1rem;
           }
-          
-          .underline-animation {
-            height: 1.5px;
-          }
         }
-        
-        @media (max-width: 640px) {
-          .section-title {
-            font-size: 2rem;
+
+        @media (max-width: 768px) {
+          .industry-header {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            gap: 16px;
           }
-          
-          .industry-cards-container {
-            gap: 15px;
-          }
-          
-          .industry-card {
-            width: 160px;
-            height: 160px;
-            padding: 20px 10px;
-          }
-          
-          .industry-icon {
-            margin-bottom: 15px;
-          }
-          
-          .industry-icon svg {
-            width: 45px;
-            height: 45px;
-          }
-          
+
           .industry-title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+          }
+          
+          .industry-description {
             font-size: 0.95rem;
           }
         }
-        
+
         @media (max-width: 480px) {
-          .industry-cards-container {
-            gap: 12px;
-          }
-          
-          .industry-card {
-            width: 140px;
-            height: 140px;
-            padding: 15px 10px;
-          }
-          
-          .industry-icon svg {
-            width: 40px;
-            height: 40px;
-          }
-          
           .industry-title {
-            font-size: 0.9rem;
-            padding-bottom: 3px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
           }
           
-          .underline-animation {
-            height: 1px;
+          .industry-description {
+            font-size: 0.9rem;
           }
         }
       `}</style>
-    </section>
-  );
+    </main>
+  )
 }

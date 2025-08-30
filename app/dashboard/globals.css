@@ -43,6 +43,8 @@
 }
 
 :root {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -78,6 +80,8 @@
 }
 
 .dark {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
@@ -168,6 +172,24 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-33.333333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -192,5 +214,13 @@
   
   .animate-fade-up {
     animation: fade-up 0.6s ease-out forwards !important;
+  }
+  
+  .animate-marquee {
+    animation: marquee var(--duration, 30s) linear infinite !important;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee-reverse var(--duration, 30s) linear infinite !important;
   }
 }
