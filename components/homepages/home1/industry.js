@@ -23,7 +23,7 @@ const industries = [
 
 export default function Home() {
   return (
-    <main className="bg-background px-4 sm:px-6 md:px-8 py-16 sm:py-20">
+    <main className="bg-background px-4 sm:px-6 md:px-8" style={{paddingTop: '80px', paddingBottom: '80px'}}>
       <div className="max-w-7xl mx-auto">
         <div className="industry-header">
           <div className="industry-header-content">

@@ -19,7 +19,7 @@ import Header4 from "./header/Header4"
 import Header5 from "./header/Header5"
 import Header6 from "./header/Header6"
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, mainTitle, subtitle, backgroundImage, children }) {
     const [scroll, setScroll] = useState(0)
     // Moblile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -49,7 +49,12 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
             <MobileMenu isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />
 
-            {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+            {breadcrumbTitle && <Breadcrumb 
+                breadcrumbTitle={breadcrumbTitle} 
+                mainTitle={mainTitle}
+                subtitle={subtitle}
+                backgroundImage={backgroundImage}
+            />}
             {children}
 
             {!footerStyle && < Footer1 />}

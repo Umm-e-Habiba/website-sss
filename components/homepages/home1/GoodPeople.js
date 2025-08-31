@@ -13,7 +13,8 @@ export default function GoodPeople() {
     <section 
       className={`goodpeople-section ${isLoaded ? 'loaded' : ''}`}
       style={{
-        padding: '80px 0',
+        paddingTop: '80px',
+        paddingBottom: '0px',
         background: '#ffffff',
         position: 'relative',
         zIndex: 10,
@@ -26,12 +27,14 @@ export default function GoodPeople() {
           {/* Brand Label */}
           <div className="brand-label" style={{ marginBottom: '8px' }}>
             <span className="brand-text" style={{ 
-              fontSize: '1rem', 
-              fontWeight: '600', 
-              color: '#00bcd4', 
-              letterSpacing: '0.5px', 
+              fontSize: '1.8rem', 
+              fontWeight: '700', 
+              color: '#fdc51a', 
+              letterSpacing: '-0.02em', 
               textTransform: 'uppercase',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              display: 'block',
+              margin: '0'
             }}>
               MetroGuards Services Group
             </span>
@@ -70,22 +73,15 @@ export default function GoodPeople() {
             }}>
               Metro Guards has served its clients in Melbourne, Victoria, and its suburbs for years. We have a rigorous procedure for hiring and training our guards. Our highly professional security guards can exceptionally address the safety needs of individual, corporate, institutional, residential, and commercial clients.
             </p>
-            <p className="description-text" style={{
-              fontSize: '1.125rem',
-              lineHeight: '1.7',
-              color: '#666666',
-              margin: '0',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-            }}>
-              We have proven strategies for assessing risks and designing tailored security solutions. We are also your go-to security solution and have a proven record of providing the most result-oriented emergency security services.
-            </p>
+            
           </div>
         </div>
       </div>
 
       <style jsx>{`
         .goodpeople-section {
-          padding: 80px 0;
+          padding-top: 80px;
+          padding-bottom: 0px;
           background: #ffffff;
           position: relative;
           z-index: 10;
@@ -121,12 +117,14 @@ export default function GoodPeople() {
         }
 
         .brand-text {
-          font-size: 1rem;
-          font-weight: 600;
-          color: #00bcd4;
-          letter-spacing: 0.5px;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #fdc51a;
+          letter-spacing: -0.02em;
           text-transform: uppercase;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          display: block;
+          margin: 0;
         }
 
         .main-heading {
@@ -172,7 +170,8 @@ export default function GoodPeople() {
 
         @media (max-width: 1024px) {
           .goodpeople-section {
-            padding: 70px 0;
+            padding-top: 70px;
+            padding-bottom: 0px;
           }
 
           .heading-line {
@@ -187,7 +186,8 @@ export default function GoodPeople() {
 
         @media (max-width: 768px) {
           .goodpeople-section {
-            padding: 60px 0;
+            padding-top: 60px;
+            padding-bottom: 0px;
           }
 
           .goodpeople-content {
@@ -195,7 +195,7 @@ export default function GoodPeople() {
           }
 
           .brand-text {
-            font-size: 0.9rem;
+            font-size: 1.5rem;
           }
 
           .heading-line {
@@ -215,7 +215,8 @@ export default function GoodPeople() {
           }
 
           .goodpeople-section {
-            padding: 50px 0;
+            padding-top: 50px;
+            padding-bottom: 0px;
           }
 
           .goodpeople-content {
@@ -223,7 +224,7 @@ export default function GoodPeople() {
           }
 
           .brand-text {
-            font-size: 0.85rem;
+            font-size: 1.05rem;
           }
 
           .heading-line {
@@ -240,7 +241,8 @@ export default function GoodPeople() {
 
         @media (max-width: 480px) {
           .goodpeople-section {
-            padding: 40px 0;
+            padding-top: 40px;
+            padding-bottom: 0px;
           }
 
           .goodpeople-content {
@@ -248,7 +250,7 @@ export default function GoodPeople() {
           }
 
           .brand-text {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
           }
 
           .heading-line {
@@ -269,7 +271,8 @@ export default function GoodPeople() {
           }
 
           .goodpeople-section {
-            padding: 35px 0;
+            padding-top: 35px;
+            padding-bottom: 0px;
           }
 
           .heading-line {

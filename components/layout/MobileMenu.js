@@ -151,22 +151,13 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
                                     <Link href="/our-values" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Our Values</Link>
                                 </li>
                                 <li style={{ marginBottom: '8px' }}>
-                                    <Link href="/corporate-responsibility" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Corporate Responsibility</Link>
-                                </li>
-                                <li style={{ marginBottom: '8px' }}>
-                                    <Link href="/corporate-social-responsibility" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Corporate Social Responsibility</Link>
-                                </li>
-                                <li style={{ marginBottom: '8px' }}>
-                                    <Link href="/mission-statement" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Mission Statement</Link>
-                                </li>
-                                <li style={{ marginBottom: '8px' }}>
-                                    <Link href="/our-commitments" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Our Commitments</Link>
+                                    <Link href="/mission-statement" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Our Mission</Link>
                                 </li>
                                 <li style={{ marginBottom: '8px' }}>
                                     <Link href="/how-we-thrive" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>How we Thrive</Link>
                                 </li>
                                 <li style={{ marginBottom: '8px' }}>
-                                    <Link href="/faqs" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>FAQ</Link>
+                                    <Link href="/corporate-social-responsibility" onClick={handleMobileMenu} style={{ color: '#666', textDecoration: 'none', fontSize: '14px' }}>Corporate Social Responsibilities</Link>
                                 </li>
                             </ul>
                         </li>
