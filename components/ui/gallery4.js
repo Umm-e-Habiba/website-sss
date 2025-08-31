@@ -80,7 +80,7 @@ const data = [
 ];
 
 const Gallery4 = ({ title = "Our Security Services", description = "Discover our comprehensive range of professional security services designed to protect your business, events, and properties across Melbourne with cutting-edge technology and experienced personnel.", items = data }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(2); // Start with initial clones
   const [canScrollPrev, setCanScrollPrev] = useState(true);
   const [canScrollNext, setCanScrollNext] = useState(true);
   const [isClient, setIsClient] = useState(false);
@@ -88,26 +88,29 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
   const [screenWidth, setScreenWidth] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [shouldDisableTransition, setShouldDisableTransition] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
 
   // Helper function to get items per view and slide percentage
   const getSlideConfig = () => {
     if (!isClient || screenWidth === 0) return { itemsPerView: 4, slidePercentage: 25 };
     
-    // Small screens (mobile) - show only 1 item at a time
-    if (screenWidth <= 640) return { itemsPerView: 1, slidePercentage: 100 };
-    // Medium screens (small tablets) - show 2 items
+    // Small screens (mobile) - show 2 items at a time, slide by 1 item
+    if (screenWidth <= 640) return { itemsPerView: 2, slidePercentage: 50 };
+    // Medium screens (small tablets) - show 2 items, slide by 1 item  
     if (screenWidth <= 768) return { itemsPerView: 2, slidePercentage: 50 };
-    // Large tablets - show 3 items
+    // Large tablets - show 3 items, slide by 1 item
     if (screenWidth <= 1024) return { itemsPerView: 3, slidePercentage: 33.333 };
-    // Desktop - show 4 items
+    // Desktop - show exactly 4 items, slide by 1 item (25% per slide)
     return { itemsPerView: 4, slidePercentage: 25 };
   };
 
   // Create extended items array for infinite loop
   const getExtendedItems = () => {
     const { itemsPerView } = getSlideConfig();
-    // Add enough items at the beginning and end to create seamless loop
-    const clonesToAdd = Math.max(itemsPerView, 2);
+    // On mobile (2 items per view), add fewer clones
+    const clonesToAdd = screenWidth <= 640 ? itemsPerView : Math.max(itemsPerView, 2);
     const startClones = items.slice(-clonesToAdd);
     const endClones = items.slice(0, clonesToAdd);
     return [...startClones, ...items, ...endClones];
@@ -115,7 +118,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
 
   const extendedItems = getExtendedItems();
   const { itemsPerView } = getSlideConfig();
-  const clonesToAdd = Math.max(itemsPerView, 2);
+  const clonesToAdd = screenWidth <= 640 ? itemsPerView : Math.max(itemsPerView, 2);
 
   useEffect(() => {
     setCanScrollPrev(true);
@@ -135,10 +138,10 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Initialize current slide to first real item (after clones)
+  // Initialize current slide to first real item (after clones), slightly left
   useEffect(() => {
-    if (isClient && currentSlide === 0) {
-      setCurrentSlide(clonesToAdd);
+    if (isClient) {
+      setCurrentSlide(clonesToAdd - 0.5); // Shift slightly to the left
     }
   }, [isClient, clonesToAdd]);
 
@@ -147,7 +150,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
     if (!autoSlideEnabled || !isClient) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide(prev => prev + 1); // Move one image at a time
+      setCurrentSlide(prev => prev + 1);
     }, 4500); // Change slide every 4.5 seconds
 
     return () => clearInterval(interval);
@@ -156,6 +159,9 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
   // Handle infinite loop transitions
   useEffect(() => {
     if (!isClient) return;
+
+    const { itemsPerView } = getSlideConfig();
+    const maxSlide = Math.floor((items.length - 1) / itemsPerView) * itemsPerView;
 
     // If we're at the end clones, jump to the real beginning
     if (currentSlide >= items.length + clonesToAdd) {
@@ -169,7 +175,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
     else if (currentSlide < clonesToAdd) {
       setTimeout(() => {
         setShouldDisableTransition(true);
-        setCurrentSlide(items.length + clonesToAdd - 1);
+        setCurrentSlide(maxSlide + clonesToAdd);
         setTimeout(() => setShouldDisableTransition(false), 50);
       }, 800); // Wait for current transition to complete
     }
@@ -187,13 +193,13 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
 
   const scrollPrev = () => {
     setAutoSlideEnabled(false);
-    setCurrentSlide(prev => prev - 1); // Move one image at a time
+    setCurrentSlide(prev => prev - 1);
     setTimeout(() => setAutoSlideEnabled(true), 10000);
   };
 
   const scrollNext = () => {
     setAutoSlideEnabled(false);
-    setCurrentSlide(prev => prev + 1); // Move one image at a time
+    setCurrentSlide(prev => prev + 1);
     setTimeout(() => setAutoSlideEnabled(true), 10000);
   };
 
@@ -210,6 +216,44 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
 
   const handleMouseLeave = () => {
     setAutoSlideEnabled(true);
+    if (isDragging) {
+      setIsDragging(false);
+      setDragOffset(0);
+    }
+  };
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStart(e.clientX);
+    setAutoSlideEnabled(false);
+    e.preventDefault();
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    
+    const dragDistance = e.clientX - dragStart;
+    setDragOffset(dragDistance);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    
+    const threshold = 50; // Minimum drag distance to trigger slide
+    
+    if (Math.abs(dragOffset) > threshold) {
+      if (dragOffset > 0) {
+        // Dragged right, go to previous slide
+        scrollPrev();
+      } else {
+        // Dragged left, go to next slide
+        scrollNext();
+      }
+    }
+    
+    setIsDragging(false);
+    setDragOffset(0);
+    setTimeout(() => setAutoSlideEnabled(true), 1000);
   };
 
   if (!isClient) {
@@ -258,13 +302,20 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           </div>
         </div>
 
-        <div className="gallery-carousel-wrapper" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div 
+          className="gallery-carousel-wrapper" 
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+        >
           <div className="gallery-carousel-track">
             <div 
               className="gallery-slides-container"
               style={{
-                transform: `translateX(-${currentSlide * getSlideConfig().slidePercentage}%)`,
-                transition: shouldDisableTransition ? 'none' : 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                transform: `translateX(calc(-${currentSlide * getSlideConfig().slidePercentage}% + ${dragOffset}px))`,
+                transition: isDragging || shouldDisableTransition ? 'none' : 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
               }}
             >
               {extendedItems.map((item, index) => (
@@ -301,18 +352,26 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           </div>
 
           <div className="gallery-indicators">
-            {Array.from({ length: items.length }).map((_, index) => {
-              // Calculate the real current slide index (excluding clones)
-              const realCurrentIndex = ((currentSlide - clonesToAdd) % items.length + items.length) % items.length;
-              return (
-                <button
-                  key={index}
-                  className={`indicator ${realCurrentIndex === index ? "active" : ""}`}
-                  onClick={() => scrollTo(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              );
-            })}
+            {(() => {
+              const { itemsPerView } = getSlideConfig();
+              // Calculate number of slides needed
+              const totalSlides = Math.ceil(items.length / itemsPerView);
+              
+              return Array.from({ length: totalSlides }).map((_, slideIndex) => {
+                // Calculate which slide we're currently viewing
+                const realCurrentSlide = ((currentSlide - clonesToAdd) % items.length + items.length) % items.length;
+                const currentSlideIndex = Math.floor(realCurrentSlide / itemsPerView);
+                
+                return (
+                  <button
+                    key={slideIndex}
+                    className={`indicator ${currentSlideIndex === slideIndex ? "active" : ""}`}
+                    onClick={() => scrollTo(slideIndex)}
+                    aria-label={`Go to slide ${slideIndex + 1}`}
+                  />
+                );
+              });
+            })()}
           </div>
         </div>
       </section>
@@ -396,13 +455,22 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
         .gallery-carousel-wrapper {
           width: 100%;
           overflow: hidden;
+          position: relative;
+          cursor: grab;
+          user-select: none;
+        }
+
+        .gallery-carousel-wrapper:active {
+          cursor: grabbing;
         }
 
         .gallery-carousel-track {
-          max-width: 1320px;
+          width: 100%;
+          max-width: 1280px;
           margin: 0 auto;
           padding: 0 20px;
           overflow: hidden;
+          position: relative;
         }
 
         .gallery-slides-container {
@@ -414,10 +482,28 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
 
         @media (max-width: 640px) {
           .gallery-slides-container {
-            display: grid;
-            grid-auto-flow: column;
-            grid-auto-columns: 100%;
-            gap: 0;
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            margin: 0;
+          }
+          
+          .gallery-item {
+            flex: 0 0 calc(50% - 6px);
+            min-width: 0;
+            width: calc(50% - 6px);
+            margin: 0;
+          }
+          
+          .gallery-carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
+          }
+          
+          .gallery-carousel-track {
+            overflow: hidden;
+            padding: 0 12px;
+            width: 100%;
           }
         }
 
@@ -429,37 +515,58 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
         @media (min-width: 641px) {
           .gallery-slides-container {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             padding: 0;
+            width: 100%;
           }
           
           .gallery-item {
-            flex: 0 0 calc(25% - 11.25px); /* Subtract gap proportionally */
-            min-width: 0;
+            flex: 0 0 calc(25% - 15px); /* Exactly 4 items with proper gap calculation */
+            min-width: calc(25% - 15px);
+            max-width: calc(25% - 15px);
           }
 
           .gallery-card {
             padding: 0;
             margin: 0;
             width: 100%;
+            box-sizing: border-box;
           }
         }
 
         @media (min-width: 641px) and (max-width: 768px) {
+          .gallery-slides-container {
+            gap: 16px;
+          }
           .gallery-item {
-            flex: 0 0 calc(50% - 7.5px); /* 2 items per view */
+            flex: 0 0 calc(50% - 8px); /* 2 items per view */
+            max-width: calc(50% - 8px);
           }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
+          .gallery-slides-container {
+            gap: 18px;
+          }
           .gallery-item {
-            flex: 0 0 calc(33.333% - 10px); /* 3 items per view */
+            flex: 0 0 calc(33.333% - 12px); /* 3 items per view */
+            max-width: calc(33.333% - 12px);
           }
         }
 
         @media (min-width: 1025px) {
+          .gallery-slides-container {
+            gap: 20px;
+            width: calc(100% - 40px);
+          }
           .gallery-item {
-            flex: 0 0 calc(25% - 11.25px); /* 4 items per view */
+            flex: 0 0 calc(25% - 15px); /* Exactly 4 items per view */
+            max-width: calc(25% - 15px);
+            min-width: calc(25% - 15px);
+          }
+          .gallery-carousel-track {
+            padding: 0 20px;
+            box-sizing: border-box;
           }
         }
 
@@ -652,37 +759,9 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           }
         }
 
-        @media (max-width: 1280px) {
+        @media (max-width: 1280px) and (min-width: 1025px) {
           .gallery-carousel-track {
             max-width: 1200px;
-          }
-
-          .gallery-item {
-            flex: 0 0 25%;
-            margin-right: 16px;
-          }
-
-          .gallery-item:last-child {
-            margin-right: 0;
-          }
-        }
-
-        @media (max-width: 1024px) {
-          .gallery-carousel-track {
-            max-width: 900px;
-          }
-
-          .gallery-item {
-            flex: 0 0 33.333%;
-            margin-right: 15px;
-          }
-
-          .gallery-item:last-child {
-            margin-right: 0;
-          }
-          
-          .gallery-card {
-            height: 350px;
           }
         }
 
@@ -711,17 +790,8 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
             padding: 0 10px;
           }
 
-          .gallery-item {
-            flex: 0 0 50%;
-            margin-right: 12px;
-          }
-
-          .gallery-item:last-child {
-            margin-right: 0;
-          }
-
           .gallery-card {
-            height: 320px;
+            height: 400px;
           }
 
           .gallery-card-content {
@@ -776,9 +846,58 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
             font-size: 0.9rem;
             line-height: 1.5;
           }
+          
+          .gallery-card {
+            height: 350px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .gallery-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+          }
+          
+          .gallery-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: white;
+            line-height: 1.2;
+          }
+          
+          .gallery-card-description {
+            font-size: 0.75rem;
+            line-height: 1.3;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          
+          .gallery-read-more {
+            font-size: 0.75rem;
+            color: #fdc51a;
+            font-weight: 600;
+          }
 
           .gallery-carousel-track {
-            padding: 0 35px;
+            padding: 0 12px;
+          }
+          
+          .gallery-navigation {
+            display: flex;
+          }
+          
+          .gallery-indicators {
+            display: flex;
           }
 
           .gallery-item {
@@ -788,7 +907,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-card {
             margin: 0 10px;
             padding: 10px;
-            height: 320px;
+            height: 350px;
             box-sizing: border-box;
           }
 
@@ -845,6 +964,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
 
           .gallery-card {
             padding: 10px;
+            height: 350px;
             box-sizing: border-box;
           }
 
@@ -877,7 +997,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-card {
             margin: 0 9px;
             padding: 10px;
-            height: 300px;
+            height: 350px;
             box-sizing: border-box;
           }
 
@@ -954,7 +1074,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-card {
             margin: 0 7.5px;
             padding: 10px;
-            height: 280px;
+            height: 350px;
             box-sizing: border-box;
           }
 
@@ -1041,7 +1161,7 @@ const Gallery4 = ({ title = "Our Security Services", description = "Discover our
           .gallery-card {
             margin: 0 6px;
             padding: 10px;
-            height: 260px;
+            height: 350px;
             box-sizing: border-box;
           }
 

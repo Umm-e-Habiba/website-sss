@@ -78,6 +78,32 @@ const galleryImages = [
 export default function FindMore() {
   const [activeImage, setActiveImage] = useState(2); // Start with index 2 to have 2 images on each side
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  // Handle touch events for mobile swipe
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setActiveImage(prev => prev === galleryImages.length - 1 ? 0 : prev + 1);
+    }
+    if (isRightSwipe) {
+      setActiveImage(prev => prev === 0 ? galleryImages.length - 1 : prev - 1);
+    }
+  };
 
   return (
     <section className="find-more-section">
@@ -98,6 +124,9 @@ export default function FindMore() {
           className="gallery-3d-container"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="gallery-3d-wrapper">
             {galleryImages.map((image, index) => {
@@ -212,7 +241,7 @@ export default function FindMore() {
 
       <style jsx>{`
         .find-more-section {
-          padding: 120px 0;
+          padding: 80px 0;
           background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
           overflow: hidden;
         }
@@ -260,6 +289,7 @@ export default function FindMore() {
           margin-bottom: 60px;
           perspective: 1400px;
           overflow: visible;
+          z-index: 1;
         }
 
         .gallery-3d-wrapper {
@@ -418,6 +448,8 @@ export default function FindMore() {
           right: -25px;
         }
 
+
+
         .active-image-info {
           text-align: center;
           max-width: 700px;
@@ -438,6 +470,7 @@ export default function FindMore() {
           backdrop-filter: blur(10px);
           position: relative;
           overflow: hidden;
+          z-index: 2;
         }
 
         .active-image-info::before {
@@ -516,22 +549,41 @@ export default function FindMore() {
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
+        @media (max-width: 1400px) {
           .find-more-container {
-            padding: 0 15px;
+            padding: 0 20px;
           }
 
           .gallery-item {
-            width: 380px;
-            height: 450px;
+            width: 400px;
+            height: 480px;
+          }
+        }
+
+        @media (max-width: 1200px) {
+          .find-more-container {
+            padding: 0 20px;
+          }
+
+          .gallery-item {
+            width: 360px;
+            height: 430px;
           }
 
           .find-more-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
+          }
+
+          .find-more-description {
+            font-size: 1.05rem;
           }
         }
 
         @media (max-width: 1024px) {
+          .find-more-section {
+            padding: 70px 0;
+          }
+
           .find-more-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -540,47 +592,117 @@ export default function FindMore() {
           .find-more-description {
             font-size: 1rem;
           }
+
+          .gallery-item {
+            width: 320px;
+            height: 380px;
+          }
+
+          .gallery-3d-container {
+            height: 500px;
+          }
         }
 
         @media (max-width: 768px) {
           .find-more-section {
-            padding: 80px 0;
+            padding: 60px 0;
           }
 
           .find-more-container {
-            padding: 0 20px;
+            padding: 0 16px;
           }
 
           .find-more-header {
             flex-direction: column;
             align-items: flex-start;
-            margin-bottom: 40px;
-            gap: 16px;
+            margin-bottom: 30px;
+            gap: 12px;
           }
 
           .find-more-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
+            line-height: 1.2;
           }
           
           .find-more-description {
             font-size: 0.95rem;
+            line-height: 1.5;
           }
 
           .gallery-3d-container {
-            height: 400px;
-            margin-bottom: 40px;
+            height: 350px;
+            margin-bottom: 30px;
           }
 
           .gallery-item {
-            width: 250px;
+            width: 280px;
+            height: 320px;
+          }
+
+          .nav-arrow {
+            width: 44px;
+            height: 44px;
+            font-size: 18px;
+          }
+
+          .nav-arrow-left {
+            left: -22px;
+          }
+
+          .nav-arrow-right {
+            right: -22px;
+          }
+
+          .active-image-info {
+            padding: 25px 16px;
+            margin: 0 16px;
+          }
+
+          .active-title {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+          }
+
+          .active-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .find-more-section {
+            padding: 50px 0;
+          }
+
+          .find-more-container {
+            padding: 0 16px;
+          }
+
+          .find-more-title {
+            font-size: 1.9rem;
+            line-height: 1.2;
+          }
+
+          .find-more-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
+
+          .gallery-3d-container {
+            height: 320px;
+            margin-bottom: 25px;
+          }
+
+          .gallery-item {
+            width: 260px;
             height: 300px;
           }
 
           .nav-arrow {
             width: 40px;
             height: 40px;
-            font-size: 20px;
+            font-size: 16px;
           }
 
           .nav-arrow-left {
@@ -592,30 +714,54 @@ export default function FindMore() {
           }
 
           .active-image-info {
-            padding: 30px 16px;
+            padding: 20px 12px;
+            margin: 0 12px;
+            border-radius: 16px;
           }
 
           .active-title {
-            font-size: 1.75rem;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
           }
 
           .active-description {
-            font-size: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
           }
         }
 
         @media (max-width: 480px) {
+          .find-more-section {
+            padding: 40px 0;
+          }
+
+          .find-more-container {
+            padding: 0 12px;
+          }
+
+          .find-more-header {
+            margin-bottom: 25px;
+            gap: 10px;
+          }
+
           .find-more-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
+            line-height: 1.2;
+          }
+
+          .find-more-description {
+            font-size: 0.85rem;
+            line-height: 1.4;
           }
 
           .gallery-3d-container {
-            height: 350px;
+            height: 280px;
+            margin-bottom: 20px;
           }
 
           .gallery-item {
             width: 220px;
-            height: 280px;
+            height: 260px;
           }
 
           .nav-arrow {
@@ -623,7 +769,70 @@ export default function FindMore() {
           }
 
           .gallery-navigation {
-            bottom: -60px;
+            bottom: -50px;
+            gap: 8px;
+          }
+
+          .nav-dot {
+            width: 10px;
+            height: 10px;
+          }
+
+          .active-image-info {
+            padding: 18px 12px;
+            margin: 0 8px;
+            border-radius: 12px;
+          }
+
+          .active-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+          }
+
+          .active-description {
+            font-size: 0.85rem;
+            line-height: 1.4;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .find-more-section {
+            padding: 35px 0;
+          }
+
+          .find-more-container {
+            padding: 0 10px;
+          }
+
+          .find-more-title {
+            font-size: 1.6rem;
+          }
+
+          .find-more-description {
+            font-size: 0.8rem;
+          }
+
+          .gallery-3d-container {
+            height: 250px;
+          }
+
+          .gallery-item {
+            width: 200px;
+            height: 240px;
+          }
+
+          .active-image-info {
+            padding: 16px 10px;
+            margin: 0 6px;
+          }
+
+          .active-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+          }
+
+          .active-description {
+            font-size: 0.8rem;
           }
         }
 

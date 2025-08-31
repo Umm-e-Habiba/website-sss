@@ -23,7 +23,7 @@ const industries = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background px-8 pt-8 pb-4">
+    <main className="bg-background px-4 sm:px-6 md:px-8 py-16 sm:py-20">
       <div className="max-w-7xl mx-auto">
         <div className="industry-header">
           <div className="industry-header-content">
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 justify-items-center">
           {industries.map((industry, index) => {
             const IconComponent = industry.icon
             return (
@@ -46,8 +46,8 @@ export default function Home() {
                 style={{ backgroundColor: "#1e2247" }}
               >
                 <div className="industry-overlay"></div>
-                <IconComponent className="w-16 h-16 text-white mb-6 relative z-20" strokeWidth={1.5} />
-                <h3 className="text-white text-xl font-semibold text-center leading-tight whitespace-pre-line relative z-20">
+                <IconComponent className="w-16 h-16 text-white mb-6 relative z-10" strokeWidth={1.5} />
+                <h3 className="text-white text-xl font-semibold text-center leading-tight whitespace-pre-line relative z-10">
                   {industry.title}
                 </h3>
               </div>
@@ -93,6 +93,7 @@ export default function Home() {
           position: relative;
           overflow: hidden;
           transition: transform 0.3s ease;
+          z-index: 1;
         }
 
         .industry-card:hover {
@@ -237,6 +238,8 @@ export default function Home() {
 
           .industry-card {
             padding: 24px 16px;
+            width: 100%;
+            max-width: 200px;
             min-height: 180px;
           }
 
@@ -278,6 +281,8 @@ export default function Home() {
 
           .industry-card {
             padding: 20px 14px;
+            width: 100%;
+            max-width: 180px;
             min-height: 160px;
           }
 
@@ -300,6 +305,10 @@ export default function Home() {
             justify-items: center;
           }
 
+          .industry-card {
+            z-index: 1;
+          }
+
           .industry-header {
             flex-direction: column;
             align-items: flex-start;
@@ -320,7 +329,8 @@ export default function Home() {
 
           .industry-card {
             padding: 16px 12px;
-            width: 250px;
+            width: 100%;
+            max-width: 280px;
             height: 140px;
             min-height: unset;
             aspect-ratio: unset;
@@ -354,6 +364,10 @@ export default function Home() {
             padding-bottom: 16px;
           }
 
+          .industry-card {
+            z-index: 1;
+          }
+
           .industry-header {
             margin-bottom: 25px;
             gap: 10px;
@@ -372,7 +386,8 @@ export default function Home() {
 
           .industry-card {
             padding: 24px 20px;
-            width: 450px;
+            width: 100%;
+            max-width: 480px;
             height: 200px;
             min-height: unset;
             aspect-ratio: unset;
@@ -406,6 +421,10 @@ export default function Home() {
             padding-bottom: 12px;
           }
 
+          .industry-card {
+            z-index: 1;
+          }
+
           .industry-header {
             margin-bottom: 20px;
             gap: 8px;
@@ -423,9 +442,10 @@ export default function Home() {
           }
 
           .industry-card {
-            padding: 24px 20px;
-            width: 450px;
-            height: 200px;
+            padding: 20px 16px;
+            width: 100%;
+            max-width: 340px;
+            height: 180px;
             min-height: unset;
             aspect-ratio: unset;
             transition: all 0.3s ease;
@@ -458,6 +478,10 @@ export default function Home() {
             padding-bottom: 10px;
           }
 
+          .industry-card {
+            z-index: 1;
+          }
+
           .industry-header {
             margin-bottom: 18px;
             gap: 6px;
@@ -476,9 +500,10 @@ export default function Home() {
           }
 
           .industry-card {
-            padding: 22px 18px;
-            width: 450px;
-            height: 200px;
+            padding: 18px 14px;
+            width: 100%;
+            max-width: 300px;
+            height: 160px;
             min-height: unset;
             aspect-ratio: unset;
             transition: all 0.3s ease;

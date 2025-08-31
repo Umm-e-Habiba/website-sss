@@ -67,7 +67,7 @@ export default function Awareness() {
 
       <style jsx>{`
         .awareness-section {
-          padding: 40px 0 80px 0;
+          padding: 80px 0;
           background: #f8f9fa;
         }
 
@@ -186,7 +186,7 @@ export default function Awareness() {
 
         @media (max-width: 768px) {
           .awareness-section {
-            padding: 30px 0 60px 0;
+            padding: 60px 0;
           }
 
           .awareness-content {

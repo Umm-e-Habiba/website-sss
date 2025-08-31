@@ -214,12 +214,11 @@ export default function Location() {
 
       <style jsx>{`
         .location-section {
-          padding: 40px 0;
+          padding: 80px 0;
           background: linear-gradient(135deg, #FDC51A 0%, #F39C12 100%);
           position: relative;
           overflow: hidden;
           transition: padding 0.3s ease;
-          margin-bottom: 80px;
         }
 
         .location-section.expanded {
@@ -522,9 +521,11 @@ export default function Location() {
         }
 
         @media (max-width: 768px) {
-          .location-section,
-          .location-section.expanded {
+          .location-section {
             padding: 60px 0;
+          }
+          .location-section.expanded {
+            padding: 80px 0;
           }
 
           .location-content {
@@ -555,11 +556,11 @@ export default function Location() {
           }
 
           .location-section {
-            padding: 30px 0;
+            padding: 40px 0;
           }
 
           .location-section.expanded {
-            padding: 50px 0;
+            padding: 60px 0;
           }
 
           .location-section.expanded .location-header {

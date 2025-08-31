@@ -38,8 +38,8 @@ export function Hero({
   return (
     <section
       id="hero"
-      className="relative mx-auto w-full pt-32 sm:pt-40 px-6 text-center md:px-8 
-      min-h-screen overflow-hidden z-0
+      className="relative mx-auto w-full pt-24 sm:pt-32 pb-16 sm:pb-20 px-6 text-center md:px-8 
+      h-[70vh] sm:h-[75vh] md:h-[80vh] overflow-hidden z-0
       bg-[linear-gradient(135deg,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.5)_25%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,0.7)_75%,rgba(30,34,71,0.8)_100%),url('/assets/img/banner/metro-2.jpg')]
       dark:bg-[linear-gradient(135deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.6)_30%,rgba(0,0,0,0.7)_60%,rgba(30,34,71,0.9)_100%),url('/assets/img/banner/metro-2.jpg')] 
       bg-cover bg-center bg-no-repeat
@@ -67,7 +67,7 @@ export function Hero({
       />
 
       {/* Content Container */}
-      <div className="flex flex-col items-center space-y-8 max-w-4xl mx-auto relative z-10">
+      <div className="flex flex-col items-center space-y-6 max-w-4xl mx-auto relative z-10">
         {/* Eyebrow */}
         {eyebrow && (
           <a href="#" className={`group transition-all duration-1000 ease-out ${
@@ -87,11 +87,11 @@ export function Hero({
 
         {/* Title */}
         <h1
-          className={`text-balance text-white pt-16 pb-16 text-5xl font-semibold leading-none tracking-tighter 
+          className={`text-balance text-white pt-8 pb-8 text-5xl font-semibold leading-none tracking-tighter 
           sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-1500 ease-out ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
           }`}
-          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '60px' }}
+          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '20px' }}
         >
           {title}
         </h1>
@@ -112,7 +112,7 @@ export function Hero({
           <div className={`flex justify-center transition-all duration-1200 ease-out delay-700 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
-          style={{ marginTop: '2rem' }}>
+          style={{ marginTop: '1rem' }}>
             <Button
               asChild
               className="w-fit md:w-52 font-geist tracking-tighter text-center text-lg
@@ -137,8 +137,8 @@ export function Hero({
 
       {/* Bottom Fade */}
       <div
-        className="animate-fade-up relative mt-32 opacity-0 [perspective:2000px] 
-        after:absolute after:inset-0 after:z-50 
+        className="animate-fade-up relative mt-16 opacity-0 [perspective:2000px] 
+        after:absolute after:inset-0 after:z-0 
         after:[background:linear-gradient(to_top,hsl(var(--background))_10%,transparent)]"
       />
     </section>
