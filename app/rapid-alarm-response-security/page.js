@@ -1,67 +1,314 @@
+'use client';
+import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function AlarmResponsePage() {
+    const [activeService, setActiveService] = useState(null);
+
+    const toggleService = (index) => {
+        setActiveService(activeService === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "24/7 Alarm Monitoring",
+            icon: "🚨",
+            iconSymbol: "⏰",
+            description: "Constant surveillance with immediate alert assessment when alarms are triggered",
+            details: "Our state-of-the-art monitoring center operates 24/7, providing continuous surveillance of your alarm systems. When an alarm is triggered, our trained professionals immediately assess the situation and dispatch appropriate response teams to your location within minutes."
+        },
+        {
+            title: "On-Site Security Response", 
+            icon: "🛡️",
+            iconSymbol: "🚀",
+            description: "Immediate dispatch of trained officers to assess and neutralize threats",
+            details: "Our rapid response team consists of highly trained security professionals who are strategically positioned across Melbourne. Upon alarm activation, our officers are dispatched immediately to your location to assess, contain, and neutralize any security threats."
+        },
+        {
+            title: "Emergency Alarm Response",
+            icon: "⚡",
+            iconSymbol: "🚨",
+            description: "Rapid response to break-ins, fires, and medical emergencies with trained personnel",
+            details: "Whether it's a break-in attempt, fire alarm, or medical emergency, our emergency response team is equipped to handle all types of critical situations. We work closely with local emergency services to ensure comprehensive protection and rapid resolution."
+        },
+        {
+            title: "False Alarm Management",
+            icon: "🔍",
+            iconSymbol: "✅",
+            description: "Assessment of alarm activations with thorough checks even for false alarms",
+            details: "Not all alarms indicate real threats, but every activation requires professional verification. Our team conducts thorough assessments to determine the cause of each alarm activation, providing detailed reports and recommendations to minimize future false alarms."
+        }
+    ];
+
+    const advantages = [
+        {
+            title: "Rapid Response Time",
+            icon: "🚨",
+            iconSymbol: "⏰",
+            description: "On-site within minutes to address threats and minimize damage",
+        },
+        {
+            title: "Experienced Personnel", 
+            icon: "🛡️",
+            iconSymbol: "🚀",
+            description: "Extensively trained team handles all situations calmly and efficiently",
+        },
+        {
+            title: "Advanced Technology",
+            icon: "⚡",
+            iconSymbol: "🚨",
+            description: "Cutting-edge monitoring systems with real-time updates",
+        },
+        {
+            title: "Cost-Effective",
+            icon: "🔍",
+            iconSymbol: "✅",
+            description: "Affordable alternative to full-time security guards",
+        },
+        {
+            title: "Customizable Solutions",
+            icon: "🚨",
+            iconSymbol: "⏰",
+            description: "Tailored plans for residential or commercial properties",
+        },
+        {
+            title: "Local Expertise",
+            icon: "🛡️",
+            iconSymbol: "🚀",
+            description: "Melbourne-based with knowledge of local regulations and challenges",
+        },
+    ];
+
+    const processSteps = [
+        {
+            title: "Alarm Activation",
+            icon: "bi-bell",
+            iconSymbol: "1",
+            backgroundColor: "#1e7ef8",
+            color: "#ffffff",
+            description: "Our monitoring center receives the alert as soon as an alarm is triggered",
+            details: "Our state-of-the-art monitoring center operates 24/7 with advanced alarm systems that immediately detect and process any security alerts. When your alarm is triggered, our trained operators receive instant notifications with all relevant property information and emergency contact details."
+        },
+        {
+            title: "Assessment",
+            icon: "bi-search",
+            iconSymbol: "2",
+            backgroundColor: "#28a745",
+            color: "#ffffff",
+            description: "Our team quickly assesses the situation to determine the appropriate response",
+            details: "Our experienced security professionals conduct rapid threat assessment using multiple verification methods. We analyze the type of alarm, location details, and potential risk factors to determine the most appropriate response strategy and required resources."
+        },
+        {
+            title: "Deployment",
+            icon: "bi-person-badge",
+            iconSymbol: "3",
+            backgroundColor: "#fdc51a",
+            color: "#1e2247",
+            description: "Trained security officers are dispatched immediately to your location",
+            details: "Our strategically positioned response teams are deployed within minutes of alarm activation. Our licensed security officers arrive fully equipped and prepared to handle any situation, from false alarms to genuine security threats requiring immediate intervention."
+        },
+        {
+            title: "Follow-Up",
+            icon: "bi-file-earmark-text",
+            iconSymbol: "4",
+            backgroundColor: "#17a2b8",
+            color: "#ffffff",
+            description: "Comprehensive report detailing actions taken and next steps",
+            details: "After resolving the situation, we provide detailed incident reports including response times, actions taken, and recommendations for preventing future incidents. We also coordinate with relevant authorities when necessary and ensure proper documentation for insurance purposes."
+        }
+    ];
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ALARM RESPONSE SERVICES">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="RAPID ALARM RESPONSE SECURITY"
+                mainTitle="Rapid Alarm Response Security Services"
+                subtitle="Professional 24/7 Alarm Response Services in Melbourne - Immediate Protection When You Need It Most"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
+                    {/*===== Modern Hero Section =====*/}
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Rapid Security Response
-                                            </small>
-                                            <h2>ALARM RESPONSE SERVICES IN MELBOURNE</h2>
-                                            <p>
-                                                At Metro Guards, we understand that securing your property is a top priority. Our Alarm Response Services are designed to provide fast, effective responses to any security breaches, offering peace of mind for both residential and commercial properties across Melbourne.
-                                            </p>
-                                            <p>
-                                                With a skilled team of security professionals and state-of-the-art technology, we ensure your property is continuously monitored and protected.
-                                            </p>
-                                            <div className="btn-area mt-4">
-                                                <a 
-                                                    href="/get-quotation" 
-                                                    className="btn text-white px-4 py-3 me-3"
-                                                    style={{
-                                                        backgroundColor: '#1E2247',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
-                                                </a>
-                                                <a 
-                                                    href="tel:1300731173" 
-                                                    className="btn text-dark px-4 py-3"
-                                                    style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CALL US NOW <span><i className="bi bi-telephone"></i></span>
-                                                </a>
-                                            </div>
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
+                                                }}
+                                            >
+                                                🚨 RAPID SECURITY RESPONSE
+                                            </span>
                                         </div>
+                                        <h1 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+                                            }}
+                                        >
+                                            ALARM RESPONSE<br />
+                                            <span style={{color: '#fdc51a'}}>SERVICES</span>
+                                        </h1>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.2rem', 
+                                                lineHeight: '1.6',
+                                                maxWidth: '500px'
+                                            }}
+                                        >
+                                            When your security alarm sounds, every second counts. Our professional alarm response team provides immediate on-site assessment and threat neutralization.
+                                        </p>
+                                        <p 
+                                            className="mb-5" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1rem',
+                                                lineHeight: '1.6',
+                                                maxWidth: '480px'
+                                            }}
+                                        >
+                                            Available 24/7 with rapid deployment across Melbourne, our licensed security professionals deliver immediate crisis response and comprehensive alarm verification services.
+                                        </p>
+                                        
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-primary px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                }}
+                                            >
+                                                📋 GET QUOTATION
+                                            </a>
+                                            <a 
+                                                href="tel:1300731173" 
+                                                className="btn btn-outline-dark px-5 py-3"
+                                                style={{
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    borderWidth: '2px'
+                                                }}
+                                            >
+                                                📞 CALL US NOW
+                                            </a>
+                                        </div>
+                                        
+                                       
                                     </div>
                                 </div>
+                                
                                 <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/blog/emergency.webp" alt="Alarm Response Services" />
-                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div> */}
+                                    <div className="hero-image position-relative mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '25px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/blog/emergency.webp" 
+                                                alt="Alarm Response Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            {/* Floating Badge */}
+                                            <div 
+                                                className="floating-badge position-absolute"
+                                                style={{
+                                                    top: '30px',
+                                                    right: '30px',
+                                                    backgroundColor: '#1e2247',
+                                                    color: '#ffffff',
+                                                    padding: '15px 20px',
+                                                    borderRadius: '15px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem',
+                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
+                                                }}
+                                            >
+                                                🚨 Emergency Ready
+                                            </div>
+                                            
+                                            {/* Bottom Badge */}
+                                            <div 
+                                                className="bottom-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '12px 20px',
+                                                    borderRadius: '12px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.85rem',
+                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
+                                                }}
+                                            >
+                                                ✅ Rapid Response
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="decoration-circle position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                left: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="decoration-square position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                right: '-30px',
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundColor: '#1e2247',
+                                                borderRadius: '15px',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
                                     </div>
                                 </div>
                             </div>
@@ -69,367 +316,1138 @@ export default function AlarmResponsePage() {
                     </div>
 
                     {/*===== Our Services Section =====*/}
-                    <div className="services-section bg-29 section-padding">
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Comprehensive Protection
-                                        </small>
-                                        <h2>OUR ALARM RESPONSE SERVICES</h2>
-                                        <p>We specialize in alarm response and provide an array of services tailored to meet your security needs</p>
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/emergency.webp" 
+                                                alt="Professional Alarm Response Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                ✅ Licensed & Insured
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🕒
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Monitoring Center</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    👨‍💼
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Response Officers</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    ⚡
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Immediate Deployment</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#1E2247'}}></i>
+                                
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ OUR SERVICES
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Our Alarm Response Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                When your alarm sounds, trust our professional team to respond immediately and handle any security threat with expertise.
+                                            </p>
                                         </div>
-                                        <h4 className="text-center mb-3">24/7 Alarm Monitoring</h4>
-                                        <p className="text-center">Constant surveillance with immediate alert assessment when alarms are triggered</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#1E2247'}}></i>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
+                                                                </div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {service.description}
+                                                            </p>
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {service.details}
+                                                                </p>
+                                                            </div>
+                                                            
+                                                            {/* Additional service features */}
+                                                            <div className="service-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
+                                                                <div className="row">
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional trained staff</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Immediate response</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Licensed & insured</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                         </div>
-                                        <h4 className="text-center mb-3">On-Site Security Response</h4>
-                                        <p className="text-center">Immediate dispatch of trained officers to assess and neutralize threats</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-exclamation-triangle" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Emergency Alarm Response</h4>
-                                        <p className="text-center">Rapid response to break-ins, fires, and medical emergencies with trained personnel</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-filter-circle" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">False Alarm Management</h4>
-                                        <p className="text-center">Assessment of alarm activations with thorough checks even for false alarms</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-car-front" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Mobile Patrols Integration</h4>
-                                        <p className="text-center">Enhanced response with mobile patrol units stationed across Melbourne</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Key Holding Services</h4>
-                                        <p className="text-center">Secure key access for faster after-hours emergency responses</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== How It Works Section =====*/}
-                    <div className="process-section bg-28 section-padding">
+                    {/*===== How Alarm Response Works Section =====*/}
+                    <div className="alarm-process-section section-padding" style={{background: '#f8f9fa'}}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Our Response Protocol
-                                        </small>
-                                        <h2>HOW ALARM RESPONSE WORKS</h2>
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                        <div className="process-content ms-lg-4">
+                                            <div className="section-header mb-5">
+                                        <div className="subtitle mb-3">
+                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                        <i className="bi bi-gear me-2"></i>
+                                                        OUR PROCESS
+                                            </span>
+                                        </div>
+                                                                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                    HOW ALARM RESPONSE WORKS
+                                                </h2>
+                                </div>
+                                
+                                            {/* Expandable Process Steps */}
+                                            <div className="process-accordion">
+                                                {processSteps.map((step, index) => (
+                                                    <div key={index} className="accordion-item mb-3">
+                                                        <div 
+                                                            className="accordion-header p-4"
+                                                style={{
+                                                                backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                                borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                                border: '1px solid #e9ecef',
+                                                                cursor: 'pointer',
+                                                                transition: 'all 0.3s ease',
+                                                                borderLeft: '4px solid #fdc51a'
+                                                            }}
+                                                            onClick={() => toggleService(index)}
+                                                        >
+                                                            <div className="d-flex align-items-center justify-content-between">
+                                                                <div className="d-flex align-items-center">
+                                                                    <div 
+                                                                        className="step-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                                            width: '50px',
+                                                                            height: '50px',
+                                                                            borderRadius: '10px',
+                                                                            backgroundColor: step.backgroundColor,
+                                                                            color: step.color,
+                                                                            fontSize: '1.5rem',
+                                                                            fontWeight: 'bold'
+                                                                        }}
+                                                                    >
+                                                                        {step.iconSymbol}
+                                                </div>
+                                                                    <div>
+                                                                        <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{step.title}</h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="expand-icon">
+                                                                    <div 
+                                                                        className="d-flex align-items-center justify-content-center"
+                                                                        style={{
+                                                                            width: '40px',
+                                                                            height: '40px',
+                                                                            backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                            borderRadius: '50%',
+                                                                            color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                            transition: 'all 0.3s ease'
+                                                                        }}
+                                                                    >
+                                                                        <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                            {activeService === index ? '−' : '+'}
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {activeService === index && (
+                                                            <div 
+                                                                className="accordion-content p-4"
+                                                                style={{
+                                                                    backgroundColor: '#ffffff',
+                                                                    borderRadius: '0 0 12px 12px',
+                                                                    border: '1px solid #e9ecef',
+                                                                    borderTop: 'none',
+                                                                    borderLeft: '4px solid #fdc51a',
+                                                                    animation: 'slideDown 0.3s ease'
+                                                                }}
+                                                            >
+                                                                <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                    {step.description}
+                                                                </p>
+                                                                <div className="step-details">
+                                                                    <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                        {step.details}
+                                                    </p>
+                                                </div>
+                                                                
+                                                                {/* Additional step features */}
+                                                                <div className="step-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
+                                                                    <div className="row">
+                                                                        <div className="col-md-6">
+                                                                            <div className="feature-item d-flex align-items-center mb-2">
+                                                                                <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                                <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Immediate activation</span>
+                                            </div>
+                                                                            <div className="feature-item d-flex align-items-center mb-2">
+                                                                                <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                                <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional handling</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="col-md-6">
+                                                                            <div className="feature-item d-flex align-items-center mb-2">
+                                                                                <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                                <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
+                                                                            </div>
+                                                                            <div className="feature-item d-flex align-items-center mb-2">
+                                                                                <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                                <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Complete documentation</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                        </div>
+                                    ))}
+                                            </div>
+                                        </div>
+                                </div>
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="process-image-section me-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/emergency.webp" 
+                                                alt="Alarm Response Process" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                🚨 4-Step Process
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    ⚡
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid Response Within Minutes</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🛡️
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Threat Assessment</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    📋
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Detailed Incident Reporting</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                
+                                
                             </div>
+                        </div>
+                    </div>
+
+                    {/*===== Specialized Alarm Response Services Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
+                        <div className="container">
                             <div className="row">
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="process-step text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="step-number mb-3">
-                                            <div className="number-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
-                                                1
+                                <div className="col-lg-6 order-1 order-lg-1">
+                                    <div className="services-image-section me-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/emergency.webp" 
+                                                alt="Specialized Alarm Response Services" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                🛡️ Specialized Services
                                             </div>
                                         </div>
-                                        <h4 className="mb-3">Alarm Activation</h4>
-                                        <p>Our monitoring center receives the alert as soon as an alarm is triggered</p>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🔥
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Fire Safety Response Teams</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🏢
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Commercial Property Protection</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🏠
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Residential Security Solutions</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="process-step text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="step-number mb-3">
-                                            <div className="number-circle bg-success text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
-                                                2
+                                
+                                <div className="col-lg-6 order-2 order-lg-2">
+                                    <div className="services-content ms-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ COMPREHENSIVE PROTECTION
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Specialized Alarm Response Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                Our specialized services cover all types of alarm responses with professional expertise tailored to each situation.
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Service Cards Grid */}
+                                        <div className="row g-4">
+                                            <div className="col-md-6">
+                                                <div 
+                                                    className="service-card h-100 p-4"
+                                                    style={{
+                                                        backgroundColor: '#f8f9fa',
+                                                        borderRadius: '15px',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        borderLeft: '4px solid #fdc51a'
+                                                    }}
+                                                >
+                                                    <h5 className="mb-3 fw-bold" style={{color: '#1e2247'}}>
+                                                        Fire Alarm Response
+                                                    </h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.9rem'}}>
+                                                        We respond promptly to fire alarm activations, working in conjunction with emergency services to ensure that your property and its occupants are safe.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-md-6">
+                                                <div 
+                                                    className="service-card h-100 p-4"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        borderLeft: '4px solid #fdc51a'
+                                                    }}
+                                                >
+                                                    <h5 className="mb-3 fw-bold" style={{color: '#1e2247'}}>
+                                                        Commercial Alarm Response
+                                                    </h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.9rem'}}>
+                                                        Our services for commercial properties include comprehensive alarm monitoring and rapid response to protect your business assets.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-md-6">
+                                                <div 
+                                                    className="service-card h-100 p-4"
+                                                    style={{
+                                                        backgroundColor: '#f8f9fa',
+                                                        borderRadius: '15px',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        borderLeft: '4px solid #fdc51a'
+                                                    }}
+                                                >
+                                                    <h5 className="mb-3 fw-bold" style={{color: '#1e2247'}}>
+                                                        Residential Alarm Response
+                                                    </h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.9rem'}}>
+                                                        Protecting your home and family is our priority. Our residential alarm response services provide peace of mind with rapid response.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-md-6">
+                                                <div 
+                                                    className="service-card h-100 p-4"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        borderLeft: '4px solid #fdc51a'
+                                                    }}
+                                                >
+                                                    <h5 className="mb-3 fw-bold" style={{color: '#1e2247'}}>
+                                                        Comprehensive Reporting
+                                                    </h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.9rem'}}>
+                                                        After every alarm response, we provide a detailed incident report including time of activation, officer arrival time, and actions taken.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <h4 className="mb-3">Assessment</h4>
-                                        <p>Our team quickly assesses the situation to determine the appropriate response</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="process-step text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="step-number mb-3">
-                                            <div className="number-circle bg-warning text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
-                                                3
-                                            </div>
-                                        </div>
-                                        <h4 className="mb-3">Deployment</h4>
-                                        <p>Trained security officers are dispatched immediately to your location</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="process-step text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="step-number mb-3">
-                                            <div className="number-circle bg-info text-white d-flex align-items-center justify-content-center mx-auto" style={{width: '60px', height: '60px', borderRadius: '50%', fontSize: '24px', fontWeight: 'bold'}}>
-                                                4
-                                            </div>
-                                        </div>
-                                        <h4 className="mb-3">Follow-Up</h4>
-                                        <p>Comprehensive report detailing actions taken and next steps</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Why Choose Us Section =====*/}
-                    <div className="benefits-section bg-29 section-padding">
+                    {/*===== Our Advantages Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            The Metro Guards Advantage
-                                        </small>
-                                        <h2>WHY CHOOSE OUR ALARM RESPONSE SERVICES?</h2>
+                                <div className="col-lg-6 order-2 order-lg-1 mt-5">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/emergency.webp" 
+                                                alt="Professional Alarm Response Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                ✅ Licensed & Insured
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Immediate threat assessment and neutralization</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 monitoring center with trained operators</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid deployment across Melbourne region</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                   
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Comprehensive incident reporting and documentation</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Integration with emergency services when required</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-lightning" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ The Metro Guards Advantage
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                            Why Choose Our Alarm Response Services?
+                                            </h2>
+                                            
                                         </div>
-                                        <h4 className="text-center mb-3">Rapid Response Time</h4>
-                                        <p className="text-center">On-site within minutes to address threats and minimize damage</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {advantages.map((advantage, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {advantage.iconSymbol}
+                                                                </div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{advantage.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {advantage.description}
+                                                            </p>
+                                                            
+                                                            
+                                                            {/* Additional service features */}
+                                                            <div className="service-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
+                                                                <div className="row">
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional trained staff</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Immediate response</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Licensed & insured</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                         </div>
-                                        <h4 className="text-center mb-3">Experienced Personnel</h4>
-                                        <p className="text-center">Extensively trained team handles all situations calmly and efficiently</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-cpu" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Advanced Technology</h4>
-                                        <p className="text-center">Cutting-edge monitoring systems with real-time updates</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-cash-coin" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Cost-Effective</h4>
-                                        <p className="text-center">Affordable alternative to full-time security guards</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-gear" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Customizable Solutions</h4>
-                                        <p className="text-center">Tailored plans for residential or commercial properties</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-geo-alt" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Local Expertise</h4>
-                                        <p className="text-center">Melbourne-based with knowledge of local regulations and challenges</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Specialized Services Section =====*/}
-                    <div className="specialized-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Comprehensive Protection
-                                        </small>
-                                        <h2>SPECIALIZED ALARM RESPONSE SERVICES</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="special-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="special-header d-flex align-items-center mb-3">
-                                            <div className="special-icon mr-3">
-                                                <i className="bi bi-fire" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Fire Alarm Response</h4>
-                                        </div>
-                                        <p>We respond promptly to fire alarm activations, working in conjunction with emergency services to ensure that your property and its occupants are safe. Our team is trained in fire safety procedures and can assist with evacuations if necessary.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="special-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="special-header d-flex align-items-center mb-3">
-                                            <div className="special-icon mr-3">
-                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Commercial Alarm Response</h4>
-                                        </div>
-                                        <p>Our services for commercial properties include comprehensive alarm monitoring and rapid response to protect your business assets. We understand the unique security needs of commercial facilities and provide tailored solutions accordingly.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="special-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="special-header d-flex align-items-center mb-3">
-                                            <div className="special-icon mr-3">
-                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Residential Alarm Response</h4>
-                                        </div>
-                                        <p>Protecting your home and family is our priority. Our residential alarm response services provide peace of mind with rapid response to any security breaches at your home, day or night.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="special-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="special-header d-flex align-items-center mb-3">
-                                            <div className="special-icon mr-3">
-                                                <i className="bi bi-file-text" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Comprehensive Reporting</h4>
-                                        </div>
-                                        <p>After every alarm response, we provide a detailed incident report including time of activation, officer arrival time, actions taken, and security improvement recommendations for your property.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
-                    {/*===== FAQ Section =====*/}
-                    <div className="faq-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Common Questions
-                                        </small>
-                                        <h2>FREQUENTLY ASKED QUESTIONS</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="faq-item bg-white p-4 rounded shadow-lg h-100">
-                                        <h5 className="mb-3">What is an alarm response service?</h5>
-                                        <p>Alarm response services involve monitoring your security system and dispatching trained security personnel to your location whenever an alarm is triggered.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="faq-item bg-white p-4 rounded shadow-lg h-100">
-                                        <h5 className="mb-3">What does a security alarm response do?</h5>
-                                        <p>Security alarm response ensures a rapid and effective response to alarm activations, addressing any security breaches and minimizing damage or loss.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="faq-item bg-white p-4 rounded shadow-lg h-100">
-                                        <h5 className="mb-3">What are the benefits of alarm response?</h5>
-                                        <p>The benefits include quick action to prevent loss or damage, cost-effective protection, and peace of mind knowing your property is always under professional surveillance.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="faq-item bg-white p-4 rounded shadow-lg h-100">
-                                        <h5 className="mb-3">What areas do you cover for alarm response services?</h5>
-                                        <p>We provide alarm response services across all suburbs of Melbourne, ensuring reliable security for both residential and commercial properties.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Final CTA Section =====*/}
-                    <div className="cta-section bg-dark text-center section-padding">
+                    {/*===== Contact CTA Section =====*/}
+                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <div className="heading2">
-                                        <h2 className="text-white">READY TO PROTECT YOUR PROPERTY WITH RELIABLE ALARM RESPONSE?</h2>
-                                        <p className="text-white">
-                                            Don't leave the safety of your property to chance. Trust Metro Guards for efficient and reliable Alarm Response Services in Melbourne. With rapid response times, experienced security personnel, and advanced monitoring technology, Metro Guards is your trusted partner in ensuring the safety and security of your property.
+                                    <div className="cta-content text-center text-white">
+                                        <div className="subtitle mb-4">
+                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
+                                                <i className="bi bi-telephone me-2"></i>
+                                                IMMEDIATE ALARM RESPONSE NEEDED?
+                                            </span>
+                                        </div>
+                                        <h2 className="display-4 fw-bold mb-4">
+                                            Protect Your Property With Professional Alarm Response
+                                        </h2>
+                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
+                                            Don't leave your security to chance. Our professional alarm response team is ready to provide immediate assessment and protection when your alarms are triggered. Contact us today for comprehensive alarm response services.
                                         </p>
-                                        <div className="btn-area mt-4">
+                                        
+                                        <div className="cta-buttons mb-5">
                                             <a 
                                                 href="/get-quotation" 
-                                                className="btn text-white px-4 py-3 me-3"
+                                                className="btn btn-lg me-3 px-5 py-3"
                                                 style={{
-                                                    backgroundColor: '#1E2247',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
                                                     border: 'none',
-                                                    borderRadius: '5px',
+                                                    borderRadius: '10px',
                                                     textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
                                                 }}
                                             >
-                                                GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
                                             </a>
                                             <a 
                                                 href="tel:1300731173" 
-                                                className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-light btn-lg px-5 py-3"
                                                 style={{
-                                                    backgroundColor: '#FDC24C',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
+                                                    borderRadius: '10px',
                                                     textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
                                                 }}
                                             >
-                                                CALL US NOW <span><i className="bi bi-telephone"></i></span>
+                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
                                             </a>
+                                        </div>
+                                        
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-stopwatch"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Rapid Response</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Under 5 minutes</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-shield-check"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Professional Officers</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully trained & licensed</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-headset"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">24/7 Monitoring</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Always monitoring</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-geo-alt"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* Add custom styles */}
+                    <style jsx>{`
+                        .section-padding {
+                            padding: 80px 0;
+                        }
+                        
+                        .min-vh-75 {
+                            min-height: 75vh;
+                        }
+                        
+                        .btn-primary:hover {
+                            background-color: #e8b502 !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(253, 197, 26, 0.4) !important;
+                        }
+                        
+                        .btn-outline-dark:hover {
+                            background-color: #1e2247 !important;
+                            border-color: #1e2247 !important;
+                            color: #ffffff !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(30, 34, 71, 0.3);
+                        }
+                        
+                        .trust-item:hover {
+                            transform: translateY(-5px);
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .floating-badge {
+                            animation: float 3s ease-in-out infinite;
+                        }
+                        
+                        @keyframes float {
+                            0%, 100% { transform: translateY(0px); }
+                            50% { transform: translateY(-10px); }
+                        }
+                        
+                        .service-header:hover {
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                        }
+                        
+                        .reason-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+                        }
+                        
+                        .stat-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        
+                        .process-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        
+                        .service-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        @keyframes slideDown {
+                            from {
+                                opacity: 0;
+                                max-height: 0;
+                                transform: translateY(-10px);
+                            }
+                            to {
+                                opacity: 1;
+                                max-height: 200px;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        .accordion-header:hover {
+                            background-color: #e9ecef !important;
+                            border-color: #fdc51a !important;
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                        }
+                        
+                        .accordion-content {
+                            overflow: hidden;
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .section-padding {
+                                padding: 60px 0;
+                            }
+                            
+                            .display-4 {
+                                font-size: 2.5rem;
+                            }
+                            
+                            .display-5 {
+                                font-size: 2rem;
+                            }
+                            
+                            .contact-info-grid {
+                                flex-direction: column;
+                                gap: 20px;
+                            }
+                            
+                            .cta-buttons .btn {
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    `}</style>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

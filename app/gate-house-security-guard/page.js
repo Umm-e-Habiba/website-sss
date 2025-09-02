@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function GatehouseSecurityPage() {
     return (
@@ -509,6 +510,7 @@ export default function GatehouseSecurityPage() {
                         </div>
                     </div>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

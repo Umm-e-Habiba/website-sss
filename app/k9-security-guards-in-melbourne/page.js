@@ -1,5 +1,6 @@
 "use client"
 import Layout from "@/components/layout/Layout";
+import Gallery4 from "@/components/ui/gallery4";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -425,6 +426,7 @@ export default function K9SecurityPage() {
                         </div>
                     </div>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

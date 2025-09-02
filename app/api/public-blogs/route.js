@@ -21,23 +21,39 @@ export async function GET(req) {
 
     const where = { published: true };
 
-    // Run queries sequentially (avoid prepared statement collisions)
-    const items = await prisma.post.findMany({
-      where,
-      orderBy: { createdAt: "asc" },
-      skip,
-      take: limit,
-      select: {
-        id: true,
-        title: true,
-        slug: true,
-        createdAt: true,
-        excerpt: true,
-        coverImage: true,
-      },
-    });
+    // Check if database is available before querying
+    try {
+      await prisma.$connect();
+    } catch (dbError) {
+      console.warn("Database connection failed, returning empty results:", dbError.message);
+      return NextResponse.json({ 
+        items: [], 
+        page, 
+        limit, 
+        total: 0, 
+        hasMore: false,
+        warning: "Database unavailable" 
+      });
+    }
 
-    const total = await prisma.post.count({ where });
+    // Use a transaction to ensure consistency and avoid prepared statement conflicts
+    const [items, total] = await prisma.$transaction([
+      prisma.post.findMany({
+        where,
+        orderBy: { createdAt: "asc" },
+        skip,
+        take: limit,
+        select: {
+          id: true,
+          title: true,
+          slug: true,
+          createdAt: true,
+          excerpt: true,
+          coverImage: true,
+        },
+      }),
+      prisma.post.count({ where })
+    ]);
 
     const hasMore = skip + items.length < total;
 
@@ -57,5 +73,8 @@ export async function GET(req) {
       },
       { status: 500 }
     );
+  } finally {
+    // Ensure connection is properly closed
+    await prisma.$disconnect();
   }
 }

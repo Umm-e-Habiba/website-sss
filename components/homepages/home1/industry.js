@@ -23,8 +23,8 @@ const industries = [
 
 export default function Home() {
   return (
-    <main className="bg-background px-4 sm:px-6 md:px-8" style={{paddingTop: '80px', paddingBottom: '80px'}}>
-      <div className="max-w-7xl mx-auto">
+    <main className="bg-background" style={{paddingTop: '0px', paddingBottom: '80px'}}>
+      <div className="responsive-container">
         <div className="industry-header">
           <div className="industry-header-content">
             <h2 className="industry-title">
@@ -43,7 +43,8 @@ export default function Home() {
               <div
                 key={index}
                 className="industry-card aspect-square flex flex-col items-center justify-center p-8 rounded-lg cursor-pointer"
-                style={{ backgroundColor: "#1e2247" }}
+                style={{ backgroundColor: '#1e2247' }}
+                
               >
                 <div className="industry-overlay"></div>
                 <IconComponent className="w-16 h-16 text-white mb-6 relative z-10" strokeWidth={1.5} />
@@ -106,15 +107,7 @@ export default function Home() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: 
-            radial-gradient(
-              circle at bottom right,
-              rgba(0, 0, 0, 0.7) 0%,
-              rgba(0, 0, 0, 0.4) 30%,
-              rgba(0, 0, 0, 0.1) 50%,
-              transparent 70%
-            ),
-            #fdc51a;
+          background: #fdc24c;
           transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           z-index: 5;
           border-radius: 8px;
@@ -146,12 +139,45 @@ export default function Home() {
 
         /* Responsive design for all screen sizes */
         
+        .responsive-container {
+          max-width: 1320px;
+          margin: 0 auto;
+          padding: 0 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1199px) {
+          .responsive-container {
+            padding: 0 32px;
+          }
+        }
+
+        @media (max-width: 1023px) {
+          .responsive-container {
+            padding: 0 24px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .responsive-container {
+            padding: 0 20px;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .responsive-container {
+            padding: 0 16px;
+          }
+        }
+
+        @media (max-width: 479px) {
+          .responsive-container {
+            padding: 0 12px;
+          }
+        }
+
         /* Extra Large Screens (1400px and up) */
         @media (min-width: 1400px) {
-          .max-w-7xl {
-            max-width: 1320px;
-            padding: 0 40px;
-          }
           
           .industry-card {
             padding: 48px 32px;
@@ -358,7 +384,7 @@ export default function Home() {
         /* Mobile Large (480px - 639px) */
         @media (max-width: 639px) and (min-width: 480px) {
           .min-h-screen.bg-background {
-            padding-left: 20px;
+            padding-left: 00px;
             padding-right: 20px;
             padding-top: 28px;
             padding-bottom: 16px;
@@ -376,7 +402,7 @@ export default function Home() {
           .industry-title {
             font-size: 1.85rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            
           }
           
           .industry-description {
@@ -543,7 +569,7 @@ export default function Home() {
             justify-items: center;
           }
           
-          .max-w-7xl {
+          .responsive-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -592,4 +618,4 @@ export default function Home() {
       `}</style>
     </main>
   )
-}3 
+}

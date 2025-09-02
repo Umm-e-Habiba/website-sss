@@ -28,7 +28,7 @@ export function MarqueeDemo() {
         <div className="container">
           <div className="gallery-header">
             <div className="gallery-header-content">
-              <h2 className="gallery-title">OUR CLIENTS <br/><span>Trusted By</span></h2>
+              <h2 className="gallery-title">Our Clients <br/><span>Trusted By</span></h2>
               
             </div>
           </div>
@@ -61,7 +61,7 @@ export function MarqueeDemo() {
 
       <style jsx>{`
         .gallery-section {
-          padding: 20px 0 80px 0;
+          padding: 20px 10px 40px 10px;
         }
 
         .container {

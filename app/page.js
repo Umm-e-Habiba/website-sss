@@ -12,13 +12,15 @@ import Welcome from "@/components/homepages/home1/Welcome"
 import { Hero } from "@/components/ui/hero-1";
 import ServicesSlider from "@/components/homepages/home1/Services";
 import IndustrySection from "@/components/homepages/home1/industry";
-import Gallery4 from "@/components/ui/gallery4";
+import Services4 from "@/components/ui/services4";
 import { MarqueeDemo } from "@/components/ui/marquee-demo";
 import Awareness from "@/components/homepages/home1/Awareness";
 import Location from "@/components/homepages/home1/Location";
-import FindMore from "@/components/homepages/home1/FindMore";
+
 import FindOut from "@/components/homepages/home1/FindOut";
 import GoodPeople from "@/components/homepages/home1/GoodPeople";
+import Blog4 from "@/components/blog/Blog4";
+
 
 
 
@@ -38,13 +40,14 @@ export default function Page() {
                 />
 
                 <GoodPeople />
-                <Gallery4 />
+                <Services4 />
                 <MarqueeDemo />
                 <IndustrySection/>
                 <Awareness />
                 <Location />
-                <FindMore />
-                <FindOut />
+                
+                
+                <Blog4 />
                  
                 <Subscribe />
             </Layout>

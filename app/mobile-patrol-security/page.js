@@ -1,572 +1,1051 @@
+'use client';
+import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function MobilePatrolPage() {
+    const [activeService, setActiveService] = useState(null);
+
+    const toggleService = (index) => {
+        setActiveService(activeService === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "Vehicle Patrol Services",
+            icon: "🚗",
+            iconSymbol: "🛡️",
+            description: "Regular vehicle patrols to monitor and secure your property",
+            details: "Our mobile patrol units conduct regular vehicle inspections of your property perimeter and key areas. Using marked security vehicles, our trained guards provide visible deterrent while monitoring for suspicious activity, ensuring comprehensive coverage of large areas efficiently."
+        },
+        {
+            title: "Foot Patrol & Inspections", 
+            icon: "👮",
+            iconSymbol: "🔍",
+            description: "Detailed on-foot security inspections and patrols",
+            details: "Comprehensive foot patrols allow our security guards to conduct thorough inspections of buildings, access points, and restricted areas. This detailed approach ensures no security concerns are missed and provides close examination of potential vulnerability points."
+        },
+        {
+            title: "Alarm Response Services",
+            icon: "🚨",
+            iconSymbol: "⚡",
+            description: "Rapid response to security alarm activations",
+            details: "When security alarms are triggered, our mobile patrol units provide immediate response and investigation. Our trained guards assess the situation, secure the premises, and coordinate with authorities when necessary, ensuring swift action during security incidents."
+        },
+        {
+            title: "Access Control & Monitoring",
+            icon: "🔐",
+            iconSymbol: "🎯",
+            description: "Opening, closing, and access point monitoring services",
+            details: "Our mobile patrol services include opening and securing facilities at designated times, monitoring access points, and ensuring proper building security protocols. We provide key holding services and maintain detailed logs of all security activities."
+        }
+    ];
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="MOBILE PATROL SECURITY SERVICES">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="MOBILE PATROL SECURITY SERVICES"
+                mainTitle="Mobile Patrol Security Services"
+                subtitle="Professional Mobile Security Patrols in Melbourne - Protecting Your Property Around the Clock"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
+                    {/*===== Modern Hero Section =====*/}
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Dynamic Security Solutions
-                                            </small>
-                                            <h2>MOBILE PATROL SECURITY SERVICES IN MELBOURNE</h2>
-                                            <p>
-                                                Metro Security Guards with Mobile Patrol Services in Melbourne are designed to provide an effective and reliable solution to enhance the security of your premises. By conducting regular patrols, we monitor for any signs of suspicious activity, ensuring that your property remains secure at all times.
-                                            </p>
-                                            <p>
-                                                This proactive approach helps in maintaining a safe and serene environment for employees, visitors, and the surrounding area.
-                                            </p>
-                                            <div className="btn-area mt-4">
-                                                <a 
-                                                    href="/get-quotation" 
-                                                    className="btn text-white px-4 py-3 me-3"
-                                                    style={{
-                                                        backgroundColor: '#1E2247',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
-                                                </a>
-                                                <a 
-                                                    href="tel:1300731173" 
-                                                    className="btn text-dark px-4 py-3"
-                                                    style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CALL US NOW <span><i className="bi bi-telephone"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/case-study/s7.webp" alt="Mobile Patrol Security Services" />
-                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Industries Section =====*/}
-                    <div className="industries-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Comprehensive Protection
-                                        </small>
-                                        <h2>SECURITY FOR EVERY SECTOR</h2>
-                                        <p>MG Mobile Patrol Services cater to a broad range of industries with tailored security solutions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="industry-icon mb-3">
-                                            <i className="bi bi-book" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h5>Educational Institutions</h5>
-                                        <p>Ensuring safety of students and staff in schools and universities</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="industry-icon mb-3">
-                                            <i className="bi bi-briefcase" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h5>Corporate Offices</h5>
-                                        <p>Protecting valuable assets and sensitive information</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="industry-icon mb-3">
-                                            <i className="bi bi-hospital" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h5>Healthcare Facilities</h5>
-                                        <p>Maintaining safe environments for patients and staff</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="industry-icon mb-3">
-                                            <i className="bi bi-shop" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h5>Shopping Centers</h5>
-                                        <p>Securing retail spaces and protecting customers</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Melbourne Coverage Section =====*/}
-                    <div className="coverage-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="coverage-image mr50">
-                                        <img src="/assets/img/case-study/s6.webp" alt="Melbourne Coverage" className="img-fluid rounded shadow-lg" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="coverage-content ml50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                City-Wide Protection
-                                            </small>
-                                            <h2>MELBOURNE-WIDE COVERAGE</h2>
-                                            <p>
-                                                Melbourne's vibrant streets and busy environments require constant attention to security. Metro Guards Mobile Patrol Services are specifically designed to meet the demands of such an active city, ensuring that both pedestrians and properties are safe.
-                                            </p>
-                                            <p>
-                                                While our Mobile Patrol Services cover the heart of Melbourne's Central Business District, we don't stop there. Our security team extends its services to various suburbs of Melbourne, ensuring comprehensive coverage for businesses and residential areas beyond the city center.
-                                            </p>
-                                            <div className="coverage-features mt-4">
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <span>CBD and suburban coverage</span>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <span>Nighttime security checks</span>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-center">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <span>Rapid response to security concerns</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Technology Section =====*/}
-                    <div className="technology-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Advanced Security Solutions
-                                        </small>
-                                        <h2>TECHNOLOGY & PROFESSIONAL TEAMS</h2>
-                                        <p>Metropolitan Guards Mobile Patrol Services are equipped with advanced technology and professional teams.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="tech-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="tech-header d-flex align-items-center mb-3">
-                                            <div className="tech-icon mr-3">
-                                                <i className="bi bi-camera-video" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Advanced Surveillance</h4>
-                                        </div>
-                                        <p>We use cutting-edge equipment, such as surveillance tools and real-time communication systems, to ensure each patrol is effective and that any security breaches are addressed promptly.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="tech-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="tech-header d-flex align-items-center mb-3">
-                                            <div className="tech-icon mr-3">
-                                                <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Professional Teams</h4>
-                                        </div>
-                                        <p>Our team of professionals are trained to handle security issues with skill and precision. This combination of professionalism and technology ensures that your property is protected 24/7.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Benefits Section =====*/}
-                    <div className="benefits-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Why Choose Mobile Patrols
-                                        </small>
-                                        <h2>KEY BENEFITS OF MOBILE PATROL SERVICES</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-eye" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Effective Visual Deterrent</h4>
-                                        <p className="text-center">The random nature of our patrols makes it difficult for criminals to predict timing, which discourages unlawful activity.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-moon" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Security When You Need It</h4>
-                                        <p className="text-center">Enhanced security during off-hours when properties are unoccupied, particularly at night.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="benefit-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="benefit-icon mb-3 text-center">
-                                            <i className="bi bi-heart" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Peace of Mind</h4>
-                                        <p className="text-center">Knowing trained professionals monitor your property allows you to focus on your daily tasks without worry.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Cost Effective Section =====*/}
-                    <div className="cost-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="cost-content mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Affordable Security
-                                            </small>
-                                            <h2>COST-EFFECTIVE SECURITY SOLUTIONS</h2>
-                                            <p>
-                                                If you're looking for additional security without the commitment of a full-time guard, mobile patrol services offer the ideal solution. Our team visits your property intermittently, conducting either drive-by checks or foot inspections to ensure everything is secure.
-                                            </p>
-                                            <p>
-                                                This service provides peace of mind at a fraction of the cost of hiring a full-time security guard, making it a perfect solution for businesses in industrial areas or those that are not occupied around the clock.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="cost-image ml50">
-                                        <img src="/assets/img/case-study/s5.webp" alt="Cost Effective Security" className="img-fluid rounded shadow-lg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Professional Team Section =====*/}
-                    <div className="team-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Our Security Experts
-                                        </small>
-                                        <h2>HIGHLY TRAINED PROFESSIONALS</h2>
-                                        <p>MG mobile patrol team consists of highly trained, licensed, and accredited security professionals.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="team-card bg-white p-4 rounded shadow-lg">
-                                        <div className="row align-items-center">
-                                            <div className="col-lg-3 text-center">
-                                                <img src="/assets/img/icons/security.png" alt="Licensed Professionals" className="img-fluid mb-3" style={{maxHeight: '150px'}} />
-                                                <h5>Licensed & Accredited</h5>
-                                            </div>
-                                            <div className="col-lg-9">
-                                                <p>We follow specific Standard Operating Procedures (SOPs) tailored to each client's security needs. Whether we're securing corporate offices, healthcare facilities, or residential areas, our team's attention to detail ensures that all security concerns are addressed with the utmost care and professionalism.</p>
-                                                <div className="team-features mt-3">
-                                                    <div className="row">
-                                                        <div className="col-md-6">
-                                                            <div className="feature-item d-flex align-items-center mb-3">
-                                                                <div className="feature-icon mr-3">
-                                                                    <i className="bi bi-check-circle text-success"></i>
-                                                                </div>
-                                                                <span>Extensive background checks</span>
-                                                            </div>
-                                                            <div className="feature-item d-flex align-items-center mb-3">
-                                                                <div className="feature-icon mr-3">
-                                                                    <i className="bi bi-check-circle text-success"></i>
-                                                                </div>
-                                                                <span>Regular training updates</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-md-6">
-                                                            <div className="feature-item d-flex align-items-center mb-3">
-                                                                <div className="feature-icon mr-3">
-                                                                    <i className="bi bi-check-circle text-success"></i>
-                                                                </div>
-                                                                <span>Industry-certified professionals</span>
-                                                            </div>
-                                                            <div className="feature-item d-flex align-items-center">
-                                                                <div className="feature-icon mr-3">
-                                                                    <i className="bi bi-check-circle text-success"></i>
-                                                                </div>
-                                                                <span>First aid certified</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Additional Services Section =====*/}
-                    <div className="services-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Comprehensive Protection
-                                        </small>
-                                        <h2>ADDITIONAL MOBILE PATROL SERVICES</h2>
-                                        <p>Metro Guards mobile patrol security services offer more than just standard patrol checks.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-key" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h5 className="text-center mb-3">Opening & Locking</h5>
-                                        <p className="text-center">Ensuring your property is properly secured at the start and end of each day.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield-lock" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h5 className="text-center mb-3">Perimeter Patrols</h5>
-                                        <p className="text-center">Foot inspections around your building to ensure all areas are secure.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-alarm" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h5 className="text-center mb-3">Alarm Response</h5>
-                                        <p className="text-center">Immediate investigation of triggered security alarms.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h5 className="text-center mb-3">Staff Escorts</h5>
-                                        <p className="text-center">Ensuring safety of employees during late or night shifts.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Specialized Patrols Section =====*/}
-                    <div className="specialized-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Tailored Solutions
-                                        </small>
-                                        <h2>SPECIALIZED MOBILE PATROL SERVICES</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="specialized-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="card-header d-flex align-items-center mb-3">
-                                            <div className="header-icon mr-3">
-                                                <i className="bi bi-house" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Residential Area Patrols</h4>
-                                        </div>
-                                        <p>Mobile patrol security isn't limited to just businesses; residential areas can also greatly benefit from these services. Whether you are part of a neighborhood watch program or looking to enhance security in your community, mobile patrol services offer a cost-effective way to monitor and secure your neighborhood.</p>
-                                        <p>Our patrols work closely with local authorities and residents to ensure that security risks are addressed quickly, and any criminal behavior is dealt with promptly.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="specialized-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="card-header d-flex align-items-center mb-3">
-                                            <div className="header-icon mr-3">
-                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Construction Site Patrols</h4>
-                                        </div>
-                                        <p>Construction sites are often at risk of theft and vandalism due to their temporary nature and the high value of materials and equipment. Our mobile patrol services for construction sites offer a visible deterrent and swift response to any security concerns.</p>
-                                        <p>With the presence of uniformed security personnel and advanced technology, we ensure that your construction site remains secure, preventing delays caused by theft or unauthorized access.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Why Choose Us Section =====*/}
-                    <div className="why-choose-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            The Metro Guards Difference
-                                        </small>
-                                        <h2>WHY CHOOSE OUR MOBILE PATROL SERVICES?</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="why-choose-card bg-white p-4 rounded shadow-lg">
-                                        <div className="row">
-                                            <div className="col-lg-6">
-                                                <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-award" style={{fontSize: '24px', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Years of Experience</h5>
-                                                        <p>With years of experience providing mobile patrol security in Melbourne, we offer professional and reliable solutions.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-lightning" style={{fontSize: '24px', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Quick Response</h5>
-                                                        <p>Our teams are strategically located for rapid response to any security incidents.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-gear" style={{fontSize: '24px', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Customized Solutions</h5>
-                                                        <p>We tailor our services to meet your specific security needs and budget requirements.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start">
-                                                    <div className="feature-icon mr-3 mt-1">
-                                                        <i className="bi bi-shield-check" style={{fontSize: '24px', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>24/7 Monitoring</h5>
-                                                        <p>Around-the-clock protection with real-time monitoring and reporting.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Final CTA Section =====*/}
-                    <div className="cta-section bg-dark text-center section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="heading2">
-                                        <h2 className="text-white">READY TO ENHANCE YOUR SECURITY WITH MOBILE PATROLS?</h2>
-                                        <p className="text-white">
-                                            Mobile patrol services in Melbourne offer a dynamic, cost-effective solution to ensure the security of both residential and business properties. With the ability to respond quickly to incidents, provide real-time updates, and serve as a visible deterrent, mobile patrols offer unparalleled protection.
-                                        </p>
-                                        <div className="btn-area mt-4">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn text-white px-4 py-3 me-3"
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
                                                 style={{
-                                                    backgroundColor: '#1E2247',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
-                                                    textDecoration: 'none',
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
                                                     fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
                                                 }}
                                             >
-                                                GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                🚗 DYNAMIC SECURITY SOLUTIONS
+                                            </span>
+                                        </div>
+                                        <h1 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+                                            }}
+                                        >
+                                            MOBILE PATROL<br />
+                                            <span style={{color: '#fdc51a'}}>SECURITY</span>
+                                        </h1>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.2rem', 
+                                                lineHeight: '1.6',
+                                                maxWidth: '500px'
+                                            }}
+                                        >
+                                            Professional mobile patrol services designed to provide effective and reliable security solutions for your Melbourne property.
+                                        </p>
+                                        <p 
+                                            className="mb-5" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1rem',
+                                                lineHeight: '1.6',
+                                                maxWidth: '480px'
+                                            }}
+                                        >
+                                            Our regular patrols monitor for suspicious activity and maintain a safe, secure environment with proactive security coverage across Melbourne.
+                                        </p>
+                                        
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-primary px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                }}
+                                            >
+                                                📋 GET QUOTATION
                                             </a>
                                             <a 
                                                 href="tel:1300731173" 
-                                                className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-dark px-5 py-3"
                                                 style={{
-                                                    backgroundColor: '#FDC24C',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '10px',
                                                     textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    borderWidth: '2px'
                                                 }}
                                             >
-                                                CALL US NOW <span><i className="bi bi-telephone"></i></span>
+                                                📞 CALL US NOW
                                             </a>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="hero-image position-relative mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '25px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/case-study/s7.webp" 
+                                                alt="Mobile Patrol Security Services" 
+                                                className="img-fluid"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            {/* Floating Badge */}
+                                            <div 
+                                                className="floating-badge position-absolute"
+                                                style={{
+                                                    top: '30px',
+                                                    right: '30px',
+                                                    backgroundColor: '#1e2247',
+                                                    color: '#ffffff',
+                                                    padding: '15px 20px',
+                                                    borderRadius: '15px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem',
+                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
+                                                }}
+                                            >
+                                                🥇 Metro Guards
+                                            </div>
+                                            
+                                            {/* Bottom Badge */}
+                                            <div 
+                                                className="bottom-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '12px 20px',
+                                                    borderRadius: '12px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.85rem',
+                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
+                                                }}
+                                            >
+                                                ✅ Professional Patrols
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="decoration-circle position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                left: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="decoration-square position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                right: '-30px',
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundColor: '#1e2247',
+                                                borderRadius: '15px',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Our Services Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/case-study/s6.webp" 
+                                                alt="Mobile Patrol Security Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                ✅ Melbourne Wide Coverage
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🚗
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Regular Vehicle Patrols</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    👮
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Security Guards</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    📋
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Detailed Reporting</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ OUR SERVICES
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Mobile Patrol Security Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                Comprehensive mobile security solutions designed to protect your property with regular patrols and professional monitoring.
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
+                                                                </div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {service.description}
+                                                            </p>
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {service.details}
+                                                                </p>
+                                                            </div>
+                                                            
+                                                            {/* Additional service features */}
+                                                            <div className="service-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
+                                                                <div className="row">
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional trained staff</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Licensed & insured</span>
+                                                                        </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Detailed reporting</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/*===== Why Choose Mobile Patrol Section =====*/}
+                    <div className="why-choose-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-12 text-center mb-5">
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                            <i className="bi bi-shield-exclamation me-2"></i>
+                                            KEY BENEFITS
+                                        </span>
+                                    </div>
+                                    <h2 className="display-5 fw-bold mb-4 text-white">
+                                        Benefits of Mobile Patrol Security
+                                    </h2>
+                                    <p className="lead text-white" style={{opacity: '0.9'}}>
+                                        Mobile patrol services provide cost-effective security coverage with professional monitoring and rapid response capabilities.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div className="row g-4">
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-eye fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Visual Deterrent</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                The unpredictable nature of mobile patrols creates an effective visual deterrent, making it difficult for criminals to predict security coverage timing.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-currency-dollar fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Cost-Effective Security</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Mobile patrols offer professional security coverage at a fraction of the cost of full-time stationed guards, perfect for budget-conscious businesses.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-moon fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">24/7 Security Coverage</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Enhanced security during off-hours when properties are unoccupied, particularly valuable for nighttime and weekend protection.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-lightning-charge fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Rapid Response</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Quick response to security incidents and alarm activations with trained professionals ready to assess and secure situations immediately.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Statistics & Advantages Section =====*/}
+                    <div className="stats-advantages-section section-padding" style={{background: '#f8f9fa'}}>
+                        <div className="container">
+                            <div className="row align-items-center g-5">
+                                <div className="col-lg-6">
+                                    <div className="advantages-content">
+                                        <div className="subtitle mb-3">
+                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                <i className="bi bi-lightning me-2"></i>
+                                                PROFESSIONAL COVERAGE
+                                            </span>
+                                        </div>
+                                        <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                            Why Choose Our Mobile Patrols
+                                        </h2>
+                                        <p className="lead mb-4" style={{color: '#6c757d'}}>
+                                            With years of experience in Melbourne security, we provide reliable mobile patrol services with professional guards and advanced technology.
+                                        </p>
+                                        
+                                        <div className="advantages-list">
+                                            {[
+                                                "Melbourne-wide coverage including CBD and suburbs",
+                                                "Advanced surveillance and communication technology", 
+                                                "Highly trained and licensed security professionals",
+                                                "Customized patrol schedules to meet your needs",
+                                                "Detailed reporting and incident documentation"
+                                            ].map((advantage, index) => (
+                                                <div key={index} className="advantage-item d-flex align-items-center mb-3">
+                                                    <div 
+                                                        className="check-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '30px',
+                                                            height: '30px',
+                                                            backgroundColor: '#fdc51a',
+                                                            borderRadius: '50%',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-check-lg fw-bold"></i>
+                                                    </div>
+                                                    <span style={{color: '#1e2247', fontWeight: '500'}}>{advantage}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="stats-grid">
+                                        <div className="row g-4">
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-clock"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        24/7
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Security Coverage
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-geo-alt"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        100%
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Melbourne Coverage
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-shield-check"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        100%
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Licensed Guards
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-award"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        50+
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Years Experience
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Contact CTA Section =====*/}
+                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="cta-content text-center text-white">
+                                        <div className="subtitle mb-4">
+                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
+                                                <i className="bi bi-telephone me-2"></i>
+                                                MOBILE PATROL SECURITY
+                                            </span>
+                                        </div>
+                                        <h2 className="display-4 fw-bold mb-4">
+                                            Ready for Professional Mobile Patrol Security?
+                                        </h2>
+                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
+                                            Contact us today to discuss your mobile patrol security needs. Our professional team is ready to provide customized security solutions for your Melbourne property with 24/7 coverage and rapid response capabilities.
+                                        </p>
+                                        
+                                        <div className="cta-buttons mb-5">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-lg me-3 px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
+                                            </a>
+                                            <a 
+                                                href="tel:1300731173" 
+                                                className="btn btn-outline-light btn-lg px-5 py-3"
+                                                style={{
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
+                                            </a>
+                                        </div>
+                                        
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-truck"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Mobile Patrols</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Regular security rounds</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-shield-check"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Professional Guards</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully trained & licensed</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-clock"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">24/7 Coverage</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Always protected</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-geo-alt"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Add custom styles */}
+                    <style jsx>{`
+                        .section-padding {
+                            padding: 80px 0;
+                        }
+                        
+                        .min-vh-75 {
+                            min-height: 75vh;
+                        }
+                        
+                        .btn-primary:hover {
+                            background-color: #e8b502 !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(253, 197, 26, 0.4) !important;
+                        }
+                        
+                        .btn-outline-dark:hover {
+                            background-color: #1e2247 !important;
+                            border-color: #1e2247 !important;
+                            color: #ffffff !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(30, 34, 71, 0.3);
+                        }
+                        
+                        .trust-item:hover {
+                            transform: translateY(-5px);
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .floating-badge {
+                            animation: float 3s ease-in-out infinite;
+                        }
+                        
+                        @keyframes float {
+                            0%, 100% { transform: translateY(0px); }
+                            50% { transform: translateY(-10px); }
+                        }
+                        
+                        .service-header:hover {
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                        }
+                        
+                        .reason-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+                        }
+                        
+                        .stat-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        @keyframes slideDown {
+                            from {
+                                opacity: 0;
+                                max-height: 0;
+                                transform: translateY(-10px);
+                            }
+                            to {
+                                opacity: 1;
+                                max-height: 200px;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        .accordion-header:hover {
+                            background-color: #e9ecef !important;
+                            border-color: #fdc51a !important;
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                        }
+                        
+                        .accordion-content {
+                            overflow: hidden;
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .section-padding {
+                                padding: 60px 0;
+                            }
+                            
+                            .display-4 {
+                                font-size: 2.5rem;
+                            }
+                            
+                            .display-5 {
+                                font-size: 2rem;
+                            }
+                            
+                            .contact-info-grid {
+                                flex-direction: column;
+                                gap: 20px;
+                            }
+                            
+                            .cta-buttons .btn {
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    `}</style>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

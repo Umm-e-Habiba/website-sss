@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export const metadata = {
   title: 'Premium Concierge Security Services in Melbourne | Metro Guards',
@@ -653,6 +654,7 @@ export default function ConciergeSecurityPage() {
     </div>
 </div>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

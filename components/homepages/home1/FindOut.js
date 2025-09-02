@@ -79,7 +79,26 @@ export default function FindOut() {
         .findout-container {
           max-width: 1320px;
           margin: 0 auto;
-          padding: 0 20px;
+          padding: 0 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1199px) {
+          .findout-container {
+            padding: 0 32px;
+          }
+        }
+
+        @media (max-width: 1023px) {
+          .findout-container {
+            padding: 0 24px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .findout-container {
+            padding: 0 20px;
+          }
         }
 
         .findout-header {
@@ -202,7 +221,7 @@ export default function FindOut() {
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
+        @media (max-width: 639px) {
           .findout-container {
             padding: 0 16px;
           }
@@ -283,10 +302,7 @@ export default function FindOut() {
           }
         }
 
-        @media (max-width: 640px) {
-          .findout-container {
-            padding: 0 16px;
-          }
+
 
           .findout-section {
             padding: 50px 0;
@@ -341,7 +357,7 @@ export default function FindOut() {
           }
         }
 
-        @media (max-width: 360px) {
+        @media (max-width: 479px) {
           .findout-container {
             padding: 0 12px;
           }

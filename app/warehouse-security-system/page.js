@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function WarehouseSecurityPage() {
     return (
@@ -519,6 +520,7 @@ export default function WarehouseSecurityPage() {
                         </div>
                     </div>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

@@ -1,4 +1,5 @@
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function BuildingSecurityPage() {
     return (
@@ -378,6 +379,7 @@ export default function BuildingSecurityPage() {
                         </div>
                     </div>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

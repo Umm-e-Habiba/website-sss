@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
 export default function AdhocSecurityPage() {
     const [activeService, setActiveService] = useState(null);
@@ -51,7 +52,7 @@ export default function AdhocSecurityPage() {
                     <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
     <div className="container">
         <div className="row align-items-center">
-                                            <div className="col-lg-6">
+            <div className="col-lg-6">
                                     <div className="hero-content">
                                         <div className="subtitle mb-4">
                                             <span 
@@ -142,61 +143,7 @@ export default function AdhocSecurityPage() {
                         </div>
                                         
                                         {/* Trust Indicators */}
-                                        <div className="trust-indicators mt-5">
-                                            <div className="row text-center">
-                                                <div className="col-4">
-                                                    <div className="trust-item">
-                                                        <div 
-                                                            className="trust-icon mb-2"
-                                                            style={{
-                                                                fontSize: '2rem',
-                                                                color: '#fdc51a'
-                                                            }}
-                                                        >
-                                                            ⚡
-                    </div>
-                                                        <div style={{color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                            &lt;2 Hours<br />
-                                                            <small style={{color: '#6c757d', fontWeight: '400'}}>Response</small>
-                </div>
-            </div>
-                </div>
-                                                <div className="col-4">
-                                                    <div className="trust-item">
-                                                        <div 
-                                                            className="trust-icon mb-2"
-                                                            style={{
-                                                                fontSize: '2rem',
-                                                                color: '#fdc51a'
-                                                            }}
-                                                        >
-                                                            🛡️
-            </div>
-                                                        <div style={{color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                            Licensed<br />
-                                                            <small style={{color: '#6c757d', fontWeight: '400'}}>& Insured</small>
-        </div>
-    </div>
-</div>
-                                                <div className="col-4">
-                                                    <div className="trust-item">
-                                                        <div 
-                                                            className="trust-icon mb-2"
-                                                            style={{
-                                                                fontSize: '2rem',
-                                                                color: '#fdc51a'
-                                                            }}
-                                                        >
-                                                            🏆
-                </div>
-                                                        <div style={{color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                            50+ Years<br />
-                                                            <small style={{color: '#6c757d', fontWeight: '400'}}>Experience</small>
-            </div>
-        </div>
-                        </div>
-                    </div>
-                </div>
+                                        
             </div>
                         </div>
                                 
@@ -294,7 +241,7 @@ export default function AdhocSecurityPage() {
                     <div className="services-section section-padding" style={{background: '#ffffff'}}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 order-2 order-lg-1">
                                     <div className="services-image-section pe-lg-4">
                                         <div className="image-container position-relative">
                                             <img 
@@ -380,7 +327,7 @@ export default function AdhocSecurityPage() {
                                 </div>
                                         </div>
                                 
-                                <div className="col-lg-6">
+                                <div className="col-lg-6 order-1 order-lg-2">
                                     <div className="services-content ps-lg-4">
                                         <div className="section-header mb-5">
                                             <div className="subtitle mb-3">
@@ -1097,6 +1044,7 @@ export default function AdhocSecurityPage() {
     }
 `}</style>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

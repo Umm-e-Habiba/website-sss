@@ -1,110 +1,586 @@
+'use client';
+import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
+import "../contacts/contact-styles.css"
 
 export default function PrivateSecurityPage() {
+    const [activeService, setActiveService] = useState(null);
+
+    const toggleService = (index) => {
+        setActiveService(activeService === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "On-Demand Guard Services",
+            icon: "⚡",
+            iconSymbol: "🚀",
+            description: "Flexible security solutions for immediate needs with rapid deployment",
+            details: "Flexible security solutions for immediate needs, providing rapid deployment of trained personnel whenever required. Our on-demand services ensure you get professional security coverage within hours of your request."
+        },
+        {
+            title: "Skilled Security Personnel", 
+            icon: "🛡️",
+            iconSymbol: "👨‍💼",
+            description: "Highly trained professionals capable of assessing and preventing threats",
+            details: "Highly trained professionals capable of assessing risks and preventing security breaches effectively. Our skilled personnel undergo rigorous training in conflict resolution, emergency response, and advanced security protocols."
+        },
+        {
+            title: "On-Site Protection Experts",
+            icon: "🏢",
+            iconSymbol: "🔒",
+            description: "Proactive security professionals specialized in location-specific challenges",
+            details: "Proactive security professionals well-versed in the unique challenges of your location. Our on-site experts understand the specific requirements of different environments and tailor their approach accordingly."
+        },
+        {
+            title: "Premier Private Security",
+            icon: "⭐",
+            iconSymbol: "🏆",
+            description: "Elite services for high-profile individuals and businesses",
+            details: "Elite services offering customized solutions for high-profile individuals and businesses. Our premier security services provide discreet, professional protection with the highest level of confidentiality and expertise."
+        }
+    ];
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="TOP PRIVATE SECURITY GUARDS IN MELBOURNE">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="TOP PRIVATE SECURITY GUARDS IN MELBOURNE"
+                mainTitle="Professional Private Security Guards"
+                subtitle="Elite Private Security Guards in Melbourne - Protecting What Matters Most"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
+                    {/*===== Modern Hero Section =====*/}
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Melbourne's Trusted Security Partner
-                                            </small>
-                                            <h2>TOP PRIVATE SECURITY GUARDS IN MELBOURNE</h2>
-                                            <p>
-                                                You may not realize it, but when it comes to ensuring the safety and security of your property or event, private security guards play a crucial role in Melbourne. With the rising concerns about theft, vandalism, and violence, having a team of trained, qualified security guards and experienced security professionals can make all the difference.
-                                            </p>
-                                            <p>
-                                                Metro Guards is a leading security company in Melbourne offering bespoke security solutions to meet your needs. By hiring Metro Guards, you can rest assured that your property, assets, and people are in safe hands.
-                                            </p>
-                                            <div className="btn-area mt-4">
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
+                                                }}
+                                            >
+                                                🛡️ MELBOURNE'S TRUSTED SECURITY PARTNER
+                                            </span>
+                                        </div>
+                                        <h1 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+                                            }}
+                                        >
+                                            TOP PRIVATE<br />
+                                            <span style={{color: '#fdc51a'}}>SECURITY GUARDS</span>
+                                        </h1>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.2rem', 
+                                                lineHeight: '1.6',
+                                                maxWidth: '500px'
+                                            }}
+                                        >
+                                            When it comes to ensuring safety and security of your property or event, private security guards play a crucial role in Melbourne.
+                                        </p>
+                                        <p 
+                                            className="mb-5" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1rem',
+                                                lineHeight: '1.6',
+                                                maxWidth: '480px'
+                                            }}
+                                        >
+                                            Metro Guards is a leading security company offering bespoke security solutions with trained, qualified guards and experienced professionals to ensure your peace of mind.
+                                        </p>
+                                        
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
                                                 <a 
                                                     href="/get-quotation" 
-                                                    className="btn text-white px-4 py-3 me-3"
+                                                className="btn btn-primary px-5 py-3"
                                                     style={{
-                                                        backgroundColor: '#1E2247',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
                                                         border: 'none',
-                                                        borderRadius: '5px',
+                                                    borderRadius: '10px',
                                                         textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                }}
+                                            >
+                                                📋 GET QUOTATION
                                                 </a>
                                                 <a 
                                                     href="tel:1300731173" 
-                                                    className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-dark px-5 py-3"
                                                     style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '10px',
                                                         textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CALL US NOW <span><i className="bi bi-telephone"></i></span>
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    borderWidth: '2px'
+                                                }}
+                                            >
+                                                📞 CALL US NOW
                                                 </a>
                                             </div>
+                                        
+                                        
+                                        </div>
+                                    </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="hero-image position-relative mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '25px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/blog/private guard.jpg" 
+                                                alt="Professional Private Security Guards" 
+                                                className="img-fluid"
+                                                style={{
+            width: '100%', 
+                                                    height: '500px',
+            objectFit: 'cover' 
+                                                }}
+                                            />
+                                            
+                                            {/* Floating Badge */}
+                                            <div 
+                                                className="floating-badge position-absolute"
+                                                style={{
+                                                    top: '30px',
+                                                    right: '30px',
+                                                    backgroundColor: '#1e2247',
+                                                    color: '#ffffff',
+                                                    padding: '15px 20px',
+                                                    borderRadius: '15px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem',
+                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
+                                                }}
+                                            >
+                                                🥇 Metro Guards
+                                    </div>
+                                            
+                                            {/* Bottom Badge */}
+                                            <div 
+                                                className="bottom-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '12px 20px',
+                                                    borderRadius: '12px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.85rem',
+                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
+                                                }}
+                                            >
+                                                ✅ Licensed & Insured
+                </div>
+            </div>
+                                        
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="decoration-circle position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                left: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="decoration-square position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                right: '-30px',
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundColor: '#1e2247',
+                                                borderRadius: '15px',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Our Services Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/private guard.jpg" 
+                                                alt="Professional Security Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/blog/private guard.jpg" alt="Private Security Guards in Melbourne"  style={{ 
-            width: '100%', 
-            height: '400px', 
-            objectFit: 'cover' 
-        }}/>
-                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div> */}
+                                
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ OUR SERVICES
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Our Private Security Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                Professional security guards providing comprehensive protection for your property, events, and peace of mind.
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
+                                                                </div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {service.description}
+                                                            </p>
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {service.details}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Key Takeaways Section =====*/}
-                    <div className="key-takeaways bg-29 section-padding">
+                    {/*===== Advantages Section =====*/}
+                    <div className="advantages-section section-padding" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'}}>
                         <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="takeaways-box bg-white p-4 rounded shadow-lg">
-                                        <h3 className="mb-4 text-center" style={{color: '#243D31'}}>Key Takeaways</h3>
                                         <div className="row">
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                <div className="col-lg-6">
+                                    <div className="advantages-content pe-lg-5">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    ⭐ WHY CHOOSE US
+                                                </span>
                                                     </div>
-                                                    <h5 className="text-center">Professional & Trained Officers</h5>
-                                                    <p className="text-center">Metro Guards provide highly professional and extensively trained security guards to ensure safety and security.</p>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Why Choose Metro Guards for Private Security?
+                                            </h2>
+                                            <p className="lead mb-4" style={{color: '#6c757d'}}>
+                                                With rising concerns about theft, vandalism, and violence, our team of trained, qualified security guards makes all the difference.
+                                            </p>
                                                 </div>
+                                        
+                                        {/* Advantages List */}
+                                        <div className="advantages-list">
+                                            <div className="advantage-item d-flex align-items-start mb-4">
+                                                <div 
+                                                    className="advantage-icon me-3 mt-1 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#1e2247',
+                                                        borderRadius: '12px',
+                                                        color: '#ffffff'
+                                                    }}
+                                                >
+                                                    🎓
                                             </div>
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-gear" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <div>
+                                                    <h5 className="mb-2" style={{color: '#1e2247', fontWeight: '700'}}>Professional & Trained Officers</h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', fontSize: '0.95rem'}}>
+                                                        Highly professional and extensively trained security guards with ongoing development programs.
+                                                    </p>
                                                     </div>
-                                                    <h5 className="text-center">Customized Security Solutions</h5>
-                                                    <p className="text-center">Personalized security solutions tailored to each client's specific needs for complete protection.</p>
                                                 </div>
+                                            
+                                            <div className="advantage-item d-flex align-items-start mb-4">
+                                                <div 
+                                                    className="advantage-icon me-3 mt-1 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#1e2247',
+                                                        borderRadius: '12px',
+                                                        color: '#ffffff'
+                                                    }}
+                                                >
+                                                    🔧
                                             </div>
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-clock" style={{fontSize: '2rem', color: '#243D31'}}></i>
+                                                <div>
+                                                    <h5 className="mb-2" style={{color: '#1e2247', fontWeight: '700'}}>Customized Security Solutions</h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', fontSize: '0.95rem'}}>
+                                                        Personalized security solutions tailored to each client's specific needs for complete protection.
+                                                    </p>
                                                     </div>
-                                                    <h5 className="text-center">24/7 Protection</h5>
-                                                    <p className="text-center">Round-the-clock availability for uninterrupted security services when you need them most.</p>
+                                                </div>
+                                            
+                                            <div className="advantage-item d-flex align-items-start mb-4">
+                                                <div 
+                                                    className="advantage-icon me-3 mt-1 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#1e2247',
+                                                        borderRadius: '12px',
+                                                        color: '#ffffff'
+                                                    }}
+                                                >
+                                                    ⏰
+                                            </div>
+                                                <div>
+                                                    <h5 className="mb-2" style={{color: '#1e2247', fontWeight: '700'}}>24/7 Protection</h5>
+                                                    <p className="mb-0" style={{color: '#6c757d', fontSize: '0.95rem'}}>
+                                                        Round-the-clock availability for uninterrupted security services when you need them most.
+                                                    </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="stats-grid ps-lg-4">
+                                        <div className="stats-container">
+                                            <div className="row g-4">
+                                                <div className="col-md-6">
+                                                    <div 
+                                                        className="stat-card p-4 text-center h-100"
+                                                        style={{
+                                                            backgroundColor: '#ffffff',
+                                                            borderRadius: '15px',
+                                                            boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
+                                                            border: '1px solid #f0f0f0'
+                                                        }}
+                                                    >
+                                                        <div 
+                                                            className="stat-icon mb-3 d-flex align-items-center justify-content-center mx-auto"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                color: '#1e2247',
+                                                                fontSize: '1.8rem'
+                                                            }}
+                                                        >
+                                                            🏆
+                                                        </div>
+                                                        <div className="stat-number mb-2" style={{color: '#1e2247', fontSize: '2.5rem', fontWeight: '700'}}>
+                                                            50+
+                                                        </div>
+                                                        <div className="stat-label" style={{color: '#6c757d', fontWeight: '500'}}>
+                                                            Years Experience
+                            </div>
+                        </div>
+                    </div>
+                                                
+                                                <div className="col-md-6">
+                                                    <div 
+                                                        className="stat-card p-4 text-center h-100"
+                                                        style={{
+                                                            backgroundColor: '#ffffff',
+                                                            borderRadius: '15px',
+                                                            boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
+                                                            border: '1px solid #f0f0f0'
+                                                        }}
+                                                    >
+                                                        <div 
+                                                            className="stat-icon mb-3 d-flex align-items-center justify-content-center mx-auto"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                color: '#1e2247',
+                                                                fontSize: '1.8rem'
+                                                            }}
+                                                        >
+                                                            🛡️
+                                                        </div>
+                                                        <div className="stat-number mb-2" style={{color: '#1e2247', fontSize: '2.5rem', fontWeight: '700'}}>
+                                                            1000+
+                                                        </div>
+                                                        <div className="stat-label" style={{color: '#6c757d', fontWeight: '500'}}>
+                                                            Satisfied Clients
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="col-md-6">
+                                                    <div 
+                                                        className="stat-card p-4 text-center h-100"
+                                                        style={{
+                                                            backgroundColor: '#ffffff',
+                                                            borderRadius: '15px',
+                                                            boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
+                                                            border: '1px solid #f0f0f0'
+                                                        }}
+                                                    >
+                                                        <div 
+                                                            className="stat-icon mb-3 d-flex align-items-center justify-content-center mx-auto"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                color: '#1e2247',
+                                                                fontSize: '1.8rem'
+                                                            }}
+                                                        >
+                                                            👥
+                                                        </div>
+                                                        <div className="stat-number mb-2" style={{color: '#1e2247', fontSize: '2.5rem', fontWeight: '700'}}>
+                                                            24/7
+                                                        </div>
+                                                        <div className="stat-label" style={{color: '#6c757d', fontWeight: '500'}}>
+                                                            Available Support
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="col-md-6">
+                                                    <div 
+                                                        className="stat-card p-4 text-center h-100"
+                                                        style={{
+                                                            backgroundColor: '#ffffff',
+                                                            borderRadius: '15px',
+                                                            boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
+                                                            border: '1px solid #f0f0f0'
+                                                        }}
+                                                    >
+                                                        <div 
+                                                            className="stat-icon mb-3 d-flex align-items-center justify-content-center mx-auto"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                color: '#1e2247',
+                                                                fontSize: '1.8rem'
+                                                            }}
+                                                        >
+                                                            ✅
+                                                        </div>
+                                                        <div className="stat-number mb-2" style={{color: '#1e2247', fontSize: '2.5rem', fontWeight: '700'}}>
+                                                            100%
+                                                        </div>
+                                                        <div className="stat-label" style={{color: '#6c757d', fontWeight: '500'}}>
+                                                            Licensed & Insured
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,6 +589,9 @@ export default function PrivateSecurityPage() {
                             </div>
                         </div>
                     </div>
+
+                    {/*===== Old sections removed for cleaner design =====*/}
+                    <div className="hidden-sections" style={{display: 'none'}}>
 
                     {/*===== Roles and Responsibilities Section =====*/}
                     <div className="roles-section bg-28 section-padding">
@@ -427,52 +906,499 @@ export default function PrivateSecurityPage() {
                         </div>
                     </div>
 
-                    {/*===== Final CTA Section =====*/}
-                    <div className="cta-section bg-dark text-center section-padding">
+                    </div>
+
+                    {/*===== Contact Form Section =====*/}
+                    <div className="contact-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2d3561 100%)'}}>
                         <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="heading2">
-                                        <h2 className="text-white">YOUR TRUSTED SECURITY PARTNER IN MELBOURNE</h2>
-                                        <p className="text-white">
-                                            Considering all points, it is clear that hiring private security guards from Metro Guards in Melbourne is the best decision to ensure the safety and security of your property. With their highly trained and experienced security personnel, you can have peace of mind knowing that your premises are being protected by professionals.
-                                        </p>
-                                        <div className="btn-area mt-4">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn text-white px-4 py-3 me-3"
+                            <div className="row align-items-center">
+                                <div className="col-lg-6">
+                                    <div className="contact-content text-white pe-lg-5">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span 
+                                                    className="badge px-3 py-2" 
+                                                    style={{
+                                                        backgroundColor: '#fdc51a', 
+                                                        color: '#1e2247', 
+                                                        fontWeight: '600'
+                                                    }}
+                                                >
+                                                    📞 GET IN TOUCH
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4 text-white">
+                                                Ready to Secure Your Property?
+                                            </h2>
+                                            <p className="lead mb-4" style={{color: 'rgba(255, 255, 255, 0.8)'}}>
+                                                Contact Metro Guards today for professional private security guard services in Melbourne. Our team is ready to provide customized solutions for your security needs.
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Contact Cards */}
+                                        <div className="contact-cards">
+                                            <div className="contact-card d-flex align-items-center mb-4 p-4" style={{backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '12px'}}>
+                                                <div 
+                                                    className="contact-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '12px',
+                                                        color: '#1e2247'
+                                                    }}
+                                                >
+                                                    📞
+                                                </div>
+                                                <div>
+                                                    <h5 className="mb-1 text-white">Phone</h5>
+                                                    <p className="mb-0" style={{color: 'rgba(255, 255, 255, 0.8)'}}>1300 731 173 | Available 24/7</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="contact-card d-flex align-items-center mb-4 p-4" style={{backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '12px'}}>
+                                                <div 
+                                                    className="contact-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '12px',
+                                                        color: '#1e2247'
+                                                    }}
+                                                >
+                                                    ✉️
+                                                </div>
+                                                <div>
+                                                    <h5 className="mb-1 text-white">Email</h5>
+                                                    <p className="mb-0" style={{color: 'rgba(255, 255, 255, 0.8)'}}>info@metroguards.com.au</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="contact-card d-flex align-items-center p-4" style={{backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '12px'}}>
+                                                <div 
+                                                    className="contact-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '12px',
+                                                        color: '#1e2247'
+                                                    }}
+                                                >
+                                                    📍
+                                                </div>
+                                                <div>
+                                                    <h5 className="mb-1 text-white">Service Area</h5>
+                                                    <p className="mb-0" style={{color: 'rgba(255, 255, 255, 0.8)'}}>Melbourne & Surrounding Areas</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="modern-form-wrapper animate-on-scroll scale-in-animation ps-lg-4">
+                                            <div className="form-header fade-in-up">
+                                                <div className="form-badge pulse-badge">
+                                                    <span className="badge-icon">📋</span>
+                                                    <span>Request Security Quote</span>
+                                                </div>
+                                                <h2 className="form-title typing-animation">Get Your Professional Security Quote</h2>
+                                                <p className="form-subtitle fade-in-up">
+                                                    Fill out this form and our security experts will contact you within 2 hours with a customized solution.
+                                                </p>
+                                            </div>
+                                            
+                                            <form className="classic-contact-form" noValidate>
+                                                {/* honeypot (spam trap) */}
+                                                <input type="text" name="companyWebsite" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
+
+                                                <div className="form-section">
+                                                    <div className="form-grid">
+                                                        <div className="form-field">
+                                                            <label className="label-title">
+                                                                Your Full Name
+                                                                <span className="required-asterisk">*</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <input 
+                                                                    name="name" 
+                                                                    type="text" 
+                                                                    className="classic-input" 
+                                                                    placeholder="Enter your complete name" 
+                                                                    required 
+                                                                />
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="form-field">
+                                                            <label className="label-title">
+                                                                Email Address
+                                                                <span className="required-asterisk">*</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <input 
+                                                                    name="email" 
+                                                                    type="email" 
+                                                                    className="classic-input" 
+                                                                    placeholder="your.email@example.com" 
+                                                                    required 
+                                                                />
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="form-section">
+                                                    <div className="form-grid">
+                                                        <div className="form-field">
+                                                            <label className="label-title">
+                                                                Phone Number
+                                                                <span className="optional-text">(Optional)</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <input 
+                                                                    name="phone" 
+                                                                    type="tel" 
+                                                                    className="classic-input" 
+                                                                    placeholder="+61 xxx xxx xxx" 
+                                                                />
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="form-field">
+                                                            <label className="label-title">
+                                                                Property Location
+                                                                <span className="required-asterisk">*</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <input 
+                                                                    name="location" 
+                                                                    type="text" 
+                                                                    className="classic-input" 
+                                                                    placeholder="Enter property address or suburb" 
+                                                                    required 
+                                                                />
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="form-section">
+                                                    <div className="form-grid">
+                                                        <div className="form-field full-width">
+                                                            <label className="label-title">
+                                                                Security Service Required
+                                                                <span className="required-asterisk">*</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <div className="classic-select-wrapper">
+                                                                    <select name="serviceType" className="classic-select" required>
+                                                                        <option value="">Select the security service you need</option>
+                                                                        <option value="on-demand-guards">On-Demand Guard Services</option>
+                                                                        <option value="skilled-personnel">Skilled Security Personnel</option>
+                                                                        <option value="onsite-protection">On-Site Protection Experts</option>
+                                                                        <option value="premier-security">Premier Private Security</option>
+                                                                        <option value="event-security">Event Security</option>
+                                                                        <option value="mobile-patrol">Mobile Patrol Services</option>
+                                                                        <option value="other">Other (please specify in message)</option>
+                                                                    </select>
+                                                                    <div className="select-icon">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="form-section">
+                                                    <div className="form-grid">
+                                                        <div className="form-field full-width">
+                                                            <label className="label-title">
+                                                                Additional Details & Requirements
+                                                                <span className="optional-text">(Optional)</span>
+                                                            </label>
+                                                            <div className="input-container">
+                                                                <textarea 
+                                                                    name="message" 
+                                                                    className="classic-textarea" 
+                                                                    placeholder="Please describe your specific security requirements, preferred timing, any special considerations, or questions you may have..."
+                                                                    rows="4"
+                                                                ></textarea>
+                                                                <div className="input-border-effect"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="submit-section">
+                                                    <button
+                                                        type="submit"
+                                                        className="classic-submit-btn"
+                                                    >
+                                                        <span className="btn-content-classic">
+                                                            <span className="btn-icon-classic">
+                                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                                </svg>
+                                                            </span>
+                                                            <span className="btn-text">Send Security Quote Request</span>
+                                                        </span>
+                                                    </button>
+                                                    <p className="response-time">
+                                                        <span className="clock-icon">⏱️</span>
+                                                        We typically respond within 2 hours during business hours
+                                                    </p>
+                                                </div>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Final CTA Section =====*/}
+                    <div className="final-cta-section section-padding text-center" style={{background: 'linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(253, 253, 253) 100%)'}}>
+                        <div className="container">
+                            <div className="row justify-content-center">
+                                <div className="col-lg-8">
+                                    <div className="cta-content">
+                                        <div className="cta-icon mb-4">
+                                            <div 
+                                                className="icon-wrapper d-inline-flex align-items-center justify-content-center"
                                                 style={{
-                                                    backgroundColor: '#1E2247',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    width: '80px',
+                                                    height: '80px',
+                                                    backgroundColor: '#1e2247',
+                                                    borderRadius: '50%',
+                                                    color: '#ffffff',
+                                                    fontSize: '2rem'
                                                 }}
                                             >
-                                                GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                🛡️
+                                            </div>
+                                        </div>
+                                        
+                                        <h2 className="display-4 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                            Your Trusted Security Partner in Melbourne
+                                        </h2>
+                                        
+                                        <p className="lead mb-5" style={{color: '#1e2247', opacity: '0.8', maxWidth: '600px', margin: '0 auto 2rem'}}>
+                                            Hiring private security guards from Metro Guards in Melbourne is the best decision to ensure the safety and security of your property. Our highly trained professionals provide peace of mind.
+                                        </p>
+                                        
+                                        <div className="cta-buttons d-flex flex-wrap justify-content-center gap-3">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-primary px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#1e2247',
+                                                    color: '#ffffff',
+                                                    border: 'none',
+                                                    borderRadius: '12px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    boxShadow: '0 8px 25px rgba(30, 34, 71, 0.3)'
+                                                }}
+                                            >
+                                                📋 GET QUOTATION NOW
                                             </a>
                                             <a 
                                                 href="tel:1300731173" 
-                                                className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-dark px-5 py-3"
                                                 style={{
-                                                    backgroundColor: '#FDC24C',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '12px',
                                                     textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    borderWidth: '2px'
                                                 }}
                                             >
-                                                CALL US NOW <span><i className="bi bi-telephone"></i></span>
+                                                📞 CALL US: 1300 731 173
                                             </a>
+                                        </div>
+                                        
+                                        <div className="cta-features mt-5">
+                                            <div className="row justify-content-center">
+                                                <div className="col-md-4">
+                                                    <div className="feature-item">
+                                                        <span style={{color: '#1e2247', fontSize: '1.5rem'}}>✅</span>
+                                                        <span className="ms-2" style={{color: '#1e2247', fontWeight: '600'}}>Licensed & Insured</span>
+                                    </div>
+                                </div>
+                                                <div className="col-md-4">
+                                                    <div className="feature-item">
+                                                        <span style={{color: '#1e2247', fontSize: '1.5rem'}}>⚡</span>
+                                                        <span className="ms-2" style={{color: '#1e2247', fontWeight: '600'}}>24/7 Response</span>
+                            </div>
+                        </div>
+                                                <div className="col-md-4">
+                                                    <div className="feature-item">
+                                                        <span style={{color: '#1e2247', fontSize: '1.5rem'}}>🏆</span>
+                                                        <span className="ms-2" style={{color: '#1e2247', fontWeight: '600'}}>50+ Years Experience</span>
+                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* Add custom styles */}
+                    <style jsx>{`
+                        .section-padding {
+                            padding: 80px 0;
+                        }
+                        
+                        .btn-primary:hover {
+                            background-color: #e8b502 !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(253, 197, 26, 0.4) !important;
+                        }
+                        
+                        .btn-outline-dark:hover {
+                            background-color: #1e2247 !important;
+                            border-color: #1e2247 !important;
+                            color: #ffffff !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 8px 25px rgba(30, 34, 71, 0.3) !important;
+                        }
+                        
+                        .accordion-header:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+                        }
+                        
+                        .stat-card:hover {
+                            transform: translateY(-8px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+                        }
+                        
+                        .modern-form-wrapper {
+                            margin-top: 0 !important;
+                        }
+                        
+                        .contact-card:hover {
+                            transform: translateX(8px);
+                            background-color: rgba(255, 255, 255, 0.15) !important;
+                        }
+                        
+                        .advantage-item:hover .advantage-icon {
+                            transform: scale(1.1);
+                            background-color: #fdc51a !important;
+                            color: #1e2247 !important;
+                        }
+                        
+                        .floating-badge {
+                            animation: float 3s ease-in-out infinite;
+                        }
+                        
+                        .bottom-badge {
+                            animation: pulse 2s infinite;
+                        }
+                        
+                        @keyframes float {
+                            0%, 100% { transform: translateY(0px); }
+                            50% { transform: translateY(-10px); }
+                        }
+                        
+                        @keyframes pulse {
+                            0%, 100% { transform: scale(1); }
+                            50% { transform: scale(1.05); }
+                        }
+                        
+                        @keyframes slideDown {
+                            from {
+                                opacity: 0;
+                                transform: translateY(-20px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        .trust-item:hover {
+                            transform: translateY(-5px);
+                        }
+                        
+                        .trust-icon {
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .trust-item:hover .trust-icon {
+                            transform: scale(1.2);
+                        }
+                        
+                        .hero-buttons a {
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .contact-icon, .advantage-icon, .stat-icon {
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .decoration-circle {
+                            animation: float 4s ease-in-out infinite;
+                        }
+                        
+                        .decoration-square {
+                            animation: float 4s ease-in-out infinite reverse;
+                        }
+                        
+                        .feature-item {
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .feature-item:hover {
+                            transform: translateX(5px);
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .hero-buttons {
+                                flex-direction: column;
+                                align-items: stretch;
+                            }
+                            
+                            .hero-buttons a {
+                                text-align: center;
+                                margin-bottom: 1rem;
+                            }
+                            
+                            .trust-indicators .col-4 {
+                                margin-bottom: 1rem;
+                            }
+                            
+                            .cta-buttons {
+                                flex-direction: column;
+                                align-items: stretch;
+                            }
+                            
+                            .cta-buttons a {
+                                text-align: center;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    `}</style>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )

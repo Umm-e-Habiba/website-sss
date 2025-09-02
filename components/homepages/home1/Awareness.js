@@ -74,7 +74,26 @@ export default function Awareness() {
         .container {
           max-width: 1320px;
           margin: 0 auto;
-          padding: 0 20px;
+          padding: 0 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1199px) {
+          .container {
+            padding: 0 32px;
+          }
+        }
+
+        @media (max-width: 1023px) {
+          .container {
+            padding: 0 24px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .container {
+            padding: 0 20px;
+          }
         }
 
         .awareness-content {
@@ -219,9 +238,15 @@ export default function Awareness() {
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 639px) {
           .container {
             padding: 0 16px;
+          }
+        }
+
+        @media (max-width: 479px) {
+          .container {
+            padding: 0 12px;
           }
 
           .awareness-title {

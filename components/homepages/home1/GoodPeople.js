@@ -22,7 +22,7 @@ export default function GoodPeople() {
         clear: 'both'
       }}
     >
-      <div className="goodpeople-container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
+      <div className="goodpeople-container">
         <div className="goodpeople-content" style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {/* Brand Label */}
           <div className="brand-label" style={{ marginBottom: '8px' }}>
@@ -36,30 +36,30 @@ export default function GoodPeople() {
               display: 'block',
               margin: '0'
             }}>
-              MetroGuards Services Group
+              MetroGuards Security Services 
             </span>
           </div>
 
           {/* Main Heading */}
           <div className="main-heading" style={{ marginBottom: '16px' }}>
             <h2 className="heading-line" style={{
-              fontSize: '3rem',
+              fontSize: '2.5rem',
               fontWeight: '700',
               color: '#333333',
               lineHeight: '1.1',
               margin: '0',
               letterSpacing: '-0.02em',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-            }}>Good People.</h2>
+            }}>Right People.</h2>
             <h2 className="heading-line" style={{
-              fontSize: '3rem',
+              fontSize: '2.5rem',
               fontWeight: '700',
               color: '#333333',
               lineHeight: '1.1',
               margin: '0',
               letterSpacing: '-0.02em',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-            }}>Good Work.</h2>
+            }}>Right Protection.</h2>
           </div>
 
           {/* Description */}
@@ -100,7 +100,7 @@ export default function GoodPeople() {
         .goodpeople-container {
           max-width: 1320px;
           margin: 0 auto;
-          padding: 0 20px;
+          padding: 0 40px;
         }
 
         .goodpeople-content {
@@ -153,9 +153,21 @@ export default function GoodPeople() {
         }
 
         /* Responsive Design */
+        @media (max-width: 1199px) {
+          .goodpeople-container {
+            padding: 0 32px;
+          }
+        }
+
+        @media (max-width: 1023px) {
+          .goodpeople-container {
+            padding: 0 24px;
+          }
+        }
+
         @media (max-width: 1200px) {
           .goodpeople-container {
-            padding: 0 16px;
+            padding: 0 20px;
           }
 
           .heading-line {
@@ -209,7 +221,7 @@ export default function GoodPeople() {
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 639px) {
           .goodpeople-container {
             padding: 0 16px;
           }
@@ -265,7 +277,7 @@ export default function GoodPeople() {
           }
         }
 
-        @media (max-width: 360px) {
+        @media (max-width: 479px) {
           .goodpeople-container {
             padding: 0 12px;
           }

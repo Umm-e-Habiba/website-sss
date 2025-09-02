@@ -1,463 +1,1049 @@
+'use client';
+import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
+import Gallery4 from "@/components/ui/gallery4"
 
-export default function PrivateSecurityPage() {
+export default function StaffEscortSecurityPage() {
+    const [activeService, setActiveService] = useState(null);
+
+    const toggleService = (index) => {
+        setActiveService(activeService === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "Professional Staff Escort",
+            icon: "👥",
+            iconSymbol: "🛡️",
+            description: "Trained professionals accompany your staff members as they travel",
+            details: "Our professional staff escort services provide a reassuring layer of protection for your employees. Trained security personnel accompany staff members during travel to and from workplace locations, ensuring their safety throughout the journey."
+        },
+        {
+            title: "Employee Safety Services", 
+            icon: "🔒",
+            iconSymbol: "👨‍💼",
+            description: "Dedicated to creating a safe and secure work environment",
+            details: "We provide comprehensive employee safety services including risk assessment, safety training, and the implementation of security protocols to ensure your staff can work in a secure and protected environment."
+        },
+        {
+            title: "Workforce Protection Security",
+            icon: "🎯",
+            iconSymbol: "🏢",
+            description: "Security personnel accompany and protect your workforce",
+            details: "Our workforce protection services include security personnel who accompany and protect your employees during critical situations or in high-risk areas, ensuring continuous safety coverage."
+        },
+        {
+            title: "On-site Staff Safety",
+            icon: "⚡",
+            iconSymbol: "🚨",
+            description: "Comprehensive on-site safety measures and protocols",
+            details: "We implement comprehensive on-site staff safety measures including security assessments, emergency protocols, and continuous monitoring to maintain a safe working environment for all employees."
+        }
+    ];
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Staff Escort Security ">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="STAFF ESCORT SECURITY"
+                mainTitle="Professional Staff Escort Services"
+                subtitle="Expert Staff Protection & Employee Safety Services in Melbourne - Available 24/7"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
+                    {/*===== Modern Hero Section =====*/}
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Melbourne's Trusted Security Partner
-                                            </small>
-                                            <h2>TOP PRIVATE SECURITY GUARDS IN MELBOURNE</h2>
-                                            <p>
-                                                You may not realize it, but when it comes to ensuring the safety and security of your property or event, private security guards play a crucial role in Melbourne. With the rising concerns about theft, vandalism, and violence, having a team of trained, qualified security guards and experienced security professionals can make all the difference.
-                                            </p>
-                                            <p>
-                                                Metro Guards is a leading security company in Melbourne offering bespoke security solutions to meet your needs. By hiring Metro Guards, you can rest assured that your property, assets, and people are in safe hands.
-                                            </p>
-                                            <div className="btn-area mt-4">
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
+                                                }}
+                                            >
+                                                🛡️ PROFESSIONAL EMPLOYEE PROTECTION
+                                            </span>
+                                        </div>
+                                        <h1 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+                                            }}
+                                        >
+                                            STAFF ESCORT<br />
+                                            <span style={{color: '#fdc51a'}}>SECURITY</span>
+                                        </h1>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.2rem', 
+                                                lineHeight: '1.6',
+                                                maxWidth: '500px'
+                                            }}
+                                        >
+                                            Professional security personnel dedicated to ensuring the safety and protection of your employees in all workplace environments.
+                                        </p>
+                                        <p 
+                                            className="mb-5" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1rem',
+                                                lineHeight: '1.6',
+                                                maxWidth: '480px'
+                                            }}
+                                        >
+                                            Available 24/7 with trained professionals providing comprehensive staff escort services, workplace safety assessments, and employee protection across Melbourne.
+                                        </p>
+                                        
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
                                                 <a 
                                                     href="/get-quotation" 
-                                                    className="btn text-white px-4 py-3 me-3"
+                                                className="btn btn-primary px-5 py-3"
                                                     style={{
-                                                        backgroundColor: '#1E2247',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
                                                         border: 'none',
-                                                        borderRadius: '5px',
+                                                    borderRadius: '10px',
                                                         textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                }}
+                                            >
+                                                📋 GET QUOTATION
                                                 </a>
                                                 <a 
                                                     href="tel:1300731173" 
-                                                    className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-dark px-5 py-3"
                                                     style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '10px',
                                                         textDecoration: 'none',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CALL US NOW <span><i className="bi bi-telephone"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/about/about img.webp" alt="Private Security Guards in Melbourne" />
-                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Key Takeaways Section =====*/}
-                    <div className="key-takeaways bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="takeaways-box bg-white p-4 rounded shadow-lg">
-                                        <h3 className="mb-4 text-center" style={{color: '#1E2247'}}>Key Takeaways</h3>
-                                        <div className="row">
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-shield-check" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <h5 className="text-center">Professional & Trained Officers</h5>
-                                                    <p className="text-center">Metro Guards provide highly professional and extensively trained security guards to ensure safety and security.</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-gear" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <h5 className="text-center">Customized Security Solutions</h5>
-                                                    <p className="text-center">Personalized security solutions tailored to each client's specific needs for complete protection.</p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 mb-4">
-                                                <div className="takeaway-item p-3 h-100">
-                                                    <div className="takeaway-icon mb-3 text-center">
-                                                        <i className="bi bi-clock" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <h5 className="text-center">24/7 Protection</h5>
-                                                    <p className="text-center">Round-the-clock availability for uninterrupted security services when you need them most.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Staff Escort Section =====*/}
-                    <div className="staff-escort-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Employee Protection Services
-                                        </small>
-                                        <h2>STAFF ESCORT SECURITY SERVICES</h2>
-                                        <p>In today's competitive market, many companies are looking for professional security staff to enhance their own security at all levels.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="staff-escort-content mr50">
-                                        <h3 className="mb-3" style={{color: '#1E2247'}}>What Are Staff Escorts?</h3>
-                                        <p>Staff escorts are security personnel who are responsible for providing premium security at work stations and shelters, while staff escorts provide protection to employees and visitors.</p>
-                                        <p>Staff escorts work primarily in customer service roles. They protect employees from physical threats and help them interact with passengers. They also help manage traffic on the transit system's platforms.</p>
-                                        
-                                        <h3 className="mb-3 mt-4" style={{color: '#1E2247'}}>Why Choose Metro Guards for Staff Escort Services?</h3>
-                                        <p>Metro guards' staff escort security services in Melbourne is a great way to add security to your event. They are professional security personnel who patrol the business site. You can hire them for events, like conventions and trade shows.</p>
-                                        <div className="features-list mt-4">
-                                            <div className="feature-item d-flex align-items-start mb-3">
-                                                <div className="feature-icon mr-3">
-                                                    <i className="bi bi-check-circle-fill text-success"></i>
-                                                </div>
-                                                <div>
-                                                    <h5>Experienced Professionals</h5>
-                                                    <p>Our guards have extensive experience working with different systems and environments.</p>
-                                                </div>
-                                            </div>
-                                            <div className="feature-item d-flex align-items-start mb-3">
-                                                <div className="feature-icon mr-3">
-                                                    <i className="bi bi-check-circle-fill text-success"></i>
-                                                </div>
-                                                <div>
-                                                    <h5>24/7 Availability</h5>
-                                                    <p>We can provide security personnel on short notice whenever you need them.</p>
-                                                </div>
-                                            </div>
-                                            <div className="feature-item d-flex align-items-start">
-                                                <div className="feature-icon mr-3">
-                                                    <i className="bi bi-check-circle-fill text-success"></i>
-                                                </div>
-                                                <div>
-                                                    <h5>Fully Licensed & Vetted</h5>
-                                                    <p>All our guards are properly licensed and have undergone thorough background checks.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="staff-escort-image ml50">
-                                        <img src="/assets/img/bg/security img.webp" alt="Staff Escort Services" className="img-fluid rounded shadow-lg" />
-                                        <div className="process-box bg-white p-4 rounded shadow-lg mt-4">
-                                            <h4 className="mb-3" style={{color: '#243D31'}}>The Hiring Process</h4>
-                                            <p>When you are ready to hire a security guard from escort security company in Melbourne, it is important to consider what you need and don't need.</p>
-                                            <ul className="list-unstyled">
-                                                <li className="mb-2"><i className="bi bi-check-circle text-success mr-2"></i> Assess your specific security requirements</li>
-                                                <li className="mb-2"><i className="bi bi-check-circle text-success mr-2"></i> Determine frequency and duration of service</li>
-                                                <li className="mb-2"><i className="bi bi-check-circle text-success mr-2"></i> Review service options and pricing</li>
-                                                <li className="mb-2"><i className="bi bi-check-circle text-success mr-2"></i> Verify credentials and references</li>
-                                                <li><i className="bi bi-check-circle text-success mr-2"></i> Finalize contract details</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Staff Escort Services Section =====*/}
-                    <div className="escort-services bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Comprehensive Protection
-                                        </small>
-                                        <h2>OUR STAFF ESCORT SERVICES</h2>
-                                        <p>Ensuring the safety of your employees is paramount in any organization, and these services in Melbourne are designed to provide the necessary protection.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-person-check" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Professional Staff Escort</h4>
-                                        <p className="text-center">Trained professionals accompany your staff members as they travel to and from their workplace, providing a reassuring layer of protection.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield-lock" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Employee Safety Services</h4>
-                                        <p className="text-center">Dedicated to creating a safe and secure work environment including risk assessment and safety training.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-shield" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Secure Staff Escort</h4>
-                                        <p className="text-center">Highly trained personnel ensure that your staff members are protected from potential risks and security threats.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-people" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Safety Personnel for Staff</h4>
-                                        <p className="text-center">Dedicated professionals who provide continuous vigilance and support to ensure the well-being of your employees.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-briefcase" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">Workforce Escort Security</h4>
-                                        <p className="text-center">Security personnel accompany and protect your workforce during critical situations or in high-risk areas.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-4">
-                                    <div className="service-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="service-icon mb-3 text-center">
-                                            <i className="bi bi-building" style={{fontSize: '2rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <h4 className="text-center mb-3">On-site Staff Safety</h4>
-                                        <p className="text-center">Trained professionals assess risks and implement measures to ensure your staff can work in a secure environment.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Security Officer Details Section =====*/}
-                    <div className="officer-details bg-28 section-padding">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="officer-image mr50">
-                                        <img src="/assets/img/case-study/s7.webp" alt="Security Officer" className="img-fluid rounded shadow-lg" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="officer-content ml50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Professional Standards
-                                            </small>
-                                            <h2>SECURITY OFFICER QUALIFICATIONS</h2>
-                                            <p>
-                                                As part of their duty, security officers in Australia must ensure that they are licensed to work in their respective territories, such as holding a WA Security Licence. They are responsible for conducting patrols, monitoring security systems, and controlling access to properties to maintain security operations.
-                                            </p>
-                                            <div className="officer-features mt-4">
-                                                <div className="feature-item d-flex align-items-start mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Licensing & Certification</h5>
-                                                        <p>All officers hold proper security licenses and first aid certificates.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Comprehensive Training</h5>
-                                                        <p>Officers undergo thorough training in surveillance, access control, and emergency response.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5>Background Checks</h5>
-                                                        <p>All personnel undergo rigorous background checks and vetting processes.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Roles and Responsibilities Section =====*/}
-                    <div className="roles-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Our Security Commitment
-                                        </small>
-                                        <h2>ROLES AND RESPONSIBILITIES</h2>
-                                        <p>One of the main roles of our private security guards in Melbourne is to ensure the safety and security of the premises you are assigned to.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="role-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="role-header d-flex align-items-center mb-3">
-                                            <div className="role-icon mr-3">
-                                                <i className="bi bi-building" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">On-site Security Duties</h4>
-                                        </div>
-                                        <p>When we are on-site, our primary duty is to maintain a high level of visibility to deter potential threats. We are responsible for monitoring surveillance equipment, inspecting buildings, and controlling access to the property.</p>
-                                        <p>In the event of an incident, we must act quickly and decisively to handle the situation and protect the safety of everyone on the premises. Our alertness and quick response to suspicious activities can prevent potential threats and security breaches.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="role-card bg-white p-4 rounded shadow-lg h-100">
-                                        <div className="role-header d-flex align-items-center mb-3">
-                                            <div className="role-icon mr-3">
-                                                <i className="bi bi-calendar-event" style={{fontSize: '2rem', color: '#243D31'}}></i>
-                                            </div>
-                                            <h4 className="mb-0">Event Security Management</h4>
-                                        </div>
-                                        <p>Event security management is another important aspect of your role as a private security guard. Whether it's a corporate event, concert, or public gathering, our responsibility is to ensure the safety and security of all attendees.</p>
-                                        <p>We may be required to screen guests, manage entry and exit points, and be prepared to handle any disturbances or emergencies that may arise. Our ability to remain calm under pressure and quickly assess and address potential risks can make a significant difference.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Training and Qualifications Section =====*/}
-                    <div className="training-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="training-image mr50">
-                                        <img src="/assets/img/case-study/s1.webp" alt="Security Guard Training" className="img-fluid rounded shadow-lg" />
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="training-content ml50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Professional Standards
-                                            </small>
-                                            <h2>TRAINING AND QUALIFICATIONS</h2>
-                                            <p>
-                                                Before we can work as a security guard in Melbourne, we need to undergo the necessary training and obtain the required qualifications. This is crucial to ensure that we have the skills and knowledge needed to perform our job effectively and to the highest standards.
-                                            </p>
-                                            <div className="training-features mt-4">
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success" style={{fontSize: '20px'}}></i>
-                                                    </div>
-                                                    <span>Mandatory licensing and certification</span>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success" style={{fontSize: '20px'}}></i>
-                                                    </div>
-                                                    <span>First aid and emergency response training</span>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success" style={{fontSize: '20px'}}></i>
-                                                    </div>
-                                                    <span>Conflict resolution and de-escalation techniques</span>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-center mb-3">
-                                                    <div className="feature-icon mr-3">
-                                                        <i className="bi bi-check-circle-fill text-success" style={{fontSize: '20px'}}></i>
-                                                    </div>
-                                                    <span>Ongoing professional development</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Final CTA Section =====*/}
-                    <div className="cta-section bg-dark text-center section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="heading2">
-                                        <h2 className="text-white">YOUR TRUSTED SECURITY PARTNER IN MELBOURNE</h2>
-                                        <p className="text-white">
-                                            Considering all points, it is clear that hiring private security guards from Metro Guards in Melbourne is the best decision to ensure the safety and security of your property. With their highly trained and experienced security personnel, you can have peace of mind knowing that your premises are being protected by professionals.
-                                        </p>
-                                        <div className="btn-area mt-4">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn text-white px-4 py-3 me-3"
-                                                style={{
-                                                    backgroundColor: '#1E2247',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    borderWidth: '2px'
                                                 }}
                                             >
-                                                GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                📞 CALL US NOW
+                                            </a>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="hero-image position-relative mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '25px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Professional Staff Escort Security Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            {/* Floating Badge */}
+                                            <div 
+                                                className="floating-badge position-absolute"
+                                                style={{
+                                                    top: '30px',
+                                                    right: '30px',
+                                                    backgroundColor: '#1e2247',
+                                                    color: '#ffffff',
+                                                    padding: '15px 20px',
+                                                    borderRadius: '15px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem',
+                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
+                                                }}
+                                            >
+                                                🥇 Metro Guards
+                                            </div>
+                                            
+                                            {/* Bottom Badge */}
+                                            <div 
+                                                className="bottom-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '12px 20px',
+                                                    borderRadius: '12px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.85rem',
+                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
+                                                }}
+                                            >
+                                                ✅ Licensed & Insured
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="decoration-circle position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                left: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="decoration-square position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                right: '-30px',
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundColor: '#1e2247',
+                                                borderRadius: '15px',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Our Services Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Professional Staff Escort Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            <div 
+                                                className="overlay-badge position-absolute"
+                                                style={{
+                                                    bottom: '30px',
+                                                    left: '30px',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '15px 25px',
+                                                    borderRadius: '10px',
+                                                    fontWeight: '700',
+                                                    fontSize: '0.9rem'
+                                                }}
+                                            >
+                                                ✅ Licensed & Insured
+                                            </div>
+                                                    </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    🕒
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Available Service</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    👨‍💼
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Professional Escorts</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    ⚡
+                                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid Response & Deployment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    🛡️ OUR SERVICES
+                                                </span>
+                                    </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Staff Escort Security Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                Professional employee protection services designed to ensure the safety and security of your staff members.
+                                            </p>
+                            </div>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
+                                                </div>
+                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                </div>
+                                            </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {service.description}
+                                                            </p>
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {service.details}
+                                                                </p>
+                                                            </div>
+                                                            
+                                                            {/* Additional service features */}
+                                                            <div className="service-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
+                                                                <div className="row">
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional trained staff</span>
+                                                </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
+                                                </div>
+                                            </div>
+                                                                    <div className="col-md-6">
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Licensed & insured</span>
+                                                </div>
+                                                                        <div className="feature-item d-flex align-items-center mb-2">
+                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
+                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Rapid response</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Why Choose Staff Escort Security Section =====*/}
+                    <div className="why-choose-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-12 text-center mb-5">
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                            <i className="bi bi-shield-exclamation me-2"></i>
+                                            WHEN YOU NEED US
+                                        </span>
+                                    </div>
+                                    <h2 className="display-5 fw-bold mb-4 text-white">
+                                        Common Reasons for Staff Escort Services
+                                    </h2>
+                                    <p className="lead text-white" style={{opacity: '0.9'}}>
+                                        Staff escort services are implemented when employee safety becomes a concern and immediate protection is needed.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div className="row g-4">
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-person-exclamation fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">High-Risk Workplace Environments</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Provide professional escort services for employees working in high-risk areas or during dangerous shifts, ensuring their safety during travel to and from work locations.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-clock fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Late Night & Early Morning Shifts</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Escort protection for employees working during vulnerable hours when public transportation is limited and personal safety risks are heightened.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-exclamation-triangle fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Threatening Situations</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Immediate protective escort services when employees receive threats or are involved in sensitive situations requiring enhanced personal security.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 col-md-6">
+                                    <div 
+                                        className="reason-card h-100 p-4 d-flex align-items-start"
+                                        style={{
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                            backdropFilter: 'blur(10px)',
+                                            borderRadius: '15px',
+                                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        <div 
+                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
+                                            style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '12px',
+                                                color: '#1e2247'
+                                            }}
+                                        >
+                                            <i className="bi bi-briefcase fs-3"></i>
+                                        </div>
+                                        <div className="reason-content">
+                                            <h5 className="mb-3 text-white fw-bold">Special Events & VIP Protection</h5>
+                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                Professional escort services for executives, VIPs, or key personnel during business events, meetings, and travel requiring discreet protection.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    {/*===== Statistics & Advantages Section =====*/}
+                    <div className="stats-advantages-section section-padding" style={{background: '#f8f9fa'}}>
+                        <div className="container">
+                            <div className="row align-items-center g-5">
+                                <div className="col-lg-6">
+                                    <div className="advantages-content">
+                                        <div className="subtitle mb-3">
+                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                <i className="bi bi-lightning me-2"></i>
+                                                PROFESSIONAL & RELIABLE SERVICE
+                                            </span>
+                                        </div>
+                                        <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                            Advantages of Staff Escort Security
+                                        </h2>
+                                        <p className="lead mb-4" style={{color: '#6c757d'}}>
+                                            Our staff escort services provide peace of mind for both employers and employees, ensuring safe passage and professional protection in all environments.
+                                        </p>
+                                        
+                                        <div className="advantages-list">
+                                            {[
+                                                "Enhanced employee safety and security",
+                                                "Reduced workplace liability and insurance costs", 
+                                                "Professional trained security personnel",
+                                                "24/7 availability for emergency situations",
+                                                "Customized protection plans for your business"
+                                            ].map((advantage, index) => (
+                                                <div key={index} className="advantage-item d-flex align-items-center mb-3">
+                                                    <div 
+                                                        className="check-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '30px',
+                                                            height: '30px',
+                                                            backgroundColor: '#fdc51a',
+                                                            borderRadius: '50%',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-check-lg fw-bold"></i>
+                                                    </div>
+                                                    <span style={{color: '#1e2247', fontWeight: '500'}}>{advantage}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6">
+                                    <div className="stats-grid">
+                                        <div className="row g-4">
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-people"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        24/7
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Staff Protection
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-shield-check"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        100%
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Licensed Guards
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-clock"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        &lt;1
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Hour Response Time
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="col-6">
+                                                <div 
+                                                    className="stat-card text-center p-4 h-100"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '15px',
+                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                        border: '1px solid #e9ecef',
+                                                        transition: 'all 0.3s ease'
+                                                    }}
+                                                >
+                                                    <div 
+                                                        className="stat-icon mb-3"
+                                                        style={{
+                                                            color: '#fdc51a',
+                                                            fontSize: '2.5rem'
+                                                        }}
+                                                    >
+                                                        <i className="bi bi-award"></i>
+                                                    </div>
+                                                    <div 
+                                                        className="stat-number fw-bold mb-2"
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        50+
+                                                    </div>
+                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
+                                                        Years Experience
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*===== Contact CTA Section =====*/}
+                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="cta-content text-center text-white">
+                                        <div className="subtitle mb-4">
+                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
+                                                <i className="bi bi-telephone me-2"></i>
+                                                PROFESSIONAL STAFF PROTECTION NEEDED?
+                                            </span>
+                                        </div>
+                                        <h2 className="display-4 fw-bold mb-4">
+                                            Need Professional Staff Escort Services?
+                                        </h2>
+                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
+                                            Contact us to discuss how we can implement professional staff escort security solutions tailored to your organization's needs. Our team is ready to provide immediate employee protection services across Melbourne.
+                                        </p>
+                                        
+                                        <div className="cta-buttons mb-5">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-lg me-3 px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
                                             </a>
                                             <a 
                                                 href="tel:1300731173" 
-                                                className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-light btn-lg px-5 py-3"
                                                 style={{
-                                                    backgroundColor: '#FDC24C',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
+                                                    borderRadius: '10px',
                                                     textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
                                                 }}
                                             >
-                                                CALL US NOW <span><i className="bi bi-telephone"></i></span>
+                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
                                             </a>
+                                        </div>
+                                        
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-people"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Professional Staff Escorts</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Trained & experienced</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-shield-check"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Licensed & Insured</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully compliant</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-clock"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">24/7 Available</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Round the clock</small>
+                                                    </div>
+                                                    <div className="contact-info-item mb-3">
+                                                        <div 
+                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                backgroundColor: 'rgba(255,255,255,0.1)',
+                                                                borderRadius: '50%',
+                                                                fontSize: '2rem'
+                                                            }}
+                                                        >
+                                                            <i className="bi bi-geo-alt"></i>
+                                                        </div>
+                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
+                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* Add custom styles */}
+                    <style jsx>{`
+                        .section-padding {
+                            padding: 80px 0;
+                        }
+                        
+                        .min-vh-75 {
+                            min-height: 75vh;
+                        }
+                        
+                        .btn-primary:hover {
+                            background-color: #e8b502 !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(253, 197, 26, 0.4) !important;
+                        }
+                        
+                        .btn-outline-dark:hover {
+                            background-color: #1e2247 !important;
+                            border-color: #1e2247 !important;
+                            color: #ffffff !important;
+                            transform: translateY(-3px);
+                            box-shadow: 0 12px 30px rgba(30, 34, 71, 0.3);
+                        }
+                        
+                        .trust-item:hover {
+                            transform: translateY(-5px);
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .floating-badge {
+                            animation: float 3s ease-in-out infinite;
+                        }
+                        
+                        @keyframes float {
+                            0%, 100% { transform: translateY(0px); }
+                            50% { transform: translateY(-10px); }
+                        }
+                        
+                        .accordion-header:hover {
+                            background-color: #e9ecef !important;
+                            border-color: #fdc51a !important;
+                            transform: translateY(-2px);
+                            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+                        }
+                        
+                        .reason-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+                        }
+                        
+                        .stat-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+                        }
+                        
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(10px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        @keyframes slideDown {
+                            from {
+                                opacity: 0;
+                                max-height: 0;
+                                transform: translateY(-10px);
+                            }
+                            to {
+                                opacity: 1;
+                                max-height: 200px;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        .accordion-content {
+                            overflow: hidden;
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .section-padding {
+                                padding: 60px 0;
+                            }
+                            
+                            .display-4 {
+                                font-size: 2.5rem;
+                            }
+                            
+                            .display-5 {
+                                font-size: 2rem;
+                            }
+                            
+                            .contact-info-grid {
+                                flex-direction: column;
+                                gap: 20px;
+                            }
+                            
+                            .cta-buttons .btn {
+                                display: block;
+                                width: 100%;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    `}</style>
                 </div>
+                <Gallery4 />
             </Layout>
         </>
     )
