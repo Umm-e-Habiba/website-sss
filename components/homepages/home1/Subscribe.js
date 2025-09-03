@@ -2,7 +2,7 @@ export default function Subscribe() {
     return (
         <>
             {/*===== Contact CTA Section =====*/}
-            <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+            <div className="contact-cta-section section-padding" style={{backgroundColor: "rgb(14 19 61)"}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">

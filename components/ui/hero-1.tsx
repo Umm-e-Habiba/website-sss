@@ -6,165 +6,182 @@ import { useEffect, useState } from "react"
 
 interface HeroProps {
   eyebrow?: string
-  title: string
+  title: string | string[]
   subtitle: string
   ctaLabel?: string
   ctaHref?: string
 }
 
 export function Hero({
-  eyebrow = "Innovate Without Limits",
+  eyebrow = "Metro Guards Security Services",
   title,
   subtitle,
-  ctaLabel = "Explore Now",
-  ctaHref = "#",
+  ctaLabel = "Contact Us Now",
+  ctaHref = "/contact-us",
 }: HeroProps) {
-  const [scrollY, setScrollY] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  // Carousel images array
+  const carouselImages = [
+    '/assets/img/banner/metro-2.jpg',
+    '/assets/img/banner/metro-3.jpg',
+    '/assets/img/banner/metro-2-copy.jpg',
+    '/assets/img/case-study/case-1.jpg',
+    '/assets/img/case-study/case-2.jpg'
+  ]
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll)
-    
-    // Trigger animations on load
     const timer = setTimeout(() => setIsLoaded(true), 300)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      clearTimeout(timer)
-    }
+    return () => clearTimeout(timer)
   }, [])
+
+  // Auto-advance carousel every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [carouselImages.length])
 
   return (
     <section
       id="hero"
-      className="relative mx-auto w-full pt-24 sm:pt-32 pb-16 sm:pb-20 px-6 text-center md:px-8 
-      h-[70vh] sm:h-[75vh] md:h-[80vh] overflow-hidden z-0
-      bg-[linear-gradient(135deg,rgba(0,0,0,0.4)_0%,rgba(0,0,0,0.5)_25%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,0.7)_75%,rgba(30,34,71,0.8)_100%),url('/assets/img/banner/metro-2.jpg')]
-      dark:bg-[linear-gradient(135deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.6)_30%,rgba(0,0,0,0.7)_60%,rgba(30,34,71,0.9)_100%),url('/assets/img/banner/metro-2.jpg')] 
-      bg-cover bg-center bg-no-repeat
-      rounded-b-xl flex flex-col justify-center items-center"
+      className="relative mx-auto w-full pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-8 sm:pb-12 md:pb-16 px-3 sm:px-5 md:pl-12 md:pr-6 lg:pl-32 lg:pr-20
+      h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] overflow-hidden z-0
+      rounded-b-xl flex flex-col justify-center items-start"
     >
-      {/* Grid BG */}
-      <div
-        className="absolute -z-10 inset-0 opacity-20 h-[600px] w-full 
-        bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] 
-        dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)]
-        bg-[size:6rem_5rem] 
-        [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
-      />
-
-      {/* Radial Accent */}
-      <div
-        className="absolute left-0 bottom-0 
-        h-[180px] w-full 
-        rounded-[100%] 
-        z-5 opacity-90"
-        style={{ 
-          transform: 'translateY(50%)',
-          background: 'radial-gradient(ellipse at bottom, #fdc51a 0%, rgba(253, 197, 26, 0.9) 10%, rgba(253, 197, 26, 0.8) 20%, rgba(253, 197, 26, 0.6) 30%, rgba(253, 197, 26, 0.4) 40%, rgba(253, 197, 26, 0.2) 50%, #2a2a2a 60%, #1a1a1a 70%, #111111 80%, #000000 90%, transparent 100%)'
-        }}
-      />
-
-      {/* Diamond Image on Left */}
-      <div 
-        className={`absolute left-8 md:left-16 top-1/2 -translate-y-1/2 z-20 transition-all duration-1500 ease-out ${
-          isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
-        }`}
-      >
-        <div 
-          className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+      {/* Carousel Background Images */}
+      {carouselImages.map((image, index) => (
+        <div
+          key={`${index}-${currentSlide}`}
+          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-[2000ms] ease-out ${
+            index === currentSlide ? 'opacity-100' : 'opacity-0'
+          }`}
           style={{
-            clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(253,197,26,0.4)',
+            backgroundImage: `linear-gradient(135deg,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.5) 25%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0.7) 75%,rgba(30,34,71,0.8) 100%), url('${image}')`,
+            zIndex: index === currentSlide ? 1 : 0,
+            animation: index === currentSlide ? 'slowZoomIn 8s ease-out' : 'none',
           }}
-        >
-          <div
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: "url('/assets/img/banner/metro-2.jpg')",
-              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-            }}
-          />
-          <div 
-            className="absolute inset-0 bg-gradient-to-br from-[#fdc51a]/30 to-[#1e2247]/30"
-            style={{
-              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-            }}
-          />
-        </div>
-      </div>
+        />
+      ))}
 
-      {/* Content Container */}
-      <div className="flex flex-col items-center space-y-6 max-w-4xl mx-auto relative z-10 ml-0 md:ml-24 lg:ml-32"
-        style={{
-          boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 0 30px rgba(253,197,26,0.1)',
-          borderRadius: '20px',
-          padding: '2rem',
-          backgroundColor: 'rgba(0,0,0,0.1)',
-          backdropFilter: 'blur(5px)',
-          border: '1px solid rgba(255,255,255,0.1)',
-        }}
+      {/* CSS Animation for slow zoom effect */}
+      <style jsx>{`
+        @keyframes slowZoomIn {
+          0% {
+            transform: scale(1.3);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        
+          
+
+        /* Small devices (phones, up to 640px) */
+        @media (max-width: 640px) {
+          .ContentContainer {
+          margin-top: 80px;
+            margin-left: 0px;
+            padding: 0px;
+          }
+        }
+
+        /* Medium devices (tablets, 641px–1024px) */
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .ContentContainer {
+            margin-top: 50px;
+            padding: 0px;
+          }
+        }
+
+        /* Large devices (desktops, 1025px–1440px) */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+          .ContentContainer {
+            margin-left: 60px;
+            padding: 60px;
+          }
+        }
+
+        /* Extra large screens (1441px and up) */
+        @media (min-width: 1441px) {
+          .ContentContainer {
+            margin-left: 100px;
+            padding: 100px;
+          }
+        }
+      `}</style>
+      
+
+      
+
+             {/* Content Container */}
+       <div
+         className="ContentContainer flex flex-col space-y-4 sm:space-y-6 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl relative z-30 
+         ml-3 sm:ml-5 md:ml-6 lg:ml-10 
+         px-4 sm:px-6 md:px-8 lg:px-12 
+         py-8 sm:py-12 md:py-16 lg:py-24"
+         
       >
-        {/* Eyebrow */}
-        {eyebrow && (
-          <a href="#" className={`group transition-all duration-1000 ease-out ${
-            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
-          }`}>
-            <span
-              className="text-sm text-white font-geist mx-auto px-5 py-2 
-              bg-gradient-to-tr from-white/20 via-white/10 to-transparent  
-              border-[2px] border-white/30 dark:border-white/25 
-              rounded-3xl w-fit tracking-tight uppercase flex items-center justify-center"
-            >
-              {eyebrow}
-              <ChevronRight className="inline w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-          </a>
-        )}
+        
 
         {/* Title */}
         <h1
-          className={`text-balance text-white pt-8 pb-8 text-5xl font-semibold leading-none tracking-tighter 
-          sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-1500 ease-out ${
-            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24'
+          className={`text-white font-semibold leading-tight tracking-tighter 
+          text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+          transition-all duration-1500 ease-out lg:-ml-44
+          ${
+            isLoaded
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-24"
           }`}
-          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '20px' }}
+          style={{ 
+            textShadow: "1px 1px 2px rgba(0,0,0,0.8)"
+          }}
         >
-          {title}
+          {Array.isArray(title) ? (
+            title.map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))
+          ) : (
+            title
+          )}
         </h1>
 
         {/* Subtitle */}
         <p
-          className={`text-balance text-lg tracking-tight text-white md:text-xl
+          className={`text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl
           transition-all duration-1300 ease-out delay-400 ${
-            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
+            isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
           }`}
-          style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)', marginTop: '8px' }}
+          style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.8)" }}
         >
           {subtitle}
         </p>
 
         {/* CTA */}
         {ctaLabel && (
-          <div className={`flex justify-center transition-all duration-1200 ease-out delay-700 ${
-            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'
-          }`}
-          style={{ marginTop: '1rem' }}>
+          <div
+            className={`flex transition-all duration-1200 ease-out delay-700 ${
+              isLoaded
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-16"
+            }`}
+          >
             <Button
               asChild
-              className="w-fit md:w-52 font-geist tracking-tighter text-center text-lg
+              className="w-full sm:w-auto font-geist tracking-tight text-center text-sm sm:text-base md:text-lg
               bg-[#fdc51a] text-black border-2 border-[#fdc51a] 
               hover:bg-transparent hover:border-yellow-400 hover:!text-white
               transition-all duration-300 ease-in-out transform
-              hover:shadow-lg"
-              style={{ 
-                height: '56px',
-                paddingTop: '16px',
-                paddingBottom: '16px'
-              }}
+              hover:shadow-lg px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4"
+              style={{ minHeight: "44px" }}
             >
-              <a href={ctaHref} className="flex items-center gap-2">
+              <a href={ctaHref} className="flex items-center justify-center gap-2">
                 <Phone className="w-4 h-4" />
                 {ctaLabel}
               </a>
@@ -172,14 +189,6 @@ export function Hero({
           </div>
         )}
       </div>
-
-      {/* Bottom Fade */}
-      <div
-        className="animate-fade-up relative mt-16 opacity-0 [perspective:2000px] 
-        after:absolute after:inset-0 after:z-0 
-        after:[background:linear-gradient(to_top,hsl(var(--background))_10%,transparent)]"
-      />
     </section>
   )
 }
-

@@ -35,12 +35,13 @@ export default function Page() {
             <Layout headerStyle={1} footerStyle={1}>
                 
             <Hero 
-                    title="Professional Security Guards & Services in Melbourne"
-                    subtitle="Trusted security solutions across Melbourne. Professional guards, mobile patrol, rapid response - keeping your business, property and people safe 24/7."
-                    eyebrow="Metro Guards Australia"
-                    ctaLabel="Contact Us Now"
-                    ctaHref="/contact-us"
-                /> 
+                title={["Protect.", "Secure.", "Trust."]}
+                subtitle="SECURITY SERVICES "
+                eyebrow="Metro Guards Security Services"
+                ctaLabel="Contact Us Now"
+                ctaHref="/contact-us"
+                />
+
                 <GoodPeople />
                 <Services4 />
                 <MarqueeDemo />
