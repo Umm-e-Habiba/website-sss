@@ -66,12 +66,50 @@ export function Hero({
         }}
       />
 
+      {/* Diamond Image on Left */}
+      <div 
+        className={`absolute left-8 md:left-16 top-1/2 -translate-y-1/2 z-20 transition-all duration-1500 ease-out ${
+          isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
+        }`}
+      >
+        <div 
+          className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+          style={{
+            clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.3), 0 0 20px rgba(253,197,26,0.4)',
+          }}
+        >
+          <div
+            className="w-full h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/assets/img/banner/metro-2.jpg')",
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+            }}
+          />
+          <div 
+            className="absolute inset-0 bg-gradient-to-br from-[#fdc51a]/30 to-[#1e2247]/30"
+            style={{
+              clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+            }}
+          />
+        </div>
+      </div>
+
       {/* Content Container */}
-      <div className="flex flex-col items-center space-y-6 max-w-4xl mx-auto relative z-10">
+      <div className="flex flex-col items-center space-y-6 max-w-4xl mx-auto relative z-10 ml-0 md:ml-24 lg:ml-32"
+        style={{
+          boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 0 30px rgba(253,197,26,0.1)',
+          borderRadius: '20px',
+          padding: '2rem',
+          backgroundColor: 'rgba(0,0,0,0.1)',
+          backdropFilter: 'blur(5px)',
+          border: '1px solid rgba(255,255,255,0.1)',
+        }}
+      >
         {/* Eyebrow */}
         {eyebrow && (
           <a href="#" className={`group transition-all duration-1000 ease-out ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
+            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
           }`}>
             <span
               className="text-sm text-white font-geist mx-auto px-5 py-2 
@@ -89,7 +127,7 @@ export function Hero({
         <h1
           className={`text-balance text-white pt-8 pb-8 text-5xl font-semibold leading-none tracking-tighter 
           sm:text-6xl md:text-7xl lg:text-8xl transition-all duration-1500 ease-out ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-24'
           }`}
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', marginTop: '20px' }}
         >
@@ -100,7 +138,7 @@ export function Hero({
         <p
           className={`text-balance text-lg tracking-tight text-white md:text-xl
           transition-all duration-1300 ease-out delay-400 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
           }`}
           style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)', marginTop: '8px' }}
         >
@@ -110,7 +148,7 @@ export function Hero({
         {/* CTA */}
         {ctaLabel && (
           <div className={`flex justify-center transition-all duration-1200 ease-out delay-700 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'
           }`}
           style={{ marginTop: '1rem' }}>
             <Button

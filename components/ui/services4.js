@@ -65,7 +65,7 @@ const Services4 = ({
               {items.map((item, index) => (
                 <div key={item.id} className="services-item">
                   <a href={item.href} className="services-card-link">
-                    <div className="services-card">
+                    <div className="services-card relative">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -259,12 +259,13 @@ const Services4 = ({
           background: #f0f0f0;
           cursor: pointer;
           transition: transform 0.3s ease;
+          contain: layout style;
         }
 
         .services-image {
           transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          border-radius: 12px;
           filter: brightness(1) saturate(1);
+          z-index: 1;
         }
 
         .services-card-link:hover .services-image {
@@ -286,6 +287,7 @@ const Services4 = ({
           );
           border-radius: 12px;
           transition: background 0.4s ease;
+          z-index: 5;
         }
 
         .services-card-link:hover .services-overlay {
@@ -385,6 +387,19 @@ const Services4 = ({
           transform: translateX(8px);
         }
 
+        /* Responsive Design for Services Description to match GoodPeople */
+        @media (max-width: 1200px) {
+          .services-description {
+            font-size: 1.1rem;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .services-description {
+            font-size: 1.05rem;
+          }
+        }
+
         /* Responsive Design for Mobile */
         @media (max-width: 768px) {
           .services-section {
@@ -404,10 +419,24 @@ const Services4 = ({
           }
           
           .services-description {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .services-description {
             font-size: 0.95rem;
           }
+        }
+
+        @media (max-width: 480px) {
+          .services-description {
+            font-size: 0.9rem;
+          }
+        }
 
           .services-card {
+            position: relative;  
             height: 350px;
           }
 
@@ -456,11 +485,12 @@ const Services4 = ({
           }
           
           .services-description {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.5;
           }
 
           .services-card {
+            position: relative;  
             height: 320px;
           }
 

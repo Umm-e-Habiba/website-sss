@@ -19,7 +19,9 @@ import Location from "@/components/homepages/home1/Location";
 
 import FindOut from "@/components/homepages/home1/FindOut";
 import GoodPeople from "@/components/homepages/home1/GoodPeople";
+import HeroSection from "@/components/homepages/home1/hero-section";
 import Blog4 from "@/components/blog/Blog4";
+import Accreditation from "@/components/accreditation"
 
 
 
@@ -31,18 +33,19 @@ export default function Page() {
         <>
 
             <Layout headerStyle={1} footerStyle={1}>
-                <Hero 
+                
+            <Hero 
                     title="Professional Security Guards & Services in Melbourne"
                     subtitle="Trusted security solutions across Melbourne. Professional guards, mobile patrol, rapid response - keeping your business, property and people safe 24/7."
                     eyebrow="Metro Guards Australia"
                     ctaLabel="Contact Us Now"
                     ctaHref="/contact-us"
-                />
-
+                /> 
                 <GoodPeople />
                 <Services4 />
                 <MarqueeDemo />
                 <IndustrySection/>
+                <Accreditation />
                 <Awareness />
                 <Location />
                 

@@ -76,7 +76,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                         }}
                                         >
                                         <i className="fa fa-phone" />
-                                        Call Now
+                                        1300731173
                                         </a>
 
                                     </div>

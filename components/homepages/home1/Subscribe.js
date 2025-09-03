@@ -1,62 +1,67 @@
 export default function Subscribe() {
     return (
         <>
-            <div className="subscribe2 section-padding" style={{
-                position: 'relative',
-                zIndex: 2,
-                background: 'url("/assets/img/bg/security img.webp") no-repeat',
-                backgroundPosition: 'center center',
-                backgroundSize: 'cover'
-            }}>
-                <div style={{
-                    position: 'absolute',
-                    content: '""',
-                    height: '100%',
-                    width: '100%',
-                    left: 0,
-                    top: 0,
-                    background: '#09120E',
-                    opacity: 0.7,
-                    zIndex: -1
-                }}></div>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="heading2 white-heading no-margin-heading">
-                                <small className="heading-top">
-                                    <img src="/assets/img/icons/hands.svg" alt="" />
-                                    Act now to protect what matters to you!
-                                </small>
-                                <h2>
-                                    Get free Quotes <span className="">now</span> <br />
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-5 col-md-6 offset-lg-1">
-                            <div className="sunscribe-form">
-                                <div className="subscribe-from-wrap">
-                                    <form action="#">
-                                        <input type="email" placeholder="Email Address" required />
-                                        {/* <input type="text" placeholder="Name" required />
-                                        <textarea placeholder="Message" rows="4" column="4" required></textarea>
-                                        <input type="tel" placeholder="Phone" required /> */}
-
-                                        {/* ✅ Submit button is placed after all fields */}
-                                        <div className="submit-btn-wrapper" style={{ marginTop: '15px' }}>
-                                            <button type="submit" name="button">
-                                                Submit
-                                                <img src="/assets/img/icons/arrow-up-right-black.svg" alt="" />
-                                            </button>
+            {/*===== Contact CTA Section =====*/}
+            <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="cta-content text-center text-white">
+                                        <div className="subtitle mb-4">
+                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
+                                                <i className="bi bi-telephone me-2"></i>
+                                                IMMEDIATE SECURITY NEEDED?
+                                            </span>
                                         </div>
-                                    </form>
+                                        <h2 className="display-4 fw-bold mb-4">
+                                            Need Security With Immediate Effect?
+                                        </h2>
+                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
+                                                        Contact us to find out how we can implement Adhoc security solutions tailored to your specific requirements. Our team is ready to provide rapid response and professional security coverage.
+                                                    </p>
+                                        
+                                        <div className="cta-buttons mb-5">
+                                            <a 
+                                                href="/get-quotation" 
+                                                className="btn btn-lg me-3 px-5 py-3"
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
+                                            </a>
+                                            <a 
+                                                href="tel:1300731173" 
+                                                className="btn btn-outline-light btn-lg px-5 py-3"
+                                                style={{
+                                                    borderRadius: '10px',
+                                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '1rem',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                            >
+                                                <i className="fa fa-phone"> </i> 1300731173
+                                            </a>
+                                        </div>
+                                        
+        <div className="row">
+                                           
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div>
-            </div>
         </>
     );
 }

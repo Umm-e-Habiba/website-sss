@@ -32,7 +32,7 @@ export default function Home() {
               <span style={{ color: '#1e2247', fontWeight: '900' }}>G</span>
               {" Operates In Your Industry"}
             </h2>
-            <p className="industry-description">Find out how MASG operates in your industry with specialized security solutions tailored to meet the unique challenges and requirements of different sectors.</p>
+            <p className="industry-description">Find out how MetroGuards operates in your industry with specialized security solutions tailored to meet the unique challenges and requirements of different sectors.</p>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
           font-weight: 700;
           margin: 0;
           color: #333333;
-          letter-spacing: 3px;
+          
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
@@ -107,7 +107,7 @@ export default function Home() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: #fdc24c;
+          background: #1e2247;
           transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           z-index: 5;
           border-radius: 8px;
@@ -220,7 +220,7 @@ export default function Home() {
           .industry-title {
             font-size: 2.8rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            
           }
           
           .industry-description {
@@ -254,7 +254,7 @@ export default function Home() {
           .industry-title {
             font-size: 2.5rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            
           }
           
           .industry-description {
@@ -297,7 +297,7 @@ export default function Home() {
           .industry-title {
             font-size: 2.2rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            
           }
           
           .industry-description {
@@ -345,7 +345,7 @@ export default function Home() {
           .industry-title {
             font-size: 2rem;
             font-weight: 700;
-            letter-spacing: 1.5px;
+            
           }
           
           .industry-description {
@@ -459,7 +459,7 @@ export default function Home() {
           .industry-title {
             font-size: 1.75rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            
           }
           
           .industry-description {
@@ -516,8 +516,8 @@ export default function Home() {
           .industry-title {
             font-size: 1.6rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
+            
+            
           }
           
           .industry-description {
