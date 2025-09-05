@@ -1,28 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Shield, Handshake, Lightbulb, Star } from "lucide-react";
 import Layout from "@/components/layout/Layout"
 import Subscribe from "@/components/homepages/home1/Subscribe"
+import Accrediation10 from "@/components/accrediation10"
 
 const missionValues = [
   {
-    icon: "🛡️",
-    title: "Excellence in Security",
+    icon: <Shield size={48} />,
+    title: "Security Guard For Hire",
     description: "We deliver the highest standards of security services through continuous training, advanced technology, and unwavering commitment to protecting our clients."
   },
   {
-    icon: "🤝",
-    title: "Trust & Integrity",
+    icon: <Handshake size={48} />,
+    title: "Corporate Security Guards",
     description: "Building lasting relationships through transparent communication, ethical practices, and consistent reliability in every security solution we provide."
   },
   {
-    icon: "💡",
-    title: "Innovation",
+    icon: <Lightbulb size={48} />,
+    title: "Loss Prevention Security",
     description: "Embracing cutting-edge security technologies and methodologies to stay ahead of evolving threats and provide superior protection."
   },
   {
-    icon: "🌟",
-    title: "Professional Excellence",
+    icon: <Star size={48} />,
+    title: "Canine (K9) Security",
     description: "Maintaining the highest professional standards through rigorous training, certification, and continuous development of our security personnel."
   }
 ];
@@ -283,7 +285,7 @@ export default function Page() {
                                 </div>
                             </div>
 
-              {/* Core Values Grid */}
+              {/* Core Services Grid */}
                             <div className="row">
                 <div className="col-12">
                   <h3 style={{
@@ -294,7 +296,7 @@ export default function Page() {
                     marginBottom: '60px',
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                   }}>
-                    Our Core Values
+                    Our Core Services
                   </h3>
                 </div>
               </div>
@@ -337,9 +339,12 @@ export default function Page() {
                     }}
                   >
                     <div style={{
-                      fontSize: '3rem',
                       marginBottom: '20px',
-                      lineHeight: '1'
+                      lineHeight: '1',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: hoveredCard === index ? '#1e2247' : '#fdc51a'
                     }}>
                       {value.icon}
                                         </div>
@@ -365,368 +370,10 @@ export default function Page() {
                                 </div>
           </section>
 
-          {/*===== Our Principles Section =====*/}
-          <section 
-            style={{
-              paddingTop: '80px',
-              paddingBottom: '80px',
-              background: '#ffffff'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row justify-content-center text-center mb-5">
-                <div className="col-lg-8">
-                  <div className="brand-label" style={{ marginBottom: '25px' }}>
-                    <span style={{ 
-                      fontSize: '1rem', 
-                      fontWeight: '600', 
-                      color: '#fdc51a', 
-                      letterSpacing: '0.1em', 
-                      textTransform: 'uppercase',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                    }}>
-                      Our Principles
-                    </span>
-                                        </div>
-                  
-                  <h2 style={{
-                    fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-                    fontWeight: '700',
-                    color: '#1e2247',
-                    lineHeight: '1.3',
-                    marginBottom: '30px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Guiding Principles That <span style={{ color: '#fdc51a' }}>Define Our Service</span>
-                  </h2>
-                  
-                  <p style={{
-                    fontSize: '1.2rem',
-                    color: '#6c757d',
-                    lineHeight: '1.6',
-                    marginBottom: '60px'
-                  }}>
-                    These fundamental principles guide every aspect of our security services and shape our commitment to excellence.
-                                        </p>
-                                    </div>
-                                </div>
 
-              <div className="row">
-                {principlesData.map((principle, index) => (
-                  <div key={index} className="col-lg-6" style={{ marginBottom: '40px' }}>
-                    <div 
-                      style={{
-                        background: '#ffffff',
-                        borderRadius: '15px',
-                        padding: '40px',
-                        border: '1px solid #f1f3f4',
-                        boxShadow: '0 5px 20px rgba(0, 0, 0, 0.08)',
-                        transition: 'all 0.3s ease',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'flex-start',
-                        gap: '25px'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-5px)';
-                        e.currentTarget.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.12)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.08)';
-                      }}
-                    >
-                      <div style={{
-                        flexShrink: 0,
-                        width: '60px',
-                        height: '60px',
-                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '1.2rem',
-                        fontWeight: '700',
-                        color: '#1e2247'
-                      }}>
-                        {principle.number}
-                                        </div>
-                      <div style={{ flex: 1 }}>
-                        <h4 style={{
-                          fontSize: '1.4rem',
-                          fontWeight: '600',
-                          color: '#1e2247',
-                          marginBottom: '15px',
-                          lineHeight: '1.3'
-                        }}>
-                          {principle.title}
-                        </h4>
-                        <p style={{
-                          fontSize: '1rem',
-                          color: '#6c757d',
-                          lineHeight: '1.6',
-                          margin: 0
-                        }}>
-                          {principle.description}
-                                        </p>
-                                    </div>
-                                </div>
-                                        </div>
-                ))}
-                                    </div>
-                                </div>
-          </section>
+         
 
-          {/*===== Leadership & Culture Section =====*/}
-          <section 
-            style={{
-              paddingTop: '80px',
-              paddingBottom: '80px',
-              background: '#f8f9fa'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row align-items-center">
-                <div className="col-lg-6">
-                  <div className="brand-label" style={{ marginBottom: '25px' }}>
-                    <span style={{ 
-                      fontSize: '1rem', 
-                      fontWeight: '600', 
-                      color: '#fdc51a', 
-                      letterSpacing: '0.1em', 
-                      textTransform: 'uppercase',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                    }}>
-                      Leadership & Culture
-                    </span>
-                                        </div>
-                  
-                  <h2 style={{
-                    fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-                    fontWeight: '700',
-                    color: '#1e2247',
-                    lineHeight: '1.3',
-                    marginBottom: '30px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Building a Culture of <span style={{ color: '#fdc51a' }}>Excellence & Responsibility</span>
-                  </h2>
-                  
-                  <p style={{
-                    fontSize: '1.1rem',
-                    color: '#6c757d',
-                    lineHeight: '1.7',
-                    marginBottom: '25px'
-                  }}>
-                    Our leadership team is committed to fostering a culture where every team member feels valued, empowered, and motivated to deliver exceptional security services. We believe that our people are our greatest asset.
-                  </p>
-                  
-                  <p style={{
-                    fontSize: '1.1rem',
-                    color: '#6c757d',
-                    lineHeight: '1.7',
-                    marginBottom: '35px'
-                  }}>
-                    Through continuous training, professional development, and a supportive work environment, we ensure our security professionals are equipped with the skills and knowledge necessary to exceed client expectations.
-                  </p>
-
-                  {/* Key Culture Points */}
-                  <div style={{ marginBottom: '30px' }}>
-                    {[
-                      "Continuous Professional Development",
-                      "Inclusive and Supportive Environment", 
-                      "Recognition and Career Growth",
-                      "Community Engagement"
-                    ].map((point, index) => (
-                      <div key={index} style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        marginBottom: '15px'
-                      }}>
-                        <div style={{
-                          width: '20px',
-                          height: '20px',
-                          background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                          borderRadius: '50%',
-                          marginRight: '15px',
-                          flexShrink: 0,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center'
-                        }}>
-                          <span style={{ color: '#1e2247', fontSize: '12px', fontWeight: '700' }}>✓</span>
-                        </div>
-                        <span style={{
-                          fontSize: '1rem',
-                          color: '#1e2247',
-                          fontWeight: '500'
-                        }}>
-                          {point}
-                        </span>
-                      </div>
-                    ))}
-                                    </div>
-                                </div>
-
-                <div className="col-lg-6">
-                  <div style={{
-                    position: 'relative',
-                    paddingLeft: '50px'
-                  }}>
-                    <div style={{
-                      background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-                      borderRadius: '20px',
-                      padding: '50px',
-                      boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
-                      position: 'relative'
-                    }}>
-                      <div style={{
-                        position: 'absolute',
-                        top: '-20px',
-                        left: '-20px',
-                        width: '60px',
-                        height: '60px',
-                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                        borderRadius: '50%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '1.5rem'
-                      }}>
-                        🏆
-                                        </div>
-                      
-                      <h3 style={{
-                        fontSize: '1.8rem',
-                        fontWeight: '600',
-                        color: '#1e2247',
-                        marginBottom: '20px'
-                      }}>
-                        Our Commitment to Excellence
-                      </h3>
-                      
-                      <p style={{
-                        fontSize: '1.1rem',
-                        color: '#6c757d',
-                        lineHeight: '1.6',
-                        marginBottom: '25px'
-                      }}>
-                        We are committed to maintaining the highest standards in the security industry through innovation, dedication, and unwavering focus on client satisfaction.
-                      </p>
-                      
-                      <div style={{
-                        background: '#ffffff',
-                        borderRadius: '10px',
-                        padding: '20px',
-                        border: '1px solid #e9ecef'
-                      }}>
-                        <p style={{
-                          fontSize: '1rem',
-                          color: '#1e2247',
-                          fontStyle: 'italic',
-                          margin: 0,
-                          textAlign: 'center'
-                        }}>
-                          "Security is not just our business - it's our passion and responsibility to the community."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-          </section>
-
-          {/*===== Call to Action Section =====*/}
-          <section 
-            style={{
-              paddingTop: '80px',
-              paddingBottom: '80px',
-              background: 'linear-gradient(135deg, #1e2247 0%, #2d3748 100%)',
-              color: '#ffffff',
-              position: 'relative'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row justify-content-center text-center">
-                <div className="col-lg-8">
-                  <h2 style={{
-                    fontSize: 'clamp(2rem, 4vw, 3rem)',
-                    fontWeight: '700',
-                    marginBottom: '25px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Ready to Experience Our Mission in Action?
-                  </h2>
-                  
-                  <p style={{
-                    fontSize: '1.2rem',
-                    lineHeight: '1.6',
-                    marginBottom: '40px',
-                    color: '#e9ecef'
-                  }}>
-                    Partner with MetroGuards and experience security services driven by our unwavering commitment to excellence, integrity, and your peace of mind.
-                  </p>
-                  
-                  <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a 
-                      href="/contacts"
-                      style={{
-                        display: 'inline-block',
-                        padding: '18px 35px',
-                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                        color: '#1e2247',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1.1rem',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 8px 20px rgba(253, 197, 26, 0.3)'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.transform = 'translateY(-3px)';
-                        e.target.style.boxShadow = '0 12px 30px rgba(253, 197, 26, 0.4)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.transform = 'translateY(0)';
-                        e.target.style.boxShadow = '0 8px 20px rgba(253, 197, 26, 0.3)';
-                      }}
-                    >
-                      Contact Us Today
-                    </a>
-                    
-                    <a 
-                      href="/get-quotation"
-                      style={{
-                        display: 'inline-block',
-                        padding: '18px 35px',
-                        background: 'transparent',
-                        color: '#ffffff',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1.1rem',
-                        border: '2px solid #ffffff',
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.background = '#ffffff';
-                        e.target.style.color = '#1e2247';
-                        e.target.style.transform = 'translateY(-3px)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.background = 'transparent';
-                        e.target.style.color = '#ffffff';
-                        e.target.style.transform = 'translateY(0)';
-                      }}
-                    >
-                      Get Free Quote
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <Accrediation10 />
 
           <Subscribe />
                 </div>

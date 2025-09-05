@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Layout from "@/components/layout/Layout"
 import Subscribe from "@/components/homepages/home1/Subscribe"
+import Accrediation10 from "@/components/accrediation10"
 
 const valuesData = [
   {
@@ -96,6 +98,8 @@ const valuesData = [
   }
 ];
 
+
+
 export default function Page() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -160,7 +164,7 @@ export default function Page() {
                     maxWidth: '700px',
                     margin: '0 auto 30px auto'
                   }}>
-                    Metropolitan Security guards Melbourne is a dedicated team of responsible and fully insured security services providers across Melbourne with expertise and command in risk and facilities management.
+                    Metropolitan Security guards Melbourne’ is a dedicated team of responsible and fully insured security services providers across Melbourne with expertise and command in risk and facilities management. Honesty, ethics, responsibility, integrity, transparency, teamwork, and professionalism are the hallmarks of our company. We hire and recruited professional licensed guards who are action-oriented and have a keen eye for detail.
                   </p>
                 </div>
               </div>
@@ -338,10 +342,9 @@ export default function Page() {
                       marginBottom: '20px',
                       color: '#f8f9fa'
                     }}>
-                      <strong>MetroGuards Security Melbourne</strong> firmly committed to providing a comprehensive package of professional security guard services to business holders across Melbourne. Metropolitan security guard services strive to be service-oriented and a trusted security advisor to the business by offering economical solutions. Our commitment to integrity, accountability and quality enables us to hire a professional force of security guards in Melbourne to ensure the top-tier standard of private security services.
+                      <strong>MetroGuards Security Melbourne</strong> is firmly committed to providing a comprehensive package of professional security guard services to business holders across Melbourne. Metropolitan security guard services strive to be service-oriented and a trusted security advisor to the business by offering economical solutions. Our commitment to integrity, accountability and quality enables us to hire a professional force of security guards in Melbourne to ensure the top-tier standard of private security services. We at metropolitan guards are focused on selecting only those individuals who are committed and compatible with our mission as the best security provider. Whether you own a small enterprise or a million-dollar company, hire security company Guards who are competent to detect danger and respond actively without disturbing the environment’s peace. 
 
-We at metropolitan guards are focused on selecting only those individuals who are committed and compatible with our mission as the best security provider. Whether you own a small enterprise or a million-dollar company, hire security company Guards who are competent to detect danger and respond actively without disturbing the environment’s peace.
-                    </p>
+So it’s better to be alert today than not to be safe tomorrow. Leave your security to us and enjoy your growing business.</p>
                     
                     <p style={{
                       fontSize: '1.1rem',
@@ -359,141 +362,67 @@ We at metropolitan guards are focused on selecting only those individuals who ar
               </div>
             </div>
           </section>
-
+          <Accrediation10 />
           {/*===== CTA Section =====*/}
-          <section 
-            style={{
-              paddingTop: '60px',
-              paddingBottom: '60px',
-              background: '#f8f9fa'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row justify-content-center text-center">
-                <div className="col-lg-8">
-                  <h3 style={{
-                    fontSize: '1.8rem',
-                    fontWeight: '600',
-                    color: '#1e2247',
-                    marginBottom: '20px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Experience Security Services Built on Strong Values
-                  </h3>
-                  
-                  <p style={{
-                    fontSize: '1.1rem',
-                    color: '#6c757d',
-                    marginBottom: '30px',
-                    lineHeight: '1.6'
-                  }}>
-                    Ready to partner with a security company that puts values first? 
-                    Contact us today to learn how our commitment to excellence can protect your business.
-                  </p>
-                  
-                  <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a 
-                      href="/contacts"
-                      style={{
-                        display: 'inline-block',
-                        padding: '15px 30px',
-                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                        color: '#1e2247',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1rem',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 5px 15px rgba(253, 197, 26, 0.3)'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.transform = 'translateY(-2px)';
-                        e.target.style.boxShadow = '0 8px 25px rgba(253, 197, 26, 0.4)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.transform = 'translateY(0)';
-                        e.target.style.boxShadow = '0 5px 15px rgba(253, 197, 26, 0.3)';
-                      }}
-                    >
-                      Contact Us Today
-                    </a>
-                    
-                    <a 
-                      href="/get-quotation"
-                      style={{
-                        display: 'inline-block',
-                        padding: '15px 30px',
-                        background: 'transparent',
-                        color: '#1e2247',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1rem',
-                        border: '2px solid #1e2247',
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.background = '#1e2247';
-                        e.target.style.color = '#ffffff';
-                        e.target.style.transform = 'translateY(-2px)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.background = 'transparent';
-                        e.target.style.color = '#1e2247';
-                        e.target.style.transform = 'translateY(0)';
-                      }}
-                    >
-                      Get Quote
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           <Subscribe />
+          <style jsx global>{`
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .values-hero-section.loaded {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .value-card {
+        animation: fadeInUp 0.8s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .value-card:nth-child(1) { animation-delay: 0.1s; }
+      .value-card:nth-child(2) { animation-delay: 0.2s; }
+      .value-card:nth-child(3) { animation-delay: 0.3s; }
+      .value-card:nth-child(4) { animation-delay: 0.4s; }
+      .value-card:nth-child(5) { animation-delay: 0.5s; }
+      .value-card:nth-child(6) { animation-delay: 0.6s; }
+
+      @media (max-width: 768px) {
+        .values-grid {
+          grid-template-columns: 1fr !important;
+          gap: 20px !important;
+        }
+        
+        .value-card {
+          padding: 30px 20px !important;
+        }
+      }
+    `}</style>
+    
+    <style jsx global>{`
+      .acc-heading {
+      padding-top: 50px;
+      padding-bottom: 50px;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+        color: #000;
+        letter-spacing: -0.02em;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    `}</style>
+
+          
         </div>
       </Layout>
 
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .values-hero-section.loaded {
-          animation: fadeInUp 0.8s ease-out;
-        }
-
-        .value-card {
-          animation: fadeInUp 0.8s ease-out;
-          animation-fill-mode: both;
-        }
-
-        .value-card:nth-child(1) { animation-delay: 0.1s; }
-        .value-card:nth-child(2) { animation-delay: 0.2s; }
-        .value-card:nth-child(3) { animation-delay: 0.3s; }
-        .value-card:nth-child(4) { animation-delay: 0.4s; }
-        .value-card:nth-child(5) { animation-delay: 0.5s; }
-        .value-card:nth-child(6) { animation-delay: 0.6s; }
-
-        @media (max-width: 768px) {
-          .values-grid {
-            grid-template-columns: 1fr !important;
-            gap: 20px !important;
-          }
-          
-          .value-card {
-            padding: 30px 20px !important;
-          }
-        }
-      `}</style>
+      
     </>
   )
 }

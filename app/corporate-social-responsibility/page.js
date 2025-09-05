@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Layout from "@/components/layout/Layout"
 import Subscribe from "@/components/homepages/home1/Subscribe"
 import { Marquee } from "@/components/ui/marquee"
@@ -41,30 +42,30 @@ const managementPoliciesData = [
 ];
 
 // Corporate responsibility images and partnerships
-const corporatePartnershipLogos = [
-  { src: "/assets/img/corporate-responsibility/2015-australian-achiever-e1735583284151-300x267.jpg.webp.bv_resized_desktop.webp.bv.webp", alt: "2015 Australian Achiever Award" },
-  { src: "/assets/img/corporate-responsibility/2016-australian-achiever-e1735583358486-300x267.jpg.webp.bv_resized_desktop.webp.bv.webp", alt: "2016 Australian Achiever Award" },
-  { src: "/assets/img/corporate-responsibility/beyond-blue-logo-for-metro-guards-website.png.webp.bv_resized_desktop.webp.bv.webp", alt: "Beyond Blue Partnership" },
-  { src: "/assets/img/corporate-responsibility/jas-anaz-1-e1735750259219-1-300x232.jpg.webp.bv_resized_desktop.webp.bv.webp", alt: "JAS-ANZ Certification" },
-  { src: "/assets/img/corporate-responsibility/img1.webp", alt: "Corporate Partnership" },
-  { src: "/assets/img/corporate-responsibility/img2.webp", alt: "Community Engagement" },
-  { src: "/assets/img/corporate-responsibility/img3.webp", alt: "Safety Excellence" },
-  { src: "/assets/img/corporate-responsibility/img4.webp", alt: "Professional Standards" },
-  { src: "/assets/img/corporate-responsibility/img5.webp", alt: "Industry Leadership" },
-  { src: "/assets/img/corporate-responsibility/img6.webp", alt: "Sustainable Practices" }
-];
+const clients = [
+  { name: "8", logo: "/assets/img/corporate-responsibility/img8.webp", website: "/wp-content/uploads/2025/06/australian-achiever-award-2016.pdf" },
+  { name: "7", logo: "/assets/img/corporate-responsibility/img7.webp", website: "/wp-content/uploads/2025/06/aus-achiever-award-2015.pdf" },
+  { name: "1", logo: "/assets/img/corporate-responsibility/img1.webp", website: "/wp-content/uploads/2025/06/aus-achiever-award-2014.pdf" },
+  { name: "2", logo: "/assets/img/corporate-responsibility/img2.webp", website: "/wp-content/uploads/2025/06/3240701-E-Certificate-of-Registration-Metro-Guards.pdf" },
+  { name: "3", logo: "/assets/img/corporate-responsibility/img3.webp", website: "/wp-content/uploads/2025/06/3240701-Q-Certificate-of-Registration-Metro-Guards.pdf" },
+  { name: "4", logo: "/assets/img/corporate-responsibility/img4.webp", website: "/wp-content/uploads/2025/06/3240701-O-Certificate-of-Registration-Metro-Guards.pdf" },
+  { name: "5", logo: "/assets/img/corporate-responsibility/img5.webp", website: "https://geelongport.com.au" },
+  { name: "6", logo: "/assets/img/corporate-responsibility/img6.webp", website: "/wp-content/uploads/2025/06/ASIAL-Org-Membership-Certificate-New.pdf" },
+  { name: "9", logo: "/assets/img/corporate-responsibility/img11.webp", website: "/wp-content/uploads/2025/06/13591.pdf" },
+  { name: "10", logo: "/assets/img/corporate-responsibility/img10.webp", website: "https://mpdma.com" },
+]
 
 // Social responsibility partner organizations
 const socialResponsibilityLogos = [
   { src: "/assets/img/social/The-Royal-Melbourne-Hospital-logo-new-150x150-1.jpg.bv_resized_desktop.jpg.bv (1).webp", alt: "The Royal Melbourne Hospital" },
   { src: "/assets/img/social/blue-ribbon-foundation-150x150-2.jpg.bv_resized_desktop.jpg.bv.webp", alt: "Blue Ribbon Foundation" },
-  { src: "/assets/img/social/royal-childeren-hospital-150x150-1.jpg.bv_resized_desktop.jpg.bv.webp", alt: "Royal Children's Hospital" }
+  { src: "/assets/img/social/royal-childeren-hospital-150x150-1.jpg.bv_resized_desktop.jpg.bv.webp", alt: "Royal Children's Hospital" },
+  { src: "/assets/img/social/white-ribbon.webp", alt: "The Royal Melbourne Hospital" },
 ];
 
 export default function Page() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
-  const [activeTab, setActiveTab] = useState('social');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -103,7 +104,7 @@ export default function Page() {
                       textTransform: 'uppercase',
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
                     }}>
-                      Our Commitment
+                      Corporate responsibilities
                     </span>
                   </div>
                   
@@ -129,157 +130,20 @@ export default function Page() {
                     At Metropolitan guards, our top priority is client satisfaction by providing them with service excellence. We put our heart and soul together to protect our clients' lives and businesses, ensuring we have the latest tools, products and solutions for all kinds of break-in controls. We oath to serve our community and esteemed clients with utmost respect and integrity.
                   </p>
 
-                  {/*===== Tab Navigation =====*/}
-                  <div style={{ marginBottom: '50px' }}>
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      gap: '10px',
-                      marginBottom: '30px',
-                      flexWrap: 'wrap'
-                    }}>
-                      <button 
-                        onClick={() => setActiveTab('social')}
-                        style={{
-                          padding: '12px 30px',
-                          background: activeTab === 'social' 
-                            ? 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)' 
-                            : 'transparent',
-                          color: activeTab === 'social' ? '#1e2247' : '#6c757d',
-                          border: activeTab === 'social' ? 'none' : '2px solid #e9ecef',
-                          borderRadius: '50px',
-                          fontWeight: '600',
-                          fontSize: '1rem',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                        }}
-                      >
-                        Corporate Responsibility
-                      </button>
-                      <button 
-                        onClick={() => setActiveTab('corporate')}
-                        style={{
-                          padding: '12px 30px',
-                          background: activeTab === 'corporate' 
-                            ? 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)' 
-                            : 'transparent',
-                          color: activeTab === 'corporate' ? '#1e2247' : '#6c757d',
-                          border: activeTab === 'corporate' ? 'none' : '2px solid #e9ecef',
-                          borderRadius: '50px',
-                          fontWeight: '600',
-                          fontSize: '1rem',
-                          cursor: 'pointer',
-                          transition: 'all 0.3s ease',
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                        }}
-                      >
-                        Health & Safety
-                      </button>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
           </section>
 
-          {/*===== Corporate Social Responsibility Section =====*/}
-          {activeTab === 'social' && (
-            <section 
-              style={{
-                paddingTop: '40px',
-                paddingBottom: '80px',
-                background: '#f8f9fa'
-              }}
-            >
-              <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-                <div className="row justify-content-center text-center mb-5">
-                  <div className="col-lg-10">
-                    <h3 style={{
-                      fontSize: '2.2rem',
-                      fontWeight: '600',
-                      color: '#1e2247',
-                      marginBottom: '20px',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                    }}>
-                      Corporate Social Responsibility
-                    </h3>
-                    <div style={{
-                      background: '#ffffff',
-                      borderRadius: '20px',
-                      padding: '40px',
-                      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
-                      border: '1px solid #f1f3f4',
-                      textAlign: 'left',
-                      marginBottom: '50px'
-                    }}>
-                      <p style={{
-                        fontSize: '1.1rem',
-                        color: '#6c757d',
-                        lineHeight: '1.7',
-                        marginBottom: '25px'
-                      }}>
-                        We ensure to play our part in making a healthy and sustainable society believing that a prosperous society promotes awareness and fosters the building of an ideal community. This is the only reason we support <strong>"The Royal Melbourne Hospital"</strong>, which aligns with our credo of creating an all-in healthy and secure society by dedicatedly serving those in need. Moreover, we also join hands with <strong>"Beyond Blue"</strong>, a non-profit organisation that raises awareness against mental health issues and provides the best possible support for the suffering.
-                      </p>
-                      <p style={{
-                        fontSize: '1.1rem',
-                        color: '#6c757d',
-                        lineHeight: '1.7',
-                        margin: 0
-                      }}>
-                        We at Metropolitan guards believe women are vital to a community and should be treated with the utmost respect. In favour of this ideology, we support the <strong>"White Ribbon"</strong> in its efforts to support violence against women.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/*===== Social Responsibility Partners Marquee =====*/}
-                <div className="social-partners-section">
-                  <div className="container">
-                    <div className="social-partners-header">
-                      <div className="social-partners-header-content">
-                        <h2 className="social-partners-title">OUR SOCIAL <br/><span>Partners</span></h2>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full overflow-hidden">
-                    <div className="max-w-[1320px] mx-auto px-[15px]">
-                      <Marquee speed={35} pauseOnHover={true} className="w-full">
-                        {socialResponsibilityLogos.map((logo, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center justify-center"
-                            style={{ 
-                              marginLeft: '2rem', 
-                              marginRight: '2rem',
-                              minWidth: '180px' 
-                            }}
-                          >
-                            <img 
-                              src={logo.src} 
-                              alt={logo.alt}
-                              className="h-24 w-auto object-contain"
-                            />
-                          </div>
-                        ))}
-                      </Marquee>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          )}
-
           {/*===== Health & Safety Section =====*/}
-          {activeTab === 'corporate' && (
-            <section 
-              style={{
-                paddingTop: '40px',
-                paddingBottom: '80px',
-                background: '#f8f9fa'
-              }}
-            >
+          <section 
+            style={{
+              paddingTop: '40px',
+              paddingBottom: '80px',
+              background: '#f8f9fa'
+            }}
+          >
               <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
                 {/*===== Health & Safety Introduction =====*/}
                 <div className="row justify-content-center text-center mb-5">
@@ -464,248 +328,134 @@ export default function Page() {
                 </div>
 
                 {/*===== Partnership Marquee Section =====*/}
-                <div className="partnerships-section">
+                <section className="bg-gray-50 py-16 px-6 sm:px-10 lg:px-16" style={{marginTop:"50px"}}>
+    <div className="max-w-7xl mx-auto">
+      {/* Heading (always left) */}
+      <div className="mb-8">
+        <h2 className="acc-heading text-3xl sm:text-4xl font-bold text-gray-900" style={{color:"#1e2247"}}>
+          Accreditation
+        </h2>
+      </div>
+
+      {/* Grid for equal logos - 10 in one row on large screens */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-4 lg:gap-6">
+        {clients.map((client, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center p-2 sm:p-3 lg:p-4 bg-white rounded-md shadow-sm hover:shadow-md transition-shadow"
+          >
+            <a
+              href={client.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:scale-105 transition-transform duration-200"
+            >
+              <Image
+                src={client.logo || "/placeholder.svg"}
+                alt={`${client.name} logo`}
+                width={120}
+                height={60}
+                className="max-h-12 sm:max-h-16 lg:max-h-20 w-auto object-contain mx-auto"
+              />
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    
+   
+  </section>
+              </div>
+            </section>
+
+          {/*===== Corporate Social Responsibility Section =====*/}
+          <section 
+            style={{
+              paddingTop: '40px',
+              paddingBottom: '80px',
+              background: '#f8f9fa'
+            }}
+          >
+              <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
+                <div className="row justify-content-center text-center mb-5">
+                  <div className="col-lg-10">
+                    <h3 style={{
+                      fontSize: '2.2rem',
+                      fontWeight: '600',
+                      color: '#1e2247',
+                      marginBottom: '20px',
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+                    }}>
+                      Corporate Social Responsibility
+                    </h3>
+                    <div style={{
+                      background: '#ffffff',
+                      borderRadius: '20px',
+                      padding: '40px',
+                      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+                      border: '1px solid #f1f3f4',
+                      textAlign: 'left',
+                      marginBottom: '50px'
+                    }}>
+                      <p style={{
+                        fontSize: '1.1rem',
+                        color: '#6c757d',
+                        lineHeight: '1.7',
+                        marginBottom: '25px'
+                      }}>
+                        We ensure to play our part in making a healthy and sustainable society believing that a prosperous society promotes awareness and fosters the building of an ideal community. This is the only reason we support <strong>"The Royal Melbourne Hospital"</strong>, which aligns with our credo of creating an all-in healthy and secure society by dedicatedly serving those in need. Moreover, we also join hands with <strong>"Beyond Blue"</strong>, a non-profit organisation that raises awareness against mental health issues and provides the best possible support for the suffering.
+                      </p>
+                      <p style={{
+                        fontSize: '1.1rem',
+                        color: '#6c757d',
+                        lineHeight: '1.7',
+                        margin: 0
+                      }}>
+                        We at Metropolitan guards believe women are vital to a community and should be treated with the utmost respect. In favour of this ideology, we support the <strong>"White Ribbon"</strong> in its efforts to support violence against women.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/*===== Social Responsibility Partners Grid =====*/}
+                <div className="social-partners-section text-center">
                   <div className="container">
-                    <div className="partnerships-header">
-                      <div className="partnerships-header-content">
-                        <h2 className="partnerships-title">OUR PARTNERSHIPS <br/><span>& Achievements</span></h2>
+                    <div className="social-partners-header text-center">
+                      <div className="social-partners-header-content text-center">
+                        <h3 className="social-partners-title">OUR SOCIAL <br/><span>Partners</span></h3>
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-full overflow-hidden">
+                  <div className="w-full">
                     <div className="max-w-[1320px] mx-auto px-[15px]">
-                      <Marquee speed={40} pauseOnHover={true} className="w-full">
-                        {corporatePartnershipLogos.map((logo, index) => (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 justify-items-center">
+                        {socialResponsibilityLogos.map((logo, index) => (
                           <div
                             key={index}
-                            className="flex items-center justify-center"
-                            style={{ 
-                              marginLeft: '2rem', 
-                              marginRight: '2rem',
-                              minWidth: '180px' 
-                            }}
+                            className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow w-full max-w-[200px]"
                           >
                             <img 
                               src={logo.src} 
                               alt={logo.alt}
-                              className="h-24 w-auto object-contain"
+                              className="h-20 w-auto object-contain mx-auto"
                             />
                           </div>
                         ))}
-                      </Marquee>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-          )}
 
-          {/*===== Commitment Statement Section =====*/}
-          <section 
-            style={{
-              paddingTop: '80px',
-              paddingBottom: '80px',
-              background: 'linear-gradient(135deg, #1e2247 0%, #2d3748 100%)',
-              color: '#ffffff',
-              position: 'relative'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row justify-content-center text-center">
-                <div className="col-lg-10">
-                  <h2 style={{
-                    fontSize: 'clamp(2rem, 4vw, 3rem)',
-                    fontWeight: '700',
-                    marginBottom: '30px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Our Promise to the Community
-                  </h2>
-                  
-                  <div 
-                    style={{
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      borderRadius: '20px',
-                      padding: '40px',
-                      backdropFilter: 'blur(10px)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      marginBottom: '40px'
-                    }}
-                  >
-                    <p style={{
-                      fontSize: '1.2rem',
-                      lineHeight: '1.7',
-                      marginBottom: '25px',
-                      color: '#f8f9fa'
-                    }}>
-                      At <strong>Metropolitan Guards</strong>, we always strive to be the top security service provider utilising the newest sustainability policies. We aim to invest our energies in making a more security-inclusive society by delivering high-quality security guard services that meet the highest international standards.
-                    </p>
-                    
-                    <p style={{
-                      fontSize: '1.1rem',
-                      lineHeight: '1.6',
-                      margin: 0,
-                      color: '#e9ecef'
-                    }}>
-                      Metropolitan guard is a leading example for all other security guard companies in Melbourne and Sydney. Our comprehensive approach to health, safety, and environmental management ensures that we deliver excellence while maintaining the highest standards of corporate responsibility.
-                    </p>
-                  </div>
+          
 
-                  {/* Statistics */}
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '30px',
-                    marginTop: '50px'
-                  }}>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{
-                        fontSize: '2.5rem',
-                        fontWeight: '700',
-                        color: '#fdc51a',
-                        marginBottom: '10px'
-                      }}>
-                        3
-                      </div>
-                      <p style={{
-                        fontSize: '1rem',
-                        color: '#e9ecef',
-                        margin: 0
-                      }}>
-                        Corporate Goals
-                      </p>
-                    </div>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{
-                        fontSize: '2.5rem',
-                        fontWeight: '700',
-                        color: '#fdc51a',
-                        marginBottom: '10px'
-                      }}>
-                        3
-                      </div>
-                      <p style={{
-                        fontSize: '1rem',
-                        color: '#e9ecef',
-                        margin: 0
-                      }}>
-                        ISO Certifications
-                      </p>
-                    </div>
-                    <div style={{ textAlign: 'center' }}>
-                      <div style={{
-                        fontSize: '2.5rem',
-                        fontWeight: '700',
-                        color: '#fdc51a',
-                        marginBottom: '10px'
-                      }}>
-                      100%
-                      </div>
-                      <p style={{
-                        fontSize: '1rem',
-                        color: '#e9ecef',
-                        margin: 0
-                      }}>
-                        Commitment to Quality
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          
 
           {/*===== CTA Section =====*/}
-          <section 
-            style={{
-              paddingTop: '60px',
-              paddingBottom: '60px',
-              background: '#ffffff'
-            }}
-          >
-            <div className="container" style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 20px' }}>
-              <div className="row justify-content-center text-center">
-                <div className="col-lg-8">
-                  <h3 style={{
-                    fontSize: '2rem',
-                    fontWeight: '600',
-                    color: '#1e2247',
-                    marginBottom: '20px',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-                  }}>
-                    Partner with a Responsible Security Provider
-                  </h3>
-                  
-                  <p style={{
-                    fontSize: '1.1rem',
-                    color: '#6c757d',
-                    marginBottom: '30px',
-                    lineHeight: '1.6'
-                  }}>
-                    Choose a security company that values community, sustainability, and excellence. 
-                    Contact us today to learn how our responsible approach can benefit your business.
-                  </p>
-                  
-                  <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                    <a 
-                      href="/contacts"
-                      style={{
-                        display: 'inline-block',
-                        padding: '15px 30px',
-                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                        color: '#1e2247',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1rem',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 5px 15px rgba(253, 197, 26, 0.3)'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.transform = 'translateY(-2px)';
-                        e.target.style.boxShadow = '0 8px 25px rgba(253, 197, 26, 0.4)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.transform = 'translateY(0)';
-                        e.target.style.boxShadow = '0 5px 15px rgba(253, 197, 26, 0.3)';
-                      }}
-                    >
-                      Contact Us Today
-                    </a>
-                    
-                    <a 
-                      href="/get-quotation"
-                      style={{
-                        display: 'inline-block',
-                        padding: '15px 30px',
-                        background: 'transparent',
-                        color: '#1e2247',
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        fontWeight: '600',
-                        fontSize: '1rem',
-                        border: '2px solid #1e2247',
-                        transition: 'all 0.3s ease'
-                      }}
-                      onMouseOver={(e) => {
-                        e.target.style.background = '#1e2247';
-                        e.target.style.color = '#ffffff';
-                        e.target.style.transform = 'translateY(-2px)';
-                      }}
-                      onMouseOut={(e) => {
-                        e.target.style.background = 'transparent';
-                        e.target.style.color = '#1e2247';
-                        e.target.style.transform = 'translateY(0)';
-                      }}
-                    >
-                      Get Quote
-                    </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          </section>
+          
 
           <Subscribe />
         </div>
@@ -845,8 +595,9 @@ export default function Page() {
         .social-partners-header {
           display: flex;
           align-items: flex-end;
-          justify-content: space-between;
+          justify-content: center;
           margin-bottom: 20px;
+          flex-wrap: wrap;
         }
 
         .social-partners-header-content {
@@ -856,7 +607,7 @@ export default function Page() {
         }
 
         .social-partners-title {
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 700;
           margin: 0;
           color: #333333;

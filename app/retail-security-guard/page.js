@@ -1,461 +1,776 @@
+'use client';
+import { useState } from 'react';
+import { Shield, Eye, Users, Clock, User, Zap, CheckCircle, Award, Phone, MapPin, Building, Home, Book, Calendar, Landmark, Wrench, AlertTriangle, UserX, Search, Lock, Target, Camera, Bell, UserCheck, Flame, HardHat, Truck, Key, AlertCircle, Package, Settings, DollarSign, Cpu, UserPlus, Handshake, Star, Heart, Building2, Hospital, GraduationCap, Warehouse, ShoppingCart, Store, Gem, Box, ChevronDown } from 'lucide-react';
 import Layout from "@/components/layout/Layout"
-import Gallery4 from "@/components/ui/gallery4"
+import WhyChooseUs from "@/components/ui/why-choose-us"
+import Accreditation from '@/components/accrediation10'
+import Subscribe from '@/components/homepages/home1/Subscribe';
 
 export default function RetailSecurityPage() {
+    const [activeService, setActiveService] = useState(null);
+    const [activeFaq, setActiveFaq] = useState(null);
+
+    const toggleService = (index) => {
+        setActiveService(activeService === index ? null : index);
+    };
+
+    const toggleFaq = (index) => {
+        setActiveFaq(activeFaq === index ? null : index);
+    };
+
+    const services = [
+        {
+            title: "Customized Security Solutions",
+            icon: <Settings size={24} />,
+            iconSymbol: <Settings size={24} />,
+            description: "Tailored services designed for your business size, location, and operational requirements",
+            details: "Metro Guards understands that each retail store has its own set of security needs. That's why we provide customized retail security solutions that are specifically designed for your business size, location, and operational requirements. Whether you need to secure a small boutique or a large shopping center, we work closely with you to ensure our services align with your needs."
+        },
+        {
+            title: "Advanced Security Technology", 
+            icon: <Camera size={24} />,
+            iconSymbol: <Camera size={24} />,
+            description: "Latest CCTV systems with continuous monitoring and integrated security systems",
+            details: "To ensure maximum protection, Metro Guards utilizes the latest in security technology. Our CCTV systems offer continuous monitoring of your store, allowing you to track activity both during business hours and after closing. Our integrated systems include alarm monitoring, access control, and surveillance systems that work seamlessly to prevent theft, vandalism, and other security threats."
+        },
+        {
+            title: "Professional Security Officers",
+            icon: <UserCheck size={24} />,
+            iconSymbol: <UserCheck size={24} />,
+            description: "Skilled guards trained in loss prevention and customer service",
+            details: "Our retail security officers are specifically trained to handle the unique challenges that retail environments face. They are proficient in managing customer flow, monitoring suspicious activity, and deterring theft. As visible deterrents, our uniformed officers help maintain a sense of security for your customers, while also ensuring the safety of your employees."
+        },
+        {
+            title: "Covert Loss Prevention",
+            icon: <Eye size={24} />,
+            iconSymbol: <Eye size={24} />,
+            description: "Undercover officers for discreet theft detection and prevention",
+            details: "For stores that require a more discreet approach to loss prevention, we provide covert security officers. These trained personnel work undercover to detect and prevent theft without being noticed by customers or employees. Their presence is a powerful tool in reducing organized retail crime and preventing internal theft."
+        }
+    ];
+
+    const faqData = [
+        {
+            question: "What types of retail businesses do you serve?",
+            answer: "We provide security services for a wide range of retail businesses including retail stores and shopping malls, supermarkets and convenience stores, warehouses and distribution centers, high-end retail outlets and boutiques, and educational institutions and healthcare facilities."
+        },
+        {
+            question: "Do you provide both uniformed and covert security officers?",
+            answer: "Yes, we offer both uniformed security officers who serve as visible deterrents and covert loss prevention officers who work undercover to detect theft without being noticed by customers or employees."
+        },
+        {
+            question: "What security technology do you use?",
+            answer: "We utilize the latest security technology including CCTV systems with continuous monitoring, alarm monitoring systems, access control systems, and integrated surveillance systems that work seamlessly to prevent theft, vandalism, and other security threats."
+        },
+        {
+            question: "How do you customize security solutions for different retail businesses?",
+            answer: "We work closely with each client to understand their specific security needs based on business size, location, and operational requirements. Whether you need to secure a small boutique or a large shopping center, we design solutions that align with your unique needs."
+        },
+        {
+            question: "What training do your retail security officers receive?",
+            answer: "Our retail security officers are specifically trained to handle retail environment challenges including customer flow management, suspicious activity monitoring, conflict resolution, first aid, emergency response, and loss prevention techniques."
+        }
+    ];
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="RETAIL SECURITY SOLUTIONS">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="RETAIL SECURITY SOLUTIONS"
+                mainTitle="Professional Retail Security Services"
+                subtitle="Protecting Your Business with Tailored Security Solutions in Melbourne"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
+                    {/*===== Modern Hero Section =====*/}
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Protecting Your Business
-                                            </small>
-                                            <h2>RETAIL SECURITY SOLUTIONS IN MELBOURNE</h2>
-                                            <p>
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
+                                                }}
+                                            >
+                                                RETAIL PROTECTION
+                                            </span>
+                                        </div>
+                                        <h2 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: 'clamp(2.5rem, 5vw, 2rem)'
+                                            }}
+                                        >
+                                            Ensuring Protection for Your Business with Retail Security Solutions
+                                        </h2>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.1rem',
+                                                lineHeight: '1.6'
+                                            }}
+                                        >
                                                 Retail businesses are susceptible to a variety of security threats, including theft, vandalism, and internal losses. At Metro Guards, we specialize in offering tailored retail security guard services designed to safeguard your assets, ensure a safe environment for your customers, and protect your employees.
                                             </p>
-                                            <p>
-                                                Whether you run a single store, a chain of retail outlets, or a shopping mall, we understand the unique challenges faced by retail businesses and provide solutions that cater to your specific needs. Our services tackle everything from access control and surveillance to loss prevention and emergency response.
-                                            </p>
-                                            <div className="btn-area mt-4">
+                                        <p 
+                                            className="mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1rem',
+                                                lineHeight: '1.6'
+                                            }}
+                                        >
+                                            Whether you run a single store, a chain of retail outlets, or a shopping mall, we understand the unique challenges faced by retail businesses and provide solutions that cater to your specific needs. Our retail security services are designed to tackle the various risks in a retail environment, offering everything from access control and surveillance to loss prevention and emergency response.
+                                        </p>
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
                                                 <a 
                                                     href="/get-quotation" 
-                                                    className="btn text-white px-4 py-3 me-3"
+                                                className="btn btn-primary px-4 py-3"
                                                     style={{
-                                                        backgroundColor: '#1E2247',
+                                                    backgroundColor: '#1e2247',
                                                         border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
+                                                    borderRadius: '8px',
                                                         fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
+                                                    fontSize: '0.95rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                    color: '#ffffff'
+                                                }}
+                                                onMouseEnter={(e) => {
+                                                    e.target.style.transform = 'translateY(-2px)';
+                                                    e.target.style.boxShadow = '0 8px 25px rgba(30, 34, 71, 0.4)';
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.target.style.transform = 'translateY(0)';
+                                                    e.target.style.boxShadow = '0 4px 15px rgba(30, 34, 71, 0.3)';
+                                                }}
+                                            >
+                                                Get Free Quote <i className="bi bi-arrow-right ms-2"></i>
                                                 </a>
                                                 <a 
                                                     href="tel:1300731173" 
-                                                    className="btn text-dark px-4 py-3"
+                                                className="btn btn-outline-primary px-4 py-3"
                                                     style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
-                                                        textDecoration: 'none',
+                                                    color: '#1e2247',
+                                                    borderColor: '#fdc51a',
+                                                    backgroundColor: '#fdc51a',
+                                                    borderRadius: '8px',
                                                         fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CALL US NOW <span><i className="bi bi-telephone"></i></span>
-                                                </a>
-                                            </div>
+                                                    fontSize: '0.95rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onMouseEnter={(e) => {
+                                                    e.target.style.backgroundColor = '#1e2247';
+                                                    e.target.style.color = '#ffffff';
+                                                    e.target.style.transform = 'translateY(-2px)';
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.target.style.backgroundColor = '#fdc51a';
+                                                    e.target.style.color = '#1e2247';
+                                                    e.target.style.transform = 'translateY(0)';
+                                                }}
+                                            >
+                                                Call Now <i className="bi bi-telephone ms-2"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/blog/retail.jpg" alt="Retail Security Solutions"  style={{ 
+                                    <div className="hero-image position-relative">
+                                        <img 
+                                            src="/assets/img/blog/retail.jpg" 
+                                            alt="Retail Security Solutions" 
+                                            className="img-fluid rounded-4 shadow-lg"
+                                            style={{
             width: '100%', 
-            height: '400px', 
+                                                height: '500px',
             objectFit: 'cover' 
-        }} />
-                                        {/* <div className="corner-right-bottom-shape2 position-absolute">
-                                            <img src="/assets/img/shapes/shape-right-bottom2.png" alt="" />
-                                        </div> */}
+                                            }}
+                                        />
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                right: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #ffd700 100%)',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                left: '-30px',
+                                                width: '150px',
+                                                height: '150px',
+                                                background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Custom Solutions Section =====*/}
-                    <div className="systems-section bg-29 section-padding">
+                    {/*===== Our Services Section =====*/}
+                    <div className="services-section section-padding" style={{background: '#ffffff'}}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Tailored Protection
-                                        </small>
-                                        <h2>CUSTOMIZED SECURITY SOLUTIONS FOR RETAIL</h2>
-                                        <p>We provide security services specifically designed for your business size, location, and operational requirements</p>
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4">
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/blog/retail 2.webp" 
+                                                alt="Retail Security Services" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
                                     </div>
+                                        
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="align-items-center mb-3">
+                                                <p>Our retail security services provide comprehensive protection for your business, customers, and employees with professional security solutions.</p>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Clock size={20} />
+                                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Available Service</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <UserCheck size={20} />
+                                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Licensed Professional Guards</span>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Zap size={20} />
+                                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Cost-Effective Solutions</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="services-content ps-lg-4">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
+                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                    OUR SERVICES
+                                                </span>
+                                            </div>
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Our Retail Security Services
+                                            </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                We provide comprehensive retail security solutions designed to protect your business, customers, and employees from various security threats.
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
+                                        </div>
+                                        <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                        </div>
+                                    </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#6c757d',
+                                                                        transition: 'all 0.3s ease',
+                                                                        transform: activeService === index ? 'rotate(180deg)' : 'rotate(0deg)'
+                                                                    }}
+                                                                >
+                                                                    <ChevronDown size={20} />
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-lg-4 col-md-6 mb-5">
-                                    <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
-                                        <div className="system-icon-wrapper mb-4">
-                                            <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
-                                                <i className="bi bi-gear text-white" style={{fontSize: '2.5rem'}}></i>
-                                            </div>
-                                        </div>
-                                        <h4 className="mb-3">Tailored Services</h4>
-                                        <p>Custom security plans for small boutiques to large shopping centers, including CCTV systems and skilled security personnel.</p>
+                        </div>
+                    </div>
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a'
+                                                            }}
+                                                        >
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7'}}>
+                                                                    {service.details}
+                                                                </p>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 mb-5">
-                                    <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
-                                        <div className="system-icon-wrapper mb-4">
-                                            <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#FDC24C'}}>
-                                                <i className="bi bi-camera-video text-dark" style={{fontSize: '2.5rem'}}></i>
-                                            </div>
+                                                    )}
+                            </div>
+                                            ))}
                                         </div>
-                                        <h4 className="mb-3">Advanced Technology</h4>
-                                        <p>Latest CCTV systems with continuous monitoring, alarm systems, and access control for comprehensive protection.</p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 mb-5">
-                                    <div className="system-card text-center p-5 bg-white rounded-lg shadow-lg h-100 position-relative">
-                                        <div className="system-icon-wrapper mb-4">
-                                            <div className="system-icon-bg d-inline-flex align-items-center justify-content-center rounded-circle" 
-                                                 style={{width: '80px', height: '80px', backgroundColor: '#1E2247'}}>
-                                                <i className="bi bi-shield-check text-white" style={{fontSize: '2.5rem'}}></i>
-                                            </div>
-                                        </div>
-                                        <h4 className="mb-3">Loss Prevention</h4>
-                                        <p>Specialized training to detect and prevent theft, both from customers and employees, reducing shrinkage.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Security Officers Section =====*/}
-                    <div className="benefits-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Professional Protection
-                                        </small>
-                                        <h2>OUR RETAIL SECURITY OFFICERS</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row g-4">
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
-                                        <div className="benefit-icon me-4 flex-shrink-0">
-                                            <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#1E2247', borderRadius: '50%'}}>
-                                                <i className="bi bi-person-badge text-white" style={{fontSize: '1.8rem'}}></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Uniformed Security Officers</h5>
-                                            <p className="mb-0">Visible deterrents trained in customer flow management, suspicious activity monitoring, conflict resolution, first aid, and emergency response.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="benefit-item d-flex align-items-start p-4 bg-white rounded shadow-lg h-100">
-                                        <div className="benefit-icon me-4 flex-shrink-0">
-                                            <div className="icon-circle d-flex align-items-center justify-content-center"
-                                                 style={{width: '60px', height: '60px', backgroundColor: '#FDC24C', borderRadius: '50%'}}>
-                                                <i className="bi bi-incognito text-dark" style={{fontSize: '1.8rem'}}></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Covert Loss Prevention</h5>
-                                            <p className="mb-0">Undercover officers detecting and preventing theft without being noticed, effectively reducing organized retail crime and internal theft.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Customer Experience Section =====*/}
-                    <div className="solutions-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Beyond Security
-                                        </small>
-                                        <h2>ENHANCING CUSTOMER EXPERIENCE</h2>
-                                        <p>Our security services contribute to both safety and business operations</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6 mb-4">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-people" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Concierge Security Approach</h5>
-                                            <p className="mb-0">Blends security with customer service, creating a welcoming atmosphere while maintaining safety.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-graph-up" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Operational Efficiency</h5>
-                                            <p className="mb-0">Access control for stock movement, delivery monitoring, and secure storage areas improve operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Emergency Coordination</h5>
-                                            <p className="mb-0">Trained response for medical situations, theft incidents, and coordination with contractors.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 mb-4">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-building-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Professional Image</h5>
-                                            <p className="mb-0">Maintains your brand reputation with professional security presence that customers trust.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Comprehensive Coverage Section =====*/}
-                    <div className="choose-section bg-28 section-padding">
+                    {/*===== Key Benefits Section =====*/}
+                    <div className="benefits-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="choose-content mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                360° Protection
-                                            </small>
-                                            <h2>COMPREHENSIVE RETAIL SECURITY COVERAGE</h2>
-                                            <div className="choose-features mt-4">
+                                    <div className="benefits-content">
+                                        <div className="subtitle mb-3">
+                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                                <i className="bi bi-shield-exclamation me-2"></i>
+                                                PROFESSIONAL HANDLING
+                                            </span>
+                                                    </div>
+                                        <h2 className="display-5 fw-bold mb-4 text-white">
+                                            Why Choose Metro Guards for Your Retail Security?
+                                        </h2>
+                                        <p className="lead text-white mb-4" style={{opacity: '0.9'}}>
+                                            We provide comprehensive retail security solutions that protect your business, enhance customer experience, and ensure operational efficiency.
+                                        </p>
+                                        <div className="benefits-features">
                                                 <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-door-closed" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '10px',
+                                                        color: '#1e2247'
+                                                    }}
+                                                >
+                                                    <Award size={24} />
                                                     </div>
                                                     <div>
-                                                        <h5 className="mb-2">Access Control</h5>
-                                                        <p>Regulate entry to sensitive areas like stock rooms and offices with verified visitor logging.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-alarm" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5 className="mb-2">24/7 Monitoring</h5>
-                                                        <p>Central monitoring station with real-time alerts for immediate response to breaches.</p>
-                                                    </div>
-                                                </div>
-                                                <div className="feature-item d-flex align-items-start mb-4">
-                                                    <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-camera-video" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
-                                                    </div>
-                                                    <div>
-                                                        <h5 className="mb-2">Surveillance Systems</h5>
-                                                        <p>High-definition CCTV coverage for all areas of your retail space, including blind spots.</p>
+                                                    <h5 className="text-white fw-bold mb-2">Trusted by Melbourne Retailers</h5>
+                                                    <p className="text-white mb-0" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                        With years of experience in providing retail security services, Metro Guards has earned the trust of retail businesses across Melbourne. Our security solutions have helped businesses prevent theft, reduce liability, and enhance the overall customer experience.
+                                                    </p>
                                                     </div>
                                                 </div>
                                                 <div className="feature-item d-flex align-items-start">
-                                                    <div className="feature-icon me-3 mt-1">
-                                                        <i className="bi bi-arrow-repeat" style={{fontSize: '1.5rem', color: '#1E2247'}}></i>
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                                    style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '10px',
+                                                        color: '#1e2247'
+                                                    }}
+                                                >
+                                                    <DollarSign size={24} />
                                                     </div>
                                                     <div>
-                                                        <h5 className="mb-2">Regular Patrols</h5>
-                                                        <p>Systematic checks of all store areas including storage and loading zones.</p>
-                                                    </div>
+                                                    <h5 className="text-white fw-bold mb-2">Cost-Effective Security Solutions</h5>
+                                                    <p className="text-white mb-0" style={{opacity: '0.9', lineHeight: '1.6'}}>
+                                                        Metro Guards is committed to offering cost-effective retail security services without compromising on quality. We understand the importance of staying within budget while ensuring the safety and security of your retail operations.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="choose-image ml50">
-                                        <img src="/assets/img/blog/retail 2.webp" alt="Retail Security Coverage" className="img-fluid rounded shadow-lg"  style={{ 
+                                    <div className="benefits-image mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '20px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.3)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/blog/retail.jpg" 
+                                                alt="Retail Security Benefits" 
+                                                className="img-fluid"
+                                                style={{
             width: '100%', 
-            height: '400px', 
+                                                    height: '100%',
             objectFit: 'cover' 
-        }}/>
+                                                }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Why Choose Us Section =====*/}
-                    <div className="industries-section bg-29 section-padding">
+                    {/*===== Industries We Serve Section =====*/}
+                    <div className="industries-section section-padding" style={{background: '#f8f9fa'}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            The Metro Guards Difference
-                                        </small>
-                                        <h2>WHY CHOOSE US FOR RETAIL SECURITY?</h2>
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                            <i className="bi bi-building me-2"></i>
+                                            VERSATILE PROTECTION
+                                        </span>
                                     </div>
+                                    <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                        Industries We Serve
+                                    </h2>
+                                    <p className="lead" style={{color: '#6c757d'}}>
+                                        We provide retail security services for a wide range of industries in Melbourne, tailoring our solutions to meet your specific needs.
+                                    </p>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-lg-4 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-award" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        <h5 className="my-3">Trusted by Melbourne Retailers</h5>
-                                        <p>Proven track record in preventing theft, reducing liability, and enhancing customer experience.</p>
+                            <div className="row g-4 g-md-3 g-lg-4">
+                                {[
+                                    { icon: <Store size={32} />, title: "Retail Stores & Malls", description: "From small boutiques to large shopping centers" },
+                                    { icon: <ShoppingCart size={32} />, title: "Supermarkets", description: "Grocery stores and convenience outlets" },
+                                    { icon: <Warehouse size={32} />, title: "Warehouses", description: "Distribution centers and stock rooms" },
+                                    { icon: <Gem size={32} />, title: "High-End Retail", description: "Luxury boutiques and jewelry stores" },
+                                    { icon: <Building2 size={32} />, title: "Educational Institutions", description: "Schools and universities" },
+                                    { icon: <Hospital size={32} />, title: "Healthcare Facilities", description: "Hospitals and medical centers" }
+                                ].map((industry, index) => (
+                                    <div key={index} className="col-lg-4 col-md-6">
+                                        <div 
+                                            className="industry-card h-100 position-relative"
+                                            style={{
+                                                backgroundColor: 'transparent',
+                                                borderRadius: '0',
+                                                boxShadow: 'none',
+                                                border: 'none',
+                                                transition: 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+                                                textAlign: 'center',
+                                                overflow: 'visible',
+                                                cursor: 'pointer',
+                                                padding: '20px'
+                                            }}
+                                        >
+                                            {/* Card container with unique design */}
+                                            <div 
+                                                className="position-relative h-100"
+                                                style={{
+                                                    background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                                    borderRadius: '30px',
+                                                    padding: '35px 25px',
+                                                    boxShadow: '0 15px 40px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
+                                                    border: '1px solid rgba(253, 197, 26, 0.1)',
+                                                    transition: 'all 0.6s ease',
+                                                    transform: 'perspective(1000px) rotateX(0deg)',
+                                                    overflow: 'hidden'
+                                                }}
+                                            >
+                                                {/* Animated background elements */}
+                                                <div 
+                                                    className="position-absolute"
+                                                    style={{
+                                                        top: '-100px',
+                                                        left: '-100px',
+                                                        width: '200px',
+                                                        height: '200px',
+                                                        background: 'radial-gradient(circle, rgba(253, 197, 26, 0.1) 0%, transparent 70%)',
+                                                        borderRadius: '50%',
+                                                        transition: 'all 0.8s ease',
+                                                        zIndex: '0'
+                                                    }}
+                                                ></div>
+                                                <div 
+                                                    className="position-absolute"
+                                                    style={{
+                                                        bottom: '-80px',
+                                                        right: '-80px',
+                                                        width: '160px',
+                                                        height: '160px',
+                                                        background: 'radial-gradient(circle, rgba(30, 34, 71, 0.08) 0%, transparent 70%)',
+                                                        borderRadius: '50%',
+                                                        transition: 'all 0.8s ease',
+                                                        zIndex: '0'
+                                                    }}
+                                                ></div>
+                                                
+                                                {/* Icon with unique styling */}
+                                                <div 
+                                                    className="industry-icon mb-4 d-flex align-items-center justify-content-center mx-auto position-relative"
+                                                    style={{
+                                                        width: '100px',
+                                                        height: '100px',
+                                                        background: 'linear-gradient(45deg, #1e2247 0%, #2a2d5a 50%, #1e2247 100%)',
+                                                        borderRadius: '50%',
+                                                        color: '#fdc51a',
+                                                        boxShadow: '0 10px 30px rgba(30, 34, 71, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
+                                                        transition: 'all 0.6s ease',
+                                                        zIndex: '2',
+                                                        position: 'relative'
+                                                    }}
+                                                >
+                                                    {industry.icon}
+                                                    
+                                                    {/* Rotating ring around icon */}
+                                                    <div 
+                                                        className="position-absolute"
+                                                        style={{
+                                                            width: '120px',
+                                                            height: '120px',
+                                                            border: '2px solid transparent',
+                                                            borderTop: '2px solid #fdc51a',
+                                                            borderRight: '2px solid #fdc51a',
+                                                            borderRadius: '50%',
+                                                            top: '-10px',
+                                                            left: '-10px',
+                                                            animation: 'rotate 3s linear infinite',
+                                                            zIndex: '1'
+                                                        }}
+                                                    ></div>
+                                    </div>
+                                                
+                                                {/* Content */}
+                                                <div className="position-relative" style={{zIndex: '2'}}>
+                                                    <h5 
+                                                        className="fw-bold mb-3" 
+                                                        style={{
+                                                            color: '#1e2247',
+                                                            fontSize: '1.3rem',
+                                                            lineHeight: '1.3',
+                                                            transition: 'all 0.3s ease'
+                                                        }}
+                                                    >
+                                                        {industry.title}
+                                                    </h5>
+                                                    <p 
+                                                        className="mb-0" 
+                                                        style={{
+                                                            color: '#6c757d',
+                                                            lineHeight: '1.6',
+                                                            fontSize: '0.95rem',
+                                                            transition: 'all 0.3s ease'
+                                                        }}
+                                                    >
+                                                        {industry.description}
+                                                    </p>
+                                </div>
+                                                
+                                                {/* Decorative corner elements */}
+                                                <div 
+                                                    className="position-absolute"
+                                                    style={{
+                                                        top: '20px',
+                                                        right: '20px',
+                                                        width: '30px',
+                                                        height: '30px',
+                                                        background: 'linear-gradient(45deg, #fdc51a, #ffd700)',
+                                                        borderRadius: '50%',
+                                                        opacity: '0.3',
+                                                        zIndex: '1'
+                                                    }}
+                                                ></div>
+                                                <div 
+                                                    className="position-absolute"
+                                                    style={{
+                                                        bottom: '20px',
+                                                        left: '20px',
+                                                        width: '20px',
+                                                        height: '20px',
+                                                        background: 'linear-gradient(45deg, #1e2247, #2a2d5a)',
+                                                        borderRadius: '50%',
+                                                        opacity: '0.4',
+                                                        zIndex: '1'
+                                                    }}
+                                                ></div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-cash-coin" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        <h5 className="my-3">Cost-Effective Solutions</h5>
-                                        <p>Premium security services at affordable costs with flexible pricing for all business sizes.</p>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 mb-4">
-                                    <div className="industry-card text-center p-4 bg-white rounded shadow-lg h-100">
-                                        <i className="bi bi-shield-check" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        <h5 className="my-3">Licensed Professionals</h5>
-                                        <p>Fully licensed officers with continuous training in latest security protocols and standards.</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Industries Section =====*/}
-                    <div className="solutions-section bg-28 section-padding">
+                    {/*===== FAQ Section =====*/}
+                    <div className="faq-section section-padding" style={{background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)'}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Our Expertise
-                                        </small>
-                                        <h2>RETAIL SECTORS WE PROTECT</h2>
-                                        <p>We provide security services for all types of retail environments</p>
+                                    <div className="section-header">
+                                        <div className="subtitle mb-3">
+                                            <span 
+                                                className="badge px-3 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.8rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '20px'
+                                                }}
+                                            >
+                                                FAQ
+                                            </span>
+                                        </div>
+                                        <h2 
+                                            className="display-4 fw-bold mb-4" 
+                                            style={{color: '#1e2247'}}
+                                        >
+                                            Frequently Asked Questions
+                                        </h2>
+                                        <p 
+                                            className="lead" 
+                                            style={{color: '#6c757d', maxWidth: '600px', margin: '0 auto'}}
+                                        >
+                                            Get answers to common questions about our retail security services.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="row g-4">
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-shop" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Retail Stores & Malls</h5>
-                                            <p className="mb-0">From small boutiques to large shopping centers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-cart" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Supermarkets</h5>
-                                            <p className="mb-0">Grocery stores and convenience outlets</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-gem" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">High-End Retail</h5>
-                                            <p className="mb-0">Luxury boutiques and jewelry stores</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-3 col-md-6">
-                                    <div className="solution-item d-flex align-items-center p-4 bg-white rounded-lg shadow-lg h-100">
-                                        <div className="solution-icon me-4">
-                                            <i className="bi bi-box-seam" style={{fontSize: '2.5rem', color: '#1E2247'}}></i>
-                                        </div>
-                                        <div>
-                                            <h5 className="mb-2">Warehouses</h5>
-                                            <p className="mb-0">Distribution centers and stock rooms</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Contact CTA Section =====*/}
-                    <div className="contact-section bg-29 section-padding">
-                        <div className="container">
-                            <div className="row align-items-center">
+                            <div className="row justify-content-center">
                                 <div className="col-lg-8">
-                                    <div className="contact-content">
-                                        <h3 className="mb-3">Secure Your Retail Business Today</h3>
-                                        <p className="mb-4">
-                                            Protect your retail business with trusted security solutions from Metro Guards. Whether you need comprehensive surveillance, on-site security personnel, or access control systems, we provide tailored solutions that enhance safety and prevent losses.
-                                        </p>
-                                        <p className="mb-0">
-                                            <i className="bi bi-telephone-fill me-2" style={{color: '#1E2247'}}></i>
-                                            <strong>Call us at 1300 73 11 73 for a free consultation.</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 text-lg-end text-center mt-4 mt-lg-0">
-                                    <div className="contact-buttons">
-                                        <a 
-                                            href="/get-quotation" 
-                                            className="btn text-white px-4 py-3 mb-3 d-block"
+                                    <div className="faq-accordion">
+                                        {faqData.map((faq, index) => (
+                                            <div key={index} className="accordion-item mb-3">
+                                                <div 
+                                                    className="accordion-header p-4"
+                                                    style={{
+                                                        backgroundColor: activeFaq === index ? '#ffffff' : '#f8f9fa',
+                                                        borderRadius: activeFaq === index ? '12px 12px 0 0' : '12px',
+                                                        border: '1px solid #e9ecef',
+                                                        cursor: 'pointer',
+                                                        transition: 'all 0.3s ease',
+                                                        borderLeft: '4px solid #fdc51a'
+                                                    }}
+                                                    onClick={() => toggleFaq(index)}
+                                                >
+                                                    <div className="d-flex align-items-center justify-content-between">
+                                                        <h5 
+                                                            className="mb-0 fw-bold" 
+                                                            style={{
+                                                                color: activeFaq === index ? '#1e2247' : '#495057',
+                                                                fontSize: '1.1rem'
+                                                            }}
+                                                        >
+                                                            {faq.question}
+                                                        </h5>
+                                                        <div 
+                                                            className="accordion-icon"
                                             style={{
-                                                backgroundColor: '#1E2247',
-                                                border: 'none',
-                                                borderRadius: '5px',
-                                                textDecoration: 'none',
-                                                fontWeight: '600',
-                                                textTransform: 'uppercase'
-                                            }}
-                                        >
-                                            GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
-                                        </a>
-                                        <a 
-                                            href="tel:1300731173" 
-                                            className="btn text-dark px-4 py-3 d-block"
+                                                                transform: activeFaq === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                                                transition: 'transform 0.3s ease',
+                                                                color: '#1e2247'
+                                                            }}
+                                                        >
+                                                            <ChevronDown size={20} />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {activeFaq === index && (
+                                                    <div 
+                                                        className="accordion-content p-4"
                                             style={{
-                                                backgroundColor: '#FDC24C',
-                                                border: 'none',
-                                                borderRadius: '5px',
-                                                textDecoration: 'none',
-                                                fontWeight: '600',
-                                                textTransform: 'uppercase'
-                                            }}
-                                        >
-                                            CALL NOW <span><i className="bi bi-telephone"></i></span>
-                                        </a>
+                                                            backgroundColor: '#ffffff',
+                                                            borderRadius: '0 0 12px 12px',
+                                                            border: '1px solid #e9ecef',
+                                                            borderTop: 'none',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                    >
+                                                        <p className="mb-0" style={{color: '#495057', lineHeight: '1.7'}}>
+                                                            {faq.answer}
+                                                        </p>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -463,54 +778,100 @@ export default function RetailSecurityPage() {
                     </div>
 
                     {/*===== Final CTA Section =====*/}
-                    <div className="cta-section bg-dark text-center section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="heading2">
-                                        <h2 className="text-white">READY TO PROTECT YOUR RETAIL BUSINESS?</h2>
-                                        <p className="text-white">
-                                            Metro Guards offers comprehensive, tailored retail security solutions to prevent theft, ensure customer safety, and give you peace of mind. 
-                                            From visible security officers to advanced surveillance systems, we provide the protection your business deserves.
-                                        </p>
-                                        <div className="btn-area mt-4">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn text-white px-4 py-3 me-3"
-                                                style={{
-                                                    backgroundColor: '#1E2247',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
-                                                }}
-                                            >
-                                                GET QUOTATION <span><i className="bi bi-arrow-right"></i></span>
-                                            </a>
-                                            <a 
-                                                href="tel:1300731173" 
-                                                className="btn text-dark px-4 py-3"
-                                                style={{
-                                                    backgroundColor: '#FDC24C',
-                                                    border: 'none',
-                                                    borderRadius: '5px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '600',
-                                                    textTransform: 'uppercase'
-                                                }}
-                                            >
-                                                CALL US NOW <span><i className="bi bi-telephone"></i></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <Gallery4 />
+                <WhyChooseUs />
+                <Accreditation />
+                <Subscribe />
             </Layout>
+
+            <style jsx>{`
+                .section-padding {
+                    padding: 80px 0;
+                }
+                
+                .min-vh-75 {
+                    min-height: 75vh;
+                }
+                
+                .btn:hover {
+                    transform: translateY(-2px);
+                }
+                
+                .benefit-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+                }
+                
+                .benefit-card:hover .benefit-icon > div {
+                    transform: scale(1.1);
+                    box-shadow: 0 15px 35px rgba(30, 34, 71, 0.4) !important;
+                }
+                
+                .industry-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+                }
+                
+                .industry-card:hover .industry-icon {
+                    transform: scale(1.1);
+                    box-shadow: 0 15px 35px rgba(30, 34, 71, 0.4) !important;
+                }
+                
+                @keyframes slideDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .accordion-content {
+                    animation: slideDown 0.3s ease;
+                }
+                
+                @keyframes rotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+                
+                .industry-card:hover {
+                    transform: translateY(-10px) scale(1.02) !important;
+                }
+                
+                .industry-card:hover .industry-icon {
+                    transform: scale(1.1) rotate(5deg) !important;
+                    box-shadow: 0 20px 50px rgba(30, 34, 71, 0.4) !important;
+                }
+                
+                .industry-card:hover .industry-icon > div {
+                    animation-duration: 1s !important;
+                }
+                
+                @media (max-width: 768px) {
+                    .hero-buttons {
+                        flex-direction: column;
+                        align-items: stretch;
+                    }
+                    
+                    .cta-buttons {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
+                    .cta-buttons .btn {
+                        width: 100%;
+                        max-width: 300px;
+                    }
+                }
+            `}</style>
         </>
     )
 }

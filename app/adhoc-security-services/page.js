@@ -1,43 +1,57 @@
 'use client';
 import { useState } from 'react';
+import { Eye, Search, Lock, Shield, Target, Users, Clock, User, Zap, AlertTriangle, UserX, Home, Wrench, CheckCircle, Award, Headphones, Phone, MapPin } from 'lucide-react';
 import Layout from "@/components/layout/Layout"
 import Gallery4 from "@/components/ui/gallery4"
+import WhyChooseUs from "@/components/ui/why-choose-us"
+import Accreditation from '@/components/accrediation10'
+import Subscribe from '@/components/homepages/home1/Subscribe';
 
 export default function AdhocSecurityPage() {
     const [activeService, setActiveService] = useState(null);
+    const [activeFaq, setActiveFaq] = useState(null);
 
     const toggleService = (index) => {
         setActiveService(activeService === index ? null : index);
     };
 
+    const toggleFaq = (index) => {
+        setActiveFaq(activeFaq === index ? null : index);
+    };
+
     const services = [
         {
             title: "Security Patrols & Surveillance",
-            icon: "👁️",
-            iconSymbol: "🔍",
+            icon: <Eye size={24} />,
+            iconSymbol: <Search size={24} />,
             description: "Comprehensive security patrols and surveillance for your property",
             details: "Our trained security guards conduct regular patrols of your property to deter criminal activity and ensure that your assets are protected at all times. We provide comprehensive surveillance and monitoring services with detailed reporting."
         },
         {
             title: "Access Control & Monitoring", 
-            icon: "🔒",
-            iconSymbol: "🛡️",
+            icon: <Lock size={24} />,
+            iconSymbol: <Shield size={24} />,
             description: "Advanced access control systems and monitoring",
             details: "We help you control who has access to your property or event, using various methods including ID checks, biometric scanning systems, and advanced access control technologies to maintain secure entry points."
         },
         {
             title: "Event Security Services",
-            icon: "🎯",
-            iconSymbol: "👥",
+            icon: <Target size={24} />,
+            iconSymbol: <Users size={24} />,
             description: "Professional security for events and gatherings",
-            details: "From concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely with comprehensive crowd management and security protocols."
+            details: "We offer a range of event security services, from concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely with comprehensive crowd management and security protocols."
+        },
+        
+    ];
+
+    const faqData = [
+        {
+            question: "How quickly can Adhoc security be mobilized?",
+            answer: "This very much depends on your requirements and location as there must be security officers to be deployed on the ground. We pride ourselves on the speed and efficiency of our Adhoc coverage, with officers often deployed in less than 2 hours. If your site is in a remote location, this may take longer, although we have a fantastic track record of providing excellent service even in such areas."
         },
         {
-            title: "Emergency Response Security",
-            icon: "⚡",
-            iconSymbol: "🚨",
-            description: "Rapid response emergency security services",
-            details: "Emergency security guards are available 24/7 for immediate deployment during crisis situations. Their rapid response and expert training make them crucial in safeguarding people and property during critical incidents."
+            question: "What Do We Do Differently?",
+            answer: "When you use Expeditious Services for your Adhoc needs, you get the benefit of our Critical Review Helpdesk. This includes regular communication and project management to ensure coverage runs as smoothly as possible, regardless of the length of our service. Metro Guards also ensure guards undergo special training prior to deployment to ensure they understand any additional risks and procedures. You can be confident that our officer teams are highly competent thanks to our rapid annual testing and training (EATT) and regular shift tool interviews."
         }
     ];
 
@@ -67,7 +81,7 @@ export default function AdhocSecurityPage() {
                                                     borderRadius: '25px'
                                                 }}
                                             >
-                                                🛡️ YOUR TRUSTED PROTECTION PARTNER
+                                                 YOUR TRUSTED PROTECTION PARTNER
                                             </span>
                                         </div>
                                         <h1 
@@ -90,19 +104,15 @@ export default function AdhocSecurityPage() {
                                                 maxWidth: '500px'
                                             }}
                                         >
-                                            When security threats emerge, every second counts. Our rapid deployment security guards provide immediate professional protection when you need it most.
+                                            In today’s unpredictable world, safeguarding your people and assets is more critical than ever. Our Adhoc Security Services provide flexible, reliable, and effective protection for businesses, organizations, and individuals.
+
+                                            We understand that every client faces unique challenges. That’s why we offer customizable security solutions tailored to your exact requirements—whether it’s short-term coverage for a one-off event or ongoing protection for your premises.
+
+                                            Our professional guards are equipped with the latest technology, trained in conflict resolution and emergency response, and committed to maintaining safety with vigilance and professionalism. You can rest assured knowing your security is in capable hands.
+
+                                            At Metro Guards, we pride ourselves on delivering services built on integrity, reliability, and excellence. We work closely with our clients to understand their concerns, provide transparent communication, and ensure peace of mind every step of the way.
                                         </p>
-                                        <p 
-                                            className="mb-5" 
-                                            style={{
-                                                color: '#6c757d',
-                                                fontSize: '1rem',
-                                                lineHeight: '1.6',
-                                                maxWidth: '480px'
-                                            }}
-                                        >
-                                            Available 24/7 with deployment in under 2 hours, our licensed security professionals deliver immediate crisis response and temporary security coverage across Melbourne.
-                                        </p>
+                                        
                                         
                                         <div className="hero-buttons d-flex flex-wrap gap-3">
                             <a 
@@ -121,7 +131,7 @@ export default function AdhocSecurityPage() {
                                                     boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
                                                 }}
                                             >
-                                                📋 GET QUOTATION
+                                                 GET QUOTATION
                             </a>
                             <a 
                                 href="tel:1300731173" 
@@ -138,7 +148,7 @@ export default function AdhocSecurityPage() {
                                                     borderWidth: '2px'
                                                 }}
                                             >
-                                                📞 CALL US NOW
+                                                <Phone size={16} style={{marginRight: '8px'}} /> 1300731173
                             </a>
                         </div>
                                         
@@ -168,41 +178,9 @@ export default function AdhocSecurityPage() {
                                                 }}
                                             />
                                             
-                                            {/* Floating Badge */}
-                                            <div 
-                                                className="floating-badge position-absolute"
-                                                style={{
-                                                    top: '30px',
-                                                    right: '30px',
-                                                    backgroundColor: '#1e2247',
-                                                    color: '#ffffff',
-                                                    padding: '15px 20px',
-                                                    borderRadius: '15px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem',
-                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
-                                                }}
-                                            >
-                                                🥇 Metro Guards
-                    </div>
                                             
-                                            {/* Bottom Badge */}
-                                            <div 
-                                                className="bottom-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '12px 20px',
-                                                    borderRadius: '12px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.85rem',
-                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                </div>
+                                            
+                                            
             </div>
                                         
                                         {/* Decorative Elements */}
@@ -256,25 +234,14 @@ export default function AdhocSecurityPage() {
                                                     objectFit: 'cover'
                                                 }}
                                             />
-                                            <div 
-                                                className="overlay-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '15px 25px',
-                                                    borderRadius: '10px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                                    </div>
+                                            
                                 </div>
                                         
                                         {/* Additional Features */}
                                         <div className="features-list mt-4">
+                                            <div className="align-items-center mb-3">
+                                                <p>Personnel will ensure that your event runs smoothly and that your guests are safe and secure.</p>
+                                            </div>
                                             <div className="feature-item d-flex align-items-center mb-3">
                                                 <div 
                                                     className="feature-icon me-3 d-flex align-items-center justify-content-center"
@@ -287,7 +254,7 @@ export default function AdhocSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    🕒
+                                                    <Clock size={20} />
                             </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Available Response</span>
                                         </div>
@@ -303,7 +270,7 @@ export default function AdhocSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    👨‍💼
+                                                    <User size={20} />
                                         </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Professional Guards</span>
                                     </div>
@@ -319,7 +286,7 @@ export default function AdhocSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    ⚡
+                                                    <Zap size={20} />
                                 </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid Deployment</span>
                                         </div>
@@ -332,7 +299,7 @@ export default function AdhocSecurityPage() {
                                         <div className="section-header mb-5">
                                             <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                    🛡️ OUR SERVICES
+                                                     OUR SERVICES
                                                 </span>
                                         </div>
                                             <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
@@ -419,31 +386,7 @@ export default function AdhocSecurityPage() {
                                                                 </p>
                                                     </div>
                                                             
-                                                            {/* Additional service features */}
-                                                            <div className="service-features mt-3 pt-3" style={{borderTop: '1px solid #f0f0f0'}}>
-                                                                <div className="row">
-                                                                    <div className="col-md-6">
-                                                                        <div className="feature-item d-flex align-items-center mb-2">
-                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
-                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Professional trained staff</span>
-                                                </div>
-                                                                        <div className="feature-item d-flex align-items-center mb-2">
-                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
-                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>24/7 availability</span>
-                                                    </div>
-                                                </div>
-                                                                    <div className="col-md-6">
-                                                                        <div className="feature-item d-flex align-items-center mb-2">
-                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
-                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Licensed & insured</span>
-                                                    </div>
-                                                                        <div className="feature-item d-flex align-items-center mb-2">
-                                                                            <span style={{color: '#fdc51a', fontSize: '0.9rem', marginRight: '8px'}}>✓</span>
-                                                                            <span style={{fontSize: '0.85rem', color: '#6c757d'}}>Rapid response</span>
-                                                </div>
-                                                    </div>
-                                                </div>
-                                                    </div>
+                                                           
                                                 </div>
                                                     )}
                                             </div>
@@ -497,7 +440,7 @@ export default function AdhocSecurityPage() {
                                                 color: '#1e2247'
                                             }}
                                         >
-                                            <i className="bi bi-exclamation-triangle fs-3"></i>
+                                            <AlertTriangle size={32} />
                                                     </div>
                                         <div className="reason-content">
                                             <h5 className="mb-3 text-white fw-bold">Damaged Barriers/Gates</h5>
@@ -529,7 +472,7 @@ export default function AdhocSecurityPage() {
                                                 color: '#1e2247'
                                             }}
                                         >
-                                            <i className="bi bi-person-x fs-3"></i>
+                                            <UserX size={32} />
                                                 </div>
                                         <div className="reason-content">
                                             <h5 className="mb-3 text-white fw-bold">Antisocial Behavior</h5>
@@ -561,7 +504,7 @@ export default function AdhocSecurityPage() {
                                                 color: '#1e2247'
                                             }}
                                         >
-                                            <i className="bi bi-house-exclamation fs-3"></i>
+                                            <Home size={32} />
                                 </div>
                                         <div className="reason-content">
                                             <h5 className="mb-3 text-white fw-bold">Unauthorized Campsites</h5>
@@ -593,7 +536,7 @@ export default function AdhocSecurityPage() {
                                                 color: '#1e2247'
                                             }}
                                         >
-                                            <i className="bi bi-tools fs-3"></i>
+                                            <Wrench size={32} />
                 </div>
                                         <div className="reason-content">
                                             <h5 className="mb-3 text-white fw-bold">Security System Installation</h5>
@@ -645,7 +588,7 @@ export default function AdhocSecurityPage() {
                                                             color: '#1e2247'
                                                         }}
                                                     >
-                                                        <i className="bi bi-check-lg fw-bold"></i>
+                                                        <CheckCircle size={16} />
                         </div>
                                                     <span style={{color: '#1e2247', fontWeight: '500'}}>{advantage}</span>
                         </div>
@@ -675,7 +618,7 @@ export default function AdhocSecurityPage() {
                                                             fontSize: '2.5rem'
                                                         }}
                                                     >
-                                                        <i className="bi bi-clock"></i>
+                                                        <Clock size={32} />
                         </div>
                                                     <div 
                                                         className="stat-number fw-bold mb-2"
@@ -710,7 +653,7 @@ export default function AdhocSecurityPage() {
                                                             fontSize: '2.5rem'
                                                         }}
                                                     >
-                                                        <i className="bi bi-headset"></i>
+                                                        <Headphones size={32} />
                         </div>
                                                     <div 
                                                         className="stat-number fw-bold mb-2"
@@ -745,7 +688,7 @@ export default function AdhocSecurityPage() {
                                                             fontSize: '2.5rem'
                                                         }}
                                                     >
-                                                        <i className="bi bi-shield-check"></i>
+                                                        <Shield size={32} />
                         </div>
                                                     <div 
                                                         className="stat-number fw-bold mb-2"
@@ -780,7 +723,7 @@ export default function AdhocSecurityPage() {
                                                             fontSize: '2.5rem'
                                                         }}
                                                     >
-                                                        <i className="bi bi-award"></i>
+                                                        <Award size={32} />
                         </div>
                                                     <div 
                                                         className="stat-number fw-bold mb-2"
@@ -802,134 +745,7 @@ export default function AdhocSecurityPage() {
                             </div>
                         </div>
                     </div>
-                    {/*===== Contact CTA Section =====*/}
-                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="cta-content text-center text-white">
-                                        <div className="subtitle mb-4">
-                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                <i className="bi bi-telephone me-2"></i>
-                                                IMMEDIATE SECURITY NEEDED?
-                                            </span>
-                                        </div>
-                                        <h2 className="display-4 fw-bold mb-4">
-                                            Need Security With Immediate Effect?
-                                        </h2>
-                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
-                                                        Contact us to find out how we can implement Adhoc security solutions tailored to your specific requirements. Our team is ready to provide rapid response and professional security coverage.
-                                                    </p>
-                                        
-                                        <div className="cta-buttons mb-5">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn btn-lg me-3 px-5 py-3"
-                                                style={{
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    border: 'none',
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
-                                            </a>
-                                            <a 
-                                                href="tel:1300731173" 
-                                                className="btn btn-outline-light btn-lg px-5 py-3"
-                                                style={{
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
-                                            </a>
-                                        </div>
-                                        
-        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-clock"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Quick Response</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Less than 2 hours</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-shield-check"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Professional Guards</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully trained & licensed</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-headset"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">24/7 Support</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Always available</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-geo-alt"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     {/* Add custom styles */}
 <style jsx>{`
@@ -1044,7 +860,102 @@ export default function AdhocSecurityPage() {
     }
 `}</style>
                 </div>
-                <Gallery4 />
+
+                {/*===== FAQ & Information Section =====*/}
+                <div className="faq-info-section " style={{background: '#f8f9fa'}}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-header text-center mb-5">
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                            FREQUENTLY ASKED QUESTIONS
+                                        </span>
+                                    </div>
+                                    <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                        Everything You Need to Know About Adhoc Security
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="row g-5">
+                            {/* FAQ Section - Full Width */}
+                            <div className="col-lg-12">
+                                <div className="faq-content">
+                                    {faqData.map((faq, index) => (
+                                        <div key={index} className="faq-item mb-3">
+                                            <div 
+                                                className="faq-header p-4"
+                                                style={{
+                                                    backgroundColor: activeFaq === index ? '#ffffff' : '#f8f9fa',
+                                                    borderRadius: activeFaq === index ? '12px 12px 0 0' : '12px',
+                                                    border: '1px solid #e9ecef',
+                                                    borderLeft: '4px solid #fdc51a',
+                                                    boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                    cursor: 'pointer',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onClick={() => toggleFaq(index)}
+                                            >
+                                                <div className="d-flex align-items-center justify-content-between">
+                                                    <h4 className="mb-0 fw-bold" style={{color: '#1e2247', fontSize: '1.2rem'}}>
+                                                        {faq.question}
+                                                    </h4>
+                                                    <div className="expand-icon">
+                                                        <div 
+                                                            className="d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '35px',
+                                                                height: '35px',
+                                                                backgroundColor: activeFaq === index ? '#1e2247' : '#e9ecef',
+                                                                borderRadius: '50%',
+                                                                color: activeFaq === index ? '#ffffff' : '#1e2247',
+                                                                transition: 'all 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>
+                                                                {activeFaq === index ? '−' : '+'}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {activeFaq === index && (
+                                                <div 
+                                                    className="faq-content p-4"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '0 0 12px 12px',
+                                                        border: '1px solid #e9ecef',
+                                                        borderTop: 'none',
+                                                        borderLeft: '4px solid #fdc51a',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        animation: 'slideDown 0.3s ease'
+                                                    }}
+                                                >
+                                                    <p style={{color: '#6c757d', lineHeight: '1.7', margin: 0}}>
+                                                        {faq.answer}
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                
+                <WhyChooseUs />
+                <Accreditation />
+                <Subscribe />
             </Layout>
         </>
     )

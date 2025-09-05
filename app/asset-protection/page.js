@@ -1,44 +1,125 @@
 'use client';
 import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
-import Gallery4 from "@/components/ui/gallery4"
-import "../contacts/contact-styles.css"
+import Subscribe from '@/components/homepages/home1/Subscribe'
+import Accrediation10 from '@/components/accrediation10'
+import WhyChooseUs from '@/components/ui/why-choose-us'
+import { Shield, Users, Settings, Building, Laptop, Brain, Target, RotateCcw, CheckCircle, Phone, FileText, MapPin } from 'lucide-react'
+
+
 
 export default function AssetProtectionPage() {
     const [activeService, setActiveService] = useState(null);
+    const [activeWhyChoose, setActiveWhyChoose] = useState(null);
+    const [activeAssetType, setActiveAssetType] = useState(null);
+    const [activeCustomApproach, setActiveCustomApproach] = useState(null);
 
     const toggleService = (index) => {
         setActiveService(activeService === index ? null : index);
     };
 
+    const toggleWhyChoose = (index) => {
+        setActiveWhyChoose(activeWhyChoose === index ? null : index);
+    };
+
+    const toggleAssetType = (index) => {
+        setActiveAssetType(activeAssetType === index ? null : index);
+    };
+
+    const toggleCustomApproach = (index) => {
+        setActiveCustomApproach(activeCustomApproach === index ? null : index);
+    };
+
     const services = [
         {
             title: "Educational Institutions Protection",
-            icon: "🏫",
-            iconSymbol: "🎓",
+            icon: <Building size={24} />,
+            iconSymbol: <Building size={24} />,
             description: "Comprehensive security for schools, universities and educational facilities",
             details: "Ensuring the safety of students, staff, and school property with comprehensive security measures tailored for educational environments. Our trained guards understand the unique challenges of educational settings."
         },
         {
             title: "Corporate Asset Security", 
-            icon: "🏢",
-            iconSymbol: "🔐",
+            icon: <Building size={24} />,
+            iconSymbol: <Shield size={24} />,
             description: "Advanced protection for corporate offices and business assets",
             details: "Protecting your business assets, from sensitive documents to physical equipment, with advanced corporate security solutions. We specialize in maintaining secure business environments while ensuring smooth operations."
         },
         {
             title: "Healthcare Facility Security",
-            icon: "🏥",
-            iconSymbol: "⚕️",
+            icon: <Building size={24} />,
+            iconSymbol: <Shield size={24} />,
             description: "Specialized security for healthcare and medical facilities",
             details: "Safeguarding the well-being of staff, patients, and medical equipment with specialized healthcare security protocols. Our guards are trained to handle sensitive medical environments with care and professionalism."
         },
         {
             title: "Retail & Shopping Center Protection",
-            icon: "🛍️",
-            iconSymbol: "🛡️",
+            icon: <Building size={24} />,
+            iconSymbol: <Shield size={24} />,
             description: "Comprehensive security for retail environments and shopping centers",
             details: "Ensuring a safe shopping environment for customers and securing high-value merchandise with retail security expertise. We provide visible deterrence while maintaining a welcoming atmosphere for customers."
+        }
+    ];
+
+    const whyChooseData = [
+        {
+            title: "Decades of Experience",
+            description: "Our trained security guards brings years of experience in delivering top-tier security services across Melbourne. With a history of success, our security team provide reliable asset protection you can trust.",
+            details: "With over 50 years of combined experience in the security industry, our team has successfully protected thousands of assets across Melbourne. Our guards undergo continuous training and certification to stay updated with the latest security protocols and technologies. We have a proven track record of preventing theft, vandalism, and unauthorized access while maintaining the highest standards of professionalism."
+        },
+        {
+            title: "Customized Security Plans",
+            description: "Every client has unique needs. That's why we develop tailored security plans, ensuring your assets are protected according to their specific risks and challenges.",
+            details: "Our security experts conduct thorough risk assessments to identify potential vulnerabilities and threats specific to your property. We then develop comprehensive security strategies that include access control, surveillance systems, patrol schedules, and emergency response protocols. Each plan is regularly reviewed and updated to ensure maximum effectiveness and adapt to changing security needs."
+        },
+        {
+            title: "Skilled Team",
+            description: "Our team of security professionals is fully trained, highly skilled, and committed to protecting your assets. No matter the security challenge, Metro Guards is ready to handle it with expertise.",
+            details: "All our security personnel are fully licensed, insured, and undergo rigorous background checks. They receive specialized training in conflict resolution, emergency response, first aid, and industry-specific security protocols. Our team includes former law enforcement officers and military personnel, bringing additional expertise and experience to every assignment."
+        },
+        {
+            title: "Adaptive Security Solutions",
+            description: "As your assets evolve, so does our protection plan. We continuously adjust our strategies to meet new security challenges, ensuring long-term protection.",
+            details: "We understand that security needs change over time. Our flexible approach allows us to quickly adapt to new threats, seasonal variations, business growth, or operational changes. We use advanced monitoring systems and regular security audits to identify areas for improvement and implement proactive measures to stay ahead of potential security risks."
+        }
+    ];
+
+    const assetTypesData = [
+        {
+            title: "Physical Assets",
+            icon: <Building size={24} />,
+            description: "Our surveillance systems, access control, and mobile patrol services are designed to protect tangible assets such as buildings, vehicles, and equipment."
+        },
+        {
+            title: "Digital Assets",
+            icon: <Laptop size={24} />,
+            description: "We use the latest in encryption and cybersecurity technologies to safeguard your online data, protecting it from potential hackers and cybercriminals."
+        },
+        {
+            title: "Intangible Assets",
+            icon: <Brain size={24} />,
+            description: "We protect intellectual property, confidential business information, and creative works through secure systems and strategies tailored to your needs."
+        }
+    ];
+
+    const customApproachData = [
+        {
+            title: "Initial Consultation",
+            icon: <Target size={24} />,
+            description: "A thorough discussion to assess your specific security needs and understand your assets.",
+            details: "Our security experts conduct comprehensive interviews to understand your business operations, identify potential vulnerabilities, and evaluate your current security measures. We analyze your property layout, access points, and specific security concerns to develop a complete picture of your protection needs."
+        },
+        {
+            title: "Tailored Protection Plan",
+            icon: <Shield size={24} />,
+            description: "Based on your needs, we create a flexible security plan that adapts to changing threats.",
+            details: "We develop a customized security strategy that includes specific protocols for access control, surveillance coverage, patrol schedules, and emergency response procedures. Our plans are designed to be flexible and can be adjusted as your business grows or security requirements change."
+        },
+        {
+            title: "Ongoing Monitoring and Adjustment",
+            icon: <RotateCcw size={24} />,
+            description: "Our team continuously monitors your security situation and makes adjustments as necessary to provide the best possible protection.",
+            details: "We provide regular security assessments, performance reviews, and system updates to ensure your protection remains effective. Our team stays informed about emerging threats and security technologies to continuously improve your security posture."
         }
     ];
 
@@ -48,7 +129,7 @@ export default function AssetProtectionPage() {
                 mainTitle="Professional Asset Protection Services"
                 subtitle="Comprehensive Asset Security Solutions in Melbourne - Protect What Matters Most"
             >
-                <div>
+                
                   {/*===== Modern Hero Section =====*/}
                     <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
     <div className="container">
@@ -68,7 +149,7 @@ export default function AssetProtectionPage() {
                                                     borderRadius: '25px'
                                                 }}
                                             >
-                                                🛡️ YOUR TRUSTED PROTECTION PARTNER
+                                                 YOUR TRUSTED PROTECTION PARTNER
                                             </span>
                                         </div>
                                         <h1 
@@ -91,19 +172,9 @@ export default function AssetProtectionPage() {
                                                 maxWidth: '500px'
                                             }}
                                         >
-                                            At Metro Guards, we understand the importance of safeguarding your valuable assets. Whether it's your business, home, or personal belongings, comprehensive protection is critical.
+                                            At Metro Guards, we understand the importance of safeguarding your valuable assets. Whether it’s your business, home, or personal belongings, asset protection has become more critical than ever in today’s unpredictable world. Our team of highly skilled and dedicated professionals provides reliable security services tailored to meet your unique needs. With decades of experience and a customer-first approach, we ensure that your assets remain secure, giving you peace of mind.
                                         </p>
-                                        <p 
-                                            className="mb-5" 
-                                            style={{
-                                                color: '#6c757d',
-                                                fontSize: '1rem',
-                                                lineHeight: '1.6',
-                                                maxWidth: '480px'
-                                            }}
-                                        >
-                                            Our team of highly skilled professionals provides reliable security services tailored to meet your unique needs, ensuring your assets remain secure with complete peace of mind.
-                                        </p>
+                                        
                                         
                                         <div className="hero-buttons d-flex flex-wrap gap-3">
                             <a 
@@ -122,7 +193,7 @@ export default function AssetProtectionPage() {
                                                     boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
                                                 }}
                                             >
-                                                📋 GET QUOTATION
+                                                 GET QUOTATION
                             </a>
                             <a 
                                 href="tel:1300731173" 
@@ -139,7 +210,7 @@ export default function AssetProtectionPage() {
                                                     borderWidth: '2px'
                                                 }}
                                             >
-                                                📞 CALL US NOW
+                                                <Phone size={16} className="me-2" /> 1300731173
                             </a>
                         </div>
                                         
@@ -169,70 +240,12 @@ export default function AssetProtectionPage() {
                                                 }}
                                             />
                                             
-                                            {/* Floating Badge */}
-                                            <div 
-                                                className="floating-badge position-absolute"
-                                                style={{
-                                                    top: '30px',
-                                                    right: '30px',
-                                                    backgroundColor: '#1e2247',
-                                                    color: '#ffffff',
-                                                    padding: '15px 20px',
-                                                    borderRadius: '15px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem',
-                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
-                                                }}
-                                            >
-                                                🥇 Metro Guards
-                                </div>
                                             
-                                            {/* Bottom Badge */}
-                                            <div 
-                                                className="bottom-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '12px 20px',
-                                                    borderRadius: '12px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.85rem',
-                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                                        </div>
+                                           
                                     </div>
                                         
-                                        {/* Decorative Elements */}
-                                        <div 
-                                            className="decoration-circle position-absolute"
-                                            style={{
-                                                top: '-20px',
-                                                left: '-20px',
-                                                width: '100px',
-                                                height: '100px',
-                                                backgroundColor: '#fdc51a',
-                                                borderRadius: '50%',
-                                                opacity: '0.1',
-                                                zIndex: '-1'
-                                            }}
-                                        ></div>
-                                        <div 
-                                            className="decoration-square position-absolute"
-                                            style={{
-                                                bottom: '-30px',
-                                                right: '-30px',
-                                                width: '80px',
-                                                height: '80px',
-                                                backgroundColor: '#1e2247',
-                                                borderRadius: '15px',
-                                                opacity: '0.1',
-                                                zIndex: '-1'
-                                            }}
-                                        ></div>
+                                        
+                                        
                                 </div>
                                 </div>
                             </div>
@@ -244,7 +257,7 @@ export default function AssetProtectionPage() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-6 order-2 order-lg-1">
-                                    <div className="services-image-section pe-lg-4">
+                                    <div className="services-image-section pe-lg-4" style={{position: 'sticky', top: '20px'}}>
                                         <div className="image-container position-relative">
                                             <img 
                                                 src="/assets/img/bg/security img.webp" 
@@ -258,21 +271,7 @@ export default function AssetProtectionPage() {
                                                     objectFit: 'cover'
                                                 }}
                                             />
-                                            <div 
-                                                className="overlay-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '15px 25px',
-                                                    borderRadius: '10px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                                        </div>
+                                            
                                     </div>
                                         
                                         {/* Additional Features */}
@@ -289,7 +288,7 @@ export default function AssetProtectionPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    🛡️
+                                                    <Shield size={20} />
                                 </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Comprehensive Asset Coverage</span>
                                                     </div>
@@ -305,7 +304,7 @@ export default function AssetProtectionPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    👨‍💼
+                                                    <Users size={20} />
                                                     </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Security Guards</span>
                                                 </div>
@@ -321,7 +320,7 @@ export default function AssetProtectionPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    🔧
+                                                    <Settings size={20} />
                                             </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Customized Protection Plans</span>
                                                     </div>
@@ -334,7 +333,7 @@ export default function AssetProtectionPage() {
                                         <div className="section-header mb-5">
                                             <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                    🛡️ OUR SERVICES
+                                                    <Shield size={16} className="me-2" /> OUR SERVICES
                                                 </span>
                                                     </div>
                                             <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
@@ -609,418 +608,952 @@ export default function AssetProtectionPage() {
                                                 </div>
                                             </div>
 
-                    {/*===== Statistics & Advantages Section =====*/}
-                    <div className="stats-advantages-section section-padding" style={{background: '#f8f9fa'}}>
+                    {/*===== Why Choose Metro Guards Section =====*/}
+                    <div className="why-choose-section section-padding" style={{background: '#f8f9fa'}}>
                         <div className="container">
-                            <div className="row align-items-center g-5">
-                                <div className="col-lg-6">
-                                    <div className="advantages-content">
-                                        <div className="subtitle mb-3">
-                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                <i className="bi bi-lightning me-2"></i>
-                                                WHY CHOOSE METRO GUARDS
-                                            </span>
+                            <div className="row">
+                                {/* Left Column - Image */}
+                                <div className="col-lg-6 order-2 order-lg-1">
+                                    <div className="services-image-section pe-lg-4" style={{position: 'sticky', top: '20px'}}>
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Professional Asset Protection Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
 </div>
-                                        <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                            Why Choose Metro Guards for Asset Protection
-                                        </h2>
-                                        <p className="lead mb-4" style={{color: '#6c757d'}}>
-                                                Our commitment to excellence and tailored security solutions makes us Melbourne's trusted security partner with decades of proven experience.
-                                            </p>
                                         
-                                        <div className="advantages-list">
-                                            {[
-                                                "Decades of experience in asset protection",
-                                                "Customized security plans for every client", 
-                                                "Highly skilled and trained professionals",
-                                                "Adaptive solutions that evolve with threats",
-                                                "Comprehensive coverage and peace of mind"
-                                            ].map((advantage, index) => (
-                                                <div key={index} className="advantage-item d-flex align-items-center mb-3">
-                                                    <div 
-                                                        className="check-icon me-3 d-flex align-items-center justify-content-center"
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
                                                         style={{
-                                                            width: '30px',
-                                                            height: '30px',
+                                                        width: '40px',
+                                                        height: '40px',
                                                             backgroundColor: '#fdc51a',
                                                             borderRadius: '50%',
-                                                            color: '#1e2247'
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
                                                         }}
                                                     >
-                                                        <i className="bi bi-check-lg fw-bold"></i>
+                                                    <Shield size={20} />
                                                 </div>
-                                                    <span style={{color: '#1e2247', fontWeight: '500'}}>{advantage}</span>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Comprehensive Asset Coverage</span>
                                             </div>
-                                            ))}
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Users size={20} />
                                         </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Security Guards</span>
+                                                </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                    <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Settings size={20} />
+                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Customized Protection Plans</span>
+                                                    </div>
+                    </div>
                                     </div>
                                 </div>
                                 
-                                <div className="col-lg-6">
-                                    <div className="stats-grid">
-                                        <div className="row g-4">
-                                            <div className="col-6">
-                                                <div 
-                                                    className="stat-card text-center p-4 h-100"
+                                {/* Right Column - Content */}
+                                <div className="col-lg-6 order-1 order-lg-2">
+                                    <div className="content-section">
+                                        <div className="subtitle mb-3">
+                                            <span 
                                                     style={{
-                                                        backgroundColor: '#ffffff',
-                                                        borderRadius: '15px',
-                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '8px 16px',
+                                                    borderRadius: '25px',
+                                                    fontSize: '0.9rem',
+                                                    fontWeight: '600',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '1px'
+                                                }}
+                                            >
+                                                Why Choose Metro Guards
+                                            </span>
+                                        </div>
+                                        
+                                        <h2 
+                                                        style={{
+                                                fontSize: '2.5rem',
+                                                fontWeight: '700',
+                                                color: '#1e2247',
+                                                marginBottom: '20px',
+                                                lineHeight: '1.2'
+                                            }}
+                                        >
+                                            Why Choose Metro Guards for Asset Protection Services
+                                        </h2>
+                                        
+                                        <p 
+                                                        style={{
+                                                fontSize: '1.1rem',
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                marginBottom: '30px'
+                                            }}
+                                        >
+                                            We offer a comprehensive range of asset protection services designed to protect everything that matters to you.
+                                        </p>
+                                        
+                                        {/* Why Choose Content with Dropdowns */}
+                                        <div className="why-choose-accordion">
+                                            {whyChooseData.map((item, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                    style={{
+                                                            backgroundColor: activeWhyChoose === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeWhyChoose === index ? '12px 12px 0 0' : '12px',
                                                         border: '1px solid #e9ecef',
-                                                        transition: 'all 0.3s ease'
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
                                                     }}
+                                                        onClick={() => toggleWhyChoose(index)}
                                                 >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
                                                     <div 
-                                                        className="stat-icon mb-3"
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
                                                         style={{
-                                                            color: '#fdc51a',
-                                                            fontSize: '2.5rem'
-                                                        }}
-                                                    >
-                                                        <i className="bi bi-award"></i>
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {index === 0 && <Target size={24} />}
+                                                                    {index === 1 && <FileText size={24} />}
+                                                                    {index === 2 && <Users size={24} />}
+                                                                    {index === 3 && <RotateCcw size={24} />}
                             </div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{item.title}</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div className="expand-icon">
                                                     <div 
-                                                        className="stat-number fw-bold mb-2"
+                                                                    className="d-flex align-items-center justify-content-center"
                                                         style={{
-                                                            fontSize: '2.5rem',
-                                                            color: '#1e2247'
-                                                        }}
-                                                    >
-                                                        50+
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeWhyChoose === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeWhyChoose === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeWhyChoose === index ? '−' : '+'}
+                                                                    </span>
                         </div>
-                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
-                                                        Years Experience
                     </div>
                         </div>
                     </div>
 
-                                            <div className="col-6">
+                                                    {/* Dropdown Content */}
+                                                    {activeWhyChoose === index && (
                                                 <div 
-                                                    className="stat-card text-center p-4 h-100"
+                                                            className="accordion-content p-4"
                                                     style={{
                                                         backgroundColor: '#ffffff',
-                                                        borderRadius: '15px',
-                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                                                                borderRadius: '0 0 12px 12px',
                                                         border: '1px solid #e9ecef',
-                                                        transition: 'all 0.3s ease'
-                                                    }}
-                                                >
-                                                    <div 
-                                                        className="stat-icon mb-3"
-                                                        style={{
-                                                            color: '#fdc51a',
-                                                            fontSize: '2.5rem'
-                                                        }}
-                                                    >
-                                                        <i className="bi bi-shield-check"></i>
-                </div>
-                                                    <div 
-                                                        className="stat-number fw-bold mb-2"
-                                                        style={{
-                                                            fontSize: '2.5rem',
-                                                            color: '#1e2247'
-                                                        }}
-                                                    >
-    24/7
-            </div>
-                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
-                                                        Protection Service
-        </div>
-                        </div>
-                        </div>
-                                            
-                                            <div className="col-6">
-                                                <div 
-                                                    className="stat-card text-center p-4 h-100"
-                                                    style={{
-                                                        backgroundColor: '#ffffff',
-                                                        borderRadius: '15px',
-                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                                                        border: '1px solid #e9ecef',
-                                                        transition: 'all 0.3s ease'
-                                                    }}
-                                                >
-                                                    <div 
-                                                        className="stat-icon mb-3"
-                                                        style={{
-                                                            color: '#fdc51a',
-                                                            fontSize: '2.5rem'
-                                                        }}
-                                                    >
-                                                        <i className="bi bi-gear-fill"></i>
+                                                                borderTop: 'none',
+                                                                animation: 'fadeIn 0.3s ease-in-out'
+                                                            }}
+                                                        >
+                                                            <p style={{
+                                                                color: '#6c757d',
+                                                                margin: '0',
+                                                                lineHeight: '1.6',
+                                                                fontSize: '1rem'
+                                                            }}>
+                                                                {item.description}
+                                                            </p>
                     </div>
-                                                    <div 
-                                                        className="stat-number fw-bold mb-2"
-                                                        style={{
-                                                            fontSize: '2.5rem',
-                                                            color: '#1e2247'
-                                                        }}
-                                                    >
-                                                        100%
+                                                    )}
                 </div>
-                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
-                                                        Customized Plans
-            </div>
-                        </div>
-                        </div>
-                                            
-                                            <div className="col-6">
-                                                <div 
-                                                    className="stat-card text-center p-4 h-100"
-                                                    style={{
-                                                        backgroundColor: '#ffffff',
-                                                        borderRadius: '15px',
-                                                        boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                                                        border: '1px solid #e9ecef',
-                                                        transition: 'all 0.3s ease'
-                                                    }}
-                                                >
-                                                    <div 
-                                                        className="stat-icon mb-3"
-                                                        style={{
-                                                            color: '#fdc51a',
-                                                            fontSize: '2.5rem'
-                                                        }}
-                                                    >
-                                                        <i className="bi bi-buildings"></i>
-                    </div>
-                                                    <div 
-                                                        className="stat-number fw-bold mb-2"
-                                                        style={{
-                                                            fontSize: '2.5rem',
-                                                            color: '#1e2247'
-                                                        }}
-                                                    >
-    500+
-                </div>
-                                                    <div className="stat-label" style={{color: '#6c757d', fontWeight: '600'}}>
-                                                        Protected Assets
-            </div>
-                        </div>
-                        </div>
+                                            ))}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-                    {/*===== Old sections removed for cleaner modern design =====*/}
-                    <div className="hidden-sections" style={{display: 'none'}}>
                     </div>
 
-                                        {/*===== Contact Section =====*/}
-                    <div className="contact-section section-padding" style={{background: '#f8f9fa'}}>
+
+                    {/*===== Benefits of Asset Protection and Security =====*/}
+                    <div className="Benefits-section section-padding" style={{background: '#f8f9fa'}}>
                         <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-6">
-                                    <div className="contact-content me-4">
+                            <div className="row">
+                                {/* Left Column - Content */}
+                                <div className="col-lg-6 order-1 order-lg-1">
+                                    <div className="content-section">
                                         <div className="subtitle mb-3">
-                                            <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                🛡️ GET PROTECTED TODAY
+                                            <span 
+                                                        style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '8px 16px',
+                                                    borderRadius: '25px',
+                                                    fontSize: '0.9rem',
+                                                    fontWeight: '600',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '1px'
+                                                }}
+                                            >
+                                                BENEFITS
                                             </span>
-                                        </div>
-                                        <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                            Contact Metro Guards for Asset Protection Services
+                </div>
+                                        
+                                        <h2 
+                                                        style={{
+                                                            fontSize: '2.5rem',
+                                                fontWeight: '700',
+                                                color: '#1e2247',
+                                                marginBottom: '20px',
+                                                lineHeight: '1.2'
+                                            }}
+                                        >
+                                            Benefits of Our Asset Protection Services
                                         </h2>
-                                        <p className="lead mb-4" style={{color: '#6c757d'}}>
-                                            Ready to secure your assets with the best in the business? Metro Guards offers expert asset protection services in Melbourne, customized to your needs.
+                                        
+                                        <p 
+                                            style={{
+                                                fontSize: '1.1rem',
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                marginBottom: '30px'
+                                            }}
+                                        >
+                                            Our asset protection services provide multiple benefits, including:
                                         </p>
                                         
-                                        <div className="contact-methods">
-                                            <div className="contact-card mb-4 p-4" style={{backgroundColor: '#ffffff', borderRadius: '12px', boxShadow: '0 5px 15px rgba(0,0,0,0.08)', border: '1px solid #e1e8ed'}}>
-                                                <div className="d-flex align-items-center">
-                                                    <div className="card-icon me-3" style={{width: '50px', height: '50px', backgroundColor: '#1e2247', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff'}}>
-                                                        <i className="bi bi-telephone" style={{fontSize: '20px'}}></i>
+                                        {/* Benefits Content */}
+                                        <div className="benefits-content">
+                                            <div className="benefit-item mb-4">
+                                                <div className="d-flex align-items-start">
+                                                    <div 
+                                                        className="benefit-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '50px',
+                                                            height: '50px',
+                                                            borderRadius: '10px',
+                                                            backgroundColor: '#1e2247',
+                                                            color: '#ffffff',
+                                                            fontSize: '1.5rem',
+                                                            flexShrink: 0
+                                                        }}
+                                                    >
+                                                        <Shield size={20} />
+            </div>
+                                                    <div>
+                                                        <h5 className="mb-2 fw-bold" style={{color: '#1e2247'}}>Comprehensive Coverage</h5>
+                                                        <p style={{color: '#6c757d', margin: '0', lineHeight: '1.6'}}>
+                                                            Protection for a wide variety of assets, including physical items, digital data, and intellectual property.
+                                                        </p>
+        </div>
+                        </div>
+                        </div>
+                                            
+                                            <div className="benefit-item mb-4">
+                                                <div className="d-flex align-items-start">
+                                                <div 
+                                                        className="benefit-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                            width: '50px',
+                                                            height: '50px',
+                                                            borderRadius: '10px',
+                                                            backgroundColor: '#1e2247',
+                                                            color: '#ffffff',
+                                                            fontSize: '1.5rem',
+                                                            flexShrink: 0
+                                                        }}
+                                                    >
+                                                        <Target size={24} />
                                                     </div>
-                                                    <div className="card-content">
-                                                        <h5 className="mb-1" style={{color: '#1e2247', fontWeight: '600'}}>Call Us Now</h5>
-                                                        <div className="contact-value" style={{fontSize: '1.1rem', fontWeight: '600', color: '#1e2247'}}>1300 73 11 73</div>
-                                                        <small style={{color: '#6c757d'}}>Available 24/7 for emergencies</small>
+                                                    <div>
+                                                        <h5 className="mb-2 fw-bold" style={{color: '#1e2247'}}>Visual Deterrent</h5>
+                                                        <p style={{color: '#6c757d', margin: '0', lineHeight: '1.6'}}>
+                                                            Randomized patrols and security measures that discourage criminal activity and keep intruders at bay.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            <div className="contact-card mb-4 p-4" style={{backgroundColor: '#ffffff', borderRadius: '12px', boxShadow: '0 5px 15px rgba(0,0,0,0.08)', border: '1px solid #e1e8ed'}}>
-                                                <div className="d-flex align-items-center">
-                                                    <div className="card-icon me-3" style={{width: '50px', height: '50px', backgroundColor: '#fdc51a', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1e2247'}}>
-                                                        <i className="bi bi-envelope" style={{fontSize: '20px'}}></i>
-                                                    </div>
-                                                    <div className="card-content">
-                                                        <h5 className="mb-1" style={{color: '#1e2247', fontWeight: '600'}}>Email Us</h5>
-                                                        <div className="contact-value" style={{fontSize: '1.1rem', fontWeight: '600', color: '#1e2247'}}>info@metrogards.com.au</div>
-                                                        <small style={{color: '#6c757d'}}>Quick response within 2 hours</small>
+                                            <div className="benefit-item mb-4">
+                                                <div className="d-flex align-items-start">
+                                                    <div 
+                                                        className="benefit-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '50px',
+                                                            height: '50px',
+                                                            borderRadius: '10px',
+                                                            backgroundColor: '#1e2247',
+                                                            color: '#ffffff',
+                                                            fontSize: '1.5rem',
+                                                            flexShrink: 0
+                                                        }}
+                                                    >
+                                                        <Target size={24} />
+                    </div>
+                                                    <div>
+                                                        <h5 className="mb-2 fw-bold" style={{color: '#1e2247'}}>Real-Time Monitoring</h5>
+                                                        <p style={{color: '#6c757d', margin: '0', lineHeight: '1.6'}}>
+                                                            Continuous surveillance and monitoring to detect potential risks early and respond promptly.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            <div className="contact-card p-4" style={{backgroundColor: '#ffffff', borderRadius: '12px', boxShadow: '0 5px 15px rgba(0,0,0,0.08)', border: '1px solid #e1e8ed'}}>
+                                            <div className="benefit-item mb-4">
+                                                <div className="d-flex align-items-start">
+                                                    <div 
+                                                        className="benefit-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '50px',
+                                                            height: '50px',
+                                                            borderRadius: '10px',
+                                                            backgroundColor: '#1e2247',
+                                                            color: '#ffffff',
+                                                            fontSize: '1.5rem',
+                                                            flexShrink: 0
+                                                        }}
+                                                    >
+                                                        <CheckCircle size={24} />
+                </div>
+                                                    <div>
+                                                        <h5 className="mb-2 fw-bold" style={{color: '#1e2247'}}>Peace of Mind</h5>
+                                                        <p style={{color: '#6c757d', margin: '0', lineHeight: '1.6'}}>
+                                                            With our security systems in place, you can relax knowing that your assets are being constantly monitored and protected.
+                                            </p>
+                                        </div>
+                                                        </div>
+                                                        </div>
+            </div>
+                        </div>
+                        </div>
+                                            
+                                {/* Right Column - Image */}
+                                
+                                <div className="col-lg-6 order-2 order-lg-2">
+                                    <div className="services-image-section pe-lg-4" style={{position: 'sticky', top: '20px'}}>
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Professional Asset Protection Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            </div>
+
+                                        {/* Additional Features */}
+                                        <div className="features-list mt-4">
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Shield size={20} />
+                                                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Comprehensive Asset Coverage</span>
+                                                        </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Users size={20} />
+                    </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Security Guards</span>
+                                                </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                    <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Settings size={20} />
+                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Customized Protection Plans</span>
+            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                                         {/*===== Types of Assets and Protection Methods =====*/}
+                     <div className="types-and-methods-section section-padding" style={{background: '#f8f9fa'}}>
+                         <div className="container">
+                             <div className="row">
+                                 {/* Left Column - Image */}
+                                 <div className="col-lg-6 order-2 order-lg-1">
+                                     <div className="services-image-section pe-lg-4" style={{position: 'sticky', top: '20px'}}>
+                                         <div className="image-container position-relative">
+                                             <img 
+                                                 src="/assets/img/bg/security img.webp" 
+                                                 alt="Professional Asset Protection Team" 
+                                                 className="img-fluid"
+                                                 style={{
+                                                     borderRadius: '20px',
+                                                     boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                     width: '100%',
+                                                     height: '500px',
+                                                     objectFit: 'cover'
+                                                 }}
+                                             />
+                                             
+</div>
+
+                                         {/* Additional Features */}
+                                         <div className="features-list mt-4">
+                                             <div className="feature-item d-flex align-items-center mb-3">
+                                                 <div 
+                                                     className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                         style={{
+                                                         width: '40px',
+                                                         height: '40px',
+                                                             backgroundColor: '#fdc51a',
+                                                             borderRadius: '50%',
+                                                         color: '#1e2247',
+                                                         fontSize: '1rem'
+                                                         }}
+                                                     >
+                                                     <Shield size={20} />
+                                                 </div>
+                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Comprehensive Asset Coverage</span>
+                                             </div>
+                                             <div className="feature-item d-flex align-items-center mb-3">
+                                                 <div 
+                                                     className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                     style={{
+                                                         width: '40px',
+                                                         height: '40px',
+                                                         backgroundColor: '#fdc51a',
+                                                         borderRadius: '50%',
+                                                         color: '#1e2247',
+                                                         fontSize: '1rem'
+                                                     }}
+                                                 >
+                                                     <Users size={20} />
+                             </div>
+                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Security Guards</span>
+                                                 </div>
+                                             <div className="feature-item d-flex align-items-center">
+                                                     <div 
+                                                     className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                         style={{
+                                                         width: '40px',
+                                                         height: '40px',
+                                                         backgroundColor: '#fdc51a',
+                                                         borderRadius: '50%',
+                                                         color: '#1e2247',
+                                                         fontSize: '1rem'
+                                                     }}
+                                                 >
+                                                     <Settings size={20} />
+                         </div>
+                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Customized Protection Plans</span>
+                                                     </div>
+                     </div>
+                         </div>
+                    </div>
+
+                                 {/* Right Column - Content */}
+                                 <div className="col-lg-6 order-1 order-lg-2">
+                                     <div className="content-section">
+                                        <div className="subtitle mb-3">
+                                             <span 
+                                                     style={{
+                                                     backgroundColor: '#fdc51a',
+                                                     color: '#1e2247',
+                                                     padding: '8px 16px',
+                                                     borderRadius: '25px',
+                                                     fontSize: '0.9rem',
+                                                     fontWeight: '600',
+                                                     textTransform: 'uppercase',
+                                                     letterSpacing: '1px'
+                                                 }}
+                                             >
+                                                 PROTECTION METHODS
+                                            </span>
+                                        </div>
+                                         
+                                         <h2 
+                                                         style={{
+                                                 fontSize: '2.5rem',
+                                                 fontWeight: '700',
+                                                 color: '#1e2247',
+                                                 marginBottom: '20px',
+                                                 lineHeight: '1.2'
+                                             }}
+                                         >
+                                             Types of Assets and Protection Methods
+                                        </h2>
+                                         
+                                         <p 
+                                                         style={{
+                                                 fontSize: '1.1rem',
+                                                 color: '#6c757d',
+                                                 lineHeight: '1.6',
+                                                 marginBottom: '30px'
+                                             }}
+                                         >
+                                             At Metropolitan Guards, Our top security experts understand that assets come in many forms, and each requires unique protection. That's why we offer specialized methods for different types of assets:
+                                         </p>
+                                         
+                                         {/* Asset Types Content with Dropdowns */}
+                                         <div className="asset-types-accordion">
+                                             {assetTypesData.map((item, index) => (
+                                                 <div key={index} className="accordion-item mb-3">
+                                                     <div 
+                                                         className="accordion-header p-4"
+                                                         style={{
+                                                             backgroundColor: activeAssetType === index ? '#ffffff' : '#f8f9fa',
+                                                             borderRadius: activeAssetType === index ? '12px 12px 0 0' : '12px',
+                                                             border: '1px solid #e9ecef',
+                                                             cursor: 'pointer',
+                                                             transition: 'all 0.3s ease',
+                                                             borderLeft: '4px solid #fdc51a'
+                                                         }}
+                                                         onClick={() => toggleAssetType(index)}
+                                                     >
+                                                         <div className="d-flex align-items-center justify-content-between">
                                                 <div className="d-flex align-items-center">
-                                                    <div className="card-icon me-3" style={{width: '50px', height: '50px', backgroundColor: '#fdc51a', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1e2247'}}>
-                                                        <i className="bi bi-geo-alt" style={{fontSize: '20px'}}></i>
+                                                                 <div 
+                                                                     className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                     style={{
+                                                                         width: '50px',
+                                                                         height: '50px',
+                                                                         borderRadius: '10px',
+                                                                         backgroundColor: '#1e2247',
+                                                                         color: '#ffffff',
+                                                                         fontSize: '1.5rem'
+                                                                     }}
+                                                                 >
+                                                                     {item.icon}
                                                     </div>
-                                                    <div className="card-content">
-                                                        <h5 className="mb-1" style={{color: '#1e2247', fontWeight: '600'}}>Service Area</h5>
-                                                        <div className="contact-value" style={{fontSize: '1.1rem', fontWeight: '600', color: '#1e2247'}}>Melbourne & Suburbs</div>
-                                                        <small style={{color: '#6c757d'}}>Complete metropolitan coverage</small>
+                                                                 <div>
+                                                                     <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{item.title}</h5>
+                                                    </div>
+                                                </div>
+                                                             <div className="expand-icon">
+                                                                 <div 
+                                                                     className="d-flex align-items-center justify-content-center"
+                                                                     style={{
+                                                                         width: '40px',
+                                                                         height: '40px',
+                                                                         backgroundColor: activeAssetType === index ? '#1e2247' : '#e9ecef',
+                                                                         borderRadius: '50%',
+                                                                         color: activeAssetType === index ? '#ffffff' : '#1e2247',
+                                                                         transition: 'all 0.3s ease'
+                                                                     }}
+                                                                 >
+                                                                     <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                         {activeAssetType === index ? '−' : '+'}
+                                                                     </span>
+                                            </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                     
+                                                     {/* Dropdown Content */}
+                                                     {activeAssetType === index && (
+                                                         <div 
+                                                             className="accordion-content p-4"
+                                                             style={{
+                                                                 backgroundColor: '#ffffff',
+                                                                 borderRadius: '0 0 12px 12px',
+                                                                 border: '1px solid #e9ecef',
+                                                                 borderTop: 'none',
+                                                                 animation: 'fadeIn 0.3s ease-in-out'
+                                                             }}
+                                                         >
+                                                             <p style={{
+                                                                 color: '#6c757d',
+                                                                 margin: '0',
+                                                                 lineHeight: '1.6',
+                                                                 fontSize: '1rem'
+                                                             }}>
+                                                                 {item.description}
+                                                             </p>
+                                            </div>
+                                                     )}
+                                                 </div>
+                                             ))}
+                                             
+                                             {/* Conclusion Text */}
+                                             <div className="conclusion-text mt-4">
+                                                 <p style={{
+                                                     color: '#1e2247',
+                                                     fontSize: '1.1rem',
+                                                     fontWeight: '600',
+                                                     lineHeight: '1.6',
+                                                     margin: '0',
+                                                     padding: '20px',
+                                                     backgroundColor: '#f8f9fa',
+                                                     borderRadius: '10px',
+                                                     borderLeft: '4px solid #fdc51a'
+                                                 }}>
+                                                     Each protection method is customized to fit the specific weaknesses of the asset, ensuring that it is comprehensively safeguarded against all potential risks.
+                                                 </p>
+                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                                                <div className="col-lg-6">
-                                    <div className="modern-form-wrapper ms-4">
-                                        <div className="form-header text-center">
-                                            <div className="form-badge">
-                                                <span className="badge-icon">📋</span>
-                                                <span>Get Your Security Quote</span>
+
+                    {/*===== Metro Guards Custom Security Approach =====*/}
+                    <div className="custom-approach-section section-padding" style={{background: '#ffffff'}}>
+                        <div className="container">
+                            <div className="row">
+                                {/* Left Column - Content */}
+                                <div className="col-lg-6 order-1 order-lg-1">
+                                    <div className="content-section">
+                                        <div className="subtitle mb-3">
+                                            <span 
+                                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                                    padding: '8px 16px',
+                                                    borderRadius: '25px',
+                                                    fontSize: '0.9rem',
+                                                    fontWeight: '600',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '1px'
+                                                }}
+                                            >
+                                                CUSTOM APPROACH
+                                            </span>
                                             </div>
-                                            <h3 className="form-title">Request a Free Consultation</h3>
-                                            <p className="form-subtitle">
-                                                Get personalized security solutions tailored to your specific asset protection needs.
-                                            </p>
-                                        </div>
                                         
-                                        <form className="classic-contact-form">
-                                            <div className="form-section">
-                                                <div className="form-grid">
-                                                    <div className="form-field">
-                                                        <div className="classic-label">
-                                                            <span className="label-title">Your Name</span>
-                                                            <span className="required-asterisk">*</span>
+                                        <h2 
+                                            style={{
+                                                fontSize: '2.5rem',
+                                                fontWeight: '700',
+                                                color: '#1e2247',
+                                                marginBottom: '20px',
+                                                lineHeight: '1.2'
+                                            }}
+                                        >
+                                            Metro Guards' Custom Security Approach
+                                        </h2>
+                                        
+                                        <p 
+                                            style={{
+                                                fontSize: '1.1rem',
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                marginBottom: '30px'
+                                            }}
+                                        >
+                                            At Metro Guards, we don't offer a one-size-fits-all solution. Instead, we work with you to develop a customized asset protection plan that addresses your unique security needs. Our approach includes:
+                                        </p>
+                                        
+                                        {/* Custom Approach Steps with Dropdowns */}
+                                        <div className="custom-approach-accordion">
+                                            {customApproachData.map((item, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeCustomApproach === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeCustomApproach === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleCustomApproach(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '50%',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.2rem',
+                                                                        fontWeight: 'bold'
+                                                                    }}
+                                                                >
+                                                                    {item.icon}
                                                         </div>
-                                                        <div className="input-container">
-                                                            <input 
-                                                                type="text" 
-                                                                className="classic-input" 
-                                                                placeholder="Enter your full name"
-                                                                required
-                                                            />
-                                                            <div className="input-border-effect"></div>
+                                                                <div>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{item.title}</h5>
                                                         </div>
                                                     </div>
-                                                    
-                                                    <div className="form-field">
-                                                        <div className="classic-label">
-                                                            <span className="label-title">Your Email</span>
-                                                            <span className="required-asterisk">*</span>
-                                                        </div>
-                                                        <div className="input-container">
-                                                            <input 
-                                                                type="email" 
-                                                                className="classic-input" 
-                                                                placeholder="Enter your email address"
-                                                                required
-                                                            />
-                                                            <div className="input-border-effect"></div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeCustomApproach === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeCustomApproach === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeCustomApproach === index ? '−' : '+'}
+                                                                    </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="form-section">
-                                                <div className="form-grid">
-                                                    <div className="form-field">
-                                                        <div className="classic-label">
-                                                            <span className="label-title">Phone Number</span>
-                                                            <span className="required-asterisk">*</span>
+                                                    {/* Dropdown Content */}
+                                                    {activeCustomApproach === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                animation: 'fadeIn 0.3s ease-in-out'
+                                                            }}
+                                                        >
+                                                            <p style={{
+                                                                color: '#6c757d',
+                                                                margin: '0',
+                                                                lineHeight: '1.6',
+                                                                fontSize: '1rem'
+                                                            }}>
+                                                                {item.description}
+                                                            </p>
+                                                            <div className="mt-3">
+                                                                <p style={{
+                                                                    color: '#1e2247',
+                                                                    margin: '0',
+                                                                    lineHeight: '1.6',
+                                                                    fontSize: '0.95rem',
+                                                                    fontWeight: '500'
+                                                                }}>
+                                                                    {item.details}
+                                                                </p>
                                                         </div>
-                                                        <div className="input-container">
-                                                            <input 
-                                                                type="tel" 
-                                                                className="classic-input" 
-                                                                placeholder="Enter your phone number"
-                                                                required
-                                                            />
-                                                            <div className="input-border-effect"></div>
+                                                        </div>
+                                                    )}
+                                                    </div>
+                                            ))}
+                                            
+                                            {/* Conclusion Box */}
+                                            <div className="conclusion-box mt-4">
+                                                <div 
+                                                    style={{
+                                                        backgroundColor: '#f8f9fa',
+                                                        padding: '25px',
+                                                        borderRadius: '12px',
+                                                        borderLeft: '4px solid #fdc51a',
+                                                        boxShadow: '0 4px 15px rgba(0,0,0,0.08)'
+                                                    }}
+                                                >
+                                                    <p style={{
+                                                        color: '#1e2247',
+                                                        fontSize: '1.1rem',
+                                                        fontWeight: '600',
+                                                        lineHeight: '1.6',
+                                                        margin: '0'
+                                                    }}>
+                                                        We ensure that every aspect of your asset protection plan is tailored specifically to your requirements, offering both immediate security and long-term peace of mind.
+                                                    </p>
+                                                        </div>
                                                         </div>
                                                     </div>
-                                                    
-                                                    <div className="form-field">
-                                                        <div className="classic-label">
-                                                            <span className="label-title">Service Type</span>
-                                                            <span className="required-asterisk">*</span>
+                                                </div>
+                                            </div>
+
+                                {/* Right Column - Image */}
+                                <div className="col-lg-6 order-2 order-lg-2">
+                                    <div className="services-image-section pe-lg-4" style={{position: 'sticky', top: '20px'}}>
+                                        <div className="image-container position-relative">
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Metro Guards Custom Security Approach" 
+                                                className="img-fluid"
+                                                style={{
+                                                    borderRadius: '20px',
+                                                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            {/* Overlay with Security Features */}
+                                            <div 
+                                                className="position-absolute"
+                                                style={{
+                                                    top: '20px',
+                                                    right: '20px',
+                                                    backgroundColor: 'rgba(30, 34, 71, 0.9)',
+                                                    color: '#ffffff',
+                                                    padding: '15px 20px',
+                                                    borderRadius: '10px',
+                                                    backdropFilter: 'blur(10px)'
+                                                }}
+                                            >
+                                                <h6 className="mb-2 fw-bold" style={{color: '#fdc51a', fontSize: '0.9rem'}}>
+                                                    CUSTOMIZED SOLUTIONS
+                                                </h6>
+                                                <p className="mb-0" style={{fontSize: '0.85rem', lineHeight: '1.4'}}>
+                                                    Tailored to Your Needs
+                                                </p>
                                                         </div>
-                                                        <div className="select-container">
-                                                            <select className="classic-select" required>
-                                                                <option value="">Please select a service</option>
-                                                                <option value="asset-protection">Asset Protection</option>
-                                                                <option value="corporate-security">Corporate Security</option>
-                                                                <option value="event-security">Event Security</option>
-                                                                <option value="mobile-patrols">Mobile Patrols</option>
-                                                                <option value="other">Other</option>
-                                                            </select>
-                                                            <div className="select-arrow">
-                                                                <svg viewBox="0 0 24 24" fill="none">
-                                                                    <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                                </svg>
+                                                        </div>
+                                        
+                                        {/* Feature Highlights */}
+                                        <div className="features-highlights mt-4">
+                                            <div className="row g-3">
+                                                <div className="col-4">
+                                                    <div className="feature-highlight text-center">
+                                                        <div 
+                                                            className="feature-icon mb-2"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                margin: '0 auto',
+                                                                fontSize: '1.5rem'
+                                                            }}
+                                                        >
+                                                            <Target size={24} />
+                                                    </div>
+                                                        <h6 style={{color: '#1e2247', fontSize: '0.9rem', fontWeight: '600', margin: '0'}}>
+                                                            Targeted
+                                                        </h6>
+                                                </div>
+                                            </div>
+                                                <div className="col-4">
+                                                    <div className="feature-highlight text-center">
+                                                        <div 
+                                                            className="feature-icon mb-2"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                margin: '0 auto',
+                                                                fontSize: '1.5rem'
+                                                            }}
+                                                        >
+                                                            <RotateCcw size={24} />
+                                                    </div>
+                                                        <h6 style={{color: '#1e2247', fontSize: '0.9rem', fontWeight: '600', margin: '0'}}>
+                                                            Adaptive
+                                                        </h6>
+                                                    </div>
+                                                </div>
+                                                <div className="col-4">
+                                                    <div className="feature-highlight text-center">
+                                                        <div 
+                                                            className="feature-icon mb-2"
+                                                            style={{
+                                                                width: '60px',
+                                                                height: '60px',
+                                                                backgroundColor: '#fdc51a',
+                                                                borderRadius: '50%',
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                justifyContent: 'center',
+                                                                margin: '0 auto',
+                                                                fontSize: '1.5rem'
+                                                            }}
+                                                        >
+                                                            <Shield size={20} />
                                                             </div>
-                                                            <div className="input-border-effect"></div>
+                                                        <h6 style={{color: '#1e2247', fontSize: '0.9rem', fontWeight: '600', margin: '0'}}>
+                                                            Comprehensive
+                                                        </h6>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div className="form-section">
-                                                <div className="form-grid">
-                                                    <div className="form-field full-width">
-                                                        <div className="classic-label">
-                                                            <span className="label-title">Your Message</span>
-                                                            <span className="required-asterisk">*</span>
-                                                        </div>
-                                                        <div className="textarea-container">
-                                                            <textarea 
-                                                                className="classic-textarea" 
-                                                                placeholder="Tell us about your security requirements and property details..."
-                                                                rows="4"
-                                                                required
-                                                            ></textarea>
-                                                            <div className="input-border-effect"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="form-footer-section">
-                                                <div className="privacy-notice-classic">
-                                                    <div className="privacy-icon">
-                                                        <svg viewBox="0 0 24 24" fill="none">
-                                                            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" stroke="currentColor" strokeWidth="2"/>
-                                                            <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2"/>
-                                                        </svg>
-                                                    </div>
-                                                    <div className="privacy-text">
-                                                        <h6>Your Privacy is Protected</h6>
-                                                        <p>All information provided is strictly confidential and used only to provide you with accurate security quotes and services.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className="submit-section">
-                                                    <button type="submit" className="classic-submit-btn">
-                                                        <div className="btn-content-classic">
-                                                            <div className="btn-icon-classic">
-                                                                <svg viewBox="0 0 24 24" fill="none">
-                                                                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                                </svg>
-                                                            </div>
-                                                            <span className="btn-text">SUBMIT REQUEST</span>
-                                                        </div>
-                                                    </button>
-                                                    
-                                                    <div className="response-time">
-                                                        <span className="clock-icon">🕒</span>
-                                                        <span>We typically respond within 2 hours</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     {/* Add custom styles */}
 <style jsx>{`
@@ -1069,6 +1602,21 @@ export default function AssetProtectionPage() {
                         .classic-submit-btn {
                             padding: 15px 40px !important;
                             font-size: 1rem !important;
+                        }
+                        
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(-10px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+                        
+                        .dropdown-content {
+                            animation: fadeIn 0.3s ease-in-out;
                         }
                         
                         .contact-card {
@@ -1188,135 +1736,10 @@ export default function AssetProtectionPage() {
 `}</style>
 
                     {/*===== Contact CTA Section =====*/}
-                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="cta-content text-center text-white">
-                                        <div className="subtitle mb-4">
-                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                <i className="bi bi-shield-check me-2"></i>
-                                                PROTECT YOUR ASSETS TODAY
-                                            </span>
-                                        </div>
-                                        <h2 className="display-4 fw-bold mb-4">
-                                            Your Trusted Partner in Asset Protection Across Melbourne
-                                        </h2>
-                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
-                                                        Whether you need to secure physical assets, protect digital information, or safeguard intangible business resources, our tailored solutions offer the highest level of security with experienced professionals.
-                                                    </p>
-                                        
-                                        <div className="cta-buttons mb-5">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn btn-lg me-3 px-5 py-3"
-                                                style={{
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    border: 'none',
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
-                                            </a>
-                                            <a 
-                                                href="tel:1300731173" 
-                                                className="btn btn-outline-light btn-lg px-5 py-3"
-                                                style={{
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
-                                            </a>
-                                        </div>
-                                        
-        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-shield-check"></i>
-                                    </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Complete Protection</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Physical & Digital Assets</small>
-                                </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-people"></i>
-                            </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Professional Guards</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully trained & licensed</small>
-                        </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-gear-fill"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Customized Plans</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Tailored solutions</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-geo-alt"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <Gallery4 />
+                    <WhyChooseUs />
+                    <Accrediation10 />
+                    <Subscribe />
+                
             </Layout>
         </>
     )

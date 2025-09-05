@@ -1,7 +1,10 @@
 'use client';
 import { useState } from 'react';
 import Layout from "@/components/layout/Layout"
-import Gallery4 from "@/components/ui/gallery4"
+import Subscribe from '@/components/homepages/home1/Subscribe'
+import Accreditation from '@/components/accrediation10'
+import WhyChooseUs from '@/components/ui/why-choose-us';
+import { Shield, Users, Settings, Building, Zap, Star, CheckCircle, Target, Phone, FileText, MapPin, Award, Clock, UserCheck } from 'lucide-react'
 
 export default function StaffEscortSecurityPage() {
     const [activeService, setActiveService] = useState(null);
@@ -12,32 +15,53 @@ export default function StaffEscortSecurityPage() {
 
     const services = [
         {
-            title: "Professional Staff Escort",
-            icon: "👥",
-            iconSymbol: "🛡️",
-            description: "Trained professionals accompany your staff members as they travel",
-            details: "Our professional staff escort services provide a reassuring layer of protection for your employees. Trained security personnel accompany staff members during travel to and from workplace locations, ensuring their safety throughout the journey."
+            title: "Professional Staff Escort Melbourne",
+            icon: <Users size={24} />,
+            iconSymbol: <Users size={24} />,
+            description: "Professional Staff Escort services in Melbourne offer a secure and reliable solution for ensuring the safety of your employees while they are at work.",
+            details: "Trained professionals will accompany your staff members as they travel to and from their workplace, providing a reassuring layer of protection."
         },
         {
-            title: "Employee Safety Services", 
-            icon: "🔒",
-            iconSymbol: "👨‍💼",
-            description: "Dedicated to creating a safe and secure work environment",
-            details: "We provide comprehensive employee safety services including risk assessment, safety training, and the implementation of security protocols to ensure your staff can work in a secure and protected environment."
+            title: "Employee Safety Services Melbourne", 
+            icon: <Shield size={24} />,
+            iconSymbol: <Shield size={24} />,
+            description: "Employee Safety Services in Melbourne are dedicated to creating a safe and secure work environment for your staff.",
+            details: "This includes risk assessment, safety training, emergency response plans, and ensuring compliance with safety regulations to reduce workplace accidents and incidents."
         },
         {
-            title: "Workforce Protection Security",
-            icon: "🎯",
-            iconSymbol: "🏢",
-            description: "Security personnel accompany and protect your workforce",
-            details: "Our workforce protection services include security personnel who accompany and protect your employees during critical situations or in high-risk areas, ensuring continuous safety coverage."
+            title: "Secure Staff Escort Melbourne",
+            icon: <UserCheck size={24} />,
+            iconSymbol: <UserCheck size={24} />,
+            description: "Secure Staff Escort services in Melbourne prioritize the safety of your employees during their daily commute or within the workplace.",
+            details: "Highly trained personnel ensure that your staff members are protected from potential risks and security threats, offering peace of mind."
         },
         {
-            title: "On-site Staff Safety",
-            icon: "⚡",
-            iconSymbol: "🚨",
-            description: "Comprehensive on-site safety measures and protocols",
-            details: "We implement comprehensive on-site staff safety measures including security assessments, emergency protocols, and continuous monitoring to maintain a safe working environment for all employees."
+            title: "Safety Personnel for Staff Melbourne",
+            icon: <Award size={24} />,
+            iconSymbol: <Award size={24} />,
+            description: "Safety Personnel for Staff in Melbourne are the dedicated professionals who provide continuous vigilance and support to ensure the well-being of your employees.",
+            details: "They are equipped to respond to emergencies and security issues swiftly, mitigating potential risks."
+        },
+        {
+            title: "Workforce Escort Security Melbourne",
+            icon: <Building size={24} />,
+            iconSymbol: <Building size={24} />,
+            description: "Workforce Escort Security in Melbourne involves the provision of security personnel to accompany and protect your workforce during critical situations.",
+            details: "Such as labor disputes, strikes, or when employees are working in high-risk areas. These services help maintain a safe working environment."
+        },
+        {
+            title: "Staff Protection Services Melbourne",
+            icon: <Target size={24} />,
+            iconSymbol: <Target size={24} />,
+            description: "Staff Protection Services in Melbourne are designed to safeguard your employees from various threats, including physical harm, harassment, or other security risks.",
+            details: "These services can be tailored to meet the specific needs of your organization, offering comprehensive protection."
+        },
+        {
+            title: "On-site Staff Safety Melbourne",
+            icon: <MapPin size={24} />,
+            iconSymbol: <MapPin size={24} />,
+            description: "On-site Staff Safety services in Melbourne are aimed at enhancing safety within your workplace.",
+            details: "Trained professionals will assess risks and implement measures to ensure that your staff can work in a secure environment, minimizing potential accidents and hazards."
         }
     ];
 
@@ -67,7 +91,7 @@ export default function StaffEscortSecurityPage() {
                                                     borderRadius: '25px'
                                                 }}
                                             >
-                                                🛡️ PROFESSIONAL EMPLOYEE PROTECTION
+                                             PROFESSIONAL EMPLOYEE PROTECTION
                                             </span>
                                         </div>
                                         <h1 
@@ -90,19 +114,11 @@ export default function StaffEscortSecurityPage() {
                                                 maxWidth: '500px'
                                             }}
                                         >
-                                            Professional security personnel dedicated to ensuring the safety and protection of your employees in all workplace environments.
+                                            Staff escorts are security personnel who  are responsible for providing premium security at work stations and shelters, while staff escorts provide protection to employees and visitors.
+
+                                        Staff escorts work primarily in customer service roles. They protect  employees from physical threats and help them interact with passengers. They also help manage traffic on the transit system’s platforms.
                                         </p>
-                                        <p 
-                                            className="mb-5" 
-                                            style={{
-                                                color: '#6c757d',
-                                                fontSize: '1rem',
-                                                lineHeight: '1.6',
-                                                maxWidth: '480px'
-                                            }}
-                                        >
-                                            Available 24/7 with trained professionals providing comprehensive staff escort services, workplace safety assessments, and employee protection across Melbourne.
-                                        </p>
+                                        
                                         
                                         <div className="hero-buttons d-flex flex-wrap gap-3">
                                                 <a 
@@ -121,7 +137,7 @@ export default function StaffEscortSecurityPage() {
                                                     boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
                                                 }}
                                             >
-                                                📋 GET QUOTATION
+                                                 GET QUOTATION
                                                 </a>
                                                 <a 
                                                     href="tel:1300731173" 
@@ -138,7 +154,7 @@ export default function StaffEscortSecurityPage() {
                                                     borderWidth: '2px'
                                                 }}
                                             >
-                                                📞 CALL US NOW
+                                                <Phone size={16} className="me-2" />1300731173
                                             </a>
                                         </div>
                                         
@@ -167,70 +183,12 @@ export default function StaffEscortSecurityPage() {
                                                 }}
                                             />
                                             
-                                            {/* Floating Badge */}
-                                            <div 
-                                                className="floating-badge position-absolute"
-                                                style={{
-                                                    top: '30px',
-                                                    right: '30px',
-                                                    backgroundColor: '#1e2247',
-                                                    color: '#ffffff',
-                                                    padding: '15px 20px',
-                                                    borderRadius: '15px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem',
-                                                    boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)'
-                                                }}
-                                            >
-                                                🥇 Metro Guards
-                                            </div>
                                             
-                                            {/* Bottom Badge */}
-                                            <div 
-                                                className="bottom-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '12px 20px',
-                                                    borderRadius: '12px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.85rem',
-                                                    boxShadow: '0 8px 20px rgba(253, 197, 26, 0.4)'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                                            </div>
+                                            
+                                            
                                         </div>
                                         
-                                        {/* Decorative Elements */}
-                                        <div 
-                                            className="decoration-circle position-absolute"
-                                            style={{
-                                                top: '-20px',
-                                                left: '-20px',
-                                                width: '100px',
-                                                height: '100px',
-                                                backgroundColor: '#fdc51a',
-                                                borderRadius: '50%',
-                                                opacity: '0.1',
-                                                zIndex: '-1'
-                                            }}
-                                        ></div>
-                                        <div 
-                                            className="decoration-square position-absolute"
-                                            style={{
-                                                bottom: '-30px',
-                                                right: '-30px',
-                                                width: '80px',
-                                                height: '80px',
-                                                backgroundColor: '#1e2247',
-                                                borderRadius: '15px',
-                                                opacity: '0.1',
-                                                zIndex: '-1'
-                                            }}
-                                        ></div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -256,23 +214,16 @@ export default function StaffEscortSecurityPage() {
                                                     objectFit: 'cover'
                                                 }}
                                             />
-                                            <div 
-                                                className="overlay-badge position-absolute"
-                                                style={{
-                                                    bottom: '30px',
-                                                    left: '30px',
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    padding: '15px 25px',
-                                                    borderRadius: '10px',
-                                                    fontWeight: '700',
-                                                    fontSize: '0.9rem'
-                                                }}
-                                            >
-                                                ✅ Licensed & Insured
-                                            </div>
+                                            
                                                     </div>
-                                        
+                                        <div></div>
+                                        <p className="lead" style={{color: '#6c757d', paddingTop: '20px'}}>
+                                        In addition to their basic qualifications, security officers may also hold a first aid certificate, which allows them to respond to incidents and provide necessary medical attention. Security officers work in a variety of settings, including commercial premises and events, and may be involved in monitoring CCTV and managing alarm systems. They may also undertake senior roles, such as information security analysts or crowd controllers.
+
+Security officers must be observant and able to report any suspicious activity. They may also apprehend or detain suspects until the police arrive. They watch for irregularities and ensure that sites are secure to prevent unlawful activity.
+
+                                        The recruitment process for security officers in Australia is thorough and involves a classification procedure, including checks on personnel records and electronic circuits. It is an opportunity for potential employees to check and manage their records and application. As of May 2023, the average salary for security officers in Australia is $25 per hour, making it an attractive and rewarding career opportunity for those interested in maintaining public safety and security.
+                                        </p>
                                         {/* Additional Features */}
                                         <div className="features-list mt-4">
                                             <div className="feature-item d-flex align-items-center mb-3">
@@ -287,7 +238,7 @@ export default function StaffEscortSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    🕒
+                                                    <Clock size={20} />
                                                 </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Available Service</span>
                                             </div>
@@ -303,7 +254,7 @@ export default function StaffEscortSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    👨‍💼
+                                                    <UserCheck size={20} />
                                                 </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Professional Escorts</span>
                                             </div>
@@ -319,7 +270,7 @@ export default function StaffEscortSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    ⚡
+                                                    <Zap size={20} />
                                                 </div>
                                                 <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid Response & Deployment</span>
                                 </div>
@@ -332,11 +283,11 @@ export default function StaffEscortSecurityPage() {
                                         <div className="section-header mb-5">
                                             <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                    🛡️ OUR SERVICES
+                                                     OUR PROCESS
                                                 </span>
                                     </div>
                                             <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                                Staff Escort Security Services
+                                            The Process of Hiring a Staff Escort Service
                                             </h2>
                                             <p className="lead" style={{color: '#6c757d'}}>
                                                 Professional employee protection services designed to ensure the safety and security of your staff members.
@@ -806,133 +757,9 @@ export default function StaffEscortSecurityPage() {
                     </div>
 
                     {/*===== Contact CTA Section =====*/}
-                    <div className="contact-cta-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="cta-content text-center text-white">
-                                        <div className="subtitle mb-4">
-                                            <span className="badge px-4 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600', fontSize: '0.9rem'}}>
-                                                <i className="bi bi-telephone me-2"></i>
-                                                PROFESSIONAL STAFF PROTECTION NEEDED?
-                                            </span>
-                                        </div>
-                                        <h2 className="display-4 fw-bold mb-4">
-                                            Need Professional Staff Escort Services?
-                                        </h2>
-                                        <p className="lead mb-5" style={{maxWidth: '800px', margin: '0 auto'}}>
-                                            Contact us to discuss how we can implement professional staff escort security solutions tailored to your organization's needs. Our team is ready to provide immediate employee protection services across Melbourne.
-                                        </p>
-                                        
-                                        <div className="cta-buttons mb-5">
-                                            <a 
-                                                href="/get-quotation" 
-                                                className="btn btn-lg me-3 px-5 py-3"
-                                                style={{
-                                                    backgroundColor: '#fdc51a',
-                                                    color: '#1e2247',
-                                                    border: 'none',
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-file-earmark-text me-2"></i>GET QUOTATION
-                                            </a>
-                                            <a 
-                                                href="tel:1300731173" 
-                                                className="btn btn-outline-light btn-lg px-5 py-3"
-                                                style={{
-                                                    borderRadius: '10px',
-                                                    textDecoration: 'none',
-                                                    fontWeight: '700',
-                                                    textTransform: 'uppercase',
-                                                    fontSize: '1rem',
-                                                    transition: 'all 0.3s ease'
-                                                }}
-                                            >
-                                                <i className="bi bi-telephone me-2"></i>CALL US NOW
-                                            </a>
-                                        </div>
-                                        
-                                        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className="contact-info-grid d-flex justify-content-around text-center flex-wrap">
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-people"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Professional Staff Escorts</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Trained & experienced</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-shield-check"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Licensed & Insured</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Fully compliant</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-clock"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">24/7 Available</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Round the clock</small>
-                                                    </div>
-                                                    <div className="contact-info-item mb-3">
-                                                        <div 
-                                                            className="contact-icon mb-3 mx-auto d-flex align-items-center justify-content-center"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                backgroundColor: 'rgba(255,255,255,0.1)',
-                                                                borderRadius: '50%',
-                                                                fontSize: '2rem'
-                                                            }}
-                                                        >
-                                                            <i className="bi bi-geo-alt"></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-2 fw-bold">Melbourne Wide</h6>
-                                                        <small className="text-white" style={{opacity: '0.8'}}>Complete coverage</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <WhyChooseUs />
+                    <Accreditation />
+                    <Subscribe />
 
                     {/* Add custom styles */}
                     <style jsx>{`
@@ -1043,7 +870,7 @@ export default function StaffEscortSecurityPage() {
                         }
                     `}</style>
                 </div>
-                <Gallery4 />
+                
             </Layout>
         </>
     )
