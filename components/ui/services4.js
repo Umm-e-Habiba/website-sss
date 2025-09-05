@@ -54,7 +54,7 @@ const Services4 = ({
           <div className="services-header">
             <div className="services-header-content">
               <h2 className="services-title">{title}</h2>
-              <p className="services-description">{description}</p>
+              <p className="services-description" style={{ color: 'black' ,fontFamily:' -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'}}>{description}</p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const Services4 = ({
                       </div>
                       <div className="services-card-content">
                         <h3 className="services-card-title">{item.title}</h3>
-                        <p className="services-card-description">{item.description}</p>
+                        <p className="services-card-description" >{item.description}</p>
                         <div className="services-read-more">
                           Read more <ArrowRight className="read-more-arrow" size={16} />
                         </div>
@@ -431,7 +431,7 @@ const Services4 = ({
 
         @media (max-width: 480px) {
           .services-description {
-            font-size: 0.9rem;
+            font-size: 1.125rem;
           }
         }
 

@@ -67,7 +67,7 @@ export default function GoodPeople() {
             <p className="description-text" style={{
               fontSize: '1.125rem',
               lineHeight: '1.7',
-              color: '#666666',
+              color: 'black',
               margin: '0 0 16px 0',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
             }}>

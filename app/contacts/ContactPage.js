@@ -1,69 +1,42 @@
-"use client";
+'use client';
 import Layout from "@/components/layout/Layout";
-import { useState, useEffect } from "react";
+import { useState } from 'react';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./contact-styles.css";
+import { Phone, Mail, MapPin, Clock, Shield, Users, Award, Star, Send, CheckCircle, AlertCircle, Building, Home, Calendar, MessageSquare } from 'lucide-react';
+import WhyChooseUs from "@/components/ui/why-choose-us";
+import Accrediation from '@/components/accrediation10'
+import Subscribe from '@/components/homepages/home1/Subscribe'
+
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    location: '',
+    serviceType: '',
+    message: ''
+  });
 
-  useEffect(() => {
-    // First scroll detection
-    const handleFirstScroll = () => {
-      if (!hasScrolled) {
-        setHasScrolled(true);
-        document.body.classList.add('has-scrolled');
-        // Hide scroll indicator animation
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-        if (scrollIndicator) {
-          scrollIndicator.style.opacity = '0';
-        }
-      }
-    };
-
-    // Scroll-triggered animations (first time only)
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-          entry.target.classList.add('animate-in', 'animated');
-          // Stop observing this element after first animation
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    // Initialize observer after component mounts
-    setTimeout(() => {
-      const animatedElements = document.querySelectorAll('.animate-on-scroll');
-      animatedElements.forEach(el => observer.observe(el));
-    }, 100);
-
-    // Add scroll listener
-    window.addEventListener('scroll', handleFirstScroll, { passive: true });
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', handleFirstScroll);
-      observer.disconnect();
-    };
-  }, [hasScrolled]);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formDataObj = new FormData(form);
 
     try {
-      const res = await fetch("/api/contact", { method: "POST", body: formData });
+      const res = await fetch("/api/contact", { method: "POST", body: formDataObj });
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok || !data?.success) {
@@ -72,6 +45,14 @@ export default function ContactPage() {
 
       toast.success("Message sent successfully!");
       form.reset();
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        serviceType: '',
+        message: ''
+      });
     } catch (err) {
       toast.error(err.message || "Network error. Please try again.");
       console.error(err);
@@ -82,286 +63,262 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Scroll Indicator */}
-      {!hasScrolled && (
-        <div className="scroll-indicator">
-          <div className="scroll-icon">
-            <div className="scroll-wheel"></div>
-          </div>
-          <p>Scroll to explore</p>
-        </div>
-      )}
-
-      {/* Toasts */}
-      <ToastContainer position="bottom-right" autoClose={3000}/>
+      <ToastContainer position="bottom-right" autoClose={3000} />
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Contact Us"
         mainTitle="Get In Touch With Metro Guards"
         subtitle="Professional Security Solutions in Melbourne - Available 24/7 for Your Protection"
       >
         <div>
-                              {/*===== Contact Us Directly Section =====*/}
-          <div className="contact-us-directly-section">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-lg-10">
-                  <div className="contact-directly-content">
-                    <div className="section-header text-center">
-                      <h1 className="main-title">Contact Us Directly</h1>
-                      <p className="section-subtitle">
-                        Choose your preferred way to get in touch. We're available 24/7 for your convenience.
-                    </p>
-                  </div>
-                    
-                    <div className="contact-options-grid">
-                      {/* Call Us Now Card */}
-                      <div className="contact-option-card call-card card-slide-up-load" style={{animationDelay: '0.2s'}}>
-                        <div className="card-icon-wrapper">
-                          <div className="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M22 16.92V19.92C22 20.52 21.53 21.01 20.92 21.01C9.84 21.01 1 12.17 1 1.08C1 0.47 1.47 0 2.08 0H5.09C5.7 0 6.18 0.47 6.18 1.08C6.18 3.25 6.65 5.31 7.52 7.18C7.7 7.57 7.59 8.04 7.26 8.3L5.84 9.32C7.1 12.22 9.78 14.9 12.68 16.16L13.7 14.74C13.96 14.41 14.43 14.3 14.82 14.48C16.69 15.35 18.75 15.82 20.92 15.82C21.53 15.82 22 16.31 22 16.92Z" fill="currentColor"/>
-                            </svg>
-                </div>
-              </div>
-                        <div className="card-content">
-                          <h3 className="card-title">Call Us Now</h3>
-                          <p className="card-number">1300 73 11 73</p>
-                          <p className="card-description">Speak directly with our team</p>
-            </div>
-          </div>
+          
 
-                      {/* Send SMS Card */}
-                      <div className="contact-option-card sms-card card-slide-up-load" style={{animationDelay: '0.4s'}}>
-                        <div className="card-icon-wrapper">
-                          <div className="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M7 9H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M7 13H13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="card-content">
-                          <h3 className="card-title">Visit Our Office</h3>
-                          <p className="card-number">CS Hub, 5, Level 1/34 Commercial Rd</p>
-                          <p className="card-description">Caroline Springs VIC 3023</p>
-                          </div>
-                        </div>
-
-                      {/* Email Support Card */}
-                      <div className="contact-option-card email-card card-slide-up-load" style={{animationDelay: '0.6s'}}>
-                        <div className="card-icon-wrapper">
-                          <div className="icon-circle">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <polyline points="22,6 12,13 2,6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="card-content">
-                          <h3 className="card-title">Email Support</h3>
-                          <p className="card-number">admin@metroguards.com.au</p>
-                          <p className="card-description">Detailed inquiries welcome</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-                 
-
-          {/*===== Modern Contact Form Section =====*/}
-          <div className="modern-contact-form-section">
+          {/*===== Contact Methods Section =====*/}
+          <div className="contact-methods-section">
             <div className="container">
               <div className="row">
-                {/* Enhanced Contact Form */}
-                <div className="col-lg-12">
-                  <div className="modern-form-wrapper animate-on-scroll scale-in-animation">
-                    <div className="form-header fade-in-up">
-                      <div className="form-badge pulse-badge">
-                        <span className="badge-icon">💬</span>
-                        <span>Get In Touch</span>
+                <div className="col-lg-12 text-center mb-5">
+                  <div className="section-header">
+                    <div className="section-badge">
+                      <MessageSquare size={20} />
+                      <span>Multiple Ways to Connect</span>
+                    </div>
+                    <h2 className="section-title">Choose Your Preferred Contact Method</h2>
+                    <p className="section-description">
+                      We're available through multiple channels to ensure you can reach us when you need us most.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-4 col-md-6 mb-4">
+                  <div className="contact-method-card">
+                    <div className="card-icon">
+                      <Phone size={32} />
+              </div>
+                        <div className="card-content">
+                      <h3>Call Us Directly</h3>
+                      <p className="contact-number">1300 73 11 73</p>
+                      <p className="contact-description">Speak with our security experts for immediate assistance and consultation.</p>
+                      <a href="tel:1300731173" className="contact-btn">
+                        <Phone size={16} />
+                        Call Now
+                      </a>
+            </div>
+          </div>
+                          </div>
+                <div className="col-lg-4 col-md-6 mb-4">
+                  <div className="contact-method-card">
+                    <div className="card-icon">
+                      <Mail size={32} />
+                        </div>
+                        <div className="card-content">
+                      <h3>Email Support</h3>
+                      <p className="contact-number">admin@metroguards.com.au</p>
+                      <p className="contact-description">Send us detailed inquiries and we'll respond within 2 hours during business hours.</p>
+                      <a href="mailto:admin@metroguards.com.au" className="contact-btn">
+                        <Mail size={16} />
+                        Send Email
+                      </a>
+                          </div>
+                        </div>
+                          </div>
+                <div className="col-lg-4 col-md-6 mb-4">
+                  <div className="contact-method-card">
+                    <div className="card-icon">
+                      <MapPin size={32} />
+                        </div>
+                        <div className="card-content">
+                      <h3>Visit Our Office</h3>
+                      <p className="contact-number">CS Hub, Level 1/34 Commercial Rd</p>
+                      <p className="contact-description">Caroline Springs VIC 3023. Open Monday to Friday, 9 AM to 5 PM.</p>
+                      <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="contact-btn">
+                        <MapPin size={16} />
+                        Get Directions
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/*===== Contact Form Section =====*/}
+          <div className="contact-form-section">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 mx-auto">
+                  <div className="form-wrapper">
+                    <div className="form-header">
+                      <div className="form-badge">
+                        <i className="bi bi-envelope"></i>
+                        Get In Touch
                       </div>
-                      <h2 className="form-title typing-animation">Send Us a Message</h2>
-                      <p className="form-subtitle fade-in-up">
-                        Ready to enhance your security? Drop us a message and we'll get back to you within 2 hours.
-                      </p>
+                      <h2>Contact Us</h2>
+                      <p>Ready to secure your business? Get in touch with our security experts for a personalized consultation and quote.</p>
                     </div>
                     
-                                        <form className="classic-contact-form" onSubmit={handleSubmit} noValidate>
+                    <form className="contact-form" onSubmit={handleSubmit} noValidate>
                       {/* honeypot (spam trap) */}
                       <input type="text" name="companyWebsite" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
 
-                      <div className="form-section">
-                        <div className="form-grid">
-                          <div className="form-field">
-                            <label className="classic-label">
-                              <span className="label-title">Full Name</span>
-                              <span className="required-asterisk">*</span>
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="name" className="form-label">
+                            <i className="bi bi-person"></i>
+                            Full Name <span className="required">*</span>
                             </label>
-                            <div className="input-container">
                               <input 
-                                name="name" 
                                 type="text" 
-                                className="classic-input" 
-                                placeholder="Enter your complete name" 
+                            id="name"
+                            name="name"
+                            className="form-input"
+                            placeholder="Enter your full name"
+                            value={formData.name}
+                            onChange={handleInputChange}
                                 required 
                               />
-                              <div className="input-border-effect"></div>
                             </div>
-                          </div>
-                          <div className="form-field">
-                            <label className="classic-label">
-                              <span className="label-title">Email Address</span>
-                              <span className="required-asterisk">*</span>
+                        
+                        <div className="form-group">
+                          <label htmlFor="email" className="form-label">
+                            <i className="bi bi-envelope"></i>
+                            Email Address <span className="required">*</span>
                             </label>
-                            <div className="input-container">
                               <input 
-                                name="email" 
                                 type="email" 
-                                className="classic-input" 
+                            id="email"
+                            name="email"
+                            className="form-input"
                                 placeholder="your.email@example.com" 
+                            value={formData.email}
+                            onChange={handleInputChange}
                                 required 
                               />
-                              <div className="input-border-effect"></div>
-                            </div>
-                          </div>
                         </div>
                       </div>
 
-                      <div className="form-section">
-                        <div className="form-grid">
-                          <div className="form-field">
-                            <label className="classic-label">
-                              <span className="label-title">Phone Number</span>
-                              <span className="optional-text">(Optional)</span>
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="phone" className="form-label">
+                            <i className="bi bi-phone"></i>
+                            Phone Number <span className="optional">(Optional)</span>
                             </label>
-                            <div className="input-container">
                               <input 
-                                name="phone" 
                                 type="tel" 
-                                className="classic-input" 
+                            id="phone"
+                            name="phone"
+                            className="form-input"
                                 placeholder="+61 xxx xxx xxx" 
+                            value={formData.phone}
+                            onChange={handleInputChange}
                               />
-                              <div className="input-border-effect"></div>
                             </div>
-                          </div>
-                          <div className="form-field">
-                            <label className="classic-label">
-                              <span className="label-title">Property Location</span>
-                              <span className="required-asterisk">*</span>
+                        
+                        <div className="form-group">
+                          <label htmlFor="location" className="form-label">
+                            <i className="bi bi-geo-alt"></i>
+                            Property Location <span className="required">*</span>
                             </label>
-                            <div className="input-container">
                               <input 
-                                name="location" 
                                 type="text" 
-                                className="classic-input" 
+                            id="location"
+                            name="location"
+                            className="form-input"
                                 placeholder="Enter property address or suburb" 
+                            value={formData.location}
+                            onChange={handleInputChange}
                                 required 
                               />
-                              <div className="input-border-effect"></div>
-                            </div>
-                          </div>
                         </div>
                       </div>
                       
-                      <div className="form-section">
-                        <div className="form-grid">
-                          <div className="form-field full-width">
-                            <label className="classic-label">
-                              <span className="label-title">Service Type</span>
-                              <span className="required-asterisk">*</span>
+                      <div className="form-group">
+                        <label htmlFor="serviceType" className="form-label">
+                          <i className="bi bi-shield-check"></i>
+                          Service Type <span className="required">*</span>
                             </label>
-                            <div className="select-container">
-                              <select name="serviceType" className="classic-select" required>
+                        <select
+                          id="serviceType"
+                          name="serviceType"
+                          className="form-select"
+                          value={formData.serviceType}
+                          onChange={handleInputChange}
+                          required
+                        >
                                 <option value="">Please select a service</option>
                                 <option value="residential">Residential Security</option>
                                 <option value="commercial">Commercial Security</option>
                                 <option value="event">Event Security</option>
                                 <option value="personal">Personal Protection</option>
+                          <option value="k9">K9 Security Services</option>
                                 <option value="consultation">Security Consultation</option>
                                 <option value="other">Other</option>
                               </select>
-                              <div className="select-arrow">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                </svg>
-                              </div>
-                              <div className="input-border-effect"></div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
 
-                      <div className="form-section">
-                        <div className="form-grid">
-                          <div className="form-field full-width">
-                            <label className="classic-label">
-                              <span className="label-title">Your Message</span>
-                              <span className="required-asterisk">*</span>
+                      <div className="form-group">
+                        <label htmlFor="message" className="form-label">
+                          <i className="bi bi-chat-dots"></i>
+                          Your Message <span className="required">*</span>
                             </label>
-                            <div className="textarea-container">
                           <textarea 
+                          id="message"
                             name="message" 
-                                className="classic-textarea" 
+                          className="form-textarea"
                                 rows="6" 
                                 placeholder="Please describe your security requirements, property details, expected duration, and any specific concerns you may have..."
+                          value={formData.message}
+                          onChange={handleInputChange}
                             required
                           ></textarea>
-                              <div className="input-border-effect"></div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
 
-                      <div className="form-footer-section">
-                        <div className="privacy-notice-classic">
+                      <div className="form-footer">
+                        <div className="privacy-notice">
                           <div className="privacy-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M12 22S2 16 2 8C2 5.8 3.8 4 6 4C8.2 4 10 5.8 10 8H14C14 5.8 15.8 4 18 4C20.2 4 22 5.8 22 8C22 16 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                            <Shield size={20} />
                           </div>
                           <div className="privacy-text">
-                            <h6>Privacy & Security Guaranteed</h6>
-                            <p>Your personal information is encrypted and securely stored. We will only use your details to provide you with a customized security quote and will never share your information with third parties.</p>
+                            <h6>Your Privacy is Protected</h6>
+                            <p>We respect your privacy and will never share your personal information with third parties. Your data is encrypted and securely stored.</p>
                           </div>
                         </div>
-
-                        <div className="submit-section">
+                        
                         <button
                           type="submit"
-                            className="classic-submit-btn"
+                          className="submit-btn"
                           disabled={loading}
-                          aria-busy={loading}
                         >
-                            <span className="btn-content-classic">
-                              {loading ? (
-                                <>
-                                  <span className="loading-spinner"></span>
-                                  <span className="btn-text">Sending Your Message...</span>
-                                </>
-                              ) : (
-                                <>
-                                  <span className="btn-icon-classic">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                      <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                  </span>
-                                  <span className="btn-text">Send Message</span>
-                                </>
-                              )}
-                            </span>
+                          {loading ? (
+                            <>
+                              <div className="spinner"></div>
+                              Sending Message...
+                            </>
+                          ) : (
+                            <>
+                              <Send size={20} />
+                              Send Message
+                            </>
+                          )}
                         </button>
-                          <p className="response-time">
-                            <span className="clock-icon">⏱️</span>
-                            We typically respond within 2 hours during business hours
-                          </p>
-                        </div>
                       </div>
+                      
+                      {/* Social Media Links */}
+                      <div className="social-links">
+                        <a href="#" className="social-link" title="WhatsApp">
+                          <i className="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/metroguards?_rdc=1&_rdr" className="social-link" title="Facebook">
+                          <i className="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/metropolitanguard/" className="social-link" title="Instagram">
+                          <i className="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/metroguards" className="social-link" title="Twitter">
+                          <i className="fa-brands fa-twitter"></i>
+                        </a>
+                      </div>
+                      
+                      
                     </form>
                   </div>
                 </div>
@@ -369,52 +326,110 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/*===== Why Choose Us Section =====*/}
+          <div className="why-choose-section">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12 text-center mb-5">
+                  <div className="section-header">
+                    <div className="section-badge">
+                      <Award size={20} />
+                      <span>Why Choose Metro Guards</span>
+                    </div>
+                    <h2 className="section-title">Trusted Security Excellence</h2>
+                    <p className="section-description">
+                      We've been protecting Melbourne businesses and residents for over a decade with our professional security services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-3 col-md-6 mb-4">
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <Shield size={32} />
+                    </div>
+                    <h3>Licensed & Insured</h3>
+                    <p>Fully certified security guards with comprehensive insurance coverage for your peace of mind.</p>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mb-4">
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <Clock size={32} />
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Round-the-clock security services available whenever you need protection for your property.</p>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mb-4">
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <Users size={32} />
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Our security professionals have extensive training and experience in various security scenarios.</p>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mb-4">
+                  <div className="feature-card">
+                    <div className="feature-icon">
+                      <Star size={32} />
+                    </div>
+                    <h3>Proven Track Record</h3>
+                    <p>Over 500 satisfied clients across Melbourne with a 99% customer satisfaction rate.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/*===== Final CTA Section =====*/}
+            
+          <Accrediation />
+          <Subscribe />
+          </div>
+
           <style jsx>{`
-            /* Modern Hero Section */
-            .modern-hero-section {
+          /* Classic Hero Section */
+          .classic-hero-section {
+            background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
+            padding: 100px 0;
               position: relative;
-              min-height: 80vh;
-              display: flex;
-              align-items: center;
               overflow: hidden;
-              background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
             }
 
-            .hero-background {
+          .classic-hero-section::before {
+            content: '';
               position: absolute;
               top: 0;
               left: 0;
               right: 0;
               bottom: 0;
               background: 
-                radial-gradient(circle at 20% 50%, rgba(253, 197, 26, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(253, 197, 26, 0.15) 0%, transparent 50%);
+              radial-gradient(circle at 20% 50%, rgba(253, 197, 26, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
             }
 
             .hero-content {
               position: relative;
               z-index: 2;
-              padding: 60px 0;
             }
 
             .hero-badge {
               display: inline-flex;
               align-items: center;
               gap: 8px;
-              background: rgba(255, 255, 255, 0.15);
+            background: rgba(253, 197, 26, 0.15);
               backdrop-filter: blur(10px);
-              border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(253, 197, 26, 0.3);
               border-radius: 50px;
               padding: 8px 20px;
-              color: white;
-              font-weight: 500;
+            color: #fdc51a;
+            font-weight: 600;
               margin-bottom: 20px;
               font-size: 14px;
-            }
-
-            .badge-icon {
-              font-size: 16px;
             }
 
             .hero-title {
@@ -425,34 +440,23 @@ export default function ContactPage() {
               line-height: 1.2;
             }
 
-            .gradient-text {
-              background: linear-gradient(45deg, #fdc51a, #f39c12, #fdc51a, #f39c12);
-              background-size: 300% 300%;
+          .highlight-text {
+            background: linear-gradient(45deg, #fdc51a, #f39c12);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
               background-clip: text;
-              animation: gradientShift 3s ease-in-out infinite;
-            }
-
-            .hero-subtitle {
-              font-size: 1.5rem;
-              color: rgba(255, 255, 255, 0.9);
-              margin-bottom: 30px;
-              font-weight: 300;
             }
 
             .hero-description {
-              max-width: 800px;
-              margin: 0 auto 40px;
-              color: rgba(255, 255, 255, 0.8);
-              font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
               line-height: 1.6;
             }
 
             .hero-stats {
               display: flex;
-              justify-content: center;
-              gap: 60px;
+            gap: 40px;
               margin-top: 40px;
             }
 
@@ -474,182 +478,821 @@ export default function ContactPage() {
               opacity: 0.9;
             }
 
-            /* Responsive Design for Hero */
-            @media (max-width: 991px) {
-              .hero-title {
+          .hero-image {
+            position: relative;
+          }
+
+          .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+          }
+
+          .image-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+          }
+
+          .floating-card {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 250px;
+          }
+
+          .card-icon {
+            width: 50px;
+            height: 50px;
+            background: #fdc51a;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1e2247;
+          }
+
+          .card-content h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e2247;
+            margin-bottom: 5px;
+          }
+
+          .card-content p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin: 0;
+          }
+
+          /* Contact Methods Section */
+          .contact-methods-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+          }
+
+          .section-header {
+            margin-bottom: 60px;
+          }
+
+          .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fdc51a;
+            color: #1e2247;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+
+          .section-title {
                 font-size: 2.5rem;
-              }
+            font-weight: 700;
+            color: #1e2247;
+            margin-bottom: 20px;
+          }
 
-              .hero-stats {
+          .section-description {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+          }
+
+          .contact-method-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 25px;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .contact-method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fdc51a, #f39c12, #e67e22);
+            border-radius: 25px 25px 0 0;
+          }
+
+          .contact-method-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #fdc51a;
+          }
+
+          .contact-method-card .card-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 25px;
+            color: #fdc51a;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(30, 34, 71, 0.3);
+          }
+
+          .contact-method-card .card-icon::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .contact-method-card:hover .card-icon::after {
+            opacity: 1;
+          }
+
+          .contact-method-card .card-content {
+            padding: 0 30px 40px 30px;
+          }
+
+          .contact-method-card h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1e2247;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+          }
+
+          .contact-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e2247;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+
+          .contact-description {
+            color: #6c757d;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            font-size: 1rem;
+          }
+
+          .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1e2247, #2a3458);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(30, 34, 71, 0.3);
+          }
+
+          .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+          }
+
+          .contact-btn:hover::before {
+            left: 100%;
+          }
+
+          .contact-btn:hover {
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            color: #1e2247;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(253, 197, 26, 0.4);
+          }
+
+          /* Contact Form Section */
+          .contact-form-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+          }
+
+          .contact-form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+              radial-gradient(circle at 20% 20%, rgba(253, 197, 26, 0.1) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(30, 34, 71, 0.05) 0%, transparent 60%);
+            pointer-events: none;
+          }
+
+          .form-wrapper {
+            background: white;
+            border-radius: 25px;
+            padding: 0;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.1);
+            position: relative;
+            border: 1px solid rgba(253, 197, 26, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+          }
+
+          .form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #fdc51a, #f39c12, #e67e22, #fdc51a);
+            background-size: 200% 100%;
+            animation: gradientShift 3s ease-in-out infinite;
+          }
+
+          @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+          }
+
+          .form-header {
+            text-align: center;
+            padding: 60px 50px 40px 50px;
+            background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
+            color: white;
+            position: relative;
+          }
+
+          .form-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid #2a3458;
+          }
+
+          .form-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(253, 197, 26, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(253, 197, 26, 0.3);
+            color: #fdc51a;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+          }
+
+          .form-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+          }
+
+          .form-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+          }
+
+          .contact-form {
+            padding: 60px 50px;
+            background: white;
+          }
+
+          .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
                 gap: 30px;
-              }
-            }
+            margin-bottom: 30px;
+          }
 
-            @media (max-width: 767px) {
-              .hero-title {
-                font-size: 2rem;
-              }
+          .form-group {
+            margin-bottom: 30px;
+            position: relative;
+          }
 
-              .hero-subtitle {
+          .form-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            color: #000000 !important;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .required {
+            color: #e74c3c;
                 font-size: 1.2rem;
-              }
+            font-weight: 700;
+          }
 
-              .hero-stats {
-                flex-direction: column;
+          .optional {
+            color: #6c757d;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: none;
+          }
+
+          .form-input,
+          .form-select,
+          .form-textarea {
+            width: 100%;
+            padding: 20px 25px;
+            border: 3px solid #e9ecef;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            background: #f8f9fa;
+            font-weight: 500;
+            position: relative;
+          }
+
+          .form-input:focus,
+          .form-select:focus,
+          .form-textarea:focus {
+            outline: none;
+            border-color: #fdc51a;
+            background: white;
+            box-shadow: 0 0 0 5px rgba(253, 197, 26, 0.1);
+            transform: translateY(-2px);
+          }
+
+          .form-input::placeholder,
+          .form-textarea::placeholder {
+            color: #adb5bd;
+            font-weight: 400;
+          }
+
+          .form-textarea {
+            resize: vertical;
+            min-height: 150px;
+            font-family: inherit;
+            line-height: 1.6;
+          }
+
+          .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+          }
+
+          .privacy-notice {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #d4edda;
+          }
+
+          .privacy-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+          }
+
+          .privacy-text h6 {
+            font-weight: 700;
+            color: #1e2247;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+          }
+
+          .privacy-text p {
+            font-size: 0.95rem;
+            color: #495057;
+            margin: 0;
+            line-height: 1.6;
+            font-weight: 500;
+          }
+
+          .submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            min-width: 220px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(30, 34, 71, 0.3);
+          }
+
+          .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(253, 197, 26, 0.3), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .submit-btn:hover::before {
+            left: 100%;
+          }
+
+          .submit-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            color: #1e2247;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(253, 197, 26, 0.4);
+          }
+
+          .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+          }
+
+          .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid transparent;
+            border-top: 3px solid #1e2247;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+          /* Social Media Links */
+          .social-links {
+            display: flex;
+            justify-content: center;
                 gap: 20px;
                 margin-top: 30px;
               }
 
-              .stat-item h3 {
-                font-size: 2rem;
-              }
+          .social-link {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1e2247, #2a3458);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(30, 34, 71, 0.3);
+          }
 
-              .modern-hero-section {
-                min-height: 70vh;
-              }
+          .social-link:hover {
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            color: #1e2247;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(253, 197, 26, 0.4);
+          }
 
-              .hero-content {
-                padding: 40px 0;
-              }
+          /* Contact Info Footer */
+          .contact-info-footer {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border: 1px solid #dee2e6;
+          }
+
+          .contact-info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: #1e2247;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          .contact-info-item svg {
+            width: 24px;
+            height: 24px;
+            color: #fdc51a;
+            margin-bottom: 5px;
+          }
+
+          .contact-info-item span {
+            font-size: 0.85rem;
+            color: #6c757d;
+          }
+
+          /* Why Choose Us Section */
+          .why-choose-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e2247 0%, #2a3458 100%);
+            color: white;
+          }
+
+          .why-choose-section .section-badge {
+            background: rgba(253, 197, 26, 0.15);
+            color: #fdc51a;
+            border: 1px solid rgba(253, 197, 26, 0.3);
+          }
+
+          .why-choose-section .section-title {
+            color: white;
+          }
+
+          .why-choose-section .section-description {
+            color: rgba(255, 255, 255, 0.9);
+          }
+
+          .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+          }
+
+          .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+          }
+
+          .feature-card .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #fdc51a;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: #1e2247;
+          }
+
+          .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+          }
+
+          .feature-card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+          }
+
+          /* Final CTA Section */
+          .final-cta-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+          }
+
+          .cta-content {
+            text-align: center;
+          }
+
+          .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e2247;
+            margin-bottom: 20px;
+          }
+
+          .cta-content p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+
+          .btn-primary,
+          .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            justify-content: center;
+          }
+
+          .btn-primary {
+            background: linear-gradient(135deg, #fdc51a, #f39c12);
+            color: #1e2247;
+          }
+
+          .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(253, 197, 26, 0.3);
+          }
+
+          .btn-secondary {
+            background: #1e2247;
+            color: white;
+            border: 2px solid #1e2247;
+          }
+
+          .btn-secondary:hover {
+            background: transparent;
+            color: #1e2247;
+            transform: translateY(-2px);
+          }
+
+          /* Responsive Design */
+          @media (max-width: 991px) {
+            .hero-title {
+              font-size: 2.5rem;
             }
-          `}</style>
-                  </div>
 
-        {/*===== White Separator Section =====*/}
-        <section className="white-separator-section">
-          <div className="container">
-            <div className="separator-content">
-              <div className="separator-line"></div>
-              <div className="separator-badge">
-                <span className="badge-icon">🛡️</span>
-                <span>Trusted Security Partners</span>
-              </div>
-              <div className="separator-line"></div>
-            </div>
-            
-            <div className="trust-indicators">
-              <div className="trust-item">
-                <div className="trust-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22S2 16 2 8C2 5.8 3.8 4 6 4C8.2 4 10 5.8 10 8H14C14 5.8 15.8 4 18 4C20.2 4 22 5.8 22 8C22 16 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h4>Licensed & Insured</h4>
-                <p>Fully certified security services</p>
-              </div>
-              
-              <div className="trust-item">
-                <div className="trust-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 21V19C17 17.9 16.1 17 15 17H9C7.9 17 7 17.9 7 19V21M20 8V6C20 4.9 19.1 4 18 4H6C4.9 4 4 4.9 4 6V8M12 13C10.3 13 9 11.7 9 10S10.3 7 12 7S15 8.3 15 10S13.7 13 12 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h4>10+ Years Experience</h4>
-                <p>Proven track record in Melbourne</p>
-              </div>
-              
-              <div className="trust-item">
-                <div className="trust-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <h4>24/7 Availability</h4>
-                <p>Round the clock protection</p>
-              </div>
-              
-              <div className="trust-item">
-                <div className="trust-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 16.92V19.92C22 20.52 21.53 21.01 20.92 21.01C9.84 21.01 1 12.17 1 1.08C1 0.47 1.47 0 2.08 0H5.09C5.7 0 6.18 0.47 6.18 1.08C6.18 3.25 6.65 5.31 7.52 7.18C7.7 7.57 7.59 8.04 7.26 8.3L5.84 9.32C7.1 12.22 9.78 14.9 12.68 16.16L13.7 14.74C13.96 14.41 14.43 14.3 14.82 14.48C16.69 15.35 18.75 15.82 20.92 15.82C21.53 15.82 22 16.31 22 16.92Z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <h4>Rapid Response</h4>
-                <p>Quick deployment when needed</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            .hero-stats {
+              gap: 30px;
+            }
 
-        {/*===== Classic CTA Section =====*/}
-        <section className="classic-cta-section">
-          <div className="cta-background-overlay"></div>
-          <div className="container">
-            <div className="cta-content">
-              <div className="cta-badge">
-                <span className="badge-icon">🛡️</span>
-                <span>Professional Security Awaits</span>
-              </div>
-              
-              <h2 className="cta-title">
-                Ready to Secure Your<br />
-                <span className="highlight-text">Business?</span>
-              </h2>
-              
-              <p className="cta-description">
-                Don't wait - protect your business with professional security services now and experience the peace of mind
-                that trusted, reliable protection can provide across Melbourne.
-              </p>
-              
-              <div className="cta-buttons">
-                <a href="/quote" className="btn-primary">Get Security Quote</a>
-                <a href="tel:1300731173" className="btn-secondary">Call Now: 1300 73 11 73</a>
-              </div>
-              
-              <div className="testimonial-quote">
-                <blockquote>
-                  "Experience professional security excellence. Every service
-                  with Metro Guards is a commitment to your safety and peace of mind."
-                </blockquote>
-              </div>
-              
-              <div className="feature-highlights">
-                <div className="highlight-item">
-                  <div className="highlight-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22S2 16 2 8C2 5.8 3.8 4 6 4C8.2 4 10 5.8 10 8H14C14 5.8 15.8 4 18 4C20.2 4 22 5.8 22 8C22 16 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <h3>Trusted Security</h3>
-                  <p>Licensed Guards</p>
-                </div>
-                
-                <div className="highlight-item">
-                  <div className="highlight-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <h3>24/7 Protection</h3>
-                  <p>Always On Guard</p>
-                </div>
-                
-                <div className="highlight-item">
-                  <div className="highlight-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5.03 7.03 1 12 1S21 5.03 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <h3>Melbourne Wide</h3>
-                  <p>All Suburbs Covered</p>
-                </div>
-                
-                <div className="highlight-item">
-                  <div className="highlight-icon">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 16.92V19.92C22 20.52 21.53 21.01 20.92 21.01C9.84 21.01 1 12.17 1 1.08C1 0.47 1.47 0 2.08 0H5.09C5.7 0 6.18 0.47 6.18 1.08C6.18 3.25 6.65 5.31 7.52 7.18C7.7 7.57 7.59 8.04 7.26 8.3L5.84 9.32C7.1 12.22 9.78 14.9 12.68 16.16L13.7 14.74C13.96 14.41 14.43 14.3 14.82 14.48C16.69 15.35 18.75 15.82 20.92 15.82C21.53 15.82 22 16.31 22 16.92Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <h3>Rapid Response</h3>
-                  <p>Emergency Ready</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            .form-row {
+              grid-template-columns: 1fr;
+            }
+
+            .form-footer {
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+
+            .cta-buttons {
+              flex-direction: column;
+              align-items: center;
+            }
+
+            .form-header {
+              padding: 50px 40px 35px 40px;
+            }
+
+            .form-header h2 {
+              font-size: 2.5rem;
+            }
+
+            .contact-form {
+              padding: 50px 40px;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .classic-hero-section {
+              padding: 60px 0;
+            }
+
+            .hero-title {
+              font-size: 2rem;
+            }
+
+            .hero-stats {
+              flex-direction: column;
+              gap: 20px;
+            }
+
+            .form-wrapper {
+              margin: 0 15px;
+            }
+
+            .form-header {
+              padding: 40px 30px 30px 30px;
+            }
+
+            .form-header h2 {
+              font-size: 2rem;
+            }
+
+            .form-header p {
+              font-size: 1rem;
+            }
+
+            .contact-form {
+              padding: 40px 30px;
+            }
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+              padding: 18px 20px;
+              font-size: 1rem;
+            }
+
+            .submit-btn {
+              padding: 18px 35px;
+              font-size: 1rem;
+              min-width: 200px;
+            }
+
+            .privacy-notice {
+              flex-direction: column;
+              text-align: center;
+            }
+
+            .section-title {
+              font-size: 2rem;
+            }
+
+            .cta-content h2 {
+              font-size: 2rem;
+            }
+          }
+        `}</style>
       </Layout>
     </>
   )
