@@ -4,10 +4,6 @@ import { useState, useEffect } from 'react'
 import Accrediation10 from "@/components/accrediation10"
 import Subscribe from "@/components/homepages/home1/Subscribe"
 
-export const metadata = {
-  title: 'Conditions of Hire - Metropolitan Security Services Melbourne',
-  description: 'Review the conditions of hire for Metropolitan Security\'s professional security guard services in Melbourne.',
-}
 
 export default function ConditionsOfHirePage() {
     const [activeSection, setActiveSection] = useState('overview');

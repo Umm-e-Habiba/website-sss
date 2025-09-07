@@ -6,10 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Accreditation from "@/components/accrediation10";
 import Subscribe from "@/components/homepages/home1/Subscribe";
 
-export const metadata = {
-    title: "Security Services Booking Form - Professional Guard Services | MetroGuards Australia",
-    description: "Complete booking form for professional security services across Australia. Detailed service requirements, client information, invoicing details, and secure payment options.",
-};
 
 // Enhanced MultiSelectDropdown component (same as in Get Quotation page)
 const MultiSelectDropdown = ({ options, selectedValues, onChange, placeholder, name }) => {

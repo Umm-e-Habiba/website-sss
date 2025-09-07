@@ -6,10 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Accreditation from "@/components/accrediation10";
 import Subscribe from "@/components/homepages/home1/Subscribe";
 
-export const metadata = {
-    title: "Contractor Declaration Form - Compliance Requirements | MetroGuards Australia",
-    description: "Complete contractor declaration form for security service providers. Ensure compliance with regulations, insurance, licensing, and employment obligations in Australia.",
-};
 
 
 export default function ContractorDeclarationPage() {

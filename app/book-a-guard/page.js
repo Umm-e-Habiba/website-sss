@@ -6,10 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Accreditation from "@/components/accrediation10";
 import Subscribe from "@/components/homepages/home1/Subscribe";
 
-export const metadata = {
-    title: "Book a Guard - Immediate Security Services | MetroGuards Australia",
-    description: "Book professional security guards instantly in Melbourne & Sydney. 24/7 availability, licensed guards, fast response. Get immediate security coverage for your property or event.",
-};
 
 export default function BookGuardPage() {
     const [loading, setLoading] = useState(false);

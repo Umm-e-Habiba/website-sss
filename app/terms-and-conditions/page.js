@@ -4,10 +4,6 @@ import { useState } from 'react'
 import Accrediation10 from "@/components/accrediation10"
 import Subscribe from "@/components/homepages/home1/Subscribe"
 
-export const metadata = {
-  title: 'Terms & Conditions - Metropolitan Security Services Melbourne',
-  description: 'Read the terms and conditions for Metropolitan Security\'s professional security services in Melbourne.',
-}
 
 export default function TermsConditionsPage() {
     const [activeSection, setActiveSection] = useState('definitions');

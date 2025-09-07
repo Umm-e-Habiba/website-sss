@@ -6,10 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Accreditation from "@/components/accrediation10";
 import Subscribe from "@/components/homepages/home1/Subscribe";
 
-export const metadata = {
-    title: "Incident Report & Feedback Form - Security Event Reporting | MetroGuards Australia",
-    description: "Submit incident reports and feedback for security events, safety matters, equipment issues, and operational concerns. Professional incident management for security personnel.",
-};
 
 export default function IncidentReportPage() {
     const [loading, setLoading] = useState(false);
