@@ -106,7 +106,7 @@ export default function RetailSecurityPage() {
                                             style={{
                                                 color: '#1e2247',
                                                 lineHeight: '1.1',
-                                                fontSize: 'clamp(2.5rem, 5vw, 2rem)'
+                                                fontSize: '3rem'
                                             }}
                                         >
                                             Ensuring Protection for Your Business with Retail Security Solutions

@@ -7,6 +7,18 @@ export default function TawkLoader() {
     // prevent duplicate inserts on hot reload/navigation
     if (document.getElementById("tawk-script")) return;
 
+    // define Tawk_API before loading the script
+    (function () {
+      // @ts-ignore
+      window.Tawk_API = window.Tawk_API || {};
+      // @ts-ignore
+      window.Tawk_API.onLoad = function () {
+        // keep widget minimized on page load
+        // @ts-ignore
+        window.Tawk_API.minimize();
+      };
+    })();
+
     const s1 = document.createElement("script");
     s1.id = "tawk-script";
     s1.async = true;
@@ -17,12 +29,11 @@ export default function TawkLoader() {
     const s0 = document.getElementsByTagName("script")[0];
     s0?.parentNode?.insertBefore(s1, s0);
 
-    // optional cleanup on unmount:
+    // optional cleanup on unmount
     return () => {
       s1.remove();
-      // If Tawk attaches globals, you can also clean them if needed:
-      // // @ts-ignore
-      // delete window.Tawk_API;
+      // @ts-ignore
+      delete window.Tawk_API;
     };
   }, []);
 

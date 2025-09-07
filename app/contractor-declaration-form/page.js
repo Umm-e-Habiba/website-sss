@@ -3,6 +3,14 @@ import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Accreditation from "@/components/accrediation10";
+import Subscribe from "@/components/homepages/home1/Subscribe";
+
+export const metadata = {
+    title: "Contractor Declaration Form - Compliance Requirements | MetroGuards Australia",
+    description: "Complete contractor declaration form for security service providers. Ensure compliance with regulations, insurance, licensing, and employment obligations in Australia.",
+};
+
 
 export default function ContractorDeclarationPage() {
     const [loading, setLoading] = useState(false);
@@ -35,52 +43,392 @@ export default function ContractorDeclarationPage() {
     return (
         <>
             <ToastContainer position="bottom-right" autoClose={3000} />
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="CONTRACTOR DECLARATION FORM">
-                <div className="section-padding" style={{ backgroundColor: "#fff", minHeight: "100vh" }}>
+            <Layout 
+                headerStyle={1} 
+                footerStyle={1} 
+                headTitle="Contractor Declaration Form - Compliance Requirements"
+                breadcrumbTitle="Contractor Declaration Form"
+                mainTitle="Contractor Declaration & Compliance Form"
+                subtitle="Regulatory compliance • Insurance verification • License validation"
+                backgroundImage="/assets/img/about/values.jpg"
+            >
+                
+                {/* Classic Hero Section */}
+                <section className="classic-hero-section" style={{
+                    background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+                    borderBottom: '3px solid #eceff3',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    padding: '60px 0'
+                }}>
+                    <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+                        <div className="row align-items-center">
+                            <div className="col-lg-8 mx-auto text-center">
+                                <div className="hero-content">
+                                    <div className="hero-badge" style={{
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                        color: '#ffffff',
+                                        padding: '8px 20px',
+                                        borderRadius: '25px',
+                                        fontSize: '0.9rem',
+                                        fontWeight: '500',
+                                        marginBottom: '20px',
+                                        border: '2px solid rgba(253, 197, 26, 0.3)'
+                                    }}>
+                                        <i className="bi bi-file-earmark-ruled" style={{ color: '#fdc51a', marginRight: '8px', fontSize: '1.1rem' }}></i>
+                                        Legal Compliance Declaration
+                                    </div>
+
+                                    <h1 style={{
+                                        fontSize: 'clamp(2.2rem, 4vw, 3rem)',
+                                        fontWeight: '700',
+                                        lineHeight: '1.2',
+                                        color: '#1e2247',
+                                        marginBottom: '20px',
+                                        fontFamily: 'serif'
+                                    }}>
+                                        Contractor <span style={{ color: '#fdc51a' }}>Declaration Form</span>
+                                    </h1>
+
+                                    <p style={{
+                                        fontSize: '1.1rem',
+                                        color: '#6c757d',
+                                        lineHeight: '1.6',
+                                        marginBottom: '30px',
+                                        maxWidth: '600px',
+                                        margin: '0 auto 30px'
+                                    }}>
+                                        Ensure regulatory compliance and maintain professional standards. Complete this 
+                                        declaration to verify adherence to licensing, insurance, and employment obligations.
+                                    </p>
+
+                                    <div className="compliance-highlights" style={{
+                                        display: 'flex',
+                                        flexWrap: 'wrap',
+                                        justifyContent: 'center',
+                                        gap: '20px',
+                                        marginBottom: '30px'
+                                    }}>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                            <i className="bi bi-shield-check" style={{ color: '#28a745', fontSize: '1.2rem' }}></i>
+                                            <span style={{ color: '#1e2247', fontWeight: '500' }}>Compliance Verification</span>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                            <i className="bi bi-file-earmark-check" style={{ color: '#007bff', fontSize: '1.2rem' }}></i>
+                                            <span style={{ color: '#1e2247', fontWeight: '500' }}>Legal Documentation</span>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                            <i className="bi bi-award" style={{ color: '#fdc51a', fontSize: '1.2rem' }}></i>
+                                            <span style={{ color: '#1e2247', fontWeight: '500' }}>Professional Standards</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Declaration Form Section */}
+                <section className="declaration-form-section" style={{
+                    background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+                    padding: '60px 0'
+                }}>
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-10">
-                                <div className="contractor-form p-5 glassmorphism-card-with-bg">
-                                    <h2 className="mb-4 text-center" style={{ color: '#fff' }}>CONTRACTOR DECLARATION FORM</h2>
+                                <div style={{
+                                    background: '#ffffff',
+                                    borderRadius: '20px',
+                                    padding: '40px',
+                                    boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)',
+                                    border: '2px solid #eceff3',
+                                    position: 'relative',
+                                    overflow: 'hidden'
+                                }}>
+                                    <div className="text-center mb-5">
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                            borderRadius: '50%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            margin: '0 auto 20px',
+                                            boxShadow: '0 8px 25px rgba(253, 197, 26, 0.3)'
+                                        }}>
+                                            <i className="bi bi-file-earmark-ruled" style={{ fontSize: '2rem', color: '#1e2247' }}></i>
+                                        </div>
+
+                                        <h2 style={{
+                                            color: '#1e2247',
+                                            fontWeight: '700',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Contractor Declaration & Compliance
+                                        </h2>
+
+                                        <p style={{
+                                            color: '#6c757d',
+                                            fontSize: '1rem',
+                                            maxWidth: '700px',
+                                            margin: '0 auto'
+                                        }}>
+                                            Please complete all sections accurately. This declaration ensures compliance with 
+                                            regulatory requirements and professional standards.
+                                        </p>
+                                    </div>
                                     <form onSubmit={handleSubmit} noValidate>
-                                        {/* Company Information */}
-                                        <div className="row mb-4">
-                                            <div className="col-md-6 mb-3">
-                                                <label htmlFor="companyName" className="form-label font-weight-bold" style={{ color: "#fff" }}>Company Name</label>
-                                                <input type="text" className="form-control p-3 glassmorphism-input" id="companyName" name="companyName" required />
+                                        {/* Company Information Section */}
+                                        <div className="form-section mb-5" style={{
+                                            background: 'rgba(30, 34, 71, 0.02)',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            padding: '30px',
+                                            position: 'relative'
+                                        }}>
+                                            <div className="section-header mb-4">
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        marginRight: '15px',
+                                                        boxShadow: '0 4px 15px rgba(0, 123, 255, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-building" style={{ fontSize: '1.3rem', color: '#ffffff' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <h4 style={{
+                                                            color: '#1e2247',
+                                                            fontWeight: '600',
+                                                            margin: '0',
+                                                            fontFamily: 'serif'
+                                                        }}>
+                                                            Company Information
+                                                        </h4>
+                                                        <p style={{ color: '#6c757d', margin: '0', fontSize: '0.9rem' }}>
+                                                            Primary business and registration details
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className="col-md-6 mb-3">
-                                                <label htmlFor="abnAcn" className="form-label font-weight-bold" style={{ color: "#fff" }}>ABN / ACN Number</label>
-                                                <input type="text" className="form-control p-3 glassmorphism-input" id="abnAcn" name="abnAcn" required />
+
+                                            <div className="row">
+                                                <div className="col-md-6 mb-4">
+                                                    <label htmlFor="companyName" className="classic-form-label">
+                                                        <i className="bi bi-briefcase" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Company Name <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control classic-form-input" 
+                                                        id="companyName" 
+                                                        name="companyName" 
+                                                        required 
+                                                        placeholder="Enter registered company name"
+                                                    />
+                                                </div>
+                                                <div className="col-md-6 mb-4">
+                                                    <label htmlFor="abnAcn" className="classic-form-label">
+                                                        <i className="bi bi-hash" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        ABN / ACN Number <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control classic-form-input" 
+                                                        id="abnAcn" 
+                                                        name="abnAcn" 
+                                                        required 
+                                                        placeholder="Australian Business/Company Number"
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
 
-                                        {/* Declaration Statement */}
-                                        <div className="declaration-intro mb-4 p-3 glassmorphism-card">
-                                            <div className="row">
-                                                <div className="col-md-4 mb-2">
-                                                    <label htmlFor="declarantName" className="form-label font-weight-bold" style={{ color: "#fff" }}>I,</label>
-                                                    <input type="text" className="form-control p-3 glassmorphism-input" id="declarantName" name="declarantName" placeholder="Full Name" required />
+                                        {/* Declaration Statement Section */}
+                                        <div className="form-section mb-5" style={{
+                                            background: 'rgba(253, 197, 26, 0.05)',
+                                            borderRadius: '15px',
+                                            border: '2px solid rgba(253, 197, 26, 0.2)',
+                                            padding: '30px',
+                                            position: 'relative'
+                                        }}>
+                                            <div className="section-header mb-4">
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        marginRight: '15px',
+                                                        boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-person-badge" style={{ fontSize: '1.3rem', color: '#1e2247' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <h4 style={{
+                                                            color: '#1e2247',
+                                                            fontWeight: '600',
+                                                            margin: '0',
+                                                            fontFamily: 'serif'
+                                                        }}>
+                                                            Declaration Statement
+                                                        </h4>
+                                                        <p style={{ color: '#6c757d', margin: '0', fontSize: '0.9rem' }}>
+                                                            Authorized representative and declaration date
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                                <div className="col-md-4 mb-2">
-                                                    <label htmlFor="position" className="form-label font-weight-bold" style={{ color: "#fff" }}>of the position,</label>
-                                                    <select className="form-control p-3 glassmorphism-input" id="position" name="position" required>
+                                            </div>
+
+                                            <div className="row">
+                                                <div className="col-md-4 mb-4">
+                                                    <label htmlFor="declarantName" className="classic-form-label">
+                                                        <i className="bi bi-person" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        I, <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control classic-form-input" 
+                                                        id="declarantName" 
+                                                        name="declarantName" 
+                                                        placeholder="Enter your full name" 
+                                                        required 
+                                                    />
+                                                </div>
+                                                <div className="col-md-4 mb-4">
+                                                    <label htmlFor="position" className="classic-form-label">
+                                                        <i className="bi bi-award" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        in the position of <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <select className="form-control classic-form-input" id="position" name="position" required>
                                                         <option value="">Select Position</option>
                                                         <option value="Director">Director</option>
                                                         <option value="Company Secretary">Company Secretary</option>
                                                     </select>
                                                 </div>
-                                                <div className="col-md-4 mb-2">
-                                                    <label htmlFor="declarationDate" className="form-label font-weight-bold" style={{ color: "#fff" }}>state that as of the</label>
-                                                    <input type="date" className="form-control p-3 glassmorphism-input" id="declarationDate" name="declarationDate" required />
+                                                <div className="col-md-4 mb-4">
+                                                    <label htmlFor="declarationDate" className="classic-form-label">
+                                                        <i className="bi bi-calendar-date" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        state that as of <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="date" 
+                                                        className="form-control classic-form-input" 
+                                                        id="declarationDate" 
+                                                        name="declarationDate" 
+                                                        required 
+                                                    />
                                                 </div>
                                             </div>
-                                            <p className="mb-0 mt-3" style={{ color: "#fff" }}><strong>the following Compliance requirements have been met for the period 30 days from the current date.</strong></p>
+
+                                            <div className="declaration-notice" style={{
+                                                background: 'rgba(30, 34, 71, 0.05)',
+                                                borderRadius: '10px',
+                                                padding: '20px',
+                                                border: '1px solid rgba(30, 34, 71, 0.1)',
+                                                marginTop: '20px'
+                                            }}>
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'flex-start',
+                                                    gap: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        background: 'linear-gradient(135deg, #17a2b8 0%, #138496 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        flexShrink: '0'
+                                                    }}>
+                                                        <i className="bi bi-info-circle" style={{ color: '#ffffff', fontSize: '1.1rem' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <p style={{
+                                                            color: '#1e2247',
+                                                            margin: '0',
+                                                            fontSize: '0.95rem',
+                                                            lineHeight: '1.5',
+                                                            fontWeight: '600'
+                                                        }}>
+                                                            <strong>Declaration Statement:</strong> The following compliance requirements have been met for the period of 30 days from the current date.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
-                                        {/* Compliance Questions */}
-                                        <div className="compliance-questions mb-4">
-                                            <h4 className="mb-3" style={{ color: '#fff' }}>Compliance Requirements</h4>
+                                        {/* Compliance Questions Section */}
+                                        <div className="compliance-questions-wrapper form-section mb-5" style={{
+                                            background: 'rgba(40, 167, 69, 0.05)',
+                                            borderRadius: '15px',
+                                            border: '2px solid rgba(40, 167, 69, 0.2)',
+                                            padding: '30px',
+                                            position: 'relative'
+                                        }}>
+                                            <div className="section-header mb-4">
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        marginRight: '15px',
+                                                        boxShadow: '0 4px 15px rgba(40, 167, 69, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-shield-check" style={{ fontSize: '1.3rem', color: '#ffffff' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <h4 style={{
+                                                            color: '#1e2247',
+                                                            fontWeight: '600',
+                                                            margin: '0',
+                                                            fontFamily: 'serif'
+                                                        }}>
+                                                            Compliance Requirements
+                                                        </h4>
+                                                        <p style={{ color: '#6c757d', margin: '0', fontSize: '0.9rem' }}>
+                                                            24 compliance questions requiring yes/no responses
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="compliance-questions-container" style={{
+                                                background: '#ffffff',
+                                                borderRadius: '12px',
+                                                padding: '25px',
+                                                border: '1px solid #eceff3'
+                                            }}>
                                             
                                             {[
                                                 { id: 1, text: "Company Registration is current (ACN/ABN)?" },
@@ -108,82 +456,663 @@ export default function ContractorDeclarationPage() {
                                                 { id: 23, text: "Has your Company provided a safe and hygienic working environment in accordance with OHS Laws?" },
                                                 { id: 24, text: "Has your Company conducted its business in a manner that is compliant with Modern Slavery Laws and has done all things required or necessary to mitigate or reduce modern slavery risks in your operations or supply chains?" }
                                             ].map((question) => (
-                                                <div key={question.id} className="compliance-item mb-3 p-3 glassmorphism-question-card">
+                                                <div key={question.id} className="compliance-item mb-3" style={{
+                                                    background: '#ffffff',
+                                                    borderRadius: '12px',
+                                                    border: '2px solid #eceff3',
+                                                    padding: '20px',
+                                                    transition: 'all 0.3s ease',
+                                                    position: 'relative'
+                                                }}>
                                                     <div className="row align-items-center">
                                                         <div className="col-lg-8 mb-2 mb-lg-0">
-                                                            <label className="form-label mb-0" style={{ color: "#fff" }}>
-                                                                <strong>{question.id}.</strong> {question.text}
+                                                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                                                                <div style={{
+                                                                    width: '28px',
+                                                                    height: '28px',
+                                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                                    borderRadius: '50%',
+                                                                    display: 'flex',
+                                                                    alignItems: 'center',
+                                                                    justifyContent: 'center',
+                                                                    color: '#ffffff',
+                                                                    fontSize: '0.8rem',
+                                                                    fontWeight: 'bold',
+                                                                    flexShrink: '0',
+                                                                    marginTop: '2px'
+                                                                }}>
+                                                                    {question.id}
+                                                                </div>
+                                                                <label className="form-label mb-0" style={{
+                                                                    color: '#1e2247',
+                                                                    fontSize: '0.95rem',
+                                                                    lineHeight: '1.4',
+                                                                    fontWeight: '500'
+                                                                }}>
+                                                                    {question.text}
                                                             </label>
+                                                            </div>
                                                         </div>
                                                         <div className="col-lg-4">
-                                                            <div className="d-flex justify-content-lg-end">
-                                                                <div className="form-check form-check-inline">
-                                                                    <input className="form-check-input" type="radio" name={`question${question.id}`} id={`q${question.id}yes`} value="yes" required />
-                                                                    <label className="form-check-label" style={{ color: "#fff" }} htmlFor={`q${question.id}yes`}>Yes</label>
+                                                            <div className="d-flex justify-content-lg-end gap-3">
+                                                                <div className="form-check">
+                                                                    <input 
+                                                                        className="form-check-input classic-radio" 
+                                                                        type="radio" 
+                                                                        name={`question${question.id}`} 
+                                                                        id={`q${question.id}yes`} 
+                                                                        value="yes" 
+                                                                        required 
+                                                                        style={{
+                                                                            width: '18px',
+                                                                            height: '18px',
+                                                                            border: '2px solid #28a745',
+                                                                            backgroundColor: '#fafafa'
+                                                                        }}
+                                                                    />
+                                                                    <label className="form-check-label" style={{ 
+                                                                        color: '#1e2247',
+                                                                        fontWeight: '500',
+                                                                        marginLeft: '8px'
+                                                                    }} htmlFor={`q${question.id}yes`}>
+                                                                        Yes
+                                                                    </label>
                                                                 </div>
-                                                                <div className="form-check form-check-inline">
-                                                                    <input className="form-check-input" type="radio" name={`question${question.id}`} id={`q${question.id}no`} value="no" required />
-                                                                    <label className="form-check-label" style={{ color: "#fff" }} htmlFor={`q${question.id}no`}>No</label>
+                                                                <div className="form-check">
+                                                                    <input 
+                                                                        className="form-check-input classic-radio" 
+                                                                        type="radio" 
+                                                                        name={`question${question.id}`} 
+                                                                        id={`q${question.id}no`} 
+                                                                        value="no" 
+                                                                        required 
+                                                                        style={{
+                                                                            width: '18px',
+                                                                            height: '18px',
+                                                                            border: '2px solid #dc3545',
+                                                                            backgroundColor: '#fafafa'
+                                                                        }}
+                                                                    />
+                                                                    <label className="form-check-label" style={{ 
+                                                                        color: '#1e2247',
+                                                                        fontWeight: '500',
+                                                                        marginLeft: '8px'
+                                                                    }} htmlFor={`q${question.id}no`}>
+                                                                        No
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ))}
-                                        </div>
-
-                                        {/* Declaration Text */}
-                                        <div className="declaration-text mb-4 p-4 glassmorphism-card">
-                                            <p className="mb-3" style={{ lineHeight: '1.6', color: "#fff" }}>
-                                                <strong>I declare</strong> the above information is correct and that should any information supplied be misleading or incorrect may result in the termination of the Agreement with Metropolitan Guard Services.
-                                            </p>
-                                            <p className="mb-3" style={{ lineHeight: '1.6', color: "#fff" }}>
-                                                I also agree that to ensure our Company is complying with the law Metropolitan Guard Services can do a compliance audit regularly or on a random basis.
-                                            </p>
-                                            <p className="mb-0" style={{ lineHeight: '1.6', color: "#fff" }}>
-                                                I am aware the audit will consist of documentation and proof relating to our Company, employees and contractor payments, rate of pay, hours worked, superannuation payments, employee tax payments, GST payments, insurance policies and licenses...
-                                                <a href="#" className="text-decoration-none" style={{ color: '#FDC51A' }}> read more...</a>
-                                            </p>
-                                        </div>
-
-                                        {/* Signature Field */}
-                                        <div className="row mb-4">
-                                            <div className="col-md-6 mb-3">
-                                                <label htmlFor="signature" className="form-label font-weight-bold" style={{ color: "#fff" }}>Signature</label>
-                                                <input type="text" className="form-control p-3 glassmorphism-input" id="signature" name="signature" placeholder="Type your full name as digital signature" required />
-                                            </div>
-                                            <div className="col-md-6 mb-3">
-                                                <label htmlFor="signatureDate" className="form-label font-weight-bold" style={{ color: "#fff" }}>Date</label>
-                                                <input type="date" className="form-control p-3 glassmorphism-input" id="signatureDate" name="signatureDate" required />
                                             </div>
                                         </div>
 
-                                        <div className="col-12 text-center">
+                                        {/* Declaration Text Section */}
+                                        <div className="form-section mb-5" style={{
+                                            background: 'rgba(220, 53, 69, 0.05)',
+                                            borderRadius: '15px',
+                                            border: '2px solid rgba(220, 53, 69, 0.2)',
+                                            padding: '30px',
+                                            position: 'relative'
+                                        }}>
+                                            <div className="section-header mb-4">
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        marginRight: '15px',
+                                                        boxShadow: '0 4px 15px rgba(220, 53, 69, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-exclamation-triangle" style={{ fontSize: '1.3rem', color: '#ffffff' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <h4 style={{
+                                                            color: '#1e2247',
+                                                            fontWeight: '600',
+                                                            margin: '0',
+                                                            fontFamily: 'serif'
+                                                        }}>
+                                                            Legal Declaration & Agreement
+                                                        </h4>
+                                                        <p style={{ color: '#6c757d', margin: '0', fontSize: '0.9rem' }}>
+                                                            Terms, conditions, and compliance audit consent
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="declaration-content" style={{
+                                                background: '#ffffff',
+                                                borderRadius: '12px',
+                                                padding: '25px',
+                                                border: '1px solid #eceff3'
+                                            }}>
+                                                <p className="mb-3" style={{ 
+                                                    lineHeight: '1.6', 
+                                                    color: '#1e2247',
+                                                    fontSize: '0.95rem'
+                                                }}>
+                                                    <strong style={{ color: '#dc3545' }}>I declare</strong> the above information is correct and that should any information supplied be misleading or incorrect may result in the termination of the Agreement with Metropolitan Guard Services.
+                                                </p>
+                                                <p className="mb-3" style={{ 
+                                                    lineHeight: '1.6', 
+                                                    color: '#1e2247',
+                                                    fontSize: '0.95rem'
+                                                }}>
+                                                    I also agree that to ensure our Company is complying with the law Metropolitan Guard Services can do a compliance audit regularly or on a random basis.
+                                                </p>
+                                                <p className="mb-0" style={{ 
+                                                    lineHeight: '1.6', 
+                                                    color: '#1e2247',
+                                                    fontSize: '0.95rem'
+                                                }}>
+                                                    I am aware the audit will consist of documentation and proof relating to our Company, employees and contractor payments, rate of pay, hours worked, superannuation payments, employee tax payments, GST payments, insurance policies and licenses...
+                                                    <a href="#" className="text-decoration-none" style={{ color: '#fdc51a', fontWeight: '500' }}> read more...</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Signature Section */}
+                                        <div className="form-section mb-5" style={{
+                                            background: 'rgba(111, 66, 193, 0.05)',
+                                            borderRadius: '15px',
+                                            border: '2px solid rgba(111, 66, 193, 0.2)',
+                                            padding: '30px',
+                                            position: 'relative'
+                                        }}>
+                                            <div className="section-header mb-4">
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    marginBottom: '15px'
+                                                }}>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #6f42c1 0%, #5a2d91 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        marginRight: '15px',
+                                                        boxShadow: '0 4px 15px rgba(111, 66, 193, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-pen" style={{ fontSize: '1.3rem', color: '#ffffff' }}></i>
+                                                    </div>
+                                                    <div>
+                                                        <h4 style={{
+                                                            color: '#1e2247',
+                                                            fontWeight: '600',
+                                                            margin: '0',
+                                                            fontFamily: 'serif'
+                                                        }}>
+                                                            Digital Signature
+                                                        </h4>
+                                                        <p style={{ color: '#6c757d', margin: '0', fontSize: '0.9rem' }}>
+                                                            Authorized signature and confirmation date
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="row">
+                                                <div className="col-md-6 mb-4">
+                                                    <label htmlFor="signature" className="classic-form-label">
+                                                        <i className="bi bi-signature" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Digital Signature <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control classic-form-input" 
+                                                        id="signature" 
+                                                        name="signature" 
+                                                        placeholder="Type your full name as digital signature" 
+                                                        required 
+                                                    />
+                                                </div>
+                                                <div className="col-md-6 mb-4">
+                                                    <label htmlFor="signatureDate" className="classic-form-label">
+                                                        <i className="bi bi-calendar-check" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Signature Date <span style={{ color: '#dc3545' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="date" 
+                                                        className="form-control classic-form-input" 
+                                                        id="signatureDate" 
+                                                        name="signatureDate" 
+                                                        required 
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-12 text-center mb-4">
                                             <button
                                                 type="submit"
                                                 className="btn btn-primary btn-lg px-5 py-3"
                                                 style={{
-                                                    borderRadius: "10px",
-                                                    fontSize: "18px",
-                                                    fontWeight: "bold",
-                                                    backgroundColor: "#FDC51A",
-                                                    border: "none",
-                                                    color: "#1E2247"
+                                                    borderRadius: "12px",
+                                                    fontSize: "1.1rem",
+                                                    fontWeight: "600",
+                                                    background: "linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)",
+                                                    border: "2px solid #fdc51a",
+                                                    color: "#1e2247",
+                                                    boxShadow: "0 4px 15px rgba(253, 197, 26, 0.3)",
+                                                    transition: "all 0.3s ease",
+                                                    position: "relative",
+                                                    minWidth: "200px"
                                                 }}
                                                 disabled={loading}
                                                 aria-busy={loading}
                                             >
-                                                {loading ? "SENDING..." : "SEND REQUEST"} <span><i className="bi bi-send" /></span>
+                                                {loading ? (
+                                                    <>
+                                                        <span style={{
+                                                            display: 'inline-block',
+                                                            width: '20px',
+                                                            height: '20px',
+                                                            border: '2px solid #1e2247',
+                                                            borderTop: '2px solid transparent',
+                                                            borderRadius: '50%',
+                                                            animation: 'spin 1s linear infinite',
+                                                            marginRight: '10px'
+                                                        }}></span>
+                                                        SUBMITTING...
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        SUBMIT DECLARATION 
+                                                        <i className="bi bi-check-circle" style={{ marginLeft: '8px' }}></i>
+                                                    </>
+                                                )}
                                             </button>
+
+                                            <div className="submission-notice mt-3" style={{
+                                                background: 'rgba(23, 162, 184, 0.1)',
+                                                borderRadius: '8px',
+                                                padding: '15px',
+                                                border: '1px solid rgba(23, 162, 184, 0.2)',
+                                                maxWidth: '500px',
+                                                margin: '0 auto'
+                                            }}>
+                                                <div style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    gap: '10px'
+                                                }}>
+                                                    <i className="bi bi-shield-lock" style={{ color: '#17a2b8', fontSize: '1.1rem' }}></i>
+                                                    <p style={{
+                                                        color: '#1e2247',
+                                                        margin: '0',
+                                                        fontSize: '0.9rem',
+                                                        fontWeight: '500'
+                                                    }}>
+                                                        Your declaration will be securely processed and reviewed for compliance verification.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <style jsx>{`
+                    /* Classic Form Styling */
+                    .classic-form-input {
+                        border: 2px solid #eceff3 !important;
+                        border-radius: 8px !important;
+                        padding: 12px 15px !important;
+                        fontSize: 0.95rem !important;
+                        background-color: #fafafa !important;
+                        transition: all 0.3s ease !important;
+                        color: #495057 !important;
+                    }
+                    
+                    .classic-form-input::placeholder {
+                        color: #6c757d !important;
+                    }
+                    
+                    .classic-form-input:focus {
+                        border-color: #fdc51a !important;
+                        background-color: #ffffff !important;
+                        box-shadow: 0 0 0 3px rgba(253, 197, 26, 0.1) !important;
+                        color: #495057 !important;
+                        outline: none !important;
+                    }
+
+                    .classic-form-input:hover {
+                        border-color: rgba(253, 197, 26, 0.5) !important;
+                    }
+
+                    .classic-form-label {
+                        display: flex !important;
+                        align-items: center !important;
+                        color: #1e2247 !important;
+                        font-weight: 500 !important;
+                        margin-bottom: 8px !important;
+                        font-size: 0.95rem !important;
+                    }
+
+                    select.classic-form-input {
+                        appearance: none;
+                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                        background-repeat: no-repeat;
+                        background-position: right 1rem center;
+                        background-size: 1em;
+                    }
+
+                    select.classic-form-input option {
+                        background: #ffffff;
+                        color: #495057;
+                        padding: 10px;
+                    }
+
+                    /* Classic radio button styling */
+                    .classic-radio:checked {
+                        background-color: #fdc51a !important;
+                        border-color: #fdc51a !important;
+                    }
+
+                    .classic-radio:focus {
+                        box-shadow: 0 0 0 0.25rem rgba(253, 197, 26, 0.25) !important;
+                    }
+
+                    /* Question card hover effects */
+                    .compliance-item:hover {
+                        border-color: rgba(253, 197, 26, 0.5) !important;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+                        transform: translateY(-1px) !important;
+                    }
+
+                    /* Section styling */
+                    .form-section {
+                        position: relative;
+                    }
+
+                    .form-section::before {
+                        content: '';
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        width: 30px;
+                        height: 30px;
+                        background: linear-gradient(45deg, rgba(253, 197, 26, 0.1), rgba(30, 34, 71, 0.1));
+                        border-radius: 50%;
+                        z-index: 1;
+                    }
+
+                    /* Spinner animation */
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+
+                    /* Submit button hover effects */
+                    .btn:hover:not(:disabled) {
+                        background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important;
+                        border-color: #f39c12 !important;
+                        box-shadow: 0 6px 20px rgba(253, 197, 26, 0.4) !important;
+                        transform: translateY(-2px) !important;
+                    }
+
+                    .btn:active:not(:disabled) {
+                        transform: translateY(0px) !important;
+                    }
+
+                    .btn:disabled {
+                        opacity: 0.7 !important;
+                        cursor: not-allowed !important;
+                    }
+
+                    /* Responsive adjustments */
+                    @media (max-width: 768px) {
+                        .compliance-highlights {
+                            flex-direction: column !important;
+                            gap: 10px !important;
+                        }
+                        
+                        .compliance-item .d-flex {
+                            justify-content: center !important;
+                        }
+                    }
+
+                    /* Ensure glassmorphism elements are also styled properly */
+                    .glassmorphism-card {
+                        background: rgba(30, 34, 71, 0.02) !important;
+                        border-radius: 15px !important;
+                        border: 2px solid #eceff3 !important;
+                        padding: 30px !important;
+                        backdrop-filter: none !important;
+                        box-shadow: none !important;
+                    }
+
+                    /* Force visibility for compliance questions */
+                    .compliance-item {
+                        background: #ffffff !important;
+                        border: 2px solid #eceff3 !important;
+                        border-radius: 12px !important;
+                        padding: 20px !important;
+                        margin-bottom: 15px !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        display: block !important;
+                    }
+
+                    .compliance-item .form-label {
+                        color: #1e2247 !important;
+                        font-size: 0.95rem !important;
+                        line-height: 1.4 !important;
+                        font-weight: 500 !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        display: block !important;
+                    }
+
+                    .compliance-item .row {
+                        display: flex !important;
+                        align-items: center !important;
+                    }
+
+                    .compliance-item .col-lg-8 {
+                        display: block !important;
+                        visibility: visible !important;
+                    }
+
+                    .compliance-item .col-lg-4 {
+                        display: block !important;
+                        visibility: visible !important;
+                    }
+
+                    /* Ensure question text is visible */
+                    .compliance-item div[style*="flex"] {
+                        display: flex !important;
+                        align-items: flex-start !important;
+                        gap: 12px !important;
+                    }
+
+                    .compliance-item div[style*="background: linear-gradient"] {
+                        width: 28px !important;
+                        height: 28px !important;
+                        background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+                        border-radius: 50% !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        color: #ffffff !important;
+                        font-size: 0.8rem !important;
+                        font-weight: bold !important;
+                        flex-shrink: 0 !important;
+                        margin-top: 2px !important;
+                    }
+
+                    /* Radio buttons in compliance questions */
+                    .compliance-item .form-check-input {
+                        width: 18px !important;
+                        height: 18px !important;
+                        border-radius: 4px !important;
+                        margin-right: 8px !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+
+                    .compliance-item .form-check-label {
+                        color: #1e2247 !important;
+                        font-weight: 500 !important;
+                        margin-left: 8px !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+
+                    .compliance-item .d-flex {
+                        display: flex !important;
+                        gap: 15px !important;
+                    }
+
+                    /* Override any potential conflicting styles */
+                    .compliance-questions * {
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        color: inherit !important;
+                    }
+
+                    .compliance-questions .mb-3 {
+                        margin-bottom: 1rem !important;
+                    }
+
+                    .compliance-questions .form-check {
+                        display: block !important;
+                        min-height: 1.5rem !important;
+                        padding-left: 0 !important;
+                        margin-bottom: 0.125rem !important;
+                    }
+
+                    .compliance-questions .form-check-inline {
+                        display: inline-block !important;
+                        margin-right: 1rem !important;
+                    }
+
+                    /* Ensure all text content is dark */
+                    .compliance-questions, 
+                    .compliance-questions *,
+                    .compliance-item,
+                    .compliance-item * {
+                        color: #1e2247 !important;
+                    }
+
+                    /* Override any hidden or transparent elements */
+                    .compliance-questions [style*="color: #fff"],
+                    .compliance-questions [style*="color:#fff"],
+                    .compliance-questions [style*="color: white"],
+                    .compliance-questions [style*="color:white"] {
+                        color: #1e2247 !important;
+                    }
+
+                    /* Specific styling for compliance questions wrapper */
+                    .compliance-questions-wrapper {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+
+                    .compliance-questions-container {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        background: #ffffff !important;
+                        border-radius: 12px !important;
+                        padding: 25px !important;
+                        border: 1px solid #eceff3 !important;
+                    }
+
+                    .compliance-questions-container * {
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        display: initial !important;
+                    }
+
+                    .compliance-questions-container .compliance-item {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        background: #ffffff !important;
+                        margin-bottom: 15px !important;
+                        border: 2px solid #eceff3 !important;
+                        border-radius: 12px !important;
+                        padding: 20px !important;
+                    }
+
+                    .compliance-questions-container .row {
+                        display: flex !important;
+                        align-items: center !important;
+                    }
+
+                    .compliance-questions-container .col-lg-8,
+                    .compliance-questions-container .col-lg-4 {
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+
+                    .glassmorphism-input {
+                        border: 2px solid #eceff3 !important;
+                        border-radius: 8px !important;
+                        padding: 12px 15px !important;
+                        fontSize: 0.95rem !important;
+                        background-color: #fafafa !important;
+                        transition: all 0.3s ease !important;
+                        color: #495057 !important;
+                        backdrop-filter: none !important;
+                    }
+                    
+                    .glassmorphism-input::placeholder {
+                        color: #6c757d !important;
+                    }
+                    
+                    .glassmorphism-input:focus {
+                        border-color: #fdc51a !important;
+                        background-color: #ffffff !important;
+                        box-shadow: 0 0 0 3px rgba(253, 197, 26, 0.1) !important;
+                        color: #495057 !important;
+                        outline: none !important;
+                    }
+
+                    /* Update labels in glassmorphism sections */
+                    .glassmorphism-card .form-label {
+                        color: #1e2247 !important;
+                        font-weight: 500 !important;
+                        margin-bottom: 8px !important;
+                        font-size: 0.95rem !important;
+                    }
+
+                    select.glassmorphism-input {
+                        appearance: none;
+                        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                        background-repeat: no-repeat;
+                        background-position: right 1rem center;
+                        background-size: 1em;
+                    }
+
+                    select.glassmorphism-input option {
+                        background: #ffffff !important;
+                        color: #495057 !important;
+                        padding: 10px !important;
+                    }
+
                     .glassmorphism-card-with-bg {
                         background: linear-gradient(135deg, rgba(30, 34, 71, 0.9) 0%, rgba(15, 18, 41, 0.95) 100%);
                         backdrop-filter: blur(20px);
@@ -281,6 +1210,8 @@ export default function ContractorDeclarationPage() {
                         cursor: pointer;
                     }
                 `}</style>
+                <Accreditation />
+                <Subscribe />
             </Layout>
         </>
     )

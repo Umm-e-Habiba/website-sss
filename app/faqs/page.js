@@ -1,34 +1,73 @@
-import CounterUp from "@/components/elements/CounterUp"
-import Faq1 from "@/components/elements/Faq1"
+import ModernFaq from "@/components/elements/ModernFaq"
 import Layout from "@/components/layout/Layout"
-import Link from "next/link"
+import Accrediation10 from "@/components/accrediation10"
+import Subscribe from "@/components/homepages/home1/Subscribe"
 
 export default function Page() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="FAQs">
-                <div className="faqs-area section-padding inner-font-1 inner-faq-1">
+            <Layout 
+                headerStyle={1} 
+                footerStyle={1} 
+                headTitle="Frequently Asked Questions - Metropolitan Guards Security Services"
+                breadcrumbTitle="Frequently Asked Questions"
+                mainTitle="Everything You Need to Know About <span style='color: #fdc51a; background: linear-gradient(135deg, #fdc51a 0%, #f39c12 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>Metropolitan Guards</span>"
+                subtitle="Find comprehensive answers to common questions about our security services, licensing, coverage areas, and more. Our expert team is always ready to help with any additional inquiries."
+                backgroundImage="/assets/img/about/values.jpg"
+            >
+                {/* Hero Section */}
+                <div className="faq-hero-section">
                     <div className="container">
-                        <div className="row justify-content-center text-center">
-                            <div className="col-lg-10">
-                                <div className="heading2 mb-5">
-                                    <small className="heading-top inner-heading-top">
-                                        <img src="/assets/img/icons/hands.svg" alt="" />Our Success in Numbers
-                                    </small>
-                                    <h2>Question You Need To Know</h2>
-                                    <p>
-                                        Experienced, knowledgeable professionals in Property Tax Consulting. 
-                                        Our team of Property Tax Consultants is committed to saving you money 
-                                        by obtaining the lowest possible assessed value for your commercial or residential properties.
-                                    </p>
-                                </div>
-                                <div className="faqs justify-content-center">
-                                    <Faq1 />
-                                </div>
+                        <div className="hero-content">
+                            <div className="hero-badge">
+                                <img src="/assets/img/icons/hands.svg" alt="Hands Icon" />
+                                <span>Frequently Asked Questions</span>
+                            </div>
+                            <h1 className="hero-title">
+                                Everything You Need to Know About 
+                                <span className="highlight"> Metropolitan Guards</span>
+                            </h1>
+                            <p className="hero-description">
+                                Find answers to common questions about our security services, 
+                                licensing, coverage areas, and more. Can't find what you're looking for? 
+                                Our team is always ready to help.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="modern-faqs-section">
+                    <div className="container">
+                        <ModernFaq />
+                    </div>
+                </div>
+
+                {/* Stats Section */}
+                <div className="faq-stats-section">
+                    <div className="container">
+                        <div className="stats-grid">
+                            <div className="stat-item">
+                                <div className="stat-number">18+</div>
+                                <div className="stat-label">Years Experience</div>
+                            </div>
+                            <div className="stat-item">
+                                <div className="stat-number">1000+</div>
+                                <div className="stat-label">Happy Clients</div>
+                            </div>
+                            <div className="stat-item">
+                                <div className="stat-number">24/7</div>
+                                <div className="stat-label">Support Available</div>
+                            </div>
+                            <div className="stat-item">
+                                <div className="stat-number">100%</div>
+                                <div className="stat-label">Licensed & Insured</div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Accrediation10 />
+                <Subscribe />
             </Layout>
         </>
     );

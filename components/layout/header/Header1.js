@@ -1,12 +1,13 @@
 import Link from "next/link"
 import Menu from "../Menu"
 
-
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     return (
         <>
-           
-            <header id="header" className={`header header-2 header-absolute d-none d-lg-block ${scroll ? "sticky" : ""}`}>
+            <header 
+                id="header" 
+                className={`header header-2 header-absolute d-none d-lg-block ${scroll ? "sticky" : ""} relative z-[9999]`}
+            >
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -14,7 +15,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="header_menu_area">
                                     <div className="logo">
                                         <Link href="/">
-                                            <img src="/assets/img/logo/metroguards logo 2.png" alt="Metro Guards Logo" style={{ maxWidth: "130px", height: "65px" }} />
+                                            <img 
+                                                src="/assets/img/logo/metroguards logo 2.png" 
+                                                alt="Metro Guards Logo" 
+                                                style={{ maxWidth: "130px", height: "65px" }} 
+                                            />
                                         </Link>
                                     </div>
                                     <div className="main-menu">
@@ -50,35 +55,34 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                             Get Quote
                                         </Link>
                                         <a 
-                                        href="tel:1300731173" 
-                                        className="btn" 
-                                        style={{
-                                            backgroundColor: '#1E2247',
-                                            color: '#fff',
-                                            padding: '10px 20px',
-                                            borderRadius: '7px',
-                                            fontWeight: '600',
-                                            textDecoration: 'none',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '8px',
-                                            transition: 'all 0.3s ease',
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.backgroundColor = '#E7EDEB';
-                                            e.currentTarget.style.color = '#000';
-                                            e.currentTarget.querySelector('i').style.color = '#000';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.backgroundColor = '#1E2247';
-                                            e.currentTarget.style.color = '#fff';
-                                            e.currentTarget.querySelector('i').style.color = '#fff';
-                                        }}
+                                            href="tel:1300731173" 
+                                            className="btn" 
+                                            style={{
+                                                backgroundColor: '#1E2247',
+                                                color: '#fff',
+                                                padding: '10px 20px',
+                                                borderRadius: '7px',
+                                                fontWeight: '600',
+                                                textDecoration: 'none',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '8px',
+                                                transition: 'all 0.3s ease',
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.currentTarget.style.backgroundColor = '#E7EDEB';
+                                                e.currentTarget.style.color = '#000';
+                                                e.currentTarget.querySelector('i').style.color = '#000';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.currentTarget.style.backgroundColor = '#1E2247';
+                                                e.currentTarget.style.color = '#fff';
+                                                e.currentTarget.querySelector('i').style.color = '#fff';
+                                            }}
                                         >
-                                        <i className="fa fa-phone" />
-                                        1300731173
+                                            <i className="fa fa-phone" />
+                                            1300731173
                                         </a>
-
                                     </div>
                                 </div>
                             </div>

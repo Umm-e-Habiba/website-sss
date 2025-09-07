@@ -80,15 +80,6 @@ export default function Menu() {
                 <Link href="/blogs">Blog</Link>
             </li>
             <li className="dropdown-parrent">
-                <Link href="#">Service Area</Link>
-                <ul className="theme-dropdown">
-                    <li><Link href="security-guard-east-melbourne-vic-3002">Security Guard East Melbourne</Link></li>
-                    <li><Link href="security-guard-west-melbourne-vic-3003">Security Guard West Melbourne</Link></li>
-                    <li><Link href="security-guard-north-melbourne-vic-3051">Security Guard North Melbourne</Link></li>
-                    <li><Link href="security-guard-south-melbourne-vic-3205">Security Guard South Melbourne</Link></li>
-                </ul>
-            </li>
-            <li className="dropdown-parrent">
                 <Link href="/contacts">Contact</Link>
             </li>
         </ul>

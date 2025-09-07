@@ -4,6 +4,8 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MultiSelectDropdown from "./multiSelect";
+import Accreditation from "@/components/accrediation10"
+import Subscribe from "@/components/homepages/home1/Subscribe"
 
 
 
@@ -37,39 +39,269 @@ export default function CareersPage() {
     return (
         <>
         <ToastContainer position="bottom-right" autoClose={3000} />
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="CAREERS">
+            <Layout 
+                headerStyle={1} 
+                footerStyle={1} 
+                headTitle="Careers - Join Our Professional Security Team"
+                breadcrumbTitle="CAREERS"
+                mainTitle="Join Our Security Team"
+                subtitle="Build your career with Melbourne's leading security service provider. Explore opportunities and apply today."
+                backgroundImage="/assets/img/about/values.jpg"
+            >
                 <div>
-    
+                    {/*===== Enhanced Hero Section =====*/}
+                    <div className="classic-hero-section section-padding" style={{
+                        background: 'linear-gradient(135deg, #f8f9fa 0%, rgba(253, 197, 26, 0.05) 50%, #eceff3 100%)',
+                        borderBottom: '2px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        <div className="container">
+                            <div className="row align-items-center">
+                                <div className="col-lg-6">
+                                    <div className="hero-content">
+                                        <h1 style={{
+                                            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Build Your <span style={{ color: '#fdc51a' }}>Security</span> Career
+                                        </h1>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            lineHeight: '1.6',
+                                            marginBottom: '30px'
+                                        }}>
+                                            Join Melbourne's leading security service provider and advance your career 
+                                            in a dynamic, professional environment.
+                                        </p>
+                                        <a href="#application-form" 
+                                            className="btn"
+                                            style={{
+                                                backgroundColor: '#1e2247',
+                                                color: '#ffffff',
+                                                border: 'none',
+                                                borderRadius: '8px',
+                                                padding: '12px 25px',
+                                                fontWeight: '600',
+                                                textTransform: 'uppercase',
+                                                textDecoration: 'none'
+                                            }}
+                                        >
+                                            Apply Now
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="hero-visual">
+                                        <div style={{
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '40px',
+                                            borderRadius: '15px',
+                                            boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)',
+                                            textAlign: 'center'
+                                        }}>
+                                            <i className="bi bi-briefcase" style={{
+                                                fontSize: '4rem',
+                                                marginBottom: '20px',
+                                                display: 'block',
+                                                color: '#fdc51a'
+                                            }}></i>
+                                            <h3 style={{ fontWeight: '700', marginBottom: '15px' }}>Professional Careers</h3>
+                                            <p style={{ margin: '0', fontSize: '1rem', opacity: '0.9' }}>
+                                                Multiple positions available across Melbourne
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    {/*===== Application Form Section =====*/}
-                    <div id="application-form" className="application-section bg-28 section-padding">
+                    {/*===== Enhanced Application Form Section =====*/}
+                    <div id="application-form" className="application-section section-padding" style={{
+                        background: '#ffffff',
+                        borderTop: '1px solid #eceff3'
+                    }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px'
+                                        }}>
+                                            <i className="bi bi-file-person" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
                                             Start Your Application
-                                        </small>
-                                        <h2>JOB APPLICATION FORM</h2>
-                                        <p>Complete the form below to apply for a position with our security team</p>
+                                        </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Job <span style={{ color: '#fdc51a' }}>Application</span> Form
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            Complete the form below to apply for a position with our professional security team
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div className="row justify-content-center">
-                                <div className="col-lg-8">
-                                    <div className="application-form bg-white p-5 rounded shadow glassmorphism-card-with-bg">
+                                <div className="col-lg-9">
+                                    <div className="application-form" data-aos="fade-up" data-aos-delay="200" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '20px',
+                                        padding: '40px',
+                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                        border: '2px solid #eceff3',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Form Header */}
+                                        <div style={{
+                                            textAlign: 'center',
+                                            marginBottom: '30px',
+                                            paddingBottom: '20px',
+                                            borderBottom: '1px solid #eceff3'
+                                        }}>
+                                            <div style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                margin: '0 auto 15px',
+                                                boxShadow: '0 8px 25px rgba(253, 197, 26, 0.3)'
+                                            }}>
+                                                <i className="bi bi-person-plus" style={{ 
+                                                    color: '#1e2247', 
+                                                    fontSize: '1.5rem' 
+                                                }}></i>
+                                            </div>
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontWeight: '600',
+                                                marginBottom: '8px'
+                                            }}>Career Application</h4>
+                                            <p style={{
+                                                color: '#6c757d',
+                                                margin: '0',
+                                                fontSize: '0.95rem'
+                                            }}>All fields marked with <span style={{ color: '#dc3545' }}>*</span> are required</p>
+                                        </div>
                                         <form onSubmit={handleSubmit} encType="multipart/form-data" noValidate>
                                         <div className="row">
                                             <div className="col-md-6 mb-4">
-                                            <label htmlFor="firstName" className="form-label text-dark">First Name *</label>
-                                            <input type="text" className="form-control glassmorphism-input " id="firstName" name="firstName" required />
+                                                <div className="form-group">
+                                                    <label htmlFor="firstName" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-person" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        First Name <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control" 
+                                                        id="firstName" 
+                                                        name="firstName" 
+                                                        placeholder="Enter your first name"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa',
+                                                            transition: 'all 0.3s ease'
+                                                        }}
+                                                        onFocus={(e) => {
+                                                            e.target.style.borderColor = '#fdc51a';
+                                                            e.target.style.backgroundColor = '#ffffff';
+                                                            e.target.style.boxShadow = '0 0 0 3px rgba(253, 197, 26, 0.1)';
+                                                        }}
+                                                        onBlur={(e) => {
+                                                            e.target.style.borderColor = '#eceff3';
+                                                            e.target.style.backgroundColor = '#fafafa';
+                                                            e.target.style.boxShadow = 'none';
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
                                             <div className="col-md-6 mb-4">
-                                            <label htmlFor="lastName" className="form-label text-dark">Last Name *</label>
-                                            <input type="text" className="form-control glassmorphism-input " id="lastName" name="lastName" required />
+                                                <div className="form-group">
+                                                    <label htmlFor="lastName" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-person" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Last Name <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control" 
+                                                        id="lastName" 
+                                                        name="lastName" 
+                                                        placeholder="Enter your last name"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa',
+                                                            transition: 'all 0.3s ease'
+                                                        }}
+                                                        onFocus={(e) => {
+                                                            e.target.style.borderColor = '#fdc51a';
+                                                            e.target.style.backgroundColor = '#ffffff';
+                                                            e.target.style.boxShadow = '0 0 0 3px rgba(253, 197, 26, 0.1)';
+                                                        }}
+                                                        onBlur={(e) => {
+                                                            e.target.style.borderColor = '#eceff3';
+                                                            e.target.style.backgroundColor = '#fafafa';
+                                                            e.target.style.boxShadow = 'none';
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
                                             <div className="col-12 mb-4">
@@ -165,20 +397,61 @@ export default function CareersPage() {
                                             </div>
 
                                             <div className="col-12 text-center">
-                                            <button 
-                                                type="submit" 
-                                                className="btn px-4 py-3 text-white"
+                                            <button
+                                                type="submit"
                                                 disabled={loading}
+                                                className="btn"
                                                 style={{
-                                                backgroundColor: '#fdc51a',
-                                                border: 'none',
-                                                borderRadius: '5px',
-                                                fontWeight: '600',
-                                                textTransform: 'uppercase',
-                                                
+                                                    background: loading ? '#6c757d' : 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                    color: '#ffffff',
+                                                    border: 'none',
+                                                    borderRadius: '10px',
+                                                    padding: '15px 40px',
+                                                    fontSize: '0.95rem',
+                                                    fontWeight: '600',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    boxShadow: loading ? 'none' : '0 8px 25px rgba(30, 34, 71, 0.3)',
+                                                    cursor: loading ? 'not-allowed' : 'pointer',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    gap: '10px',
+                                                    margin: '0 auto',
+                                                    minWidth: '200px',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onMouseOver={(e) => {
+                                                    if (!loading) {
+                                                        e.target.style.transform = 'translateY(-2px)';
+                                                        e.target.style.boxShadow = '0 12px 35px rgba(30, 34, 71, 0.4)';
+                                                    }
+                                                }}
+                                                onMouseOut={(e) => {
+                                                    if (!loading) {
+                                                        e.target.style.transform = 'translateY(0)';
+                                                        e.target.style.boxShadow = '0 8px 25px rgba(30, 34, 71, 0.3)';
+                                                    }
                                                 }}
                                             >
-                                                {loading ? 'SENDING…' : 'SEND REQUEST'}<span><i className="bi bi-send"></i></span>
+                                                {loading ? (
+                                                    <>
+                                                        <div style={{
+                                                            width: '16px',
+                                                            height: '16px',
+                                                            border: '2px solid transparent',
+                                                            borderTop: '2px solid #ffffff',
+                                                            borderRadius: '50%',
+                                                            animation: 'spin 1s linear infinite'
+                                                        }}></div>
+                                                        Sending Application...
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <i className="bi bi-send"></i>
+                                                        Submit Application
+                                                    </>
+                                                )}
                                             </button>
                                             </div>
                                         </div>
@@ -290,62 +563,70 @@ export default function CareersPage() {
                         </div> */}
                     {/* </div> */}
                     <style jsx>{`
-            .glassmorphism-card-with-bg {
-              background:linear-gradient(330deg, rgb(84, 84, 100) 0%, rgb(15,18,41)100%);
-              backdrop-filter: blur(20px);
-              border-radius: 15px;
-              border: 1px solid rgba(255, 255, 255, 0.2);
-              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            }
-            
+            .classic-form-input,
             .glassmorphism-input {
-              background: rgba(255, 255, 255, 0.1);
-              backdrop-filter: blur(5px);
-              border: 1px solid rgba(255, 255, 255, 0.2);
-              color: #fff;
-              border-radius: 8px;
+              border: 2px solid #eceff3 !important;
+              border-radius: 8px !important;
+              padding: 12px 15px !important;
+              font-size: 0.95rem !important;
+              background-color: #fafafa !important;
+              transition: all 0.3s ease !important;
+              color: #1e2247 !important;
             }
             
-            .glassmorphism-input::placeholder {
-              color: rgba(255, 255, 255, 0.6);
-            }
-            
+            .classic-form-input:focus,
             .glassmorphism-input:focus {
-              background: rgba(255, 255, 255, 0.15);
-              border-color: rgba(255, 255, 255, 0.4);
-              box-shadow: 0 0 0 0.2rem rgba(253, 197, 26, 0.25);
-              color: #fff;
+              border-color: #fdc51a !important;
+              background-color: #ffffff !important;
+              box-shadow: 0 0 0 3px rgba(253, 197, 26, 0.1) !important;
+              outline: none !important;
+              color: #1e2247 !important;
             }
 
+            .classic-form-input::placeholder,
+            .glassmorphism-input::placeholder {
+              color: #6c757d !important;
+            }
+
+            .form-label.text-dark {
+              color: #1e2247 !important;
+              font-weight: 500 !important;
+              margin-bottom: 8px !important;
+            }
+
+            .form-check-label {
+              color: #1e2247 !important;
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+
+            select.classic-form-input,
             select.glassmorphism-input {
-              appearance: none;
-              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-              background-repeat: no-repeat;
-              background-position: right 1rem center;
-              background-size: 1em;
+              appearance: none !important;
+              background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+              background-repeat: no-repeat !important;
+              background-position: right 1rem center !important;
+              background-size: 1em !important;
             }
 
-            /* Fix for dropdown options text color */
+            select.classic-form-input option,
             select.glassmorphism-input option {
-              background: #1E2247;
-              color: #fff;
-              padding: 10px;
+              background: #ffffff !important;
+              color: #1e2247 !important;
+              padding: 10px !important;
             }
 
-            /* For Firefox */
-            select.glassmorphism-input option:checked {
-              background: #fdc51a;
-              color: #1E2247;
-            }
-
-            /* For Webkit browsers (Chrome, Safari) */
-            select.glassmorphism-input option:checked,
-            select.glassmorphism-input option:hover {
-              background: #fdc51a !important;
-              color: #1E2247 !important;
+            textarea.glassmorphism-input {
+              resize: vertical !important;
+              min-height: 120px !important;
             }
           `}</style>
                 </div>
+                <Accreditation />
+                <Subscribe />
             </Layout>
         </>
     )

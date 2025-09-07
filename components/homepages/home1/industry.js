@@ -1,621 +1,192 @@
 "use client";
 
-import { Plane, Building2, GraduationCap, Landmark } from "lucide-react"
+import { Store, ShoppingCart, Warehouse, Gem, Building2, Hospital } from "lucide-react"
 
-const industries = [
-  {
-    title: "Aviation &\nMaritime",
-    icon: Plane,
-  },
-  {
-    title: "Commercial\nProperty",
-    icon: Building2,
-  },
-  {
-    title: "Education",
-    icon: GraduationCap,
-  },
-  {
-    title: "Government",
-    icon: Landmark,
-  },
-]
+
 
 export default function Home() {
   return (
-    <main className="bg-background" style={{paddingTop: '0px', paddingBottom: '80px'}}>
-      <div className="responsive-container">
-        <div className="industry-header">
-          <div className="industry-header-content">
-            <h2 className="industry-title">
-              <span style={{ color: '#fdc51a', fontWeight: '900' }}>M</span>
-              <span style={{ color: '#1e2247', fontWeight: '900' }}>G</span>
-              {" Operates In Your Industry"}
-            </h2>
-            <p className="industry-description">Find out how MetroGuards operates in your industry with specialized security solutions tailored to meet the unique challenges and requirements of different sectors.</p>
-          </div>
+    <>
+      {/*===== Industries We Serve Section =====*/}
+      <div className="industries-section section-padding" style={{background: '#f8f9fa'}}>
+    <div className="container">
+        <div className="row">
+            <div className="col-lg-12 mb-5">
+                <div className="subtitle mb-3">
+                    <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                        <i className="bi bi-building me-2"></i>
+                        VERSATILE PROTECTION
+                    </span>
+                </div>
+                <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                    Industries We Serve
+                </h2>
+                <p className="lead" style={{color: 'black'}}>
+                    We provide comprehensive security services for a wide range of industries in Melbourne, tailoring our solutions to meet your specific needs.
+                </p>
+            </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 justify-items-center">
-          {industries.map((industry, index) => {
-            const IconComponent = industry.icon
-            return (
-              <div
-                key={index}
-                className="industry-card aspect-square flex flex-col items-center justify-center p-8 rounded-lg cursor-pointer"
-                style={{ backgroundColor: '#1e2247' }}
-                
-              >
-                <div className="industry-overlay"></div>
-                <IconComponent className="w-16 h-16 text-white mb-6 relative z-10" strokeWidth={1.5} />
-                <h3 className="text-white text-xl font-semibold text-center leading-tight whitespace-pre-line relative z-10">
-                  {industry.title}
-                </h3>
-              </div>
-            )
-          })}
+        <div className="row g-4 g-md-3 g-lg-4">
+            {[
+                { icon: <Store size={32} />, title: "Retail Stores & Malls", description: "From small boutiques to large shopping centers" },
+                { icon: <ShoppingCart size={32} />, title: "Supermarkets", description: "Grocery stores and convenience outlets" },
+                { icon: <Warehouse size={32} />, title: "Warehouses", description: "Distribution centers and stock rooms" },
+                { icon: <Gem size={32} />, title: "High-End Retail", description: "Luxury boutiques and jewelry stores" },
+                { icon: <Building2 size={32} />, title: "Educational Institutions", description: "Schools and universities" },
+                { icon: <Hospital size={32} />, title: "Healthcare Facilities", description: "Hospitals and medical centers" }
+            ].map((industry, index) => (
+                <div key={index} className="col-lg-4 col-md-6">
+                    <div 
+                        className="industry-card h-100 position-relative"
+                        style={{
+                            backgroundColor: 'transparent',
+                            borderRadius: '0',
+                            boxShadow: 'none',
+                            border: 'none',
+                            transition: 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+                            textAlign: 'center',
+                            overflow: 'visible',
+                            cursor: 'pointer',
+                            padding: '20px'
+                        }}
+                    >
+                        {/* Card container with unique design */}
+                        <div 
+                            className="position-relative h-100"
+                            style={{
+                                background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                borderRadius: '30px',
+                                padding: '35px 25px',
+                                boxShadow: '0 15px 40px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.8)',
+                                border: '1px solid rgba(253, 197, 26, 0.1)',
+                                transition: 'all 0.6s ease',
+                                transform: 'perspective(1000px) rotateX(0deg)',
+                                overflow: 'hidden'
+                            }}
+                        >
+                            {/* Animated background elements */}
+                            <div 
+                                className="position-absolute"
+                                style={{
+                                    top: '-100px',
+                                    left: '-100px',
+                                    width: '200px',
+                                    height: '200px',
+                                    background: 'radial-gradient(circle, rgba(253, 197, 26, 0.1) 0%, transparent 70%)',
+                                    borderRadius: '50%',
+                                    transition: 'all 0.8s ease',
+                                    zIndex: '0'
+                                }}
+                            ></div>
+                            <div 
+                                className="position-absolute"
+                                style={{
+                                    bottom: '-80px',
+                                    right: '-80px',
+                                    width: '160px',
+                                    height: '160px',
+                                    background: 'radial-gradient(circle, rgba(30, 34, 71, 0.08) 0%, transparent 70%)',
+                                    borderRadius: '50%',
+                                    transition: 'all 0.8s ease',
+                                    zIndex: '0'
+                                }}
+                            ></div>
+                            
+                            {/* Icon with unique styling */}
+                            <div 
+                                className="industry-icon mb-4 d-flex align-items-center justify-content-center mx-auto position-relative"
+                                style={{
+                                    width: '100px',
+                                    height: '100px',
+                                    background: 'linear-gradient(45deg, #1e2247 0%, #2a2d5a 50%, #1e2247 100%)',
+                                    borderRadius: '50%',
+                                    color: '#fdc51a',
+                                    boxShadow: '0 10px 30px rgba(30, 34, 71, 0.3), inset 0 1px 0 rgba(255,255,255,0.2)',
+                                    transition: 'all 0.6s ease',
+                                    zIndex: '2',
+                                    position: 'relative'
+                                }}
+                            >
+                                {industry.icon}
+                                
+                                {/* Rotating ring around icon */}
+                                <div 
+                                    className="position-absolute"
+                                    style={{
+                                        width: '120px',
+                                        height: '120px',
+                                        border: '2px solid transparent',
+                                        borderTop: '2px solid #fdc51a',
+                                        borderRight: '2px solid #fdc51a',
+                                        borderRadius: '50%',
+                                        top: '-10px',
+                                        left: '-10px',
+                                        animation: 'rotate 3s linear infinite',
+                                        zIndex: '1'
+                                    }}
+                                ></div>
+                            </div>
+                            
+                            {/* Content */}
+                            <div className="position-relative" style={{zIndex: '2'}}>
+                                <h5 
+                                    className="fw-bold mb-3" 
+                                    style={{
+                                        color: '#1e2247',
+                                        fontSize: '1.3rem',
+                                        lineHeight: '1.3',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                >
+                                    {industry.title}
+                                </h5>
+                                <p 
+                                    className="mb-0" 
+                                    style={{
+                                        color: '#6c757d',
+                                        lineHeight: '1.6',
+                                        fontSize: '0.95rem',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                >
+                                    {industry.description}
+                                </p>
+                            </div>
+                            
+                            {/* Decorative corner elements */}
+                            <div 
+                                className="position-absolute"
+                                style={{
+                                    top: '20px',
+                                    right: '20px',
+                                    width: '30px',
+                                    height: '30px',
+                                    background: 'linear-gradient(45deg, #fdc51a, #ffd700)',
+                                    borderRadius: '50%',
+                                    opacity: '0.3',
+                                    zIndex: '1'
+                                }}
+                            ></div>
+                            <div 
+                                className="position-absolute"
+                                style={{
+                                    bottom: '20px',
+                                    left: '20px',
+                                    width: '20px',
+                                    height: '20px',
+                                    background: 'linear-gradient(45deg, #1e2247, #2a2d5a)',
+                                    borderRadius: '50%',
+                                    opacity: '0.4',
+                                    zIndex: '1'
+                                }}
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            ))}
         </div>
       </div>
-
-      <style jsx>{`
-        .industry-header {
-          display: flex;
-          align-items: flex-start;
-          justify-content: flex-start;
-          margin-bottom: 60px;
-        }
-
-        .industry-header-content {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-        }
-
-        .industry-title {
-          font-size: 3rem;
-          font-weight: 700;
-          margin: 0;
-          color: #333333;
-          
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .industry-description {
-          max-width: 600px;
-          color: #666666;
-          margin: 0;
-          line-height: 1.6;
-          font-size: 1.1rem;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        /* Industry card styles */
-        .industry-card {
-          position: relative;
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          z-index: 1;
-        }
-
-        .industry-card:hover {
-          transform: translateY(-5px);
-        }
-
-        .industry-overlay {
-          position: absolute;
-          top: -100%;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: #1e2247;
-          transition: top 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          z-index: 5;
-          border-radius: 8px;
-        }
-
-        .industry-card:hover .industry-overlay {
-          top: 0;
-        }
-
-        .industry-card h3 {
-          position: relative;
-          text-decoration: none;
-        }
-
-        .industry-card h3::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background-color: white;
-          transition: width 0.4s ease;
-        }
-
-        .industry-card:hover h3::after {
-          width: 100%;
-        }
-
-        /* Responsive design for all screen sizes */
-        
-        .responsive-container {
-          max-width: 1320px;
-          margin: 0 auto;
-          padding: 0 40px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1199px) {
-          .responsive-container {
-            padding: 0 32px;
-          }
-        }
-
-        @media (max-width: 1023px) {
-          .responsive-container {
-            padding: 0 24px;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .responsive-container {
-            padding: 0 20px;
-          }
-        }
-
-        @media (max-width: 639px) {
-          .responsive-container {
-            padding: 0 16px;
-          }
-        }
-
-        @media (max-width: 479px) {
-          .responsive-container {
-            padding: 0 12px;
-          }
-        }
-
-        /* Extra Large Screens (1400px and up) */
-        @media (min-width: 1400px) {
-          
-          .industry-card {
-            padding: 48px 32px;
-            min-height: 280px;
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 32px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.5rem;
-            line-height: 1.3;
-          }
-        }
-
-        /* Large Screens (1200px - 1399px) */
-        @media (max-width: 1399px) and (min-width: 1200px) {
-          .industry-card {
-            padding: 40px 24px;
-            min-height: 260px;
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 72px;
-            height: 72px;
-            margin-bottom: 28px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.4rem;
-            line-height: 1.3;
-          }
-        }
-
-        /* Desktop (1024px - 1199px) */
-        @media (max-width: 1199px) and (min-width: 1024px) {
-          .industry-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 1.05rem;
-            line-height: 1.6;
-          }
-
-          .industry-card {
-            padding: 32px 20px;
-            min-height: 240px;
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 24px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.25rem;
-            line-height: 1.3;
-          }
-        }
-
-        /* Tablet Large (900px - 1023px) */
-        @media (max-width: 1023px) and (min-width: 900px) {
-          .grid {
-            justify-items: center;
-          }
-
-          .industry-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 1rem;
-            line-height: 1.6;
-          }
-
-          .industry-card {
-            padding: 24px 16px;
-            width: 100%;
-            max-width: 200px;
-            min-height: 180px;
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 16px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.1rem;
-            line-height: 1.3;
-          }
-        }
-
-        /* Tablet (768px - 899px) */
-        @media (max-width: 899px) and (min-width: 768px) {
-          .grid {
-            justify-items: center;
-          }
-
-          .industry-header {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 40px;
-            gap: 16px;
-          }
-
-          .industry-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 0.98rem;
-            line-height: 1.5;
-          }
-
-          .industry-card {
-            padding: 20px 14px;
-            width: 100%;
-            max-width: 180px;
-            min-height: 160px;
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 44px;
-            height: 44px;
-            margin-bottom: 14px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.05rem;
-            line-height: 1.3;
-          }
-        }
-
-        /* Tablet Small (640px - 767px) */
-        @media (max-width: 767px) and (min-width: 640px) {
-          .grid {
-            grid-template-columns: 1fr;
-            justify-items: center;
-          }
-
-          .industry-card {
-            z-index: 1;
-          }
-
-          .industry-header {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 35px;
-            gap: 14px;
-          }
-
-          .industry-title {
-            font-size: 2rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 0.95rem;
-            line-height: 1.5;
-          }
-
-          .industry-card {
-            padding: 16px 12px;
-            width: 100%;
-            max-width: 280px;
-            height: 140px;
-            min-height: unset;
-            aspect-ratio: unset;
-            transition: all 0.3s ease;
-          }
-
-          .industry-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(30, 34, 71, 0.15);
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 28px;
-            height: 28px;
-            margin-bottom: 10px;
-          }
-
-          .industry-card h3 {
-            font-size: 0.8rem;
-            line-height: 1.2;
-            text-align: center;
-          }
-        }
-
-        /* Mobile Large (480px - 639px) */
-        @media (max-width: 639px) and (min-width: 480px) {
-          .min-h-screen.bg-background {
-            padding-left: 00px;
-            padding-right: 20px;
-            padding-top: 28px;
-            padding-bottom: 16px;
-          }
-
-          .industry-card {
-            z-index: 1;
-          }
-
-          .industry-header {
-            margin-bottom: 25px;
-            gap: 10px;
-          }
-
-          .industry-title {
-            font-size: 1.85rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 0.92rem;
-            line-height: 1.4;
-          }
-
-          .industry-card {
-            padding: 24px 20px;
-            width: 100%;
-            max-width: 480px;
-            height: 200px;
-            min-height: unset;
-            aspect-ratio: unset;
-            transition: all 0.3s ease;
-          }
-
-          .industry-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 34, 71, 0.15);
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 18px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.2rem;
-            line-height: 1.3;
-            text-align: center;
-          }
-        }
-
-        /* Mobile (360px - 479px) */
-        @media (max-width: 479px) and (min-width: 360px) {
-          .min-h-screen.bg-background {
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 24px;
-            padding-bottom: 12px;
-          }
-
-          .industry-card {
-            z-index: 1;
-          }
-
-          .industry-header {
-            margin-bottom: 20px;
-            gap: 8px;
-          }
-
-          .industry-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            
-          }
-          
-          .industry-description {
-            font-size: 0.9rem;
-            line-height: 1.4;
-          }
-
-          .industry-card {
-            padding: 20px 16px;
-            width: 100%;
-            max-width: 340px;
-            height: 180px;
-            min-height: unset;
-            aspect-ratio: unset;
-            transition: all 0.3s ease;
-          }
-
-          .industry-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(30, 34, 71, 0.12);
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 18px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.2rem;
-            line-height: 1.3;
-            text-align: center;
-          }
-        }
-
-        /* Mobile Small (below 360px) */
-        @media (max-width: 359px) {
-          .min-h-screen.bg-background {
-            padding-left: 12px;
-            padding-right: 12px;
-            padding-top: 20px;
-            padding-bottom: 10px;
-          }
-
-          .industry-card {
-            z-index: 1;
-          }
-
-          .industry-header {
-            margin-bottom: 18px;
-            gap: 6px;
-          }
-
-          .industry-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            
-            
-          }
-          
-          .industry-description {
-            font-size: 0.85rem;
-            line-height: 1.3;
-          }
-
-          .industry-card {
-            padding: 18px 14px;
-            width: 100%;
-            max-width: 300px;
-            height: 160px;
-            min-height: unset;
-            aspect-ratio: unset;
-            transition: all 0.3s ease;
-          }
-
-          .industry-card:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 3px 12px rgba(30, 34, 71, 0.1);
-          }
-
-          .industry-card .w-16.h-16 {
-            width: 44px;
-            height: 44px;
-            margin-bottom: 16px;
-          }
-
-          .industry-card h3 {
-            font-size: 1.1rem;
-            line-height: 1.25;
-            text-align: center;
-          }
-        }
-
-        /* Grid Responsiveness */
-        @media (max-width: 1023px) {
-          .grid.lg\\:grid-cols-4 {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-items: center;
-          }
-        }
-
-        @media (max-width: 767px) and (min-width: 640px) {
-          .grid.lg\\:grid-cols-4 {
-            grid-template-columns: 1fr;
-            gap: 16px;
-            justify-items: center;
-          }
-          
-          .responsive-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-
-        @media (max-width: 639px) {
-          .grid.lg\\:grid-cols-4 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            max-width: 100%;
-            margin: 0 auto;
-          }
-        }
-
-        @media (max-width: 359px) {
-          .grid.lg\\:grid-cols-4 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            max-width: 100%;
-            margin: 0 auto;
-          }
-        }
-
-        /* Focus and Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-          .industry-card {
-            transition: none;
-          }
-          
-          .industry-card:hover {
-            transform: none;
-          }
-        }
-
-        /* High DPI Displays */
-        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-          .industry-card {
-            border: 0.5px solid rgba(255, 255, 255, 0.1);
-          }
-        }
-      `}</style>
-    </main>
+    </div>
+    </>
   )
 }

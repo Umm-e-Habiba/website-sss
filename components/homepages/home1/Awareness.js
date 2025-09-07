@@ -10,13 +10,13 @@ export default function Awareness() {
           <div className="text-content">
             <div className="awareness-header">
               <h2 className="awareness-title">How we raise awareness and serve our community</h2>
-              <p className="awareness-description">
+              <p className="awareness-description" style={{color: 'black'}}>
                 Metro Security Experts are (Melbourne-based security) passionate about raising awareness and eagerly wish to do our part in building an ideal 
                 society and we believe that a healthy society is a prosperous one. Therefore, we proudly support 'The Royal Melbourne Hospital' that has a 
                 renowned reputation in healthcare and medical research. We also support 'Beyond Blue' an Australian not-for-profit organisation that provides 
                 support and raises awareness regarding mental health issues.
               </p>
-              <p className="awareness-description">
+              <p className="awareness-description" style={{color: 'black'}}>
                 We also strongly believe that women being the integral part of our society should be treated with cordial respect and therefore we support 'White 
                 Ribbon' in their divine cause of stopping violence against women. We are proudly supporting following community groups and organisations:
               </p>

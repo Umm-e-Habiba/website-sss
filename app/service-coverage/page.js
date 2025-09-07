@@ -3,6 +3,8 @@ import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Accrediation from "@/components/accrediation10";
+import Subscribe from "@/components/homepages/home1/Subscribe";
 
 
 
@@ -36,552 +38,1450 @@ export default function ServiceCoveragePage() {
     return (
         <>
         <ToastContainer position="bottom-right" autoClose={3000} />
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="SERVICE COVERAGE">
+            <Layout headerStyle={1} footerStyle={1} headTitle="Service Coverage - Metropolitan Guards Security Services" breadcrumbTitle="Service Coverage" mainTitle="Service Coverage" subtitle="Areas we service across Melbourne, Sydney and surrounding regions." backgroundImage="/assets/img/about/values.jpg">
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
-                        <div className="container">
+                    {/*===== Elegant Classic Hero Section =====*/}
+                    <div className="classic-hero section-padding" style={{ 
+                        background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)', 
+                        borderBottom: '2px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Decorative Elements */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '-50px',
+                            right: '-50px',
+                            width: '200px',
+                            height: '200px',
+                            background: 'linear-gradient(135deg, rgba(30, 34, 71, 0.05) 0%, rgba(253, 197, 26, 0.05) 100%)',
+                            borderRadius: '50%',
+                            zIndex: '1'
+                        }}></div>
+                        <div style={{
+                            position: 'absolute',
+                            bottom: '-30px',
+                            left: '-30px',
+                            width: '150px',
+                            height: '150px',
+                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.08) 0%, rgba(30, 34, 71, 0.03) 100%)',
+                            borderRadius: '50%',
+                            zIndex: '1'
+                        }}></div>
+                        
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="hero-content" data-aos="fade-right">
+                                        {/* Premium Badge */}
+                                        <div className="hero-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '10px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '25px',
+                                            border: '1px solid rgba(253, 197, 26, 0.2)'
+                                        }}>
+                                            <i className="bi bi-shield-check" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1.1rem'
+                                            }}></i>
                                                 Comprehensive Protection
-                                            </small>
-                                            <h2>OUR SERVICE COVERAGE</h2>
-                                            <p>
-                                                We offer security solutions across Melbourne Metro Area and beyond. When you need Security Guards, Mobile Security Patrols, Static Guards, or Event Security, there's a good chance we can help.
+                                        </div>
+
+                                        {/* Main Heading */}
+                                        <h1 style={{
+                                            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            lineHeight: '1.2',
+                                            marginBottom: '25px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Our <span style={{
+                                                color: '#fdc51a',
+                                                position: 'relative'
+                                            }}>Service Coverage</span>
+                                        </h1>
+
+                                        {/* Subheading */}
+                                        <div style={{
+                                            fontSize: '1.2rem',
+                                            color: '#1e2247',
+                                            fontWeight: '500',
+                                            marginBottom: '20px',
+                                            borderLeft: '3px solid #fdc51a',
+                                            paddingLeft: '15px'
+                                        }}>
+                                            Melbourne Metro & Beyond
+                                        </div>
+
+                                        {/* Description */}
+                                        <div style={{ marginBottom: '30px' }}>
+                                            <p style={{
+                                                fontSize: '1.1rem',
+                                                color: '#495057',
+                                                lineHeight: '1.7',
+                                                marginBottom: '15px'
+                                            }}>
+                                                We offer <strong>premium security solutions</strong> across Melbourne Metro Area and beyond. When you need Security Guards, Mobile Security Patrols, Static Guards, or Event Security, there's a good chance we can help.
                                             </p>
-                                            <p>
+                                            <p style={{
+                                                fontSize: '1rem',
+                                                color: '#6c757d',
+                                                lineHeight: '1.6'
+                                            }}>
                                                 Below is an easy reference to see if we cover your area for regular mobile security service. For intermittent or one-off services like Party Security or VIP Protection, our professional security guards can travel to meet your needs beyond these areas.
                                             </p>
-                                            <div className="btn-area mt-4">
+                                        </div>
+
+                                        {/* Service Highlights */}
+                                        <div className="service-highlights" style={{ 
+                                            display: 'flex', 
+                                            gap: '20px', 
+                                            marginBottom: '35px',
+                                            flexWrap: 'wrap'
+                                        }}>
+                                            <div className="highlight-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                padding: '8px 16px',
+                                                background: 'rgba(30, 34, 71, 0.05)',
+                                                borderRadius: '20px',
+                                                border: '1px solid rgba(30, 34, 71, 0.1)'
+                                            }}>
+                                                <i className="bi bi-check-circle-fill" style={{ 
+                                                    color: '#28a745', 
+                                                    marginRight: '8px' 
+                                                }}></i>
+                                                <span style={{ 
+                                                    fontSize: '0.9rem', 
+                                                    color: '#1e2247',
+                                                    fontWeight: '500'
+                                                }}>24/7 Availability</span>
+                                            </div>
+                                            <div className="highlight-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                padding: '8px 16px',
+                                                background: 'rgba(30, 34, 71, 0.05)',
+                                                borderRadius: '20px',
+                                                border: '1px solid rgba(30, 34, 71, 0.1)'
+                                            }}>
+                                                <i className="bi bi-geo-alt-fill" style={{ 
+                                                    color: '#fdc51a', 
+                                                    marginRight: '8px' 
+                                                }}></i>
+                                                <span style={{ 
+                                                    fontSize: '0.9rem', 
+                                                    color: '#1e2247',
+                                                    fontWeight: '500'
+                                                }}>Rapid Response</span>
+                                            </div>
+                                            <div className="highlight-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                padding: '8px 16px',
+                                                background: 'rgba(30, 34, 71, 0.05)',
+                                                borderRadius: '20px',
+                                                border: '1px solid rgba(30, 34, 71, 0.1)'
+                                            }}>
+                                                <i className="bi bi-shield-check" style={{ 
+                                                    color: '#dc3545', 
+                                                    marginRight: '8px' 
+                                                }}></i>
+                                                <span style={{ 
+                                                    fontSize: '0.9rem', 
+                                                    color: '#1e2247',
+                                                    fontWeight: '500'
+                                                }}>Licensed Guards</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="btn-area" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                                                 <a 
                                                     href="#coverage-map" 
-                                                    className="btn text-white px-4 py-3 me-3"
+                                                className="btn px-4 py-3"
                                                     style={{
                                                         backgroundColor: '#1e2247',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
+                                                    color: 'white',
+                                                    border: '2px solid #1e2247',
+                                                    borderRadius: '8px',
                                                         textDecoration: 'none',
                                                         fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    VIEW COVERAGE MAP <span><i className="bi bi-arrow-right"></i></span>
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    letterSpacing: '0.5px',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(30, 34, 71, 0.2)'
+                                                }}
+                                                onMouseOver={(e) => {
+                                                    e.target.style.backgroundColor = '#2c3e50';
+                                                    e.target.style.transform = 'translateY(-2px)';
+                                                }}
+                                                onMouseOut={(e) => {
+                                                    e.target.style.backgroundColor = '#1e2247';
+                                                    e.target.style.transform = 'translateY(0)';
+                                                }}
+                                            >
+                                                <i className="bi bi-map me-2"></i>VIEW COVERAGE MAP
                                                 </a>
                                                 <a 
                                                     href="/contacts" 
-                                                    className="btn text-dark px-4 py-3"
+                                                className="btn px-4 py-3"
                                                     style={{
-                                                        backgroundColor: '#FDC24C',
-                                                        border: 'none',
-                                                        borderRadius: '5px',
+                                                    backgroundColor: 'transparent',
+                                                    color: '#1e2247',
+                                                    border: '2px solid #1e2247',
+                                                    borderRadius: '8px',
                                                         textDecoration: 'none',
                                                         fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}
-                                                >
-                                                    CONTACT US <span><i className="bi bi-telephone"></i></span>
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    letterSpacing: '0.5px',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onMouseOver={(e) => {
+                                                    e.target.style.backgroundColor = '#1e2247';
+                                                    e.target.style.color = 'white';
+                                                }}
+                                                onMouseOut={(e) => {
+                                                    e.target.style.backgroundColor = 'transparent';
+                                                    e.target.style.color = '#1e2247';
+                                                }}
+                                            >
+                                                <i className="bi bi-telephone me-2"></i>CONTACT US
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                
                                 <div className="col-lg-6">
-                                    <div className="about-bg-main-img position-relative ml50">
-                                        <img src="/assets/img/case-study/s6.webp" alt="Security Service Coverage Map" />
-                                        
+                                    <div className="hero-visual" data-aos="fade-left" style={{ 
+                                        position: 'relative',
+                                        paddingLeft: '30px'
+                                    }}>
+                                        {/* Main Image Container */}
+                                        <div style={{
+                                            position: 'relative',
+                                            borderRadius: '15px',
+                                            overflow: 'hidden',
+                                            border: '3px solid #ffffff',
+                                            boxShadow: '0 25px 50px rgba(30, 34, 71, 0.15)'
+                                        }}>
+                                            <img 
+                                                src="/assets/img/case-study/s6.webp" 
+                                                alt="Security Service Coverage Map"
+                                                style={{
+                                                    width: '100%',
+                                                    height: 'auto',
+                                                    display: 'block'
+                                                }}
+                                            />
+                                            
+                                            {/* Image Overlay */}
+                                            <div style={{
+                                                position: 'absolute',
+                                                bottom: '0',
+                                                left: '0',
+                                                right: '0',
+                                                background: 'linear-gradient(transparent, rgba(30, 34, 71, 0.8))',
+                                                padding: '30px 25px 25px',
+                                                color: 'white'
+                                            }}>
+                                                <h4 style={{ 
+                                                    margin: '0 0 8px 0', 
+                                                    fontSize: '1.3rem',
+                                                    fontWeight: '600'
+                                                }}>
+                                                    Wide Coverage Area
+                                                </h4>
+                                                <p style={{ 
+                                                    margin: '0', 
+                                                    fontSize: '0.95rem',
+                                                    opacity: '0.9'
+                                                }}>
+                                                    Professional security services across Melbourne & Sydney
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Floating Stats Card */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '20px',
+                                            right: '-15px',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: 'white',
+                                            padding: '15px 20px',
+                                            borderRadius: '12px',
+                                            boxShadow: '0 10px 30px rgba(30, 34, 71, 0.3)',
+                                            border: '2px solid rgba(253, 197, 26, 0.2)',
+                                            zIndex: '3'
+                                        }}>
+                                            <div style={{ textAlign: 'center' }}>
+                                                <div style={{ 
+                                                    fontSize: '1.8rem', 
+                                                    fontWeight: '700', 
+                                                    color: '#fdc51a',
+                                                    lineHeight: '1'
+                                                }}>50+</div>
+                                                <div style={{ 
+                                                    fontSize: '0.8rem', 
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    opacity: '0.9'
+                                                }}>Areas Covered</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Coverage Map Section =====*/}
-                    <div id="coverage-map" className="map-section bg-29 section-padding">
-                        <div className="container">
+                    {/*===== Enhanced Coverage Map Section =====*/}
+                    <div id="coverage-map" className="map-section section-padding" style={{ 
+                        background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)', 
+                        borderTop: '1px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Background Pattern */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            right: '0',
+                            bottom: '0',
+                            backgroundImage: 'radial-gradient(circle at 15% 20%, rgba(30, 34, 71, 0.02) 0%, transparent 40%), radial-gradient(circle at 85% 80%, rgba(253, 197, 26, 0.02) 0%, transparent 40%)',
+                            zIndex: '1'
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+                            {/* Section Header */}
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px',
+                                            border: '1px solid rgba(253, 197, 26, 0.2)'
+                                        }}>
+                                            <i className="bi bi-pin-map" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
                                             Service Areas
-                                        </small>
-                                        <h2>OUR COVERAGE AREAS</h2>
-                                        <p>We provide professional security services throughout these locations</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <div className="coverage-card bg-white p-4 mb-4 rounded shadow">
-                                        <h3 className="mb-4 text-center" style={{color: '#243D31'}}>
-                                            <i className="bi bi-geo-alt-fill me-2"></i>Melbourne Areas
-                                        </h3>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <ul className="list-unstyled">
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        Bonbeach
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        Bulleen
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        Clarinda
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        Ashwood
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Yarra
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Wyndham
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Whittlesea
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Whitehorse
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Stonnington
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Port Phillip
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Moreland
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Moonee Valley
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Monash
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Melbourne
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Maroondah
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <ul className="list-unstyled">
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Maribyrnong
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Manningham
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Knox
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Kingston
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Hume
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Hobsons Bay
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Greater Dandenong
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Glen Eira
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Frankston
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Darebin
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Casey
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Brimbank
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Boroondara
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-success me-2 mt-1"></i>
-                                                        City of Bayside
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="coverage-card bg-white p-4 mb-4 rounded shadow">
-                                        <h3 className="mb-4 text-center" style={{color: '#243D31'}}>
-                                            <i className="bi bi-geo-alt-fill me-2"></i>Sydney Areas
-                                        </h3>
-                                        <div className="row">
-                                            <div className="col-md-6">
-                                                <ul className="list-unstyled">
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Sydney CBD
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Ultimo
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Chippendale
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Pyrmont
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Surry Hills
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Kings Cross
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Alexandria
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Redfern
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Waterloo
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Rosebery
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Botany
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Mascot
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Paddington
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Bondi Junction
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <ul className="list-unstyled">
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Bellevue Hill
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Waverley
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Woollahra
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Bondi
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Edgecliff
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Double Bay
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Rose Bay
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Vaucluse
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Randwick
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Kingsford
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Kensington
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Coogee
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        Northern Beaches
-                                                    </li>
-                                                    <li className="mb-2 d-flex align-items-start">
-                                                        <i className="bi bi-check-circle-fill text-primary me-2 mt-1"></i>
-                                                        North Shore
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 text-center">
-                                    <p className="mb-0">
-                                        <strong>Don't see your area listed?</strong> We likely still cover it! Contact us to confirm availability.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*===== Additional Areas Section =====*/}
-                    <div className="additional-areas bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Extended Coverage
-                                        </small>
-                                        <h2>ADDITIONAL SERVICE AREAS</h2>
-                                        <p>We also provide security services in these surrounding regions</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-md-4 mb-4">
-                                    <div className="area-card bg-white p-4 h-100 rounded shadow">
-                                        <h4 className="mb-3 text-center" style={{color: '#243D31'}}>
-                                            <i className="bi bi-building me-2"></i>Regional Victoria
-                                        </h4>
-                                        <ul className="list-unstyled">
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-success me-2 mt-1"></i>
-                                                Geelong
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-success me-2 mt-1"></i>
-                                                Torquay
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-success me-2 mt-1"></i>
-                                                Lorne
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-success me-2 mt-1"></i>
-                                                Warragul
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-success me-2 mt-1"></i>
-                                                Mornington Peninsula
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 mb-4">
-                                    <div className="area-card bg-white p-4 h-100 rounded shadow">
-                                        <h4 className="mb-3 text-center" style={{color: '#243D31'}}>
-                                            <i className="bi bi-building me-2"></i>Western Sydney
-                                        </h4>
-                                        <ul className="list-unstyled">
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                                                Parramatta
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                                                Blacktown
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                                                Penrith
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                                                Liverpool
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-geo-alt text-primary me-2 mt-1"></i>
-                                                Campbelltown
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 mb-4">
-                                    <div className="area-card bg-white p-4 h-100 rounded shadow">
-                                        <h4 className="mb-3 text-center" style={{color: '#243D31'}}>
-                                            <i className="bi bi-building me-2"></i>Special Events
-                                        </h4>
-                                        <p className="mb-3">
-                                            For special events, we provide security services beyond our regular coverage areas, including:
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Our <span style={{ color: '#fdc51a' }}>Coverage Areas</span>
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            We provide professional security services throughout these prime locations across Melbourne and Sydney.
                                         </p>
-                                        <ul className="list-unstyled">
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-star-fill text-warning me-2 mt-1"></i>
-                                                Private parties
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-star-fill text-warning me-2 mt-1"></i>
-                                                Corporate events
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-star-fill text-warning me-2 mt-1"></i>
-                                                VIP protection
-                                            </li>
-                                            <li className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-star-fill text-warning me-2 mt-1"></i>
-                                                Festivals
-                                            </li>
-                                            <li className="d-flex align-items-start">
-                                                <i className="bi bi-star-fill text-warning me-2 mt-1"></i>
-                                                Concerts
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
+                            {/* Coverage Areas Grid */}
+                            <div className="row">
+                                {/* Melbourne Areas Card */}
+                                <div className="col-lg-6 mb-4">
+                                    <div className="coverage-card h-100" data-aos="fade-up" data-aos-delay="100" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '20px',
+                                        padding: '35px 30px',
+                                        border: '2px solid #eceff3',
+                                        boxShadow: '0 8px 25px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Background Accent */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-40px',
+                                            right: '-40px',
+                                            width: '120px',
+                                            height: '120px',
+                                            background: 'linear-gradient(135deg, rgba(40, 167, 69, 0.08) 0%, rgba(32, 201, 151, 0.04) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+
+                                        <div style={{ position: 'relative', zIndex: '2' }}>
+                                            {/* Card Header */}
+                                            <div className="card-header text-center mb-4">
+                                                <div style={{
+                                                    width: '70px',
+                                                    height: '70px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    margin: '0 auto 15px',
+                                                    boxShadow: '0 8px 25px rgba(40, 167, 69, 0.3)'
+                                                }}>
+                                                    <i className="bi bi-geo-alt-fill" style={{ 
+                                                        color: '#ffffff', 
+                                                        fontSize: '1.8rem' 
+                                                    }}></i>
+                                                </div>
+                                                <h3 style={{
+                                                    color: '#1e2247',
+                                                    fontFamily: 'serif',
+                                                    fontWeight: '600',
+                                                    marginBottom: '8px',
+                                                    fontSize: '1.5rem'
+                                                }}>Melbourne Areas</h3>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                    margin: '0 auto',
+                                                    borderRadius: '2px'
+                                                }}></div>
+                                            </div>
+                                            {/* Location Grid */}
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <div className="location-list">
+                                                        {['Bonbeach', 'Bulleen', 'Clarinda', 'Ashwood', 'City of Yarra', 'City of Wyndham', 'City of Whittlesea', 'City of Whitehorse', 'City of Stonnington', 'City of Port Phillip', 'City of Moreland', 'City of Moonee Valley', 'City of Monash', 'City of Melbourne', 'City of Maroondah'].map((location, index) => (
+                                                            <div key={index} className="location-item" style={{
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                padding: '6px 0',
+                                                                borderBottom: '1px solid rgba(40, 167, 69, 0.1)',
+                                                                marginBottom: '8px'
+                                                            }}>
+                                                                <div style={{
+                                                                    width: '6px',
+                                                                    height: '6px',
+                                                                    background: '#28a745',
+                                                                    borderRadius: '50%',
+                                                                    marginRight: '12px',
+                                                                    flexShrink: '0'
+                                                                }}></div>
+                                                                <span style={{
+                                                                    color: '#1e2247',
+                                                                    fontSize: '0.9rem',
+                                                                    fontWeight: '500'
+                                                                }}>{location}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="location-list">
+                                                        {['City of Maribyrnong', 'City of Manningham', 'City of Knox', 'City of Kingston', 'City of Hume', 'City of Hobsons Bay', 'City of Greater Dandenong', 'City of Glen Eira', 'City of Frankston', 'City of Darebin', 'City of Casey', 'City of Brimbank', 'City of Boroondara', 'City of Bayside'].map((location, index) => (
+                                                            <div key={index} className="location-item" style={{
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                padding: '6px 0',
+                                                                borderBottom: '1px solid rgba(40, 167, 69, 0.1)',
+                                                                marginBottom: '8px'
+                                                            }}>
+                                                                <div style={{
+                                                                    width: '6px',
+                                                                    height: '6px',
+                                                                    background: '#28a745',
+                                                                    borderRadius: '50%',
+                                                                    marginRight: '12px',
+                                                                    flexShrink: '0'
+                                                                }}></div>
+                                                                <span style={{
+                                                                    color: '#1e2247',
+                                                                    fontSize: '0.9rem',
+                                                                    fontWeight: '500'
+                                                                }}>{location}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Stats Footer */}
+                                            <div className="card-footer mt-4 pt-3" style={{ 
+                                                borderTop: '1px solid rgba(40, 167, 69, 0.1)',
+                                                textAlign: 'center'
+                                            }}>
+                                                <div style={{
+                                                    display: 'flex',
+                                                    justifyContent: 'space-around',
+                                                    alignItems: 'center'
+                                                }}>
+                                                    <div>
+                                                        <div style={{ 
+                                                            fontSize: '1.5rem', 
+                                                            fontWeight: '700', 
+                                                            color: '#28a745' 
+                                                        }}>29</div>
+                                                        <div style={{ 
+                                                            fontSize: '0.8rem', 
+                                                            color: '#6c757d',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px'
+                                                        }}>Areas</div>
+                                                    </div>
+                                                    <div style={{
+                                                        width: '1px',
+                                                        height: '30px',
+                                                        background: 'rgba(40, 167, 69, 0.2)'
+                                                    }}></div>
+                                                    <div>
+                                                        <div style={{ 
+                                                            fontSize: '1.5rem', 
+                                                            fontWeight: '700', 
+                                                            color: '#28a745' 
+                                                        }}>24/7</div>
+                                                        <div style={{ 
+                                                            fontSize: '0.8rem', 
+                                                            color: '#6c757d',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px'
+                                                        }}>Available</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Sydney Areas Card */}
+                                <div className="col-lg-6 mb-4">
+                                    <div className="coverage-card h-100" data-aos="fade-up" data-aos-delay="200" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '20px',
+                                        padding: '35px 30px',
+                                        border: '2px solid #eceff3',
+                                        boxShadow: '0 8px 25px rgba(0,0,0,0.08)',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Background Accent */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-40px',
+                                            right: '-40px',
+                                            width: '120px',
+                                            height: '120px',
+                                            background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.08) 0%, rgba(0, 86, 179, 0.04) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+
+                                        <div style={{ position: 'relative', zIndex: '2' }}>
+                                            {/* Card Header */}
+                                            <div className="card-header text-center mb-4">
+                                                <div style={{
+                                                    width: '70px',
+                                                    height: '70px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    margin: '0 auto 15px',
+                                                    boxShadow: '0 8px 25px rgba(0, 123, 255, 0.3)'
+                                                }}>
+                                                    <i className="bi bi-geo-alt-fill" style={{ 
+                                                        color: '#ffffff', 
+                                                        fontSize: '1.8rem' 
+                                                    }}></i>
+                                                </div>
+                                                <h3 style={{
+                                                    color: '#1e2247',
+                                                    fontFamily: 'serif',
+                                                    fontWeight: '600',
+                                                    marginBottom: '8px',
+                                                    fontSize: '1.5rem'
+                                                }}>Sydney Areas</h3>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                    margin: '0 auto',
+                                                    borderRadius: '2px'
+                                                }}></div>
+                                            </div>
+
+                                            {/* Location Grid */}
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <div className="location-list">
+                                                        {['Sydney CBD', 'Ultimo', 'Chippendale', 'Pyrmont', 'Surry Hills', 'Kings Cross', 'Alexandria', 'Redfern', 'Waterloo', 'Rosebery', 'Botany', 'Mascot', 'Paddington', 'Bondi Junction'].map((location, index) => (
+                                                            <div key={index} className="location-item" style={{
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                padding: '6px 0',
+                                                                borderBottom: '1px solid rgba(0, 123, 255, 0.1)',
+                                                                marginBottom: '8px'
+                                                            }}>
+                                                                <div style={{
+                                                                    width: '6px',
+                                                                    height: '6px',
+                                                                    background: '#007bff',
+                                                                    borderRadius: '50%',
+                                                                    marginRight: '12px',
+                                                                    flexShrink: '0'
+                                                                }}></div>
+                                                                <span style={{
+                                                                    color: '#1e2247',
+                                                                    fontSize: '0.9rem',
+                                                                    fontWeight: '500'
+                                                                }}>{location}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="location-list">
+                                                        {['Bellevue Hill', 'Waverley', 'Woollahra', 'Bondi', 'Edgecliff', 'Double Bay', 'Rose Bay', 'Vaucluse', 'Randwick', 'Kingsford', 'Kensington', 'Coogee', 'Northern Beaches', 'North Shore'].map((location, index) => (
+                                                            <div key={index} className="location-item" style={{
+                                                                display: 'flex',
+                                                                alignItems: 'center',
+                                                                padding: '6px 0',
+                                                                borderBottom: '1px solid rgba(0, 123, 255, 0.1)',
+                                                                marginBottom: '8px'
+                                                            }}>
+                                                                <div style={{
+                                                                    width: '6px',
+                                                                    height: '6px',
+                                                                    background: '#007bff',
+                                                                    borderRadius: '50%',
+                                                                    marginRight: '12px',
+                                                                    flexShrink: '0'
+                                                                }}></div>
+                                                                <span style={{
+                                                                    color: '#1e2247',
+                                                                    fontSize: '0.9rem',
+                                                                    fontWeight: '500'
+                                                                }}>{location}</span>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Stats Footer */}
+                                            <div className="card-footer mt-4 pt-3" style={{ 
+                                                borderTop: '1px solid rgba(0, 123, 255, 0.1)',
+                                                textAlign: 'center'
+                                            }}>
+                                                <div style={{
+                                                    display: 'flex',
+                                                    justifyContent: 'space-around',
+                                                    alignItems: 'center'
+                                                }}>
+                                                    <div>
+                                                        <div style={{ 
+                                                            fontSize: '1.5rem', 
+                                                            fontWeight: '700', 
+                                                            color: '#007bff' 
+                                                        }}>28</div>
+                                                        <div style={{ 
+                                                            fontSize: '0.8rem', 
+                                                            color: '#6c757d',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px'
+                                                        }}>Areas</div>
+                                                    </div>
+                                                    <div style={{
+                                                        width: '1px',
+                                                        height: '30px',
+                                                        background: 'rgba(0, 123, 255, 0.2)'
+                                                    }}></div>
+                                                    <div>
+                                                        <div style={{ 
+                                                            fontSize: '1.5rem', 
+                                                            fontWeight: '700', 
+                                                            color: '#007bff' 
+                                                        }}>24/7</div>
+                                                        <div style={{ 
+                                                            fontSize: '0.8rem', 
+                                                            color: '#6c757d',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px'
+                                                        }}>Available</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
                         </div>
                     </div>
 
-                    {/*===== Contact Form Section =====*/}
-                    <div id="contact-form" className="contact-section bg-29 section-padding">
-                        <div className="container">
+                    {/*===== Enhanced Additional Areas Section =====*/}
+                    <div className="additional-areas section-padding" style={{ 
+                        background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', 
+                        borderTop: '1px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Background Pattern */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            right: '0',
+                            bottom: '0',
+                            backgroundImage: 'radial-gradient(circle at 20% 30%, rgba(30, 34, 71, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(253, 197, 26, 0.03) 0%, transparent 50%)',
+                            zIndex: '1'
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+                            {/* Section Header */}
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px',
+                                            border: '1px solid rgba(253, 197, 26, 0.2)'
+                                        }}>
+                                            <i className="bi bi-geo-alt" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
+                                            Extended Coverage
+                                    </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Additional <span style={{ color: '#fdc51a' }}>Service Areas</span>
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            We provide premium security solutions across extended regions, ensuring comprehensive protection wherever you need it most.
+                                        </p>
+                                </div>
+                            </div>
+                            </div>
+
+                            {/* Service Areas Grid */}
+                            <div className="row">
+                                {/* Regional Victoria Card */}
+                                <div className="col-lg-4 col-md-6 mb-4">
+                                    <div className="area-card h-100" data-aos="fade-up" data-aos-delay="100" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '15px',
+                                        padding: '30px 25px',
+                                        border: '2px solid #eceff3',
+                                        transition: 'all 0.3s ease',
+                                        boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Header */}
+                                        <div className="card-header text-center mb-4" style={{ position: 'relative', zIndex: '2' }}>
+                                            <div style={{
+                                                width: '70px',
+                                                height: '70px',
+                                                background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                margin: '0 auto 15px',
+                                                boxShadow: '0 8px 25px rgba(40, 167, 69, 0.3)'
+                                            }}>
+                                                <i className="bi bi-building" style={{ 
+                                                    color: '#ffffff', 
+                                                    fontSize: '1.8rem' 
+                                                }}></i>
+                                            </div>
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontFamily: 'serif',
+                                                fontWeight: '600',
+                                                marginBottom: '8px'
+                                            }}>Regional Victoria</h4>
+                                            <div style={{
+                                                width: '40px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                margin: '0 auto',
+                                                borderRadius: '2px'
+                                            }}></div>
+                                        </div>
+
+                                        {/* Location List */}
+                                        <ul className="list-unstyled" style={{ position: 'relative', zIndex: '2' }}>
+                                            {['Geelong', 'Torquay', 'Lorne', 'Warragul', 'Mornington Peninsula'].map((location, index) => (
+                                                <li key={index} className="mb-3" style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    padding: '8px 12px',
+                                                    background: 'rgba(40, 167, 69, 0.05)',
+                                                    borderRadius: '8px',
+                                                    border: '1px solid rgba(40, 167, 69, 0.1)',
+                                                    transition: 'all 0.2s ease'
+                                                }}>
+                                                    <i className="bi bi-geo-alt-fill" style={{ 
+                                                        color: '#28a745', 
+                                                        marginRight: '12px',
+                                                        fontSize: '0.9rem'
+                                                    }}></i>
+                                                    <span style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        fontSize: '0.95rem'
+                                                    }}>{location}</span>
+                                            </li>
+                                            ))}
+                                        </ul>
+
+                                        {/* Background Decoration */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-20px',
+                                            right: '-20px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+                                    </div>
+                                </div>
+
+                                {/* Western Sydney Card */}
+                                <div className="col-lg-4 col-md-6 mb-4">
+                                    <div className="area-card h-100" data-aos="fade-up" data-aos-delay="200" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '15px',
+                                        padding: '30px 25px',
+                                        border: '2px solid #eceff3',
+                                        transition: 'all 0.3s ease',
+                                        boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Header */}
+                                        <div className="card-header text-center mb-4" style={{ position: 'relative', zIndex: '2' }}>
+                                            <div style={{
+                                                width: '70px',
+                                                height: '70px',
+                                                background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                margin: '0 auto 15px',
+                                                boxShadow: '0 8px 25px rgba(0, 123, 255, 0.3)'
+                                            }}>
+                                                <i className="bi bi-buildings" style={{ 
+                                                    color: '#ffffff', 
+                                                    fontSize: '1.8rem' 
+                                                }}></i>
+                                            </div>
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontFamily: 'serif',
+                                                fontWeight: '600',
+                                                marginBottom: '8px'
+                                            }}>Western Sydney</h4>
+                                            <div style={{
+                                                width: '40px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                margin: '0 auto',
+                                                borderRadius: '2px'
+                                            }}></div>
+                                        </div>
+
+                                        {/* Location List */}
+                                        <ul className="list-unstyled" style={{ position: 'relative', zIndex: '2' }}>
+                                            {['Parramatta', 'Blacktown', 'Penrith', 'Liverpool', 'Campbelltown'].map((location, index) => (
+                                                <li key={index} className="mb-3" style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    padding: '8px 12px',
+                                                    background: 'rgba(0, 123, 255, 0.05)',
+                                                    borderRadius: '8px',
+                                                    border: '1px solid rgba(0, 123, 255, 0.1)',
+                                                    transition: 'all 0.2s ease'
+                                                }}>
+                                                    <i className="bi bi-geo-alt-fill" style={{ 
+                                                        color: '#007bff', 
+                                                        marginRight: '12px',
+                                                        fontSize: '0.9rem'
+                                                    }}></i>
+                                                    <span style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        fontSize: '0.95rem'
+                                                    }}>{location}</span>
+                                            </li>
+                                            ))}
+                                        </ul>
+
+                                        {/* Background Decoration */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-20px',
+                                            right: '-20px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 86, 179, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+                                    </div>
+                                </div>
+
+                                {/* Special Events Card */}
+                                <div className="col-lg-4 col-md-12 mb-4">
+                                    <div className="area-card h-100" data-aos="fade-up" data-aos-delay="300" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '15px',
+                                        padding: '30px 25px',
+                                        border: '2px solid #eceff3',
+                                        transition: 'all 0.3s ease',
+                                        boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Header */}
+                                        <div className="card-header text-center mb-4" style={{ position: 'relative', zIndex: '2' }}>
+                                            <div style={{
+                                                width: '70px',
+                                                height: '70px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                margin: '0 auto 15px',
+                                                boxShadow: '0 8px 25px rgba(253, 197, 26, 0.3)'
+                                            }}>
+                                                <i className="bi bi-stars" style={{ 
+                                                    color: '#1e2247', 
+                                                    fontSize: '1.8rem' 
+                                                }}></i>
+                                            </div>
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontFamily: 'serif',
+                                                fontWeight: '600',
+                                                marginBottom: '8px'
+                                            }}>Special Events</h4>
+                                            <div style={{
+                                                width: '40px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                margin: '0 auto',
+                                                borderRadius: '2px'
+                                            }}></div>
+                                        </div>
+
+                                        
+
+                                        {/* Services List */}
+                                        <ul className="list-unstyled" style={{ position: 'relative', zIndex: '2' }}>
+                                            {['Private Parties', 'Corporate Events', 'VIP Protection', 'Festivals', 'Concerts'].map((service, index) => (
+                                                <li key={index} className="mb-3" style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    padding: '8px 12px',
+                                                    background: 'rgba(253, 197, 26, 0.05)',
+                                                    borderRadius: '8px',
+                                                    border: '1px solid rgba(253, 197, 26, 0.1)',
+                                                    transition: 'all 0.2s ease'
+                                                }}>
+                                                    <i className="bi bi-star-fill" style={{ 
+                                                        color: '#fdc51a', 
+                                                        marginRight: '12px',
+                                                        fontSize: '0.9rem'
+                                                    }}></i>
+                                                    <span style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        fontSize: '0.95rem'
+                                                    }}>{service}</span>
+                                            </li>
+                                            ))}
+                                        </ul>
+
+                                        {/* Background Decoration */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-20px',
+                                            right: '-20px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1) 0%, rgba(243, 156, 18, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    {/*===== Enhanced Contact Form Section =====*/}
+                    <div id="contact-form" className="contact-section section-padding" style={{ 
+                        background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.05) 0%, rgba(30, 34, 71, 0.03) 50%, #f8f9fa 100%)',
+                        borderTop: '1px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Background Pattern */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            right: '0',
+                            bottom: '0',
+                            backgroundImage: 'radial-gradient(circle at 20% 80%, rgba(253, 197, 26, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(30, 34, 71, 0.08) 0%, transparent 50%)',
+                            zIndex: '1'
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+                            {/* Section Header */}
+                            <div className="row">
+                                <div className="col-lg-12 text-center mb-5">
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px',
+                                            border: '1px solid rgba(253, 197, 26, 0.2)'
+                                        }}>
+                                            <i className="bi bi-chat-dots" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
                                             Confirm Your Area
-                                        </small>
-                                        <h2>CONTACT US</h2>
-                                        <p>Check if we cover your location or request service in a new area</p>
+                                        </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Get In <span style={{ color: '#fdc51a' }}>Touch</span>
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            Check if we cover your location or request service in a new area. Our team will respond within 24 hours.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div className="row justify-content-center">
-                                <div className="col-lg-8">
-                                    <div className="contact-form bg-white p-5 rounded shadow glassmorphism-card-with-bg">
+                                <div className="col-lg-9">
+                                    <div className="contact-form" data-aos="fade-up" data-aos-delay="200" style={{
+                                        background: '#ffffff',
+                                        borderRadius: '20px',
+                                        padding: '40px',
+                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                                        border: '1px solid rgba(253, 197, 26, 0.1)',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Form Header */}
+                                        <div style={{
+                                            textAlign: 'center',
+                                            marginBottom: '30px',
+                                            paddingBottom: '20px',
+                                            borderBottom: '1px solid #eceff3'
+                                        }}>
+                                            <div style={{
+                                                width: '60px',
+                                                height: '60px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                margin: '0 auto 15px',
+                                                boxShadow: '0 8px 25px rgba(253, 197, 26, 0.3)'
+                                            }}>
+                                                <i className="bi bi-envelope" style={{ 
+                                                    color: '#1e2247', 
+                                                    fontSize: '1.5rem' 
+                                                }}></i>
+                                            </div>
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontWeight: '600',
+                                                marginBottom: '8px'
+                                            }}>Coverage Inquiry Form</h4>
+                                            <p style={{
+                                                color: '#6c757d',
+                                                margin: '0',
+                                                fontSize: '0.95rem'
+                                            }}>All fields marked with <span style={{ color: '#dc3545' }}>*</span> are required</p>
+                                        </div>
                                         <form onSubmit={handleSubmit} noValidate>
-                                        <div className="row">
+                                            <div className="row">
+                                            {/* Name and Email */}
                                             <div className="col-md-6 mb-4">
-                                            <label htmlFor="purpose" className="form-label text-dark">I want to:</label>
-                                            <select className="form-select" id="purpose" name="purpose" required>
-                                                <option value="">Select Purpose</option>
-                                                <option value="consultation">Request consultation</option>
-                                                <option value="obtain-code">Obtain code</option>
-                                            </select>
+                                                <div className="form-group">
+                                                    <label htmlFor="name" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-person" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Your Name <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        id="name" 
+                                                        name="name" 
+                                                        className="form-control"
+                                                        placeholder="Enter your full name"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa'
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
-                                            {/* repeat: add name=... */}
                                             <div className="col-md-6 mb-4">
-                                            <label htmlFor="service" className="form-label text-dark">Service Required:</label>
-                                            <select className="form-select" id="service" name="service" required>
-                                                <option value="">Select Service</option>
-                                                        <option value="loss-prevention">Loss Prevention Office</option>
+                                                <div className="form-group">
+                                                    <label htmlFor="email" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-envelope" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Email Address <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="email" 
+                                                        id="email" 
+                                                        name="email" 
+                                                        className="form-control"
+                                                        placeholder="your.email@example.com"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa'
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            {/* Phone and Location */}
+                                            <div className="col-md-6 mb-4">
+                                                <div className="form-group">
+                                                    <label htmlFor="phone" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-telephone" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Phone Number <span style={{ color: '#6c757d', fontSize: '0.85rem' }}>(Optional)</span>
+                                                    </label>
+                                                    <input 
+                                                        type="tel" 
+                                                        id="phone" 
+                                                        name="phone" 
+                                                        className="form-control"
+                                                        placeholder="+61 xxx xxx xxx"
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa'
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="col-md-6 mb-4">
+                                                <div className="form-group">
+                                                    <label htmlFor="location" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-geo-alt" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Property Location <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <input 
+                                                        type="text" 
+                                                        id="location" 
+                                                        name="location" 
+                                                        className="form-control"
+                                                        placeholder="Enter property address or suburb"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa'
+                                                        }}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            {/* Service Type */}
+                                            <div className="col-12 mb-4">
+                                                <div className="form-group">
+                                                    <label htmlFor="service" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-shield-check" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Service Type <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <select 
+                                                        id="service" 
+                                                        name="service" 
+                                                        className="form-select"
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa'
+                                                        }}
+                                                    >
+                                                        <option value="">Please select a service</option>
+                                                        <option value="residential">Residential Security</option>
+                                                        <option value="commercial">Commercial Security</option>
                                                         <option value="event-security">Event Security</option>
                                                         <option value="mobile-patrol">Mobile Patrol Security</option>
-                                                        <option value="uniform-guards">Uniform Guards</option>
                                                         <option value="construction-site">Construction Site Security</option>
-                                                        <option value="k9-response">K9 Response Unit</option>
-                                                        <option value="crowd-controller">Crowd Controller</option>
+                                                        <option value="k9-response">K9 Security Services</option>
                                                         <option value="concierge">Concierge Security</option>
-                                                        <option value="alarm-response">Alarm Response Unit Security Officer</option>
+                                                        <option value="alarm-response">Alarm Response Services</option>
+                                                        <option value="consultation">Security Consultation</option>
                                                         <option value="other">Other Services</option>
-                                            </select>
+                                                    </select>
+                                                </div>
                                             </div>
 
-                                            <div className="col-md-6 mb-4">
-                                            <label htmlFor="name" className="form-label text-dark">Your Name:</label>
-                                            <input type="text" className="form-control" id="name" name="name" required />
-                                            </div>
-
-                                            <div className="col-md-6 mb-4">
-                                            <label htmlFor="phone" className="form-label text-dark">Phone:</label>
-                                            <input type="tel" className="form-control" id="phone" name="phone" required />
-                                            </div>
-
-                                            <div className="col-md-6 mb-4">
-                                            <label htmlFor="email" className="form-label text-dark">Your Email:</label>
-                                            <input type="email" className="form-control" id="email" name="email" required />
-                                            </div>
-
-                                            <div className="col-md-6 mb-4">
-                                            <label htmlFor="location" className="form-label text-dark">Location:</label>
-                                            <input type="text" className="form-control" id="location" name="location" required />
-                                            </div>
-
+                                            {/* Message */}
                                             <div className="col-12 mb-4">
-                                            <label htmlFor="message" className="form-label text-dark">Message / Details:</label>
-                                            <textarea className="form-control" id="message" name="message" rows="4" required />
+                                                <div className="form-group">
+                                                    <label htmlFor="message" style={{
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        color: '#1e2247',
+                                                        fontWeight: '500',
+                                                        marginBottom: '8px',
+                                                        fontSize: '0.95rem'
+                                                    }}>
+                                                        <i className="bi bi-chat-dots" style={{ marginRight: '8px', color: '#fdc51a' }}></i>
+                                                        Your Message <span style={{ color: '#dc3545', marginLeft: '4px' }}>*</span>
+                                                    </label>
+                                                    <textarea 
+                                                        id="message" 
+                                                        name="message" 
+                                                        className="form-control"
+                                                        rows="5"
+                                                        placeholder="Please describe your security requirements, property details, expected duration, and any specific concerns you may have..."
+                                                        required
+                                                        style={{
+                                                            border: '2px solid #eceff3',
+                                                            borderRadius: '8px',
+                                                            padding: '12px 15px',
+                                                            fontSize: '0.95rem',
+                                                            backgroundColor: '#fafafa',
+                                                            resize: 'vertical',
+                                                            minHeight: '120px'
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
 
-                                            <div className="col-12 text-center">
-                                            <button
-                                                type="submit"
-                                                disabled={loading}
-                                                className="btn px-4 py-3 text-white"
-                                                style={{ backgroundColor:'#fdc51a', border:'none', borderRadius:'5px', fontWeight:600, textTransform:'uppercase' }}
-                                            >
-                                                {loading ? 'SENDING…' : 'SEND REQUEST'} <span><i className="bi bi-send" /></span>
-                                            </button>
+                                            {/* Privacy Notice */}
+                                            <div className="col-12 mb-4">
+                                                <div style={{
+                                                    background: 'rgba(30, 34, 71, 0.05)',
+                                                    borderRadius: '10px',
+                                                    padding: '20px',
+                                                    border: '1px solid rgba(30, 34, 71, 0.1)'
+                                                }}>
+                                                    <div style={{
+                                                        display: 'flex',
+                                                        alignItems: 'flex-start',
+                                                        gap: '15px'
+                                                    }}>
+                                                        <div style={{
+                                                            width: '40px',
+                                                            height: '40px',
+                                                            background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                            borderRadius: '50%',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            justifyContent: 'center',
+                                                            flexShrink: '0'
+                                                        }}>
+                                                            <i className="bi bi-shield-check" style={{ color: '#ffffff', fontSize: '1.1rem' }}></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 style={{
+                                                                color: '#1e2247',
+                                                                fontWeight: '600',
+                                                                marginBottom: '5px',
+                                                                fontSize: '0.95rem'
+                                                            }}>Your Privacy is Protected</h6>
+                                                            <p style={{
+                                                                color: '#6c757d',
+                                                                margin: '0',
+                                                                fontSize: '0.85rem',
+                                                                lineHeight: '1.5'
+                                                            }}>
+                                                                We respect your privacy and will never share your personal information with third parties. Your data is encrypted and securely stored.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            {/* Submit Button */}
+                                            <div className="col-12 text-center">
+                                                <button
+                                                    type="submit"
+                                                    disabled={loading}
+                                                    className="btn"
+                                                    style={{
+                                                        background: loading ? '#6c757d' : 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                        color: '#ffffff',
+                                                        border: 'none',
+                                                        borderRadius: '10px',
+                                                        padding: '15px 40px',
+                                                        fontSize: '0.95rem',
+                                                        fontWeight: '600',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.5px',
+                                                        boxShadow: loading ? 'none' : '0 8px 25px rgba(30, 34, 71, 0.3)',
+                                                        cursor: loading ? 'not-allowed' : 'pointer',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        gap: '10px',
+                                                        margin: '0 auto',
+                                                        minWidth: '200px'
+                                                    }}
+                                                >
+                                                    {loading ? (
+                                                        <>
+                                                            <div style={{
+                                                                width: '16px',
+                                                                height: '16px',
+                                                                border: '2px solid transparent',
+                                                                borderTop: '2px solid #ffffff',
+                                                                borderRadius: '50%',
+                                                                animation: 'spin 1s linear infinite'
+                                                            }}></div>
+                                                            Sending Message...
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <i className="bi bi-send"></i>
+                                                            Send Message
+                                                        </>
+                                                    )}
+                                                </button>
+                                            </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -589,49 +1489,434 @@ export default function ServiceCoveragePage() {
                         </div>
                     </div>
 
-                    {/*===== Assurance Section =====*/}
-                    <div className="assurance-section bg-28 section-padding">
-                        <div className="container">
+                    {/*===== Enhanced Assurance Section =====*/}
+                    <div className="assurance-section section-padding" style={{ 
+                        background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)', 
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Background Pattern */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '0',
+                            left: '0',
+                            right: '0',
+                            bottom: '0',
+                            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(253, 197, 26, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(253, 197, 26, 0.05) 0%, transparent 50%)',
+                            zIndex: '1'
+                        }}></div>
+
+                        {/* Decorative Elements */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '-100px',
+                            right: '-100px',
+                            width: '300px',
+                            height: '300px',
+                            background: 'rgba(253, 197, 26, 0.08)',
+                            borderRadius: '50%',
+                            zIndex: '1'
+                        }}></div>
+                        <div style={{
+                            position: 'absolute',
+                            bottom: '-80px',
+                            left: '-80px',
+                            width: '200px',
+                            height: '200px',
+                            background: 'rgba(253, 197, 26, 0.05)',
+                            borderRadius: '50%',
+                            zIndex: '1'
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
+                            {/* Section Header */}
                             <div className="row">
-                                <div className="col-lg-12 text-center">
-                                    <div className="heading2">
-                                        <h2>NATIONWIDE SECURITY SOLUTIONS</h2>
-                                        <p>Wherever you need protection, we can provide professional security services</p>
+                                <div className="col-lg-12 text-center mb-5">
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'rgba(253, 197, 26, 0.15)',
+                                            color: '#fdc51a',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px',
+                                            border: '1px solid rgba(253, 197, 26, 0.3)'
+                                        }}>
+                                            <i className="bi bi-award" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
+                                            Our Commitment
+                                    </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#ffffff',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Nationwide <span style={{ color: '#fdc51a' }}>Security Solutions</span>
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: 'rgba(255, 255, 255, 0.8)',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            Wherever you need protection, we provide professional security services with unmatched reliability and expertise.
+                                        </p>
+                                </div>
+                            </div>
+                                        </div>
+
+                            {/* Assurance Cards */}
+                            <div className="row">
+                                {/* Rapid Deployment Card */}
+                                <div className="col-lg-4 col-md-6 mb-4">
+                                    <div className="assurance-card h-100" data-aos="fade-up" data-aos-delay="100" style={{
+                                        background: 'rgba(255, 255, 255, 0.95)',
+                                        borderRadius: '20px',
+                                        padding: '40px 30px',
+                                        textAlign: 'center',
+                                        border: '2px solid rgba(253, 197, 26, 0.2)',
+                                        backdropFilter: 'blur(10px)',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Background Accent */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-30px',
+                                            right: '-30px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+
+                                        <div style={{ position: 'relative', zIndex: '2' }}>
+                                            {/* Icon */}
+                                            <div className="assurance-icon mb-4">
+                                                <div style={{
+                                                    width: '80px',
+                                                    height: '80px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    margin: '0 auto',
+                                                    boxShadow: '0 10px 30px rgba(40, 167, 69, 0.3)',
+                                                    transform: 'translateY(-10px)'
+                                                }}>
+                                                    <i className="bi bi-truck" style={{
+                                                        color: '#ffffff',
+                                                        fontSize: '2rem'
+                                                    }}></i>
+                                    </div>
+                                </div>
+
+                                            {/* Content */}
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontWeight: '600',
+                                                marginBottom: '15px',
+                                                fontSize: '1.3rem',
+                                                fontFamily: 'serif'
+                                            }}>Rapid Deployment</h4>
+                                            
+                                            <div style={{
+                                                width: '50px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                margin: '0 auto 20px',
+                                                borderRadius: '2px'
+                                            }}></div>
+
+                                            <p style={{
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                fontSize: '0.95rem'
+                                            }}>
+                                                Our security personnel can be deployed quickly to any location within our coverage areas, ensuring immediate protection when you need it most.
+                                            </p>
+
+                                            {/* Feature Badge */}
+                                            <div style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                background: 'rgba(40, 167, 69, 0.1)',
+                                                color: '#28a745',
+                                                padding: '6px 12px',
+                                                borderRadius: '15px',
+                                                fontSize: '0.8rem',
+                                                fontWeight: '600',
+                                                marginTop: '15px'
+                                            }}>
+                                                <i className="bi bi-lightning-fill me-1"></i>
+                                                Fast Response
+                                        </div>
+                                    </div>
+                                </div>
+                                        </div>
+
+                                {/* Licensed Professionals Card */}
+                                <div className="col-lg-4 col-md-6 mb-4">
+                                    <div className="assurance-card h-100" data-aos="fade-up" data-aos-delay="200" style={{
+                                        background: 'rgba(255, 255, 255, 0.95)',
+                                        borderRadius: '20px',
+                                        padding: '40px 30px',
+                                        textAlign: 'center',
+                                        border: '2px solid rgba(253, 197, 26, 0.2)',
+                                        backdropFilter: 'blur(10px)',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Background Accent */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-30px',
+                                            right: '-30px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 86, 179, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+
+                                        <div style={{ position: 'relative', zIndex: '2' }}>
+                                            {/* Icon */}
+                                            <div className="assurance-icon mb-4">
+                                                <div style={{
+                                                    width: '80px',
+                                                    height: '80px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    margin: '0 auto',
+                                                    boxShadow: '0 10px 30px rgba(0, 123, 255, 0.3)',
+                                                    transform: 'translateY(-10px)'
+                                                }}>
+                                                    <i className="bi bi-shield-check" style={{
+                                                        color: '#ffffff',
+                                                        fontSize: '2rem'
+                                                    }}></i>
+                                                </div>
+                                            </div>
+
+                                            {/* Content */}
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontWeight: '600',
+                                                marginBottom: '15px',
+                                                fontSize: '1.3rem',
+                                                fontFamily: 'serif'
+                                            }}>Licensed Professionals</h4>
+                                            
+                                            <div style={{
+                                                width: '50px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                margin: '0 auto 20px',
+                                                borderRadius: '2px'
+                                            }}></div>
+
+                                            <p style={{
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                fontSize: '0.95rem'
+                                            }}>
+                                                All our security officers are fully licensed and professionally trained to handle any security situation with expertise and confidence.
+                                            </p>
+
+                                            {/* Feature Badge */}
+                                            <div style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                background: 'rgba(0, 123, 255, 0.1)',
+                                                color: '#007bff',
+                                                padding: '6px 12px',
+                                                borderRadius: '15px',
+                                                fontSize: '0.8rem',
+                                                fontWeight: '600',
+                                                marginTop: '15px'
+                                            }}>
+                                                <i className="bi bi-patch-check-fill me-1"></i>
+                                                Certified
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* 24/7 Availability Card */}
+                                <div className="col-lg-4 col-md-12 mb-4">
+                                    <div className="assurance-card h-100" data-aos="fade-up" data-aos-delay="300" style={{
+                                        background: 'rgba(255, 255, 255, 0.95)',
+                                        borderRadius: '20px',
+                                        padding: '40px 30px',
+                                        textAlign: 'center',
+                                        border: '2px solid rgba(253, 197, 26, 0.2)',
+                                        backdropFilter: 'blur(10px)',
+                                        transition: 'all 0.3s ease',
+                                        position: 'relative',
+                                        overflow: 'hidden'
+                                    }}>
+                                        {/* Card Background Accent */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-30px',
+                                            right: '-30px',
+                                            width: '80px',
+                                            height: '80px',
+                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1) 0%, rgba(243, 156, 18, 0.05) 100%)',
+                                            borderRadius: '50%',
+                                            zIndex: '1'
+                                        }}></div>
+
+                                        <div style={{ position: 'relative', zIndex: '2' }}>
+                                            {/* Icon */}
+                                            <div className="assurance-icon mb-4">
+                                                <div style={{
+                                                    width: '80px',
+                                                    height: '80px',
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    margin: '0 auto',
+                                                    boxShadow: '0 10px 30px rgba(253, 197, 26, 0.3)',
+                                                    transform: 'translateY(-10px)'
+                                                }}>
+                                                    <i className="bi bi-telephone" style={{
+                                                        color: '#1e2247',
+                                                        fontSize: '2rem'
+                                                    }}></i>
+                                                </div>
+                                            </div>
+
+                                            {/* Content */}
+                                            <h4 style={{
+                                                color: '#1e2247',
+                                                fontWeight: '600',
+                                                marginBottom: '15px',
+                                                fontSize: '1.3rem',
+                                                fontFamily: 'serif'
+                                            }}>24/7 Availability</h4>
+                                            
+                                            <div style={{
+                                                width: '50px',
+                                                height: '3px',
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                margin: '0 auto 20px',
+                                                borderRadius: '2px'
+                                            }}></div>
+
+                                            <p style={{
+                                                color: '#6c757d',
+                                                lineHeight: '1.6',
+                                                fontSize: '0.95rem'
+                                            }}>
+                                                Our team is available around the clock to respond to your security needs, providing peace of mind whenever you need it.
+                                            </p>
+
+                                            {/* Feature Badge */}
+                                            <div style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                background: 'rgba(253, 197, 26, 0.1)',
+                                                color: '#fdc51a',
+                                                padding: '6px 12px',
+                                                borderRadius: '15px',
+                                                fontSize: '0.8rem',
+                                                fontWeight: '600',
+                                                marginTop: '15px'
+                                            }}>
+                                                <i className="bi bi-clock-fill me-1"></i>
+                                                Always Ready
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Bottom Stats Section */}
                             <div className="row mt-5">
-                                <div className="col-md-4 mb-4">
-                                    <div className="assurance-item text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="assurance-icon mb-3">
-                                            <i className="bi bi-truck" style={{color: '#243D31', fontSize: '2.5rem'}}></i>
+                                <div className="col-12">
+                                    <div className="stats-container" data-aos="fade-up" data-aos-delay="400" style={{
+                                        background: 'rgba(255, 255, 255, 0.1)',
+                                        borderRadius: '15px',
+                                        padding: '30px',
+                                        backdropFilter: 'blur(10px)',
+                                        border: '1px solid rgba(253, 197, 26, 0.2)'
+                                    }}>
+                                        <div className="row text-center">
+                                            <div className="col-md-4 mb-3">
+                                                <div style={{
+                                                    fontSize: '2.5rem',
+                                                    fontWeight: '700',
+                                                    color: '#fdc51a',
+                                                    lineHeight: '1'
+                                                }}>100+</div>
+                                                <div style={{
+                                                    color: 'rgba(255, 255, 255, 0.8)',
+                                                    fontSize: '0.9rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    marginTop: '5px'
+                                                }}>Areas Covered</div>
+                                            </div>
+                                            <div className="col-md-4 mb-3">
+                                                <div style={{
+                                                    fontSize: '2.5rem',
+                                                    fontWeight: '700',
+                                                    color: '#fdc51a',
+                                                    lineHeight: '1'
+                                                }}>15min</div>
+                                                <div style={{
+                                                    color: 'rgba(255, 255, 255, 0.8)',
+                                                    fontSize: '0.9rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    marginTop: '5px'
+                                                }}>Average Response</div>
+                                            </div>
+                                            <div className="col-md-4 mb-3">
+                                                <div style={{
+                                                    fontSize: '2.5rem',
+                                                    fontWeight: '700',
+                                                    color: '#fdc51a',
+                                                    lineHeight: '1'
+                                                }}>24/7</div>
+                                                <div style={{
+                                                    color: 'rgba(255, 255, 255, 0.8)',
+                                                    fontSize: '0.9rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    marginTop: '5px'
+                                                }}>Support Available</div>
+                                            </div>
                                         </div>
-                                        <h4 className="mb-3">Rapid Deployment</h4>
-                                        <p>Our security personnel can be deployed quickly to any location within our coverage areas.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 mb-4">
-                                    <div className="assurance-item text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="assurance-icon mb-3">
-                                            <i className="bi bi-shield-check" style={{color: '#243D31', fontSize: '2.5rem'}}></i>
-                                        </div>
-                                        <h4 className="mb-3">Licensed Professionals</h4>
-                                        <p>All our security officers are fully licensed and trained to handle any security situation.</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-4 mb-4">
-                                    <div className="assurance-item text-center p-4 bg-white rounded shadow h-100">
-                                        <div className="assurance-icon mb-3">
-                                            <i className="bi bi-phone" style={{color: '#243D31', fontSize: '2.5rem'}}></i>
-                                        </div>
-                                        <h4 className="mb-3">24/7 Availability</h4>
-                                        <p>Our team is available around the clock to respond to your security needs.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Accrediation />
+                <Subscribe />
             </Layout>
         </>
     )

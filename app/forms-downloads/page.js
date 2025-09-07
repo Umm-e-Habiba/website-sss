@@ -1,76 +1,246 @@
 import Layout from "@/components/layout/Layout"
+import Accreditation from "@/components/accrediation10"
+import Subscribe from "@/components/homepages/home1/Subscribe"
 
 export const metadata = {
-  title: 'Forms & Downloads - Metropolitan Security Services Melbourne',
-  description: 'Download forms and documents for Metropolitan Security\'s professional security services in Melbourne.',
+  title: 'Forms & Downloads - Professional Security Documentation | Metropolitan Security Services',
+  description: 'Access comprehensive forms, employment documents, and essential company resources for Metropolitan Security\'s professional security services. Download quotation forms, booking forms, SOPs, and company documentation.',
 }
 
 export default function FormsDownloadsPage() {
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="FORMS & DOWNLOADS">
+            <Layout 
+                headerStyle={1} 
+                footerStyle={1} 
+                headTitle="Forms & Downloads - Professional Security Documentation"
+                breadcrumbTitle="FORMS & DOWNLOADS"
+                mainTitle="Essential Forms & Documents"
+                subtitle="Comprehensive access to professional forms, employment documents, and essential company resources for seamless security service operations"
+                backgroundImage="/assets/img/about/values.jpg"
+            >
                 <div>
-                    {/*===== Hero Section =====*/}
-                    <div className="about-inner bg-28 section-padding">
-                        <div className="container">
+                    {/*===== Enhanced Hero Section =====*/}
+                    <div className="classic-hero-section section-padding" style={{
+                        background: 'linear-gradient(135deg, #f8f9fa 0%, rgba(253, 197, 26, 0.05) 50%, #eceff3 100%)',
+                        borderBottom: '2px solid #eceff3',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Background Decoration */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '-100px',
+                            right: '-100px',
+                            width: '300px',
+                            height: '300px',
+                            background: 'rgba(253, 197, 26, 0.1)',
+                            borderRadius: '50%',
+                            zIndex: '1'
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: '2' }}>
                             <div className="row align-items-center">
-                                <div className="col-lg-8 mx-auto text-center">
-                                    <div className="heading2 no-margin-heading">
-                                        <small className="heading-top inner-heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
-                                            Easy Access Resources
-                                        </small>
-                                        <h1>FORMS & DOWNLOADS</h1>
-                                        <p className="lead">
-                                            We offer security solutions across Melbourne and beyond. Below are easy-ready online 
-                                            information submission forms made especially for you!
+                                <div className="col-lg-6">
+                                    <div className="hero-content" data-aos="fade-right">
+                                        <div className="hero-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '10px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '25px'
+                                        }}>
+                                            <i className="bi bi-files" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '10px',
+                                                fontSize: '1.1rem'
+                                            }}></i>
+                                            Document Center
+                                        </div>
+                                        <h1 style={{
+                                            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif',
+                                            lineHeight: '1.1'
+                                        }}>
+                                            Essential <span style={{ color: '#fdc51a' }}>Forms</span> & Documents
+                                        </h1>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            lineHeight: '1.6',
+                                            marginBottom: '30px'
+                                        }}>
+                                            Access comprehensive forms and essential documents for our security services. 
+                                            Everything you need for quick submissions and company information.
                                         </p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                                        <div style={{
+                                            textAlign: 'center',
+                                            position: 'relative'
+                                        }}>
+                                            <div style={{
+                                                background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                color: '#1e2247',
+                                                padding: '40px',
+                                                borderRadius: '15px',
+                                                boxShadow: '0 15px 35px rgba(253, 197, 26, 0.3)',
+                                                border: '2px solid #ffffff'
+                                            }}>
+                                                <i className="bi bi-file-earmark-text" style={{
+                                                    fontSize: '4rem',
+                                                    marginBottom: '20px',
+                                                    display: 'block'
+                                                }}></i>
+                                                <h3 style={{ fontWeight: '700', marginBottom: '15px' }}>Professional Documentation</h3>
+                                                <p style={{ margin: '0', fontSize: '1rem' }}>
+                                                    Streamlined access to all essential forms and company documents
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/*===== Forms Grid Section =====*/}
-                    <div className="forms-grid-section bg-29 section-padding">
+                    {/*===== Enhanced Forms Grid Section =====*/}
+                    <div className="forms-grid-section section-padding" style={{
+                        background: '#ffffff',
+                        borderTop: '1px solid #eceff3'
+                    }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px'
+                                        }}>
+                                            <i className="bi bi-file-text" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
                                             Quick Access Forms
-                                        </small>
-                                        <h2>CLIENT FORMS & DOCUMENTS</h2>
-                                        <p>Download, complete and submit these forms for fast and efficient service.</p>
+                                        </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Client <span style={{ color: '#fdc51a' }}>Forms</span> & Documents
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            Download, complete and submit these forms for fast and efficient service processing.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
                                 {/* Get Quotation Form */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="100">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                {/* Card accent */}
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-file-earmark-text" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(253, 197, 26, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-file-earmark-text" style={{fontSize: '2rem', color: '#1e2247'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Get Quotation Form</h5>
-                                                <p className="card-text mb-4">Request a detailed quote for our security services. Provide your requirements and get a customized proposal.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Get Quotation Form</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Request a detailed quote for our security services. Provide your requirements and get a customized proposal.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="get-quotation" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -80,28 +250,78 @@ export default function FormsDownloadsPage() {
 
                                 {/* Book a Guard Form */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="200">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-person-badge" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(40, 167, 69, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-person-badge" style={{fontSize: '2rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Book a Guard Form</h5>
-                                                <p className="card-text mb-4">Quick booking form to request security guard services. Perfect for immediate security needs.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Book a Guard Form</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Quick booking form to request security guard services. Perfect for immediate security needs.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="book-a-guard" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -111,28 +331,78 @@ export default function FormsDownloadsPage() {
 
                                 {/* Booking Form */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="300">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-calendar-check" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(0, 123, 255, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-calendar-check" style={{fontSize: '2rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Booking Form</h5>
-                                                <p className="card-text mb-4">Comprehensive booking form for scheduling security services with detailed requirements.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Booking Form</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Comprehensive booking form for scheduling security services with detailed requirements.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="/booking-form-security-services-australia" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -142,28 +412,78 @@ export default function FormsDownloadsPage() {
 
                                 {/* Contact Us Form */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="400">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-envelope" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(220, 53, 69, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-envelope" style={{fontSize: '2rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Contact Us Form</h5>
-                                                <p className="card-text mb-4">Get in touch with our team for general inquiries, support, or additional information.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Contact Us Form</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Get in touch with our team for general inquiries, support, or additional information.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="/contacts" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -173,28 +493,78 @@ export default function FormsDownloadsPage() {
 
                                 {/* Contractor Declaration Form */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="500">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #6f42c1 0%, #563d7c 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-clipboard-check" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #6f42c1 0%, #563d7c 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(111, 66, 193, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-clipboard-check" style={{fontSize: '2rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Contractor Declaration Form</h5>
-                                                <p className="card-text mb-4">Declaration form for independent contractors working with Metropolitan Security Services.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Contractor Declaration Form</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #6f42c1 0%, #563d7c 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Declaration form for independent contractors working with Metropolitan Security Services.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="/contractor-declaration-form" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -204,28 +574,78 @@ export default function FormsDownloadsPage() {
 
                                 {/* Incident Log Book */}
                                 <div className="col-lg-6 col-md-6 mb-4">
-                                    <div className="form-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 d-flex flex-column">
+                                    <div className="form-card h-100" data-aos="fade-up" data-aos-delay="600">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '15px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '4px',
+                                                    background: 'linear-gradient(135deg, #fd7e14 0%, #e55353 100%)'
+                                                }}></div>
+                                                
                                                 <div className="form-icon mb-3 text-center">
-                                                    <i className="bi bi-journal-text" style={{fontSize: '3rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '70px',
+                                                        height: '70px',
+                                                        background: 'linear-gradient(135deg, #fd7e14 0%, #e55353 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 8px 25px rgba(253, 126, 20, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-journal-text" style={{fontSize: '2rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h5 className="card-title text-center mb-3" style={{color: '#243D31'}}>Incident Log Book</h5>
-                                                <p className="card-text mb-4">Standardized incident reporting logbook for recording security incidents and observations.</p>
+                                                <h5 className="card-title text-center mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Incident Log Book</h5>
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '2px',
+                                                    background: 'linear-gradient(135deg, #fd7e14 0%, #e55353 100%)',
+                                                    margin: '0 auto 20px',
+                                                    borderRadius: '1px'
+                                                }}></div>
+                                                <p className="card-text mb-4" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.6',
+                                                    textAlign: 'center'
+                                                }}>
+                                                    Standardized incident reporting logbook for recording security incidents and observations.
+                                                </p>
                                                 <div className="mt-auto text-center">
                                                     <a 
                                                         href="/incident-report-feedback-form" 
                                                         className="btn px-4 py-2"
                                                         style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            color: '#243D31',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '8px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.9rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 4px 15px rgba(30, 34, 71, 0.3)',
+                                                            transition: 'all 0.3s ease'
                                                         }}
                                                     >
-                                                        <i className="bi bi-eye me-2"></i>Click here to view
+                                                        <i className="bi bi-eye me-2"></i>View Form
                                                     </a>
                                                 </div>
                                             </div>
@@ -236,48 +656,120 @@ export default function FormsDownloadsPage() {
                         </div>
                     </div>
 
-                    {/*===== Employment & Documentation Section =====*/}
-                    <div className="employment-docs-section bg-28 section-padding">
+                    {/*===== Enhanced Employment & Documentation Section =====*/}
+                    <div className="employment-docs-section section-padding" style={{
+                        background: 'linear-gradient(135deg, #f8f9fa 0%, rgba(30, 34, 71, 0.03) 50%, #eceff3 100%)',
+                        borderTop: '1px solid #eceff3'
+                    }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12 text-center mb-5">
-                                    <div className="heading2">
-                                        <small className="heading-top">
-                                            <img src="/assets/img/icons/hands.svg" alt="" />
+                                    <div className="section-header" data-aos="fade-up">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '20px'
+                                        }}>
+                                            <i className="bi bi-building" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
                                             Employment & Documentation
-                                        </small>
-                                        <h2>EMPLOYMENT FORMS & COMPANY DOCUMENTS
-                                            
+                                        </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '15px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Employment Forms & <span style={{ color: '#fdc51a' }}>Company</span> Documents
                                         </h2>
-                                        <p>Essential documents for employment, procedures, and company information.</p>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            maxWidth: '600px',
+                                            margin: '0 auto',
+                                            lineHeight: '1.6'
+                                        }}>
+                                            Essential documents for employment, procedures, and comprehensive company information.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
                                 {/* Employment Form */}
                                 <div className="col-lg-6 col-xl-3 col-md-6 mb-4">
-                                    <div className="employment-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 text-center d-flex flex-column">
+                                    <div className="employment-card h-100" data-aos="fade-up" data-aos-delay="100">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '12px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 text-center d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)'
+                                                }}></div>
+                                                
                                                 <div className="employment-icon mb-3">
-                                                    <i className="bi bi-person-plus" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 5px 15px rgba(40, 167, 69, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-person-plus" style={{fontSize: '1.4rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h6 className="card-title mb-3" style={{color: '#243D31'}}>Employment Form</h6>
-                                                <p className="card-text small mb-3">Application form for employment opportunities with Metropolitan Security Services.</p>
+                                                <h6 className="card-title mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Employment Form</h6>
+                                                <p className="card-text small mb-3" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.5'
+                                                }}>Application form for employment opportunities with Metropolitan Security Services.</p>
                                                 <div className="mt-auto">
                                                     <a 
                                                         href="/wp-content/uploads/2025/05/Employee-Registration-Form.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#1e2247',
-                                                            color: 'white',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '6px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.8rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 3px 10px rgba(30, 34, 71, 0.3)'
                                                         }}
                                                     >
-                                                        <i className="bi bi-download me-1"></i>View
+                                                        <i className="bi bi-download me-1"></i>Download
                                                     </a>
                                                 </div>
                                             </div>
@@ -287,28 +779,67 @@ export default function FormsDownloadsPage() {
 
                                 {/* SOP's */}
                                 <div className="col-lg-6 col-xl-3 col-md-6 mb-4">
-                                    <div className="employment-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 text-center d-flex flex-column">
+                                    <div className="employment-card h-100" data-aos="fade-up" data-aos-delay="200">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '12px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 text-center d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)'
+                                                }}></div>
+                                                
                                                 <div className="employment-icon mb-3">
-                                                    <i className="bi bi-list-check" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 5px 15px rgba(0, 123, 255, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-list-check" style={{fontSize: '1.4rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h6 className="card-title mb-3" style={{color: '#243D31'}}>SOP's</h6>
-                                                <p className="card-text small mb-3">Standard Operating Procedures for security operations and protocols.</p>
+                                                <h6 className="card-title mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>SOP's</h6>
+                                                <p className="card-text small mb-3" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.5'
+                                                }}>Standard Operating Procedures for security operations and protocols.</p>
                                                 <div className="mt-auto">
                                                     <a 
                                                         href="/wp-content/uploads/2022/12/Site-specific-SOPS-Final-2.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#1e2247',
-                                                            color: 'white',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '6px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.8rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 3px 10px rgba(30, 34, 71, 0.3)'
                                                         }}
                                                     >
-                                                        <i className="bi bi-download me-1"></i>View
+                                                        <i className="bi bi-download me-1"></i>Download
                                                     </a>
                                                 </div>
                                             </div>
@@ -318,28 +849,67 @@ export default function FormsDownloadsPage() {
 
                                 {/* Employment Pack */}
                                 <div className="col-lg-6 col-xl-3 col-md-6 mb-4">
-                                    <div className="employment-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 text-center d-flex flex-column">
+                                    <div className="employment-card h-100" data-aos="fade-up" data-aos-delay="300">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '12px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 text-center d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #6f42c1 0%, #563d7c 100%)'
+                                                }}></div>
+                                                
                                                 <div className="employment-icon mb-3">
-                                                    <i className="bi bi-book" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #6f42c1 0%, #563d7c 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 5px 15px rgba(111, 66, 193, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-book" style={{fontSize: '1.4rem', color: '#ffffff'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h6 className="card-title mb-3" style={{color: '#243D31'}}>Employment Pack</h6>
-                                                <p className="card-text small mb-3">Complete employee handbook with policies and procedures.</p>
+                                                <h6 className="card-title mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Employment Pack</h6>
+                                                <p className="card-text small mb-3" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.5'
+                                                }}>Complete employee handbook with policies and procedures.</p>
                                                 <div className="mt-auto">
                                                     <a 
                                                         href="/wp-content/uploads/2025/05/Employee-Handbook.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#1e2247',
-                                                            color: 'white',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '6px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.8rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 3px 10px rgba(30, 34, 71, 0.3)'
                                                         }}
                                                     >
-                                                        <i className="bi bi-download me-1"></i>View
+                                                        <i className="bi bi-download me-1"></i>Download
                                                     </a>
                                                 </div>
                                             </div>
@@ -349,28 +919,67 @@ export default function FormsDownloadsPage() {
 
                                 {/* Company Profile */}
                                 <div className="col-lg-6 col-xl-3 col-md-6 mb-4">
-                                    <div className="employment-card h-100">
-                                        <div className="card bg-white shadow-lg border-0 h-100">
-                                            <div className="card-body p-4 text-center d-flex flex-column">
+                                    <div className="employment-card h-100" data-aos="fade-up" data-aos-delay="400">
+                                        <div className="card h-100" style={{
+                                            background: '#ffffff',
+                                            borderRadius: '12px',
+                                            border: '2px solid #eceff3',
+                                            boxShadow: 'none',
+                                            transition: 'all 0.3s ease',
+                                            overflow: 'hidden'
+                                        }}>
+                                            <div className="card-body p-4 text-center d-flex flex-column" style={{ position: 'relative' }}>
+                                                <div style={{
+                                                    position: 'absolute',
+                                                    top: '0',
+                                                    left: '0',
+                                                    right: '0',
+                                                    height: '3px',
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)'
+                                                }}></div>
+                                                
                                                 <div className="employment-icon mb-3">
-                                                    <i className="bi bi-building" style={{fontSize: '2.5rem', color: '#243D31'}}></i>
+                                                    <div style={{
+                                                        width: '50px',
+                                                        height: '50px',
+                                                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        margin: '0 auto',
+                                                        boxShadow: '0 5px 15px rgba(253, 197, 26, 0.3)'
+                                                    }}>
+                                                        <i className="bi bi-building" style={{fontSize: '1.4rem', color: '#1e2247'}}></i>
+                                                    </div>
                                                 </div>
-                                                <h6 className="card-title mb-3" style={{color: '#243D31'}}>Company Profile</h6>
-                                                <p className="card-text small mb-3">Comprehensive company profile and service capabilities overview.</p>
+                                                <h6 className="card-title mb-3" style={{
+                                                    color: '#1e2247',
+                                                    fontWeight: '600',
+                                                    fontFamily: 'serif'
+                                                }}>Company Profile</h6>
+                                                <p className="card-text small mb-3" style={{
+                                                    color: '#6c757d',
+                                                    lineHeight: '1.5'
+                                                }}>Comprehensive company profile and service capabilities overview.</p>
                                                 <div className="mt-auto">
                                                     <a 
                                                         href="/wp-content/uploads/2025/05/Company-profile.pdf" 
                                                         className="btn btn-sm px-3 py-2"
                                                         style={{
-                                                            backgroundColor: '#1e2247',
-                                                            color: 'white',
+                                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                                            color: '#ffffff',
                                                             border: 'none',
-                                                            borderRadius: '5px',
+                                                            borderRadius: '6px',
                                                             textDecoration: 'none',
-                                                            fontWeight: '600'
+                                                            fontWeight: '600',
+                                                            fontSize: '0.8rem',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.5px',
+                                                            boxShadow: '0 3px 10px rgba(30, 34, 71, 0.3)'
                                                         }}
                                                     >
-                                                        <i className="bi bi-download me-1"></i>View
+                                                        <i className="bi bi-download me-1"></i>Download
                                                     </a>
                                                 </div>
                                             </div>
@@ -381,128 +990,306 @@ export default function FormsDownloadsPage() {
                         </div>
                     </div>
 
-                    {/*===== Quick Access Section =====*/}
-                    <div className="quick-access-section bg-29 section-padding">
+                    {/*===== Enhanced Quick Access Section =====*/}
+                    <div className="quick-access-section section-padding" style={{
+                        background: '#ffffff',
+                        borderTop: '1px solid #eceff3'
+                    }}>
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
-                                    <div className="mr50">
-                                        <div className="heading2 no-margin-heading">
-                                            <small className="heading-top inner-heading-top">
-                                                <img src="/assets/img/icons/hands.svg" alt="" />
-                                                Easy Document Access
-                                            </small>
-                                            <h2>STREAMLINED PROCESS</h2>
-                                            <p>
-                                                Our forms are designed to make the process as simple and efficient as possible. 
-                                                All forms are available online for immediate access and completion.
-                                            </p>
-                                            <div className="process-list mt-4">
-                                                <div className="process-item d-flex align-items-center mb-3">
-                                                    <div className="step-number mr-3" 
-                                                         style={{
-                                                             backgroundColor: '#FDC24C', 
-                                                             color: '#243D31', 
-                                                             width: '30px', 
-                                                             height: '30px', 
-                                                             borderRadius: '50%', 
-                                                             display: 'flex', 
-                                                             alignItems: 'center', 
-                                                             justifyContent: 'center', 
-                                                             fontWeight: 'bold'
-                                                         }}>
-                                                        1
-                                                    </div>
-                                                    <span><strong>Select</strong> the form you need from our comprehensive list</span>
+                                    <div className="content-section" data-aos="fade-right">
+                                        <div className="section-badge" style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                            color: '#ffffff',
+                                            padding: '8px 20px',
+                                            borderRadius: '25px',
+                                            fontSize: '0.85rem',
+                                            fontWeight: '600',
+                                            letterSpacing: '0.5px',
+                                            textTransform: 'uppercase',
+                                            marginBottom: '25px'
+                                        }}>
+                                            <i className="bi bi-lightning" style={{ 
+                                                color: '#fdc51a', 
+                                                marginRight: '8px',
+                                                fontSize: '1rem'
+                                            }}></i>
+                                            Easy Document Access
+                                        </div>
+                                        <h2 style={{
+                                            fontSize: 'clamp(2rem, 4vw, 3rem)',
+                                            fontWeight: '700',
+                                            color: '#1e2247',
+                                            marginBottom: '20px',
+                                            fontFamily: 'serif'
+                                        }}>
+                                            Streamlined <span style={{ color: '#fdc51a' }}>Process</span>
+                                        </h2>
+                                        <p style={{
+                                            fontSize: '1.1rem',
+                                            color: '#6c757d',
+                                            lineHeight: '1.6',
+                                            marginBottom: '30px'
+                                        }}>
+                                            Our forms are designed to make the process as simple and efficient as possible. 
+                                            All forms are available online for immediate access and completion.
+                                        </p>
+                                        <div className="process-list" style={{ marginTop: '30px' }}>
+                                            <div className="process-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                marginBottom: '20px',
+                                                padding: '15px',
+                                                background: 'rgba(253, 197, 26, 0.05)',
+                                                borderRadius: '10px',
+                                                border: '1px solid rgba(253, 197, 26, 0.2)'
+                                            }}>
+                                                <div className="step-number" style={{
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    color: '#1e2247',
+                                                    width: '40px',
+                                                    height: '40px',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontWeight: '700',
+                                                    marginRight: '15px',
+                                                    flexShrink: '0',
+                                                    boxShadow: '0 4px 10px rgba(253, 197, 26, 0.3)'
+                                                }}>
+                                                    1
                                                 </div>
-                                                <div className="process-item d-flex align-items-center mb-3">
-                                                    <div className="step-number mr-3" 
-                                                         style={{
-                                                             backgroundColor: '#FDC24C', 
-                                                             color: '#243D31', 
-                                                             width: '30px', 
-                                                             height: '30px', 
-                                                             borderRadius: '50%', 
-                                                             display: 'flex', 
-                                                             alignItems: 'center', 
-                                                             justifyContent: 'center', 
-                                                             fontWeight: 'bold'
-                                                         }}>
-                                                        2
-                                                    </div>
-                                                    <span><strong>Download</strong> and complete the form with accurate information</span>
+                                                <span style={{ color: '#1e2247', fontWeight: '500' }}>
+                                                    <strong style={{ color: '#fdc51a' }}>Select</strong> the form you need from our comprehensive list
+                                                </span>
+                                            </div>
+                                            <div className="process-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                marginBottom: '20px',
+                                                padding: '15px',
+                                                background: 'rgba(253, 197, 26, 0.05)',
+                                                borderRadius: '10px',
+                                                border: '1px solid rgba(253, 197, 26, 0.2)'
+                                            }}>
+                                                <div className="step-number" style={{
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    color: '#1e2247',
+                                                    width: '40px',
+                                                    height: '40px',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontWeight: '700',
+                                                    marginRight: '15px',
+                                                    flexShrink: '0',
+                                                    boxShadow: '0 4px 10px rgba(253, 197, 26, 0.3)'
+                                                }}>
+                                                    2
                                                 </div>
-                                                <div className="process-item d-flex align-items-center mb-3">
-                                                    <div className="step-number mr-3" 
-                                                         style={{
-                                                             backgroundColor: '#FDC24C', 
-                                                             color: '#243D31', 
-                                                             width: '30px', 
-                                                             height: '30px', 
-                                                             borderRadius: '50%', 
-                                                             display: 'flex', 
-                                                             alignItems: 'center', 
-                                                             justifyContent: 'center', 
-                                                             fontWeight: 'bold'
-                                                         }}>
-                                                        3
-                                                    </div>
-                                                    <span><strong>Submit</strong> the completed form for fast processing</span>
+                                                <span style={{ color: '#1e2247', fontWeight: '500' }}>
+                                                    <strong style={{ color: '#fdc51a' }}>Download</strong> and complete the form with accurate information
+                                                </span>
+                                            </div>
+                                            <div className="process-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                marginBottom: '20px',
+                                                padding: '15px',
+                                                background: 'rgba(253, 197, 26, 0.05)',
+                                                borderRadius: '10px',
+                                                border: '1px solid rgba(253, 197, 26, 0.2)'
+                                            }}>
+                                                <div className="step-number" style={{
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    color: '#1e2247',
+                                                    width: '40px',
+                                                    height: '40px',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontWeight: '700',
+                                                    marginRight: '15px',
+                                                    flexShrink: '0',
+                                                    boxShadow: '0 4px 10px rgba(253, 197, 26, 0.3)'
+                                                }}>
+                                                    3
                                                 </div>
-                                                <div className="process-item d-flex align-items-center mb-3">
-                                                    <div className="step-number mr-3" 
-                                                         style={{
-                                                             backgroundColor: '#FDC24C', 
-                                                             color: '#243D31', 
-                                                             width: '30px', 
-                                                             height: '30px', 
-                                                             borderRadius: '50%', 
-                                                             display: 'flex', 
-                                                             alignItems: 'center', 
-                                                             justifyContent: 'center', 
-                                                             fontWeight: 'bold'
-                                                         }}>
-                                                        4
-                                                    </div>
-                                                    <span><strong>Receive</strong> confirmation and follow-up from our team</span>
+                                                <span style={{ color: '#1e2247', fontWeight: '500' }}>
+                                                    <strong style={{ color: '#fdc51a' }}>Submit</strong> the completed form for fast processing
+                                                </span>
+                                            </div>
+                                            <div className="process-item" style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                marginBottom: '0',
+                                                padding: '15px',
+                                                background: 'rgba(253, 197, 26, 0.05)',
+                                                borderRadius: '10px',
+                                                border: '1px solid rgba(253, 197, 26, 0.2)'
+                                            }}>
+                                                <div className="step-number" style={{
+                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
+                                                    color: '#1e2247',
+                                                    width: '40px',
+                                                    height: '40px',
+                                                    borderRadius: '50%',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    fontWeight: '700',
+                                                    marginRight: '15px',
+                                                    flexShrink: '0',
+                                                    boxShadow: '0 4px 10px rgba(253, 197, 26, 0.3)'
+                                                }}>
+                                                    4
                                                 </div>
+                                                <span style={{ color: '#1e2247', fontWeight: '500' }}>
+                                                    <strong style={{ color: '#fdc51a' }}>Receive</strong> confirmation and follow-up from our team
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
-                                    <div className="stats-grid ml50">
+                                    <div className="stats-grid" data-aos="fade-left" data-aos-delay="200">
                                         <div className="row">
                                             <div className="col-6 mb-4">
-                                                <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-primary" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
-                                                        10
+                                                <div className="stat-box text-center p-4" style={{
+                                                    background: '#ffffff',
+                                                    borderRadius: '15px',
+                                                    border: '2px solid #eceff3',
+                                                    boxShadow: 'none',
+                                                    transition: 'all 0.3s ease',
+                                                    position: 'relative',
+                                                    overflow: 'hidden'
+                                                }}>
+                                                    <div style={{
+                                                        position: 'absolute',
+                                                        top: '0',
+                                                        left: '0',
+                                                        right: '0',
+                                                        height: '3px',
+                                                        background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)'
+                                                    }}></div>
+                                                    <div className="stat-number" style={{
+                                                        fontSize: '2.5rem',
+                                                        fontWeight: '700',
+                                                        color: '#fdc51a',
+                                                        marginBottom: '10px'
+                                                    }}>
+                                                        10+
                                                     </div>
-                                                    <div className="stat-label">Forms Available</div>
+                                                    <div className="stat-label" style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '600',
+                                                        fontSize: '0.9rem'
+                                                    }}>Forms Available</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
-                                                <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-success" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+                                                <div className="stat-box text-center p-4" style={{
+                                                    background: '#ffffff',
+                                                    borderRadius: '15px',
+                                                    border: '2px solid #eceff3',
+                                                    boxShadow: 'none',
+                                                    transition: 'all 0.3s ease',
+                                                    position: 'relative',
+                                                    overflow: 'hidden'
+                                                }}>
+                                                    <div style={{
+                                                        position: 'absolute',
+                                                        top: '0',
+                                                        left: '0',
+                                                        right: '0',
+                                                        height: '3px',
+                                                        background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)'
+                                                    }}></div>
+                                                    <div className="stat-number" style={{
+                                                        fontSize: '2.5rem',
+                                                        fontWeight: '700',
+                                                        color: '#28a745',
+                                                        marginBottom: '10px'
+                                                    }}>
                                                         24/7
                                                     </div>
-                                                    <div className="stat-label">Online Access</div>
+                                                    <div className="stat-label" style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '600',
+                                                        fontSize: '0.9rem'
+                                                    }}>Online Access</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
-                                                <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-warning" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+                                                <div className="stat-box text-center p-4" style={{
+                                                    background: '#ffffff',
+                                                    borderRadius: '15px',
+                                                    border: '2px solid #eceff3',
+                                                    boxShadow: 'none',
+                                                    transition: 'all 0.3s ease',
+                                                    position: 'relative',
+                                                    overflow: 'hidden'
+                                                }}>
+                                                    <div style={{
+                                                        position: 'absolute',
+                                                        top: '0',
+                                                        left: '0',
+                                                        right: '0',
+                                                        height: '3px',
+                                                        background: 'linear-gradient(135deg, #007bff 0%, #0056b3 100%)'
+                                                    }}></div>
+                                                    <div className="stat-number" style={{
+                                                        fontSize: '2.5rem',
+                                                        fontWeight: '700',
+                                                        color: '#007bff',
+                                                        marginBottom: '10px'
+                                                    }}>
                                                         Fast
                                                     </div>
-                                                    <div className="stat-label">Processing</div>
+                                                    <div className="stat-label" style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '600',
+                                                        fontSize: '0.9rem'
+                                                    }}>Processing</div>
                                                 </div>
                                             </div>
                                             <div className="col-6 mb-4">
-                                                <div className="stat-box text-center p-4 bg-white rounded shadow">
-                                                    <div className="stat-number text-info" style={{fontSize: '2.5rem', fontWeight: 'bold'}}>
+                                                <div className="stat-box text-center p-4" style={{
+                                                    background: '#ffffff',
+                                                    borderRadius: '15px',
+                                                    border: '2px solid #eceff3',
+                                                    boxShadow: 'none',
+                                                    transition: 'all 0.3s ease',
+                                                    position: 'relative',
+                                                    overflow: 'hidden'
+                                                }}>
+                                                    <div style={{
+                                                        position: 'absolute',
+                                                        top: '0',
+                                                        left: '0',
+                                                        right: '0',
+                                                        height: '3px',
+                                                        background: 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)'
+                                                    }}></div>
+                                                    <div className="stat-number" style={{
+                                                        fontSize: '2.5rem',
+                                                        fontWeight: '700',
+                                                        color: '#dc3545',
+                                                        marginBottom: '10px'
+                                                    }}>
                                                         Easy
                                                     </div>
-                                                    <div className="stat-label">Submission</div>
+                                                    <div className="stat-label" style={{
+                                                        color: '#1e2247',
+                                                        fontWeight: '600',
+                                                        fontSize: '0.9rem'
+                                                    }}>Submission</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -512,92 +1299,9 @@ export default function FormsDownloadsPage() {
                         </div>
                     </div>
 
-                    {/* ===== Help & Support CTA ===== */}
-                    {/* <div className="help-support-section bg-28 section-padding">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="help-banner bg-primary text-white p-5 rounded text-center">
-                                        <div className="row align-items-center">
-                                            <div className="col-lg-8 text-left">
-                                                <h3 className="text-white mb-3">Need Help with Forms or Downloads?</h3>
-                                                <p className="text-white mb-0">
-                                                    Our team is here to assist you with any questions about our forms or documents. 
-                                                    Contact us for support with completing forms or understanding requirements.
-                                                </p>
-                                            </div>
-                                            <div className="col-lg-4 text-right">
-                                                <div className="help-buttons">
-                                                    <a 
-                                                        href="#" 
-                                                        className="btn text-dark px-4 py-3 me-2 mb-2"
-                                                        style={{
-                                                            backgroundColor: '#FDC24C',
-                                                            border: 'none',
-                                                            borderRadius: '5px',
-                                                            textDecoration: 'none',
-                                                            fontWeight: '600',
-                                                            textTransform: 'uppercase'
-                                                        }}
-                                                    >
-                                                        GET HELP <span><i className="bi bi-question-circle"></i></span>
-                                                    </a>
-                                                    <a 
-                                                        href="#" 
-                                                        className="btn btn-outline-light px-4 py-3"
-                                                        style={{
-                                                            borderRadius: '5px',
-                                                            textDecoration: 'none',
-                                                            fontWeight: '600',
-                                                            textTransform: 'uppercase'
-                                                        }}
-                                                    >
-                                                        CALL SUPPORT <span><i className="bi bi-headset"></i></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="row mt-4">
-                                            <div className="col-lg-12">
-                                                <div className="help-info-row d-flex justify-content-around text-center">
-                                                    <div className="help-info-item">
-                                                        <div className="help-icon mb-2">
-                                                            <i className="bi bi-download" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Easy Downloads</h6>
-                                                        <small className="text-white-50">One-click access</small>
-                                                    </div>
-                                                    <div className="help-info-item">
-                                                        <div className="help-icon mb-2">
-                                                            <i className="bi bi-file-check" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Form Assistance</h6>
-                                                        <small className="text-white-50">Step-by-step help</small>
-                                                    </div>
-                                                    <div className="help-info-item">
-                                                        <div className="help-icon mb-2">
-                                                            <i className="bi bi-headset" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Support Available</h6>
-                                                        <small className="text-white-50">Expert guidance</small>
-                                                    </div>
-                                                    <div className="help-info-item">
-                                                        <div className="help-icon mb-2">
-                                                            <i className="bi bi-clock" style={{fontSize: '2rem'}}></i>
-                                                        </div>
-                                                        <h6 className="text-white mb-1">Quick Response</h6>
-                                                        <small className="text-white-50">Fast processing</small>
-                                                    </div> */}
-                                                </div>
-                                            {/* </div> */}
-                                        {/* </div> */}
-                                    {/* </div> */}
-                                {/* </div> */}
-                            {/* </div> */}
-                        {/* </div> */}
-                    {/* x</div> */}
-                {/* </div> */}
+                </div>
+                <Accreditation />
+                <Subscribe />
             </Layout>
         </>
     )

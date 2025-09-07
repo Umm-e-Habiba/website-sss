@@ -48,7 +48,7 @@ export default function Blog4() {
 
   if (loading) {
     return (
-      <section className="blog4-section">
+      <section className="blog4-section" style={{ position: 'relative', zIndex: 1 }}>
         <div className="blog4-container">
           <div className="blog4-header">
             <h2 className="blog4-title">Latest News</h2>
@@ -63,7 +63,7 @@ export default function Blog4() {
   }
 
   return (
-    <section className="blog4-section">
+    <section className="blog4-section" style={{ position: 'relative', zIndex: 1 }}>
       <div className="blog4-container">
         {/* Header */}
         <div className="blog4-header">
@@ -116,6 +116,8 @@ export default function Blog4() {
         .blog4-section {
           padding: 80px 0;
           background: #f8f9fa;
+          position: relative;
+          z-index: 1;
         }
 
         .blog4-container {

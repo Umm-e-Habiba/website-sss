@@ -225,7 +225,7 @@ export default function PrivateSecurityPage() {
                                             style={{
                                                 color: '#1e2247',
                                                 lineHeight: '1.1',
-                                                fontSize: 'clamp(2.5rem, 5vw, 4rem)'
+                                                fontSize: '3rem'
                                             }}
                                         >
                                             TOP PRIVATE<br />

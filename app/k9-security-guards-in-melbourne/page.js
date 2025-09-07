@@ -96,7 +96,7 @@ export default function K9SecurityPage() {
                                         </div>
                                         <h1 
                                             className="display-4 fw-bold mb-4" 
-                                            style={{color: '#1e2247', lineHeight: '1.2'}}
+                                            style={{color: '#1e2247', lineHeight: '1.2', fontSize: '3rem'}}
                                         >
                                             Professional K9 Security Guards in Melbourne
                                         </h1>

@@ -17,7 +17,7 @@ export default function GoodPeople() {
         paddingBottom: '0px',
         background: '#ffffff',
         position: 'relative',
-        zIndex: 10,
+        zIndex: 1,
         width: '100%',
         clear: 'both'
       }}
@@ -84,7 +84,7 @@ export default function GoodPeople() {
           padding-bottom: 0px;
           background: #ffffff;
           position: relative;
-          z-index: 10;
+          z-index: 1;
           width: 100%;
           clear: both;
           opacity: 0;
