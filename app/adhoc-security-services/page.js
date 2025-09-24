@@ -560,7 +560,7 @@ export default function AdhocSecurityPage() {
                                         </span>
                                     </div>
                                     <h2 className="display-5 fw-bold mb-4 text-white">
-                                    Where Others Shu e Paperwork, We Put Guards on Site
+                                    Where Others Shuffle Paperwork, We Put Guards on Site
                                     </h2>
                                     
                                     </div>
