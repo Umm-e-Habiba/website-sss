@@ -6,7 +6,6 @@ import Gallery4 from "@/components/ui/gallery4"
 import WhyChooseUs from "@/components/ui/why-choose-us"
 import Accreditation from '@/components/accrediation10'
 import Subscribe from '@/components/homepages/home1/Subscribe';
-import SubcribeNew from '@/components/homepages/home1/Subcribe-new';
 
 export default function AdhocSecurityPage() {
     const [activeService, setActiveService] = useState(null);
@@ -22,39 +21,25 @@ export default function AdhocSecurityPage() {
 
     const services = [
         {
-            title: "Fast Response You Can Rely On",
+            title: "Security Patrols & Surveillance",
             icon: <Eye size={24} />,
             iconSymbol: <Search size={24} />,
-            
-            details: " Emergencies don’t wait. Neither do we.Call anytime, we answer in minutes and dispatch guards within hours."
+            description: "Comprehensive security patrols and surveillance for your property",
+            details: "Our trained security guards conduct regular patrols of your property to deter criminal activity and ensure that your assets are protected at all times. We provide comprehensive surveillance and monitoring services with detailed reporting."
         },
         {
-            title: "Qualified Professionals, Every Time", 
+            title: "Access Control & Monitoring", 
             icon: <Lock size={24} />,
             iconSymbol: <Shield size={24} />,
-            
-            details: "Every guard is licensed, insured, and trained in conflict resolution, crowd management, and emergency response. No placeholders. No gaps"
+            description: "Advanced access control systems and monitoring",
+            details: "We help you control who has access to your property or event, using various methods including ID checks, biometric scanning systems, and advanced access control technologies to maintain secure entry points."
         },
         {
-            title: "Flexible to Your Needs",
+            title: "Event Security Services",
             icon: <Target size={24} />,
             iconSymbol: <Users size={24} />,
-            
-            details: "Whether it’s a single night, a weekend event, or ongoing patrols, we adapt to what you need, not the other way around."
-        },
-        {
-            title: "Clear Communication",
-            icon: <Target size={24} />,
-            iconSymbol: <Users size={24} />,
-            
-            details: "You’ll know who’s on their way, when they’ll arrive, and how your site is being secured. No guesswork, just accountability."
-        },
-        {
-            title: "Peace of Mind",
-            icon: <Target size={24} />,
-            iconSymbol: <Users size={24} />,
-            
-            details: "More than uniforms, we deliver confidence that your people, property, and reputation are safe."
+            description: "Professional security for events and gatherings",
+            details: "We offer a range of event security services, from concerts and festivals to corporate events and private parties, our experienced personnel ensure your events run smoothly and safely with comprehensive crowd management and security protocols."
         },
         
     ];
@@ -72,14 +57,164 @@ export default function AdhocSecurityPage() {
 
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ADHOC SECURITY PROVIDERS"
-                mainTitle="Security That Turns Up When It Matters"
-                subtitle=" Most providers say, “We’ll see what we can do.”
-                            At Metro Guards, we make sure you’re covered."
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="ADHOC SECURITY SERVICES"
+                mainTitle="Emergency Adhoc Security Services"
+                subtitle="Rapid Response Security Guards in Melbourne - Available 24/7 for Immediate Protection"
             >
                 <div>
                                       {/*===== Modern Hero Section =====*/}
-                    
+                    <div className="hero-section position-relative" style={{backgroundColor: '#ffffff', paddingTop: '80px', paddingBottom: '80px'}}>
+    <div className="container">
+        <div className="row align-items-center">
+            <div className="col-lg-6">
+                                    <div className="hero-content">
+                                        <div className="subtitle mb-4">
+                                            <span 
+                                                className="badge px-4 py-2" 
+                                                style={{
+                                                    backgroundColor: '#fdc51a', 
+                                                    color: '#1e2247', 
+                                                    fontWeight: '600',
+                                                    fontSize: '0.85rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.5px',
+                                                    borderRadius: '25px'
+                                                }}
+                                            >
+                                                 YOUR TRUSTED PROTECTION PARTNER
+                                            </span>
+                                        </div>
+                                        <h1 
+                                            className="display-3 fw-bold mb-4" 
+                                            style={{
+                                                color: '#1e2247',
+                                                lineHeight: '1.1',
+                                                fontSize: '3rem'
+                                            }}
+                                        >
+                                            ADHOC SECURITY<br />
+                                            <span style={{color: '#fdc51a'}}>SERVICES</span>
+                                        </h1>
+                                        <p 
+                                            className="lead mb-4" 
+                                            style={{
+                                                color: '#6c757d',
+                                                fontSize: '1.2rem', 
+                                                lineHeight: '1.6',
+                                                maxWidth: '500px'
+                                            }}
+                                        >
+                                            In today’s unpredictable world, safeguarding your people and assets is more critical than ever. Our Adhoc Security Services provide flexible, reliable, and effective protection for businesses, organizations, and individuals.
+
+                                            We understand that every client faces unique challenges. That’s why we offer customizable security solutions tailored to your exact requirements—whether it’s short-term coverage for a one-off event or ongoing protection for your premises.
+
+                                            Our professional guards are equipped with the latest technology, trained in conflict resolution and emergency response, and committed to maintaining safety with vigilance and professionalism. You can rest assured knowing your security is in capable hands.
+
+                                            At Metro Guards, we pride ourselves on delivering services built on integrity, reliability, and excellence. We work closely with our clients to understand their concerns, provide transparent communication, and ensure peace of mind every step of the way.
+                                        </p>
+                                        
+                                        
+                                        <div className="hero-buttons d-flex flex-wrap gap-3">
+                            <a 
+                                href="/get-quotation" 
+                                                className="btn btn-primary px-5 py-3"
+                                style={{
+                                                    backgroundColor: '#fdc51a',
+                                                    color: '#1e2247',
+                                    border: 'none',
+                                                    borderRadius: '10px',
+                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    boxShadow: '0 4px 15px rgba(253, 197, 26, 0.3)'
+                                                }}
+                                            >
+                                                 GET QUOTATION
+                            </a>
+                            <a 
+                                href="tel:1300731173" 
+                                                className="btn btn-outline-dark px-5 py-3"
+                                style={{
+                                                    borderColor: '#1e2247',
+                                                    color: '#1e2247',
+                                                    borderRadius: '10px',
+                                    textDecoration: 'none',
+                                                    fontWeight: '700',
+                                                    textTransform: 'uppercase',
+                                                    fontSize: '0.9rem',
+                                                    transition: 'all 0.3s ease',
+                                                    borderWidth: '2px'
+                                                }}
+                                            >
+                                                <Phone size={16} style={{marginRight: '8px'}} /> 1300731173
+                            </a>
+                        </div>
+                                        
+                                        {/* Trust Indicators */}
+                                        
+            </div>
+                        </div>
+                                
+                                            <div className="col-lg-6">
+                                    <div className="hero-image position-relative mt-5 mt-lg-0">
+                                        <div 
+                                            className="image-container position-relative"
+                                            style={{
+                                                borderRadius: '25px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 25px 50px rgba(0,0,0,0.15)'
+                                            }}
+                                        >
+                                            <img 
+                                                src="/assets/img/bg/security img.webp" 
+                                                alt="Professional Security Team" 
+                                                className="img-fluid"
+                                                style={{
+                                                    width: '100%',
+                                                    height: '500px',
+                                                    objectFit: 'cover'
+                                                }}
+                                            />
+                                            
+                                            
+                                            
+                                            
+            </div>
+                                        
+                                        {/* Decorative Elements */}
+                                        <div 
+                                            className="decoration-circle position-absolute"
+                                            style={{
+                                                top: '-20px',
+                                                left: '-20px',
+                                                width: '100px',
+                                                height: '100px',
+                                                backgroundColor: '#fdc51a',
+                                                borderRadius: '50%',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                                        <div 
+                                            className="decoration-square position-absolute"
+                                            style={{
+                                                bottom: '-30px',
+                                                right: '-30px',
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundColor: '#1e2247',
+                                                borderRadius: '15px',
+                                                opacity: '0.1',
+                                                zIndex: '-1'
+                                            }}
+                                        ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
                                         {/*===== Our Services Section =====*/}
                     <div className="services-section section-padding" style={{background: '#ffffff'}}>
                         <div className="container">
@@ -103,7 +238,59 @@ export default function AdhocSecurityPage() {
                                 </div>
                                         
                                         {/* Additional Features */}
-                                       
+                                        <div className="features-list mt-4">
+                                            <div className="align-items-center mb-3">
+                                                <p>Personnel will ensure that your event runs smoothly and that your guests are safe and secure.</p>
+                                            </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Clock size={20} />
+                            </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Available Response</span>
+                                        </div>
+                                            <div className="feature-item d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <User size={20} />
+                                        </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Trained Professional Guards</span>
+                                    </div>
+                                            <div className="feature-item d-flex align-items-center">
+                                                <div 
+                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                    style={{
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        backgroundColor: '#fdc51a',
+                                                        borderRadius: '50%',
+                                                        color: '#1e2247',
+                                                        fontSize: '1rem'
+                                                    }}
+                                                >
+                                                    <Zap size={20} />
+                                </div>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Rapid Deployment</span>
+                                        </div>
+                                    </div>
                                 </div>
                                         </div>
                                 
@@ -112,13 +299,15 @@ export default function AdhocSecurityPage() {
                                         <div className="section-header mb-5">
                                             <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                Why Choose Us
+                                                     OUR SERVICES
                                                 </span>
                                         </div>
                                             <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                            Protection Without Excuses. Safety Without Gaps
+                                                Our Adhoc Security Services
                                             </h2>
-                                            
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                When it comes to protecting your people and assets, you need a security partner you can trust.
+                                            </p>
                                     </div>
                                         
                                         {/* Expandable Service Cards */}
@@ -207,7 +396,7 @@ export default function AdhocSecurityPage() {
                                 </div>
 </div>
                                                 </div>
-                    </div>
+                                            </div>
 
                     {/*===== Why Choose Adhoc Security Section =====*/}
                     <div className="why-choose-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
@@ -217,15 +406,17 @@ export default function AdhocSecurityPage() {
                                     <div className="subtitle mb-3">
                                         <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
                                             <i className="bi bi-shield-exclamation me-2"></i>
-                                            Demands And Solutions
+                                            WHEN YOU NEED US
                                         </span>
-                                    </div>
+</div>
                                     <h2 className="display-5 fw-bold mb-4 text-white">
-                                        Real Issues. Real Solutions.
+                                        Common Reasons for Adhoc Security
                                     </h2>
-                                    
-                                    </div>
-                            </div>
+                                    <p className="lead text-white" style={{opacity: '0.9'}}>
+                                        Adhoc security is implemented when external factors increase site vulnerability and immediate protection is needed.
+                                    </p>
+                                                </div>
+                                            </div>
                             
                             <div className="row g-4">
                                 <div className="col-lg-6 col-md-6">
@@ -252,14 +443,13 @@ export default function AdhocSecurityPage() {
                                             <AlertTriangle size={32} />
                                                     </div>
                                         <div className="reason-content">
-                                            <h5 className="mb-3 text-white fw-bold">When Guards Don’t Show</h5>
+                                            <h5 className="mb-3 text-white fw-bold">Damaged Barriers/Gates</h5>
                                             <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
-                                            A cancelled shift leaves your site exposed.<br/>
-                                            Metro Guards confirms dispatch immediately and puts a licensed guard on-site within hours, so your site is covered before the night ends.
+                                                Temporary cover to keep the site resilient while repairs are made. We help organizations deal with broken fences, barriers or gates by controlling entry and exit points.
                                             </p>
                                                 </div>
                                             </div>
-                                </div>
+</div>
                                 
                                 <div className="col-lg-6 col-md-6">
                                     <div 
@@ -285,11 +475,10 @@ export default function AdhocSecurityPage() {
                                             <UserX size={32} />
                                                 </div>
                                         <div className="reason-content">
-                                            <h5 className="mb-3 text-white fw-bold">When Customers Cross the Line</h5>
+                                            <h5 className="mb-3 text-white fw-bold">Antisocial Behavior</h5>
                                             <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
-                                            Staff shouldn’t have to handle violent or aggressive behaviour.<br/>
-                                            Our guards are trained to de-escalate situations, protect your team, and keep your reputation intact.
-</p>
+                                                Implementing Ad Hoc security helps prevent violence and property damage by offering a visible deterrent in areas with higher crime rates or public exposure.
+                                            </p>
                                             </div>
                                         </div>
                                     </div>
@@ -350,17 +539,16 @@ export default function AdhocSecurityPage() {
                                             <Wrench size={32} />
                 </div>
                                         <div className="reason-content">
-                                            <h5 className="mb-3 text-white fw-bold">When Events Need Control</h5>
+                                            <h5 className="mb-3 text-white fw-bold">Security System Installation</h5>
                                             <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
-                                            Large crowds and VIPs require steady, experienced management.
-                                            We provide trained crowd controllers and discreet VIP protection, keeping your event running smoothly and safely.
+                                                Request temporary coverage while setting up new security systems like CCTV or alarm systems, ensuring continuous protection during upgrades.
                                             </p>
             </div>
         </div>
                         </div>
-                            </div>
                         </div>
                     </div>
+                </div>
 
                     {/*===== Statistics & Advantages Section =====*/}
                     <div className="stats-advantages-section section-padding" style={{background: '#f8f9fa'}}>
@@ -371,29 +559,39 @@ export default function AdhocSecurityPage() {
                                         <div className="subtitle mb-3">
                                             <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
                                                 <i className="bi bi-lightning me-2"></i>
-                                                Promise Of Transformation
+                                                FAST RESPONSE & QUALITY SERVICE
                                             </span>
             </div>
                                         <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                        Stop Guessing The Safety. Start Owning It
+                                            Advantages of Adhoc Security Guards
                                         </h2>
-                                       
+                                        <p className="lead mb-4" style={{color: '#6c757d'}}>
+                                                We pride ourselves on the speed and efficiency of our Adhoc coverage, with officers often deployed in less than 2 hours. Our Critical Review Helpdesk ensures seamless coverage.
+                                            </p>
+                                        
                                         <div className="advantages-list">
                                             {[
-                                                "❌ Stop rolling dice on “maybe” coverage.",
-                                                "❌ Stop praying your guard actually shows up.",
-                                                "❌ Stop risking headlines, lawsuits, and sleepless nights",
-                                                "✅ Start securing your people and property with Metro Guards.",
-                                                "✅ Start trusting protection that actually arrives.",
-                                                "✅ Start running your business without fear.  "
-                                                
-                                                
-
+                                                "Reduces accidents and long-term costs",
+                                                "Convenient and simple mobilization", 
+                                                "Fights temporary vulnerability effectively",
+                                                "Identifies additional security needs",
+                                                "Great value for money with right provider"
                                             ].map((advantage, index) => (
                                                 <div key={index} className="advantage-item d-flex align-items-center mb-3">
-                                                    
+                                                    <div 
+                                                        className="check-icon me-3 d-flex align-items-center justify-content-center"
+                                                        style={{
+                                                            width: '30px',
+                                                            height: '30px',
+                                                            backgroundColor: '#fdc51a',
+                                                            borderRadius: '50%',
+                                                            color: '#1e2247'
+                                                        }}
+                                                    >
+                                                        <CheckCircle size={16} />
+                        </div>
                                                     <span style={{color: '#1e2247', fontWeight: '500'}}>{advantage}</span>
-                                                </div>
+                        </div>
                                             ))}
                     </div>
                 </div>
@@ -547,97 +745,6 @@ export default function AdhocSecurityPage() {
                             </div>
                         </div>
                     </div>
-
-                    {/*===== Why Choose Adhoc Security Section =====*/}
-                    <div className="why-choose-section section-padding" style={{background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)'}}>
-                        <div className="container">
-                            <div className="row align-items-center">
-                                <div className="col-lg-12 text-center mb-5">
-                                    <div className="subtitle mb-3">
-                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                            <i className="bi bi-shield-exclamation me-2"></i>
-                                            What Makes Us Di erent
-                                        </span>
-                                    </div>
-                                    <h2 className="display-5 fw-bold mb-4 text-white">
-                                    Where Others Shu e Paperwork, We Put Guards on Site
-                                    </h2>
-                                    
-                                    </div>
-                            </div>
-                            
-                            <div className="row g-4">
-                                <div className="col-lg-6 col-md-6">
-                                    <div 
-                                        className="reason-card h-100 p-4 d-flex align-items-start"
-                                        style={{
-                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                            backdropFilter: 'blur(10px)',
-                                            borderRadius: '15px',
-                                            border: '1px solid rgba(255, 255, 255, 0.2)',
-                                            transition: 'all 0.3s ease'
-                                        }}
-                                    >
-                                        <div 
-                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
-                                            style={{
-                                                width: '60px',
-                                                height: '60px',
-                                                backgroundColor: '#fdc51a',
-                                                borderRadius: '12px',
-                                                color: '#1e2247'
-                                            }}
-                                        >
-                                            <AlertTriangle size={32} />
-                                                    </div>
-                                        <div className="reason-content">
-                                            <h5 className="mb-3 text-white fw-bold"> Traditional Providers</h5>
-                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
-                                            - Focus on contracts, not action<br/>
-                                            - Delays when urgency matters most<br/>
-                                            - “On call” promises without real cover</p>
-                                                </div>
-                                            </div>
-                                </div>
-                                
-                                <div className="col-lg-6 col-md-6">
-                                    <div 
-                                        className="reason-card h-100 p-4 d-flex align-items-start"
-                                        style={{
-                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                            backdropFilter: 'blur(10px)',
-                                            borderRadius: '15px',
-                                            border: '1px solid rgba(255, 255, 255, 0.2)',
-                                            transition: 'all 0.3s ease'
-                                        }}
-                                    >
-                                        <div 
-                                            className="reason-icon me-4 d-flex align-items-center justify-content-center flex-shrink-0"
-                                            style={{
-                                                width: '60px',
-                                                height: '60px',
-                                                backgroundColor: '#fdc51a',
-                                                borderRadius: '12px',
-                                                color: '#1e2247'
-                                            }}
-                                        >
-                                            <UserX size={32} />
-                                                </div>
-                                        <div className="reason-content">
-                                            <h5 className="mb-3 text-white fw-bold"> Metro Guards</h5>
-                                            <p className="mb-0 text-white" style={{opacity: '0.9', lineHeight: '1.6'}}>
-                                            - Rapid response, day or night<br/>
-                                            - Human empathy in every situation<br/>
-                                            - Zero tolerance for excuse
-                                            </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
-                               
-                            </div>
-                        </div>
-                    </div>
                     
 
                     {/* Add custom styles */}
@@ -754,41 +861,101 @@ export default function AdhocSecurityPage() {
 `}</style>
                 </div>
 
-                
-                <div className="mission-section section-padding" style={{background: '#ffffff'}}>
+                {/*===== FAQ & Information Section =====*/}
+                <div className="faq-info-section " style={{background: '#f8f9fa'}}>
                     <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-10">
-                                <div className="text-center mb-4">
-                                    <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>Our Motivation</span>
-                                </div>
-                                <h2 className="display-5 fw-bold text-center mb-4" style={{color: '#1e2247'}}>
-                                    We Built Metro Guards to Cover the Gaps No One Else Would.
-                                </h2>
-                                <div className="p-4" style={{backgroundColor: '#f8f9fa', borderRadius: '12px', border: '1px solid #e9ecef', borderLeft: '4px solid #fdc51a'}}>
-                                    <p className="mb-2" style={{color: '#495057'}}>
-                                        “The real risk isn’t paperwork, it’s the unlocked door no one’s watching.
-                                    </p>
-                                    <p className="mb-2" style={{color: '#495057'}}>
-                                        It’s the aggressive customer your team can’t manage alone.
-                                    </p>
-                                    <p className="mb-2" style={{color: '#495057'}}>
-                                        It’s the moment condence is lost because safety failed.
-                                    </p>
-                                    <p className="mb-2" style={{color: '#495057'}}>
-                                        Metro Guards exists to make sure that doesn’t happen.
-                                    </p>
-                                    <p className="mb-0" style={{color: '#495057'}}>
-                                        When you need us, we answer. And then we arrive.”
-                                    </p>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-header text-center mb-5">
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                            FREQUENTLY ASKED QUESTIONS
+                                        </span>
+                                    </div>
+                                    <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                        Everything You Need to Know About Adhoc Security
+                                    </h2>
                                 </div>
                             </div>
                         </div>
+
+                        <div className="row g-5">
+                            {/* FAQ Section - Full Width */}
+                            <div className="col-lg-12">
+                                <div className="faq-content">
+                                    {faqData.map((faq, index) => (
+                                        <div key={index} className="faq-item mb-3">
+                                            <div 
+                                                className="faq-header p-4"
+                                                style={{
+                                                    backgroundColor: activeFaq === index ? '#ffffff' : '#f8f9fa',
+                                                    borderRadius: activeFaq === index ? '12px 12px 0 0' : '12px',
+                                                    border: '1px solid #e9ecef',
+                                                    borderLeft: '4px solid #fdc51a',
+                                                    boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                    cursor: 'pointer',
+                                                    transition: 'all 0.3s ease'
+                                                }}
+                                                onClick={() => toggleFaq(index)}
+                                            >
+                                                <div className="d-flex align-items-center justify-content-between">
+                                                    <h4 className="mb-0 fw-bold" style={{color: '#1e2247', fontSize: '1.2rem'}}>
+                                                        {faq.question}
+                                                    </h4>
+                                                    <div className="expand-icon">
+                                                        <div 
+                                                            className="d-flex align-items-center justify-content-center"
+                                                            style={{
+                                                                width: '35px',
+                                                                height: '35px',
+                                                                backgroundColor: activeFaq === index ? '#1e2247' : '#e9ecef',
+                                                                borderRadius: '50%',
+                                                                color: activeFaq === index ? '#ffffff' : '#1e2247',
+                                                                transition: 'all 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <span style={{fontSize: '1.1rem', fontWeight: 'bold'}}>
+                                                                {activeFaq === index ? '−' : '+'}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {activeFaq === index && (
+                                                <div 
+                                                    className="faq-content p-4"
+                                                    style={{
+                                                        backgroundColor: '#ffffff',
+                                                        borderRadius: '0 0 12px 12px',
+                                                        border: '1px solid #e9ecef',
+                                                        borderTop: 'none',
+                                                        borderLeft: '4px solid #fdc51a',
+                                                        boxShadow: '0 5px 15px rgba(0,0,0,0.08)',
+                                                        animation: 'slideDown 0.3s ease'
+                                                    }}
+                                                >
+                                                    <p style={{color: '#6c757d', lineHeight: '1.7', margin: 0}}>
+                                                        {faq.answer}
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        
                     </div>
                 </div>
+
                 
-                <SubcribeNew />
-                
+                <WhyChooseUs />
+                <Accreditation />
+                <Subscribe />
             </Layout>
         </>
     )
