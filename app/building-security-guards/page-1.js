@@ -105,48 +105,11 @@ export default function BuildingSecurityPage() {
         }
     ];
 
-    const promiseItems = [
-        {
-            question: "Always On Time, Always On Site",
-            answer: "Our guards don’t vanish, cut corners, or leave early. They arrive on time, stay until the shift ends, and remain fully present the entire way through. Reliability is not a promise; it’s the baseline."
-        },
-        {
-            question: "SOP Compliance",
-            answer: "Every building has its own rhythm, rules, and risks. Our guards are trained in your site’s specific SOPs so that protocols aren’t just known, they’re lived on the ground."
-        },
-        {
-            question: "Live Guard Tracking",
-            answer: "Every patrol, every checkpoint, every round is verified through GPS tracking. You don’t have to wonder if your guard is working; you can see it."
-        },
-        {
-            question: "Real-Time Reporting",
-            answer: "From daily activity logs to instant incident alerts, you get a clear window into what’s happening on your site. No silence. No delays. Just direct access to reports as they happen."
-        },
-        {
-            question: "Supervisor Site Inspections",
-            answer: "Random inspections from supervisors ensure guards don’t slip into autopilot. Every site, every shift, is backed by oversight and accountability."
-        }
-    ];
-
-    const failureCards = [
-        { icon: <AlertTriangle size={40} />, title: "Most security companies tick boxes. They show up in uniform, scribble a log, and leave you with a report that looks the same every night.", description: "" },
-        { icon: <Eye size={40} />, title: "What they don’t give you is certainty.", description: "" },
-        { icon: <Clock size={40} />, title: "Guards drift through shifts without proof they’ve been vigilant.", description: "" },
-        { icon: <UserX size={40} />, title: "Supervisor checks are “optional”, which means they often never happen.", description: "" },
-        { icon: <Bell size={40} />, title: "Reports arrive late, incomplete, or after the damage is already done.", description: "" },
-        { icon: <Shield size={40} />, title: "And while the uniform looks official, it doesn’t guarantee discipline or compliance.", description: "" },
-        { icon: <Landmark size={40} />, title: "This isn’t security. It’s a theatre.", description: "" },
-        { icon: <Book size={40} />, title: "A performance designed to look safe without proving it.", description: "" },
-        { icon: <Target size={40} />, title: "That’s not security. That’s risk management by luck.", description: "" },
-        { icon: <Users size={40} />, title: "With Metro Guards, you get more than uniforms.", description: "" },
-        { icon: <Zap size={40} />, title: "You get accountability, technology, and certified compliance.", description: "" }
-    ];
-
     return (
         <>
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="BUILDING SITE SECURITY GUARDS"
-                mainTitle="BUILDING SITE SECURITY GUARDS SERVICES"
-                
+                mainTitle="Building Site Security Guards Melbourne"
+                subtitle="Your Protection is Our Priority - Your Fastest, Most Reliable, and Affordable Security Partner In Melbourne"
             >
                 <div>
                     {/*===== Modern Hero Section =====*/}
@@ -168,7 +131,7 @@ export default function BuildingSecurityPage() {
                                                     borderRadius: '25px'
                                                 }}
                                             >
-                                                When Your Building Sleeps, We Don’t
+                                                PROFESSIONAL PROTECTION
                                             </span>
                                         </div>
                                         <h1 
@@ -179,11 +142,8 @@ export default function BuildingSecurityPage() {
                                                 fontSize: '3rem'
                                             }}
                                         >
-                                            Security Isn’t Just About Placing <br />
-                                            
-
-
-                                            <span style={{color: '#fdc51a'}}>A Uniform At The Door</span>
+                                            BUILDING SITE SECURITY<br />
+                                            <span style={{color: '#fdc51a'}}>GUARDS MELBOURNE</span>
                                         </h1>
                                         <p 
                                             className="lead mb-4" 
@@ -194,17 +154,7 @@ export default function BuildingSecurityPage() {
                                                 maxWidth: '500px'
                                             }}
                                         >
-                                            It’s about knowing, with certainty, that the guard on your site is awake, accountable, and following the SOPs that keep everything under control.<br/>
-                                            Our building site guards don’t drift through a shift.<br/>
-                                            <strong style={{fontWeight: 800}}>They move with intent:</strong><br/>
-                                            Patrolling at set intervals.<br/>
-                                            Checking every entry and exit.<br/>
-                                            Monitoring cameras and surroundings.<br/>
-                                            Logging every detail in real time.<br/>
-                                            And you don’t just take our word for it.<br/>
-                                            Every action is tracked, logged, and reviewed.<br/>
-                                            YES, WE PROVE IT!<br/>
-                                            <strong style={{fontWeight: 800}}>ISO Certified | Fully Licensed | Guard Tracking + Real-Time Reporting | Supervisor Inspections</strong><br/>
+                                            Metro Guards is a Melbourne-based security company that aims to provide high-quality building security guard services. Our security plans integrate 24/7 surveillance and monitoring with cutting-edge technology. Our building security guards are uniformed and demonstrate professionalism and strength. Their immaculate presence outside your commercial and residential buildings significantly deters crimes.
                                         </p>
                                         
                                         <div className="hero-buttons d-flex flex-wrap gap-3 flex-column flex-md-row">
@@ -326,7 +276,7 @@ export default function BuildingSecurityPage() {
                                         {/* Additional Features */}
                                         <div className="features-list mt-4">
                                             <div className="align-items-center mb-3">
-                                                <p className="mb-1" style={{color: '#1e2247', fontWeight: 600}}>By sunrise:</p>
+                                                <p>Our building security guards exceed the industry standard and stand out for having rigorous training and in-depth knowledge of Melbourne.</p>
                                 </div>
                                             <div className="feature-item d-flex align-items-center mb-3">
                                                 <div 
@@ -340,9 +290,9 @@ export default function BuildingSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    <AlertTriangle size={20} />
+                                                    <Clock size={20} />
                             </div>
-                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Residents are complaining about missing items.</span>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>24/7 Surveillance and Monitoring</span>
                                         </div>
                                             <div className="feature-item d-flex align-items-center mb-3">
                                                 <div 
@@ -356,9 +306,9 @@ export default function BuildingSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    <Camera size={20} />
+                                                    <User size={20} />
                                     </div>
-                                                <span style={{color: '#1e2247', fontWeight: '500'}}>CCTV shows trespassers roaming halls.</span>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Professional Uniformed Guards</span>
                                 </div>
                                             <div className="feature-item d-flex align-items-center">
                                                 <div 
@@ -372,9 +322,9 @@ export default function BuildingSecurityPage() {
                                                         fontSize: '1rem'
                                                     }}
                                                 >
-                                                    <AlertTriangle size={20} />
+                                                    <Zap size={20} />
                                         </div>
-                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Management is under fire for “failing to protect the building.</span>
+                                                <span style={{color: '#1e2247', fontWeight: '500'}}>Cutting-edge Technology Integration</span>
                                 </div>
                             </div>
                         </div>
@@ -382,28 +332,99 @@ export default function BuildingSecurityPage() {
 
                                 <div className="col-lg-6 order-1 order-lg-2">
                                     <div className="services-content ps-lg-4">
-                                        <div className="section-header mb-4">
-                                            <div className="subtitle mb-2">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                    The Nightmare No Manager Talks About
+                                                    OUR SERVICES
                                                 </span>
                                     </div>
-                                            <h2 className="display-5 fw-bold mb-3" style={{color: '#1e2247'}}>
-                                                And We Are Prepared For It!
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Different Types of Trained Building Security Guards in Melbourne
                                             </h2>
+                                            <p className="lead" style={{color: '#6c757d'}}>
+                                                Every client comes to us with varying security needs and unique demands. For example, commercial building security is quite complex and requires detailed planning. Meanwhile, residential building security entails measures that deliver a protective environment for the residents.
+                                            </p>
+                                </div>
+                                        
+                                        {/* Expandable Service Cards */}
+                                        <div className="services-accordion">
+                                            {services.map((service, index) => (
+                                                <div key={index} className="accordion-item mb-3">
+                                                    <div 
+                                                        className="accordion-header p-4"
+                                                        style={{
+                                                            backgroundColor: activeService === index ? '#ffffff' : '#f8f9fa',
+                                                            borderRadius: activeService === index ? '12px 12px 0 0' : '12px',
+                                                            border: '1px solid #e9ecef',
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.3s ease',
+                                                            borderLeft: '4px solid #fdc51a'
+                                                        }}
+                                                        onClick={() => toggleService(index)}
+                                                    >
+                                                        <div className="d-flex align-items-center justify-content-between">
+                                                            <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="service-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {service.iconSymbol}
                             </div>
                                                                 <div>
-                                            <p style={{color: '#495057'}}>It’s 2:00 AM.</p>
-                                            <p style={{color: '#495057'}}>A tenant comes home from work. She notices someone tailgating behind her in the lobby.</p>
-                                            <p style={{color: '#495057'}}>No guard at the desk. No patrol in sight.</p>
-                                            
-                                            <p style={{color: '#495057'}}>This is what happens when security companies cut corners.</p>
-                                            <p style={{color: '#495057'}}>When guards don’t show.</p>
-                                            <p style={{color: '#495057'}}>When guards ignore site protocols.</p>
-                                            <h3 className="fw-bold mb-1" style={{color: '#1e2247'}}>The Reality.</h3>
-                                            <p style={{color: '#495057'}}>Melbourne’s property managers and building owners lose thousands every year because of unreliable, under-trained guards.</p>
-                                            <p style={{color: '#495057'}}>At Metro Guards, we built our reputation on solving the one problem nobody else seems to fix.</p>
-                                            <h3 className="fw-bold" style={{color: '#1e2247'}}>It’s Reliability.</h3>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{service.title}</h5>
+                                        </div>
+                                    </div>
+                                                            <div className="expand-icon">
+                                                                <div 
+                                                                    className="d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        backgroundColor: activeService === index ? '#1e2247' : '#e9ecef',
+                                                                        borderRadius: '50%',
+                                                                        color: activeService === index ? '#ffffff' : '#1e2247',
+                                                                        transition: 'all 0.3s ease'
+                                                                    }}
+                                                                >
+                                                                    <span style={{fontSize: '1.2rem', fontWeight: 'bold'}}>
+                                                                        {activeService === index ? '−' : '+'}
+                                                                    </span>
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                                    {activeService === index && (
+                                                        <div 
+                                                            className="accordion-content p-4"
+                                                            style={{
+                                                                backgroundColor: '#ffffff',
+                                                                borderRadius: '0 0 12px 12px',
+                                                                border: '1px solid #e9ecef',
+                                                                borderTop: 'none',
+                                                                borderLeft: '4px solid #fdc51a',
+                                                                animation: 'slideDown 0.3s ease'
+                                                            }}
+                                                        >
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {service.description}
+                                                            </p>
+                                                            <div className="service-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {service.details}
+                                                                </p>
+                                        </div>
+                                    </div>
+                                                    )}
+                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
@@ -491,22 +512,24 @@ export default function BuildingSecurityPage() {
                                 
                                 <div className="col-lg-6 order-1 order-lg-2">
                                     <div className="features-content ps-lg-4">
-                                        <div className="section-header mb-4">
-                                            <div className="subtitle mb-2">
+                                        <div className="section-header mb-5">
+                                            <div className="subtitle mb-3">
                                                 <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                    Our Promise
+                                                    <i className="bi bi-shield-check me-2"></i>
+                                                    COMPREHENSIVE PROTECTION
                                                 </span>
                                             </div>
-                                            <h2 className="display-5 fw-bold mb-3" style={{color: '#1e2247'}}>
-                                                Guards Who Show Up. Guards Who Listen
+                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
+                                                Key Role of Building Security Services In Melbourne
                                             </h2>
                                             <p className="lead" style={{color: '#6c757d'}}>
-                                                Metro Guards isn’t here to “see what we can do.” We execute.
+                                                We provide discreet and detailed building security services in Melbourne, with real-time technology integration and live reporting of incidents. Our guards are highly trained to work even in Melbourne's huge residential, commercial, and construction areas.
                                             </p>
-                                            <p style={{color: '#1e2247', fontWeight: 600}}>Here’s how we make sure your building is never left unprotected:</p>
                                         </div>
+                                        
+                                        {/* Expandable Feature Cards */}
                                         <div className="features-accordion">
-                                            {promiseItems.map((item, index) => (
+                                            {securityFeatures.map((feature, index) => (
                                                 <div key={index} className="accordion-item mb-3">
                                                     <div 
                                                         className="accordion-header p-4"
@@ -522,8 +545,21 @@ export default function BuildingSecurityPage() {
                                                     >
                                                         <div className="d-flex align-items-center justify-content-between">
                                                             <div className="d-flex align-items-center">
+                                                                <div 
+                                                                    className="feature-icon me-3 d-flex align-items-center justify-content-center"
+                                                                    style={{
+                                                                        width: '50px',
+                                                                        height: '50px',
+                                                                        borderRadius: '10px',
+                                                                        backgroundColor: '#1e2247',
+                                                                        color: '#ffffff',
+                                                                        fontSize: '1.5rem'
+                                                                    }}
+                                                                >
+                                                                    {feature.iconSymbol}
+                                    </div>
                                                                 <div>
-                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{item.question}</h5>
+                                                                    <h5 className="mb-0 fw-bold" style={{color: '#1e2247'}}>{feature.title}</h5>
                                 </div>
                                             </div>
                                                             <div className="expand-icon">
@@ -558,14 +594,18 @@ export default function BuildingSecurityPage() {
                                                                 animation: 'slideDown 0.3s ease'
                                                             }}
                                                         >
-                                                            <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.95rem'}}>
-                                                                {item.answer}
+                                                            <p className="mb-3" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                                {feature.description}
                                                             </p>
+                                                            <div className="feature-details">
+                                                                <p className="mb-0" style={{color: '#495057', lineHeight: '1.7', fontSize: '0.9rem'}}>
+                                                                    {feature.details}
+                                                                </p>
+                                        </div>
                                     </div>
                                                     )}
                                                 </div>
                                             ))}
-                                            <p className="mt-3" style={{color: '#1e2247', fontWeight: 600}}>This Isn’t Just “Guards In Uniform.” This Is Security You Can Trust, Every Time.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -581,14 +621,14 @@ export default function BuildingSecurityPage() {
                                     <div className="subtitle mb-3">
                                         <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
                                             <i className="bi bi-award me-2"></i>
-                                            Who We Are
+                                            THE METRO GUARDS DIFFERENCE
                                         </span>
                                     </div>
                                     <h2 className="display-5 fw-bold mb-4 text-white">
-                                        Melbourne’s Certified, Award-Winning Security Partner
+                                        Why Choose Metro Guard Building Security Guard in Melbourne
                                     </h2>
                                     <p className="lead text-white" style={{opacity: '0.9'}}>
-                                        We Don’t Gamble With Safety. Neither Should You.
+                                        We are among Melbourne's most trusted security companies because we have been serving people and businesses for a decade with exceptional, result-oriented services. Our building guards are briefed in detail before assigning any security job.
                                     </p>
                                 </div>
                             </div>
@@ -697,11 +737,11 @@ export default function BuildingSecurityPage() {
                                     </div>
                                             
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.25rem'}}>
-                                                ISO Certified
+                                                Professional Training and Qualifications
                                             </h4>
                                             
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                Quality Management, Occupational Health & Safety, Environmental Standards.
+                                                Our security guards are highly professional and qualified. They possess an unmistakable character that urges them to work for people's and property's safety and are rigorously trained in emergency responses, crowd control, first aid, and property-related security protocol.
                                             </p>
                                 </div>
                                     </div>
@@ -749,11 +789,11 @@ export default function BuildingSecurityPage() {
                                     </div>
                                             
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.25rem'}}>
-                                                Fully Licensed & Insured
+                                                Reputation in Industry
                                             </h4>
                                             
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                Security Business Licence + Labour Hire Licence.
+                                                We have a proven record of protecting residential and commercial buildings, events, construction sites, malls, warehouses, industrial parks, and events. Our building security guards protect your assets and people around the clock.
                                             </p>
                                 </div>
                                     </div>
@@ -801,11 +841,11 @@ export default function BuildingSecurityPage() {
                                     </div>
                                             
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.25rem'}}>
-                                                Award-Winning in Customer Service
+                                                Technology Integration
                                             </h4>
                                             
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                Recognized for excellence in client satisfaction.
+                                                A comprehensive security plan entails more than the physical presence of security guards. Our award-winning guards are experts at handling and operating modern security gadgets and equipment and have strong communication and interpersonal skills.
                                             </p>
                                 </div>
                                         </div>
@@ -853,11 +893,11 @@ export default function BuildingSecurityPage() {
                                         </div>
                                             
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.25rem'}}>
-                                                CM3 Prequalified + ASIAL Membership
+                                                Customized Solutions
                                             </h4>
                                             
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                Demonstrating full compliance with industry requirements.
+                                                We provide customized and tailored security solutions that consider the security needs of our clients. Most of the time, our building security guards in Melbourne are deployed after designing personalized security plans for our clients.
                                             </p>
                                     </div>
                                 </div>
@@ -905,11 +945,11 @@ export default function BuildingSecurityPage() {
                                             </div>
                                             
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.25rem'}}>
-                                                15+ Years Protecting Melbourne
+                                                License and Accreditation
                                             </h4>
                                             
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                From residential towers to office complexes.
+                                                Our security guards are hired after an extensive background check to provide trusted services to our clients in Melbourne. They all possess the license to operate in Melbourne and follow all state security rules and regulations.
                                             </p>
                                         </div>
                                     </div>
@@ -925,16 +965,51 @@ export default function BuildingSecurityPage() {
                                 <div className="col-lg-12 text-center mb-5">
                                     <div className="subtitle mb-3">
                                         <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                            Why Most Security Providers Fail
+                                            <i className="bi bi-heart me-2"></i>
+                                            VALUE PROPOSITION
                                         </span>
                                     </div>
                                     <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                        Let’s be honest.
+                                        Key Benefits to Hire Building Security Services Melbourne
                                     </h2>
+                                    <p className="lead" style={{color: '#6c757d'}}>
+                                        With the increasing crime rate in the bustling city of Melbourne, hiring building security has become essential. Here is how you can benefit from our building security services.
+                                    </p>
                                 </div>
                             </div>
                             <div className="row g-4 g-md-3 g-lg-4">
-                                {failureCards.map((benefit, index) => (
+                                {[
+                                    { 
+                                        icon: <Clock size={40} />, 
+                                        title: "24/7 Surveillance and Safety", 
+                                        description: "Your commercial and residential buildings are under our Surveillance 24/7 to ensure safety and deal with any security challenges." 
+                                    },
+                                    { 
+                                        icon: <Shield size={40} />, 
+                                        title: "Risk Mitigation and Minimization", 
+                                        description: "Our professional building guards take quick action in emergencies and help minimize potential losses." 
+                                    },
+                                    { 
+                                        icon: <Zap size={40} />, 
+                                        title: "Rapid Security Solution", 
+                                        description: "Our guards respond to criminal activities immediately; whether they find a criminal or thief loitering in the parking lot or a fire alarm in the building, they professionally handle all issues before escalation." 
+                                    },
+                                    { 
+                                        icon: <Eye size={40} />, 
+                                        title: "Peace of Mind", 
+                                        description: "Our dedicated security team provides peace and relief for owners, visitors, customers, and employees. Their presence ensures that people and property are protected and secure." 
+                                    },
+                                    { 
+                                        icon: <Target size={40} />, 
+                                        title: "Crime Deterrence", 
+                                        description: "The immaculate presence of our uniformed guards outside your commercial and residential buildings significantly deters crimes and provides a strong visual deterrent." 
+                                    },
+                                    { 
+                                        icon: <Users size={40} />, 
+                                        title: "Professional Service", 
+                                        description: "Our building security guards exceed the industry standard and stand out for having rigorous training and in-depth knowledge of Melbourne." 
+                                    }
+                                ].map((benefit, index) => (
                                     <div key={index} className="col-lg-4 col-md-6">
                                         <div 
                                             className="benefit-card h-100 position-relative"
@@ -950,7 +1025,66 @@ export default function BuildingSecurityPage() {
                                                 cursor: 'pointer'
                                             }}
                                         >
+                                            {/* Animated background overlay */}
+                                            <div 
+                                                className="position-absolute w-100 h-100"
+                                                style={{
+                                                    background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.05) 0%, rgba(30, 34, 71, 0.05) 100%)',
+                                                    opacity: '0',
+                                                    transition: 'all 0.5s ease',
+                                                    top: '0',
+                                                    left: '0',
+                                                    zIndex: '1'
+                                                }}
+                                            ></div>
+                                            
+                                            {/* Floating particles effect */}
+                                            <div 
+                                                className="position-absolute"
+                                                style={{
+                                                    width: '4px',
+                                                    height: '4px',
+                                                    backgroundColor: '#fdc51a',
+                                                    borderRadius: '50%',
+                                                    top: '20%',
+                                                    left: '15%',
+                                                    opacity: '0',
+                                                    transition: 'all 0.6s ease',
+                                                    zIndex: '2'
+                                                }}
+                                            ></div>
+                                            <div 
+                                                className="position-absolute"
+                                                style={{
+                                                    width: '6px',
+                                                    height: '6px',
+                                                    backgroundColor: '#1e2247',
+                                                    borderRadius: '50%',
+                                                    top: '70%',
+                                                    right: '20%',
+                                                    opacity: '0',
+                                                    transition: 'all 0.8s ease',
+                                                    zIndex: '2'
+                                                }}
+                                            ></div>
+                                            <div 
+                                                className="position-absolute"
+                                                style={{
+                                                    width: '3px',
+                                                    height: '3px',
+                                                    backgroundColor: '#fdc51a',
+                                                    borderRadius: '50%',
+                                                    top: '40%',
+                                                    right: '15%',
+                                                    opacity: '0',
+                                                    transition: 'all 0.7s ease',
+                                                    zIndex: '2'
+                                                }}
+                                            ></div>
+                                            
+                                            {/* Content */}
                                             <div className="position-relative p-4" style={{zIndex: '3'}}>
+                                                {/* Icon with enhanced styling */}
                                                 <div 
                                                     className="benefit-icon mb-4 d-flex align-items-center justify-content-center mx-auto position-relative"
                                                     style={{
@@ -959,22 +1093,93 @@ export default function BuildingSecurityPage() {
                                                         background: 'linear-gradient(135deg, #1e2247 0%, #2a2d5a 100%)',
                                                         borderRadius: '25px',
                                                         color: '#fdc51a',
-                                                        boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)'
+                                                        boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)',
+                                                        transition: 'all 0.5s ease',
+                                                        transform: 'perspective(1000px) rotateX(0deg)'
                                                     }}
                                                 >
                                                     {benefit.icon}
+                                                    {/* Icon inner glow */}
+                                                    <div 
+                                                        className="position-absolute"
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            background: 'radial-gradient(circle, rgba(253, 197, 26, 0.2) 0%, transparent 70%)',
+                                                            borderRadius: '25px',
+                                                            opacity: '0',
+                                                            transition: 'all 0.5s ease'
+                                                        }}
+                                                    ></div>
                                                 </div>
+                                                
+                                                {/* Title with enhanced typography */}
                                                 <h4 
-                                                    className="fw-bold mb-0 position-relative" 
+                                                    className="fw-bold mb-3 position-relative" 
                                                     style={{
                                                         color: '#1e2247',
-                                                        fontSize: '1.05rem',
-                                                        lineHeight: '1.6'
+                                                        fontSize: '1.2rem',
+                                                        transition: 'all 0.4s ease',
+                                                        letterSpacing: '0.5px'
                                                     }}
                                                 >
                                                     {benefit.title}
                                                 </h4>
+                                                
+                                                {/* Description with dropdown style */}
+                                                <div 
+                                                    className="benefit-description position-relative"
+                                                    style={{
+                                                        maxHeight: '120px',
+                                                        overflow: 'hidden',
+                                                        transition: 'all 0.5s ease'
+                                                    }}
+                                                >
+                                                    <p 
+                                                        className="mb-0" 
+                                                        style={{
+                                                            color: '#6c757d', 
+                                                            lineHeight: '1.7',
+                                                            fontSize: '0.95rem',
+                                                            transition: 'all 0.4s ease',
+                                                            transform: 'translateY(0)'
+                                                        }}
+                                                    >
+                                                        {benefit.description}
+                                                    </p>
+                                                </div>
+                                                
+                                                {/* Expand indicator */}
+                                                <div 
+                                                    className="expand-indicator position-absolute"
+                                                    style={{
+                                                        bottom: '15px',
+                                                        left: '50%',
+                                                        transform: 'translateX(-50%)',
+                                                        width: '30px',
+                                                        height: '4px',
+                                                        background: 'linear-gradient(90deg, #fdc51a 0%, #1e2247 100%)',
+                                                        borderRadius: '2px',
+                                                        opacity: '0',
+                                                        transition: 'all 0.4s ease'
+                                                    }}
+                                                ></div>
                                             </div>
+                                            
+                                            {/* Corner accent */}
+                                            <div 
+                                                className="position-absolute"
+                                                style={{
+                                                    top: '0',
+                                                    right: '0',
+                                                    width: '0',
+                                                    height: '0',
+                                                    borderLeft: '30px solid transparent',
+                                                    borderTop: '30px solid #fdc51a',
+                                                    opacity: '0',
+                                                    transition: 'all 0.5s ease'
+                                                }}
+                                            ></div>
                                         </div>
                                     </div>
                                 ))}
@@ -984,179 +1189,6 @@ export default function BuildingSecurityPage() {
 
                     {/*===== Final CTA Section =====*/}
                     
-                </div>
-                
-                <div className="feedbacks-section section-padding" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'}}>
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-12">
-                                <div className="text-center mb-5">
-                                    <div className="d-flex align-items-center justify-content-center mb-3">
-                                        <div style={{
-                                            width: '60px',
-                                            height: '60px',
-                                            borderRadius: '50%',
-                                            background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            marginRight: '20px'
-                                        }}>
-                                            <i className="fas fa-quote-left" style={{color: '#1e2247', fontSize: '24px'}}></i>
-                                        </div>
-                                        <h2 style={{
-                                            color: '#1e2247',
-                                            fontWeight: '700',
-                                            fontSize: '2.5rem',
-                                            margin: 0,
-                                            fontFamily: 'cursive'
-                                        }}>
-                                            Customer <span style={{color: '#fdc51a'}}>Feedback</span>
-                                        </h2>
-                                    </div>
-                                </div>
-                                
-                                {/* Static Testimonials - 3 Tiles */}
-                                <div className="row g-4 justify-content-center">
-                                    {[
-                                        {
-                                            name: "SARAH JOHNSON",
-                                            title: "Property Manager",
-                                            feedback: "There is no issue of 'don't show up'; it's in the guards' SOP compliance that ensures the guard fulfils the assigned task with responsibility, being active, vigilant, and responsive. Their reporting system is exceptional.",
-                                            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150&h=150&fit=crop&crop=face"
-                                        },
-                                        {
-                                            name: "MICHAEL CHEN",
-                                            title: "Building Owner",
-                                            feedback: "No cancellation scene, the guard will arrive on time and stay until the time finishes! Their 15 years of experience really shows in their professionalism and reliability.",
-                                            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                                        },
-                                        {
-                                            name: "EMMA WILLIAMS",
-                                            title: "Facilities Director",
-                                            feedback: "Common areas amenities management is handled perfectly. Everyone comes in uniform and they add on-time-show-up as a standard. We enforce quality through technology and they deliver.",
-                                            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-                                        }
-                                    ].map((testimonial, idx) => (
-                                        <div key={idx} className="col-lg-4 col-md-6">
-                                            <div className="position-relative h-100">
-                                                {/* Orange decorative element */}
-                                                <div style={{
-                                                    position: 'absolute',
-                                                    top: '-20px',
-                                                    left: '-20px',
-                                                    width: '80px',
-                                                    height: '80px',
-                                                    background: 'linear-gradient(135deg, #fdc51a 0%, #f39c12 100%)',
-                                                    borderRadius: '50% 0 50% 50%',
-                                                    zIndex: 1
-                                                }}></div>
-                                                
-                                                {/* Profile image */}
-                                                <div style={{
-                                                    position: 'absolute',
-                                                    top: '20px',
-                                                    left: '30px',
-                                                    width: '80px',
-                                                    height: '80px',
-                                                    borderRadius: '50%',
-                                                    border: '4px solid white',
-                                                    overflow: 'hidden',
-                                                    zIndex: 2,
-                                                    boxShadow: '0 8px 20px rgba(0,0,0,0.15)'
-                                                }}>
-                                                    <img 
-                                                        src={testimonial.avatar} 
-                                                        alt={testimonial.name}
-                                                        style={{
-                                                            width: '100%',
-                                                            height: '100%',
-                                                            objectFit: 'cover'
-                                                        }}
-                                                    />
-                                                </div>
-                                                
-                                                {/* Testimonial card */}
-                                                <div className="p-4 pt-5 mt-4" style={{
-                                                    background: '#1e2247',
-                                                    borderRadius: '20px',
-                                                    color: 'white',
-                                                    minHeight: '320px',
-                                                    position: 'relative',
-                                                    boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)'
-                                                }}>
-                                                    {/* Speech bubble tail */}
-                                                    <div style={{
-                                                        position: 'absolute',
-                                                        bottom: '-15px',
-                                                        left: '30px',
-                                                        width: 0,
-                                                        height: 0,
-                                                        borderLeft: '15px solid transparent',
-                                                        borderRight: '15px solid transparent',
-                                                        borderTop: '15px solid #1e2247'
-                                                    }}></div>
-                                                    
-                                                    <div className="mt-4">
-                                                        <h5 style={{
-                                                            color: '#fdc51a',
-                                                            fontWeight: '700',
-                                                            fontSize: '1.1rem',
-                                                            marginBottom: '5px'
-                                                        }}>
-                                                            {testimonial.name}
-                                                        </h5>
-                                                        <p style={{
-                                                            color: '#fdc51a',
-                                                            fontSize: '0.9rem',
-                                                            marginBottom: '15px',
-                                                            opacity: 0.8
-                                                        }}>
-                                                            {testimonial.title}
-                                                        </p>
-                                                        
-                                                        <p style={{
-                                                            lineHeight: '1.6',
-                                                            fontSize: '0.95rem',
-                                                            marginBottom: '20px'
-                                                        }}>
-                                                            {testimonial.feedback}
-                                                        </p>
-                                                        
-                                                        {/* Star rating */}
-                                                        <div className="d-flex mb-3">
-                                                            {[...Array(5)].map((_, starIdx) => (
-                                                                <i key={starIdx} className="fas fa-star" style={{
-                                                                    color: '#fdc51a',
-                                                                    fontSize: '16px',
-                                                                    marginRight: '3px'
-                                                                }}></i>
-                                                            ))}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                {/* Learn More button */}
-                                                <div className="text-center mt-3">
-                                                    <button className="btn px-4 py-2" style={{
-                                                        backgroundColor: '#1e2247',
-                                                        color: 'white',
-                                                        border: 'none',
-                                                        borderRadius: '25px',
-                                                        fontSize: '0.9rem',
-                                                        fontWeight: '600',
-                                                        textTransform: 'uppercase'
-                                                    }}>
-                                                        Learn More
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <WhyChooseUs />
                 <Accreditation />
@@ -1324,4 +1356,3 @@ export default function BuildingSecurityPage() {
         </>
     )
 }
-
