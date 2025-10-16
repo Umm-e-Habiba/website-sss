@@ -468,7 +468,7 @@ export default function BuildingSecurityPage() {
                                                 src="/assets/img/blog/building-guard.jpg" 
                                                 alt="Professional Building Security Guards" 
                                                 className="img-fluid"
-                                                    style={{
+                                                style={{
                                                     borderRadius: '20px',
                                                     boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
                                                     width: '100%',
@@ -476,7 +476,7 @@ export default function BuildingSecurityPage() {
                                                     objectFit: 'cover'
                                                 }}
                                             />
-                                        </div>
+                                    </div>
                                         
                                         {/* A Quiet Reality - Paragraph Style */}
                                         <div className="A-Quiet-Reality section-header mt-5" style={{
@@ -684,12 +684,12 @@ export default function BuildingSecurityPage() {
                                                 e.currentTarget.style.transform = 'perspective(1000px) rotateY(5deg) scale(1)';
                                                 e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.3)';
                                             }}>
-                                                <img 
-                                                    src="/assets/img/blog/building-guard.jpg" 
+                                            <img 
+                                                src="/assets/img/blog/building-guard.jpg" 
                                                     alt="Professional Building Security Guards" 
-                                                    className="img-fluid"
-                                                    style={{
-                                                        width: '100%',
+                                                className="img-fluid"
+                                                style={{
+                                                    width: '100%',
                                                         height: '550px',
                                                         objectFit: 'cover',
                                                         display: 'block'
@@ -706,10 +706,10 @@ export default function BuildingSecurityPage() {
                                                     background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1) 0%, transparent 50%, rgba(30, 34, 71, 0.2) 100%)',
                                                     zIndex: 1
                                                 }}></div>
-                                            </div>
-
+                                    </div>
+                                        
                                             
-                                        </div>
+                                </div>
                                     </div>
                                 </div>
                                 
@@ -766,7 +766,7 @@ export default function BuildingSecurityPage() {
                                                 Our team isn't made up of placeholders in vests. We're <strong style={{color: '#fdc51a'}}>licensed professionals</strong>, trained under ISO-certified standards, insured, and held to the same level of accountability we hold ourselves to. Most of our security guards come from defence, emergency services, and security backgrounds. We've seen what happens when complacency takes over, and <strong style={{color: '#fdc51a'}}>We refuse to let it happen on our watch</strong>.
                                             </p>
                                         </div>
-
+                                        
                                         {/* Professional Standards Grid */}
                                         <div className="standards-grid">
                                             <div className="row g-3">
@@ -818,9 +818,9 @@ export default function BuildingSecurityPage() {
                                                                 gap: '12px'
                                                             }}>
                                                                 <div style={{
-                                                                    width: '40px',
-                                                                    height: '40px',
-                                                                    borderRadius: '50%',
+                                                                        width: '40px',
+                                                                        height: '40px',
+                                                                        borderRadius: '50%',
                                                                     background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
                                                                     display: 'flex',
                                                                     alignItems: 'center',
@@ -831,7 +831,7 @@ export default function BuildingSecurityPage() {
                                                                         color: '#1e2247',
                                                                         fontSize: '16px'
                                                                     }}></i>
-                                                                </div>
+                                        </div>
                                                                 <div>
                                                                     <div style={{
                                                                         color: '#ffffff',
@@ -840,18 +840,18 @@ export default function BuildingSecurityPage() {
                                                                         marginBottom: '2px'
                                                                     }}>
                                                                         {item.title}
-                                                                    </div>
+                                    </div>
                                                                     <div style={{
                                                                         color: 'rgba(255, 255, 255, 0.7)',
                                                                         fontSize: '0.8rem'
                                                                     }}>
                                                                         {item.subtitle}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                ))}
+                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                </div>
+                                            ))}
                                             </div>
                                         </div>
                                     </div>
@@ -859,27 +859,27 @@ export default function BuildingSecurityPage() {
                             </div>
                         </div>
                     </div>
-                                
+
                     {/*===== Security Tailored Section =====*/}
                     <div className="security-tailored-section section-padding" style={{background: '#f8f9fa'}}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-header text-center mb-5">
-                                            <div className="subtitle mb-3">
-                                                <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
+                                    <div className="subtitle mb-3">
+                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
                                                 <i className="bi bi-building me-2"></i>
                                                 CUSTOMIZED SECURITY
-                                                </span>
-                                            </div>
+                                        </span>
+                                    </div>
                                             <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
                                             Security Tailored to Every Building
-                                            </h2>
+                                    </h2>
                                         <p className="lead" style={{color: '#6c757d', maxWidth: '800px', margin: '0 auto'}}>
                                             No two buildings are the same, and neither are their security needs. Whether it's a high-rise residence that never really sleeps or a commercial site that shuts down after hours, our guards adapt to your environment and your people.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    </p>
+                                </div>
+                            </div>
                                 </div>
 
                             <div className="row g-5">
@@ -921,7 +921,7 @@ export default function BuildingSecurityPage() {
                                             zIndex: 2
                                         }}>
                                             <Home size={32} style={{color: '#ffffff'}} />
-                                            </div>
+                                        </div>
                                         
                                         <h3 className="fw-bold mb-4" style={{color: '#1e2247', fontSize: '1.5rem', position: 'relative', zIndex: 2}}>
                                             Residential Properties
@@ -937,7 +937,7 @@ export default function BuildingSecurityPage() {
                                                     <div style={{
                                                         width: '8px',
                                                         height: '8px',
-                                                                        borderRadius: '50%',
+                                                borderRadius: '50%',
                                                         background: '#27ae60',
                                                         marginTop: '8px',
                                                         marginRight: '15px',
@@ -990,7 +990,7 @@ export default function BuildingSecurityPage() {
                                             zIndex: 2
                                         }}>
                                             <Building size={32} style={{color: '#ffffff'}} />
-                                        </div>
+                                    </div>
                                             
                                         <h3 className="fw-bold mb-4" style={{color: '#1e2247', fontSize: '1.5rem', position: 'relative', zIndex: 2}}>
                                             Commercial Sites
@@ -1018,9 +1018,9 @@ export default function BuildingSecurityPage() {
                                                 </div>
                                             ))}
                                         </div>
+                                </div>
                                     </div>
                                 </div>
-                            </div>
                                 
                             {/* Bottom CTA */}
                             <div className="row mt-5">
@@ -1062,8 +1062,8 @@ export default function BuildingSecurityPage() {
                                         }}>
                                                     <Eye size={24} style={{color: '#1e2247'}} />
                         </div>
-                    </div>
-
+                                        </div>
+                                        
                                             <p style={{
                                                 color: '#ffffff',
                                                 fontSize: '1.2rem',
@@ -1249,8 +1249,8 @@ export default function BuildingSecurityPage() {
                                             background: 'linear-gradient(90deg, #3498db, #2980b9)',
                                             borderRadius: '0 0 25px 25px'
                                         }}></div>
+                                        </div>
                                     </div>
-                                </div>
                                 
                                 {/* Supervisor Inspections */}
                                 <div className="col-lg-6 col-md-6 mb-4">
@@ -1302,7 +1302,7 @@ export default function BuildingSecurityPage() {
                                             zIndex: 2
                                             }}>
                                             <Eye size={36} color="#ffffff" />
-                                    </div>
+                                        </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.4rem'}}>
@@ -1312,7 +1312,7 @@ export default function BuildingSecurityPage() {
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.7', fontSize: '1rem'}}>
                                                 Random visits keep every shift active, accountable, and on standard.
                                             </p>
-                                </div>
+                                    </div>
                                         
                                         {/* Bottom Accent */}
                                         <div style={{
@@ -1324,8 +1324,8 @@ export default function BuildingSecurityPage() {
                                             background: 'linear-gradient(90deg, #9b59b6, #8e44ad)',
                                             borderRadius: '0 0 25px 25px'
                                         }}></div>
-                                        </div>
-                                    </div>
+                                </div>
+                            </div>
                                 
                                 {/* Instant Incident Alerts */}
                                 <div className="col-lg-6 col-md-6 mb-4">
@@ -1377,7 +1377,7 @@ export default function BuildingSecurityPage() {
                                             zIndex: 2
                                             }}>
                                             <Bell size={36} color="#ffffff" />
-                                        </div>
+                                            </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.4rem'}}>
@@ -1401,10 +1401,10 @@ export default function BuildingSecurityPage() {
                                         }}></div>
                                     </div>
                                 </div>
-                                    </div>
-                                </div>
                             </div>
-                                
+                        </div>
+                    </div>
+
                     {/*===== What You'll Notice Right Away Section =====*/}
                     <div className="notice-section section-padding" style={{
                         background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
@@ -1571,8 +1571,8 @@ export default function BuildingSecurityPage() {
                                                         color: '#ffffff',
                                                         fontSize: '24px'
                                                     }}></i>
-                                        </div>
-                                        
+                                                </div>
+                                                
                                                 {/* Content */}
                                                 <div style={{ flex: 1 }}>
                                                     <h4 style={{
@@ -1760,7 +1760,7 @@ export default function BuildingSecurityPage() {
                             zIndex: 1
                         }}>
                             <i className="fas fa-certificate" style={{color: 'rgba(253, 197, 26, 0.6)', fontSize: '32px'}}></i>
-                        </div>
+                </div>
                         <div style={{
                             position: 'absolute',
                             bottom: '20%',
