@@ -213,6 +213,14 @@ export default function BuildingSecurityPage() {
                                                     transition: 'all 0.3s ease',
                                                     borderWidth: '2px'
                                                 }}
+                                                onMouseEnter={(e) => {
+                                                    e.target.style.backgroundColor = '#1e2247';
+                                                    e.target.style.color = 'white';
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.target.style.backgroundColor = 'transparent';
+                                                    e.target.style.color = '#1e2247';
+                                                }}
                                             >
                                                 <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                                     <Phone size={16}/> 1300731173
@@ -428,26 +436,7 @@ export default function BuildingSecurityPage() {
 
                                       
 
-                                        {/* Bottom Message */}
-                                        <div style={{
-                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1), rgba(253, 197, 26, 0.05))',
-                                            borderRadius: '20px',
-                                            padding: '25px',
-                                            border: '1px solid rgba(253, 197, 26, 0.2)'
-                                        }}>
-                                            <p style={{
-                                                color: '#1e2247',
-                                                fontSize: '1.1rem',
-                                                fontWeight: '600',
-                                                margin: 0,
-                                                lineHeight: '1.6',
-                                                textAlign: 'center'
-                                            }}>
-                                                <i className="fas fa-quote-left me-2" style={{color: '#fdc51a'}}></i>
-                                                Your peace of mind shouldn't rely on assumptions, it should rest on <strong style={{color: '#fdc51a'}}>proof</strong>.
-                                                <i className="fas fa-quote-right ms-2" style={{color: '#fdc51a'}}></i>
-                                            </p>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -861,177 +850,308 @@ export default function BuildingSecurityPage() {
                     </div>
 
                     {/*===== Security Tailored Section =====*/}
-                    <div className="security-tailored-section section-padding" style={{background: '#f8f9fa'}}>
-                        <div className="container">
+                    <div className="security-tailored-section section-padding" style={{
+                        background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #ffffff 100%)',
+                        position: 'relative',
+                        overflow: 'hidden'
+                    }}>
+                        {/* Animated Background Elements */}
+                        <div style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            backgroundImage: `
+                                radial-gradient(circle at 25% 25%, rgba(253, 197, 26, 0.1) 0%, transparent 50%),
+                                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)
+                            `,
+                            zIndex: 1
+                        }}></div>
+
+                        {/* Floating Shapes */}
+                        <div style={{
+                            position: 'absolute',
+                            top: '10%',
+                            right: '8%',
+                            width: '150px',
+                            height: '150px',
+                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.15), transparent)',
+                            borderRadius: '50%',
+                            zIndex: 1
+                        }}></div>
+                        <div style={{
+                            position: 'absolute',
+                            bottom: '15%',
+                            left: '5%',
+                            width: '120px',
+                            height: '120px',
+                            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent)',
+                            borderRadius: '50%',
+                            zIndex: 1
+                        }}></div>
+
+                        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+                            {/* Section Header */}
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-header text-center mb-5">
-                                    <div className="subtitle mb-3">
-                                        <span className="badge px-3 py-2" style={{backgroundColor: '#fdc51a', color: '#1e2247', fontWeight: '600'}}>
-                                                <i className="bi bi-building me-2"></i>
-                                                CUSTOMIZED SECURITY
-                                        </span>
+                                        <div style={{ 
+                                            display: "inline-flex", 
+                                            alignItems: "center", 
+                                            gap: "15px", 
+                                            marginBottom: "30px",
+                                            justifyContent: "center"
+                                        }}>
+                                            <div style={{
+                                                width: "60px",
+                                                height: "3px",
+                                                background: "linear-gradient(90deg, #fdc51a, #ffdb5c)",
+                                                borderRadius: "2px"
+                                            }}></div>
+                                            <span className="badge px-4 py-2" style={{ 
+                                                background: "linear-gradient(135deg, #fdc51a, #ffdb5c)", 
+                                                color: "#1e2247", 
+                                                fontWeight: 700,
+                                                fontSize: "0.9rem",
+                                                borderRadius: "25px",
+                                                textTransform: "uppercase",
+                                                letterSpacing: "1px",
+                                                boxShadow: "0 6px 20px rgba(253, 197, 26, 0.25)"
+                                            }}>
+                                                <i className="fas fa-building me-2"></i>
+                                                Customized Security
+                                            </span>
+                                            <div style={{
+                                                width: "60px",
+                                                height: "3px",
+                                                background: "linear-gradient(90deg, #fdc51a, #ffdb5c)",
+                                                borderRadius: "2px"
+                                            }}></div>
+                                        </div>
+                                        
+                                        <h2 style={{
+                                            color: '#1e2247',
+                                            fontSize: '3.5rem',
+                                            fontWeight: '800',
+                                            marginBottom: '30px',
+                                            lineHeight: '1.2'
+                                        }}>
+                                            Security Tailored to <span style={{color: '#fdc51a'}}>Every Building</span>
+                                        </h2>
+                                        
+                                        <p style={{
+                                            color: '#495057',
+                                            fontSize: '1.4rem',
+                                            lineHeight: '1.7',
+                                            marginBottom: '60px',
+                                            maxWidth: '800px',
+                                            margin: '0 auto 60px'
+                                        }}>
+                                            No two buildings are the same, and neither are their security needs. Whether it's a high-rise residence that never really sleeps or a commercial site that shuts down after hours, our guards <strong style={{color: '#fdc51a'}}>adapt to your environment</strong> and your people.
+                                        </p>
                                     </div>
-                                            <h2 className="display-5 fw-bold mb-4" style={{color: '#1e2247'}}>
-                                            Security Tailored to Every Building
-                                    </h2>
-                                        <p className="lead" style={{color: '#6c757d', maxWidth: '800px', margin: '0 auto'}}>
-                                            No two buildings are the same, and neither are their security needs. Whether it's a high-rise residence that never really sleeps or a commercial site that shuts down after hours, our guards adapt to your environment and your people.
-                                    </p>
                                 </div>
                             </div>
-                                </div>
 
-                            <div className="row g-5">
+                            {/* Property Type Cards */}
+                            <div className="row g-4 mb-5">
                                 {/* Residential Properties */}
                                 <div className="col-lg-6">
                                     <div className="property-type-card h-100" style={{
-                                        background: '#ffffff',
-                                        borderRadius: '20px',
-                                        padding: '40px',
-                                        boxShadow: '0 15px 35px rgba(0,0,0,0.08)',
+                                        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.95))',
+                                        borderRadius: '25px',
+                                        padding: '45px',
+                                        backdropFilter: 'blur(15px)',
                                         border: '1px solid rgba(253, 197, 26, 0.2)',
                                         position: 'relative',
-                                        overflow: 'hidden'
+                                        overflow: 'hidden',
+                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(-10px)';
+                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
                                     }}>
                                         {/* Background Decoration */}
                                         <div style={{
                                             position: 'absolute',
-                                            top: '-20px',
-                                            right: '-20px',
-                                            width: '100px',
-                                            height: '100px',
-                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1), transparent)',
-                                                borderRadius: '50%',
-                                            zIndex: 1
-                                        }}></div>
-
-                                        {/* Icon */}
-                                        <div style={{
-                                            width: '70px',
-                                            height: '70px',
-                                            borderRadius: '15px',
-                                            background: 'linear-gradient(135deg, #27ae60, #2ecc71)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            marginBottom: '25px',
-                                            boxShadow: '0 10px 25px rgba(39, 174, 96, 0.3)',
-                                            position: 'relative',
-                                            zIndex: 2
-                                        }}>
-                                            <Home size={32} style={{color: '#ffffff'}} />
-                                        </div>
-                                        
-                                        <h3 className="fw-bold mb-4" style={{color: '#1e2247', fontSize: '1.5rem', position: 'relative', zIndex: 2}}>
-                                            Residential Properties
-                                        </h3>
-
-                                        <div className="features-list" style={{position: 'relative', zIndex: 2}}>
-                                            {[
-                                                "Friendly front-desk support for residents and visitors.",
-                                                "Common-area patrols that actually happen, gyms, car parks, and rooftops.",
-                                                "Emergency response and fire safety assistance when it matters most."
-                                            ].map((feature, index) => (
-                                                <div key={index} className="feature-item d-flex align-items-start mb-3">
-                                                    <div style={{
-                                                        width: '8px',
-                                                        height: '8px',
-                                                borderRadius: '50%',
-                                                        background: '#27ae60',
-                                                        marginTop: '8px',
-                                                        marginRight: '15px',
-                                                        flexShrink: 0
-                                                    }}></div>
-                                                    <span style={{color: '#495057', lineHeight: '1.6', fontSize: '0.95rem'}}>
-                                                        {feature}
-                                                                    </span>
-                                        </div>
-                                            ))}
-                                    </div>
-                                </div>
-                                            </div>
-
-                                {/* Commercial Sites */}
-                                <div className="col-lg-6">
-                                    <div className="property-type-card h-100" style={{
-                                        background: '#ffffff',
-                                        borderRadius: '20px',
-                                        padding: '40px',
-                                        boxShadow: '0 15px 35px rgba(0,0,0,0.08)',
-                                        border: '1px solid rgba(253, 197, 26, 0.2)',
-                                        position: 'relative',
-                                        overflow: 'hidden'
-                                    }}>
-                                        {/* Background Decoration */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            top: '-20px',
-                                            right: '-20px',
-                                            width: '100px',
-                                            height: '100px',
-                                            background: 'linear-gradient(135deg, rgba(52, 152, 219, 0.1), transparent)',
+                                            top: '-30px',
+                                            right: '-30px',
+                                            width: '120px',
+                                            height: '120px',
+                                            background: 'radial-gradient(circle, rgba(253, 197, 26, 0.15), transparent 70%)',
                                             borderRadius: '50%',
                                             zIndex: 1
                                         }}></div>
 
                                         {/* Icon */}
                                         <div style={{
-                                            width: '70px',
-                                            height: '70px',
-                                            borderRadius: '15px',
-                                            background: 'linear-gradient(135deg, #3498db, #2980b9)',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                            marginBottom: '25px',
-                                            boxShadow: '0 10px 25px rgba(52, 152, 219, 0.3)',
+                                            width: '80px',
+                                            height: '80px',
+                                            borderRadius: '20px',
+                                            background: 'linear-gradient(135deg, #1e2247, #2c3e50)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            marginBottom: '30px',
+                                            boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)',
                                             position: 'relative',
                                             zIndex: 2
                                         }}>
-                                            <Building size={32} style={{color: '#ffffff'}} />
-                                    </div>
-                                            
-                                        <h3 className="fw-bold mb-4" style={{color: '#1e2247', fontSize: '1.5rem', position: 'relative', zIndex: 2}}>
-                                            Commercial Sites
+                                            <Home size={36} style={{color: '#fdc51a'}} />
+                                        </div>
+                                        
+                                        <h3 className="fw-bold mb-4" style={{
+                                            color: '#1e2247', 
+                                            fontSize: '1.8rem', 
+                                            position: 'relative', 
+                                            zIndex: 2,
+                                            marginBottom: '25px'
+                                        }}>
+                                            Residential Properties
                                         </h3>
 
                                         <div className="features-list" style={{position: 'relative', zIndex: 2}}>
                                             {[
-                                                "Access control for restricted zones.",
-                                                "CCTV monitoring and alarm response.",
-                                                "Asset protection and after-hours visitor management."
+                                                "Friendly front-desk support for residents and visitors",
+                                                "Common-area patrols that actually happen - gyms, car parks, rooftops",
+                                                "Emergency response and fire safety assistance when it matters most"
                                             ].map((feature, index) => (
-                                                <div key={index} className="feature-item d-flex align-items-start mb-3">
+                                                <div key={index} className="feature-item d-flex align-items-start mb-4">
                                                     <div style={{
-                                                        width: '8px',
-                                                        height: '8px',
+                                                        width: '12px',
+                                                        height: '12px',
                                                         borderRadius: '50%',
-                                                        background: '#3498db',
-                                                        marginTop: '8px',
-                                                        marginRight: '15px',
-                                                        flexShrink: 0
+                                                        background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
+                                                        marginTop: '6px',
+                                                        marginRight: '18px',
+                                                        flexShrink: 0,
+                                                        boxShadow: '0 3px 8px rgba(253, 197, 26, 0.3)'
                                                     }}></div>
-                                                    <span style={{color: '#495057', lineHeight: '1.6', fontSize: '0.95rem'}}>
+                                                    <span style={{
+                                                        color: '#495057', 
+                                                        lineHeight: '1.7', 
+                                                        fontSize: '1rem',
+                                                        fontWeight: '500'
+                                                    }}>
                                                         {feature}
                                                     </span>
                                                 </div>
                                             ))}
                                         </div>
-                                </div>
                                     </div>
                                 </div>
+
+                                {/* Commercial Sites */}
+                                <div className="col-lg-6">
+                                    <div className="property-type-card h-100" style={{
+                                        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.95))',
+                                        borderRadius: '25px',
+                                        padding: '45px',
+                                        backdropFilter: 'blur(15px)',
+                                        border: '1px solid rgba(253, 197, 26, 0.2)',
+                                        position: 'relative',
+                                        overflow: 'hidden',
+                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(-10px)';
+                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+                                    }}>
+                                        {/* Background Decoration */}
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-30px',
+                                            right: '-30px',
+                                            width: '120px',
+                                            height: '120px',
+                                            background: 'radial-gradient(circle, rgba(253, 197, 26, 0.15), transparent 70%)',
+                                            borderRadius: '50%',
+                                            zIndex: 1
+                                        }}></div>
+
+                                        {/* Icon */}
+                                        <div style={{
+                                            width: '80px',
+                                            height: '80px',
+                                            borderRadius: '20px',
+                                            background: 'linear-gradient(135deg, #1e2247, #2c3e50)',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            marginBottom: '30px',
+                                            boxShadow: '0 15px 35px rgba(30, 34, 71, 0.3)',
+                                            position: 'relative',
+                                            zIndex: 2
+                                        }}>
+                                            <Building size={36} style={{color: '#fdc51a'}} />
+                                        </div>
+                                                
+                                        <h3 className="fw-bold mb-4" style={{
+                                            color: '#1e2247', 
+                                            fontSize: '1.8rem', 
+                                            position: 'relative', 
+                                            zIndex: 2,
+                                            marginBottom: '25px'
+                                        }}>
+                                            Commercial Sites
+                                        </h3>
+
+                                        <div className="features-list" style={{position: 'relative', zIndex: 2}}>
+                                            {[
+                                                "Access control for restricted zones",
+                                                "CCTV monitoring and alarm response", 
+                                                "Asset protection and after-hours visitor management"
+                                            ].map((feature, index) => (
+                                                <div key={index} className="feature-item d-flex align-items-start mb-4">
+                                                    <div style={{
+                                                        width: '12px',
+                                                        height: '12px',
+                                                        borderRadius: '50%',
+                                                        background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
+                                                        marginTop: '6px',
+                                                        marginRight: '18px',
+                                                        flexShrink: 0,
+                                                        boxShadow: '0 3px 8px rgba(253, 197, 26, 0.3)'
+                                                    }}></div>
+                                                    <span style={{
+                                                        color: '#495057', 
+                                                        lineHeight: '1.7', 
+                                                        fontSize: '1rem',
+                                                        fontWeight: '500'
+                                                    }}>
+                                                        {feature}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 
-                            {/* Bottom CTA */}
-                            <div className="row mt-5">
+                            {/* Bottom Highlight Card */}
+                            <div className="row">
                                 <div className="col-lg-12">
                                     <div style={{
-                                        background: 'linear-gradient(135deg, #1e2247, #2c3e50)',
-                                        borderRadius: '20px',
-                                        padding: '40px',
+                                        background: 'linear-gradient(135deg, #1e2247 0%, #2c3e50 100%)',
+                                        borderRadius: '25px',
+                                        padding: '50px',
                                         textAlign: 'center',
                                         position: 'relative',
-                                        overflow: 'hidden'
+                                        overflow: 'hidden',
+                                        backdropFilter: 'blur(15px)',
+                                        border: '2px solid rgba(253, 197, 26, 0.3)',
+                                        boxShadow: '0 25px 50px rgba(30, 34, 71, 0.3)'
                                     }}>
                                         {/* Background Pattern */}
                                         <div style={{
@@ -1040,7 +1160,7 @@ export default function BuildingSecurityPage() {
                                             left: 0,
                                             right: 0,
                                             bottom: 0,
-                                            backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(253, 197, 26, 0.1) 0%, transparent 50%)',
+                                            backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(30, 34, 71, 0.1) 0%, transparent 50%)',
                                             zIndex: 1
                                         }}></div>
 
@@ -1048,32 +1168,36 @@ export default function BuildingSecurityPage() {
                                             <div style={{
                                                 display: 'inline-flex',
                                                 alignItems: 'center',
-                                                gap: '12px',
-                                                marginBottom: '20px'
+                                                gap: '15px',
+                                                marginBottom: '25px'
                                             }}>
                                                 <div style={{
-                                                    width: '50px',
-                                                    height: '50px',
+                                                    width: '60px',
+                                                    height: '60px',
                                                     borderRadius: '50%',
                                                     background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}>
-                                                    <Eye size={24} style={{color: '#1e2247'}} />
-                        </div>
-                                        </div>
-                                        
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    boxShadow: '0 10px 25px rgba(253, 197, 26, 0.4)'
+                                                }}>
+                                                    <Eye size={28} style={{color: '#1e2247'}} />
+                                                </div>
+                                                
+                                            </div>
                                             <p style={{
-                                                color: '#ffffff',
-                                                fontSize: '1.2rem',
+                                                color: 'rgba(255, 255, 255, 0.95)',
+                                                fontSize: '1.3rem',
                                                 margin: 0,
                                                 lineHeight: '1.6',
-                                                maxWidth: '600px',
+                                                maxWidth: '700px',
                                                 marginLeft: 'auto',
-                                                marginRight: 'auto'
+                                                marginRight: 'auto',
+                                                fontWeight: '600'
                                             }}>
-                                                <strong>Every task, every report, every detail is uploaded to your portal in real time.</strong> No waiting till morning to know what went on overnight.
+                                                <strong style={{color: '#fdc51a'}}>Every task, every report, every detail is uploaded to your portal in real time.</strong> 
+                                                <br />
+                                                No waiting till morning to know what went on overnight.
                                             </p>
                                         </div>
                                     </div>
@@ -1105,54 +1229,52 @@ export default function BuildingSecurityPage() {
                                 {/* Live Guard Tracking */}
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="tech-card position-relative h-100" style={{
-                                        background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                        background: '#ffffff',
                                         borderRadius: '25px',
                                         padding: '2.5rem',
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                                        border: '1px solid rgba(253, 197, 26, 0.3)',
-                                        transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                        overflow: 'hidden',
-                                        cursor: 'pointer'
+                                        boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                                        border: '2px solid rgba(253, 197, 26, 0.2)',
+                                        transition: 'all 0.4s ease',
+                                        overflow: 'hidden'
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
-                                        e.currentTarget.style.borderColor = '#27ae60';
+                                        e.currentTarget.style.transform = 'translateY(-8px)';
+                                        e.currentTarget.style.boxShadow = '0 25px 50px rgba(253, 197, 26, 0.25)';
+                                        e.currentTarget.style.borderColor = '#fdc51a';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.3)';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.2)';
                                     }}>
                                         
                                         {/* Background Pattern */}
                                         <div style={{
                                             position: 'absolute',
-                                            top: '-30px',
-                                            right: '-30px',
-                                            width: '120px',
-                                            height: '120px',
-                                            background: 'linear-gradient(135deg, rgba(39, 174, 96, 0.1), transparent)',
-                                                borderRadius: '50%',
-                                            zIndex: 1
+                                            top: 0,
+                                            right: 0,
+                                            width: '100px',
+                                            height: '100px',
+                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1), transparent)',
+                                            borderBottomLeftRadius: '100%'
                                         }}></div>
                                         
                                         {/* Icon Container */}
                                         <div className="tech-icon mb-4" style={{
-                                            width: '90px',
-                                            height: '90px',
-                                            background: 'linear-gradient(135deg, #27ae60, #2ecc71)',
-                                            borderRadius: '20px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                margin: '0 auto',
-                                            boxShadow: '0 15px 30px rgba(39, 174, 96, 0.4)',
+                                            width: '75px',
+                                            height: '75px',
+                                            background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
+                                            borderRadius: '18px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            margin: '0 auto',
+                                            boxShadow: '0 10px 25px rgba(253, 197, 26, 0.3)',
                                             position: 'relative',
                                             zIndex: 2
-                                            }}>
-                                            <MapPin size={36} color="#ffffff" />
-                                    </div>
+                                        }}>
+                                            <MapPin size={32} color="#1e2247" />
+                                        </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.4rem'}}>
@@ -1162,72 +1284,59 @@ export default function BuildingSecurityPage() {
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.7', fontSize: '1rem'}}>
                                                 GPS check-ins confirm every patrol and prove real movement, not guesses.
                                             </p>
-                                </div>
-                                        
-                                        {/* Bottom Accent */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            bottom: 0,
-                                            left: 0,
-                                            right: 0,
-                                                height: '4px',
-                                            background: 'linear-gradient(90deg, #27ae60, #2ecc71)',
-                                            borderRadius: '0 0 25px 25px'
-                                        }}></div>
+                                        </div>
                                     </div>
                                 </div>
                                 
                                 {/* Real-Time Reporting */}
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="tech-card position-relative h-100" style={{
-                                        background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                        background: '#ffffff',
                                         borderRadius: '25px',
                                         padding: '2.5rem',
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                                        border: '1px solid rgba(253, 197, 26, 0.3)',
-                                        transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                        overflow: 'hidden',
-                                        cursor: 'pointer'
+                                        boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                                        border: '2px solid rgba(30, 34, 71, 0.2)',
+                                        transition: 'all 0.4s ease',
+                                        overflow: 'hidden'
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
-                                        e.currentTarget.style.borderColor = '#3498db';
+                                        e.currentTarget.style.transform = 'translateY(-8px)';
+                                        e.currentTarget.style.boxShadow = '0 25px 50px rgba(30, 34, 71, 0.2)';
+                                        e.currentTarget.style.borderColor = '#1e2247';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.3)';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(30, 34, 71, 0.2)';
                                     }}>
                                         
                                         {/* Background Pattern */}
                                         <div style={{
                                             position: 'absolute',
-                                            top: '-30px',
-                                            right: '-30px',
-                                            width: '120px',
-                                            height: '120px',
-                                            background: 'linear-gradient(135deg, rgba(52, 152, 219, 0.1), transparent)',
-                                                borderRadius: '50%',
-                                            zIndex: 1
+                                            top: 0,
+                                            right: 0,
+                                            width: '100px',
+                                            height: '100px',
+                                            background: 'linear-gradient(135deg, rgba(30, 34, 71, 0.1), transparent)',
+                                            borderBottomLeftRadius: '100%'
                                         }}></div>
                                         
                                         {/* Icon Container */}
                                         <div className="tech-icon mb-4" style={{
-                                            width: '90px',
-                                            height: '90px',
-                                            background: 'linear-gradient(135deg, #3498db, #2980b9)',
-                                            borderRadius: '20px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                margin: '0 auto',
-                                            boxShadow: '0 15px 30px rgba(52, 152, 219, 0.4)',
+                                            width: '75px',
+                                            height: '75px',
+                                            background: 'linear-gradient(135deg, #1e2247, #2c3e50)',
+                                            borderRadius: '18px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            margin: '0 auto',
+                                            boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)',
                                             position: 'relative',
                                             zIndex: 2
-                                            }}>
-                                            <Zap size={36} color="#ffffff" />
-                                    </div>
+                                        }}>
+                                            <Zap size={32} color="#fdc51a" />
+                                        </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.4rem'}}>
@@ -1237,71 +1346,58 @@ export default function BuildingSecurityPage() {
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.7', fontSize: '1rem'}}>
                                                 Receive live updates through your client portal as activities happen.
                                             </p>
-                                </div>
-                                        
-                                        {/* Bottom Accent */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            bottom: 0,
-                                            left: 0,
-                                            right: 0,
-                                            height: '4px',
-                                            background: 'linear-gradient(90deg, #3498db, #2980b9)',
-                                            borderRadius: '0 0 25px 25px'
-                                        }}></div>
                                         </div>
                                     </div>
+                                </div>
                                 
                                 {/* Supervisor Inspections */}
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="tech-card position-relative h-100" style={{
-                                        background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                        background: '#ffffff',
                                         borderRadius: '25px',
                                         padding: '2.5rem',
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                                        border: '1px solid rgba(253, 197, 26, 0.3)',
-                                        transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                        overflow: 'hidden',
-                                        cursor: 'pointer'
+                                        boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                                        border: '2px solid rgba(253, 197, 26, 0.2)',
+                                        transition: 'all 0.4s ease',
+                                        overflow: 'hidden'
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
-                                        e.currentTarget.style.borderColor = '#9b59b6';
+                                        e.currentTarget.style.transform = 'translateY(-8px)';
+                                        e.currentTarget.style.boxShadow = '0 25px 50px rgba(253, 197, 26, 0.25)';
+                                        e.currentTarget.style.borderColor = '#fdc51a';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.3)';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.2)';
                                     }}>
                                         
                                         {/* Background Pattern */}
                                         <div style={{
                                             position: 'absolute',
-                                            top: '-30px',
-                                            right: '-30px',
-                                            width: '120px',
-                                            height: '120px',
-                                            background: 'linear-gradient(135deg, rgba(155, 89, 182, 0.1), transparent)',
-                                                borderRadius: '50%',
-                                            zIndex: 1
+                                            top: 0,
+                                            right: 0,
+                                            width: '100px',
+                                            height: '100px',
+                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1), transparent)',
+                                            borderBottomLeftRadius: '100%'
                                         }}></div>
                                         
                                         {/* Icon Container */}
                                         <div className="tech-icon mb-4" style={{
-                                            width: '90px',
-                                            height: '90px',
-                                            background: 'linear-gradient(135deg, #9b59b6, #8e44ad)',
-                                            borderRadius: '20px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                margin: '0 auto',
-                                            boxShadow: '0 15px 30px rgba(155, 89, 182, 0.4)',
+                                            width: '75px',
+                                            height: '75px',
+                                            background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
+                                            borderRadius: '18px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            margin: '0 auto',
+                                            boxShadow: '0 10px 25px rgba(253, 197, 26, 0.3)',
                                             position: 'relative',
                                             zIndex: 2
-                                            }}>
-                                            <Eye size={36} color="#ffffff" />
+                                        }}>
+                                            <Eye size={32} color="#1e2247" />
                                         </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
@@ -1312,72 +1408,59 @@ export default function BuildingSecurityPage() {
                                             <p className="text-center" style={{color: '#6c757d', lineHeight: '1.7', fontSize: '1rem'}}>
                                                 Random visits keep every shift active, accountable, and on standard.
                                             </p>
+                                        </div>
                                     </div>
-                                        
-                                        {/* Bottom Accent */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            bottom: 0,
-                                            left: 0,
-                                            right: 0,
-                                            height: '4px',
-                                            background: 'linear-gradient(90deg, #9b59b6, #8e44ad)',
-                                            borderRadius: '0 0 25px 25px'
-                                        }}></div>
                                 </div>
-                            </div>
                                 
                                 {/* Instant Incident Alerts */}
                                 <div className="col-lg-6 col-md-6 mb-4">
                                     <div className="tech-card position-relative h-100" style={{
-                                        background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
+                                        background: '#ffffff',
                                         borderRadius: '25px',
                                         padding: '2.5rem',
-                                        boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-                                        border: '1px solid rgba(253, 197, 26, 0.3)',
-                                        transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                        overflow: 'hidden',
-                                        cursor: 'pointer'
+                                        boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+                                        border: '2px solid rgba(30, 34, 71, 0.2)',
+                                        transition: 'all 0.4s ease',
+                                        overflow: 'hidden'
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                                        e.currentTarget.style.boxShadow = '0 30px 60px rgba(0,0,0,0.15)';
-                                        e.currentTarget.style.borderColor = '#e74c3c';
+                                        e.currentTarget.style.transform = 'translateY(-8px)';
+                                        e.currentTarget.style.boxShadow = '0 25px 50px rgba(30, 34, 71, 0.2)';
+                                        e.currentTarget.style.borderColor = '#1e2247';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                        e.currentTarget.style.borderColor = 'rgba(253, 197, 26, 0.3)';
+                                        e.currentTarget.style.transform = 'translateY(0)';
+                                        e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.08)';
+                                        e.currentTarget.style.borderColor = 'rgba(30, 34, 71, 0.2)';
                                     }}>
                                         
                                         {/* Background Pattern */}
                                         <div style={{
                                             position: 'absolute',
-                                            top: '-30px',
-                                            right: '-30px',
-                                            width: '120px',
-                                            height: '120px',
-                                            background: 'linear-gradient(135deg, rgba(231, 76, 60, 0.1), transparent)',
-                                                borderRadius: '50%',
-                                            zIndex: 1
+                                            top: 0,
+                                            right: 0,
+                                            width: '100px',
+                                            height: '100px',
+                                            background: 'linear-gradient(135deg, rgba(30, 34, 71, 0.1), transparent)',
+                                            borderBottomLeftRadius: '100%'
                                         }}></div>
                                         
                                         {/* Icon Container */}
                                         <div className="tech-icon mb-4" style={{
-                                            width: '90px',
-                                            height: '90px',
-                                            background: 'linear-gradient(135deg, #e74c3c, #c0392b)',
-                                            borderRadius: '20px',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                margin: '0 auto',
-                                            boxShadow: '0 15px 30px rgba(231, 76, 60, 0.4)',
+                                            width: '75px',
+                                            height: '75px',
+                                            background: 'linear-gradient(135deg, #1e2247, #2c3e50)',
+                                            borderRadius: '18px',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            margin: '0 auto',
+                                            boxShadow: '0 10px 25px rgba(30, 34, 71, 0.3)',
                                             position: 'relative',
                                             zIndex: 2
-                                            }}>
-                                            <Bell size={36} color="#ffffff" />
-                                            </div>
+                                        }}>
+                                            <Bell size={32} color="#fdc51a" />
+                                        </div>
                                             
                                         <div className="tech-content position-relative" style={{zIndex: 2}}>
                                             <h4 className="text-center mb-3 fw-bold" style={{color: '#1e2247', fontSize: '1.4rem'}}>
@@ -1388,17 +1471,6 @@ export default function BuildingSecurityPage() {
                                                 Emergencies trigger immediate notifications to management for rapid action.
                                             </p>
                                         </div>
-                                        
-                                        {/* Bottom Accent */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            bottom: 0,
-                                            left: 0,
-                                            right: 0,
-                                            height: '4px',
-                                            background: 'linear-gradient(90deg, #e74c3c, #c0392b)',
-                                            borderRadius: '0 0 25px 25px'
-                                        }}></div>
                                     </div>
                                 </div>
                             </div>
@@ -1507,31 +1579,31 @@ export default function BuildingSecurityPage() {
                                                 title: "A real sense of safety",
                                                 description: "Tenants and residents relax knowing someone's truly present.",
                                                 icon: "fas fa-shield-alt",
-                                                color: "#27ae60"
+                                                color: "#fdc51a"
                                             },
                                             {
                                                 title: "Lower risk",
                                                 description: "Theft, trespassing, and damage drop dramatically.",
                                                 icon: "fas fa-arrow-down",
-                                                color: "#e74c3c"
+                                                color: "#1e2247"
                                             },
                                             {
                                                 title: "Faster responses",
                                                 description: "Because seconds matter when alarms sound.",
                                                 icon: "fas fa-bolt",
-                                                color: "#f39c12"
+                                                color: "#fdc51a"
                                             },
                                             {
                                                 title: "Transparency",
                                                 description: "You can view every patrol in real-time.",
                                                 icon: "fas fa-eye",
-                                                color: "#3498db"
+                                                color: "#1e2247"
                                             },
                                             {
                                                 title: "Better reputation",
                                                 description: "Secure buildings attract better tenants and calmer communities.",
                                                 icon: "fas fa-star",
-                                                color: "#9b59b6"
+                                                color: "#fdc51a"
                                     }
                                 ].map((benefit, index) => (
                                             <div key={index} className="benefit-item d-flex align-items-start mb-4" style={{
@@ -1545,7 +1617,7 @@ export default function BuildingSecurityPage() {
                                             }}
                                             onMouseEnter={(e) => {
                                                 e.currentTarget.style.transform = 'translateX(10px)';
-                                                e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.12)';
+                                                e.currentTarget.style.boxShadow = `0 15px 40px ${benefit.color === '#fdc51a' ? 'rgba(253, 197, 26, 0.25)' : 'rgba(30, 34, 71, 0.2)'}`;
                                                 e.currentTarget.style.borderColor = benefit.color;
                                             }}
                                             onMouseLeave={(e) => {
@@ -1780,8 +1852,8 @@ export default function BuildingSecurityPage() {
                         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                             <div className="row">
                                 {/* Left Column - Content */}
-                                <div className="col-lg-6 mb-5 mb-lg-0">
-                                    <div className="standards-content">
+                                <div className="col-lg-12 mb-5 mb-lg-0">
+                                    <div className="standards-content text-center">
                                         {/* Header */}
                                         <div style={{ marginBottom: '40px' }}>
                                             <div style={{ 
@@ -1832,7 +1904,9 @@ export default function BuildingSecurityPage() {
                                                 color: "rgba(255, 255, 255, 0.9)", 
                                                 fontSize: "1.2rem",
                                                 lineHeight: "1.8",
-                                                marginBottom: "30px"
+                                                marginBottom: "30px",
+                                                maxWidth: "900px",
+                                                margin: "0 auto 30px"
                                             }}>
                                                 We hold ISO certification, maintain full licensing and insurance, and are proud ASIAL members with CM3 prequalification. These aren't just titles. <strong style={{color: '#fdc51a'}}>These are certifications of the quality and compliance we provide.</strong>
                                             </p>
@@ -1841,197 +1915,20 @@ export default function BuildingSecurityPage() {
                                                 color: "rgba(255, 255, 255, 0.8)", 
                                                 fontSize: "1.1rem",
                                                 lineHeight: "1.7",
-                                                fontStyle: "italic"
+                                                fontStyle: "italic",
+                                                maxWidth: "800px",
+                                                margin: "0 auto"
                                             }}>
                                                 Because in this industry, reliability isn't built on words, it's built on <strong style={{color: '#fdc51a'}}>consistent actions, shift after shift</strong>.
                                     </p>
                                 </div>
 
-                                        {/* Call to Action */}
-                                        <div style={{ marginTop: '40px' }}>
-                                            <button style={{
-                                                background: 'linear-gradient(135deg, #fdc51a, #ffdb5c)',
-                                                color: '#1e2247',
-                                                border: 'none',
-                                                padding: '15px 35px',
-                                                borderRadius: '50px',
-                                                fontSize: '1.1rem',
-                                                fontWeight: '700',
-                                                cursor: 'pointer',
-                                                transition: 'all 0.3s ease',
-                                                textTransform: 'uppercase',
-                                                letterSpacing: '1px',
-                                                marginRight: '20px'
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                e.currentTarget.style.transform = 'translateY(-3px)';
-                                                e.currentTarget.style.boxShadow = '0 15px 30px rgba(253, 197, 26, 0.5)';
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                e.currentTarget.style.transform = 'translateY(0)';
-                                                e.currentTarget.style.boxShadow = 'none';
-                                            }}>
-                                                <i className="fas fa-file-alt me-2"></i>
-                                                View Certifications
-                                            </button>
-                                            
-                                            <span style={{
-                                                color: 'rgba(255, 255, 255, 0.7)',
-                                                fontSize: '0.9rem'
-                                            }}>
-                                                Verified & Updated
-                                            </span>
-                            </div>
+                                        
                                     </div>
                                 </div>
 
                                 {/* Right Column - Certifications Grid */}
-                                <div className="col-lg-6">
-                                    <div className="certifications-grid">
-                                        <div className="row g-4">
-                                            {[
-                                                {
-                                                    title: "ISO Certified",
-                                                    subtitle: "Quality Management",
-                                                    description: "International standards for quality, safety, and environmental management",
-                                                    icon: "fas fa-certificate",
-                                                    color: "#27ae60",
-                                                    badge: "ISO"
-                                                },
-                                                {
-                                                    title: "Full Licensing",
-                                                    subtitle: "Security & Labour Hire",
-                                                    description: "Complete compliance with Victorian security and labour hire regulations",
-                                                    icon: "fas fa-id-card",
-                                                    color: "#3498db",
-                                                    badge: "LIC"
-                                                },
-                                                {
-                                                    title: "ASIAL Member",
-                                                    subtitle: "Industry Association",
-                                                    description: "Proud member of Australian Security Industry Association Limited",
-                                                    icon: "fas fa-handshake",
-                                                    color: "#9b59b6",
-                                                    badge: "ASIAL"
-                                                },
-                                                {
-                                                    title: "CM3 Prequalified",
-                                                    subtitle: "Compliance Verified",
-                                                    description: "Independently verified for compliance and professional standards",
-                                                    icon: "fas fa-check-circle",
-                                                    color: "#e74c3c",
-                                                    badge: "CM3"
-                                                }
-                                            ].map((cert, index) => (
-                                                <div key={index} className="col-md-6">
-                                                    <div className="certification-card" style={{
-                                                        background: 'rgba(255, 255, 255, 0.95)',
-                                                        backdropFilter: 'blur(10px)',
-                                                        borderRadius: '20px',
-                                                        padding: '30px 25px',
-                                                        height: '100%',
-                                                        position: 'relative',
-                                                        transition: 'all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                                overflow: 'hidden',
-                                                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                                                        boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
-                                                cursor: 'pointer'
-                                            }}
-                                                    onMouseEnter={(e) => {
-                                                        e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)';
-                                                        e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.15)';
-                                                        e.currentTarget.style.borderColor = cert.color;
-                                                    }}
-                                                    onMouseLeave={(e) => {
-                                                        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                                        e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,0,0,0.1)';
-                                                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-                                                    }}>
-                                                        
-                                                        {/* Background Badge */}
-                                                        <div style={{
-                                                            position: 'absolute',
-                                                            top: '15px',
-                                                            right: '15px',
-                                                            width: '50px',
-                                                            height: '50px',
-                                                    borderRadius: '50%',
-                                                            background: `${cert.color}20`,
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            fontSize: '0.8rem',
-                                                            fontWeight: '800',
-                                                            color: cert.color
-                                                        }}>
-                                                            {cert.badge}
-                                                        </div>
-
-                                                        {/* Icon */}
-                                                        <div style={{
-                                                            width: '70px',
-                                                            height: '70px',
-                                                            borderRadius: '15px',
-                                                            background: `linear-gradient(135deg, ${cert.color}, ${cert.color}dd)`,
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'center',
-                                                            marginBottom: '20px',
-                                                            boxShadow: `0 10px 25px ${cert.color}40`
-                                                        }}>
-                                                            <i className={cert.icon} style={{
-                                                                color: '#ffffff',
-                                                                fontSize: '28px'
-                                                            }}></i>
-                                                </div>
-                                                
-                                                        {/* Content */}
-                                                        <h4 style={{
-                                                        color: '#1e2247',
-                                                        fontSize: '1.2rem',
-                                                            fontWeight: '700',
-                                                            marginBottom: '5px',
-                                                            lineHeight: '1.3'
-                                                        }}>
-                                                            {cert.title}
-                                                </h4>
-                                                
-                                                        <p style={{
-                                                            color: cert.color,
-                                                            fontSize: '0.9rem',
-                                                            fontWeight: '600',
-                                                            marginBottom: '12px',
-                                                            textTransform: 'uppercase',
-                                                            letterSpacing: '0.5px'
-                                                        }}>
-                                                            {cert.subtitle}
-                                                        </p>
-                                                        
-                                                        <p style={{
-                                                            color: '#6c757d', 
-                                                            fontSize: '0.9rem',
-                                                            lineHeight: '1.5',
-                                                            margin: 0
-                                                        }}>
-                                                            {cert.description}
-                                                        </p>
-
-                                                        {/* Bottom Accent */}
-                                                        <div style={{
-                                                            position: 'absolute',
-                                                            bottom: 0,
-                                                            left: 0,
-                                                            right: 0,
-                                                            height: '3px',
-                                                            background: `linear-gradient(90deg, ${cert.color}, ${cert.color}80)`,
-                                                            borderRadius: '0 0 20px 20px'
-                                                        }}></div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                                
                 </div>
                         </div>
                     </div>

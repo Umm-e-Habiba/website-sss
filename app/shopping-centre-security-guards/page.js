@@ -418,26 +418,7 @@ export default function BuildingSecurityPage() {
 
                                       
 
-                                        {/* Bottom Message */}
-                                        <div style={{
-                                            background: 'linear-gradient(135deg, rgba(253, 197, 26, 0.1), rgba(253, 197, 26, 0.05))',
-                                            borderRadius: '20px',
-                                            padding: '25px',
-                                            border: '1px solid rgba(253, 197, 26, 0.2)'
-                                        }}>
-                                            <p style={{
-                                                color: '#1e2247',
-                                                fontSize: '1.1rem',
-                                                fontWeight: '600',
-                                                margin: 0,
-                                                lineHeight: '1.6',
-                                                textAlign: 'center'
-                                            }}>
-                                                <i className="fas fa-quote-left me-2" style={{color: '#fdc51a'}}></i>
-                                                Your peace of mind shouldn't rely on assumptions, it should rest on <strong style={{color: '#fdc51a'}}>proof</strong>.
-                                                <i className="fas fa-quote-right ms-2" style={{color: '#fdc51a'}}></i>
-                                            </p>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
