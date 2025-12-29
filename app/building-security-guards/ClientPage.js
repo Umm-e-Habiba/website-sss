@@ -2467,7 +2467,7 @@ export default function BuildingSecurityPage() {
                                                     }}
                                                 >
                                                     <i className="fas fa-phone me-3"></i>
-                                                    Call 1300 73 11 73
+                                                    Call 1300 731 173
                                                 </a>
                                             </div>
                                         </div>

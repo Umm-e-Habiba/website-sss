@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     question: "Do you provide your security guard service in Melbourne?",
-    answer: "Yes, we are available wherever you need us. Call us at 1300 73 11 73 or visit our contact page.",
+    answer: "Yes, we are available wherever you need us. Call us at 1300 731 173 or visit our contact page.",
     category: "Coverage"
   },
   {
@@ -109,8 +109,8 @@ export default function ModernFaq() {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
-  const filteredFaqs = selectedCategory === "All" 
-    ? faqs 
+  const filteredFaqs = selectedCategory === "All"
+    ? faqs
     : faqs.filter(faq => faq.category === selectedCategory)
 
   return (
@@ -143,28 +143,28 @@ export default function ModernFaq() {
                 onClick={() => handleClick(index)}
                 aria-expanded={activeIndex === index}
               >
-                <svg 
-                  className="faq-icon" 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  className="faq-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
                   fill="none"
                 >
-                  <path 
-                    d="M12 5V19M5 12H19" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
+                  <path
+                    d="M12 5V19M5 12H19"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
               </button>
             </div>
-            
+
             <h3 className="faq-question" onClick={() => handleClick(index)}>
               {faq.question}
             </h3>
-            
+
             <div className={`faq-answer ${activeIndex === index ? 'expanded' : ''}`}>
               <div className="faq-answer-content">
                 <p>{faq.answer}</p>
@@ -175,7 +175,7 @@ export default function ModernFaq() {
       </div>
 
       {/* Contact CTA */}
-      
+
     </div>
   )
 }

@@ -693,7 +693,7 @@ export default function DisclaimerClient() {
                                                 <i className="bi bi-info-circle-fill" style={{ color: '#fdc51a', marginRight: '8px' }}></i>
                                                 For any questions regarding this disclaimer or legal matters, please contact us at{' '}
                                                 <strong style={{ color: '#fdc51a' }}>admin@metroguards.com.au</strong> or call{' '}
-                                                <strong style={{ color: '#fdc51a' }}>1300 73 11 73</strong>
+                                                <strong style={{ color: '#fdc51a' }}>1300 731 173</strong>
                                             </p>
                                         </div>
                                     </div>

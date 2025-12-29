@@ -377,7 +377,7 @@ export default function PrivacyPolicyPage() {
                                                     We may also use this information to inform you of any changes to the services provided or to notify you of new services that may become available. As we value your privacy, we do not make your personal information available to other organisations, and you have the right to access your information at any time.
                                                     <br /><br />
                                                     <i className="bi bi-telephone-fill" style={{ color: '#fdc51a', marginRight: '8px', fontSize: '0.9rem' }}></i>
-                                                    Please direct any privacy-related enquiries to our Privacy Officer on <strong style={{ color: '#1e2247' }}>1300 73 11 73</strong> or by email at <strong style={{ color: '#1e2247' }}><i className="bi bi-envelope-fill" style={{ color: '#fdc51a', marginRight: '6px', fontSize: '0.85rem' }}></i>admin@metroguards.com.au</strong>
+                                                    Please direct any privacy-related enquiries to our Privacy Officer on <strong style={{ color: '#1e2247' }}>1300 731 173</strong> or by email at <strong style={{ color: '#1e2247' }}><i className="bi bi-envelope-fill" style={{ color: '#fdc51a', marginRight: '6px', fontSize: '0.85rem' }}></i>admin@metroguards.com.au</strong>
                                                 </p>
                                             </div>
                                         </div>

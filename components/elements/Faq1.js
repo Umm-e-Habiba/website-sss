@@ -64,7 +64,7 @@ const faqs = [
   },
   {
     question: "Do you provide your security guard service in Melbourne?",
-    answer: "Yes, we are available wherever you need us. Call us at 1300 73 11 73 or visit our contact page."
+    answer: "Yes, we are available wherever you need us. Call us at 1300 731 173 or visit our contact page."
   },
   {
     question: "Do Metropolitan Guards security services keep daily reports?",

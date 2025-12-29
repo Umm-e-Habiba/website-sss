@@ -1420,7 +1420,7 @@ export default function RetailSecurityPage() {
                                                             e.target.style.boxShadow = 'none';
                                                         }}>
                                                         <i className="fas fa-phone"></i>
-                                                        Call 1300 73 11 73
+                                                        Call 1300 731 173
                                                     </a>
                                                 </div>
                                             </div>
